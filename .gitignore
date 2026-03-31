@@ -1,0 +1,49 @@
+# -- RAW DATA: always re-downloaded from GDC / cBioPortal --
+01-data/raw/
+
+# -- GENERATED OUTPUTS --
+01-data/processed/
+01-data/audit/
+
+# -- LARGE FILE FORMATS --
+*.parquet
+*.h5
+*.hdf5
+*.feather
+*.pkl
+*.joblib
+*.npy
+*.npz
+
+# -- MODEL WEIGHTS --
+05-models/*.pt
+05-models/*.pth
+05-models/*.ckpt
+05-models/*.bin
+
+# -- JUPYTER --
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# -- PYTHON --
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+
+# -- R --
+.Rhistory
+.RData
+*.rds
+*.RDS
+.Rproj.user/
+
+# -- OS --
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -- LOGS --
+*.log
+logs/
