@@ -1,0 +1,3 @@
+cohort	patients_total	os_complete_n	os_event_n	primary_subtype_field	primary_subtype_non_missing_n	os_time_unit	notes
+TCGA-BRCA	1076	1076	150	PAM50Call_RNAseq	826	days	Subtype is augmented from the UCSC Xena TCGA hub clinical matrix.
+METABRIC	2509	1981	1144	CLAUDIN_SUBTYPE	1980	months	Subtype comes directly from cBioPortal patient clinical data.

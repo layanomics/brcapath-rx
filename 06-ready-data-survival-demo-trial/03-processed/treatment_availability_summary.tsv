@@ -1,0 +1,25 @@
+cohort	field	value	patients_n	pct_of_cohort
+TCGA-BRCA	prior_treatment_raw	No	1062	98.7
+TCGA-BRCA	prior_treatment_raw	Yes	12	1.12
+TCGA-BRCA	prior_treatment_raw	Not Reported	2	0.19
+TCGA-BRCA	history_of_neoadjuvant_treatment_raw	No	1063	98.79
+TCGA-BRCA	history_of_neoadjuvant_treatment_raw	Yes	12	1.12
+TCGA-BRCA	history_of_neoadjuvant_treatment_raw	Missing	1	0.09
+TCGA-BRCA	tcga_pharmaceutical_therapy_observed	yes	843	78.35
+TCGA-BRCA	tcga_pharmaceutical_therapy_observed	no	143	13.29
+TCGA-BRCA	tcga_pharmaceutical_therapy_observed	not reported	90	8.36
+TCGA-BRCA	tcga_radiation_therapy_observed	yes	566	52.6
+TCGA-BRCA	tcga_radiation_therapy_observed	no	427	39.68
+TCGA-BRCA	tcga_radiation_therapy_observed	not reported	83	7.71
+METABRIC	chemotherapy_observed_raw	NO	1568	62.5
+METABRIC	chemotherapy_observed_raw	Missing	529	21.08
+METABRIC	chemotherapy_observed_raw	YES	412	16.42
+METABRIC	hormone_therapy_observed_raw	YES	1216	48.47
+METABRIC	hormone_therapy_observed_raw	NO	764	30.45
+METABRIC	hormone_therapy_observed_raw	Missing	529	21.08
+METABRIC	radio_therapy_observed_raw	YES	1173	46.75
+METABRIC	radio_therapy_observed_raw	NO	807	32.16
+METABRIC	radio_therapy_observed_raw	Missing	529	21.08
+METABRIC	breast_surgery_raw	MASTECTOMY	1170	46.63
+METABRIC	breast_surgery_raw	BREAST CONSERVING	785	31.29
+METABRIC	breast_surgery_raw	Missing	554	22.08
