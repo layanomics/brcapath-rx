@@ -91,7 +91,22 @@ def _is_categorical(field: str) -> bool:
 
 
 def _extract_fields(mapping_response: dict) -> list:
-    """Return flat list of field names from a GDC _mapping response."""
+    """Return flat list of field names from a GDC _mapping response.
+
+    The GDC _mapping endpoint returns a JSON object with a top-level "fields"
+    key whose value is already a flat list of all searchable field-name strings.
+    Use that directly instead of walking the nested "_mapping" structure.
+    """
+    # Primary path: GDC includes a ready-made flat list under "fields"
+    flat = mapping_response.get("fields")
+    if isinstance(flat, list) and flat:
+        print(f"  [_extract_fields] top-level 'fields' key found with "
+              f"{len(flat)} entries (sample: {flat[:3]})")
+        return sorted(set(flat))
+
+    # Fallback: walk the nested _mapping structure
+    print(f"  [_extract_fields] no 'fields' key — falling back to walking "
+          f"'_mapping'. Top-level keys: {list(mapping_response.keys())[:10]}")
     fields = []
 
     def walk(obj, prefix=""):
@@ -104,8 +119,6 @@ def _extract_fields(mapping_response: dict) -> list:
                 else:
                     walk(v, full)
 
-    # GDC _mapping returns {"_mapping": {"<entity>": {"properties": {...}}}}
-    # but also sometimes just {"<field>": {"type": ...}}
     raw = mapping_response.get("_mapping") or mapping_response
     for top_key, top_val in raw.items():
         if isinstance(top_val, dict):
@@ -247,8 +260,39 @@ def task_b_xena(gdc_result: dict) -> dict:
         except ImportError:
             return {"error": "xenaPython not installed — run: pip install xenaPython"}
 
-        cohort = "GDC TCGA Breast Cancer (BRCA)"
-        datasets = xena.cohort_datasets(XENA_HUB, cohort)
+        # Diagnostic: show available functions so we can verify the API surface
+        xena_api = [fn for fn in dir(xena) if not fn.startswith("_")]
+        print(f"  [B1] xenaPython public API: {xena_api}")
+
+        # Discover the right cohort name by listing all cohorts on the hub
+        # all_cohorts(host, exclude) — pass empty exclude list
+        try:
+            all_cohorts = xena.all_cohorts(XENA_HUB, [])
+            print(f"  [B1] All cohorts on {XENA_HUB}: {all_cohorts}")
+        except Exception as exc:
+            print(f"  [B1] Could not list cohorts: {exc}")
+            all_cohorts = []
+
+        # Try the expected cohort name; fall back to first available cohort
+        preferred = "GDC TCGA Breast Cancer (BRCA)"
+        if preferred in (all_cohorts or []):
+            cohort = preferred
+        elif all_cohorts:
+            cohort = all_cohorts[0]
+            print(f"  [B1] Preferred cohort not found; using first available: {cohort!r}")
+        else:
+            cohort = preferred  # last resort — let the call fail naturally
+
+        # dataset_list(host, cohorts) — cohorts must be a LIST of strings;
+        # returns list of dicts with keys: name, longtitle, count, type, etc.
+        raw_datasets = xena.dataset_list(XENA_HUB, [cohort]) or []
+        print(f"  [B1] dataset_list returned {len(raw_datasets)} entries for cohort {cohort!r}")
+        # Extract dataset IDs (the 'name' field is the dataset identifier)
+        if raw_datasets and isinstance(raw_datasets[0], dict):
+            datasets = [d.get("name") or str(d) for d in raw_datasets]
+        else:
+            datasets = raw_datasets
+
         dataset_info = []
         for ds in datasets:
             try:
@@ -321,7 +365,10 @@ def task_b_xena(gdc_result: dict) -> dict:
 # ---------------------------------------------------------------------------
 # TASK C  —  cBioPortal
 # ---------------------------------------------------------------------------
-CBIO_BASE = "https://www.cbioportal.org/api"
+# Base URL must NOT end with /api — the OpenAPI spec paths already start with
+# /api/, so appending them to a base that ends with /api would produce the
+# double-prefix https://www.cbioportal.org/api/api/studies/...
+CBIO_BASE = "https://www.cbioportal.org"
 STUDY_ID = "brca_metabric"
 
 
@@ -347,7 +394,7 @@ def task_c_cbio() -> dict:
 
     # C2 — study metadata
     def c2():
-        data = get_json(f"{CBIO_BASE}/studies/{STUDY_ID}")
+        data = get_json(f"{CBIO_BASE}/api/studies/{STUDY_ID}")
         return data
 
     result["c2_study_metadata"] = safe("C2 study metadata", c2)
