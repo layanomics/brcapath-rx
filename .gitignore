@@ -5,6 +5,10 @@
 01-data/processed/
 01-data/audit/
 
+# Allow canonical discovery reports to be tracked
+!01-data/audit/source_discovery_report.md
+!01-data/audit/source_discovery_report.json
+
 # -- LARGE FILE FORMATS --
 *.parquet
 *.h5
