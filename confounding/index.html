@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRCAPath-Rx Stage 2: Confounding Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      :root {
+        --ink: #18212f;
+        --paper: #f8f4ea;
+        --sand: #eadfcb;
+        --teal: #2f6f73;
+        --rust: #c86a4b;
+        --olive: #5f7a2f;
+        --muted: #667085;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(47, 111, 115, 0.14), transparent 28%),
+          radial-gradient(circle at top right, rgba(200, 106, 75, 0.16), transparent 24%),
+          linear-gradient(180deg, #fffdf9 0%, #f7f1e5 100%);
+      }
+
+      .sans {
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      }
+
+      .tab-button.active {
+        background: var(--ink);
+        color: white;
+      }
+
+      .metric-card {
+        background: rgba(255, 255, 255, 0.78);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(24, 33, 47, 0.08);
+      }
+
+      .figure-frame {
+        background: white;
+        border: 1px solid rgba(24, 33, 47, 0.08);
+        box-shadow: 0 18px 45px rgba(24, 33, 47, 0.09);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <main class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <section class="mb-8 rounded-[2rem] border border-black/5 bg-white/75 p-8 shadow-[0_30px_80px_rgba(24,33,47,0.08)] backdrop-blur">
+        <div class="grid gap-8 lg:grid-cols-[1.5fr,1fr]">
+          <div>
+            <p class="sans mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-teal-800">
+              BRCAPath-Rx Stage 2
+            </p>
+            <h1 class="max-w-4xl text-4xl font-semibold leading-tight sm:text-5xl">
+              Why treatment can look harmful in observational data when the real problem is confounding
+            </h1>
+            <p class="sans mt-5 max-w-3xl text-lg leading-8 text-slate-700">
+              This page shows one real Stage 2 prototype: hormone therapy versus no hormone therapy
+              in ER-positive METABRIC patients. The point is not to claim a treatment answer. The
+              point is to show why the raw comparison is misleading, what adjustment improved, and
+              what still remains uncertain.
+            </p>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-1">
+            <div class="metric-card rounded-3xl p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Selected Cohort</p>
+              <p id="hero-cohort" class="mt-2 text-2xl font-semibold">Loading...</p>
+            </div>
+            <div class="metric-card rounded-3xl p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Target Group</p>
+              <p id="hero-subgroup" class="mt-2 text-xl font-semibold">Loading...</p>
+            </div>
+            <div class="metric-card rounded-3xl p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Prototype Verdict</p>
+              <p id="hero-verdict" class="mt-2 text-2xl font-semibold">Loading...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="mb-8 flex flex-wrap gap-3">
+        <button class="tab-button active sans rounded-full border border-black/10 px-5 py-3 text-sm font-semibold" data-tab="plain">
+          1. Plain Language
+        </button>
+        <button class="tab-button sans rounded-full border border-black/10 px-5 py-3 text-sm font-semibold" data-tab="naive">
+          2. Naive Comparison
+        </button>
+        <button class="tab-button sans rounded-full border border-black/10 px-5 py-3 text-sm font-semibold" data-tab="fix">
+          3. Attempted Fix
+        </button>
+        <button class="tab-button sans rounded-full border border-black/10 px-5 py-3 text-sm font-semibold" data-tab="limits">
+          4. What Changed / What Did Not
+        </button>
+        <button class="tab-button sans rounded-full border border-black/10 px-5 py-3 text-sm font-semibold" data-tab="status">
+          5. Project Status
+        </button>
+      </nav>
+
+      <section class="tab-panel space-y-8" id="panel-plain">
+        <div class="grid gap-8 lg:grid-cols-[1.15fr,0.85fr]">
+          <div class="rounded-[2rem] bg-white/80 p-8 shadow-[0_20px_50px_rgba(24,33,47,0.08)]">
+            <h2 class="text-3xl font-semibold">Confounding in plain language</h2>
+            <p id="plain-definition" class="sans mt-4 text-lg leading-8 text-slate-700"></p>
+            <div class="mt-6 rounded-3xl border border-slate-200 bg-[var(--paper)] p-6">
+              <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Simple analogy</p>
+              <p class="mt-3 text-lg leading-8">
+                If the sicker students all get extra tutoring, a raw grade comparison can make the tutoring group look worse.
+                That does not mean tutoring hurt them. It can simply mean the tutoring group started off at a disadvantage.
+              </p>
+            </div>
+            <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-6">
+              <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Breast-cancer version</p>
+              <p class="mt-3 text-lg leading-8">
+                In real treatment data, patients with higher-risk tumors often receive more treatment. If we compare survival
+                without first making the groups more alike, we can end up measuring baseline risk instead of treatment.
+              </p>
+            </div>
+          </div>
+          <div class="rounded-[2rem] bg-[var(--ink)] p-8 text-white shadow-[0_20px_50px_rgba(24,33,47,0.16)]">
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-slate-300" id="toy-label">Illustration</p>
+            <h3 class="mt-3 text-2xl font-semibold">A toy picture of the problem</h3>
+            <p class="sans mt-4 text-base leading-7 text-slate-200">
+              Higher-risk patients are much more likely to receive treatment, and higher-risk patients also have worse survival.
+              If we ignore that starting difference, treatment can falsely look harmful.
+            </p>
+            <div class="mt-6 rounded-3xl bg-white/8 p-4">
+              <canvas id="toy-chart" height="220"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel hidden space-y-8" id="panel-naive">
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="metric-card rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Patients</p>
+            <p id="naive-n" class="mt-2 text-3xl font-semibold">Loading...</p>
+          </div>
+          <div class="metric-card rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Naive Hazard Ratio</p>
+            <p id="naive-hr" class="mt-2 text-3xl font-semibold">Loading...</p>
+          </div>
+          <div class="metric-card rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Worst Imbalance Before Adjustment</p>
+            <p id="naive-balance" class="mt-2 text-3xl font-semibold">Loading...</p>
+          </div>
+        </div>
+        <div class="rounded-[2rem] bg-white/80 p-8 shadow-[0_20px_50px_rgba(24,33,47,0.08)]">
+          <h2 class="text-3xl font-semibold">Why the raw comparison is misleading</h2>
+          <p id="plain-warning" class="sans mt-4 text-lg leading-8 text-slate-700"></p>
+          <div class="mt-8 grid gap-8 lg:grid-cols-[0.9fr,1.1fr]">
+            <div class="rounded-3xl bg-[var(--paper)] p-5">
+              <p class="sans mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
+                Top baseline imbalances
+              </p>
+              <canvas id="balance-chart" height="280"></canvas>
+            </div>
+            <div class="space-y-6">
+              <figure class="figure-frame rounded-3xl p-4">
+                <img id="fig-balance-before" alt="Baseline imbalance before adjustment" class="w-full rounded-2xl" />
+                <figcaption class="sans mt-3 text-sm text-slate-600">
+                  Measured imbalance before any adjustment.
+                </figcaption>
+              </figure>
+              <figure class="figure-frame rounded-3xl p-4">
+                <img id="fig-naive-km" alt="Naive survival curves" class="w-full rounded-2xl" />
+                <figcaption class="sans mt-3 text-sm text-slate-600">
+                  Crude survival curves are descriptive, not causal.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel hidden space-y-8" id="panel-fix">
+        <div class="rounded-[2rem] bg-white/80 p-8 shadow-[0_20px_50px_rgba(24,33,47,0.08)]">
+          <h2 class="text-3xl font-semibold">What we did to start fixing it</h2>
+          <p id="plain-fix" class="sans mt-4 text-lg leading-8 text-slate-700"></p>
+          <div class="mt-8 grid gap-4 md:grid-cols-3">
+            <div class="metric-card rounded-3xl p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">PS Overlap Fraction</p>
+              <p id="fix-overlap" class="mt-2 text-3xl font-semibold">Loading...</p>
+            </div>
+            <div class="metric-card rounded-3xl p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Imbalanced Covariates Before</p>
+              <p id="fix-before-count" class="mt-2 text-3xl font-semibold">Loading...</p>
+            </div>
+            <div class="metric-card rounded-3xl p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Imbalanced Covariates After</p>
+              <p id="fix-after-count" class="mt-2 text-3xl font-semibold">Loading...</p>
+            </div>
+          </div>
+          <div class="mt-8 grid gap-6 lg:grid-cols-3">
+            <figure class="figure-frame rounded-3xl p-4">
+              <img id="fig-ps-overlap" alt="Propensity score overlap" class="w-full rounded-2xl" />
+              <figcaption class="sans mt-3 text-sm text-slate-600">Where treated and untreated patients overlap most.</figcaption>
+            </figure>
+            <figure class="figure-frame rounded-3xl p-4">
+              <img id="fig-balance-after" alt="Balance after adjustment" class="w-full rounded-2xl" />
+              <figcaption class="sans mt-3 text-sm text-slate-600">Measured balance improved after overlap weighting.</figcaption>
+            </figure>
+            <figure class="figure-frame rounded-3xl p-4">
+              <img id="fig-adjusted-survival" alt="Adjusted survival curves" class="w-full rounded-2xl" />
+              <figcaption class="sans mt-3 text-sm text-slate-600">Weighted comparison after emphasizing the overlap population.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel hidden space-y-8" id="panel-limits">
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div class="rounded-[2rem] bg-white/80 p-8 shadow-[0_20px_50px_rgba(24,33,47,0.08)]">
+            <h2 class="text-3xl font-semibold">What changed</h2>
+            <ul class="sans mt-5 space-y-4 text-lg leading-8 text-slate-700">
+              <li><strong>Raw imbalance was large.</strong> The treated group started with worse measured prognosis.</li>
+              <li><strong>Balance improved after weighting.</strong> The before/after diagnostics show the measured gap shrank sharply.</li>
+              <li><strong>The treatment estimate moved a lot.</strong> That tells us the naive comparison was unstable and confounded.</li>
+            </ul>
+          </div>
+          <div class="rounded-[2rem] bg-[var(--paper)] p-8 shadow-[0_20px_50px_rgba(24,33,47,0.08)]">
+            <h2 class="text-3xl font-semibold">What did not change</h2>
+            <p id="plain-uncertainty" class="sans mt-5 text-lg leading-8 text-slate-700"></p>
+            <ul class="sans mt-5 space-y-4 text-lg leading-8 text-slate-700">
+              <li>We still do not have randomization.</li>
+              <li>We still lack comorbidity, adherence, exact endocrine regimen, and treatment-era timing.</li>
+              <li>So the adjusted estimate is still provisional, not a treatment recommendation.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel hidden space-y-8" id="panel-status">
+        <div class="grid gap-8 lg:grid-cols-[1.05fr,0.95fr]">
+          <div class="rounded-[2rem] bg-white/80 p-8 shadow-[0_20px_50px_rgba(24,33,47,0.08)]">
+            <h2 class="text-3xl font-semibold">How this fits BRCAPath-Rx Stage 2</h2>
+            <p class="sans mt-5 text-lg leading-8 text-slate-700">
+              Stage 1 was prognosis only. This Stage 2 prototype is the first real treatment-confounding track:
+              one explicit treatment question, one cohort, one subgroup, one adjustment method, and diagnostics
+              that show what got better and what still blocks a stronger causal claim.
+            </p>
+            <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-6">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Recommended sentence for the meeting</p>
+              <p id="say-aloud" class="mt-3 text-lg leading-8"></p>
+            </div>
+          </div>
+          <div class="rounded-[2rem] bg-[var(--ink)] p-8 text-white shadow-[0_20px_50px_rgba(24,33,47,0.16)]">
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">Project Status</p>
+            <p id="status-question" class="mt-4 text-2xl font-semibold">Loading...</p>
+            <div class="mt-6 space-y-4">
+              <div class="rounded-3xl bg-white/10 p-5">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">Adjusted Hazard Ratio</p>
+                <p id="status-adjusted" class="mt-2 text-3xl font-semibold">Loading...</p>
+              </div>
+              <div class="rounded-3xl bg-white/10 p-5">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">Meeting Ready</p>
+                <p id="status-meeting-ready" class="mt-2 text-3xl font-semibold">Loading...</p>
+              </div>
+              <div class="rounded-3xl bg-white/10 p-5">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">Verdict</p>
+                <p id="status-verdict" class="mt-2 text-3xl font-semibold">Loading...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const tabButtons = document.querySelectorAll(".tab-button");
+      const panels = {
+        plain: document.getElementById("panel-plain"),
+        naive: document.getElementById("panel-naive"),
+        fix: document.getElementById("panel-fix"),
+        limits: document.getElementById("panel-limits"),
+        status: document.getElementById("panel-status"),
+      };
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = button.dataset.tab;
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          Object.values(panels).forEach((panel) => panel.classList.add("hidden"));
+          button.classList.add("active");
+          panels[target].classList.remove("hidden");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+
+      const setText = (id, value) => {
+        document.getElementById(id).textContent = value;
+      };
+
+      const setImage = (id, src) => {
+        document.getElementById(id).src = src;
+      };
+
+      const hrWithCi = (hr, ci) => `${hr} (${ci[0]} to ${ci[1]})`;
+
+      fetch("./confounding_demo_payload.json")
+        .then((response) => response.json())
+        .then((payload) => {
+          setText("hero-cohort", payload.selected_cohort);
+          setText("hero-subgroup", payload.selected_subgroup);
+          setText("hero-verdict", `Verdict ${payload.verdict}`);
+
+          setText("plain-definition", payload.plain_language.confounding_definition);
+          setText("plain-warning", payload.plain_language.naive_warning);
+          setText("plain-fix", payload.plain_language.fix_summary);
+          setText("plain-uncertainty", payload.plain_language.remaining_uncertainty);
+
+          setText("naive-n", String(payload.n));
+          setText("naive-hr", hrWithCi(payload.naive_hr, payload.naive_ci));
+          setText("naive-balance", String(payload.max_abs_smd_before));
+
+          setText("fix-overlap", String(payload.overlap_fraction));
+          setText("fix-before-count", String(payload.n_covariates_above_0_1_before));
+          setText("fix-after-count", String(payload.n_covariates_above_0_1_after));
+
+          setText("status-question", payload.selected_question);
+          setText("status-adjusted", hrWithCi(payload.adjusted_hr, payload.adjusted_ci));
+          setText("status-meeting-ready", payload.meeting_ready.toUpperCase());
+          setText("status-verdict", `Verdict ${payload.verdict}`);
+          setText("say-aloud", payload.say_aloud);
+
+          setImage("fig-balance-before", payload.figures.balance_before);
+          setImage("fig-naive-km", payload.figures.naive_km);
+          setImage("fig-ps-overlap", payload.figures.ps_overlap);
+          setImage("fig-balance-after", payload.figures.balance_after);
+          setImage("fig-adjusted-survival", payload.figures.adjusted_survival);
+
+          new Chart(document.getElementById("toy-chart"), {
+            type: "bar",
+            data: {
+              labels: payload.toy_example.groups.map((item) => item.group),
+              datasets: [
+                {
+                  label: "Percent receiving treatment",
+                  data: payload.toy_example.groups.map((item) => item.treated_pct),
+                  backgroundColor: "#c86a4b",
+                },
+                {
+                  label: "5-year survival",
+                  data: payload.toy_example.groups.map((item) => item.five_year_survival),
+                  backgroundColor: "#2f6f73",
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: {
+                  labels: { color: "white" },
+                },
+                title: {
+                  display: true,
+                  text: payload.toy_example.label,
+                  color: "white",
+                },
+              },
+              scales: {
+                x: { ticks: { color: "white" }, grid: { color: "rgba(255,255,255,0.08)" } },
+                y: { ticks: { color: "white" }, grid: { color: "rgba(255,255,255,0.08)" } },
+              },
+            },
+          });
+
+          const labels = payload.top_balance_items.map((item) => `${item.covariate} | ${item.level}`);
+          new Chart(document.getElementById("balance-chart"), {
+            type: "bar",
+            data: {
+              labels,
+              datasets: [
+                {
+                  label: "Before adjustment",
+                  data: payload.top_balance_items.map((item) => item.abs_smd_before),
+                  backgroundColor: "#c86a4b",
+                },
+                {
+                  label: "After adjustment",
+                  data: payload.top_balance_items.map((item) => item.abs_smd_after),
+                  backgroundColor: "#5f7a2f",
+                },
+              ],
+            },
+            options: {
+              indexAxis: "y",
+              responsive: true,
+              scales: {
+                x: {
+                  beginAtZero: true,
+                  grid: { color: "rgba(24,33,47,0.08)" },
+                },
+                y: {
+                  grid: { display: false },
+                },
+              },
+              plugins: {
+                legend: { position: "bottom" },
+              },
+            },
+          });
+        })
+        .catch((error) => {
+          console.error(error);
+          document.body.insertAdjacentHTML(
+            "afterbegin",
+            `<div class="mx-auto max-w-4xl px-6 py-4 text-red-700 sans">Could not load <code>confounding_demo_payload.json</code>. Serve this folder through a local web server or GitHub Pages rather than opening it directly as <code>file://</code>.</div>`
+          );
+        });
+    </script>
+  </body>
+</html>
