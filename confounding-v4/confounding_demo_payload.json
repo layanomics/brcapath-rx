@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "BRCAPath-Rx Stage 2 Confounding Demo",
+    "subtitle": "A click-through tutorial showing how unfair treated-vs-untreated comparisons can create false treatment stories.",
+    "completed_case_badge": "Only one real completed causal case so far",
+    "completed_case_label": "ER-positive METABRIC | hormone therapy YES vs NO | overall survival",
+    "presentation_ready": "yes"
+  },
+  "tiny_idea": {
+    "title": "One tiny confounding idea",
+    "setup": "If students with tutors score lower, that does not prove tutors are harmful.",
+    "wrong": "Quick but wrong: tutors must have made them worse.",
+    "better": "Better: the weaker students were more likely to get tutors, so the tutor group started off behind."
+  },
+  "fictional_cases": [
+    {
+      "id": "hormone_case",
+      "name": "Illustration: hormone therapy",
+      "status": "Illustration, not real data",
+      "treated_label": "Received hormone therapy",
+      "untreated_label": "Did not receive hormone therapy",
+      "treated_profile": "Older on average, later stage, more positive lymph nodes",
+      "untreated_profile": "Younger on average, earlier stage, fewer positive lymph nodes",
+      "treated_survival": 58,
+      "untreated_survival": 74,
+      "wrong": "The therapy looks harmful because the treated group did worse.",
+      "better": "The treated group already started with worse prognosis, so the crude comparison is unfair."
+    },
+    {
+      "id": "chemo_case",
+      "name": "Illustration: chemotherapy",
+      "status": "Illustration, not real data",
+      "treated_label": "Received chemotherapy",
+      "untreated_label": "Did not receive chemotherapy",
+      "treated_profile": "More advanced disease and more aggressive subtype mix",
+      "untreated_profile": "Milder disease and healthier subtype mix",
+      "treated_survival": 52,
+      "untreated_survival": 73,
+      "wrong": "Chemotherapy looks harmful because the treated group had worse outcomes.",
+      "better": "The treated patients were more advanced to begin with, so the raw outcome gap is confounded."
+    },
+    {
+      "id": "radio_case",
+      "name": "Illustration: radiotherapy",
+      "status": "Illustration, not real data",
+      "treated_label": "Received radiotherapy",
+      "untreated_label": "Did not receive radiotherapy",
+      "treated_profile": "More nodal involvement and more local disease burden",
+      "untreated_profile": "Less nodal involvement and lower local burden",
+      "treated_survival": 60,
+      "untreated_survival": 76,
+      "wrong": "Radiotherapy looks harmful because the treated group looked worse overall.",
+      "better": "The treated group had more baseline risk, so treatment choice and prognosis were tangled together."
+    }
+  ],
+  "simulator": {
+    "title": "Confounding simulator",
+    "description": "Switch on baseline differences in the treated group and watch the naive conclusion change even though the toy treatment itself is not helping or harming anyone here.",
+    "base_survival": 72,
+    "penalties": {
+      "older": 8,
+      "sicker": 12,
+      "later_stage": 14
+    },
+    "untreated_survival": 72
+  },
+  "real_case": {
+    "cohort": "METABRIC",
+    "subgroup": "ER-positive patients",
+    "treatment_question": "Hormone therapy YES vs NO",
+    "patients_n": 1506,
+    "events_n": 881,
+    "naive_hr": 1.496,
+    "naive_ci": [1.287, 1.738],
+    "adjusted_hr": 0.996,
+    "adjusted_ci": [0.836, 1.186],
+    "views": [
+      {
+        "id": "imbalance_before",
+        "button": "Baseline imbalance",
+        "title": "Before adjustment: the groups were not similar at baseline",
+        "text": "The treated and untreated patients differed strongly in stage, nodal burden, age, menopausal state, and subtype mix.",
+        "img": "assets/fig_balance_before.png"
+      },
+      {
+        "id": "naive_survival",
+        "button": "Naive survival",
+        "title": "The first raw comparison made hormone therapy look harmful",
+        "text": "That crude result is descriptive only. It blends treatment with baseline prognosis.",
+        "img": "assets/fig_naive_km.png"
+      },
+      {
+        "id": "balance_after",
+        "button": "Balance after adjustment",
+        "title": "After overlap weighting, measured balance improved sharply",
+        "text": "That means the comparison became much fairer on the baseline variables we were able to measure.",
+        "img": "assets/fig_balance_after.png"
+      },
+      {
+        "id": "adjusted_survival",
+        "button": "Adjusted survival",
+        "title": "The estimate moved toward about 1.00 after adjustment",
+        "text": "That big shift tells us the naive comparison was misleading. It does not prove the final treatment effect.",
+        "img": "assets/fig_adjusted_survival.png"
+      }
+    ],
+    "overlap_figure": {
+      "title": "Overlap weighting focuses on comparable patients",
+      "text": "Patients in the overlap middle get more influence than extreme patients who almost certainly would or would not have been treated.",
+      "img": "assets/fig_ps_overlap.png"
+    }
+  },
+  "methods": [
+    {
+      "name": "Overlap weighting",
+      "problem": "Treated and untreated patients overlap only partly.",
+      "helps": "It gives more weight to patients who realistically could have gone either way.",
+      "cannot": "It still cannot fix confounders that were never measured."
+    },
+    {
+      "name": "Propensity score matching",
+      "problem": "A crude comparison mixes together patients who were not similar at baseline.",
+      "helps": "It tries to pair more similar treated and untreated patients before comparing outcomes.",
+      "cannot": "It can discard many patients and still cannot remove hidden confounding."
+    }
+  ],
+  "future_candidates": [
+    {
+      "name": "Chemotherapy questions",
+      "status": "Future candidate analysis",
+      "why_next": "Potentially important, but the treatment sorting looked stronger and overlap was weaker in the earlier screening step."
+    },
+    {
+      "name": "Radiotherapy questions",
+      "status": "Future candidate analysis",
+      "why_next": "Potentially important, but local treatment choice is tightly entangled with surgery patterns and disease burden."
+    },
+    {
+      "name": "Subtype-specific treatment questions",
+      "status": "Future candidate analysis",
+      "why_next": "Worth exploring only after a separate treatment audit confirms enough overlap, events, and confounder support."
+    }
+  ],
+  "ai_demo": {
+    "without_adjustment": "Without adjustment, the AI may learn a false pattern like 'treatment looks harmful' only because sicker patients were more likely to receive it.",
+    "with_adjustment": "With adjustment, we try to give the model a cleaner treatment signal by reducing unfair baseline differences.",
+    "flow": [
+      "Patient profile",
+      "Adjusted treatment-effect model",
+      "Estimated outcomes under several options",
+      "Ranked recommendation candidates"
+    ],
+    "future_work": "This multi-treatment recommendation logic is future Stage 2 work, not a completed system yet."
+  },
+  "limitations": [
+    "Only one real treatment-effect case is completed so far.",
+    "This is still observational data, not a randomized trial.",
+    "Adjustment helps, but it does not magically prove causality.",
+    "Important confounders are still missing, including comorbidity, adherence, exact regimen, and treatment-era detail."
+  ],
+  "say_aloud": "This demo first shows how unfair group differences can create a false treatment story, then lets us click through the one real completed case study, and finally shows which treatment questions could be studied next without pretending they are already finished."
+}

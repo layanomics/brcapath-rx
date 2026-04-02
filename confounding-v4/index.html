@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRCAPath-Rx Stage 2 Confounding Demo v4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      :root {
+        --ink: #18303b;
+        --sea: #2d6b73;
+        --rust: #d46d4f;
+        --forest: #607d42;
+        --paper: #fcf7ee;
+        --mist: #eaf2ef;
+        --line: rgba(24, 48, 59, 0.08);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(45, 107, 115, 0.16), transparent 28%),
+          radial-gradient(circle at top right, rgba(212, 109, 79, 0.15), transparent 24%),
+          linear-gradient(180deg, #fffefa 0%, #f7f1e7 100%);
+      }
+
+      .sans {
+        font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      }
+
+      .panel {
+        background: rgba(255, 255, 255, 0.88);
+        border: 1px solid var(--line);
+        box-shadow: 0 24px 70px rgba(24, 48, 59, 0.08);
+      }
+
+      .soft {
+        background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,244,235,0.95));
+        border: 1px solid var(--line);
+      }
+
+      .figure-frame {
+        background: white;
+        border: 1px solid var(--line);
+        box-shadow: 0 18px 45px rgba(24, 48, 59, 0.08);
+      }
+
+      .chip.active,
+      .choice-btn.active,
+      .case-view-btn.active,
+      .ai-btn.active {
+        background: var(--ink);
+        color: white;
+      }
+
+      .flow-arrow {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .demo-card.active {
+        border-color: rgba(24, 48, 59, 0.28);
+        box-shadow: 0 16px 36px rgba(24, 48, 59, 0.12);
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <header class="mx-auto max-w-7xl px-4 pb-8 pt-8 sm:px-6 lg:px-8">
+      <div class="panel rounded-[2.25rem] p-8 sm:p-10">
+        <div class="grid gap-8 lg:grid-cols-[1.3fr,0.9fr] lg:items-center">
+          <div>
+            <p class="sans mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-teal-800">
+              BRCAPath-Rx Stage 2 Demo
+            </p>
+            <h1 class="max-w-4xl text-4xl font-semibold leading-tight sm:text-5xl">
+              A click-through demo of why a raw treated-vs-untreated comparison can lie
+            </h1>
+            <p class="sans mt-5 max-w-3xl text-lg leading-8 text-slate-700" id="hero-subtitle">
+              Loading...
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="#tiny-idea" class="sans rounded-full bg-[var(--ink)] px-5 py-3 text-sm font-semibold text-white">
+                Start demo
+              </a>
+              <a href="#real-case" class="sans rounded-full border border-black/10 px-5 py-3 text-sm font-semibold text-slate-700">
+                Jump to real case
+              </a>
+            </div>
+          </div>
+          <aside class="rounded-[2rem] bg-[var(--ink)] p-6 text-white">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-300" id="hero-badge">Loading...</p>
+            <p class="mt-4 text-2xl font-semibold leading-tight" id="hero-case">Loading...</p>
+            <div class="mt-6 rounded-3xl bg-white/10 p-4">
+              <p class="sans text-xs uppercase tracking-[0.18em] text-slate-300">What this is</p>
+              <p class="mt-2 text-lg font-semibold">A demo, not a text report</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <nav class="sticky top-0 z-10 border-y border-black/5 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-wrap gap-2 px-4 py-3 sm:px-6 lg:px-8">
+        <a href="#tiny-idea" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">1. Tiny idea</a>
+        <a href="#fictional" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">2. Clickable examples</a>
+        <a href="#simulator" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">3. Simulator</a>
+        <a href="#real-case" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">4. Real case</a>
+        <a href="#methods" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">5. Methods</a>
+        <a href="#next-cases" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">6. Next cases</a>
+        <a href="#ai-model" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">7. AI model</a>
+      </div>
+    </nav>
+
+    <main class="mx-auto max-w-7xl space-y-10 px-4 py-10 sm:px-6 lg:px-8">
+      <section id="tiny-idea" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="grid gap-8 lg:grid-cols-[0.95fr,1.05fr]">
+          <div>
+            <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">1. Tiny confounding idea</p>
+            <h2 class="mt-3 text-3xl font-semibold sm:text-4xl" id="tiny-title">Loading...</h2>
+            <p id="tiny-setup" class="sans mt-4 text-lg leading-8 text-slate-700"></p>
+            <div class="mt-6 flex gap-3">
+              <button class="choice-btn active sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-tiny="wrong">
+                Wrong quick conclusion
+              </button>
+              <button class="choice-btn sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-tiny="better">
+                Better interpretation
+              </button>
+            </div>
+            <div class="mt-6 rounded-[1.6rem] bg-[var(--paper)] p-6">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="tiny-mode-label">Wrong quick conclusion</p>
+              <p id="tiny-mode-text" class="mt-3 text-xl leading-8"></p>
+            </div>
+          </div>
+          <div class="rounded-[1.8rem] bg-[var(--mist)] p-6">
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">The big message</p>
+            <p class="mt-4 text-lg leading-8">
+              A treatment group can look worse simply because that group started off older, sicker, or later stage before we ever compare outcomes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="fictional" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="max-w-4xl">
+          <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">2. Clickable fictional examples</p>
+          <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">Breast-cancer-like examples, clearly labeled as illustrations</h2>
+        </div>
+        <div class="mt-7 flex flex-wrap gap-3" id="fictional-buttons"></div>
+        <div class="mt-6 grid gap-8 lg:grid-cols-[1.05fr,0.95fr]">
+          <div class="soft rounded-[1.8rem] p-6">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="fictional-status">Loading...</p>
+            <h3 id="fictional-title" class="mt-3 text-2xl font-semibold">Loading...</h3>
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div class="rounded-3xl bg-white p-5 shadow-[0_10px_24px_rgba(24,48,59,0.05)]">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="fictional-treated-label">Loading...</p>
+                <p id="fictional-treated-profile" class="mt-3 text-lg leading-8"></p>
+                <div class="mt-4 rounded-3xl bg-[var(--mist)] p-4">
+                  <p class="sans text-xs uppercase tracking-[0.16em] text-slate-500">Crude survival</p>
+                  <p id="fictional-treated-survival" class="mt-2 text-3xl font-semibold">Loading...</p>
+                </div>
+              </div>
+              <div class="rounded-3xl bg-white p-5 shadow-[0_10px_24px_rgba(24,48,59,0.05)]">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="fictional-untreated-label">Loading...</p>
+                <p id="fictional-untreated-profile" class="mt-3 text-lg leading-8"></p>
+                <div class="mt-4 rounded-3xl bg-[var(--paper)] p-4">
+                  <p class="sans text-xs uppercase tracking-[0.16em] text-slate-500">Crude survival</p>
+                  <p id="fictional-untreated-survival" class="mt-2 text-3xl font-semibold">Loading...</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <button class="fictional-mode-btn active sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-fictional-mode="wrong">
+                Show misleading conclusion
+              </button>
+              <button class="fictional-mode-btn sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-fictional-mode="better">
+                Show better interpretation
+              </button>
+            </div>
+            <div class="mt-5 rounded-[1.6rem] bg-[var(--paper)] p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="fictional-mode-label">Misleading conclusion</p>
+              <p id="fictional-mode-text" class="mt-3 text-lg leading-8"></p>
+            </div>
+          </div>
+          <div class="rounded-[1.8rem] bg-white p-6 shadow-[0_10px_24px_rgba(24,48,59,0.05)]">
+            <canvas id="fictional-chart" height="250"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section id="simulator" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="grid gap-8 lg:grid-cols-[1fr,1fr]">
+          <div>
+            <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">3. Confounding simulator</p>
+            <h2 class="mt-3 text-3xl font-semibold sm:text-4xl" id="sim-title">Loading...</h2>
+            <p id="sim-description" class="sans mt-4 text-lg leading-8 text-slate-700"></p>
+            <div class="mt-6 space-y-3">
+              <label class="flex items-center gap-3 rounded-2xl border border-black/10 bg-white p-4">
+                <input id="sim-older" type="checkbox" class="h-5 w-5 accent-[var(--rust)]" />
+                <span class="sans text-base font-semibold">Treated group older than untreated group</span>
+              </label>
+              <label class="flex items-center gap-3 rounded-2xl border border-black/10 bg-white p-4">
+                <input id="sim-sicker" type="checkbox" class="h-5 w-5 accent-[var(--rust)]" />
+                <span class="sans text-base font-semibold">Treated group sicker at baseline</span>
+              </label>
+              <label class="flex items-center gap-3 rounded-2xl border border-black/10 bg-white p-4">
+                <input id="sim-stage" type="checkbox" class="h-5 w-5 accent-[var(--rust)]" />
+                <span class="sans text-base font-semibold">Treated group later stage</span>
+              </label>
+            </div>
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div class="rounded-3xl bg-[var(--mist)] p-5">
+                <p class="sans text-xs uppercase tracking-[0.16em] text-slate-500">Toy crude survival</p>
+                <p id="sim-treated-survival" class="mt-2 text-3xl font-semibold">Loading...</p>
+                <p class="sans mt-2 text-sm text-slate-600">Treated group</p>
+              </div>
+              <div class="rounded-3xl bg-[var(--paper)] p-5">
+                <p class="sans text-xs uppercase tracking-[0.16em] text-slate-500">Toy crude survival</p>
+                <p id="sim-untreated-survival" class="mt-2 text-3xl font-semibold">Loading...</p>
+                <p class="sans mt-2 text-sm text-slate-600">Untreated group</p>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[1.8rem] bg-white p-6 shadow-[0_10px_24px_rgba(24,48,59,0.05)]">
+            <canvas id="sim-chart" height="230"></canvas>
+            <div class="mt-5 rounded-[1.6rem] bg-[var(--paper)] p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Naive conclusion</p>
+              <p id="sim-naive" class="mt-3 text-lg leading-8"></p>
+            </div>
+            <div class="mt-4 rounded-[1.6rem] bg-[var(--mist)] p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Why that can be misleading</p>
+              <p id="sim-better" class="mt-3 text-lg leading-8"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="real-case" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="max-w-4xl">
+          <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">4. One real completed case</p>
+          <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">The only completed real causal case so far</h2>
+          <p class="sans mt-4 text-lg leading-8 text-slate-700">
+            This is the one real completed Stage 2 case study at the moment. Everything else shown later is future candidate work, not finished analysis.
+          </p>
+        </div>
+        <div class="mt-8 grid gap-4 md:grid-cols-4">
+          <div class="soft rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Cohort</p>
+            <p id="real-cohort" class="mt-2 text-2xl font-semibold">Loading...</p>
+          </div>
+          <div class="soft rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Subgroup</p>
+            <p id="real-subgroup" class="mt-2 text-2xl font-semibold">Loading...</p>
+          </div>
+          <div class="soft rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Treatment question</p>
+            <p id="real-treatment" class="mt-2 text-xl font-semibold">Loading...</p>
+          </div>
+          <div class="soft rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Patients / events</p>
+            <p id="real-counts" class="mt-2 text-xl font-semibold">Loading...</p>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3" id="case-view-buttons"></div>
+        <div class="mt-6 grid gap-8 lg:grid-cols-[0.9fr,1.1fr]">
+          <div class="rounded-[1.8rem] bg-[var(--paper)] p-6">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="case-view-title">Loading...</p>
+            <p id="case-view-text" class="mt-3 text-xl leading-8"></p>
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div class="rounded-3xl bg-white p-5 shadow-[0_10px_24px_rgba(24,48,59,0.05)]">
+                <p class="sans text-xs uppercase tracking-[0.16em] text-slate-500">Naive estimate</p>
+                <p id="real-naive-hr" class="mt-2 text-3xl font-semibold">Loading...</p>
+              </div>
+              <div class="rounded-3xl bg-white p-5 shadow-[0_10px_24px_rgba(24,48,59,0.05)]">
+                <p class="sans text-xs uppercase tracking-[0.16em] text-slate-500">Adjusted estimate</p>
+                <p id="real-adjusted-hr" class="mt-2 text-3xl font-semibold">Loading...</p>
+              </div>
+            </div>
+          </div>
+          <div id="case-view-panels" class="space-y-6">
+            <article data-case-panel="imbalance_before" class="figure-frame rounded-[1.8rem] p-4">
+              <img src="assets/fig_balance_before.png" alt="Baseline imbalance before adjustment" class="w-full rounded-[1.2rem]" />
+            </article>
+            <article data-case-panel="naive_survival" class="figure-frame hidden rounded-[1.8rem] p-4">
+              <img src="assets/fig_naive_km.png" alt="Naive survival comparison" class="w-full rounded-[1.2rem]" />
+            </article>
+            <article data-case-panel="balance_after" class="figure-frame hidden rounded-[1.8rem] p-4">
+              <img src="assets/fig_balance_after.png" alt="Covariate balance after overlap weighting" class="w-full rounded-[1.2rem]" />
+            </article>
+            <article data-case-panel="adjusted_survival" class="figure-frame hidden rounded-[1.8rem] p-4">
+              <img src="assets/fig_adjusted_survival.png" alt="Adjusted survival comparison" class="w-full rounded-[1.2rem]" />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="methods" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="max-w-4xl">
+          <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">5. Methods, briefly</p>
+          <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">What the adjustment methods try to fix</h2>
+        </div>
+        <div id="method-cards" class="mt-8 grid gap-6 lg:grid-cols-2"></div>
+        <div class="mt-6 rounded-[1.8rem] bg-[var(--mist)] p-6">
+          <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="method-detail-label">Choose a method card</p>
+          <p id="method-detail-text" class="mt-3 text-lg leading-8"></p>
+        </div>
+        <div class="mt-8 figure-frame rounded-3xl p-4">
+          <img src="assets/fig_ps_overlap.png" alt="Overlap figure" class="w-full rounded-2xl" />
+          <figcaption class="sans mt-3 text-sm text-slate-600">Real result: overlap weighting gives more influence to patients in the overlap middle.</figcaption>
+        </div>
+      </section>
+
+      <section id="next-cases" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="grid gap-8 lg:grid-cols-[0.95fr,1.05fr]">
+          <div>
+            <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">6. What we studied now vs what comes next</p>
+            <div class="rounded-[1.8rem] bg-[var(--mist)] p-6">
+              <h2 class="text-2xl font-semibold">Studied now</h2>
+              <ul id="studied-now" class="mt-5 space-y-3 text-lg leading-8"></ul>
+            </div>
+          </div>
+          <div>
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">Future candidate analyses</p>
+            <div id="candidate-cards" class="mt-4 grid gap-4"></div>
+            <div class="mt-5 rounded-[1.8rem] bg-[var(--paper)] p-6">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="candidate-detail-label">Future candidate analysis</p>
+              <p id="candidate-detail-text" class="mt-3 text-lg leading-8"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ai-model" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="grid gap-8 lg:grid-cols-[1fr,1fr]">
+          <div>
+            <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">7. Why this matters for the final AI model</p>
+            <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">Clean treatment signals matter</h2>
+            <div class="mt-6 flex gap-3">
+              <button class="ai-btn active sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-ai="without">
+                Without adjustment
+              </button>
+              <button class="ai-btn sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-ai="with">
+                With adjustment
+              </button>
+            </div>
+            <div class="mt-6 rounded-[1.6rem] bg-[var(--paper)] p-6">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="ai-mode-label">Without adjustment</p>
+              <p id="ai-mode-text" class="mt-3 text-lg leading-8"></p>
+            </div>
+            <div class="mt-5 rounded-[1.6rem] bg-white p-6">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Still future work</p>
+              <p id="ai-future" class="mt-3 text-lg leading-8"></p>
+            </div>
+          </div>
+          <div class="rounded-[1.9rem] bg-[var(--ink)] p-6 text-white">
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">Conceptual flow</p>
+            <div id="ai-flow" class="mt-6"></div>
+            <div class="mt-8 rounded-3xl bg-white/10 p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">20-second talk track</p>
+              <p id="say-aloud" class="mt-3 text-lg leading-8"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const state = {
+        tinyMode: "wrong",
+        fictionalIndex: 0,
+        fictionalMode: "wrong",
+        realCaseView: "imbalance_before",
+        methodIndex: 0,
+        candidateIndex: 0,
+        aiMode: "without",
+      };
+
+      let payload = null;
+      let fictionalChart = null;
+      let simChart = null;
+
+      const money = (value) => `${value}%`;
+      const clamp = (value) => Math.max(0, Math.min(100, value));
+      const byId = (id) => document.getElementById(id);
+
+      async function init() {
+        const response = await fetch("./confounding_demo_payload.json");
+        payload = await response.json();
+
+        renderHero();
+        setupTinyIdea();
+        setupFictionalCases();
+        setupSimulator();
+        setupRealCase();
+        setupMethods();
+        setupCandidates();
+        setupAiModel();
+      }
+
+      function renderHero() {
+        document.title = `${payload.meta.title} v4`;
+        byId("hero-subtitle").textContent = payload.meta.subtitle;
+        byId("hero-badge").textContent = payload.meta.completed_case_badge;
+        byId("hero-case").textContent = payload.meta.completed_case_label;
+      }
+
+      function setupTinyIdea() {
+        byId("tiny-title").textContent = payload.tiny_idea.title;
+        byId("tiny-setup").textContent = payload.tiny_idea.setup;
+
+        document.querySelectorAll("[data-tiny]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.tinyMode = button.dataset.tiny;
+            renderTinyIdea();
+          });
+        });
+
+        renderTinyIdea();
+      }
+
+      function renderTinyIdea() {
+        document.querySelectorAll("[data-tiny]").forEach((button) => {
+          button.classList.toggle("active", button.dataset.tiny === state.tinyMode);
+        });
+
+        const isWrong = state.tinyMode === "wrong";
+        byId("tiny-mode-label").textContent = isWrong ? "Wrong quick conclusion" : "Better interpretation";
+        byId("tiny-mode-text").textContent = isWrong ? payload.tiny_idea.wrong : payload.tiny_idea.better;
+      }
+
+      function setupFictionalCases() {
+        const buttons = byId("fictional-buttons");
+        buttons.innerHTML = payload.fictional_cases
+          .map(
+            (item, index) => `
+              <button
+                class="demo-card fictional-case-btn sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold transition"
+                data-fictional-index="${index}"
+              >
+                ${item.name}
+              </button>
+            `,
+          )
+          .join("");
+
+        buttons.querySelectorAll("[data-fictional-index]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.fictionalIndex = Number(button.dataset.fictionalIndex);
+            renderFictional();
+          });
+        });
+
+        document.querySelectorAll("[data-fictional-mode]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.fictionalMode = button.dataset.fictionalMode;
+            renderFictional();
+          });
+        });
+
+        const context = byId("fictional-chart").getContext("2d");
+        fictionalChart = new Chart(context, {
+          type: "bar",
+          data: {
+            labels: ["Treated", "Untreated"],
+            datasets: [
+              {
+                data: [0, 0],
+                backgroundColor: ["#2d6b73", "#d9b99b"],
+                borderRadius: 14,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: { enabled: false },
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100,
+                grid: { color: "rgba(24, 48, 59, 0.08)" },
+                ticks: { callback: (value) => `${value}%` },
+              },
+              x: {
+                grid: { display: false },
+              },
+            },
+          },
+        });
+
+        renderFictional();
+      }
+
+      function renderFictional() {
+        const item = payload.fictional_cases[state.fictionalIndex];
+        byId("fictional-status").textContent = item.status;
+        byId("fictional-title").textContent = item.name;
+        byId("fictional-treated-label").textContent = item.treated_label;
+        byId("fictional-untreated-label").textContent = item.untreated_label;
+        byId("fictional-treated-profile").textContent = item.treated_profile;
+        byId("fictional-untreated-profile").textContent = item.untreated_profile;
+        byId("fictional-treated-survival").textContent = money(item.treated_survival);
+        byId("fictional-untreated-survival").textContent = money(item.untreated_survival);
+
+        document.querySelectorAll("[data-fictional-index]").forEach((button) => {
+          button.classList.toggle("active", Number(button.dataset.fictionalIndex) === state.fictionalIndex);
+        });
+        document.querySelectorAll("[data-fictional-mode]").forEach((button) => {
+          button.classList.toggle("active", button.dataset.fictionalMode === state.fictionalMode);
+        });
+
+        const isWrong = state.fictionalMode === "wrong";
+        byId("fictional-mode-label").textContent = isWrong ? "Misleading conclusion" : "Better interpretation";
+        byId("fictional-mode-text").textContent = isWrong ? item.wrong : item.better;
+
+        fictionalChart.data.datasets[0].data = [item.treated_survival, item.untreated_survival];
+        fictionalChart.update();
+      }
+
+      function setupSimulator() {
+        byId("sim-title").textContent = payload.simulator.title;
+        byId("sim-description").textContent = payload.simulator.description;
+
+        ["sim-older", "sim-sicker", "sim-stage"].forEach((id) => {
+          byId(id).addEventListener("change", renderSimulator);
+        });
+
+        const context = byId("sim-chart").getContext("2d");
+        simChart = new Chart(context, {
+          type: "bar",
+          data: {
+            labels: ["Treated", "Untreated"],
+            datasets: [
+              {
+                data: [payload.simulator.base_survival, payload.simulator.untreated_survival],
+                backgroundColor: ["#d46d4f", "#607d42"],
+                borderRadius: 14,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: { enabled: false },
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100,
+                grid: { color: "rgba(24, 48, 59, 0.08)" },
+                ticks: { callback: (value) => `${value}%` },
+              },
+              x: {
+                grid: { display: false },
+              },
+            },
+          },
+        });
+
+        renderSimulator();
+      }
+
+      function renderSimulator() {
+        const penalties = payload.simulator.penalties;
+        const active = [];
+        let treated = payload.simulator.base_survival;
+
+        if (byId("sim-older").checked) {
+          treated -= penalties.older;
+          active.push("older");
+        }
+        if (byId("sim-sicker").checked) {
+          treated -= penalties.sicker;
+          active.push("sicker");
+        }
+        if (byId("sim-stage").checked) {
+          treated -= penalties.later_stage;
+          active.push("later stage");
+        }
+
+        treated = clamp(treated);
+        const untreated = payload.simulator.untreated_survival;
+        const gap = untreated - treated;
+
+        byId("sim-treated-survival").textContent = money(treated);
+        byId("sim-untreated-survival").textContent = money(untreated);
+
+        const gapText = gap === 0 ? "the same" : `${Math.abs(gap).toFixed(0)} points worse`;
+        byId("sim-naive").textContent =
+          gap === 0
+            ? "If the groups start the same, the toy crude comparison does not make treatment look bad."
+            : `The treated group now looks ${gapText}, so a quick read could wrongly say the treatment looks harmful.`;
+
+        byId("sim-better").textContent =
+          active.length === 0
+            ? "Right now the groups are comparable, so the crude comparison is not being distorted by baseline differences."
+            : `That misleading gap is being created by baseline differences in the treated group: ${active.join(", ")}. The toy treatment itself has not changed.`;
+
+        simChart.data.datasets[0].data = [treated, untreated];
+        simChart.update();
+      }
+
+      function setupRealCase() {
+        const real = payload.real_case;
+        byId("real-cohort").textContent = real.cohort;
+        byId("real-subgroup").textContent = real.subgroup;
+        byId("real-treatment").textContent = real.treatment_question;
+        byId("real-counts").textContent = `${real.patients_n} / ${real.events_n}`;
+        byId("real-naive-hr").textContent = `${real.naive_hr.toFixed(2)} (${real.naive_ci[0].toFixed(2)} to ${real.naive_ci[1].toFixed(2)})`;
+        byId("real-adjusted-hr").textContent = `${real.adjusted_hr.toFixed(2)} (${real.adjusted_ci[0].toFixed(2)} to ${real.adjusted_ci[1].toFixed(2)})`;
+
+        byId("case-view-buttons").innerHTML = real.views
+          .map(
+            (view) => `
+              <button
+                class="case-view-btn sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold"
+                data-case-view="${view.id}"
+              >
+                ${view.button}
+              </button>
+            `,
+          )
+          .join("");
+
+        document.querySelectorAll("[data-case-view]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.realCaseView = button.dataset.caseView;
+            renderRealCase();
+          });
+        });
+
+        renderRealCase();
+      }
+
+      function renderRealCase() {
+        const real = payload.real_case;
+        const selected = real.views.find((item) => item.id === state.realCaseView) || real.views[0];
+        byId("case-view-title").textContent = selected.title;
+        byId("case-view-text").textContent = selected.text;
+
+        document.querySelectorAll("[data-case-view]").forEach((button) => {
+          button.classList.toggle("active", button.dataset.caseView === state.realCaseView);
+        });
+        document.querySelectorAll("[data-case-panel]").forEach((panel) => {
+          panel.classList.toggle("hidden", panel.dataset.casePanel !== state.realCaseView);
+        });
+      }
+
+      function setupMethods() {
+        byId("method-cards").innerHTML = payload.methods
+          .map(
+            (item, index) => `
+              <button
+                type="button"
+                class="demo-card method-card w-full cursor-pointer rounded-[1.8rem] border border-black/10 bg-white p-6 text-left transition"
+                data-method-index="${index}"
+              >
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Method ${index + 1}</p>
+                <h3 class="mt-3 text-2xl font-semibold">${item.name}</h3>
+                <p class="sans mt-3 text-sm leading-7 text-slate-600">${item.problem}</p>
+              </button>
+            `,
+          )
+          .join("");
+
+        document.querySelectorAll("[data-method-index]").forEach((card) => {
+          card.addEventListener("click", () => {
+            state.methodIndex = Number(card.dataset.methodIndex);
+            renderMethods();
+          });
+        });
+
+        renderMethods();
+      }
+
+      function renderMethods() {
+        const item = payload.methods[state.methodIndex];
+        document.querySelectorAll("[data-method-index]").forEach((card) => {
+          card.classList.toggle("active", Number(card.dataset.methodIndex) === state.methodIndex);
+        });
+
+        byId("method-detail-label").textContent = item.name;
+        byId("method-detail-text").innerHTML = `
+          <strong>Problem:</strong> ${item.problem}<br />
+          <strong>How it helps:</strong> ${item.helps}<br />
+          <strong>What it still cannot guarantee:</strong> ${item.cannot}
+        `;
+      }
+
+      function setupCandidates() {
+        byId("studied-now").innerHTML = `
+          <li>ER-positive METABRIC cohort</li>
+          <li>Hormone therapy YES vs NO</li>
+          <li>Overall survival with naive comparison plus overlap-weighted adjustment</li>
+        `;
+
+        byId("candidate-cards").innerHTML = payload.future_candidates
+          .map(
+            (item, index) => `
+              <button
+                class="demo-card w-full cursor-pointer rounded-[1.8rem] border border-black/10 bg-white p-5 text-left transition"
+                data-candidate-index="${index}"
+              >
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">${item.status}</p>
+                <h3 class="mt-2 text-xl font-semibold">${item.name}</h3>
+              </button>
+            `,
+          )
+          .join("");
+
+        document.querySelectorAll("[data-candidate-index]").forEach((card) => {
+          card.addEventListener("click", () => {
+            state.candidateIndex = Number(card.dataset.candidateIndex);
+            renderCandidates();
+          });
+        });
+
+        renderCandidates();
+      }
+
+      function renderCandidates() {
+        const item = payload.future_candidates[state.candidateIndex];
+        document.querySelectorAll("[data-candidate-index]").forEach((card) => {
+          card.classList.toggle("active", Number(card.dataset.candidateIndex) === state.candidateIndex);
+        });
+
+        byId("candidate-detail-label").textContent = item.status;
+        byId("candidate-detail-text").textContent = item.why_next;
+      }
+
+      function setupAiModel() {
+        document.querySelectorAll("[data-ai]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.aiMode = button.dataset.ai;
+            renderAiModel();
+          });
+        });
+
+        byId("ai-future").textContent = payload.ai_demo.future_work;
+        byId("say-aloud").textContent = payload.say_aloud;
+        byId("ai-flow").innerHTML = payload.ai_demo.flow
+          .map(
+            (step, index) => `
+              <div class="rounded-[1.6rem] bg-white/10 p-4">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">Step ${index + 1}</p>
+                <p class="mt-2 text-lg font-semibold">${step}</p>
+              </div>
+              ${index < payload.ai_demo.flow.length - 1 ? '<div class="flow-arrow">v</div>' : ""}
+            `,
+          )
+          .join("");
+
+        renderAiModel();
+      }
+
+      function renderAiModel() {
+        const isWithout = state.aiMode === "without";
+        document.querySelectorAll("[data-ai]").forEach((button) => {
+          button.classList.toggle("active", button.dataset.ai === state.aiMode);
+        });
+        byId("ai-mode-label").textContent = isWithout ? "Without adjustment" : "With adjustment";
+        byId("ai-mode-text").textContent = isWithout
+          ? payload.ai_demo.without_adjustment
+          : payload.ai_demo.with_adjustment;
+      }
+
+      init().catch((error) => {
+        console.error(error);
+        byId("hero-subtitle").textContent = "The demo payload did not load. Check the local server path.";
+      });
+    </script>
+  </body>
+</html>
