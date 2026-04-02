@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "BRCAPath-Rx Stage 2: Confounding Tutorial",
+    "subtitle": "A guided explanation of why raw treatment comparisons can mislead us, and how Stage 2 starts fixing that.",
+    "selected_cohort": "METABRIC",
+    "selected_question": "Among ER-positive METABRIC patients with observed hormone-therapy status, how does hormone therapy (YES vs NO) relate to overall survival after balancing measured baseline confounders?",
+    "selected_subgroup": "ER-positive patients",
+    "meeting_ready": "yes",
+    "verdict": "A"
+  },
+  "everyday_examples": [
+    {
+      "title": "Tutors and exam scores",
+      "wrong_conclusion": "Students with tutors scored lower, so tutoring must be harmful.",
+      "hidden_factor": "The students who were already struggling were more likely to get tutors in the first place.",
+      "plain_explanation": "The tutor group started off weaker, so the raw comparison mixes tutoring with starting difficulty.",
+      "numbers": [
+        { "label": "Students already struggling", "treated_label": "Got tutor", "treated_pct": 80, "good_outcome": 55 },
+        { "label": "Students already doing well", "treated_label": "Got tutor", "treated_pct": 20, "good_outcome": 90 }
+      ]
+    },
+    {
+      "title": "Umbrellas and rain",
+      "wrong_conclusion": "People carrying umbrellas are more likely to get wet, so umbrellas must cause wet clothes.",
+      "hidden_factor": "Rain is the real reason both things happen: rain makes people carry umbrellas and also makes them wet.",
+      "plain_explanation": "Umbrellas are linked to wet clothes because both are linked to rain.",
+      "numbers": [
+        { "label": "Rainy days", "treated_label": "Umbrella", "treated_pct": 85, "good_outcome": 35 },
+        { "label": "Dry days", "treated_label": "Umbrella", "treated_pct": 5, "good_outcome": 98 }
+      ]
+    },
+    {
+      "title": "Firefighters and damaged houses",
+      "wrong_conclusion": "Houses with more firefighters have more damage, so firefighters must make fires worse.",
+      "hidden_factor": "Bigger fires attract more firefighters and also cause more damage.",
+      "plain_explanation": "The number of firefighters is reacting to fire severity, not causing the damage.",
+      "numbers": [
+        { "label": "Small fires", "treated_label": "Many firefighters", "treated_pct": 10, "good_outcome": 92 },
+        { "label": "Large fires", "treated_label": "Many firefighters", "treated_pct": 95, "good_outcome": 22 }
+      ]
+    }
+  ],
+  "fictional_story": {
+    "title": "A simple fictional patient story",
+    "intro": "Imagine three small patient groups. The later-stage groups are more likely to receive treatment because they are already at higher risk.",
+    "groups": [
+      {
+        "group": "Group A",
+        "profile": "Younger, earlier-stage patients",
+        "treatment_pct": 20,
+        "five_year_survival": 90,
+        "why": "These patients started with a better outlook, so many did well even without extra treatment."
+      },
+      {
+        "group": "Group B",
+        "profile": "Middle-risk patients",
+        "treatment_pct": 55,
+        "five_year_survival": 72,
+        "why": "More of them received treatment because their starting risk was higher."
+      },
+      {
+        "group": "Group C",
+        "profile": "Older, later-stage patients",
+        "treatment_pct": 85,
+        "five_year_survival": 48,
+        "why": "This group was sickest to begin with, so a crude treated-vs-untreated comparison will look unfair."
+      }
+    ],
+    "takeaway": "If we combine all three groups without adjusting for starting risk, treatment can look bad simply because treatment was given more often to the patients who started off worse."
+  },
+  "real_case": {
+    "title": "Real project case study",
+    "cohort": "METABRIC",
+    "subgroup": "ER-positive patients",
+    "treatment": "Hormone therapy YES vs NO",
+    "outcome": "Overall survival",
+    "patients_n": 1506,
+    "treated_n": 1079,
+    "untreated_n": 427,
+    "events_n": 881,
+    "naive_hr": 1.496,
+    "naive_ci": [1.287, 1.738],
+    "adjusted_hr": 0.996,
+    "adjusted_ci": [0.836, 1.186],
+    "overlap_fraction": 0.671,
+    "extreme_ps_fraction": 0.199,
+    "max_abs_smd_before": 0.696,
+    "max_abs_smd_after": 0.002,
+    "n_covariates_above_threshold_before": 18,
+    "n_covariates_above_threshold_after": 0,
+    "top_imbalances": [
+      { "label": "Tumor stage", "before": 0.696, "after": 0.0001 },
+      { "label": "Positive lymph nodes", "before": 0.585, "after": 0.0002 },
+      { "label": "Age at diagnosis", "before": 0.437, "after": 0.0000 },
+      { "label": "Menopausal state", "before": 0.437, "after": 0.0001 }
+    ],
+    "case_study_steps": [
+      "The first, naive comparison made hormone therapy look harmful.",
+      "But the treated and untreated patients did not start from the same baseline risk.",
+      "They differed strongly in stage, nodal burden, age, menopausal state, and subtype mix.",
+      "After overlap weighting, the measured imbalance shrank sharply and the estimate moved toward 1.00.",
+      "That tells us the naive comparison was misleading.",
+      "It does not prove the final treatment effect."
+    ],
+    "figures": {
+      "balance_before": "./assets/fig_balance_before.png",
+      "naive_km": "./assets/fig_naive_km.png",
+      "ps_overlap": "./assets/fig_ps_overlap.png",
+      "balance_after": "./assets/fig_balance_after.png",
+      "adjusted_survival": "./assets/fig_adjusted_survival.png"
+    }
+  },
+  "methods": [
+    {
+      "name": "Overlap weighting",
+      "plain_language": "Give more importance to patients who realistically could have gone either way, and less importance to extreme patients who almost certainly would have been treated or untreated.",
+      "tries_to_do": "Build a fairer comparison focused on the part of the data where treated and untreated patients actually overlap.",
+      "cannot_guarantee": "It cannot fix important confounders that were never measured.",
+      "visual_steps": [
+        "Start with treated and untreated groups that are far apart.",
+        "Estimate how likely each patient was to receive treatment based on measured baseline factors.",
+        "Upweight the patients in the overlap middle and downweight the extremes."
+      ]
+    },
+    {
+      "name": "Propensity score matching",
+      "plain_language": "Try to pair a treated patient with an untreated patient who looks similar at baseline.",
+      "tries_to_do": "Create smaller matched sets that are easier to compare fairly.",
+      "cannot_guarantee": "It can throw away many unmatched patients, and it still cannot fix unmeasured confounding.",
+      "visual_steps": [
+        "Estimate each patient's probability of treatment from measured factors.",
+        "Match treated patients to untreated patients with similar scores.",
+        "Compare outcomes inside those more similar pairs or matched groups."
+      ]
+    }
+  ],
+  "ai_connection": {
+    "title": "Why this matters for the final BRCAPath-Rx AI model",
+    "problem": "Without adjustment, the AI can learn the wrong lesson, such as thinking a treatment is harmful only because sicker patients were the ones who received it.",
+    "benefit": "Adjustment tries to give the model a cleaner signal by separating baseline risk from treatment choice as much as the available data allow.",
+    "flow": [
+      "Patient profile",
+      "Adjusted treatment-effect model",
+      "Estimated outcome under treatment A",
+      "Estimated outcome under treatment B",
+      "Estimated outcome under treatment C",
+      "Ranked recommendation candidates"
+    ],
+    "caution": "This is the intended Stage 2 direction of BRCAPath-Rx, not a finished recommendation engine yet."
+  },
+  "what_we_know_now": [
+    "The raw treatment comparison was strongly confounded.",
+    "The measured baseline imbalance improved a lot after overlap weighting.",
+    "Because the estimate changed so much after adjustment, the naive result was not trustworthy."
+  ],
+  "what_we_do_not_know_yet": [
+    "We still do not know the true causal effect with confidence from this dataset alone.",
+    "Important confounders are still missing, including comorbidity, adherence, exact endocrine regimen, and treatment-era detail.",
+    "This is why Stage 2 must be done carefully, one treatment question at a time."
+  ],
+  "limitations": [
+    "Adjustment helps, but it does not magically prove causality.",
+    "This is still observational treatment data rather than a randomized trial.",
+    "Some clinically important baseline factors are missing.",
+    "The current result is useful as a methodological milestone, not as a treatment recommendation."
+  ],
+  "say_aloud": "This walkthrough starts with simple everyday examples, then a fictional patient story, and only then the real METABRIC case study. The key message is that the raw treatment comparison was misleading because the treated and untreated patients started off different, and adjustment helped reduce that measured imbalance without proving the final answer."
+}
