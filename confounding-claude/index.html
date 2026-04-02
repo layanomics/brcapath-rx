@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRCAPath-Rx · Confounding Demo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:        #2563eb;
+      --blue-d:      #1d4ed8;
+      --blue-lt:     #eff6ff;
+      --blue-mid:    #bfdbfe;
+      --green:       #059669;
+      --green-lt:    #ecfdf5;
+      --green-mid:   #a7f3d0;
+      --amber:       #d97706;
+      --amber-lt:    #fffbeb;
+      --amber-mid:   #fde68a;
+      --red:         #dc2626;
+      --red-lt:      #fef2f2;
+      --red-mid:     #fecaca;
+      --purple:      #7c3aed;
+      --purple-lt:   #f5f3ff;
+      --s900: #0f172a; --s800: #1e293b; --s700: #334155;
+      --s600: #475569; --s500: #64748b; --s400: #94a3b8;
+      --s300: #cbd5e1; --s200: #e2e8f0; --s100: #f1f5f9; --s50: #f8fafc;
+      --white: #ffffff;
+      --r:    12px;
+      --rsm:  8px;
+      --sh:   0 1px 3px rgba(0,0,0,.07), 0 4px 12px rgba(0,0,0,.05);
+      --shmd: 0 4px 6px rgba(0,0,0,.06), 0 10px 30px rgba(0,0,0,.09);
+      --tr:   200ms ease;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--s50);
+      color: var(--s800);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ─────────────────────────────────────── */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--s200);
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .hdr {
+      max-width: 1120px; margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex; align-items: stretch; gap: 2rem;
+    }
+    .logo {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: .7rem 0;
+      font-weight: 700; font-size: 14px; letter-spacing: .04em;
+      color: var(--s800); white-space: nowrap; flex-shrink: 0;
+    }
+    .logo em { color: var(--blue); font-style: normal; }
+    .logo small {
+      font-size: 10px; font-weight: 400; color: var(--s400);
+      letter-spacing: .05em; display: block; margin-top: 1px;
+    }
+    .nav { display: flex; flex: 1; overflow-x: auto; }
+    .ntab {
+      padding: 0 1rem;
+      font-size: 13px; font-weight: 500; color: var(--s500);
+      cursor: pointer; white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      display: flex; align-items: center;
+      transition: color var(--tr), border-color var(--tr);
+      user-select: none;
+    }
+    .ntab:hover { color: var(--s800); }
+    .ntab.active { color: var(--blue); border-bottom-color: var(--blue); }
+
+    /* ── MAIN ────────────────────────────────────────── */
+    main { max-width: 1120px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+    .sec { display: none; }
+    .sec.on { display: block; }
+
+    /* ── TYPOGRAPHY ─────────────────────────────────── */
+    .ttl { font-size: 1.55rem; font-weight: 700; color: var(--s900); margin-bottom: .35rem; }
+    .sub { font-size: .95rem; color: var(--s500); margin-bottom: 2rem; }
+    h3   { font-size: 1rem; font-weight: 600; color: var(--s800); }
+    p    { color: var(--s600); }
+
+    /* ── CARD ────────────────────────────────────────── */
+    .card  { background: var(--white); border: 1px solid var(--s200); border-radius: var(--r); padding: 1.5rem; box-shadow: var(--sh); }
+    .cardsm{ background: var(--white); border: 1px solid var(--s200); border-radius: var(--rsm); padding: .9rem 1.1rem; }
+
+    /* ── BADGE ───────────────────────────────────────── */
+    .bdg {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: 10.5px; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; padding: .22rem .6rem; border-radius: 99px;
+    }
+    .bblue   { background: var(--blue-lt);   color: var(--blue);   }
+    .bgreen  { background: var(--green-lt);  color: var(--green);  }
+    .bamber  { background: var(--amber-lt);  color: var(--amber);  }
+    .bred    { background: var(--red-lt);    color: var(--red);    }
+    .bpurple { background: var(--purple-lt); color: var(--purple); }
+    .bslate  { background: var(--s100);      color: var(--s600);   }
+
+    /* ── BUTTON ──────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .5rem 1.1rem; border-radius: var(--rsm);
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      border: 1px solid transparent; transition: all var(--tr); user-select: none;
+    }
+    .btn-pri { background: var(--blue); color: var(--white); }
+    .btn-pri:hover { background: var(--blue-d); }
+    .btn-out { background: var(--white); color: var(--s700); border-color: var(--s300); }
+    .btn-out:hover { background: var(--s50); border-color: var(--s400); }
+    .btn-out.on { background: var(--blue-lt); color: var(--blue); border-color: var(--blue-mid); }
+
+    /* ── LAYOUT ──────────────────────────────────────── */
+    .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; }
+    .row { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
+    .mt1 { margin-top: 1rem; }
+    .mt2 { margin-top: 1.5rem; }
+    .mt3 { margin-top: 2rem; }
+    .mb1 { margin-bottom: 1rem; }
+    .mbsm{ margin-bottom: .5rem; }
+    .gap { gap: 1rem; }
+
+    /* ── INFOBOX ─────────────────────────────────────── */
+    .ib { padding: .8rem 1rem; border-radius: var(--rsm); border-left: 3px solid; }
+    .ib-blue  { background: var(--blue-lt);  border-color: var(--blue);  }
+    .ib-green { background: var(--green-lt); border-color: var(--green); }
+    .ib-amber { background: var(--amber-lt); border-color: var(--amber); }
+    .ib-red   { background: var(--red-lt);   border-color: var(--red);   }
+
+    /* ── METRIC CHIP ─────────────────────────────────── */
+    .chips { display: flex; gap: .65rem; flex-wrap: wrap; margin: 1rem 0; }
+    .chip { padding: .5rem .85rem; border-radius: var(--rsm); display: flex; flex-direction: column; }
+    .chip-v { font-size: 1.15rem; font-weight: 800; line-height: 1.1; }
+    .chip-l { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; opacity: .7; margin-top: .2rem; }
+    .cred   { background: var(--red-lt);   color: var(--red);   }
+    .cgreen { background: var(--green-lt); color: var(--green); }
+    .cblue  { background: var(--blue-lt);  color: var(--blue);  }
+    .cslate { background: var(--s100);     color: var(--s600);  }
+    .camber { background: var(--amber-lt); color: var(--amber); }
+
+    /* ── TEXT UTILITIES ──────────────────────────────── */
+    .xs    { font-size: 11.5px; }
+    .sm    { font-size: 13px; }
+    .muted { color: var(--s500); }
+    .tblue { color: var(--blue);  } .tgreen { color: var(--green); }
+    .tred  { color: var(--red);   } .tamber { color: var(--amber); }
+    .bold  { font-weight: 700; }   .semi   { font-weight: 600; }
+    .hr    { border: none; border-top: 1px solid var(--s200); margin: 1.5rem 0; }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 1 — QUICK IDEA
+    ══════════════════════════════════════════════════ */
+    .hero {
+      background: linear-gradient(135deg, #0f2a52 0%, #1d4ed8 100%);
+      border-radius: var(--r); padding: 2.25rem 2.5rem;
+      color: var(--white); margin-bottom: 1.5rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: ''; position: absolute;
+      top: -50px; right: -50px; width: 220px; height: 220px;
+      border-radius: 50%; background: rgba(255,255,255,.04);
+    }
+    .hero-lbl { font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: .6rem; }
+    .hero-ttl { font-size: 1.65rem; font-weight: 700; line-height: 1.3; max-width: 620px; margin-bottom: .85rem; }
+    .hero-sub { font-size: .9rem; color: rgba(255,255,255,.7); max-width: 520px; }
+
+    .ana-card {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.1rem 1.4rem; background: var(--white);
+      border: 1px solid var(--s200); border-radius: var(--r); box-shadow: var(--sh);
+    }
+    .ana-icon { font-size: 1.8rem; flex-shrink: 0; }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 2 — SIMULATOR
+    ══════════════════════════════════════════════════ */
+    .sim-wrap { display: grid; grid-template-columns: 270px 1fr; gap: 1.5rem; align-items: start; }
+    .sim-ctrl { display: flex; flex-direction: column; gap: .65rem; }
+    .sim-ctrl-lbl { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--s400); margin-bottom: .1rem; }
+
+    .stog {
+      display: flex; align-items: flex-start; gap: .7rem;
+      padding: .85rem .95rem; border-radius: var(--rsm);
+      cursor: pointer; border: 1px solid var(--s200); background: var(--white);
+      transition: all var(--tr); user-select: none;
+    }
+    .stog:hover { border-color: var(--blue-mid); }
+    .stog.on  { background: var(--blue-lt); border-color: var(--blue-mid); }
+
+    .stog-box {
+      width: 17px; height: 17px; border-radius: 4px;
+      border: 2px solid var(--s300); flex-shrink: 0; margin-top: 2px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: transparent; transition: all var(--tr);
+    }
+    .stog.on .stog-box { background: var(--blue); border-color: var(--blue); color: var(--white); }
+    .stog-lbl { font-size: 13px; font-weight: 500; color: var(--s700); }
+    .stog.on .stog-lbl { color: var(--blue); }
+    .stog-sub { font-size: 11px; color: var(--s400); margin-top: 1px; }
+    .stog.on .stog-sub { color: #60a5fa; }
+
+    .sim-out { background: var(--white); border: 1px solid var(--s200); border-radius: var(--r); padding: 1.4rem; box-shadow: var(--sh); }
+    .sim-grps { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; }
+    .sim-grp { padding: .9rem 1rem; border-radius: var(--rsm); border: 1px solid; }
+    .sg-t { border-color: var(--blue-mid); background: var(--blue-lt); }
+    .sg-u { border-color: var(--s200); background: var(--s50); }
+    .sg-lbl { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .5rem; }
+    .sg-t .sg-lbl { color: var(--blue); }
+    .sg-u .sg-lbl { color: var(--s500); }
+    .sg-row { font-size: 12px; color: var(--s600); display: flex; justify-content: space-between; padding: .18rem 0; border-bottom: 1px solid rgba(0,0,0,.04); }
+    .sg-row:last-child { border-bottom: none; }
+    .sg-bad { color: var(--red); font-weight: 600; }
+
+    .sim-hr-num { font-size: 2.4rem; font-weight: 900; line-height: 1; transition: color .3s; }
+    .sim-hr-note { font-size: 12px; color: var(--s400); margin-top: .2rem; transition: all .3s; }
+
+    .concl {
+      padding: .9rem 1.1rem; border-radius: var(--rsm); border-left: 3px solid;
+      transition: all .3s ease;
+    }
+    .concl-ok   { background: var(--green-lt); border-color: var(--green); }
+    .concl-warn { background: var(--red-lt);   border-color: var(--red);   }
+    .concl-lbl  { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .25rem; }
+    .concl-ok   .concl-lbl { color: var(--green); }
+    .concl-warn .concl-lbl { color: var(--red); }
+    .concl-txt  { font-size: 13px; font-weight: 500; color: var(--s800); }
+    .concl-note { font-size: 12px; color: var(--s500); margin-top: .2rem; }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 3 — THREE CASES
+    ══════════════════════════════════════════════════ */
+    .ctabs { display: flex; gap: .5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .ctab {
+      padding: .55rem 1.1rem; border-radius: var(--rsm);
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      border: 2px solid var(--s200); background: var(--white); color: var(--s600);
+      transition: all var(--tr); user-select: none;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .ctab:hover { border-color: var(--blue-mid); }
+    .ctab.real  { background: var(--green-lt); border-color: var(--green); color: var(--green); }
+    .ctab.fut   { background: var(--amber-lt); border-color: var(--amber); color: var(--amber); }
+
+    .cpanel { display: none; }
+    .cpanel.on { display: block; }
+
+    /* View switcher (Case A) */
+    .vtabs { display: flex; gap: .4rem; margin-bottom: 1.1rem; flex-wrap: wrap; }
+    .vtab {
+      padding: .4rem .85rem; border-radius: var(--rsm);
+      font-size: 12px; font-weight: 500; cursor: pointer;
+      border: 1px solid var(--s200); background: var(--white); color: var(--s600);
+      transition: all var(--tr); user-select: none;
+    }
+    .vtab:hover { border-color: var(--s400); }
+    .vtab.on { background: var(--blue); border-color: var(--blue); color: var(--white); }
+
+    .vpanel { display: none; }
+    .vpanel.on { display: block; }
+
+    .figbox {
+      background: var(--s50); border: 1px solid var(--s200);
+      border-radius: var(--rsm); padding: .85rem; text-align: center;
+    }
+    .figbox img { max-width: 100%; max-height: 320px; border-radius: 6px; }
+    .figbox .fig-fb { display: none; padding: 2.5rem 1rem; color: var(--s400); font-size: 12px; line-height: 1.8; }
+    .fig-cap { font-size: 11.5px; color: var(--s500); margin-top: .6rem; font-style: italic; }
+
+    .bar-row { display: flex; align-items: center; gap: .75rem; }
+    .bar-lbl { width: 115px; font-size: 12px; color: var(--s600); flex-shrink: 0; }
+    .bar { height: 8px; background: var(--s200); border-radius: 99px; overflow: hidden; flex: 1; }
+    .barf { height: 100%; border-radius: 99px; }
+    .bar-val { font-size: 12px; font-weight: 700; width: 38px; text-align: right; flex-shrink: 0; }
+
+    /* Future case */
+    .fut-card {
+      background: var(--white); border: 2px dashed var(--amber);
+      border-radius: var(--r); padding: 1.5rem;
+    }
+    .conf-pills { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .6rem; }
+    .cpill {
+      padding: .28rem .65rem; background: var(--amber-lt);
+      border: 1px solid var(--amber-mid); border-radius: 99px;
+      font-size: 11.5px; color: var(--amber); font-weight: 500;
+    }
+    .ovbar-wrap { height: 8px; background: var(--s200); border-radius: 99px; overflow: hidden; margin: .4rem 0; }
+    .ovbar-fill { height: 100%; border-radius: 99px; }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 4 — METHODS
+    ══════════════════════════════════════════════════ */
+    .mtabs { display: flex; gap: .5rem; margin-bottom: 1.5rem; }
+    .mtab {
+      padding: .5rem 1.1rem; border-radius: var(--rsm);
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      border: 2px solid var(--s200); background: var(--white); color: var(--s600);
+      transition: all var(--tr); user-select: none;
+    }
+    .mtab.on { background: var(--purple-lt); border-color: var(--purple); color: var(--purple); }
+    .mpanel { display: none; }
+    .mpanel.on { display: block; }
+
+    .mfeat { display: flex; gap: .75rem; padding: .75rem 0; border-bottom: 1px solid var(--s100); align-items: flex-start; }
+    .mfeat:last-child { border-bottom: none; }
+    .mf-icon {
+      width: 28px; height: 28px; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; flex-shrink: 0; margin-top: 1px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 5 — AI MODEL
+    ══════════════════════════════════════════════════ */
+    .flow { display: flex; align-items: center; gap: .65rem; flex-wrap: wrap; margin: 1.5rem 0; }
+    .fstep {
+      background: var(--white); border: 1px solid var(--s200);
+      border-radius: var(--rsm); padding: .7rem .9rem;
+      text-align: center; flex: 1; min-width: 110px; box-shadow: var(--sh);
+    }
+    .fstep-ico { font-size: 1.4rem; margin-bottom: .35rem; }
+    .fstep-lbl { font-size: 12px; font-weight: 600; color: var(--s700); }
+    .fstep-sub { font-size: 10px; color: var(--s400); margin-top: .15rem; }
+    .farrow { color: var(--s400); font-size: 1.1rem; flex-shrink: 0; }
+
+    .atabs { display: flex; gap: .5rem; margin-bottom: 1.1rem; }
+    .atau {
+      padding: .48rem 1rem; border-radius: var(--rsm);
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      border: 1px solid var(--s200); background: var(--white); color: var(--s600);
+      transition: all var(--tr); user-select: none;
+    }
+    .atau.bad.on { background: var(--red-lt);   border-color: var(--red);   color: var(--red);   }
+    .atau.good.on{ background: var(--green-lt); border-color: var(--green); color: var(--green); }
+    .apanel { display: none; }
+    .apanel.on { display: block; }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 6 — STATUS
+    ══════════════════════════════════════════════════ */
+    .dn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .done-card {
+      background: var(--white); border: 2px solid var(--green);
+      border-radius: var(--r); padding: 1.5rem;
+    }
+    .next-card {
+      background: var(--white); border: 2px dashed var(--blue-mid);
+      border-radius: var(--r); padding: 1.5rem;
+    }
+    .dn-head { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.2rem; }
+    .dn-ico {
+      width: 38px; height: 38px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .chk-row { display: flex; align-items: flex-start; gap: .45rem; font-size: 12px; margin-bottom: .35rem; }
+    .fc-item {
+      display: flex; align-items: flex-start; gap: .65rem;
+      padding: .85rem; border: 1px solid var(--s200);
+      border-radius: var(--rsm); margin-bottom: .65rem; background: var(--s50);
+    }
+    .fc-num {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--blue-lt); color: var(--blue);
+      font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+    }
+
+    .prog-bar {
+      display: flex; align-items: center; gap: 0;
+      background: var(--white); border: 1px solid var(--s200);
+      border-radius: var(--r); padding: 1rem 1.25rem; box-shadow: var(--sh);
+      margin-top: 1.5rem; flex-wrap: wrap; row-gap: .5rem;
+    }
+    .pstep {
+      display: flex; align-items: center; gap: .45rem;
+      padding: .5rem .85rem; border-radius: var(--rsm);
+      border: 1px solid;
+    }
+    .pstep.done  { background: var(--green-lt); border-color: var(--green-mid); }
+    .pstep.pend  { background: var(--s100);     border-color: var(--s200); }
+    .pstep.active{ background: var(--blue-lt);  border-color: var(--blue-mid); }
+    .pline { flex: 1; height: 2px; min-width: 20px; }
+    .pline.done { background: var(--green); }
+    .pline.pend { background: var(--s200); }
+
+    /* ── RESPONSIVE ───────────────────────────────── */
+    @media (max-width: 760px) {
+      .sim-wrap, .g2, .g3, .dn-grid { grid-template-columns: 1fr; }
+      .flow { flex-direction: column; }
+      .farrow { transform: rotate(90deg); }
+      .sim-grps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hdr">
+    <div class="logo">
+      BRCAPath<em>·Rx</em>
+      <small>Stage 2 · Confounding Demo</small>
+    </div>
+    <nav class="nav">
+      <div class="ntab active" onclick="goSec('s1',this)">Quick Idea</div>
+      <div class="ntab" onclick="goSec('s2',this)">Naive Comparison</div>
+      <div class="ntab" onclick="goSec('s3',this)">Three Cases</div>
+      <div class="ntab" onclick="goSec('s4',this)">Methods</div>
+      <div class="ntab" onclick="goSec('s5',this)">AI Model</div>
+      <div class="ntab" onclick="goSec('s6',this)">Done vs Next</div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 1 — QUICK IDEA
+════════════════════════════════════════════════════════ -->
+<section id="s1" class="sec on">
+
+  <div class="hero">
+    <div class="hero-lbl">BRCAPath-Rx · Confounding Demo · Stage 2</div>
+    <div class="hero-ttl">Treated and untreated patients are already different before treatment starts.</div>
+    <div class="hero-sub">A naive comparison can mislead us. This demo shows why — and how we try to correct it.</div>
+  </div>
+
+  <div class="g2 mb1">
+    <div class="ana-card">
+      <div class="ana-icon">☂️</div>
+      <div>
+        <div class="semi mbsm">The Umbrella Problem</div>
+        <div class="sm muted">People with umbrellas get wet more often than people without — but umbrellas don't cause rain. They're a response to it. Treated patients are similar: sicker patients are more likely to receive treatment, making treatment look harmful in a naive comparison.</div>
+      </div>
+    </div>
+    <div class="ana-card">
+      <div class="ana-icon">⚖️</div>
+      <div>
+        <div class="semi mbsm">What Confounding Means</div>
+        <div class="sm muted">A "confounder" is a variable that affects both who gets treated and what happens to them. Without accounting for it, treatment comparisons pick up background risk differences — not just the treatment effect.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb1">
+    <div class="row mbsm" style="margin-bottom:1rem;">
+      <div class="bdg bblue">Core Claim</div>
+      <span class="xs muted">What this entire demo is about</span>
+    </div>
+    <div class="g3">
+      <div class="cardsm" style="border-left:3px solid var(--red);">
+        <div class="xs semi tred mbsm" style="text-transform:uppercase;letter-spacing:.04em;">Problem</div>
+        <div class="xs muted">Treated and untreated groups differ at baseline. Direct comparison is misleading.</div>
+      </div>
+      <div class="cardsm" style="border-left:3px solid var(--blue);">
+        <div class="xs semi tblue mbsm" style="text-transform:uppercase;letter-spacing:.04em;">Adjustment</div>
+        <div class="xs muted">Statistical weighting tries to balance measured differences so the comparison is fairer.</div>
+      </div>
+      <div class="cardsm" style="border-left:3px solid var(--green);">
+        <div class="xs semi tgreen mbsm" style="text-transform:uppercase;letter-spacing:.04em;">Honest Claim</div>
+        <div class="xs muted">We reduce measured confounding — but unmeasured factors may remain. We don't prove causation.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:1.5rem;">
+    <button class="btn btn-pri" onclick="goSec('s2', document.querySelectorAll('.ntab')[1])">
+      See the confounding problem →
+    </button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 2 — NAIVE COMPARISON SIMULATOR
+════════════════════════════════════════════════════════ -->
+<section id="s2" class="sec">
+  <div class="ttl">The Naive Comparison Problem</div>
+  <div class="sub">Toggle the risk factors to see how group differences distort the result.</div>
+
+  <div class="sim-wrap">
+    <!-- Controls -->
+    <div class="sim-ctrl">
+      <div class="sim-ctrl-lbl">Add imbalances</div>
+
+      <div class="stog on" id="tog-age" onclick="togSim('age',this)">
+        <div class="stog-box" id="chk-age">✓</div>
+        <div>
+          <div class="stog-lbl">Treated group is older</div>
+          <div class="stog-sub">Avg 65 vs 59 years</div>
+        </div>
+      </div>
+
+      <div class="stog on" id="tog-stage" onclick="togSim('stage',this)">
+        <div class="stog-box" id="chk-stage">✓</div>
+        <div>
+          <div class="stog-lbl">Treated has later-stage cancer</div>
+          <div class="stog-sub">Stage 1.9 vs 1.3 average</div>
+        </div>
+      </div>
+
+      <div class="stog on" id="tog-nodes" onclick="togSim('nodes',this)">
+        <div class="stog-box" id="chk-nodes">✓</div>
+        <div>
+          <div class="stog-lbl">Treated has more lymph nodes</div>
+          <div class="stog-sub">2.3 positive nodes vs 0.4</div>
+        </div>
+      </div>
+
+      <div class="ib ib-blue mt1">
+        <div class="xs semi tblue mbsm">These are REAL imbalances</div>
+        <div class="xs muted">Found in the actual METABRIC ER-positive cohort before any adjustment.</div>
+      </div>
+    </div>
+
+    <!-- Output -->
+    <div class="sim-out">
+      <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--s400);margin-bottom:1rem;">Group comparison</div>
+
+      <div class="sim-grps">
+        <div class="sim-grp sg-t">
+          <div class="sg-lbl">Treated group</div>
+          <div class="sg-row"><span>Age</span><span class="sg-bad" id="tv-age">65 yrs ↑</span></div>
+          <div class="sg-row"><span>Tumor stage</span><span class="sg-bad" id="tv-stage">1.9 ↑</span></div>
+          <div class="sg-row"><span>Lymph nodes</span><span class="sg-bad" id="tv-nodes">2.3 ↑</span></div>
+          <div class="sg-row"><span>5-yr mortality</span><span>~59%</span></div>
+        </div>
+        <div class="sim-grp sg-u">
+          <div class="sg-lbl">Untreated group</div>
+          <div class="sg-row"><span>Age</span><span>59 yrs</span></div>
+          <div class="sg-row"><span>Tumor stage</span><span>1.3</span></div>
+          <div class="sg-row"><span>Lymph nodes</span><span>0.4</span></div>
+          <div class="sg-row"><span>5-yr mortality</span><span>~57%</span></div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1rem;">
+        <div class="xs muted mbsm">Naive hazard ratio</div>
+        <div class="sim-hr-num tred" id="sim-hr-val">1.50</div>
+        <div class="sim-hr-note" id="sim-hr-note">Suggests treatment is harmful — but is it?</div>
+      </div>
+
+      <div class="concl concl-warn" id="sim-concl">
+        <div class="concl-lbl" id="concl-lbl">⚠ Misleading conclusion</div>
+        <div class="concl-txt" id="concl-txt">Treated group appears to have worse survival. But they started sicker.</div>
+        <div class="concl-note" id="concl-note">The comparison is apples to oranges. We need adjustment first.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:1.5rem; text-align:center;">
+    <button class="btn btn-pri" onclick="goSec('s3', document.querySelectorAll('.ntab')[2])">
+      See the real case study →
+    </button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 3 — THREE CASES
+════════════════════════════════════════════════════════ -->
+<section id="s3" class="sec">
+  <div class="ttl">Three Breast-Cancer Cases</div>
+  <div class="sub">One real completed case. Two future candidates — clearly labeled as such.</div>
+
+  <div class="ctabs">
+    <div class="ctab real" id="ct-A" onclick="showCase('A',this)">
+      ✓ Case A &mdash; Hormone Therapy
+      <span class="bdg bgreen">Real · Done</span>
+    </div>
+    <div class="ctab" id="ct-B" onclick="showCase('B',this)">
+      ◷ Case B &mdash; Chemotherapy
+      <span class="bdg bamber">Future</span>
+    </div>
+    <div class="ctab" id="ct-C" onclick="showCase('C',this)">
+      ◷ Case C &mdash; Radiotherapy
+      <span class="bdg bamber">Future</span>
+    </div>
+  </div>
+
+
+  <!-- ── CASE A — REAL ── -->
+  <div class="cpanel on" id="cp-A">
+    <div class="row mbsm" style="margin-bottom:1.1rem;">
+      <div class="bdg bgreen">✓ Completed Analysis</div>
+      <div class="sm muted">ER-positive METABRIC &nbsp;·&nbsp; n = 1,506 &nbsp;·&nbsp; Outcome: Overall Survival</div>
+    </div>
+
+    <div class="chips">
+      <div class="chip cslate"><span class="chip-v">1,506</span><span class="chip-l">Patients</span></div>
+      <div class="chip cblue" ><span class="chip-v">1,079</span><span class="chip-l">Treated</span></div>
+      <div class="chip cslate"><span class="chip-v">427</span>  <span class="chip-l">Untreated</span></div>
+      <div class="chip cred"  ><span class="chip-v">1.50</span><span class="chip-l">Naive HR</span></div>
+      <div class="chip cgreen"><span class="chip-v">1.00</span><span class="chip-l">Adjusted HR</span></div>
+      <div class="chip cgreen"><span class="chip-v">18 → 0</span><span class="chip-l">Imbalances Fixed</span></div>
+    </div>
+
+    <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--s400);margin-bottom:.65rem;">Select view</div>
+    <div class="vtabs">
+      <div class="vtab on" onclick="showView(1,this)">1 · Baseline Imbalance</div>
+      <div class="vtab"    onclick="showView(2,this)">2 · Naive Comparison</div>
+      <div class="vtab"    onclick="showView(3,this)">3 · After Adjustment</div>
+      <div class="vtab"    onclick="showView(4,this)">4 · Adjusted Survival</div>
+    </div>
+
+    <!-- VIEW 1 -->
+    <div class="vpanel on" id="vp-1">
+      <div class="g2">
+        <div class="figbox">
+          <img src="./assets/fig_balance_before.png" alt="Covariate balance before adjustment"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <div class="fig-fb">📊 fig_balance_before.png<br><small>Copy from 03-results/ to assets/</small></div>
+          <div class="fig-cap">Covariate balance before adjustment. 18 variables show |SMD| &gt; 0.10.</div>
+        </div>
+        <div>
+          <h3 style="margin-bottom:.75rem;">Largest imbalances</h3>
+          <div style="display:flex;flex-direction:column;gap:.5rem;">
+            <div class="bar-row">
+              <div class="bar-lbl">Tumor Stage</div>
+              <div class="bar"><div class="barf" style="width:100%;background:var(--red);"></div></div>
+              <div class="bar-val tred">0.70</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-lbl">Lymph Nodes</div>
+              <div class="bar"><div class="barf" style="width:84%;background:var(--red);"></div></div>
+              <div class="bar-val tred">0.59</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-lbl">METABRIC Cohort</div>
+              <div class="bar"><div class="barf" style="width:85%;background:var(--red);"></div></div>
+              <div class="bar-val tred">0.59</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-lbl">Age</div>
+              <div class="bar"><div class="barf" style="width:63%;background:var(--amber);"></div></div>
+              <div class="bar-val tamber">0.44</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-lbl">Menopausal</div>
+              <div class="bar"><div class="barf" style="width:63%;background:var(--amber);"></div></div>
+              <div class="bar-val tamber">0.44</div>
+            </div>
+          </div>
+          <div class="ib ib-red mt1">
+            <div class="xs semi tred mbsm">What this means</div>
+            <div class="xs muted">Treated patients had more advanced cancer at baseline. Any survival comparison at this stage mixes treatment effects with pre-existing risk differences.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 2 -->
+    <div class="vpanel" id="vp-2">
+      <div class="g2">
+        <div class="figbox">
+          <img src="./assets/fig_naive_km.png" alt="Naive Kaplan-Meier survival curves"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <div class="fig-fb">📊 fig_naive_km.png<br><small>Copy from 03-results/ to assets/</small></div>
+          <div class="fig-cap">Naive Kaplan-Meier curves. Treated group appears to have worse survival — a confounded result.</div>
+        </div>
+        <div>
+          <div class="cardsm mb1" style="border-left:3px solid var(--red);">
+            <div class="xs semi tred" style="text-transform:uppercase;letter-spacing:.04em;margin-bottom:.45rem;">Naive result</div>
+            <div style="font-size:2rem;font-weight:900;color:var(--red);">HR = 1.50</div>
+            <div class="xs muted mt1">95% CI: 1.29 – 1.74 &nbsp;|&nbsp; p &lt; 0.0001</div>
+          </div>
+          <div class="ib ib-red mb1">
+            <div class="xs semi tred mbsm">Naive conclusion (misleading)</div>
+            <div class="xs muted">"Hormone therapy appears to cause worse survival."</div>
+          </div>
+          <div class="ib ib-amber">
+            <div class="xs semi tamber mbsm">Better interpretation</div>
+            <div class="xs muted">The treated group was older, higher-stage, and had more lymph node involvement at baseline. The naive HR reflects those pre-existing differences — not treatment effect alone.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 3 -->
+    <div class="vpanel" id="vp-3">
+      <div class="g2">
+        <div class="figbox">
+          <img src="./assets/fig_balance_after.png" alt="Covariate balance after overlap weighting"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <div class="fig-fb">📊 fig_balance_after.png<br><small>Copy from 03-results/ to assets/</small></div>
+          <div class="fig-cap">After overlap weighting: all 18 previously imbalanced covariates are now balanced. Max |SMD| dropped from 0.696 to 0.002.</div>
+        </div>
+        <div>
+          <h3 style="margin-bottom:.75rem;">Balance improvement</h3>
+          <div style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem;">
+            <div class="bar-row">
+              <div class="bar-lbl">Tumor Stage</div>
+              <div class="bar"><div class="barf" style="width:0.5%;background:var(--green);"></div></div>
+              <div class="bar-val tgreen">0.00</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-lbl">Lymph Nodes</div>
+              <div class="bar"><div class="barf" style="width:0.5%;background:var(--green);"></div></div>
+              <div class="bar-val tgreen">0.00</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-lbl">Age</div>
+              <div class="bar"><div class="barf" style="width:0.5%;background:var(--green);"></div></div>
+              <div class="bar-val tgreen">0.00</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-lbl">Menopausal</div>
+              <div class="bar"><div class="barf" style="width:0.5%;background:var(--green);"></div></div>
+              <div class="bar-val tgreen">0.00</div>
+            </div>
+          </div>
+          <div class="chips">
+            <div class="chip cred"  ><span class="chip-v">18</span><span class="chip-l">Imbalanced before</span></div>
+            <div class="chip cgreen"><span class="chip-v">0</span> <span class="chip-l">Imbalanced after</span></div>
+          </div>
+          <div class="ib ib-green mt1">
+            <div class="xs semi tgreen mbsm">What changed</div>
+            <div class="xs muted">Overlap weighting rebalanced all 18 measured confounders. Groups are now comparable on all observed baseline characteristics.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 4 -->
+    <div class="vpanel" id="vp-4">
+      <div class="g2">
+        <div class="figbox">
+          <img src="./assets/fig_adjusted_survival.png" alt="Overlap-weighted survival curves"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <div class="fig-fb">📊 fig_adjusted_survival.png<br><small>Copy from 03-results/ to assets/</small></div>
+          <div class="fig-cap">Overlap-weighted survival curves. After adjustment, treated and untreated groups show nearly identical trajectories.</div>
+        </div>
+        <div>
+          <div class="cardsm mb1" style="border-left:3px solid var(--green);">
+            <div class="xs semi tgreen" style="text-transform:uppercase;letter-spacing:.04em;margin-bottom:.45rem;">Adjusted result</div>
+            <div style="font-size:2rem;font-weight:900;color:var(--green);">HR = 1.00</div>
+            <div class="xs muted mt1">95% CI: 0.84 – 1.19 &nbsp;|&nbsp; p = 0.961</div>
+          </div>
+          <div class="ib ib-green mb1">
+            <div class="xs semi tgreen mbsm">What changed</div>
+            <div class="xs muted">HR dropped from 1.50 → 1.00. The apparent "harm" disappears entirely after balancing for measured confounders. The naive signal was entirely driven by baseline differences.</div>
+          </div>
+          <div class="ib ib-amber">
+            <div class="xs semi tamber mbsm">Important caution</div>
+            <div class="xs muted">This is observational data. Unmeasured confounders (comorbidities, adherence, treatment era) may still bias the estimate. We reduced measured confounding — we did not prove causation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /cp-A -->
+
+
+  <!-- ── CASE B — CHEMOTHERAPY FUTURE ── -->
+  <div class="cpanel" id="cp-B">
+    <div class="fut-card">
+      <div class="row mb1" style="margin-bottom:1.1rem;">
+        <div class="bdg bamber">◷ Future Candidate Case</div>
+        <div class="sm muted">Not yet analyzed &nbsp;·&nbsp; Candidate for next stage</div>
+      </div>
+
+      <div class="g2">
+        <div>
+          <h3 style="margin-bottom:.65rem;">Chemotherapy YES vs NO</h3>
+          <div class="sm muted mb1">In a higher-risk breast cancer subgroup (e.g., triple-negative or high-grade), does chemotherapy relate to survival after adjustment?</div>
+
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--s400);margin-bottom:.4rem;">Why confounding is expected</div>
+          <div class="ib ib-amber mb1">
+            <div class="xs muted">Chemotherapy is preferentially given to higher-risk patients — who already have a worse prognosis regardless of treatment. A naive comparison would make chemo look harmful or ineffective.</div>
+          </div>
+
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--s400);margin-bottom:.4rem;">Key confounders to adjust for</div>
+          <div class="conf-pills">
+            <span class="cpill">Tumor stage</span>
+            <span class="cpill">Lymph node status</span>
+            <span class="cpill">Histologic grade</span>
+            <span class="cpill">PAM50 subtype</span>
+            <span class="cpill">Age</span>
+            <span class="cpill">ER / HER2 status</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--s400);margin-bottom:.6rem;">Treatment selection overlap (initial screen)</div>
+          <div style="font-size:1.5rem;font-weight:900;color:var(--amber);">32.8%</div>
+          <div class="xs muted mbsm">Overlap fraction — strong treatment sorting in full cohort</div>
+          <div class="ovbar-wrap"><div class="ovbar-fill" style="width:32.8%;background:var(--amber);"></div></div>
+          <div class="xs muted mt1">Low overlap means most patients clearly belong to one arm. Careful subgroup restriction (patients where chemo decision was genuinely uncertain) is needed before analysis.</div>
+
+          <div class="ib ib-amber mt1">
+            <div class="xs semi tamber mbsm">Status: Analysis not yet run</div>
+            <div class="xs muted">No hazard ratios, balance statistics, or figures exist yet for this case.</div>
+          </div>
+
+          <div style="margin-top:1rem;padding:.8rem 1rem;background:var(--s50);border:1px solid var(--s200);border-radius:var(--rsm);">
+            <div class="xs semi muted mbsm">Conceptual illustration (not real results)</div>
+            <div style="display:flex;align-items:center;gap:.5rem;margin-top:.5rem;">
+              <div style="flex:1;text-align:center;font-size:11px;color:var(--red);">Naive<br><strong style="font-size:1.1rem;">HR ~1.8?</strong></div>
+              <div style="font-size:1.1rem;color:var(--s400);">→</div>
+              <div style="flex:1;text-align:center;font-size:11px;color:var(--green);">Adjusted<br><strong style="font-size:1.1rem;">HR = ??</strong></div>
+            </div>
+            <div class="xs muted mt1" style="text-align:center;font-style:italic;">Illustration only · not real data</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /cp-B -->
+
+
+  <!-- ── CASE C — RADIOTHERAPY FUTURE ── -->
+  <div class="cpanel" id="cp-C">
+    <div class="fut-card">
+      <div class="row mb1" style="margin-bottom:1.1rem;">
+        <div class="bdg bamber">◷ Future Candidate Case</div>
+        <div class="sm muted">Not yet analyzed &nbsp;·&nbsp; Candidate for next stage</div>
+      </div>
+
+      <div class="g2">
+        <div>
+          <h3 style="margin-bottom:.65rem;">Radiotherapy YES vs NO</h3>
+          <div class="sm muted mb1">In a node-positive or local-control-relevant subgroup, does radiotherapy relate to survival after adjusting for surgery type and local disease characteristics?</div>
+
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--s400);margin-bottom:.4rem;">Why confounding is expected</div>
+          <div class="ib ib-amber mb1">
+            <div class="xs muted">Radiotherapy use is tightly linked to surgery type (lumpectomy vs mastectomy) and local disease burden. Patients receiving radiotherapy may differ systematically in ways that independently affect survival.</div>
+          </div>
+
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--s400);margin-bottom:.4rem;">Key confounders to adjust for</div>
+          <div class="conf-pills">
+            <span class="cpill">Surgery type</span>
+            <span class="cpill">Node status</span>
+            <span class="cpill">Tumor size</span>
+            <span class="cpill">Local recurrence risk</span>
+            <span class="cpill">Age</span>
+            <span class="cpill">Histologic grade</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--s400);margin-bottom:.6rem;">Treatment selection overlap (initial screen)</div>
+          <div style="font-size:1.5rem;font-weight:900;color:var(--blue);">98.1%</div>
+          <div class="xs muted mbsm">Overlap fraction — very high, but entangled with surgery type</div>
+          <div class="ovbar-wrap"><div class="ovbar-fill" style="width:98.1%;background:var(--blue);"></div></div>
+          <div class="xs muted mt1">High overlap is promising, but the treatment decision is structurally determined by surgery choice. This creates a form of confounding that needs surgery-type stratification before analysis.</div>
+
+          <div class="ib ib-amber mt1">
+            <div class="xs semi tamber mbsm">Status: Analysis not yet run</div>
+            <div class="xs muted">No hazard ratios, balance statistics, or figures exist yet for this case.</div>
+          </div>
+
+          <div style="margin-top:1rem;padding:.8rem 1rem;background:var(--s50);border:1px solid var(--s200);border-radius:var(--rsm);">
+            <div class="xs semi muted mbsm">Key question to resolve first</div>
+            <div class="xs muted mt1">Can we identify a subgroup where the radiotherapy decision was genuinely uncertain — e.g., close-margin lumpectomy patients with borderline nodal involvement?</div>
+            <div class="xs muted mt1" style="font-style:italic;">Illustration only · not real data</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /cp-C -->
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 4 — METHODS
+════════════════════════════════════════════════════════ -->
+<section id="s4" class="sec">
+  <div class="ttl">How Adjustment Helps</div>
+  <div class="sub">Two approaches to making groups more comparable — in plain language.</div>
+
+  <div class="mtabs">
+    <div class="mtab on" id="mt-ow"  onclick="showMethod('ow',this)">Overlap Weighting</div>
+    <div class="mtab"    id="mt-psm" onclick="showMethod('psm',this)">Propensity Score Matching</div>
+  </div>
+
+  <!-- OW -->
+  <div class="mpanel on" id="mp-ow">
+    <div class="card">
+      <div style="display:flex;align-items:flex-start;gap:1.5rem;flex-wrap:wrap;">
+        <div style="flex:1;min-width:280px;">
+          <div class="bdg bpurple mbsm" style="margin-bottom:.75rem;">Used in this prototype</div>
+          <h3 style="margin-bottom:.45rem;">Overlap Weighting</h3>
+          <p class="sm mb1">Each patient gets a weight based on how uncertain their treatment assignment was. Patients who could plausibly have gone either way contribute most to the comparison.</p>
+
+          <div class="mfeat">
+            <div class="mf-icon" style="background:var(--blue-lt);color:var(--blue);">⚖️</div>
+            <div>
+              <div class="sm semi">What it does</div>
+              <div class="xs muted mt1">Reweights the population so treated and untreated groups look similar on all measured confounders. Focuses on the clinical equipoise region.</div>
+            </div>
+          </div>
+          <div class="mfeat">
+            <div class="mf-icon" style="background:var(--green-lt);color:var(--green);">✓</div>
+            <div>
+              <div class="sm semi">What it fixes</div>
+              <div class="xs muted mt1">Simultaneously balances all measured confounders. No patients are excluded — all contribute with adjusted weights. Handles extreme propensity scores well.</div>
+            </div>
+          </div>
+          <div class="mfeat">
+            <div class="mf-icon" style="background:var(--red-lt);color:var(--red);">!</div>
+            <div>
+              <div class="sm semi">What it cannot guarantee</div>
+              <div class="xs muted mt1">Cannot balance variables we didn't measure. Unmeasured confounders (comorbidities, adherence, treatment era) may still bias results. This is not a randomized trial.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex:0 0 250px;background:var(--s50);border:1px solid var(--s200);border-radius:var(--rsm);padding:1.25rem;">
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--s400);margin-bottom:1rem;">Results in this prototype</div>
+          <div style="display:flex;flex-direction:column;gap:.85rem;">
+            <div>
+              <div class="xs muted">Max imbalance before</div>
+              <div style="font-size:1.3rem;font-weight:900;color:var(--red);">|SMD| = 0.696</div>
+              <div class="xs muted">Tumor stage</div>
+            </div>
+            <div>
+              <div class="xs muted">Max imbalance after</div>
+              <div style="font-size:1.3rem;font-weight:900;color:var(--green);">|SMD| = 0.002</div>
+              <div class="xs muted">Same variable, post-weighting</div>
+            </div>
+            <div>
+              <div class="xs muted">Covariates above threshold</div>
+              <div style="font-size:1.3rem;font-weight:900;color:var(--green);">18 → 0</div>
+              <div class="xs muted">Before → after weighting</div>
+            </div>
+            <div>
+              <div class="xs muted">Effective sample size</div>
+              <div style="font-size:1.3rem;font-weight:900;color:var(--blue);">~918</div>
+              <div class="xs muted">570 treated + 348 untreated</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PSM -->
+  <div class="mpanel" id="mp-psm">
+    <div class="card">
+      <div style="display:flex;align-items:flex-start;gap:1.5rem;flex-wrap:wrap;">
+        <div style="flex:1;min-width:280px;">
+          <div class="bdg bslate mbsm" style="margin-bottom:.75rem;">Alternative approach</div>
+          <h3 style="margin-bottom:.45rem;">Propensity Score Matching</h3>
+          <p class="sm mb1">Each treated patient is paired with an untreated patient who looks similar based on their estimated treatment probability. The comparison uses only matched pairs.</p>
+
+          <div class="mfeat">
+            <div class="mf-icon" style="background:var(--blue-lt);color:var(--blue);">🔗</div>
+            <div>
+              <div class="sm semi">What it does</div>
+              <div class="xs muted mt1">Creates a matched sample where each treated patient has a "similar" untreated counterpart. Intuitive to explain: "we compared like with like."</div>
+            </div>
+          </div>
+          <div class="mfeat">
+            <div class="mf-icon" style="background:var(--green-lt);color:var(--green);">✓</div>
+            <div>
+              <div class="sm semi">What it fixes</div>
+              <div class="xs muted mt1">Creates covariate balance within matched pairs. Easier to communicate to non-statisticians. Well-established methodology.</div>
+            </div>
+          </div>
+          <div class="mfeat">
+            <div class="mf-icon" style="background:var(--red-lt);color:var(--red);">!</div>
+            <div>
+              <div class="sm semi">What it cannot guarantee</div>
+              <div class="xs muted mt1">Discards unmatched patients (loses data). Sensitive to caliper and ratio choices. Still cannot adjust for unmeasured confounders.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex:0 0 250px;background:var(--s50);border:1px solid var(--s200);border-radius:var(--rsm);padding:1.25rem;">
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--s400);margin-bottom:1rem;">OW vs PSM comparison</div>
+          <div style="display:flex;flex-direction:column;gap:.4rem;font-size:12px;">
+            <div style="display:flex;justify-content:space-between;padding:.35rem .5rem;background:var(--white);border-radius:4px;border:1px solid var(--s200);">
+              <span class="muted">Sample loss</span><span class="tgreen">OW: none</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:.35rem .5rem;background:var(--white);border-radius:4px;border:1px solid var(--s200);">
+              <span class="muted">Interpretability</span><span class="tgreen">PSM: simpler</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:.35rem .5rem;background:var(--white);border-radius:4px;border:1px solid var(--s200);">
+              <span class="muted">Balance quality</span><span class="tgreen">OW: better</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:.35rem .5rem;background:var(--white);border-radius:4px;border:1px solid var(--s200);">
+              <span class="muted">Extreme PS handling</span><span class="tgreen">OW: more robust</span>
+            </div>
+          </div>
+          <div class="ib ib-blue mt1">
+            <div class="xs semi tblue mbsm">Why we used OW</div>
+            <div class="xs muted">20% of patients had extreme propensity scores. PSM would have excluded many of them, reducing power and generalizability.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 5 — AI MODEL
+════════════════════════════════════════════════════════ -->
+<section id="s5" class="sec">
+  <div class="ttl">What This Means for the AI Model</div>
+  <div class="sub">Confounding affects the quality of the signal the model learns from.</div>
+
+  <div class="flow">
+    <div class="fstep">
+      <div class="fstep-ico">👤</div>
+      <div class="fstep-lbl">Patient Profile</div>
+      <div class="fstep-sub">Age, stage, subtype, nodes</div>
+    </div>
+    <div class="farrow">→</div>
+    <div class="fstep">
+      <div class="fstep-ico">⚖️</div>
+      <div class="fstep-lbl">Adjusted Effect Modeling</div>
+      <div class="fstep-sub">Confounding reduced first</div>
+    </div>
+    <div class="farrow">→</div>
+    <div class="fstep">
+      <div class="fstep-ico">💊</div>
+      <div class="fstep-lbl">Compare Treatments</div>
+      <div class="fstep-sub">Hormone · Chemo · Radio</div>
+    </div>
+    <div class="farrow">→</div>
+    <div class="fstep">
+      <div class="fstep-ico">🎯</div>
+      <div class="fstep-lbl">Rank Candidates</div>
+      <div class="fstep-sub">For this patient profile</div>
+    </div>
+  </div>
+
+  <div class="atabs">
+    <div class="atau bad on" id="at-bad"  onclick="showAI('bad',this)">Without Adjustment</div>
+    <div class="atau good"   id="at-good" onclick="showAI('good',this)">With Adjustment</div>
+  </div>
+
+  <div class="apanel on" id="ap-bad">
+    <div class="card" style="border-color:var(--red);">
+      <div class="bdg bred mbsm" style="margin-bottom:.85rem;">Without adjustment — risky signals</div>
+      <div class="g3">
+        <div class="cardsm" style="border-left:3px solid var(--red);">
+          <div class="xs semi tred mbsm">Problem 1</div>
+          <div class="xs muted">AI trains on confounded survival data. Sicker patients got treated → model may learn "treatment = worse outcome."</div>
+        </div>
+        <div class="cardsm" style="border-left:3px solid var(--red);">
+          <div class="xs semi tred mbsm">Problem 2</div>
+          <div class="xs muted">False patterns get embedded. Model recommends based on historical treatment patterns, not on causal effects.</div>
+        </div>
+        <div class="cardsm" style="border-left:3px solid var(--red);">
+          <div class="xs semi tred mbsm">Problem 3</div>
+          <div class="xs muted">Bias propagates. A technically accurate model on training data can be systematically wrong about treatment effects.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="apanel" id="ap-good">
+    <div class="card" style="border-color:var(--green);">
+      <div class="bdg bgreen mbsm" style="margin-bottom:.85rem;">With adjustment — cleaner signals</div>
+      <div class="g3">
+        <div class="cardsm" style="border-left:3px solid var(--green);">
+          <div class="xs semi tgreen mbsm">Improvement 1</div>
+          <div class="xs muted">AI trains on confounding-reduced estimates. Treatment effects reflect the comparison of more similar patients.</div>
+        </div>
+        <div class="cardsm" style="border-left:3px solid var(--green);">
+          <div class="xs semi tgreen mbsm">Improvement 2</div>
+          <div class="xs muted">Cleaner treatment signal. Recommendations are informed by adjusted effects, not by historical treatment selection patterns.</div>
+        </div>
+        <div class="cardsm" style="border-left:3px solid var(--amber);">
+          <div class="xs semi tamber mbsm">Still future work</div>
+          <div class="xs muted">Multi-treatment recommendation combining hormone therapy, chemo, and radiotherapy is the next stage. Not yet implemented.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 6 — DONE VS NEXT
+════════════════════════════════════════════════════════ -->
+<section id="s6" class="sec">
+  <div class="ttl">What We Studied Now vs What Comes Next</div>
+  <div class="sub">One completed prototype. Two clear next candidates.</div>
+
+  <div class="dn-grid">
+
+    <div class="done-card">
+      <div class="dn-head">
+        <div class="dn-ico" style="background:var(--green-lt);color:var(--green);">✓</div>
+        <div>
+          <div class="semi">Studied Now</div>
+          <div class="xs muted">Stage 2 prototype — completed</div>
+        </div>
+      </div>
+
+      <div style="background:var(--green-lt);border:1px solid var(--green-mid);border-radius:var(--rsm);padding:.9rem 1rem;margin-bottom:1rem;">
+        <div class="sm semi tgreen mbsm">Hormone Therapy · ER-positive METABRIC</div>
+        <div class="xs muted">Among ER-positive METABRIC patients, does hormone therapy (YES vs NO) relate to overall survival after adjustment?</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:.35rem;">
+        <div class="chk-row"><span class="tgreen">✓</span><span class="muted">n = 1,506 patients</span></div>
+        <div class="chk-row"><span class="tgreen">✓</span><span class="muted">Naive HR 1.50 → Adjusted HR 1.00</span></div>
+        <div class="chk-row"><span class="tgreen">✓</span><span class="muted">18 imbalances resolved via overlap weighting</span></div>
+        <div class="chk-row"><span class="tgreen">✓</span><span class="muted">5 publication-quality figures produced</span></div>
+        <div class="chk-row"><span class="tgreen">✓</span><span class="muted">Prototype status: ready for review</span></div>
+      </div>
+    </div>
+
+    <div class="next-card">
+      <div class="dn-head">
+        <div class="dn-ico" style="background:var(--blue-lt);color:var(--blue);">◷</div>
+        <div>
+          <div class="semi">Coming Next</div>
+          <div class="xs muted">Candidate cases — not yet analyzed</div>
+        </div>
+      </div>
+
+      <div class="fc-item">
+        <div class="fc-num">B</div>
+        <div>
+          <div class="sm semi mbsm">Chemotherapy</div>
+          <div class="xs muted">Higher-risk subgroup (triple-negative or high-grade). Careful subgroup selection required — overlap was 32.8% in full cohort screen.</div>
+        </div>
+      </div>
+
+      <div class="fc-item">
+        <div class="fc-num">C</div>
+        <div>
+          <div class="sm semi mbsm">Radiotherapy</div>
+          <div class="xs muted">Node-positive / local-control subgroup. High overlap (98.1%) but structurally entangled with surgery type.</div>
+        </div>
+      </div>
+
+      <div class="ib ib-blue mt1">
+        <div class="xs semi tblue mbsm">Final goal</div>
+        <div class="xs muted">Combine adjusted treatment effects from all three modalities into a single multi-treatment recommendation model for BRCAPath-Rx.</div>
+      </div>
+
+      <div class="ib ib-amber mt1">
+        <div class="xs semi tamber mbsm">Honest caveat</div>
+        <div class="xs muted">Cases B and C have not been analyzed. No hazard ratios or balance statistics exist for them yet.</div>
+      </div>
+    </div>
+
+  </div><!-- /dn-grid -->
+
+  <div class="prog-bar">
+    <div class="pstep done">
+      <span style="color:var(--green);font-size:13px;">✓</span>
+      <div>
+        <div class="xs semi tgreen">Stage 1</div>
+        <div style="font-size:10px;color:var(--s500);">Cohort + survival baseline</div>
+      </div>
+    </div>
+    <div class="pline done"></div>
+    <div class="pstep done">
+      <span style="color:var(--green);font-size:13px;">✓</span>
+      <div>
+        <div class="xs semi tgreen">Stage 2a</div>
+        <div style="font-size:10px;color:var(--s500);">Hormone therapy case</div>
+      </div>
+    </div>
+    <div class="pline pend"></div>
+    <div class="pstep pend">
+      <span style="color:var(--s400);font-size:13px;">◷</span>
+      <div>
+        <div class="xs semi" style="color:var(--s600);">Stage 2b</div>
+        <div style="font-size:10px;color:var(--s500);">Chemo + radio cases</div>
+      </div>
+    </div>
+    <div class="pline pend"></div>
+    <div class="pstep pend">
+      <span style="color:var(--s400);font-size:13px;">◷</span>
+      <div>
+        <div class="xs semi" style="color:var(--s600);">Stage 3</div>
+        <div style="font-size:10px;color:var(--s500);">Multi-treatment AI model</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<script>
+// ── NAVIGATION ──────────────────────────────────────────
+function goSec(id, el) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  document.querySelectorAll('.ntab').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── CONFOUNDING SIMULATOR ───────────────────────────────
+const SS = { age: true, stage: true, nodes: true };
+
+function togSim(key, el) {
+  SS[key] = !SS[key];
+  el.classList.toggle('on', SS[key]);
+  el.querySelector('.stog-box').textContent = SS[key] ? '✓' : '';
+  // also update treated val color
+  const tv = document.getElementById('tv-' + key);
+  if (tv) tv.className = SS[key] ? 'sg-bad' : '';
+  updateSim();
+}
+
+function updateSim() {
+  const any = SS.age || SS.stage || SS.nodes;
+  const all = SS.age && SS.stage && SS.nodes;
+
+  let hr = 1.0;
+  if (SS.age)   hr += 0.17;
+  if (SS.stage) hr += 0.20;
+  if (SS.nodes) hr += 0.13;
+
+  const hrEl   = document.getElementById('sim-hr-val');
+  const noteEl = document.getElementById('sim-hr-note');
+  const concl  = document.getElementById('sim-concl');
+  const clbl   = document.getElementById('concl-lbl');
+  const ctxt   = document.getElementById('concl-txt');
+  const cnote  = document.getElementById('concl-note');
+
+  hrEl.textContent = hr.toFixed(2);
+  hrEl.style.color = hr > 1.05 ? 'var(--red)' : 'var(--green)';
+
+  if (!any) {
+    noteEl.textContent = 'Groups are similar — comparison is more defensible';
+    concl.className = 'concl concl-ok';
+    clbl.textContent = '✓ Fairer comparison';
+    ctxt.textContent = 'No major imbalances active. Naive comparison is less misleading.';
+    cnote.textContent = 'Unmeasured confounders may still exist, but baseline groups look similar.';
+  } else if (all) {
+    noteEl.textContent = 'This is the actual naive result from METABRIC data';
+    concl.className = 'concl concl-warn';
+    clbl.textContent = '⚠ Heavily confounded';
+    ctxt.textContent = 'Treated group appears to have worse survival — but they started older, higher-stage, and more node-positive.';
+    cnote.textContent = 'This is the actual unadjusted result from the real METABRIC cohort.';
+  } else {
+    noteEl.textContent = 'Some imbalances active — comparison is partially biased';
+    concl.className = 'concl concl-warn';
+    clbl.textContent = '⚠ Partially confounded';
+    ctxt.textContent = 'Group differences are creating bias in the naive comparison.';
+    cnote.textContent = 'Toggle all three on to see the full real-world confounding effect.';
+  }
+}
+
+// ── CASE TABS ────────────────────────────────────────────
+function showCase(id, el) {
+  ['A','B','C'].forEach(c => {
+    document.getElementById('cp-' + c).classList.remove('on');
+    const t = document.getElementById('ct-' + c);
+    t.classList.remove('real', 'fut');
+  });
+  document.getElementById('cp-' + id).classList.add('on');
+  el.classList.add(id === 'A' ? 'real' : 'fut');
+}
+
+// ── VIEW TABS (Case A) ───────────────────────────────────
+function showView(n, el) {
+  [1,2,3,4].forEach(i => document.getElementById('vp-' + i).classList.remove('on'));
+  document.getElementById('vp-' + n).classList.add('on');
+  document.querySelectorAll('.vtab').forEach(t => t.classList.remove('on'));
+  el.classList.add('on');
+}
+
+// ── METHOD TABS ──────────────────────────────────────────
+function showMethod(id, el) {
+  ['ow','psm'].forEach(m => {
+    document.getElementById('mp-' + m).classList.remove('on');
+    document.getElementById('mt-' + m).classList.remove('on');
+  });
+  document.getElementById('mp-' + id).classList.add('on');
+  el.classList.add('on');
+}
+
+// ── AI STATE ─────────────────────────────────────────────
+function showAI(state, el) {
+  ['bad','good'].forEach(s => {
+    document.getElementById('ap-' + s).classList.remove('on');
+    document.getElementById('at-' + s).classList.remove('on');
+  });
+  document.getElementById('ap-' + state).classList.add('on');
+  el.classList.add('on');
+}
+</script>
+</body>
+</html>

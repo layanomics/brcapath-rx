@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "project": "BRCAPath-Rx",
+    "stage": 2,
+    "title": "Confounding in Breast Cancer Treatment Comparisons",
+    "version": "claude-1",
+    "date": "2026-04-02"
+  },
+  "real_case": {
+    "id": "A",
+    "label": "Hormone Therapy",
+    "status": "completed",
+    "cohort": "METABRIC (ER-positive)",
+    "subgroup": "ER_STATUS == Positive",
+    "treatment_yes_label": "Hormone Therapy YES",
+    "treatment_no_label": "Hormone Therapy NO",
+    "outcome": "Overall Survival",
+    "n": 1506,
+    "treated_n": 1079,
+    "untreated_n": 427,
+    "events_n": 881,
+    "events_treated": 637,
+    "events_untreated": 244,
+    "naive_hr": 1.496,
+    "naive_ci_lower": 1.287,
+    "naive_ci_upper": 1.738,
+    "naive_p": "1.52e-07",
+    "adjusted_hr": 0.996,
+    "adjusted_ci_lower": 0.836,
+    "adjusted_ci_upper": 1.186,
+    "adjusted_p": "0.961",
+    "method": "Overlap Weighting (ridge-stabilized logistic propensity score)",
+    "effective_n_treated": 569.9,
+    "effective_n_untreated": 347.7,
+    "max_smd_before": 0.696,
+    "max_smd_after": 0.002,
+    "n_imbalanced_before": 18,
+    "n_imbalanced_after": 0,
+    "overlap_fraction": 0.671,
+    "extreme_ps_fraction": 0.199,
+    "top_imbalances": [
+      { "variable": "Tumor Stage", "smd_before": 0.696, "smd_after": 0.000066 },
+      { "variable": "METABRIC Cohort", "smd_before": 0.591, "smd_after": 0.00025 },
+      { "variable": "Lymph Nodes Positive", "smd_before": 0.585, "smd_after": 0.00020 },
+      { "variable": "Age at Diagnosis", "smd_before": 0.437, "smd_after": 0.000023 },
+      { "variable": "Menopausal State", "smd_before": 0.437, "smd_after": 0.000025 }
+    ],
+    "baseline_differences": {
+      "age_treated": 64.6,
+      "age_untreated": 59.3,
+      "stage_treated": 1.89,
+      "stage_untreated": 1.28,
+      "lymph_nodes_treated": 2.26,
+      "lymph_nodes_untreated": 0.40,
+      "pct_postmenopausal_treated": 88.7,
+      "pct_postmenopausal_untreated": 71.2
+    },
+    "confounders_used": [
+      "Age at diagnosis", "Tumor size", "Tumor stage", "Histologic grade",
+      "Positive lymph nodes", "Menopausal state", "PAM50 subtype",
+      "METABRIC cohort", "Chemotherapy (binary)", "Radiotherapy (binary)"
+    ],
+    "unmeasured_confounders": [
+      "Comorbidities", "Treatment adherence", "Treatment era", "Genomic risk scores", "Socioeconomic factors"
+    ],
+    "figures": {
+      "naive_km": "./assets/fig_naive_km.png",
+      "balance_before": "./assets/fig_balance_before.png",
+      "ps_overlap": "./assets/fig_ps_overlap.png",
+      "balance_after": "./assets/fig_balance_after.png",
+      "adjusted_survival": "./assets/fig_adjusted_survival.png"
+    }
+  },
+  "future_cases": [
+    {
+      "id": "B",
+      "label": "Chemotherapy",
+      "status": "future_candidate",
+      "subgroup": "Higher-risk breast cancer subgroup (e.g., triple-negative or high-grade)",
+      "overlap_fraction_screened": 0.328,
+      "screen_note": "Strong treatment sorting found in initial all-patient screen. Careful subgroup selection required.",
+      "expected_confounders": ["Tumor stage", "Lymph node status", "Histologic grade", "PAM50 subtype", "Age", "ER/HER2 status"],
+      "confounding_intuition": "Chemotherapy is preferentially given to higher-risk patients who already have a worse prognosis regardless of treatment. A naive comparison makes chemo look harmful.",
+      "next_steps": ["Define a subgroup where chemo decision is genuinely uncertain", "Run positivity check", "Select confounders", "Run propensity model and balance diagnostics"]
+    },
+    {
+      "id": "C",
+      "label": "Radiotherapy",
+      "status": "future_candidate",
+      "subgroup": "Node-positive / local-control-relevant subgroup",
+      "overlap_fraction_screened": 0.981,
+      "screen_note": "Very high overlap in full cohort, but treatment entangled with surgery type (lumpectomy vs mastectomy).",
+      "expected_confounders": ["Surgery type", "Node status", "Tumor size", "Local recurrence risk", "Age", "Histologic grade"],
+      "confounding_intuition": "Radiotherapy use is strongly linked to surgery choice and local tumor characteristics. Structural confounding from surgery type needs careful handling.",
+      "next_steps": ["Stratify by surgery type", "Identify equipoise subgroup", "Run positivity check", "Select confounders", "Run propensity model"]
+    }
+  ]
+}
