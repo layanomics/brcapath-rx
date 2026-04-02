@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRCAPath-Rx Stage 2: Confounding Tutorial v3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      :root {
+        --ink: #19313d;
+        --sea: #2f6d73;
+        --rust: #d56f4f;
+        --forest: #607d3f;
+        --paper: #fcf8f1;
+        --mist: #eaf2ef;
+        --line: rgba(25, 49, 61, 0.08);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(47, 109, 115, 0.16), transparent 28%),
+          radial-gradient(circle at top right, rgba(213, 111, 79, 0.14), transparent 22%),
+          linear-gradient(180deg, #fffefb 0%, #f7f1e7 100%);
+      }
+
+      .sans {
+        font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      }
+
+      .panel {
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+        box-shadow: 0 24px 70px rgba(25, 49, 61, 0.08);
+      }
+
+      .soft {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(250, 244, 235, 0.95));
+        border: 1px solid var(--line);
+      }
+
+      .figure-frame {
+        background: white;
+        border: 1px solid var(--line);
+        box-shadow: 0 18px 45px rgba(25, 49, 61, 0.08);
+      }
+
+      .toggle-btn.active,
+      .scenario-btn.active,
+      .scenario-view-btn.active,
+      .case-btn.active {
+        background: var(--ink);
+        color: white;
+      }
+
+      .flow-arrow {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <header class="mx-auto max-w-7xl px-4 pb-8 pt-8 sm:px-6 lg:px-8">
+      <div class="panel rounded-[2.2rem] p-8 sm:p-10">
+        <div class="grid gap-8 lg:grid-cols-[1.35fr,0.9fr] lg:items-center">
+          <div>
+            <p class="sans mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-teal-800">
+              BRCAPath-Rx Stage 2
+            </p>
+            <h1 class="max-w-4xl text-4xl font-semibold leading-tight sm:text-5xl">
+              Why a treatment can look harmful when the real problem is an unfair comparison
+            </h1>
+            <p class="sans mt-5 max-w-3xl text-lg leading-8 text-slate-700" id="hero-subtitle">
+              Loading...
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="#analogy" class="sans rounded-full bg-[var(--ink)] px-5 py-3 text-sm font-semibold text-white">
+                Start tutorial
+              </a>
+              <a href="#real-case" class="sans rounded-full border border-black/10 px-5 py-3 text-sm font-semibold text-slate-700">
+                Jump to real case
+              </a>
+            </div>
+          </div>
+          <aside class="rounded-[2rem] bg-[var(--ink)] p-6 text-white">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-300" id="hero-real-label">
+              Loading...
+            </p>
+            <p class="mt-4 text-2xl font-semibold leading-tight" id="hero-real-summary">Loading...</p>
+            <div class="mt-6 grid gap-3">
+              <div class="rounded-3xl bg-white/10 p-4">
+                <p class="sans text-xs uppercase tracking-[0.18em] text-slate-300">Website style</p>
+                <p class="mt-2 text-xl font-semibold">Short, visual, interactive</p>
+              </div>
+              <div class="rounded-3xl bg-white/10 p-4">
+                <p class="sans text-xs uppercase tracking-[0.18em] text-slate-300">Important honesty</p>
+                <p class="mt-2 text-xl font-semibold">Only one real case is completed so far</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <nav class="sticky top-0 z-10 border-y border-black/5 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-wrap gap-2 px-4 py-3 sm:px-6 lg:px-8">
+        <a href="#analogy" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">1. Tiny analogy</a>
+        <a href="#illustrations" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">2. Breast-cancer-like illustrations</a>
+        <a href="#real-case" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">3. Real case</a>
+        <a href="#methods" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">4. Methods</a>
+        <a href="#ai" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">5. AI connection</a>
+        <a href="#next" class="sans rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold">6. What comes next</a>
+      </div>
+    </nav>
+
+    <main class="mx-auto max-w-7xl space-y-10 px-4 py-10 sm:px-6 lg:px-8">
+      <section id="analogy" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="grid gap-8 lg:grid-cols-[0.95fr,1.05fr]">
+          <div>
+            <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">1. One tiny analogy</p>
+            <h2 class="mt-3 text-3xl font-semibold sm:text-4xl" id="analogy-title">Loading...</h2>
+            <p id="analogy-setup" class="sans mt-4 text-lg leading-8 text-slate-700"></p>
+            <div class="mt-6 flex gap-3">
+              <button class="toggle-btn active sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-analogy="wrong">
+                Wrong quick conclusion
+              </button>
+              <button class="toggle-btn sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-analogy="better">
+                Better interpretation
+              </button>
+            </div>
+            <div class="mt-6 rounded-[1.6rem] bg-[var(--paper)] p-6">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="analogy-mode-label">Wrong quick conclusion</p>
+              <p id="analogy-mode-text" class="mt-3 text-xl leading-8"></p>
+            </div>
+          </div>
+          <div class="rounded-[1.8rem] bg-[var(--mist)] p-6">
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Why this matters</p>
+            <p class="mt-4 text-lg leading-8">
+              Confounding means the treated group and untreated group were already different before we compared outcomes.
+              That hidden starting difference can create a false story.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="illustrations" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="max-w-4xl">
+          <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">2. Breast-cancer-like illustrations</p>
+          <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">Examples closer to the real treated-vs-untreated problem</h2>
+          <p class="sans mt-4 text-lg leading-8 text-slate-700">
+            These are illustrations, not real project outputs. They are intentionally closer to the real challenge:
+            the treated group may be older, sicker, or have a riskier subtype mix before treatment is ever compared.
+          </p>
+        </div>
+
+        <div class="mt-7 flex flex-wrap gap-3" id="scenario-buttons"></div>
+        <div class="mt-6 grid gap-8 lg:grid-cols-[1.05fr,0.95fr]">
+          <div class="soft rounded-[1.8rem] p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="scenario-tag">Loading...</p>
+                <h3 id="scenario-title" class="mt-3 text-2xl font-semibold">Loading...</h3>
+              </div>
+            </div>
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div class="rounded-3xl bg-white p-5 shadow-[0_10px_24px_rgba(25,49,61,0.05)]">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="treated-label">Loading...</p>
+                <p id="treated-profile" class="mt-3 text-lg leading-8"></p>
+                <div class="mt-4 rounded-3xl bg-[var(--mist)] p-4">
+                  <p class="sans text-xs uppercase tracking-[0.16em] text-slate-500">Crude survival</p>
+                  <p id="treated-survival" class="mt-2 text-3xl font-semibold">Loading...</p>
+                </div>
+              </div>
+              <div class="rounded-3xl bg-white p-5 shadow-[0_10px_24px_rgba(25,49,61,0.05)]">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="untreated-label">Loading...</p>
+                <p id="untreated-profile" class="mt-3 text-lg leading-8"></p>
+                <div class="mt-4 rounded-3xl bg-[var(--paper)] p-4">
+                  <p class="sans text-xs uppercase tracking-[0.16em] text-slate-500">Crude survival</p>
+                  <p id="untreated-survival" class="mt-2 text-3xl font-semibold">Loading...</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <button class="scenario-view-btn active sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-view="wrong">
+                Show misleading conclusion
+              </button>
+              <button class="scenario-view-btn sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-view="better">
+                Show better interpretation
+              </button>
+            </div>
+            <div class="mt-5 rounded-[1.6rem] bg-[var(--paper)] p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="scenario-mode-label">Misleading conclusion</p>
+              <p id="scenario-mode-text" class="mt-3 text-lg leading-8"></p>
+            </div>
+          </div>
+
+          <div class="rounded-[1.8rem] bg-white p-6 shadow-[0_10px_24px_rgba(25,49,61,0.05)]">
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-slate-500" id="slider-title">Interactive mini-demo</p>
+            <p id="slider-description" class="sans mt-3 text-base leading-7 text-slate-700"></p>
+            <div class="mt-6 rounded-3xl bg-[var(--mist)] p-5">
+              <label for="risk-slider" class="sans text-sm font-semibold text-slate-700">
+                How many high-risk patients end up in the treated group?
+              </label>
+              <input id="risk-slider" type="range" min="25" max="85" value="25" class="mt-4 w-full accent-[var(--rust)]" />
+              <div class="mt-3 flex items-center justify-between text-sm text-slate-600">
+                <span>Treated group mostly low-risk</span>
+                <span id="risk-slider-value" class="sans font-semibold text-slate-800">25% high-risk</span>
+              </div>
+            </div>
+            <div class="mt-6">
+              <canvas id="slider-chart" height="220"></canvas>
+            </div>
+            <div class="mt-5 rounded-[1.6rem] bg-[var(--paper)] p-5">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Lesson from the slider</p>
+              <p id="slider-explanation" class="mt-3 text-lg leading-8"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="real-case" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="max-w-4xl">
+          <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">3. The real completed case</p>
+          <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">One real case study is completed so far</h2>
+          <p class="sans mt-4 text-lg leading-8 text-slate-700">
+            This is the one finished Stage 2 case study at the moment. It is the only analysis this page treats as completed.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-4">
+          <div class="soft rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Cohort</p>
+            <p id="real-cohort" class="mt-2 text-2xl font-semibold">Loading...</p>
+          </div>
+          <div class="soft rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Subgroup</p>
+            <p id="real-subgroup" class="mt-2 text-2xl font-semibold">Loading...</p>
+          </div>
+          <div class="soft rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Treatment question</p>
+            <p id="real-treatment" class="mt-2 text-xl font-semibold">Loading...</p>
+          </div>
+          <div class="soft rounded-3xl p-5">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Patients</p>
+            <p id="real-n" class="mt-2 text-2xl font-semibold">Loading...</p>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <button class="case-btn active sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-case-view="before">
+            Before adjustment
+          </button>
+          <button class="case-btn sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold" data-case-view="after">
+            After adjustment
+          </button>
+        </div>
+
+        <div class="mt-6 grid gap-8 lg:grid-cols-[0.95fr,1.05fr]">
+          <div class="rounded-[1.8rem] bg-[var(--paper)] p-6">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" id="case-headline">Loading...</p>
+            <p id="case-summary" class="mt-3 text-2xl font-semibold leading-tight">Loading...</p>
+            <p id="case-detail" class="sans mt-4 text-lg leading-8 text-slate-700"></p>
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div class="rounded-3xl bg-white p-5 shadow-[0_10px_24px_rgba(25,49,61,0.05)]">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Naive estimate</p>
+                <p id="naive-hr" class="mt-2 text-3xl font-semibold">Loading...</p>
+              </div>
+              <div class="rounded-3xl bg-white p-5 shadow-[0_10px_24px_rgba(25,49,61,0.05)]">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Adjusted estimate</p>
+                <p id="adjusted-hr" class="mt-2 text-3xl font-semibold">Loading...</p>
+              </div>
+              <div class="rounded-3xl bg-white p-5 shadow-[0_10px_24px_rgba(25,49,61,0.05)]">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Worst imbalance before</p>
+                <p id="imbalance-before" class="mt-2 text-3xl font-semibold">Loading...</p>
+              </div>
+              <div class="rounded-3xl bg-white p-5 shadow-[0_10px_24px_rgba(25,49,61,0.05)]">
+                <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Worst imbalance after</p>
+                <p id="imbalance-after" class="mt-2 text-3xl font-semibold">Loading...</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div id="case-before-figures" class="grid gap-6">
+              <figure class="figure-frame rounded-3xl p-4">
+                <img src="assets/fig_balance_before.png" alt="Before-adjustment balance figure" class="w-full rounded-2xl" />
+                <figcaption class="sans mt-3 text-sm text-slate-600">Real result: before adjustment, the groups were not comparable at baseline.</figcaption>
+              </figure>
+              <figure class="figure-frame rounded-3xl p-4">
+                <img src="assets/fig_naive_km.png" alt="Naive survival figure" class="w-full rounded-2xl" />
+                <figcaption class="sans mt-3 text-sm text-slate-600">Real result: the crude comparison made hormone therapy look harmful.</figcaption>
+              </figure>
+            </div>
+            <div id="case-after-figures" class="hidden grid gap-6">
+              <figure class="figure-frame rounded-3xl p-4">
+                <img src="assets/fig_balance_after.png" alt="After-adjustment balance figure" class="w-full rounded-2xl" />
+                <figcaption class="sans mt-3 text-sm text-slate-600">Real result: overlap weighting sharply improved measured balance.</figcaption>
+              </figure>
+              <figure class="figure-frame rounded-3xl p-4">
+                <img src="assets/fig_adjusted_survival.png" alt="Adjusted survival figure" class="w-full rounded-2xl" />
+                <figcaption class="sans mt-3 text-sm text-slate-600">Real result: after adjustment, the estimate moved toward about 1.00.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="methods" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="max-w-4xl">
+          <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">4. What the methods are trying to do</p>
+          <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">Briefly and visually</h2>
+        </div>
+        <div id="method-cards" class="mt-8 grid gap-6 lg:grid-cols-2"></div>
+        <div class="mt-8 figure-frame rounded-3xl p-4">
+          <img src="assets/fig_ps_overlap.png" alt="Propensity score overlap figure" class="w-full rounded-2xl" />
+          <figcaption class="sans mt-3 text-sm text-slate-600">Real result: overlap weighting pays most attention to patients in the overlap middle.</figcaption>
+        </div>
+      </section>
+
+      <section id="ai" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="grid gap-8 lg:grid-cols-[1fr,1.05fr]">
+          <div>
+            <p class="sans text-sm font-semibold uppercase tracking-[0.22em] text-teal-800">5. Why this matters for the final AI model</p>
+            <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">If we do not adjust, the AI can learn the wrong lesson</h2>
+            <div class="mt-6 rounded-[1.6rem] bg-[var(--paper)] p-6">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Problem</p>
+              <p id="ai-problem" class="mt-3 text-lg leading-8"></p>
+            </div>
+            <div class="mt-5 rounded-[1.6rem] bg-[var(--mist)] p-6">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">How adjustment helps</p>
+              <p id="ai-benefit" class="mt-3 text-lg leading-8"></p>
+            </div>
+            <div class="mt-5 rounded-[1.6rem] border border-black/5 bg-white p-6">
+              <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Still future work</p>
+              <p id="ai-future" class="mt-3 text-lg leading-8"></p>
+            </div>
+          </div>
+          <div class="rounded-[1.9rem] bg-[var(--ink)] p-6 text-white">
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">Conceptual flow</p>
+            <div id="ai-flow" class="mt-6"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="next" class="panel rounded-[2rem] p-8 sm:p-10">
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div class="rounded-[1.8rem] bg-[var(--mist)] p-6">
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">What we studied now</p>
+            <h2 class="mt-3 text-3xl font-semibold">Completed analysis</h2>
+            <ul id="studied-now" class="mt-5 space-y-3 text-lg leading-8"></ul>
+          </div>
+          <div class="rounded-[1.8rem] bg-[var(--paper)] p-6">
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">What comes next</p>
+            <h2 class="mt-3 text-3xl font-semibold">Candidate questions, not completed yet</h2>
+            <ul id="next-questions" class="mt-5 space-y-3 text-lg leading-8"></ul>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-8 lg:grid-cols-[1.05fr,0.95fr]">
+          <div>
+            <p class="sans text-sm font-semibold uppercase tracking-[0.18em] text-teal-800">Still intentionally cautious</p>
+            <ul id="limitations" class="mt-5 space-y-3 text-lg leading-8"></ul>
+          </div>
+          <div class="rounded-[1.8rem] bg-[var(--ink)] p-6 text-white">
+            <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">20-second talk track</p>
+            <p id="say-aloud" class="mt-4 text-lg leading-8"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const setText = (id, text) => {
+        document.getElementById(id).textContent = text;
+      };
+
+      const setList = (id, items) => {
+        document.getElementById(id).innerHTML = items.map((item) => `<li>${item}</li>`).join("");
+      };
+
+      const hrLabel = (value, ci) => `${value} (${ci[0]} to ${ci[1]})`;
+
+      let scenarioState = { index: 0, mode: "wrong" };
+      let payloadCache = null;
+      let sliderChart = null;
+
+      function renderScenario() {
+        const example = payloadCache.fictional_examples[scenarioState.index];
+        setText("scenario-tag", example.tag);
+        setText("scenario-title", example.title);
+        setText("treated-label", example.treated_group.label);
+        setText("treated-profile", example.treated_group.profile);
+        setText("treated-survival", `${example.treated_group.apparent_survival}%`);
+        setText("untreated-label", example.untreated_group.label);
+        setText("untreated-profile", example.untreated_group.profile);
+        setText("untreated-survival", `${example.untreated_group.apparent_survival}%`);
+
+        const label = scenarioState.mode === "wrong" ? "Misleading conclusion" : "Better interpretation";
+        const text = scenarioState.mode === "wrong" ? example.wrong_conclusion : example.better_interpretation;
+        setText("scenario-mode-label", label);
+        setText("scenario-mode-text", text);
+
+        document.querySelectorAll(".scenario-btn").forEach((btn) => {
+          btn.classList.toggle("active", Number(btn.dataset.index) === scenarioState.index);
+        });
+        document.querySelectorAll(".scenario-view-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.view === scenarioState.mode);
+        });
+      }
+
+      function computeToyOutcome(highRiskSharePct, highRiskSurvival, lowRiskSurvival) {
+        const high = highRiskSharePct / 100;
+        const low = 1 - high;
+        return (high * highRiskSurvival) + (low * lowRiskSurvival);
+      }
+
+      function renderSlider() {
+        const cfg = payloadCache.slider_demo;
+        const slider = document.getElementById("risk-slider");
+        const treatedHigh = Number(slider.value);
+        const untreatedHigh = cfg.untreated_high_risk_share;
+        const treatedOutcome = computeToyOutcome(treatedHigh, cfg.high_risk_survival, cfg.low_risk_survival);
+        const untreatedOutcome = computeToyOutcome(untreatedHigh, cfg.high_risk_survival, cfg.low_risk_survival);
+        const gap = (untreatedOutcome - treatedOutcome).toFixed(1);
+
+        setText("risk-slider-value", `${treatedHigh}% high-risk`);
+        setText(
+          "slider-explanation",
+          `At this setting, the treated group looks about ${gap} points worse on crude survival even though this toy example does not give treatment any true benefit or harm. The unfair result is coming from who ended up in the treated group.`
+        );
+
+        if (!sliderChart) {
+          sliderChart = new Chart(document.getElementById("slider-chart"), {
+            type: "bar",
+            data: {
+              labels: ["Treated group", "Untreated group"],
+              datasets: [
+                {
+                  label: "Crude survival in toy example",
+                  data: [treatedOutcome, untreatedOutcome],
+                  backgroundColor: ["#d56f4f", "#2f6d73"]
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              plugins: { legend: { display: false } },
+              scales: {
+                x: { grid: { display: false } },
+                y: { beginAtZero: true, max: 100, grid: { color: "rgba(25,49,61,0.08)" } }
+              }
+            }
+          });
+        } else {
+          sliderChart.data.datasets[0].data = [treatedOutcome, untreatedOutcome];
+          sliderChart.update();
+        }
+      }
+
+      function renderCase(view) {
+        const before = view === "before";
+        const info = before ? payloadCache.real_case.before_text : payloadCache.real_case.after_text;
+        setText("case-headline", info.headline);
+        setText("case-summary", info.summary);
+        setText("case-detail", info.detail);
+        document.getElementById("case-before-figures").classList.toggle("hidden", !before);
+        document.getElementById("case-after-figures").classList.toggle("hidden", before);
+        document.querySelectorAll(".case-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.caseView === view);
+        });
+      }
+
+      fetch("./confounding_demo_payload.json")
+        .then((response) => response.json())
+        .then((payload) => {
+          payloadCache = payload;
+
+          setText("hero-subtitle", payload.meta.subtitle);
+          setText("hero-real-label", payload.meta.real_case_label);
+          setText("hero-real-summary", payload.meta.real_case_summary);
+
+          setText("analogy-title", payload.everyday_analogy.title);
+          setText("analogy-setup", payload.everyday_analogy.setup);
+          setText("analogy-mode-text", payload.everyday_analogy.wrong_conclusion);
+
+          document.querySelectorAll(".toggle-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const better = btn.dataset.analogy === "better";
+              setText("analogy-mode-label", better ? "Better interpretation" : "Wrong quick conclusion");
+              setText(
+                "analogy-mode-text",
+                better ? payload.everyday_analogy.better_interpretation : payload.everyday_analogy.wrong_conclusion
+              );
+              document.querySelectorAll(".toggle-btn").forEach((b) => b.classList.toggle("active", b === btn));
+            });
+          });
+
+          const buttonRoot = document.getElementById("scenario-buttons");
+          buttonRoot.innerHTML = payload.fictional_examples
+            .map(
+              (example, index) => `
+                <button class="scenario-btn sans rounded-full border border-black/10 px-4 py-2 text-sm font-semibold ${index === 0 ? "active" : ""}" data-index="${index}">
+                  ${example.title}
+                </button>
+              `
+            )
+            .join("");
+
+          document.querySelectorAll(".scenario-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              scenarioState.index = Number(btn.dataset.index);
+              renderScenario();
+            });
+          });
+
+          document.querySelectorAll(".scenario-view-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              scenarioState.mode = btn.dataset.view;
+              renderScenario();
+            });
+          });
+
+          setText("slider-title", payload.slider_demo.title);
+          setText("slider-description", payload.slider_demo.description);
+          const slider = document.getElementById("risk-slider");
+          slider.min = payload.slider_demo.treated_high_risk_share_start;
+          slider.max = payload.slider_demo.treated_high_risk_share_end;
+          slider.value = payload.slider_demo.treated_high_risk_share_start;
+          slider.addEventListener("input", renderSlider);
+
+          setText("real-cohort", payload.real_case.cohort);
+          setText("real-subgroup", payload.real_case.subgroup);
+          setText("real-treatment", payload.real_case.treatment);
+          setText("real-n", String(payload.real_case.patients_n));
+          setText("naive-hr", hrLabel(payload.real_case.naive_hr, payload.real_case.naive_ci));
+          setText("adjusted-hr", hrLabel(payload.real_case.adjusted_hr, payload.real_case.adjusted_ci));
+          setText("imbalance-before", String(payload.real_case.max_abs_smd_before));
+          setText("imbalance-after", String(payload.real_case.max_abs_smd_after));
+
+          document.querySelectorAll(".case-btn").forEach((btn) => {
+            btn.addEventListener("click", () => renderCase(btn.dataset.caseView));
+          });
+
+          const methods = document.getElementById("method-cards");
+          methods.innerHTML = payload.methods
+            .map(
+              (method) => `
+                <article class="rounded-[1.8rem] bg-white p-6 shadow-[0_10px_24px_rgba(25,49,61,0.05)]">
+                  <h3 class="text-2xl font-semibold">${method.name}</h3>
+                  <div class="mt-5 space-y-4">
+                    <div class="rounded-3xl bg-[var(--paper)] p-4">
+                      <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">What problem it tries to fix</p>
+                      <p class="mt-2 text-lg leading-8">${method.problem}</p>
+                    </div>
+                    <div class="rounded-3xl bg-[var(--mist)] p-4">
+                      <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">How it helps</p>
+                      <p class="mt-2 text-lg leading-8">${method.helps}</p>
+                    </div>
+                    <div class="rounded-3xl border border-black/5 bg-white p-4">
+                      <p class="sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">What it still cannot guarantee</p>
+                      <p class="mt-2 text-lg leading-8">${method.cannot}</p>
+                    </div>
+                  </div>
+                </article>
+              `
+            )
+            .join("");
+
+          setText("ai-problem", payload.ai_connection.problem);
+          setText("ai-benefit", payload.ai_connection.benefit);
+          setText("ai-future", payload.ai_connection.future_work);
+          setList("studied-now", payload.studied_now);
+          setList("next-questions", payload.next_questions);
+          setList("limitations", payload.limitations);
+          setText("say-aloud", payload.say_aloud);
+
+          const flow = document.getElementById("ai-flow");
+          flow.innerHTML = payload.ai_connection.flow
+            .map(
+              (step, index) => `
+                <div class="rounded-3xl bg-white/10 p-4">
+                  <p class="sans text-xs uppercase tracking-[0.18em] text-slate-300">Step ${index + 1}</p>
+                  <p class="mt-2 text-xl font-semibold">${step}</p>
+                </div>
+              `
+            )
+            .join('<div class="flow-arrow">&darr;</div>');
+
+          renderScenario();
+          renderSlider();
+          renderCase("before");
+        })
+        .catch((error) => {
+          console.error(error);
+          document.body.insertAdjacentHTML(
+            "afterbegin",
+            `<div class="mx-auto max-w-4xl px-6 py-4 text-red-700 sans">Could not load <code>confounding_demo_payload.json</code>. Serve this folder through a local web server or GitHub Pages rather than opening it directly as <code>file://</code>.</div>`
+          );
+        });
+    </script>
+  </body>
+</html>

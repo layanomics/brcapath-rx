@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "BRCAPath-Rx Stage 2: Confounding Tutorial",
+    "subtitle": "A shorter, more visual explanation of why a raw treated-vs-untreated comparison can be misleading.",
+    "real_case_label": "One completed real case study so far",
+    "real_case_summary": "ER-positive METABRIC, hormone therapy YES vs NO, overall survival",
+    "meeting_ready": "yes"
+  },
+  "everyday_analogy": {
+    "title": "One tiny everyday analogy",
+    "setup": "If students with tutors score lower on the final exam, that does not prove tutoring is harmful.",
+    "wrong_conclusion": "Tutors made the scores worse.",
+    "better_interpretation": "The weaker students were more likely to get tutors, so the tutor group started off at a disadvantage."
+  },
+  "fictional_examples": [
+    {
+      "id": "age-stage",
+      "title": "Illustration 1: treated patients started older and sicker",
+      "tag": "Illustration, not real data",
+      "treated_group": {
+        "label": "Received hormone therapy",
+        "profile": "Older on average, more later-stage disease, more positive lymph nodes",
+        "apparent_survival": 58
+      },
+      "untreated_group": {
+        "label": "Did not receive hormone therapy",
+        "profile": "Younger on average, more early-stage disease, fewer positive lymph nodes",
+        "apparent_survival": 74
+      },
+      "wrong_conclusion": "Hormone therapy looks harmful because the treated group did worse.",
+      "better_interpretation": "The treated group already had worse baseline prognosis, so the crude comparison is unfair."
+    },
+    {
+      "id": "subtype-mix",
+      "title": "Illustration 2: the treated group had a riskier subtype mix",
+      "tag": "Illustration, not real data",
+      "treated_group": {
+        "label": "Received hormone therapy",
+        "profile": "More high-risk subtype mix and more advanced baseline features",
+        "apparent_survival": 61
+      },
+      "untreated_group": {
+        "label": "Did not receive hormone therapy",
+        "profile": "Healthier subtype mix and milder baseline disease",
+        "apparent_survival": 76
+      },
+      "wrong_conclusion": "The therapy must be the reason the treated group looked worse.",
+      "better_interpretation": "The subtype mix and baseline risk were different before treatment was ever compared."
+    }
+  ],
+  "slider_demo": {
+    "title": "Interactive mini-demo",
+    "description": "Move more high-risk patients into the treated group and watch how the crude comparison changes even when treatment itself is not helping or hurting in this toy example.",
+    "low_risk_survival": 88,
+    "high_risk_survival": 46,
+    "untreated_high_risk_share": 25,
+    "treated_high_risk_share_start": 25,
+    "treated_high_risk_share_end": 85
+  },
+  "real_case": {
+    "title": "The one real completed case study so far",
+    "cohort": "METABRIC",
+    "subgroup": "ER-positive patients",
+    "treatment": "Hormone therapy YES vs NO",
+    "outcome": "Overall survival",
+    "patients_n": 1506,
+    "treated_n": 1079,
+    "untreated_n": 427,
+    "events_n": 881,
+    "naive_hr": 1.496,
+    "naive_ci": [1.287, 1.738],
+    "adjusted_hr": 0.996,
+    "adjusted_ci": [0.836, 1.186],
+    "overlap_fraction": 0.671,
+    "max_abs_smd_before": 0.696,
+    "max_abs_smd_after": 0.002,
+    "before_text": {
+      "headline": "Before adjustment",
+      "summary": "The first crude comparison made hormone therapy look harmful.",
+      "detail": "But the treated and untreated groups were not similar at baseline. They differed strongly in stage, nodal burden, age, menopausal state, and subtype mix."
+    },
+    "after_text": {
+      "headline": "After overlap weighting",
+      "summary": "Measured balance improved sharply and the estimate moved toward about 1.00.",
+      "detail": "That tells us the naive comparison was misleading. It does not prove the final treatment effect."
+    }
+  },
+  "methods": [
+    {
+      "name": "Overlap weighting",
+      "problem": "The treated and untreated groups overlap only partly.",
+      "helps": "It gives more weight to patients who realistically could have gone either way.",
+      "cannot": "It still cannot fix important confounders that were never measured."
+    },
+    {
+      "name": "Propensity score matching",
+      "problem": "A crude comparison mixes together patients who were not similar at baseline.",
+      "helps": "It tries to pair treated and untreated patients who looked more alike before treatment.",
+      "cannot": "It can discard unmatched patients and still cannot remove hidden confounding."
+    }
+  ],
+  "ai_connection": {
+    "problem": "Without adjustment, the final AI model may learn a false pattern like 'treatment looks harmful' only because sicker patients received it.",
+    "benefit": "Adjustment tries to give the model a cleaner treatment signal by reducing unfair baseline differences.",
+    "flow": [
+      "Patient profile",
+      "Adjusted treatment-effect model",
+      "Estimated outcomes under several treatment options",
+      "Ranked recommendation candidates"
+    ],
+    "future_work": "This is the intended Stage 2 direction of BRCAPath-Rx, not a finished multi-treatment recommendation engine yet."
+  },
+  "studied_now": [
+    "Completed now: ER-positive METABRIC",
+    "Completed now: hormone therapy YES vs NO",
+    "Completed now: overall survival with naive comparison plus overlap-weighted adjustment"
+  ],
+  "next_questions": [
+    "Possible next case: chemotherapy questions if overlap and confounder support are acceptable",
+    "Possible next case: radiotherapy questions if the surgery-treatment entanglement can be handled carefully",
+    "Possible next case: other subgroup-specific treatment questions only after a separate audit"
+  ],
+  "limitations": [
+    "This is still observational data, not a randomized trial.",
+    "Adjustment helps, but it does not magically prove causality.",
+    "Important confounders are still missing, including comorbidity, adherence, exact regimen, and treatment-era detail."
+  ],
+  "say_aloud": "This page uses short examples to show why a raw treated-versus-untreated comparison can mislead us, then shows the one real completed Stage 2 case study. The real point is that the naive result changed a lot after adjustment, which means the crude comparison was not trustworthy."
+}
