@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bayes Theorem in Breast Cancer Subtype Prediction | BRCAPath-Rx</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+<header>
+  <div class="container">
+    <p class="header-eyebrow">BRCAPath-Rx &nbsp;·&nbsp; Educational Demo</p>
+    <h1>Bayes Theorem and Bayesian Inference<br>in <em>Breast Cancer Subtype Prediction</em></h1>
+    <p class="header-sub">
+      How observing a patient's receptor status and tumor grade
+      updates our estimate of molecular subtype — computed from real cohort data.
+    </p>
+  </div>
+</header>
+
+<!-- ============================================================
+     1. APPLICATION INTRO
+============================================================ -->
+<section id="intro-section">
+  <div class="container">
+    <h2>What is Subtype Prediction?</h2>
+    <p class="section-lead">The clinical question this demo addresses</p>
+
+    <p>
+      Breast cancer is not one disease. Molecular subtypes — Luminal A, Luminal B, HER2-enriched,
+      Basal-like, and others — differ in prognosis, treatment response, and survival outcomes.
+      Subtype is ideally determined by gene expression profiling, but clinical features such as
+      receptor status and tumor grade are often the first evidence available.
+    </p>
+
+    <div class="intro-grid" style="margin-top: 22px;">
+      <div class="intro-card">
+        <strong>The Question</strong>
+        Given what we observe about a patient today — ER, PR, HER2, and grade —
+        what is the probability that this patient has the Luminal A subtype?
+      </div>
+      <div class="intro-card">
+        <strong>Why Bayes?</strong>
+        Bayes theorem gives us a principled way to combine a population-level
+        baseline (the prior) with patient-specific evidence (the likelihood)
+        to produce an updated probability (the posterior).
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. FORMULA SECTION
+============================================================ -->
+<section id="formula-section">
+  <div class="container">
+    <h2>Bayes Theorem — Applied Here</h2>
+    <p class="section-lead">From abstract formula to this exact application</p>
+
+    <div class="formula-box">
+      <div class="formula-abstract">P(H | D) = P(D | H) · P(H) / P(D)</div>
+      <div class="formula-label">Abstract form</div>
+    </div>
+
+    <div class="formula-box" style="margin-top: 12px;">
+      <div class="formula-applied">
+        P(Luminal&nbsp;A &nbsp;|&nbsp; ER+,&nbsp;PR+,&nbsp;HER2−,&nbsp;low&nbsp;grade)
+      </div>
+      <div style="font-family: Arial, sans-serif; font-size: 13px; color: rgba(255,255,255,0.55); margin: 8px 0;">= ──────────────────────────────────────────────────</div>
+      <div class="formula-applied" style="opacity: 0.8; font-size: 0.92rem;">
+        Σ<sub>s</sub> P(ER+,&nbsp;PR+,&nbsp;HER2−,&nbsp;low&nbsp;grade&nbsp;|&nbsp;subtype<sub>s</sub>) · P(subtype<sub>s</sub>)
+      </div>
+      <div class="formula-label" style="margin-top: 12px;">Applied to subtype prediction — summing over all 6 METABRIC subtypes</div>
+    </div>
+
+    <p style="font-family: Arial, sans-serif; font-size: 14px; color: var(--gray-600); margin-top: 18px; line-height: 1.6;">
+      The denominator normalizes over all subtypes so that posterior probabilities sum to 1.
+      Each feature (ER, PR, HER2, grade) is treated as conditionally independent given
+      subtype — a naive Bayes assumption that works well as an approximation here.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. PRIOR / LIKELIHOOD / POSTERIOR
+============================================================ -->
+<section id="terms-section">
+  <div class="container">
+    <h2>The Three Components</h2>
+    <p class="section-lead">Defined in the context of this application</p>
+
+    <div class="term-grid">
+      <div class="term-card prior">
+        <div class="term-name">Prior</div>
+        <div class="term-math">P(Luminal A)</div>
+        <div class="term-desc">
+          The baseline probability of Luminal A <em>before</em> seeing any patient-specific evidence.
+          Derived from subtype frequencies in the METABRIC cohort
+          (n&nbsp;=&nbsp;1,974 patients with confirmed subtype).
+          <br><br>
+          In METABRIC: <strong>35.5%</strong> of patients are Luminal A.
+        </div>
+      </div>
+
+      <div class="term-card like">
+        <div class="term-name">Likelihood</div>
+        <div class="term-math">P(evidence | Luminal A)</div>
+        <div class="term-desc">
+          How probable is the observed combination of ER, PR, HER2, and grade
+          <em>if</em> the patient truly has Luminal A?
+          <br><br>
+          Also computed for each other subtype — LumB, HER2-enriched, Basal-like, etc.
+          The contrast between subtypes drives the update.
+        </div>
+      </div>
+
+      <div class="term-card post">
+        <div class="term-name">Posterior</div>
+        <div class="term-math">P(Luminal A | evidence)</div>
+        <div class="term-desc">
+          The <em>updated</em> probability of Luminal A after incorporating the patient's
+          specific features. Ranges from near 0 to near 1 depending on the evidence pattern.
+          <br><br>
+          This is the clinically actionable quantity.
+        </div>
+      </div>
+    </div>
+
+    <!-- Likelihood table -->
+    <div style="margin-top: 32px; overflow-x: auto;">
+      <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 13px;">
+        <caption style="text-align:left; font-size:12px; color:var(--gray-600); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; padding-bottom:8px;">
+          Feature likelihoods per subtype — computed from METABRIC (real data)
+        </caption>
+        <thead>
+          <tr style="background: var(--navy); color: white;">
+            <th style="padding: 10px 14px; text-align:left;">Subtype</th>
+            <th style="padding: 10px 14px; text-align:center;">Prior</th>
+            <th style="padding: 10px 14px; text-align:center;">P(ER+ | s)</th>
+            <th style="padding: 10px 14px; text-align:center;">P(PR+ | s)</th>
+            <th style="padding: 10px 14px; text-align:center;">P(HER2− | s)</th>
+            <th style="padding: 10px 14px; text-align:center;">P(Low Grade | s)</th>
+          </tr>
+        </thead>
+        <tbody id="likelihood-table-body">
+          <!-- Filled by script after data loads -->
+          <tr><td colspan="6" style="padding:14px; color:var(--gray-600); text-align:center;">Loading data…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. INTERACTIVE DEMO
+============================================================ -->
+<section id="demo-section">
+  <div class="container">
+    <h2>Interactive Posterior Calculator</h2>
+    <p class="section-lead">Choose patient evidence — posterior updates in real time</p>
+
+    <div id="demo-error" style="display:none; color:#dc2626; font-family:Arial,sans-serif; font-size:14px; padding: 16px; background:#fff5f5; border:1px solid #fca5a5; border-radius:6px; margin-bottom:16px;">
+      Could not load data.json. If running locally, serve via a local HTTP server (see README).
+    </div>
+
+    <div class="demo-wrapper">
+
+      <!-- Evidence toggles -->
+      <div class="evidence-grid">
+        <div class="evidence-item">
+          <label>ER Status</label>
+          <div class="toggle-group">
+            <button class="active" data-field="er" data-val="true">ER Positive</button>
+            <button data-field="er" data-val="false">ER Negative</button>
+          </div>
+        </div>
+        <div class="evidence-item">
+          <label>PR Status</label>
+          <div class="toggle-group">
+            <button class="active" data-field="pr" data-val="true">PR Positive</button>
+            <button data-field="pr" data-val="false">PR Negative</button>
+          </div>
+        </div>
+        <div class="evidence-item">
+          <label>HER2 Status</label>
+          <div class="toggle-group">
+            <button class="active" data-field="her2" data-val="true">HER2 Negative</button>
+            <button data-field="her2" data-val="false">HER2 Positive</button>
+          </div>
+        </div>
+        <div class="evidence-item">
+          <label>Tumor Grade</label>
+          <div class="toggle-group">
+            <button class="active" data-field="grade" data-val="true">Low Grade (1–2)</button>
+            <button data-field="grade" data-val="false">High Grade (3)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result pills: prior, likelihood, posterior -->
+      <div class="result-strip">
+        <div class="result-pill prior-pill">
+          <div class="pill-label">Prior</div>
+          <div class="pill-value" id="val-prior">—</div>
+          <div class="pill-sub" id="val-prior-raw">P(Luminal A)</div>
+        </div>
+        <div class="result-pill like-pill">
+          <div class="pill-label">Likelihood</div>
+          <div class="pill-value" id="val-like">—</div>
+          <div class="pill-sub">P(evidence | LumA)</div>
+        </div>
+        <div class="result-pill post-pill">
+          <div class="pill-label">Posterior</div>
+          <div class="pill-value" id="val-post">—</div>
+          <div id="post-arrow" class="pill-sub">P(LumA | evidence)</div>
+        </div>
+      </div>
+
+      <!-- Interpretation sentence -->
+      <p id="interp-text" style="font-family: Arial, sans-serif; font-size: 14px; color: var(--navy); background: var(--pink-pale); border-left: 3px solid var(--pink); padding: 12px 16px; border-radius: 4px; margin-bottom: 24px; line-height: 1.6;">
+        Loading…
+      </p>
+
+      <!-- Bar chart -->
+      <div class="chart-heading">Posterior probability across all subtypes</div>
+      <div class="bar-chart" id="bar-chart"></div>
+
+    </div><!-- /demo-wrapper -->
+  </div>
+</section>
+
+<!-- ============================================================
+     5. DATA NOTE
+============================================================ -->
+<section id="note-section">
+  <div class="container">
+    <h2>Data Provenance</h2>
+    <p class="section-lead">What is real-data-derived vs. illustrative</p>
+
+    <div class="data-note">
+      <p>
+        <strong>All values in this demo are real-data-derived.</strong>
+        Priors and likelihoods were computed directly from the
+        <strong>METABRIC clinical dataset</strong> (n&nbsp;=&nbsp;2,509 patients;
+        n&nbsp;=&nbsp;1,974 with confirmed CLAUDIN subtype label),
+        part of the BRCAPath-Rx research project.
+        <br><br>
+        Source file: <code>01-data/processed/metabric/metabric_clinical_clean.tsv</code>
+        &nbsp;(processed during Phase 1 preprocessing).
+        <br><br>
+        The posterior computation uses the <strong>naive Bayes assumption</strong>:
+        features (ER, PR, HER2, grade) are treated as conditionally independent
+        given subtype. This is a standard approximation; in practice, some
+        correlation exists (e.g. ER and PR tend to co-occur). The demo is intended
+        as an <em>educational illustration</em> of Bayesian reasoning, not a
+        clinical decision tool.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>BRCAPath-Rx &nbsp;·&nbsp; Bayesian Inference Demo &nbsp;·&nbsp; Data: METABRIC (cBioPortal)</p>
+    <p style="margin-top:6px;">Educational use only &nbsp;·&nbsp; Not a clinical decision tool</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- Populate the likelihood table after data loads -->
+<script>
+(function() {
+  const COLORS = {
+    LumA: '#2563a8', LumB: '#5b8dee', Her2: '#d97706',
+    Basal: '#dc2626', Normal: '#059669', 'claudin-low': '#7c3aed'
+  };
+
+  function pct(v) { return (v * 100).toFixed(1) + '%'; }
+
+  function populateLikelihoodTable(data) {
+    const tbody = document.getElementById('likelihood-table-body');
+    tbody.innerHTML = '';
+    data.subtypes.forEach(s => {
+      const L = data.likelihoods[s];
+      const prior = data.priors[s];
+      const isLumA = s === 'LumA';
+      const row = `
+        <tr style="${isLumA ? 'background: var(--pink-pale); font-weight:600;' : 'border-bottom: 1px solid var(--gray-100);'}">
+          <td style="padding: 9px 14px;">
+            <span style="display:inline-block; width:10px; height:10px; background:${COLORS[s]}; border-radius:2px; margin-right:7px; vertical-align:middle;"></span>
+            ${data.subtype_labels[s] || s}
+          </td>
+          <td style="padding: 9px 14px; text-align:center;">${pct(prior)}</td>
+          <td style="padding: 9px 14px; text-align:center;">${pct(L.er_pos)}</td>
+          <td style="padding: 9px 14px; text-align:center;">${pct(L.pr_pos)}</td>
+          <td style="padding: 9px 14px; text-align:center;">${pct(L.her2_neg)}</td>
+          <td style="padding: 9px 14px; text-align:center;">${pct(L.low_grade)}</td>
+        </tr>`;
+      tbody.insertAdjacentHTML('beforeend', row);
+    });
+  }
+
+  // Poll for DATA (loaded by script.js)
+  const timer = setInterval(() => {
+    if (typeof DATA !== 'undefined' && DATA) {
+      clearInterval(timer);
+      populateLikelihoodTable(DATA);
+    }
+  }, 100);
+})();
+</script>
+
+</body>
+</html>
