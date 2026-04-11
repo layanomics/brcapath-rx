@@ -1,0 +1,3 @@
+gdc_client_path: C:/tools/gdc-client.exe
+gdc_client_version: "2.3"
+gdc_project: TCGA-BRCA

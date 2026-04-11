@@ -1,0 +1,7 @@
+trial_name: tcga_only_source_audited
+download_scope:
+  - tcga_brca_clinical_supplement
+  - tcga_brca_biospecimen_supplement
+manifest_root: 01-data/raw/tcga-brca/gdc/manifests
+download_root: 01-data/raw/tcga-brca/gdc/downloads
+log_root: 01-data/raw/tcga-brca/gdc/logs
