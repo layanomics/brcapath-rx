@@ -1,0 +1,14 @@
+{
+    "size":  "50000",
+    "format":  "TSV",
+    "fields":  "file_id,file_name,access,state,data_category,data_type,data_format,experimental_strategy,platform,file_size,analysis.workflow_type,cases.case_id,cases.submitter_id,cases.project.project_id,cases.samples.sample_id,cases.samples.submitter_id,cases.samples.sample_type,cases.samples.tissue_type,cases.samples.tumor_descriptor",
+    "filters":  {
+                    "content":  {
+                                    "value":  [
+                                                  "TCGA-BRCA"
+                                              ],
+                                    "field":  "cases.project.project_id"
+                                },
+                    "op":  "in"
+                }
+}

@@ -1,0 +1,14 @@
+{
+    "size":  "5000",
+    "format":  "TSV",
+    "fields":  "case_id,submitter_id,project.project_id,primary_site,disease_type",
+    "filters":  {
+                    "content":  {
+                                    "value":  [
+                                                  "TCGA-BRCA"
+                                              ],
+                                    "field":  "project.project_id"
+                                },
+                    "op":  "in"
+                }
+}
