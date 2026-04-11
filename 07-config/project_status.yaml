@@ -1,0 +1,5 @@
+project_name: BRCAPath-Rx
+trial_name: tcga_only_source_audited
+python_env: brcapath-rx
+notebook_kernel: Python (brcapath-rx)
+status: ready_for_protocol_freeze
