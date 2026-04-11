@@ -28,3 +28,12 @@ __pycache__/
 !01-data/audit/tcga-brca/variables/
 !01-data/audit/tcga-brca/source/source_inventory_notes.md
 !01-data/audit/tcga-brca/variables/variable_registry_template.tsv
+
+# Generated TCGA inventory outputs
+01-data/audit/tcga-brca/source/runs/
+01-data/audit/tcga-brca/source/tcga_brca_case_inventory.tsv
+01-data/audit/tcga-brca/source/tcga_brca_file_inventory.tsv
+01-data/audit/tcga-brca/source/tcga_brca_inventory_latest.json
+
+# Codex planning scratch file
+PLAN.md
