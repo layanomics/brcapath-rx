@@ -1,0 +1,24 @@
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+*.pyc
+*.pyo
+*.log
+
+01-data/raw/*
+01-data/processed/*
+01-data/audit/*
+04-results/*
+
+!01-data/raw/.gitkeep
+!01-data/processed/.gitkeep
+!01-data/audit/.gitkeep
+!04-results/.gitkeep
+
+# Trial-specific generated outputs
+09-trials/*/05-results/*
+!09-trials/*/05-results/.gitkeep
+
+# Trial checkpoints
+09-trials/*/07-checkpoints/*
+!09-trials/*/07-checkpoints/.gitkeep

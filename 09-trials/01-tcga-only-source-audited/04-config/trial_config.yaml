@@ -1,0 +1,7 @@
+trial_name: tcga_only_source_audited
+dataset_scope: tcga_brca_only
+status: setup
+raw_data_root: 01-data/raw
+processed_data_root: 01-data/processed
+audit_root: 01-data/audit
+results_root: 09-trials/01-tcga-only-source-audited/05-results
