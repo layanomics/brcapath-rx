@@ -22,3 +22,9 @@ __pycache__/
 # Trial checkpoints
 09-trials/*/07-checkpoints/*
 !09-trials/*/07-checkpoints/.gitkeep
+
+!01-data/audit/tcga-brca/
+!01-data/audit/tcga-brca/source/
+!01-data/audit/tcga-brca/variables/
+!01-data/audit/tcga-brca/source/source_inventory_notes.md
+!01-data/audit/tcga-brca/variables/variable_registry_template.tsv
