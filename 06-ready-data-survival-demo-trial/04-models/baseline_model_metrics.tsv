@@ -1,0 +1,3 @@
+cohort	duration_column	event_column	complete_cases	concordance_index	covariates	formula
+TCGA-BRCA	os_time_days	os_event	805	0.72924485812941	['age_at_diagnosis_years', 'ajcc_stage_simple', 'subtype_label']	age_at_diagnosis_years + C(ajcc_stage_simple) + C(subtype_label)
+METABRIC	os_time_months	os_event	1980	0.6515002816734368	['age_at_diagnosis_years', 'npi', 'subtype_label']	age_at_diagnosis_years + npi + C(subtype_label)

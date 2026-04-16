@@ -1,0 +1,4 @@
+cohort	endpoint	time_column	time_unit	complete_n	event_n	median_time_observed
+TCGA-BRCA	OS	os_time_days	days	1076	150	860.0
+METABRIC	OS	os_time_months	months	1981	1144	116.466666666667
+METABRIC	RFS	rfs_time_months	months	2380	964	100.05

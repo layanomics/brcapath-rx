@@ -1,0 +1,16 @@
+cohort	source_dataset	standardized_domain	output_column	source_column	field_role	cohort_specific	unit_or_encoding	non_missing_n	notes
+TCGA-BRCA	TCGA-BRCA.survival.tsv	survival	os_time_days	OS.time	chosen_primary	True	days	1076	Primary overall survival duration from UCSC Xena GDC hub.
+TCGA-BRCA	TCGA-BRCA.survival.tsv	survival	os_event	OS	chosen_primary	True	0=censored, 1=event	1076	Primary overall survival event indicator from UCSC Xena GDC hub.
+TCGA-BRCA	TCGA-BRCA.clinical.tsv	age	age_at_diagnosis_years	age_at_earliest_diagnosis_in_years.diagnoses.xena_derived	chosen_primary	False	years	1062	Xena-derived age in years from GDC-hub clinical table.
+TCGA-BRCA	TCGA-BRCA.clinical.tsv	stage	ajcc_stage_simple	ajcc_pathologic_stage.diagnoses	chosen_primary	True	simplified AJCC stage group	1065	Derived by collapsing raw pathologic stage labels to I/II/III/IV/X.
+TCGA-BRCA	TCGA.BRCA.sampleMap/BRCA_clinicalMatrix	subtype	subtype_label	PAM50Call_RNAseq	chosen_auxiliary	True	PAM50 label	826	Auxiliary Xena TCGA-hub subtype field because GDC-hub clinical table does not expose subtype labels.
+TCGA-BRCA	TCGA-BRCA.clinical.tsv	treatment	tcga_pharmaceutical_therapy_observed	treatment_or_therapy.treatments.diagnoses + treatment_type.treatments.diagnoses	descriptive_only	True	yes/no/not reported	1076	Derived observational descriptor only. Not used for causal or treatment-benefit claims.
+TCGA-BRCA	TCGA-BRCA.clinical.tsv	treatment	tcga_radiation_therapy_observed	treatment_or_therapy.treatments.diagnoses + treatment_type.treatments.diagnoses	descriptive_only	True	yes/no/not reported	1076	Derived observational descriptor only. Not used for causal or treatment-benefit claims.
+METABRIC	cBioPortal patient clinical-data	survival	os_time_months	OS_MONTHS	chosen_primary	False	months	1981	Primary METABRIC overall survival duration.
+METABRIC	cBioPortal patient clinical-data	survival	os_event	OS_STATUS	chosen_primary	False	0=living, 1=deceased	1981	Primary METABRIC overall survival event indicator.
+METABRIC	cBioPortal patient clinical-data	survival	rfs_time_months	RFS_MONTHS	available_secondary	True	months	2388	Retained for endpoint inventory only. The baseline model uses OS.
+METABRIC	cBioPortal patient clinical-data	subtype	subtype_label	CLAUDIN_SUBTYPE	chosen_primary	True	subtype label	1980	Chosen METABRIC subtype field for distribution summary and KM plots.
+METABRIC	cBioPortal patient clinical-data	subtype	threegene_subtype_raw	THREEGENE	available_secondary	True	subtype label	1764	Retained as a cohort-specific secondary subtype field.
+METABRIC	cBioPortal patient clinical-data	treatment	chemotherapy_observed_raw	CHEMOTHERAPY	descriptive_only	True	YES/NO	1980	Observational treatment descriptor only. Not used for treatment-effect claims.
+METABRIC	cBioPortal patient clinical-data	treatment	hormone_therapy_observed_raw	HORMONE_THERAPY	descriptive_only	True	YES/NO	1980	Observational treatment descriptor only. Not used for treatment-effect claims.
+METABRIC	cBioPortal patient clinical-data	treatment	radio_therapy_observed_raw	RADIO_THERAPY	descriptive_only	True	YES/NO	1980	Observational treatment descriptor only. Not used for treatment-effect claims.

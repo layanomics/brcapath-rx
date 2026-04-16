@@ -1,0 +1,326 @@
+[
+  {
+    "displayName": "Age at Diagnosis",
+    "description": "Age at Diagnosis",
+    "datatype": "NUMBER",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "AGE_AT_DIAGNOSIS",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Type of Breast Surgery",
+    "description": "Type of Breast Surgery",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "BREAST_SURGERY",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Cancer Type",
+    "description": "Cancer Type",
+    "datatype": "STRING",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "CANCER_TYPE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Cancer Type Detailed",
+    "description": "Cancer Type Detailed",
+    "datatype": "STRING",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "CANCER_TYPE_DETAILED",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Cellularity",
+    "description": "Tumor Content",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "CELLULARITY",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Chemotherapy",
+    "description": "Chemotherapy.",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "CHEMOTHERAPY",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Pam50 + Claudin-low subtype",
+    "description": "Pam50 + Claudin-low subtype",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "CLAUDIN_SUBTYPE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Cohort",
+    "description": "Cohort.",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "COHORT",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "ER status measured by IHC",
+    "description": "ER status measured by IHC",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "ER_IHC",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "ER Status",
+    "description": "ER Status",
+    "datatype": "STRING",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "ER_STATUS",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Neoplasm Histologic Grade",
+    "description": "Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.",
+    "datatype": "STRING",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "GRADE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "HER2 status measured by SNP6",
+    "description": "HER2 status measured by SNP6",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "HER2_SNP6",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "HER2 Status",
+    "description": "HER2 Status",
+    "datatype": "STRING",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "HER2_STATUS",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Tumor Other Histologic Subtype",
+    "description": "Text to describe a tumor's histologic subtype or mixed diagnosis that is different from previously specified options.",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "HISTOLOGICAL_SUBTYPE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Hormone Therapy",
+    "description": "Hormone Therapy",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "HORMONE_THERAPY",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Inferred Menopausal State",
+    "description": "Inferred Menopausal State",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "INFERRED_MENOPAUSAL_STATE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Integrative Cluster",
+    "description": "Integrative Cluster",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "INTCLUST",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Primary Tumor Laterality",
+    "description": "For tumors in paired organs, designates the side on which the cancer originates.",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "LATERALITY",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Lymph nodes examined positive",
+    "description": "Number of lymphnodes positive",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "LYMPH_NODES_EXAMINED_POSITIVE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Mutation Count",
+    "description": "Mutation Count",
+    "datatype": "NUMBER",
+    "patientAttribute": false,
+    "priority": "30",
+    "clinicalAttributeId": "MUTATION_COUNT",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Nottingham prognostic index",
+    "description": "Nottingham prognostic index",
+    "datatype": "NUMBER",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "NPI",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Oncotree Code",
+    "description": "Oncotree Code",
+    "datatype": "STRING",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "ONCOTREE_CODE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Overall Survival (Months)",
+    "description": "Overall survival in months since initial diagonosis.",
+    "datatype": "NUMBER",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "OS_MONTHS",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Overall Survival Status",
+    "description": "Overall patient survival status.",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "OS_STATUS",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "PR Status",
+    "description": "PR Status",
+    "datatype": "STRING",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "PR_STATUS",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Radio Therapy",
+    "description": "Radio Therapy",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "RADIO_THERAPY",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Relapse Free Status (Months)",
+    "description": "Time until last follow-up or relapse (in months)",
+    "datatype": "NUMBER",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "RFS_MONTHS",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Relapse Free Status",
+    "description": "Relapse Free Status (Recurred = cases where there was loco-regional relapse, distant relapse or death-specific death)",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "RFS_STATUS",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Number of Samples Per Patient",
+    "description": "Number of Samples Per Patient",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "SAMPLE_COUNT",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Sample Type",
+    "description": "The type of sample (i.e., normal, primary, met, recurrence).",
+    "datatype": "STRING",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "SAMPLE_TYPE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Sex",
+    "description": "Sex",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "SEX",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "3-Gene classifier subtype",
+    "description": "3-Gene classifier subtype",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "THREEGENE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "TMB (nonsynonymous)",
+    "description": "TMB (nonsynonymous)",
+    "datatype": "NUMBER",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "TMB_NONSYNONYMOUS",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Tumor Size",
+    "description": "Tumor size.",
+    "datatype": "STRING",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "TUMOR_SIZE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Tumor Stage",
+    "description": "Tumor stage.",
+    "datatype": "STRING",
+    "patientAttribute": false,
+    "priority": "1",
+    "clinicalAttributeId": "TUMOR_STAGE",
+    "studyId": "brca_metabric"
+  },
+  {
+    "displayName": "Patient's Vital Status",
+    "description": "The survival state of the person.",
+    "datatype": "STRING",
+    "patientAttribute": true,
+    "priority": "1",
+    "clinicalAttributeId": "VITAL_STATUS",
+    "studyId": "brca_metabric"
+  }
+]

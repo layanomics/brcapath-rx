@@ -1,0 +1,46 @@
+{
+  "generated_at_utc": "2026-04-01T21:09:26+00:00",
+  "scope": "Stage 1 prognostic survival demo",
+  "tcga_brca": {
+    "patients_total": 1076,
+    "os_complete_n": 1076,
+    "os_event_n": 150,
+    "os_time_unit": "days",
+    "subtype_field_used": "PAM50Call_RNAseq",
+    "subtype_non_missing_n": 826,
+    "km_groups_plotted": [
+      "LumA",
+      "LumB",
+      "Basal",
+      "Her2",
+      "Normal"
+    ],
+    "cox_complete_cases": 805,
+    "cox_concordance_index": 0.72924485812941
+  },
+  "metabric": {
+    "patients_total": 2509,
+    "os_complete_n": 1981,
+    "os_event_n": 1144,
+    "rfs_complete_n": 2380,
+    "rfs_event_n": 964,
+    "os_time_unit": "months",
+    "subtype_field_used": "CLAUDIN_SUBTYPE",
+    "subtype_non_missing_n": 1980,
+    "km_groups_plotted": [
+      "LumA",
+      "LumB",
+      "Her2",
+      "claudin-low",
+      "Basal",
+      "Normal"
+    ],
+    "cox_complete_cases": 1980,
+    "cox_concordance_index": 0.6515002816734368
+  },
+  "meeting_safe_language": {
+    "prognostic_demo_only": true,
+    "treatment_effect_estimation_claim": false,
+    "treatment_recommendation_claim": false
+  }
+}

@@ -1,0 +1,27038 @@
+# Source Discovery Report — BRCAPath-Rx
+
+_Generated: 2026-03-31T18:26:01.070427+00:00_
+
+## 1. GDC TCGA-BRCA: Project Summary
+
+- **id**: TCGA-BRCA
+- **primary_site**: ['Breast']
+- **dbgap_accession_number**: None
+- **project_id**: TCGA-BRCA
+- **disease_type**: ['Adnexal and Skin Appendage Neoplasms', 'Adenomas and Adenocarcinomas', 'Ductal and Lobular Neoplasms', 'Cystic, Mucinous and Serous Neoplasms', 'Complex Epithelial Neoplasms', 'Fibroepithelial Neoplasms', 'Squamous Cell Neoplasms', 'Epithelial Neoplasms, NOS', 'Basal Cell Neoplasms']
+- **name**: Breast Invasive Carcinoma
+- **releasable**: True
+- **state**: open
+- **released**: True
+
+## 2. GDC TCGA-BRCA: File Fields Discovered via _mapping
+
+**Project filter field identified:** `cases.project.project_id`
+
+Total fields discovered: 1146
+
+```
+access
+acl
+analysis.analysis_id
+analysis.analysis_type
+analysis.created_datetime
+analysis.input_files.access
+analysis.input_files.average_base_quality
+analysis.input_files.average_insert_size
+analysis.input_files.average_read_length
+analysis.input_files.cancer_dna_fraction
+analysis.input_files.channel
+analysis.input_files.chip_id
+analysis.input_files.chip_position
+analysis.input_files.contamination
+analysis.input_files.contamination_error
+analysis.input_files.created_datetime
+analysis.input_files.data_category
+analysis.input_files.data_format
+analysis.input_files.data_type
+analysis.input_files.error_type
+analysis.input_files.experimental_strategy
+analysis.input_files.file_id
+analysis.input_files.file_name
+analysis.input_files.file_size
+analysis.input_files.genome_doubling
+analysis.input_files.imaging_date
+analysis.input_files.magnification
+analysis.input_files.md5sum
+analysis.input_files.mean_coverage
+analysis.input_files.msi_score
+analysis.input_files.msi_status
+analysis.input_files.pairs_on_diff_chr
+analysis.input_files.plate_name
+analysis.input_files.plate_well
+analysis.input_files.platform
+analysis.input_files.proc_internal
+analysis.input_files.proportion_base_mismatch
+analysis.input_files.proportion_coverage_10x
+analysis.input_files.proportion_coverage_30x
+analysis.input_files.proportion_reads_duplicated
+analysis.input_files.proportion_reads_mapped
+analysis.input_files.proportion_targets_no_coverage
+analysis.input_files.read_pair_number
+analysis.input_files.revision
+analysis.input_files.stain_type
+analysis.input_files.state
+analysis.input_files.state_comment
+analysis.input_files.subclonal_genome_fraction
+analysis.input_files.submitter_id
+analysis.input_files.tmb
+analysis.input_files.tmb_exonic
+analysis.input_files.tmb_nonsynonymous
+analysis.input_files.tmb_nonsynonymous_exonic
+analysis.input_files.total_reads
+analysis.input_files.tumor_ploidy
+analysis.input_files.tumor_purity
+analysis.input_files.updated_datetime
+analysis.input_files.wgs_coverage
+analysis.metadata.read_groups.adapter_name
+analysis.metadata.read_groups.adapter_sequence
+analysis.metadata.read_groups.base_caller_name
+analysis.metadata.read_groups.base_caller_version
+analysis.metadata.read_groups.chipseq_antibody
+analysis.metadata.read_groups.chipseq_target
+analysis.metadata.read_groups.created_datetime
+analysis.metadata.read_groups.days_to_sequencing
+analysis.metadata.read_groups.experiment_name
+analysis.metadata.read_groups.flow_cell_barcode
+analysis.metadata.read_groups.fragment_maximum_length
+analysis.metadata.read_groups.fragment_mean_length
+analysis.metadata.read_groups.fragment_minimum_length
+analysis.metadata.read_groups.fragment_standard_deviation_length
+analysis.metadata.read_groups.fragmentation_enzyme
+analysis.metadata.read_groups.includes_spike_ins
+analysis.metadata.read_groups.instrument_model
+analysis.metadata.read_groups.is_paired_end
+analysis.metadata.read_groups.lane_number
+analysis.metadata.read_groups.library_name
+analysis.metadata.read_groups.library_preparation_kit_catalog_number
+analysis.metadata.read_groups.library_preparation_kit_name
+analysis.metadata.read_groups.library_preparation_kit_vendor
+analysis.metadata.read_groups.library_preparation_kit_version
+analysis.metadata.read_groups.library_selection
+analysis.metadata.read_groups.library_strand
+analysis.metadata.read_groups.library_strategy
+analysis.metadata.read_groups.multiplex_barcode
+analysis.metadata.read_groups.number_expect_cells
+analysis.metadata.read_groups.platform
+analysis.metadata.read_groups.read_group_id
+analysis.metadata.read_groups.read_group_name
+analysis.metadata.read_groups.read_group_qcs.adapter_content
+analysis.metadata.read_groups.read_group_qcs.basic_statistics
+analysis.metadata.read_groups.read_group_qcs.created_datetime
+analysis.metadata.read_groups.read_group_qcs.encoding
+analysis.metadata.read_groups.read_group_qcs.fastq_name
+analysis.metadata.read_groups.read_group_qcs.kmer_content
+analysis.metadata.read_groups.read_group_qcs.overrepresented_sequences
+analysis.metadata.read_groups.read_group_qcs.per_base_n_content
+analysis.metadata.read_groups.read_group_qcs.per_base_sequence_content
+analysis.metadata.read_groups.read_group_qcs.per_base_sequence_quality
+analysis.metadata.read_groups.read_group_qcs.per_sequence_gc_content
+analysis.metadata.read_groups.read_group_qcs.per_sequence_quality_score
+analysis.metadata.read_groups.read_group_qcs.per_tile_sequence_quality
+analysis.metadata.read_groups.read_group_qcs.percent_gc_content
+analysis.metadata.read_groups.read_group_qcs.read_group_qc_id
+analysis.metadata.read_groups.read_group_qcs.sequence_duplication_levels
+analysis.metadata.read_groups.read_group_qcs.sequence_length_distribution
+analysis.metadata.read_groups.read_group_qcs.state
+analysis.metadata.read_groups.read_group_qcs.submitter_id
+analysis.metadata.read_groups.read_group_qcs.total_sequences
+analysis.metadata.read_groups.read_group_qcs.updated_datetime
+analysis.metadata.read_groups.read_group_qcs.workflow_end_datetime
+analysis.metadata.read_groups.read_group_qcs.workflow_link
+analysis.metadata.read_groups.read_group_qcs.workflow_start_datetime
+analysis.metadata.read_groups.read_group_qcs.workflow_type
+analysis.metadata.read_groups.read_group_qcs.workflow_version
+analysis.metadata.read_groups.read_length
+analysis.metadata.read_groups.rin
+analysis.metadata.read_groups.sequencing_center
+analysis.metadata.read_groups.sequencing_date
+analysis.metadata.read_groups.single_cell_library
+analysis.metadata.read_groups.size_selection_range
+analysis.metadata.read_groups.spike_ins_concentration
+analysis.metadata.read_groups.spike_ins_fasta
+analysis.metadata.read_groups.state
+analysis.metadata.read_groups.submitter_id
+analysis.metadata.read_groups.target_capture_kit
+analysis.metadata.read_groups.target_capture_kit_catalog_number
+analysis.metadata.read_groups.target_capture_kit_name
+analysis.metadata.read_groups.target_capture_kit_target_region
+analysis.metadata.read_groups.target_capture_kit_vendor
+analysis.metadata.read_groups.target_capture_kit_version
+analysis.metadata.read_groups.to_trim_adapter_sequence
+analysis.metadata.read_groups.updated_datetime
+analysis.state
+analysis.submitter_id
+analysis.updated_datetime
+analysis.workflow_end_datetime
+analysis.workflow_link
+analysis.workflow_start_datetime
+analysis.workflow_type
+analysis.workflow_version
+annotations.annotation_id
+annotations.case_id
+annotations.case_submitter_id
+annotations.category
+annotations.classification
+annotations.created_datetime
+annotations.creator
+annotations.entity_id
+annotations.entity_submitter_id
+annotations.entity_type
+annotations.legacy_created_datetime
+annotations.legacy_updated_datetime
+annotations.notes
+annotations.state
+annotations.status
+annotations.submitter_id
+annotations.updated_datetime
+archive.archive_id
+archive.created_datetime
+archive.data_category
+archive.data_format
+archive.data_type
+archive.error_type
+archive.file_name
+archive.file_size
+archive.md5sum
+archive.revision
+archive.state
+archive.state_comment
+archive.submitter_id
+archive.updated_datetime
+associated_entities.case_id
+associated_entities.entity_id
+associated_entities.entity_submitter_id
+associated_entities.entity_type
+average_base_quality
+average_insert_size
+average_read_length
+cancer_dna_fraction
+cases.aliquot_ids
+cases.analyte_ids
+cases.annotations.annotation_id
+cases.annotations.case_id
+cases.annotations.case_submitter_id
+cases.annotations.category
+cases.annotations.classification
+cases.annotations.created_datetime
+cases.annotations.creator
+cases.annotations.entity_id
+cases.annotations.entity_submitter_id
+cases.annotations.entity_type
+cases.annotations.legacy_created_datetime
+cases.annotations.legacy_updated_datetime
+cases.annotations.notes
+cases.annotations.state
+cases.annotations.status
+cases.annotations.submitter_id
+cases.annotations.updated_datetime
+cases.case_id
+cases.consent_type
+cases.created_datetime
+cases.days_to_consent
+cases.days_to_lost_to_followup
+cases.demographic.age_at_index
+cases.demographic.age_is_obfuscated
+cases.demographic.cause_of_death
+cases.demographic.cause_of_death_source
+cases.demographic.country_of_birth
+cases.demographic.country_of_residence_at_enrollment
+cases.demographic.created_datetime
+cases.demographic.days_to_birth
+cases.demographic.days_to_death
+cases.demographic.demographic_id
+cases.demographic.education_level
+cases.demographic.ethnicity
+cases.demographic.gender
+cases.demographic.marital_status
+cases.demographic.occupation_duration_years
+cases.demographic.population_group
+cases.demographic.race
+cases.demographic.sex_at_birth
+cases.demographic.state
+cases.demographic.submitter_id
+cases.demographic.updated_datetime
+cases.demographic.vital_status
+cases.demographic.year_of_birth
+cases.demographic.year_of_death
+cases.diagnoses.adrenal_hormone
+cases.diagnoses.age_at_diagnosis
+cases.diagnoses.ajcc_clinical_m
+cases.diagnoses.ajcc_clinical_n
+cases.diagnoses.ajcc_clinical_stage
+cases.diagnoses.ajcc_clinical_t
+cases.diagnoses.ajcc_pathologic_m
+cases.diagnoses.ajcc_pathologic_n
+cases.diagnoses.ajcc_pathologic_stage
+cases.diagnoses.ajcc_pathologic_t
+cases.diagnoses.ajcc_serum_tumor_markers
+cases.diagnoses.ajcc_staging_system_edition
+cases.diagnoses.ann_arbor_b_symptoms
+cases.diagnoses.ann_arbor_b_symptoms_described
+cases.diagnoses.ann_arbor_clinical_stage
+cases.diagnoses.ann_arbor_extranodal_involvement
+cases.diagnoses.ann_arbor_pathologic_stage
+cases.diagnoses.annotations.annotation_id
+cases.diagnoses.annotations.case_id
+cases.diagnoses.annotations.case_submitter_id
+cases.diagnoses.annotations.category
+cases.diagnoses.annotations.classification
+cases.diagnoses.annotations.created_datetime
+cases.diagnoses.annotations.creator
+cases.diagnoses.annotations.entity_id
+cases.diagnoses.annotations.entity_submitter_id
+cases.diagnoses.annotations.entity_type
+cases.diagnoses.annotations.legacy_created_datetime
+cases.diagnoses.annotations.legacy_updated_datetime
+cases.diagnoses.annotations.notes
+cases.diagnoses.annotations.state
+cases.diagnoses.annotations.status
+cases.diagnoses.annotations.submitter_id
+cases.diagnoses.annotations.updated_datetime
+cases.diagnoses.best_overall_response
+cases.diagnoses.burkitt_lymphoma_clinical_variant
+cases.diagnoses.calgb_risk_group
+cases.diagnoses.cancer_detection_method
+cases.diagnoses.child_pugh_classification
+cases.diagnoses.clark_level
+cases.diagnoses.classification_of_tumor
+cases.diagnoses.cog_liver_stage
+cases.diagnoses.cog_neuroblastoma_risk_group
+cases.diagnoses.cog_renal_stage
+cases.diagnoses.cog_rhabdomyosarcoma_risk_group
+cases.diagnoses.contiguous_organ_invaded
+cases.diagnoses.created_datetime
+cases.diagnoses.days_to_best_overall_response
+cases.diagnoses.days_to_diagnosis
+cases.diagnoses.days_to_last_follow_up
+cases.diagnoses.days_to_last_known_disease_status
+cases.diagnoses.days_to_recurrence
+cases.diagnoses.diagnosis_id
+cases.diagnoses.diagnosis_is_primary_disease
+cases.diagnoses.double_expressor_lymphoma
+cases.diagnoses.double_hit_lymphoma
+cases.diagnoses.eln_risk_classification
+cases.diagnoses.enneking_msts_grade
+cases.diagnoses.enneking_msts_metastasis
+cases.diagnoses.enneking_msts_stage
+cases.diagnoses.enneking_msts_tumor_site
+cases.diagnoses.ensat_clinical_m
+cases.diagnoses.ensat_pathologic_n
+cases.diagnoses.ensat_pathologic_stage
+cases.diagnoses.ensat_pathologic_t
+cases.diagnoses.esophageal_columnar_dysplasia_degree
+cases.diagnoses.esophageal_columnar_metaplasia_present
+cases.diagnoses.fab_morphology_code
+cases.diagnoses.figo_stage
+cases.diagnoses.figo_staging_edition_year
+cases.diagnoses.first_symptom_longest_duration
+cases.diagnoses.first_symptom_prior_to_diagnosis
+cases.diagnoses.gastric_esophageal_junction_involvement
+cases.diagnoses.gleason_grade_group
+cases.diagnoses.gleason_grade_tertiary
+cases.diagnoses.gleason_patterns_percent
+cases.diagnoses.gleason_score
+cases.diagnoses.goblet_cells_columnar_mucosa_present
+cases.diagnoses.icd_10_code
+cases.diagnoses.igcccg_stage
+cases.diagnoses.inpc_grade
+cases.diagnoses.inpc_histologic_group
+cases.diagnoses.inrg_stage
+cases.diagnoses.inss_stage
+cases.diagnoses.international_prognostic_index
+cases.diagnoses.irs_group
+cases.diagnoses.irs_stage
+cases.diagnoses.ishak_fibrosis_score
+cases.diagnoses.iss_stage
+cases.diagnoses.last_known_disease_status
+cases.diagnoses.laterality
+cases.diagnoses.margin_distance
+cases.diagnoses.margins_involved_site
+cases.diagnoses.masaoka_stage
+cases.diagnoses.max_tumor_bulk_site
+cases.diagnoses.medulloblastoma_molecular_classification
+cases.diagnoses.melanoma_known_primary
+cases.diagnoses.metastasis_at_diagnosis
+cases.diagnoses.method_of_diagnosis
+cases.diagnoses.mitosis_karyorrhexis_index
+cases.diagnoses.morphology
+cases.diagnoses.ovarian_specimen_status
+cases.diagnoses.ovarian_surface_involvement
+cases.diagnoses.pathology_details.additional_pathology_findings
+cases.diagnoses.pathology_details.anaplasia_present
+cases.diagnoses.pathology_details.anaplasia_present_type
+cases.diagnoses.pathology_details.bone_marrow_malignant_cells
+cases.diagnoses.pathology_details.breslow_thickness
+cases.diagnoses.pathology_details.breslow_thickness_category
+cases.diagnoses.pathology_details.circumferential_resection_margin
+cases.diagnoses.pathology_details.columnar_mucosa_present
+cases.diagnoses.pathology_details.consistent_pathology_review
+cases.diagnoses.pathology_details.created_datetime
+cases.diagnoses.pathology_details.days_to_pathology_detail
+cases.diagnoses.pathology_details.dysplasia_degree
+cases.diagnoses.pathology_details.dysplasia_type
+cases.diagnoses.pathology_details.epithelioid_cell_percent
+cases.diagnoses.pathology_details.epithelioid_cell_percent_range
+cases.diagnoses.pathology_details.extracapsular_extension
+cases.diagnoses.pathology_details.extracapsular_extension_present
+cases.diagnoses.pathology_details.extranodal_extension
+cases.diagnoses.pathology_details.extraocular_nodule_size
+cases.diagnoses.pathology_details.extrascleral_extension
+cases.diagnoses.pathology_details.extrascleral_extension_present
+cases.diagnoses.pathology_details.extrathyroid_extension
+cases.diagnoses.pathology_details.greatest_tumor_dimension
+cases.diagnoses.pathology_details.gross_tumor_weight
+cases.diagnoses.pathology_details.histologic_progression_type
+cases.diagnoses.pathology_details.intratubular_germ_cell_neoplasia_present
+cases.diagnoses.pathology_details.largest_extrapelvic_peritoneal_focus
+cases.diagnoses.pathology_details.lymph_node_dissection_method
+cases.diagnoses.pathology_details.lymph_node_dissection_site
+cases.diagnoses.pathology_details.lymph_node_involved_site
+cases.diagnoses.pathology_details.lymph_node_involvement
+cases.diagnoses.pathology_details.lymph_nodes_positive
+cases.diagnoses.pathology_details.lymph_nodes_removed
+cases.diagnoses.pathology_details.lymph_nodes_tested
+cases.diagnoses.pathology_details.lymphatic_invasion_present
+cases.diagnoses.pathology_details.margin_status
+cases.diagnoses.pathology_details.measurement_type
+cases.diagnoses.pathology_details.measurement_unit
+cases.diagnoses.pathology_details.metaplasia_present
+cases.diagnoses.pathology_details.micrometastasis_present
+cases.diagnoses.pathology_details.morphologic_architectural_pattern
+cases.diagnoses.pathology_details.necrosis_percent
+cases.diagnoses.pathology_details.necrosis_present
+cases.diagnoses.pathology_details.non_nodal_regional_disease
+cases.diagnoses.pathology_details.non_nodal_tumor_deposits
+cases.diagnoses.pathology_details.number_proliferating_cells
+cases.diagnoses.pathology_details.pathology_detail_id
+cases.diagnoses.pathology_details.percent_tumor_invasion
+cases.diagnoses.pathology_details.percent_tumor_nuclei
+cases.diagnoses.pathology_details.perineural_invasion_present
+cases.diagnoses.pathology_details.peripancreatic_lymph_nodes_positive
+cases.diagnoses.pathology_details.peripancreatic_lymph_nodes_tested
+cases.diagnoses.pathology_details.prcc_type
+cases.diagnoses.pathology_details.prostatic_chips_positive_count
+cases.diagnoses.pathology_details.prostatic_chips_total_count
+cases.diagnoses.pathology_details.prostatic_involvement_percent
+cases.diagnoses.pathology_details.residual_tumor
+cases.diagnoses.pathology_details.residual_tumor_measurement
+cases.diagnoses.pathology_details.rhabdoid_percent
+cases.diagnoses.pathology_details.rhabdoid_present
+cases.diagnoses.pathology_details.sarcomatoid_percent
+cases.diagnoses.pathology_details.sarcomatoid_present
+cases.diagnoses.pathology_details.size_extraocular_nodule
+cases.diagnoses.pathology_details.spindle_cell_percent
+cases.diagnoses.pathology_details.spindle_cell_percent_range
+cases.diagnoses.pathology_details.state
+cases.diagnoses.pathology_details.submitter_id
+cases.diagnoses.pathology_details.timepoint_category
+cases.diagnoses.pathology_details.transglottic_extension
+cases.diagnoses.pathology_details.tumor_basal_diameter
+cases.diagnoses.pathology_details.tumor_burden
+cases.diagnoses.pathology_details.tumor_depth_descriptor
+cases.diagnoses.pathology_details.tumor_depth_measurement
+cases.diagnoses.pathology_details.tumor_infiltrating_lymphocytes
+cases.diagnoses.pathology_details.tumor_infiltrating_macrophages
+cases.diagnoses.pathology_details.tumor_largest_dimension_diameter
+cases.diagnoses.pathology_details.tumor_length_measurement
+cases.diagnoses.pathology_details.tumor_level_prostate
+cases.diagnoses.pathology_details.tumor_shape
+cases.diagnoses.pathology_details.tumor_thickness
+cases.diagnoses.pathology_details.tumor_width_measurement
+cases.diagnoses.pathology_details.updated_datetime
+cases.diagnoses.pathology_details.vascular_invasion_present
+cases.diagnoses.pathology_details.vascular_invasion_type
+cases.diagnoses.pathology_details.zone_of_origin_prostate
+cases.diagnoses.pediatric_kidney_staging
+cases.diagnoses.peritoneal_fluid_cytological_status
+cases.diagnoses.primary_diagnosis
+cases.diagnoses.primary_gleason_grade
+cases.diagnoses.prior_malignancy
+cases.diagnoses.prior_treatment
+cases.diagnoses.progression_or_recurrence
+cases.diagnoses.residual_disease
+cases.diagnoses.satellite_nodule_present
+cases.diagnoses.secondary_gleason_grade
+cases.diagnoses.site_of_resection_or_biopsy
+cases.diagnoses.sites_of_involvement
+cases.diagnoses.sites_of_involvement_count
+cases.diagnoses.state
+cases.diagnoses.submitter_id
+cases.diagnoses.supratentorial_localization
+cases.diagnoses.synchronous_malignancy
+cases.diagnoses.tissue_or_organ_of_origin
+cases.diagnoses.treatments.chemo_concurrent_to_radiation
+cases.diagnoses.treatments.clinical_trial_indicator
+cases.diagnoses.treatments.course_number
+cases.diagnoses.treatments.created_datetime
+cases.diagnoses.treatments.days_to_treatment_end
+cases.diagnoses.treatments.days_to_treatment_start
+cases.diagnoses.treatments.drug_category
+cases.diagnoses.treatments.embolic_agent
+cases.diagnoses.treatments.initial_disease_status
+cases.diagnoses.treatments.lesions_treated_number
+cases.diagnoses.treatments.margin_distance
+cases.diagnoses.treatments.margin_status
+cases.diagnoses.treatments.margins_involved_site
+cases.diagnoses.treatments.number_of_cycles
+cases.diagnoses.treatments.number_of_fractions
+cases.diagnoses.treatments.prescribed_dose
+cases.diagnoses.treatments.prescribed_dose_units
+cases.diagnoses.treatments.pretreatment
+cases.diagnoses.treatments.protocol_identifier
+cases.diagnoses.treatments.radiosensitizing_agent
+cases.diagnoses.treatments.reason_treatment_ended
+cases.diagnoses.treatments.reason_treatment_not_given
+cases.diagnoses.treatments.regimen_or_line_of_therapy
+cases.diagnoses.treatments.residual_disease
+cases.diagnoses.treatments.route_of_administration
+cases.diagnoses.treatments.state
+cases.diagnoses.treatments.submitter_id
+cases.diagnoses.treatments.therapeutic_agents
+cases.diagnoses.treatments.therapeutic_level_achieved
+cases.diagnoses.treatments.therapeutic_levels_achieved
+cases.diagnoses.treatments.therapeutic_target_level
+cases.diagnoses.treatments.timepoint_category
+cases.diagnoses.treatments.treatment_anatomic_sites
+cases.diagnoses.treatments.treatment_dose
+cases.diagnoses.treatments.treatment_dose_max
+cases.diagnoses.treatments.treatment_dose_units
+cases.diagnoses.treatments.treatment_duration
+cases.diagnoses.treatments.treatment_effect
+cases.diagnoses.treatments.treatment_effect_indicator
+cases.diagnoses.treatments.treatment_frequency
+cases.diagnoses.treatments.treatment_id
+cases.diagnoses.treatments.treatment_intent_type
+cases.diagnoses.treatments.treatment_or_therapy
+cases.diagnoses.treatments.treatment_outcome
+cases.diagnoses.treatments.treatment_outcome_duration
+cases.diagnoses.treatments.treatment_type
+cases.diagnoses.treatments.updated_datetime
+cases.diagnoses.tumor_burden
+cases.diagnoses.tumor_confined_to_organ_of_origin
+cases.diagnoses.tumor_depth
+cases.diagnoses.tumor_focality
+cases.diagnoses.tumor_grade
+cases.diagnoses.tumor_grade_category
+cases.diagnoses.tumor_of_origin
+cases.diagnoses.tumor_regression_grade
+cases.diagnoses.uicc_clinical_m
+cases.diagnoses.uicc_clinical_n
+cases.diagnoses.uicc_clinical_stage
+cases.diagnoses.uicc_clinical_t
+cases.diagnoses.uicc_pathologic_m
+cases.diagnoses.uicc_pathologic_n
+cases.diagnoses.uicc_pathologic_stage
+cases.diagnoses.uicc_pathologic_t
+cases.diagnoses.uicc_staging_system_edition
+cases.diagnoses.ulceration_indicator
+cases.diagnoses.updated_datetime
+cases.diagnoses.weiss_assessment_findings
+cases.diagnoses.weiss_assessment_score
+cases.diagnoses.who_cns_grade
+cases.diagnoses.who_nte_grade
+cases.diagnoses.wilms_tumor_histologic_subtype
+cases.diagnoses.year_of_diagnosis
+cases.diagnosis_ids
+cases.disease_type
+cases.exposures.age_at_last_exposure
+cases.exposures.age_at_onset
+cases.exposures.alcohol_days_per_week
+cases.exposures.alcohol_drinks_per_day
+cases.exposures.alcohol_frequency
+cases.exposures.alcohol_history
+cases.exposures.alcohol_intensity
+cases.exposures.alcohol_type
+cases.exposures.asbestos_exposure_type
+cases.exposures.chemical_exposure_type
+cases.exposures.cigarettes_per_day
+cases.exposures.created_datetime
+cases.exposures.environmental_tobacco_smoke_exposure
+cases.exposures.exposure_duration
+cases.exposures.exposure_duration_hrs_per_day
+cases.exposures.exposure_duration_years
+cases.exposures.exposure_id
+cases.exposures.exposure_source
+cases.exposures.exposure_type
+cases.exposures.occupation_duration_years
+cases.exposures.occupation_type
+cases.exposures.pack_years_smoked
+cases.exposures.parent_with_radiation_exposure
+cases.exposures.secondhand_smoke_as_child
+cases.exposures.smoking_frequency
+cases.exposures.state
+cases.exposures.submitter_id
+cases.exposures.time_between_waking_and_first_smoke
+cases.exposures.tobacco_smoking_onset_year
+cases.exposures.tobacco_smoking_quit_year
+cases.exposures.tobacco_smoking_status
+cases.exposures.type_of_smoke_exposure
+cases.exposures.type_of_tobacco_used
+cases.exposures.updated_datetime
+cases.exposures.use_per_day
+cases.family_histories.created_datetime
+cases.family_histories.family_history_id
+cases.family_histories.relationship_age_at_diagnosis
+cases.family_histories.relationship_gender
+cases.family_histories.relationship_primary_diagnosis
+cases.family_histories.relationship_sex_at_birth
+cases.family_histories.relationship_type
+cases.family_histories.relative_deceased
+cases.family_histories.relative_smoker
+cases.family_histories.relative_with_cancer_history
+cases.family_histories.relatives_with_cancer_history_count
+cases.family_histories.state
+cases.family_histories.submitter_id
+cases.family_histories.updated_datetime
+cases.follow_ups.adverse_event
+cases.follow_ups.adverse_event_grade
+cases.follow_ups.barretts_esophagus_goblet_cells_present
+cases.follow_ups.cause_of_response
+cases.follow_ups.created_datetime
+cases.follow_ups.days_to_adverse_event
+cases.follow_ups.days_to_first_event
+cases.follow_ups.days_to_follow_up
+cases.follow_ups.days_to_imaging
+cases.follow_ups.days_to_progression
+cases.follow_ups.days_to_progression_free
+cases.follow_ups.days_to_recurrence
+cases.follow_ups.discontiguous_lesion_count
+cases.follow_ups.disease_response
+cases.follow_ups.ecog_performance_status
+cases.follow_ups.evidence_of_progression_type
+cases.follow_ups.evidence_of_recurrence_type
+cases.follow_ups.first_event
+cases.follow_ups.follow_up_id
+cases.follow_ups.histologic_progression
+cases.follow_ups.history_of_tumor
+cases.follow_ups.history_of_tumor_type
+cases.follow_ups.hormone_replacement_therapy_type
+cases.follow_ups.imaging_anatomic_site
+cases.follow_ups.imaging_findings
+cases.follow_ups.imaging_result
+cases.follow_ups.imaging_suv
+cases.follow_ups.imaging_suv_max
+cases.follow_ups.imaging_type
+cases.follow_ups.karnofsky_performance_status
+cases.follow_ups.molecular_tests.aa_change
+cases.follow_ups.molecular_tests.aneuploidy
+cases.follow_ups.molecular_tests.antigen
+cases.follow_ups.molecular_tests.biospecimen_type
+cases.follow_ups.molecular_tests.biospecimen_volume
+cases.follow_ups.molecular_tests.blood_test_normal_range_lower
+cases.follow_ups.molecular_tests.blood_test_normal_range_upper
+cases.follow_ups.molecular_tests.cell_count
+cases.follow_ups.molecular_tests.chromosomal_translocation
+cases.follow_ups.molecular_tests.chromosome
+cases.follow_ups.molecular_tests.chromosome_arm
+cases.follow_ups.molecular_tests.clonality
+cases.follow_ups.molecular_tests.copy_number
+cases.follow_ups.molecular_tests.created_datetime
+cases.follow_ups.molecular_tests.cytoband
+cases.follow_ups.molecular_tests.days_to_test
+cases.follow_ups.molecular_tests.exon
+cases.follow_ups.molecular_tests.gene_symbol
+cases.follow_ups.molecular_tests.histone_family
+cases.follow_ups.molecular_tests.histone_variant
+cases.follow_ups.molecular_tests.hpv_strain
+cases.follow_ups.molecular_tests.intron
+cases.follow_ups.molecular_tests.laboratory_test
+cases.follow_ups.molecular_tests.loci_abnormal_count
+cases.follow_ups.molecular_tests.loci_count
+cases.follow_ups.molecular_tests.locus
+cases.follow_ups.molecular_tests.mismatch_repair_mutation
+cases.follow_ups.molecular_tests.mitotic_count
+cases.follow_ups.molecular_tests.mitotic_total_area
+cases.follow_ups.molecular_tests.molecular_analysis_method
+cases.follow_ups.molecular_tests.molecular_consequence
+cases.follow_ups.molecular_tests.molecular_test_id
+cases.follow_ups.molecular_tests.mutation_codon
+cases.follow_ups.molecular_tests.pathogenicity
+cases.follow_ups.molecular_tests.ploidy
+cases.follow_ups.molecular_tests.second_exon
+cases.follow_ups.molecular_tests.second_gene_symbol
+cases.follow_ups.molecular_tests.specialized_molecular_test
+cases.follow_ups.molecular_tests.staining_intensity_scale
+cases.follow_ups.molecular_tests.staining_intensity_value
+cases.follow_ups.molecular_tests.state
+cases.follow_ups.molecular_tests.submitter_id
+cases.follow_ups.molecular_tests.test_analyte_type
+cases.follow_ups.molecular_tests.test_result
+cases.follow_ups.molecular_tests.test_units
+cases.follow_ups.molecular_tests.test_value
+cases.follow_ups.molecular_tests.test_value_range
+cases.follow_ups.molecular_tests.timepoint_category
+cases.follow_ups.molecular_tests.transcript
+cases.follow_ups.molecular_tests.updated_datetime
+cases.follow_ups.molecular_tests.variant_origin
+cases.follow_ups.molecular_tests.variant_type
+cases.follow_ups.molecular_tests.zygosity
+cases.follow_ups.other_clinical_attributes.aids_risk_factors
+cases.follow_ups.other_clinical_attributes.bmi
+cases.follow_ups.other_clinical_attributes.body_surface_area
+cases.follow_ups.other_clinical_attributes.cd4_count
+cases.follow_ups.other_clinical_attributes.cdc_hiv_risk_factors
+cases.follow_ups.other_clinical_attributes.comorbidities
+cases.follow_ups.other_clinical_attributes.comorbidity_method_of_diagnosis
+cases.follow_ups.other_clinical_attributes.created_datetime
+cases.follow_ups.other_clinical_attributes.days_to_comorbidity
+cases.follow_ups.other_clinical_attributes.days_to_risk_factor
+cases.follow_ups.other_clinical_attributes.diabetes_treatment_type
+cases.follow_ups.other_clinical_attributes.dlco_ref_predictive_percent
+cases.follow_ups.other_clinical_attributes.exercise_frequency_weekly
+cases.follow_ups.other_clinical_attributes.eye_color
+cases.follow_ups.other_clinical_attributes.fertility_history
+cases.follow_ups.other_clinical_attributes.fev1_fvc_post_bronch_percent
+cases.follow_ups.other_clinical_attributes.fev1_fvc_pre_bronch_percent
+cases.follow_ups.other_clinical_attributes.fev1_ref_post_bronch_percent
+cases.follow_ups.other_clinical_attributes.fev1_ref_pre_bronch_percent
+cases.follow_ups.other_clinical_attributes.haart_treatment_indicator
+cases.follow_ups.other_clinical_attributes.height
+cases.follow_ups.other_clinical_attributes.hepatitis_sustained_virological_response
+cases.follow_ups.other_clinical_attributes.hiv_viral_load
+cases.follow_ups.other_clinical_attributes.hormonal_contraceptive_type
+cases.follow_ups.other_clinical_attributes.hormonal_contraceptive_use
+cases.follow_ups.other_clinical_attributes.hormonal_replacement_therapy_status
+cases.follow_ups.other_clinical_attributes.hormone_replacement_therapy_type
+cases.follow_ups.other_clinical_attributes.hysterectomy_margins_involved
+cases.follow_ups.other_clinical_attributes.hysterectomy_type
+cases.follow_ups.other_clinical_attributes.immunosuppressive_treatment_type
+cases.follow_ups.other_clinical_attributes.menopause_status
+cases.follow_ups.other_clinical_attributes.myasthenia_gravis_classification
+cases.follow_ups.other_clinical_attributes.nadir_cd4_count
+cases.follow_ups.other_clinical_attributes.nononcologic_therapeutic_agents
+cases.follow_ups.other_clinical_attributes.number_of_pregnancies
+cases.follow_ups.other_clinical_attributes.other_clinical_attribute_id
+cases.follow_ups.other_clinical_attributes.oxygen_use_indicator
+cases.follow_ups.other_clinical_attributes.oxygen_use_type
+cases.follow_ups.other_clinical_attributes.pancreatitis_onset_year
+cases.follow_ups.other_clinical_attributes.pregnancy_outcome
+cases.follow_ups.other_clinical_attributes.pregnant_at_diagnosis
+cases.follow_ups.other_clinical_attributes.premature_at_birth
+cases.follow_ups.other_clinical_attributes.reflux_treatment_type
+cases.follow_ups.other_clinical_attributes.risk_factor_method_of_diagnosis
+cases.follow_ups.other_clinical_attributes.risk_factor_treatment
+cases.follow_ups.other_clinical_attributes.risk_factors
+cases.follow_ups.other_clinical_attributes.state
+cases.follow_ups.other_clinical_attributes.submitter_id
+cases.follow_ups.other_clinical_attributes.timepoint_category
+cases.follow_ups.other_clinical_attributes.treatment_frequency
+cases.follow_ups.other_clinical_attributes.undescended_testis_corrected
+cases.follow_ups.other_clinical_attributes.undescended_testis_corrected_age
+cases.follow_ups.other_clinical_attributes.undescended_testis_corrected_age_range
+cases.follow_ups.other_clinical_attributes.undescended_testis_corrected_laterality
+cases.follow_ups.other_clinical_attributes.undescended_testis_corrected_method
+cases.follow_ups.other_clinical_attributes.undescended_testis_history
+cases.follow_ups.other_clinical_attributes.undescended_testis_history_laterality
+cases.follow_ups.other_clinical_attributes.updated_datetime
+cases.follow_ups.other_clinical_attributes.viral_hepatitis_serology_tests
+cases.follow_ups.other_clinical_attributes.weeks_gestation_at_birth
+cases.follow_ups.other_clinical_attributes.weight
+cases.follow_ups.peritoneal_washing_results
+cases.follow_ups.procedures_performed
+cases.follow_ups.progression_or_recurrence
+cases.follow_ups.progression_or_recurrence_anatomic_site
+cases.follow_ups.progression_or_recurrence_type
+cases.follow_ups.recist_targeted_regions_number
+cases.follow_ups.recist_targeted_regions_sum
+cases.follow_ups.scan_tracer_used
+cases.follow_ups.state
+cases.follow_ups.submitter_id
+cases.follow_ups.timepoint_category
+cases.follow_ups.treatment_emergent_adverse_event
+cases.follow_ups.updated_datetime
+cases.follow_ups.year_of_follow_up
+cases.index_date
+cases.lost_to_followup
+cases.portion_ids
+cases.primary_site
+cases.project.dbgap_accession_number
+cases.project.disease_type
+cases.project.intended_release_date
+cases.project.name
+cases.project.primary_site
+cases.project.program.dbgap_accession_number
+cases.project.program.name
+cases.project.program.program_id
+cases.project.project_id
+cases.project.releasable
+cases.project.released
+cases.project.state
+cases.sample_ids
+cases.samples.annotations.annotation_id
+cases.samples.annotations.case_id
+cases.samples.annotations.case_submitter_id
+cases.samples.annotations.category
+cases.samples.annotations.classification
+cases.samples.annotations.created_datetime
+cases.samples.annotations.creator
+cases.samples.annotations.entity_id
+cases.samples.annotations.entity_submitter_id
+cases.samples.annotations.entity_type
+cases.samples.annotations.legacy_created_datetime
+cases.samples.annotations.legacy_updated_datetime
+cases.samples.annotations.notes
+cases.samples.annotations.state
+cases.samples.annotations.status
+cases.samples.annotations.submitter_id
+cases.samples.annotations.updated_datetime
+cases.samples.biospecimen_anatomic_site
+cases.samples.biospecimen_laterality
+cases.samples.catalog_reference
+cases.samples.created_datetime
+cases.samples.current_weight
+cases.samples.days_to_collection
+cases.samples.days_to_sample_procurement
+cases.samples.diagnosis_pathologically_confirmed
+cases.samples.distance_normal_to_tumor
+cases.samples.distributor_reference
+cases.samples.freezing_method
+cases.samples.growth_rate
+cases.samples.initial_weight
+cases.samples.intermediate_dimension
+cases.samples.longest_dimension
+cases.samples.method_of_sample_procurement
+cases.samples.passage_count
+cases.samples.pathology_report_uuid
+cases.samples.portions.analytes.a260_a280_ratio
+cases.samples.portions.analytes.aliquots.aliquot_id
+cases.samples.portions.analytes.aliquots.aliquot_quantity
+cases.samples.portions.analytes.aliquots.aliquot_volume
+cases.samples.portions.analytes.aliquots.amount
+cases.samples.portions.analytes.aliquots.analyte_type
+cases.samples.portions.analytes.aliquots.annotations.annotation_id
+cases.samples.portions.analytes.aliquots.annotations.case_id
+cases.samples.portions.analytes.aliquots.annotations.case_submitter_id
+cases.samples.portions.analytes.aliquots.annotations.category
+cases.samples.portions.analytes.aliquots.annotations.classification
+cases.samples.portions.analytes.aliquots.annotations.created_datetime
+cases.samples.portions.analytes.aliquots.annotations.creator
+cases.samples.portions.analytes.aliquots.annotations.entity_id
+cases.samples.portions.analytes.aliquots.annotations.entity_submitter_id
+cases.samples.portions.analytes.aliquots.annotations.entity_type
+cases.samples.portions.analytes.aliquots.annotations.legacy_created_datetime
+cases.samples.portions.analytes.aliquots.annotations.legacy_updated_datetime
+cases.samples.portions.analytes.aliquots.annotations.notes
+cases.samples.portions.analytes.aliquots.annotations.state
+cases.samples.portions.analytes.aliquots.annotations.status
+cases.samples.portions.analytes.aliquots.annotations.submitter_id
+cases.samples.portions.analytes.aliquots.annotations.updated_datetime
+cases.samples.portions.analytes.aliquots.center.center_id
+cases.samples.portions.analytes.aliquots.center.center_type
+cases.samples.portions.analytes.aliquots.center.code
+cases.samples.portions.analytes.aliquots.center.name
+cases.samples.portions.analytes.aliquots.center.namespace
+cases.samples.portions.analytes.aliquots.center.short_name
+cases.samples.portions.analytes.aliquots.concentration
+cases.samples.portions.analytes.aliquots.created_datetime
+cases.samples.portions.analytes.aliquots.no_matched_normal_low_pass_wgs
+cases.samples.portions.analytes.aliquots.no_matched_normal_targeted_sequencing
+cases.samples.portions.analytes.aliquots.no_matched_normal_wgs
+cases.samples.portions.analytes.aliquots.no_matched_normal_wxs
+cases.samples.portions.analytes.aliquots.selected_normal_low_pass_wgs
+cases.samples.portions.analytes.aliquots.selected_normal_targeted_sequencing
+cases.samples.portions.analytes.aliquots.selected_normal_wgs
+cases.samples.portions.analytes.aliquots.selected_normal_wxs
+cases.samples.portions.analytes.aliquots.source_center
+cases.samples.portions.analytes.aliquots.state
+cases.samples.portions.analytes.aliquots.submitter_id
+cases.samples.portions.analytes.aliquots.updated_datetime
+cases.samples.portions.analytes.amount
+cases.samples.portions.analytes.analyte_id
+cases.samples.portions.analytes.analyte_quantity
+cases.samples.portions.analytes.analyte_type
+cases.samples.portions.analytes.analyte_volume
+cases.samples.portions.analytes.annotations.annotation_id
+cases.samples.portions.analytes.annotations.case_id
+cases.samples.portions.analytes.annotations.case_submitter_id
+cases.samples.portions.analytes.annotations.category
+cases.samples.portions.analytes.annotations.classification
+cases.samples.portions.analytes.annotations.created_datetime
+cases.samples.portions.analytes.annotations.creator
+cases.samples.portions.analytes.annotations.entity_id
+cases.samples.portions.analytes.annotations.entity_submitter_id
+cases.samples.portions.analytes.annotations.entity_type
+cases.samples.portions.analytes.annotations.legacy_created_datetime
+cases.samples.portions.analytes.annotations.legacy_updated_datetime
+cases.samples.portions.analytes.annotations.notes
+cases.samples.portions.analytes.annotations.state
+cases.samples.portions.analytes.annotations.status
+cases.samples.portions.analytes.annotations.submitter_id
+cases.samples.portions.analytes.annotations.updated_datetime
+cases.samples.portions.analytes.concentration
+cases.samples.portions.analytes.created_datetime
+cases.samples.portions.analytes.dna_integrity_number
+cases.samples.portions.analytes.experimental_protocol_type
+cases.samples.portions.analytes.normal_tumor_genotype_snp_match
+cases.samples.portions.analytes.ribosomal_rna_28s_16s_ratio
+cases.samples.portions.analytes.ribosomal_rna_28s_18s_ratio
+cases.samples.portions.analytes.rna_integrity_number
+cases.samples.portions.analytes.spectrophotometer_method
+cases.samples.portions.analytes.state
+cases.samples.portions.analytes.submitter_id
+cases.samples.portions.analytes.updated_datetime
+cases.samples.portions.analytes.well_number
+cases.samples.portions.annotations.annotation_id
+cases.samples.portions.annotations.case_id
+cases.samples.portions.annotations.case_submitter_id
+cases.samples.portions.annotations.category
+cases.samples.portions.annotations.classification
+cases.samples.portions.annotations.created_datetime
+cases.samples.portions.annotations.creator
+cases.samples.portions.annotations.entity_id
+cases.samples.portions.annotations.entity_submitter_id
+cases.samples.portions.annotations.entity_type
+cases.samples.portions.annotations.legacy_created_datetime
+cases.samples.portions.annotations.legacy_updated_datetime
+cases.samples.portions.annotations.notes
+cases.samples.portions.annotations.state
+cases.samples.portions.annotations.status
+cases.samples.portions.annotations.submitter_id
+cases.samples.portions.annotations.updated_datetime
+cases.samples.portions.center.center_id
+cases.samples.portions.center.center_type
+cases.samples.portions.center.code
+cases.samples.portions.center.name
+cases.samples.portions.center.namespace
+cases.samples.portions.center.short_name
+cases.samples.portions.created_datetime
+cases.samples.portions.creation_datetime
+cases.samples.portions.is_ffpe
+cases.samples.portions.portion_id
+cases.samples.portions.portion_number
+cases.samples.portions.slides.annotations.annotation_id
+cases.samples.portions.slides.annotations.case_id
+cases.samples.portions.slides.annotations.case_submitter_id
+cases.samples.portions.slides.annotations.category
+cases.samples.portions.slides.annotations.classification
+cases.samples.portions.slides.annotations.created_datetime
+cases.samples.portions.slides.annotations.creator
+cases.samples.portions.slides.annotations.entity_id
+cases.samples.portions.slides.annotations.entity_submitter_id
+cases.samples.portions.slides.annotations.entity_type
+cases.samples.portions.slides.annotations.legacy_created_datetime
+cases.samples.portions.slides.annotations.legacy_updated_datetime
+cases.samples.portions.slides.annotations.notes
+cases.samples.portions.slides.annotations.state
+cases.samples.portions.slides.annotations.status
+cases.samples.portions.slides.annotations.submitter_id
+cases.samples.portions.slides.annotations.updated_datetime
+cases.samples.portions.slides.bone_marrow_malignant_cells
+cases.samples.portions.slides.created_datetime
+cases.samples.portions.slides.number_proliferating_cells
+cases.samples.portions.slides.percent_eosinophil_infiltration
+cases.samples.portions.slides.percent_follicular_component
+cases.samples.portions.slides.percent_granulocyte_infiltration
+cases.samples.portions.slides.percent_inflam_infiltration
+cases.samples.portions.slides.percent_lymphocyte_infiltration
+cases.samples.portions.slides.percent_monocyte_infiltration
+cases.samples.portions.slides.percent_necrosis
+cases.samples.portions.slides.percent_neutrophil_infiltration
+cases.samples.portions.slides.percent_normal_cells
+cases.samples.portions.slides.percent_rhabdoid_features
+cases.samples.portions.slides.percent_sarcomatoid_features
+cases.samples.portions.slides.percent_stromal_cells
+cases.samples.portions.slides.percent_tumor_cells
+cases.samples.portions.slides.percent_tumor_nuclei
+cases.samples.portions.slides.prostatic_chips_positive_count
+cases.samples.portions.slides.prostatic_chips_total_count
+cases.samples.portions.slides.prostatic_involvement_percent
+cases.samples.portions.slides.section_location
+cases.samples.portions.slides.slide_id
+cases.samples.portions.slides.state
+cases.samples.portions.slides.submitter_id
+cases.samples.portions.slides.tissue_microarray_coordinates
+cases.samples.portions.slides.updated_datetime
+cases.samples.portions.state
+cases.samples.portions.submitter_id
+cases.samples.portions.updated_datetime
+cases.samples.portions.weight
+cases.samples.preservation_method
+cases.samples.sample_id
+cases.samples.sample_ordinal
+cases.samples.sample_type
+cases.samples.shortest_dimension
+cases.samples.specimen_type
+cases.samples.state
+cases.samples.submitter_id
+cases.samples.time_between_clamping_and_freezing
+cases.samples.time_between_excision_and_freezing
+cases.samples.tissue_collection_type
+cases.samples.tissue_type
+cases.samples.tumor_code_id
+cases.samples.tumor_descriptor
+cases.samples.updated_datetime
+cases.slide_ids
+cases.state
+cases.submitter_aliquot_ids
+cases.submitter_analyte_ids
+cases.submitter_diagnosis_ids
+cases.submitter_id
+cases.submitter_portion_ids
+cases.submitter_sample_ids
+cases.submitter_slide_ids
+cases.summary.data_categories.data_category
+cases.summary.data_categories.file_count
+cases.summary.experimental_strategies.experimental_strategy
+cases.summary.experimental_strategies.file_count
+cases.summary.file_count
+cases.summary.file_size
+cases.tissue_source_site.bcr_id
+cases.tissue_source_site.code
+cases.tissue_source_site.name
+cases.tissue_source_site.project
+cases.tissue_source_site.tissue_source_site_id
+cases.updated_datetime
+center.center_id
+center.center_type
+center.code
+center.name
+center.namespace
+center.short_name
+channel
+chip_id
+chip_position
+contamination
+contamination_error
+created_datetime
+data_category
+data_format
+data_type
+downstream_analyses.analysis_id
+downstream_analyses.analysis_type
+downstream_analyses.created_datetime
+downstream_analyses.output_files.access
+downstream_analyses.output_files.average_base_quality
+downstream_analyses.output_files.average_insert_size
+downstream_analyses.output_files.average_read_length
+downstream_analyses.output_files.cancer_dna_fraction
+downstream_analyses.output_files.channel
+downstream_analyses.output_files.chip_id
+downstream_analyses.output_files.chip_position
+downstream_analyses.output_files.contamination
+downstream_analyses.output_files.contamination_error
+downstream_analyses.output_files.created_datetime
+downstream_analyses.output_files.data_category
+downstream_analyses.output_files.data_format
+downstream_analyses.output_files.data_type
+downstream_analyses.output_files.error_type
+downstream_analyses.output_files.experimental_strategy
+downstream_analyses.output_files.file_id
+downstream_analyses.output_files.file_name
+downstream_analyses.output_files.file_size
+downstream_analyses.output_files.genome_doubling
+downstream_analyses.output_files.imaging_date
+downstream_analyses.output_files.magnification
+downstream_analyses.output_files.md5sum
+downstream_analyses.output_files.mean_coverage
+downstream_analyses.output_files.msi_score
+downstream_analyses.output_files.msi_status
+downstream_analyses.output_files.pairs_on_diff_chr
+downstream_analyses.output_files.plate_name
+downstream_analyses.output_files.plate_well
+downstream_analyses.output_files.platform
+downstream_analyses.output_files.proc_internal
+downstream_analyses.output_files.proportion_base_mismatch
+downstream_analyses.output_files.proportion_coverage_10x
+downstream_analyses.output_files.proportion_coverage_30x
+downstream_analyses.output_files.proportion_reads_duplicated
+downstream_analyses.output_files.proportion_reads_mapped
+downstream_analyses.output_files.proportion_targets_no_coverage
+downstream_analyses.output_files.read_pair_number
+downstream_analyses.output_files.revision
+downstream_analyses.output_files.stain_type
+downstream_analyses.output_files.state
+downstream_analyses.output_files.state_comment
+downstream_analyses.output_files.subclonal_genome_fraction
+downstream_analyses.output_files.submitter_id
+downstream_analyses.output_files.tmb
+downstream_analyses.output_files.tmb_exonic
+downstream_analyses.output_files.tmb_nonsynonymous
+downstream_analyses.output_files.tmb_nonsynonymous_exonic
+downstream_analyses.output_files.total_reads
+downstream_analyses.output_files.tumor_ploidy
+downstream_analyses.output_files.tumor_purity
+downstream_analyses.output_files.updated_datetime
+downstream_analyses.output_files.wgs_coverage
+downstream_analyses.state
+downstream_analyses.submitter_id
+downstream_analyses.updated_datetime
+downstream_analyses.workflow_end_datetime
+downstream_analyses.workflow_link
+downstream_analyses.workflow_start_datetime
+downstream_analyses.workflow_type
+downstream_analyses.workflow_version
+error_type
+experimental_strategy
+file_autocomplete
+file_id
+file_name
+file_size
+genome_doubling
+imaging_date
+index_files.access
+index_files.average_base_quality
+index_files.average_insert_size
+index_files.average_read_length
+index_files.cancer_dna_fraction
+index_files.channel
+index_files.chip_id
+index_files.chip_position
+index_files.contamination
+index_files.contamination_error
+index_files.created_datetime
+index_files.data_category
+index_files.data_format
+index_files.data_type
+index_files.error_type
+index_files.experimental_strategy
+index_files.file_id
+index_files.file_name
+index_files.file_size
+index_files.genome_doubling
+index_files.imaging_date
+index_files.magnification
+index_files.md5sum
+index_files.mean_coverage
+index_files.msi_score
+index_files.msi_status
+index_files.pairs_on_diff_chr
+index_files.plate_name
+index_files.plate_well
+index_files.platform
+index_files.proc_internal
+index_files.proportion_base_mismatch
+index_files.proportion_coverage_10x
+index_files.proportion_coverage_30x
+index_files.proportion_reads_duplicated
+index_files.proportion_reads_mapped
+index_files.proportion_targets_no_coverage
+index_files.read_pair_number
+index_files.revision
+index_files.stain_type
+index_files.state
+index_files.state_comment
+index_files.subclonal_genome_fraction
+index_files.submitter_id
+index_files.tmb
+index_files.tmb_exonic
+index_files.tmb_nonsynonymous
+index_files.tmb_nonsynonymous_exonic
+index_files.total_reads
+index_files.tumor_ploidy
+index_files.tumor_purity
+index_files.updated_datetime
+index_files.wgs_coverage
+magnification
+md5sum
+mean_coverage
+metadata_files.access
+metadata_files.created_datetime
+metadata_files.data_category
+metadata_files.data_format
+metadata_files.data_type
+metadata_files.error_type
+metadata_files.file_id
+metadata_files.file_name
+metadata_files.file_size
+metadata_files.md5sum
+metadata_files.state
+metadata_files.state_comment
+metadata_files.submitter_id
+metadata_files.type
+metadata_files.updated_datetime
+msi_score
+msi_status
+pairs_on_diff_chr
+plate_name
+plate_well
+platform
+proc_internal
+proportion_base_mismatch
+proportion_coverage_10x
+proportion_coverage_30x
+proportion_reads_duplicated
+proportion_reads_mapped
+proportion_targets_no_coverage
+read_pair_number
+revision
+stain_type
+state
+state_comment
+subclonal_genome_fraction
+submitter_id
+tags
+tmb
+tmb_exonic
+tmb_nonsynonymous
+tmb_nonsynonymous_exonic
+total_reads
+tumor_ploidy
+tumor_purity
+type
+updated_datetime
+wgs_coverage
+```
+
+## 3. GDC TCGA-BRCA: File Inventory by Category
+
+### access
+
+| Value | Count |
+|-------|-------|
+| controlled | 42843 |
+| open | 27931 |
+
+### acl
+
+| Value | Count |
+|-------|-------|
+| phs000178 | 42843 |
+| open | 27931 |
+
+### analysis.analysis_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.input_files.access
+
+| Value | Count |
+|-------|-------|
+| controlled | 42533 |
+| _missing | 28241 |
+
+### analysis.input_files.channel
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.input_files.chip_position
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.input_files.data_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 28241 |
+| sequencing reads | 22807 |
+| simple nucleotide variation | 12118 |
+| copy number variation | 7608 |
+
+### analysis.input_files.data_format
+
+| Value | Count |
+|-------|-------|
+| _missing | 28241 |
+| bam | 22807 |
+| vcf | 10134 |
+| cel | 7608 |
+| maf | 1984 |
+
+### analysis.input_files.data_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 28241 |
+| Aligned Reads | 22807 |
+| Raw Simple Somatic Mutation | 10134 |
+| Raw Intensities | 7608 |
+| Annotated Somatic Mutation | 1984 |
+
+### analysis.input_files.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70766 |
+| file_size | 8 |
+
+### analysis.input_files.experimental_strategy
+
+| Value | Count |
+|-------|-------|
+| _missing | 28241 |
+| WXS | 14848 |
+| WGS | 10277 |
+| Genotyping Array | 7608 |
+| RNA-Seq | 7386 |
+| miRNA-Seq | 2414 |
+
+### analysis.input_files.imaging_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.input_files.msi_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 57767 |
+| mss | 12947 |
+| msi | 60 |
+
+### analysis.input_files.plate_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.input_files.plate_well
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.input_files.platform
+
+| Value | Count |
+|-------|-------|
+| illumina | 33367 |
+| _missing | 29799 |
+| affymetrix snp 6.0 | 7608 |
+
+### analysis.input_files.proc_internal
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.input_files.read_pair_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.input_files.stain_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.input_files.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.input_files.wgs_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 47967 |
+| not applicable | 14088 |
+| 25x-150x | 8719 |
+| 0x-10x | 127 |
+| unknown | 9 |
+
+### analysis.metadata.read_groups.adapter_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 70699 |
+| ad2.10+ad1.11 | 1 |
+| ad2.14+ad1.4 | 1 |
+| ad2.14+ad1.9 | 1 |
+| ad2.20+ad1.3 | 1 |
+| ad2.21+ad1.16 | 1 |
+| ad2.5+ad1.10 | 1 |
+| ad2.9+ad1.18 | 1 |
+| ad2.9+ad1.20 | 1 |
+| ad2.1+ad1.13 | 1 |
+| ad2.1+ad1.14 | 1 |
+| ad2.1+ad1.16 | 1 |
+| ad2.1+ad1.18 | 1 |
+| ad2.1+ad1.20 | 1 |
+| ad2.1+ad1.3 | 1 |
+| ad2.10+ad1.13 | 1 |
+| ad2.10+ad1.14 | 1 |
+| ad2.10+ad1.18 | 1 |
+| ad2.10+ad1.20 | 1 |
+| ad2.10+ad1.23 | 1 |
+| ad2.10+ad1.3 | 1 |
+| ad2.11+ad1.11 | 1 |
+| ad2.11+ad1.12 | 1 |
+| ad2.11+ad1.18 | 1 |
+| ad2.11+ad1.23 | 1 |
+| ad2.12+ad1.1 | 1 |
+| ad2.12+ad1.12 | 1 |
+| ad2.12+ad1.18 | 1 |
+| ad2.13+ad1.1 | 1 |
+| ad2.13+ad1.14 | 1 |
+| ad2.13+ad1.15 | 1 |
+| ad2.13+ad1.16 | 1 |
+| ad2.13+ad1.17 | 1 |
+| ad2.13+ad1.22 | 1 |
+| ad2.13+ad1.24 | 1 |
+| ad2.13+ad1.4 | 1 |
+| ad2.14+ad1.1 | 1 |
+| ad2.14+ad1.14 | 1 |
+| ad2.14+ad1.15 | 1 |
+| ad2.14+ad1.16 | 1 |
+| ad2.14+ad1.17 | 1 |
+| ad2.14+ad1.24 | 1 |
+| ad2.15+ad1.1 | 1 |
+| ad2.15+ad1.12 | 1 |
+| ad2.15+ad1.17 | 1 |
+| ad2.15+ad1.21 | 1 |
+| ad2.15+ad1.9 | 1 |
+| ad2.16+ad1.11 | 1 |
+| ad2.16+ad1.12 | 1 |
+| ad2.16+ad1.17 | 1 |
+| ad2.16+ad1.2 | 1 |
+| ad2.16+ad1.21 | 1 |
+| ad2.16+ad1.22 | 1 |
+| ad2.16+ad1.23 | 1 |
+| ad2.17+ad1.15 | 1 |
+| ad2.17+ad1.17 | 1 |
+| ad2.17+ad1.2 | 1 |
+| ad2.17+ad1.22 | 1 |
+| ad2.17+ad1.23 | 1 |
+| ad2.17+ad1.24 | 1 |
+| ad2.17+ad1.3 | 1 |
+| ad2.18+ad1.15 | 1 |
+| ad2.18+ad1.17 | 1 |
+| ad2.18+ad1.2 | 1 |
+| ad2.18+ad1.24 | 1 |
+| ad2.18+ad1.3 | 1 |
+| ad2.18+ad1.9 | 1 |
+| ad2.19+ad1.16 | 1 |
+| ad2.19+ad1.18 | 1 |
+| ad2.19+ad1.19 | 1 |
+| ad2.19+ad1.2 | 1 |
+| ad2.19+ad1.21 | 1 |
+| ad2.19+ad1.3 | 1 |
+| ad2.19+ad1.9 | 1 |
+| ad2.2+ad1.13 | 1 |
+| ad2.2+ad1.14 | 1 |
+| ad2.2+ad1.16 | 1 |
+| ad2.2+ad1.20 | 1 |
+| ad2.20+ad1.1 | 1 |
+| ad2.20+ad1.16 | 1 |
+| ad2.20+ad1.18 | 1 |
+| ad2.20+ad1.19 | 1 |
+| ad2.20+ad1.2 | 1 |
+| ad2.20+ad1.21 | 1 |
+| ad2.20+ad1.9 | 1 |
+| ad2.21+ad1.1 | 1 |
+| ad2.21+ad1.14 | 1 |
+| ad2.21+ad1.20 | 1 |
+| ad2.21+ad1.21 | 1 |
+| ad2.21+ad1.3 | 1 |
+| ad2.21+ad1.9 | 1 |
+| ad2.22+ad1.14 | 1 |
+| ad2.22+ad1.16 | 1 |
+| ad2.22+ad1.20 | 1 |
+| ad2.22+ad1.21 | 1 |
+| ad2.22+ad1.22 | 1 |
+| ad2.22+ad1.3 | 1 |
+| ad2.23+ad1.16 | 1 |
+| ad2.23+ad1.22 | 1 |
+| ad2.24+ad1.16 | 1 |
+| ad2.3+ad1.1 | 1 |
+| ad2.3+ad1.21 | 1 |
+| ad2.3+ad1.9 | 1 |
+| ad2.4+ad1.10 | 1 |
+| ad2.4+ad1.11 | 1 |
+| ad2.4+ad1.20 | 1 |
+| ad2.4+ad1.21 | 1 |
+| ad2.4+ad1.24 | 1 |
+| ad2.4+ad1.9 | 1 |
+| ad2.5+ad1.11 | 1 |
+| ad2.5+ad1.12 | 1 |
+| ad2.5+ad1.14 | 1 |
+| ad2.5+ad1.19 | 1 |
+| ad2.5+ad1.21 | 1 |
+| ad2.5+ad1.22 | 1 |
+| ad2.5+ad1.24 | 1 |
+| ad2.6+ad1.1 | 1 |
+| ad2.6+ad1.12 | 1 |
+| ad2.6+ad1.14 | 1 |
+| ad2.6+ad1.19 | 1 |
+| ad2.6+ad1.21 | 1 |
+| ad2.6+ad1.22 | 1 |
+| ad2.61+ad1.37 | 1 |
+| ad2.62+ad1.37 | 1 |
+| ad2.63+ad1.35 | 1 |
+| ad2.63+ad1.37 | 1 |
+| ad2.64+ad1.35 | 1 |
+| ad2.65+ad1.35 | 1 |
+| ad2.66+ad1.35 | 1 |
+| ad2.7+ad1.1 | 1 |
+| ad2.7+ad1.16 | 1 |
+| ad2.7+ad1.9 | 1 |
+| ad2.71+ad1.33 | 1 |
+| ad2.72+ad1.33 | 1 |
+| ad2.8+ad1.1 | 1 |
+| ad2.8+ad1.11 | 1 |
+| ad2.8+ad1.16 | 1 |
+| ad2.9+ad1.1 | 1 |
+| ad2.9+ad1.11 | 1 |
+| ad2.9+ad1.13 | 1 |
+| ad2.9+ad1.14 | 1 |
+| ad2.9+ad1.3 | 1 |
+
+### analysis.metadata.read_groups.adapter_sequence
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.base_caller_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.base_caller_version
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.chipseq_antibody
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.chipseq_target
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.experiment_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 61492 |
+| h_ls-e2-a15k-06a-11d-a12q-09 | 2 |
+| h_ls-a2-a0cm-01a-31d-a128-09 | 1 |
+| h_ls-a2-a04q-01a-21d-a128-09 | 1 |
+| h_ls-a2-a0d2-10a-01d-a128-09 | 1 |
+| h_ls-a7-a0ce-11a-21d-a12l-09 | 1 |
+| h_ls-b6-a0i2-01a-11d-a12l-09 | 1 |
+| h_ls-b6-a0i6-10a-01d-a128-09 | 1 |
+| h_ls-b6-a0ij-01a-11d-a128-09 | 1 |
+| h_ls-b6-a0iq-01a-11d-a128-09 | 1 |
+| h_ls-b6-a0rt-01a-21d-a128-09 | 1 |
+| h_ls-bh-a0e0-11a-13d-a128-09 | 1 |
+| tcga-b6-a0x1-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-bh-a0ds-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-bh-a0dz-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-bh-a0e9-01b-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-e2-a1l8-01a-11d-a897-36.wgs.rp-1657 | 1 |
+| tcga-ew-a1iw-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| h_ls-aq-a04j-01a-02d-a128-09 | 1 |
+| h_ls-b6-a0ij-10a-01d-a128-09 | 1 |
+| h_ls-bh-a0b9-01a-11d-a128-09 | 1 |
+| tcga-a2-a0yg-01a-21d-a724-36.bam | 1 |
+| tcga-a2-a0es-01a-11d-a723-36.bam | 1 |
+| tcga-a2-a0ex-01a-21d-a723-36.bam | 1 |
+| tcga-a2-a0sx-01a-12d-a744-36.bam | 1 |
+| tcga-a2-a0yk-01a-22d-a723-36.bam | 1 |
+| tcga-a2-a1g4-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3kc-01a-11d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3kd-01a-12d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xv-01a-21d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xy-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xz-01a-42d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4rw-01a-21d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4rx-01a-11d-a702-36.bam | 1 |
+| tcga-a7-a0cg-01a-12d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-a7-a0db-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a7-a13h-01a-11d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a7-a2kd-01a-31d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a7-a3iy-01a-12d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a7-a3iz-01a-11d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a7-a3j0-01a-11d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a7-a3rf-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a7-a5zv-01a-11d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a7-a6vv-01a-22d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a7-a6vy-01a-12d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a8-a06t-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a8-a06z-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a07f-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a07l-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a07p-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a07s-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a07w-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a081-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a082-01a-11d-a88z-36.wgs.rp-1657 | 1 |
+| tcga-a8-a084-01a-21d-a88z-36.wgs.rp-1657 | 1 |
+| tcga-a8-a08l-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-a8-a08o-01a-21d-a88z-36.wgs.rp-1657 | 1 |
+| tcga-a8-a08t-01a-21d-a88z-36.wgs.rp-1657 | 1 |
+| tcga-a8-a08x-01a-21d-a88z-36.wgs.rp-1657 | 1 |
+| tcga-an-a04d-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-ao-a12d-01a-11d-a723-36.bam | 1 |
+| tcga-ar-a0u0-01a-11d-a723-36.bam | 1 |
+| tcga-ar-a0u4-01a-11d-a723-36.bam | 1 |
+| tcga-ar-a255-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-b6-a0rm-01a-11d-a892-36.wgs.rp-1657 | 1 |
+| tcga-bh-a0hp-01a-11d-a75x-36.bam | 1 |
+| tcga-c8-a133-01a-51d-a76g-36.bam | 1 |
+| tcga-c8-a137-01a-11d-a724-36.bam | 1 |
+| tcga-c8-a26w-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-c8-a8hr-01a-11d-a703-36.bam | 1 |
+| tcga-d8-a140-01a-11d-a894-36.wgs.rp-1657 | 1 |
+| tcga-e2-a154-01a-11d-a895-36.wgs.rp-1657 | 1 |
+| tcga-e9-a1r5-01a-11d-a898-36.wgs.rp-1657 | 1 |
+| tcga-pl-a8lz-01a-31d-a706-36.bam | 1 |
+| tcga-s3-aa0z-01a-11d-a706-36.bam | 1 |
+| h_ls-a2-a04q-10a-01d-a128-09 | 1 |
+| h_ls-a2-a0cm-10a-01d-a128-09 | 1 |
+| h_ls-b6-a0ru-01a-11d-a12l-09 | 1 |
+| tcga-3c-aaau-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-3c-aali-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-3c-aalj-01a-31d-a702-36.bam | 1 |
+| tcga-3c-aalk-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-5l-aat0-01a-12d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-5l-aat1-01a-12d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-5t-a9qa-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sb-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sd-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0se-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sf-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sg-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0si-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sk-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sn-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0so-01a-22d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sp-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sq-01a-21d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04n-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04p-01a-31d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04q-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04r-01a-41d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04t-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04u-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04v-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04w-01a-31d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04x-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04y-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0ck-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cl-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cm-01a-31d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0co-01a-21d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cp-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cq-01a-21d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cr-01a-21d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cs-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0ct-01a-31d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cu-01a-12d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cv-01a-31d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cw-01a-21d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cx-01a-21d-a744-36.bam | 1 |
+| tcga-a2-a0cy-01a-12d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0d0-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0d1-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0d2-01a-22d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0d3-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0d4-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0em-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0en-01a-13d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0eo-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0ep-01a-52d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0eq-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0er-01a-21d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0et-01a-31d-a744-36.bam | 1 |
+| tcga-a2-a0eu-01a-22d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0ev-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a0st-01a-12d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0su-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0sv-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a0sw-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a0sy-01a-31d-a744-36.bam | 1 |
+| tcga-a2-a0t0-01a-22d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0t1-01a-21d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0t2-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0t3-01a-21d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0t4-01a-32d-a75x-36.bam | 1 |
+| tcga-a2-a0t7-01a-21d-a744-36.bam | 1 |
+| tcga-a2-a0yd-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a0ye-01a-11d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0yh-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a0yi-01a-31d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0yl-01a-21d-a744-36.bam | 1 |
+| tcga-a2-a0ym-01a-11d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0yt-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a1fv-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a1fw-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a1fx-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a1fz-01a-21d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a1g0-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a1g1-01a-21d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a259-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a25b-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a25c-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a25d-01a-12d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a25e-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a25f-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xs-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xt-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xu-01a-12d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xw-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xx-01a-21d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3y0-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4s0-01a-21d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4s1-01a-11d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4s2-01a-11d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4s3-01a-21d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a7-a0cd-01a-11d-a930-36.wgs.rp-1657 | 1 |
+| tcga-a7-a0ch-01a-21d-a744-36.bam | 1 |
+| tcga-a7-a0cj-01a-21d-a930-36.wgs.rp-1657 | 1 |
+| tcga-a7-a0d9-01a-31d-a744-36.bam | 1 |
+| tcga-a7-a0da-01a-31d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a7-a13d-01a-13d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a7-a13e-01a-11d-a744-36.bam | 1 |
+| tcga-a7-a13f-01a-12d-a75x-36.bam | 1 |
+| tcga-a7-a13g-01a-11d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a7-a26e-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a7-a26f-01a-21d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a7-a26g-01a-21d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a7-a26h-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a7-a26i-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a7-a3j1-01a-11d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a7-a425-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a7-a426-01a-22d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a7-a4sb-01a-12d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a7-a4se-01a-11d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a7-a4sf-01a-11d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a7-a5zw-01a-11d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a7-a5zx-01a-12d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a7-a6vw-01a-21d-a89g-36.wgs.rp-1657 | 1 |
+| tcga-a7-a6vx-01a-12d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a8-a06n-01a-11d-a744-36.bam | 1 |
+| tcga-a8-a06o-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a06p-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+
+### analysis.metadata.read_groups.flow_cell_barcode
+
+| Value | Count |
+|-------|-------|
+| _missing | 68841 |
+| h72cndsx5 | 95 |
+| hc7n3dsx3 | 95 |
+| hc7tfdsx3 | 95 |
+| hc7tkdsx3 | 95 |
+| hcct2dsx3 | 95 |
+| hccvtdsx3 | 95 |
+| hcf5vdsx3 | 95 |
+| hcf7ydsx3 | 95 |
+| hckg3dsx3 | 95 |
+| hflghdsx3 | 95 |
+| hflgydsx3 | 95 |
+| hflhtdsx3 | 95 |
+| hfm2fdsx3 | 95 |
+| hfn2gdsx3 | 95 |
+| hfngvdsx3 | 95 |
+| hfnn2dsx3 | 95 |
+| hfnnhdsx3 | 95 |
+| hwglkdsx3 | 95 |
+| hwhwldsx3 | 95 |
+| hwn52dsx3 | 95 |
+| hwncwdsx3 | 95 |
+| hwngjdsx3 | 95 |
+| hwnjvdsx3 | 95 |
+| hwnkcdsx3 | 95 |
+| hwnkfdsx3 | 95 |
+| hwnmjdsx3 | 95 |
+| hwnncdsx3 | 95 |
+| hwnt2dsx3 | 95 |
+| hwnt3dsx3 | 95 |
+| hwntldsx3 | 95 |
+| hwthwdsx3 | 95 |
+| hww2vdsx3 | 95 |
+| hww5hdsx3 | 95 |
+| hwwcwdsx3 | 95 |
+| hwwkgdsx3 | 95 |
+| h72h2dsx5 | 94 |
+| hwf5wdsx3 | 94 |
+| hwgckdsx3 | 94 |
+| hwgljdsx3 | 94 |
+| hwglwdsx3 | 94 |
+| hwhfgdsx3 | 94 |
+| hwhj7dsx3 | 94 |
+| hwht3dsx3 | 94 |
+| hwhtgdsx3 | 94 |
+| hwhwkdsx3 | 94 |
+| hwmncdsx3 | 94 |
+| hwnffdsx3 | 94 |
+| hwngtdsx3 | 94 |
+| hwnhjdsx3 | 94 |
+| hwnjndsx3 | 94 |
+| hwntmdsx3 | 94 |
+| hwnw5dsx3 | 94 |
+| hwtg5dsx3 | 94 |
+| hwtghdsx3 | 94 |
+| hwwc2dsx3 | 94 |
+| hwwg3dsx3 | 94 |
+| hwwkcdsx3 | 94 |
+| hyhkhdsx3 | 94 |
+| h5whldsx5 | 93 |
+| h777ydsx5 | 93 |
+| hc7h5dsx3 | 93 |
+| hckcwdsx3 | 93 |
+| hcm72dsx3 | 93 |
+| hcm7kdsx3 | 93 |
+| hcm7ldsx3 | 93 |
+| hfmvwdsx3 | 93 |
+| hfnf3dsx3 | 93 |
+| hg3vhdsx3 | 93 |
+| hg532dsx3 | 93 |
+| hg53fdsx3 | 93 |
+| hg53gdsx3 | 93 |
+| hg53wdsx3 | 93 |
+| hg55tdsx3 | 93 |
+| hg55wdsx3 | 93 |
+| hg57wdsx3 | 93 |
+| hg5c2dsx3 | 93 |
+| hg5cgdsx3 | 93 |
+| hg5cmdsx3 | 93 |
+| hg5hcdsx3 | 93 |
+| hg5ljdsx3 | 93 |
+| hg5y7dsx3 | 93 |
+| hwthfdsx3 | 93 |
+| hwwkldsx3 | 93 |
+| hwymtdsx3 | 93 |
+| hwynkdsx3 | 93 |
+| hwynldsx3 | 93 |
+| hwytkdsx3 | 93 |
+| hwytvdsx3 | 93 |
+| hwyywdsx3 | 93 |
+| hy22vdsx3 | 93 |
+| hy23cdsx3 | 93 |
+| hy23tdsx3 | 93 |
+| hy25ndsx3 | 93 |
+| hy25vdsx3 | 93 |
+| hy277dsx3 | 93 |
+| hy27ndsx3 | 93 |
+| hy2c2dsx3 | 93 |
+| hy3yhdsx3 | 93 |
+| hwmycdsx3 | 92 |
+| hwmyndsx3 | 92 |
+| hwn5gdsx3 | 92 |
+| hwnt5dsx3 | 92 |
+| hc5vjdsx3 | 90 |
+| hc72gdsx3 | 90 |
+| hc7mjdsx3 | 90 |
+| hcm5vdsx3 | 87 |
+| hwlwmdsx3 | 87 |
+| hwmhndsx3 | 87 |
+| hwmnldsx3 | 87 |
+| hwn7kdsx3 | 69 |
+| hc7nndsx3 | 61 |
+| hgnvvdsx3 | 60 |
+| hgnyfdsx3 | 60 |
+| hgt2jdsx3 | 60 |
+| hgt2ldsx3 | 60 |
+| hhgfhdsx3 | 60 |
+| hhgjgdsx3 | 60 |
+| hhgjmdsx3 | 60 |
+| hhhhfdsx3 | 60 |
+| hhhhjdsx3 | 60 |
+| hhhhkdsx3 | 60 |
+| hhhjcdsx3 | 60 |
+| hhhkfdsx3 | 60 |
+| hhhnfdsx3 | 60 |
+| hhht3dsx3 | 60 |
+| hwmgydsx3 | 48 |
+| hwmwmdsx3 | 48 |
+| hwnltdsx3 | 48 |
+| hwnmvdsx3 | 48 |
+| hy3kvdsx3 | 43 |
+| hy3lydsx3 | 43 |
+| hy3vkdsx3 | 43 |
+| hy3vvdsx3 | 43 |
+| hy3yvdsx3 | 43 |
+| hy53vdsx3 | 43 |
+| hy55hdsx3 | 43 |
+| hy5fwdsx3 | 43 |
+| hy5ghdsx3 | 43 |
+| hy5jjdsx3 | 43 |
+| h755cdsxx | 35 |
+| h75n2dsxx | 35 |
+| h75nndsxx | 35 |
+| h75kmdsxx | 32 |
+| h75h5dsxx | 30 |
+| h75hgdsxx | 30 |
+| h75l2dsxx | 30 |
+| h75mtdsxx | 30 |
+| h75n3dsxx | 30 |
+| h57cgdsxx | 29 |
+| h57cvdsxx | 29 |
+| h57cwdsxx | 29 |
+| h57f3dsxx | 29 |
+| h75kndsxx | 23 |
+| h55mydsxx | 22 |
+| h55n2dsxx | 22 |
+| h57c5dsxx | 22 |
+| h7kj3dsx5 | 22 |
+| h57cmdsxx | 19 |
+| h75khdsxx | 19 |
+| h75hcdsxx | 15 |
+| h75kfdsxx | 15 |
+| h75kkdsxx | 15 |
+| h75lndsxx | 15 |
+| h75mcdsxx | 15 |
+| hgnhhdsx3 | 14 |
+| hkf77bbxx | 13 |
+| hgngcdsx3 | 12 |
+| hlhyhbbxx | 11 |
+| hln3gbbxx | 10 |
+| h75kcdsxx | 10 |
+| h75nkdsxx | 10 |
+| h75nmdsxx | 10 |
+| h7tj5dsxx | 10 |
+| h7tn7dsxx | 10 |
+| h7ttydsxx | 10 |
+| h7tv2dsxx | 10 |
+| h7tvmdsxx | 10 |
+| h7tvndsxx | 10 |
+| h7twgdsxx | 10 |
+| h7twhdsxx | 10 |
+| h7v2wdsxx | 10 |
+| h7vvmdsxx | 10 |
+| h7vwgdsxx | 10 |
+| h7wt5dsxx | 10 |
+| hkckvbbxx | 9 |
+| hkcktbbxx | 9 |
+| hlhhnbbxx | 9 |
+| h573tdsxx | 9 |
+| hl7hhbbxx | 8 |
+| h757ydsxx | 8 |
+| h75n5dsxx | 8 |
+| h7kkhdsxx | 8 |
+| h2lvwdsx5 | 7 |
+| h2lw5dsx5 | 7 |
+| h2lywdsx5 | 7 |
+| h2mhhdsx5 | 7 |
+| h75kgdsxx | 7 |
+| h75mjdsxx | 7 |
+| hk7k7bbxx | 5 |
+| hlkj2bbxx | 5 |
+
+### analysis.metadata.read_groups.fragmentation_enzyme
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.includes_spike_ins
+
+| Value | Count |
+|-------|-------|
+| _missing | 69054 |
+| false | 1720 |
+
+### analysis.metadata.read_groups.instrument_model
+
+| Value | Count |
+|-------|-------|
+| _missing | 68841 |
+| other | 1858 |
+| illumina hiseq 4000 | 75 |
+
+### analysis.metadata.read_groups.is_paired_end
+
+| Value | Count |
+|-------|-------|
+| _missing | 61492 |
+| true | 9282 |
+| false | 21 |
+
+### analysis.metadata.read_groups.library_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 61492 |
+| unknown | 3730 |
+| mx0871 | 17 |
+| mx0603 | 16 |
+| mx0837 | 16 |
+| mx0959 | 16 |
+| mx0960 | 16 |
+| mx0961 | 16 |
+| mx0983 | 16 |
+| mx1085 | 16 |
+| mx1284 | 16 |
+| mx1285 | 16 |
+| mx0356 | 12 |
+| mx0357 | 12 |
+| mx0359 | 12 |
+| mx0361 | 12 |
+| mx0363 | 12 |
+| mx0364 | 12 |
+| mx0365 | 12 |
+| mx0367 | 12 |
+| mx0370 | 12 |
+| mx0371 | 12 |
+| mx0372 | 12 |
+| mx0373 | 12 |
+| mx0374 | 12 |
+| mx0376 | 12 |
+| mx0388 | 12 |
+| mx0389 | 12 |
+| mx0390 | 12 |
+| mx0391 | 12 |
+| mx0396 | 12 |
+| mx0397 | 12 |
+| mx0398 | 12 |
+| mx0402 | 12 |
+| mx0420 | 12 |
+| mx0421 | 12 |
+| mx0440 | 12 |
+| mx0441 | 12 |
+| mx0442 | 12 |
+| mx0443 | 12 |
+| mx0449 | 12 |
+| mx0450 | 12 |
+| mx0836 | 12 |
+| mx0354 | 11 |
+| mx0355 | 11 |
+| mx0362 | 11 |
+| mx0366 | 11 |
+| mx0368 | 11 |
+| mx0375 | 11 |
+| mx0444 | 11 |
+| mx0445 | 11 |
+| mx0579 | 11 |
+| mx0791 | 11 |
+| mx0838 | 11 |
+| mx0984 | 11 |
+| mx1067 | 11 |
+| mx1086 | 11 |
+| h_ls-b6-a0i6-10a-01d-a128-09-lib1 | 1 |
+| 0306815866_illumina_p5-xayol_p7-pepac | 1 |
+| 2105991542_illumina_p5-lipof_p7-nehin | 1 |
+| 2105991558_illumina_p5-nalok_p7-difew | 1 |
+| 2105991562_illumina_p5-xazen_p7-zidel | 1 |
+| 2105991564_illumina_p5-kefaz_p7-zepon | 1 |
+| 2105991565_illumina_p5-fibow_p7-hopow | 1 |
+| 2105991567_illumina_p5-nerow_p7-hoden | 1 |
+| 2105991568_illumina_p5-wihoy_p7-doyez | 1 |
+| 2105991570_illumina_p5-poxew_p7-jocef | 1 |
+| 2105991573_illumina_p5-zaped_p7-yoxen | 1 |
+| 2105991576_illumina_p5-wexed_p7-fapix | 1 |
+| 2105991580_illumina_p5-boxac_p7-xoren | 1 |
+| 2105991581_illumina_p5-lorez_p7-wayac | 1 |
+| 2105991582_illumina_p5-liwox_p7-fofiz | 1 |
+| 2105991583_illumina_p5-zecan_p7-fotey | 1 |
+| 2105991584_illumina_p5-lazap_p7-nanat | 1 |
+| 2105991585_illumina_p5-pifoc_p7-nedob | 1 |
+| 2105991586_illumina_p5-hohez_p7-joxih | 1 |
+| 2105991588_illumina_p5-naxic_p7-xezit | 1 |
+| 2105991589_illumina_p5-xebeh_p7-tefew | 1 |
+| 2105991590_illumina_p5-litaz_p7-najod | 1 |
+| 2105991591_illumina_p5-jolac_p7-hihar | 1 |
+| 2105991592_illumina_p5-nakew_p7-koweh | 1 |
+| 2105991593_illumina_p5-boyij_p7-xedeb | 1 |
+| 2105991594_illumina_p5-tehax_p7-hinij | 1 |
+| 2105991598_illumina_p5-kacox_p7-janil | 1 |
+| 2105991600_illumina_p5-faxen_p7-teyay | 1 |
+| 2105991602_illumina_p5-yahih_p7-bical | 1 |
+| 2105991608_illumina_p5-xayol_p7-pepac | 1 |
+| 2105991613_illumina_p5-lolip_p7-diyen | 1 |
+| 2105991616_illumina_p5-jacob_p7-yebiw | 1 |
+| 2105991621_illumina_p5-xepaw_p7-kewot | 1 |
+| 2105991623_illumina_p5-nawoh_p7-layet | 1 |
+| 2105992861_illumina_p5-lolip_p7-diyen | 1 |
+| 3543985838_illumina_p5-wexed_p7-fapix | 1 |
+| 3543987452_illumina_p5-nalok_p7-difew | 1 |
+| 3543987473_illumina_p5-xefac_p7-zibod | 1 |
+| 3543990498_illumina_p5-henox_p7-diwar | 1 |
+| 3543990958_illumina_p5-xayol_p7-pepac | 1 |
+| 0306825681_illumina_p5-wexed_p7-fapix | 1 |
+| 0306825687_illumina_p5-tehax_p7-hinij | 1 |
+| 0306825706_illumina_p5-litaz_p7-najod | 1 |
+| 0306825710_illumina_p5-boyez_p7-liwax | 1 |
+| 0306825714_illumina_p5-lipof_p7-nehin | 1 |
+| 0306825718_illumina_p5-zafec_p7-peten | 1 |
+| 0306825726_illumina_p5-hikaz_p7-tacax | 1 |
+| 0306825734_illumina_p5-hojor_p7-narad | 1 |
+| 0306825738_illumina_p5-jaxah_p7-nekoy | 1 |
+| 0306825745_illumina_p5-hewij_p7-liyik | 1 |
+| 0415014885_illumina_p5-depob_p7-defin | 1 |
+| 0415017333_illumina_p5-hikaz_p7-tacax | 1 |
+| 0415017412_illumina_p5-rowol_p7-likif | 1 |
+| 2105991532_illumina_p5-henox_p7-diwar | 1 |
+| 2105991534_illumina_p5-dohel_p7-botol | 1 |
+| 2105991535_illumina_p5-zecez_p7-xopad | 1 |
+| 2105991536_illumina_p5-yalor_p7-hikiw | 1 |
+| 2105991538_illumina_p5-hilec_p7-hawix | 1 |
+| 2105991539_illumina_p5-kalex_p7-fofeb | 1 |
+| 2105991540_illumina_p5-polez_p7-jacaz | 1 |
+| 2105991541_illumina_p5-zitey_p7-pewij | 1 |
+| 2105991543_illumina_p5-boyez_p7-liwax | 1 |
+| 2105991544_illumina_p5-zehil_p7-cobic | 1 |
+| 2105991545_illumina_p5-docop_p7-xilan | 1 |
+| 2105991546_illumina_p5-paroy_p7-bepaz | 1 |
+| 2105991547_illumina_p5-telef_p7-yeyey | 1 |
+| 2105991548_illumina_p5-jacil_p7-wolij | 1 |
+| 2105991549_illumina_p5-pifaz_p7-fojol | 1 |
+| 2105991550_illumina_p5-fezex_p7-halex | 1 |
+| 2105991551_illumina_p5-zafec_p7-peten | 1 |
+| 2105991552_illumina_p5-xecox_p7-wojar | 1 |
+| 2105991553_illumina_p5-nefob_p7-wapah | 1 |
+| 2105991554_illumina_p5-kenaw_p7-tehed | 1 |
+| 2105991555_illumina_p5-bocef_p7-cakax | 1 |
+| 2105991556_illumina_p5-yezec_p7-tawah | 1 |
+| 2105991557_illumina_p5-xarez_p7-yokif | 1 |
+| 2105991559_illumina_p5-lilel_p7-debox | 1 |
+| 2105991560_illumina_p5-hapow_p7-jofij | 1 |
+| 2105991561_illumina_p5-hezef_p7-binot | 1 |
+| 2105991563_illumina_p5-popal_p7-hefel | 1 |
+| 2105991566_illumina_p5-feney_p7-biwid | 1 |
+| 2105991569_illumina_p5-belez_p7-pahol | 1 |
+| 2105991571_illumina_p5-felob_p7-yexic | 1 |
+| 2105991572_illumina_p5-jotef_p7-jatod | 1 |
+| 2105991574_illumina_p5-kizez_p7-rojan | 1 |
+| 2105991575_illumina_p5-lahoy_p7-xinay | 1 |
+| 2105991577_illumina_p5-poded_p7-bezic | 1 |
+| 2105991578_illumina_p5-zezip_p7-folar | 1 |
+| 2105991579_illumina_p5-xefac_p7-zibod | 1 |
+| 2105991587_illumina_p5-wexoj_p7-honok | 1 |
+| 2105991595_illumina_p5-nehol_p7-zakec | 1 |
+| 2105991596_illumina_p5-fefaj_p7-dizax | 1 |
+| 2105991597_illumina_p5-ponox_p7-xijoy | 1 |
+| 2105991599_illumina_p5-diweh_p7-wezap | 1 |
+| 2105991601_illumina_p5-licax_p7-xokix | 1 |
+| 2105991603_illumina_p5-halif_p7-lajar | 1 |
+| 2105991604_illumina_p5-yewow_p7-cotax | 1 |
+| 2105991605_illumina_p5-hewij_p7-liyik | 1 |
+| 2105991606_illumina_p5-boleh_p7-yoboh | 1 |
+| 2105991607_illumina_p5-teyec_p7-zawol | 1 |
+| 2105991609_illumina_p5-kahiz_p7-yobex | 1 |
+| 2105991610_illumina_p5-rowol_p7-likif | 1 |
+| 2105991611_illumina_p5-jaxah_p7-nekoy | 1 |
+| 2105991612_illumina_p5-wizap_p7-bebor | 1 |
+| 2105991614_illumina_p5-pahaz_p7-dixih | 1 |
+| 2105991615_illumina_p5-reboc_p7-cebey | 1 |
+| 2105991617_illumina_p5-poheh_p7-nelac | 1 |
+| 2105991618_illumina_p5-depob_p7-defin | 1 |
+| 2105991619_illumina_p5-pojif_p7-caton | 1 |
+| 2105991620_illumina_p5-lonax_p7-zixof | 1 |
+| 2105991622_illumina_p5-jafey_p7-zafed | 1 |
+| 2105991624_illumina_p5-razac_p7-nofeh | 1 |
+| 2105991625_illumina_p5-hojor_p7-narad | 1 |
+| 2105991626_illumina_p5-worox_p7-lacok | 1 |
+| 2105992779_illumina_p5-hikaz_p7-tacax | 1 |
+| 2105992780_illumina_p5-henox_p7-diwar | 1 |
+| 2105992782_illumina_p5-dohel_p7-botol | 1 |
+| 2105992783_illumina_p5-zecez_p7-xopad | 1 |
+| 2105992784_illumina_p5-yalor_p7-hikiw | 1 |
+| 2105992785_illumina_p5-pinez_p7-keloj | 1 |
+| 2105992786_illumina_p5-hilec_p7-hawix | 1 |
+| 2105992787_illumina_p5-kalex_p7-fofeb | 1 |
+| 2105992788_illumina_p5-polez_p7-jacaz | 1 |
+| 2105992789_illumina_p5-zitey_p7-pewij | 1 |
+| 2105992790_illumina_p5-lipof_p7-nehin | 1 |
+| 2105992791_illumina_p5-boyez_p7-liwax | 1 |
+| 2105992792_illumina_p5-zehil_p7-cobic | 1 |
+| 2105992793_illumina_p5-docop_p7-xilan | 1 |
+| 2105992794_illumina_p5-paroy_p7-bepaz | 1 |
+| 2105992795_illumina_p5-telef_p7-yeyey | 1 |
+| 2105992796_illumina_p5-jacil_p7-wolij | 1 |
+| 2105992797_illumina_p5-pifaz_p7-fojol | 1 |
+| 2105992798_illumina_p5-fezex_p7-halex | 1 |
+| 2105992799_illumina_p5-zafec_p7-peten | 1 |
+| 2105992800_illumina_p5-xecox_p7-wojar | 1 |
+| 2105992801_illumina_p5-nefob_p7-wapah | 1 |
+| 2105992802_illumina_p5-kenaw_p7-tehed | 1 |
+| 2105992803_illumina_p5-bocef_p7-cakax | 1 |
+| 2105992804_illumina_p5-yezec_p7-tawah | 1 |
+| 2105992805_illumina_p5-xarez_p7-yokif | 1 |
+| 2105992806_illumina_p5-nalok_p7-difew | 1 |
+| 2105992807_illumina_p5-lilel_p7-debox | 1 |
+| 2105992808_illumina_p5-hapow_p7-jofij | 1 |
+| 2105992809_illumina_p5-hezef_p7-binot | 1 |
+
+### analysis.metadata.read_groups.library_preparation_kit_catalog_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 68916 |
+| kk8505 | 1858 |
+
+### analysis.metadata.read_groups.library_preparation_kit_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 68916 |
+| kapa hyperprep kit (no amp) | 1850 |
+| kapa hyper prep kit with kapa library amplification primer mix (10x) | 18 |
+
+### analysis.metadata.read_groups.library_preparation_kit_vendor
+
+| Value | Count |
+|-------|-------|
+| _missing | 68916 |
+| kapa biosystems | 1858 |
+
+### analysis.metadata.read_groups.library_preparation_kit_version
+
+| Value | Count |
+|-------|-------|
+| _missing | 68916 |
+| v1.1 | 1858 |
+
+### analysis.metadata.read_groups.library_selection
+
+| Value | Count |
+|-------|-------|
+| _missing | 61492 |
+| poly-t enrichment | 3693 |
+| hybrid selection | 2201 |
+| random | 1869 |
+| mirna size fractionation | 1207 |
+| other | 312 |
+
+### analysis.metadata.read_groups.library_strand
+
+| Value | Count |
+|-------|-------|
+| _missing | 68916 |
+| not applicable | 1858 |
+
+### analysis.metadata.read_groups.library_strategy
+
+| Value | Count |
+|-------|-------|
+| _missing | 61492 |
+| rna-seq | 3693 |
+| wxs | 2201 |
+| wgs | 2106 |
+| mirna-seq | 1207 |
+| atac-seq | 75 |
+
+### analysis.metadata.read_groups.multiplex_barcode
+
+| Value | Count |
+|-------|-------|
+| _missing | 68841 |
+| gctgcact+cacatcct | 20 |
+| atcatacc+aggttatc | 20 |
+| cgactctc+attatcaa | 20 |
+| aataccat+acacgatc | 19 |
+| gtcctcat+tgctgctg | 19 |
+| ccatcaca+gaccgttg | 19 |
+| cctgtcat+ccagttag | 19 |
+| gctctctt+ccaacatt | 19 |
+| tactctcc+catgatcg | 19 |
+| tagttagc+aacaatgg | 19 |
+| gaacttcg+aggatcta | 19 |
+| tccaacca+gtcatcta | 19 |
+| atgaatta+catgctta | 19 |
+| cttctggc+aggtgcga | 19 |
+| tccgcata+cgctatgt | 19 |
+| ttagccag+tgttccga | 19 |
+| atcgactg+aagtagag | 19 |
+| ctggtatt+gaacctag | 19 |
+| gcacaatt+aggtcgca | 19 |
+| tcaggctt+tgtcggat | 19 |
+| ttcacctt+tctgcaag | 19 |
+| agtcacct+aatgttct | 19 |
+| cactagcc+ctgtggcg | 19 |
+| cggttctt+ggtccaga | 19 |
+| gctgattc+tcgccttg | 19 |
+| ttggtctg+gcctagcc | 19 |
+| gcgatatt+attcctct | 19 |
+| aattcaac+tctggcga | 18 |
+| cgcatatt+ttcgctga | 18 |
+| gaatcgac+tccttggt | 18 |
+| aattggcc+tccagcaa | 18 |
+| gcgattac+gacagtaa | 18 |
+| tccataac+ttgaatag | 18 |
+| aggtacca+tacttagc | 18 |
+| atccttaa+tgctcgac | 18 |
+| ctgctcct+agcaattc | 18 |
+| ctgtattc+attatgtt | 18 |
+| gacggtta+catagcga | 18 |
+| gtccaatc+caggagcc | 18 |
+| cacgattc+aggtaagg | 18 |
+| cacttcat+aaggatgt | 18 |
+| cgaacttc+ccagagct | 18 |
+| gcaggttg+aacgcatt | 18 |
+| gctagcag+aacttgac | 18 |
+| aacctctt+gcacatct | 18 |
+| atcttctc+caactctc | 18 |
+| ctgacatc+tctcggtc | 18 |
+| ggcaatac+accaactg | 18 |
+| gtctgcac+ttatatct | 18 |
+| tgctatta+actgtatc | 18 |
+| ttaatcac+gccgtcga | 18 |
+| ttcttggc+attctagg | 18 |
+| cagctcac+caatagtc | 18 |
+| ctggctat+gaccagga | 18 |
+| aatctcca+tgtaatca | 18 |
+| gctcacca+gacctaac | 18 |
+| agcgctaa+agcatgga | 17 |
+| caactgat+ctaccagg | 17 |
+| cctctaac+cagcaagg | 17 |
+| gaccatct+ttacgcac | 17 |
+| tgacagca+aagacact | 17 |
+| ctacattg+tcggaatg | 17 |
+| cttgaatc+ttgtctat | 17 |
+| gacattaa+taagcaca | 17 |
+| ggttatct+ctgcggat | 17 |
+| tgcttcac+gtataaca | 17 |
+| aattgctt+ctgtaatc | 17 |
+| cgacagtt+tgtaactc | 17 |
+| cgcgaata+gtccacag | 17 |
+| gctccgat+acagttga | 17 |
+| cttggctt+taatgaac | 17 |
+| tactccag+atagcgtc | 17 |
+| tagcattg+agttgctt | 17 |
+| tcatgtct+gccgcaac | 17 |
+| ttcacaga+attgtctg | 17 |
+| catcactt+ccttcgca | 17 |
+| ctattagc+gaagaagt | 17 |
+| tatggttc+ctaactcg | 17 |
+| agtactgc+tcgctaga | 17 |
+| tccacttc+tatccagg | 17 |
+| tgacttgg+cagcggta | 17 |
+| ccaacgct+tatctgcc | 17 |
+| gcttccta+cctaccat | 16 |
+| tcattcga+ttgagcct | 16 |
+| ccaatctg+ttaatcag | 16 |
+| ccaactaa+tgcaagta | 16 |
+| gaatatca+ctatgcgt | 16 |
+| cagcgatt+gtaacatc | 16 |
+| gaacgcta+cgttacca | 16 |
+| atatccga+gtctgatg | 16 |
+| ttccagct+actaagac | 16 |
+| catcctgg+gaaggaag | 15 |
+| ggattaac+gatatcca | 15 |
+| caagctta+cctatgcc | 15 |
+| gcggactt+cgccttcc | 14 |
+| cctaccat+gcttccta | 6 |
+| gaccgttg+ccatcaca | 6 |
+| ctatgcgt+gaatatca | 6 |
+| acagttga+gctccgat | 5 |
+| attgtctg+ttcacaga | 5 |
+| gaccagga+ctggctat | 5 |
+| gccgcaac+tcatgtct | 5 |
+| gatatcca+ggattaac | 5 |
+| gtaacatc+cagcgatt | 4 |
+| atagcgtc+tactccag | 4 |
+| gaacctag+ctggtatt | 4 |
+| attatcaa+cgactctc | 4 |
+| agcatgga+agcgctaa | 4 |
+| caatagtc+cagctcac | 4 |
+| gtccacag+cgcgaata | 4 |
+| tcgctaga+agtactgc | 4 |
+| ttgtctat+cttgaatc | 4 |
+| gaaggaag+catcctgg | 4 |
+| aaggatgt+cacttcat | 3 |
+| ctgtggcg+cactagcc | 3 |
+| tacttagc+aggtacca | 3 |
+| ttgagcct+tcattcga | 3 |
+| attctagg+ttcttggc | 3 |
+| tcggaatg+ctacattg | 3 |
+| ctaccagg+caactgat | 3 |
+| acacgatc+aataccat | 3 |
+| cgccttcc+gcggactt | 3 |
+| caggagcc+gtccaatc | 2 |
+| cctatgcc+caagctta | 2 |
+| ctgtaatc+aattgctt | 2 |
+| gccgtcga+ttaatcac | 2 |
+| tatctgcc+ccaacgct | 2 |
+| ttgaatag+tccataac | 2 |
+| ttacgcac+gaccatct | 2 |
+| actaagac+ttccagct | 2 |
+| actgtatc+tgctatta | 2 |
+| aggtgcga+cttctggc | 2 |
+| tgtcggat+tcaggctt | 2 |
+| ttcgctga+cgcatatt | 2 |
+| attatgtt+ctgtattc | 2 |
+| attcctct+gcgatatt | 2 |
+| cagcggta+tgacttgg | 2 |
+| ctgcggat+ggttatct | 2 |
+| gcctagcc+ttggtctg | 2 |
+| taatgaac+cttggctt | 2 |
+| gtctgatg+atatccga | 2 |
+| tccagcaa+aattggcc | 2 |
+| caactctc+atcttctc | 2 |
+| cagcaagg+cctctaac | 2 |
+| gaagaagt+ctattagc | 2 |
+| tgtaatca+aatctcca | 2 |
+| aacgcatt+gcaggttg | 1 |
+| aagacact+tgacagca | 1 |
+| aggtaagg+cacgattc | 1 |
+| ccttcgca+catcactt | 1 |
+| gacagtaa+gcgattac | 1 |
+| gacctaac+gctcacca | 1 |
+| gtcatcta+tccaacca | 1 |
+| tatccagg+tccacttc | 1 |
+| tcgccttg+gctgattc | 1 |
+| tgctcgac+atccttaa | 1 |
+| cgctatgt+tccgcata | 1 |
+| taagcaca+gacattaa | 1 |
+| agttgctt+tagcattg | 1 |
+| catagcga+gacggtta | 1 |
+| catgatcg+tactctcc | 1 |
+| ccaacatt+gctctctt | 1 |
+| ccagttag+cctgtcat | 1 |
+| ctaactcg+tatggttc | 1 |
+| gtataaca+tgcttcac | 1 |
+| tccttggt+gaatcgac | 1 |
+| tctgcaag+ttcacctt | 1 |
+| tctggcga+aattcaac | 1 |
+| tgcaagta+ccaactaa | 1 |
+| tgtaactc+cgacagtt | 1 |
+| tgttccga+ttagccag | 1 |
+| ttatatct+gtctgcac | 1 |
+| ccgtttgt+gatttcca | 1 |
+| ccgtttgt+tctactct | 1 |
+| cgaggctg+tttcatca | 1 |
+| cgcggaca+ttgatgga | 1 |
+| gctacgct+cgttgctg | 1 |
+| gctacgct+ggcaacct | 1 |
+| ggactcct+atcatgtt | 1 |
+| ttgaccct+agaggata | 1 |
+| aaacggtc+tccgtgcc | 1 |
+| aagaggca+agtccgac | 1 |
+| aagaggca+ggcaacct | 1 |
+| aagaggca+tgggaatc | 1 |
+| aagaggca+tttcatca | 1 |
+| aattcgtt+acgaatgt | 1 |
+| aattcgtt+ttgatgga | 1 |
+| aggcagaa+attgaacc | 1 |
+| aggcagaa+gatttcca | 1 |
+| aggcagaa+gcgatcta | 1 |
+| aggttggg+acgaatgt | 1 |
+| aggttggg+agtccgac | 1 |
+| aggttggg+atagagag | 1 |
+| aggttggg+attgaacc | 1 |
+| aggttggg+tgcacgaa | 1 |
+| aggttggg+tgggaatc | 1 |
+| aggttggg+tttcatca | 1 |
+| atgatgat+cccgcagg | 1 |
+| atgatgat+tccgtgcc | 1 |
+| cagagagg+gcgatcta | 1 |
+
+### analysis.metadata.read_groups.platform
+
+| Value | Count |
+|-------|-------|
+| _missing | 61492 |
+| illumina | 9282 |
+
+### analysis.metadata.read_groups.read_group_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 61492 |
+| h5whl.1 | 24 |
+| h5whl.2 | 24 |
+| h72cn.1 | 24 |
+| h72cn.2 | 24 |
+| h72cn.4 | 24 |
+| h72h2.2 | 24 |
+| h72h2.4 | 24 |
+| h777y.1 | 24 |
+| h777y.2 | 24 |
+| hc5vj.1 | 24 |
+| hc5vj.4 | 24 |
+| hc72g.1 | 24 |
+| hc72g.4 | 24 |
+| hc7h5.2 | 24 |
+| hc7h5.4 | 24 |
+| hc7mj.1 | 24 |
+| hc7mj.4 | 24 |
+| hc7n3.1 | 24 |
+| hc7n3.2 | 24 |
+| hc7n3.4 | 24 |
+| hc7tf.1 | 24 |
+| hc7tf.2 | 24 |
+| hc7tf.4 | 24 |
+| hc7tk.1 | 24 |
+| hc7tk.2 | 24 |
+| hc7tk.4 | 24 |
+| hcct2.1 | 24 |
+| hcct2.2 | 24 |
+| hcct2.4 | 24 |
+| hccvt.1 | 24 |
+| hccvt.2 | 24 |
+| hccvt.4 | 24 |
+| hcf5v.1 | 24 |
+| hcf5v.2 | 24 |
+| hcf5v.4 | 24 |
+| hcf7y.1 | 24 |
+| hcf7y.2 | 24 |
+| hcf7y.4 | 24 |
+| hckcw.2 | 24 |
+| hckcw.4 | 24 |
+| hckg3.1 | 24 |
+| hckg3.2 | 24 |
+| hckg3.4 | 24 |
+| hcm5v.2 | 24 |
+| hcm72.2 | 24 |
+| hcm7k.2 | 24 |
+| hcm7l.2 | 24 |
+| hflgh.2 | 24 |
+| hflgh.3 | 24 |
+| hflgh.4 | 24 |
+| hflgy.2 | 24 |
+| hflgy.3 | 24 |
+| hflgy.4 | 24 |
+| hflht.2 | 24 |
+| hflht.3 | 24 |
+| hflht.4 | 24 |
+| hfm2f.2 | 24 |
+| hfm2f.3 | 24 |
+| hfm2f.4 | 24 |
+| hfmvw.2 | 24 |
+| hfmvw.3 | 24 |
+| hfmvw.4 | 24 |
+| hfn2g.2 | 24 |
+| hfn2g.3 | 24 |
+| hfn2g.4 | 24 |
+| hfnf3.2 | 24 |
+| hfnf3.3 | 24 |
+| hfnf3.4 | 24 |
+| hfngv.2 | 24 |
+| hfngv.3 | 24 |
+| hfngv.4 | 24 |
+| hfnn2.2 | 24 |
+| hfnn2.3 | 24 |
+| hfnn2.4 | 24 |
+| hfnnh.2 | 24 |
+| hfnnh.3 | 24 |
+| hfnnh.4 | 24 |
+| hg3vh.1 | 24 |
+| hg3vh.2 | 24 |
+| hg3vh.4 | 24 |
+| hg532.1 | 24 |
+| hg53f.1 | 24 |
+| hg53g.1 | 24 |
+| hg53w.1 | 24 |
+| hg55t.1 | 24 |
+| hg55w.1 | 24 |
+| hg57w.1 | 24 |
+| hg57w.2 | 24 |
+| hg57w.4 | 24 |
+| hg5c2.1 | 24 |
+| hg5c2.2 | 24 |
+| hg5c2.4 | 24 |
+| hg5cg.1 | 24 |
+| hg5cg.2 | 24 |
+| hg5cg.4 | 24 |
+| hg5cm.1 | 24 |
+| hg5hc.1 | 24 |
+| hg5lj.1 | 24 |
+| hg5y7.1 | 24 |
+| hwf5w.2 | 24 |
+| hwf5w.4 | 24 |
+| hwgck.2 | 24 |
+| hwgck.4 | 24 |
+| hwglj.3 | 24 |
+| hwglj.4 | 24 |
+| hwglk.1 | 24 |
+| hwglk.2 | 24 |
+| hwglk.4 | 24 |
+| hwglw.2 | 24 |
+| hwglw.3 | 24 |
+| hwhfg.2 | 24 |
+| hwhfg.4 | 24 |
+| hwhj7.2 | 24 |
+| hwhj7.3 | 24 |
+| hwht3.3 | 24 |
+| hwht3.4 | 24 |
+| hwhtg.3 | 24 |
+| hwhtg.4 | 24 |
+| hwhwk.3 | 24 |
+| hwhwk.4 | 24 |
+| hwhwl.1 | 24 |
+| hwhwl.2 | 24 |
+| hwhwl.4 | 24 |
+| hwlwm.1 | 24 |
+| hwmhn.1 | 24 |
+| hwmnc.2 | 24 |
+| hwmnc.4 | 24 |
+| hwmnl.1 | 24 |
+| hwmyc.2 | 24 |
+| hwmyc.4 | 24 |
+| hwmyn.2 | 24 |
+| hwmyn.4 | 24 |
+| hwn52.1 | 24 |
+| hwn52.2 | 24 |
+| hwn52.4 | 24 |
+| hwn5g.2 | 24 |
+| hwn5g.4 | 24 |
+| hwn7k.1 | 24 |
+| hwncw.1 | 24 |
+| hwncw.2 | 24 |
+| hwncw.4 | 24 |
+| hwnff.2 | 24 |
+| hwnff.4 | 24 |
+| hwngj.1 | 24 |
+| hwngj.2 | 24 |
+| hwngj.4 | 24 |
+| hwngt.2 | 24 |
+| hwngt.4 | 24 |
+| hwnhj.2 | 24 |
+| hwnhj.4 | 24 |
+| hwnjn.2 | 24 |
+| hwnjn.3 | 24 |
+| hwnjv.1 | 24 |
+| hwnjv.2 | 24 |
+| hwnjv.4 | 24 |
+| hwnkc.1 | 24 |
+| hwnkc.2 | 24 |
+| hwnkc.4 | 24 |
+| hwnkf.1 | 24 |
+| hwnkf.2 | 24 |
+| hwnkf.4 | 24 |
+| hwnmj.1 | 24 |
+| hwnmj.2 | 24 |
+| hwnmj.4 | 24 |
+| hwnnc.1 | 24 |
+| hwnnc.2 | 24 |
+| hwnnc.4 | 24 |
+| hwnt2.1 | 24 |
+| hwnt2.2 | 24 |
+| hwnt2.4 | 24 |
+| hwnt3.1 | 24 |
+| hwnt3.2 | 24 |
+| hwnt3.4 | 24 |
+| hwnt5.2 | 24 |
+| hwnt5.4 | 24 |
+| hwntl.1 | 24 |
+| hwntl.2 | 24 |
+| hwntl.4 | 24 |
+| hwntm.2 | 24 |
+| hwntm.3 | 24 |
+| hwnw5.2 | 24 |
+| hwnw5.4 | 24 |
+| hwtg5.1 | 24 |
+| hwtg5.2 | 24 |
+| hwtg5.3 | 24 |
+| hwtgh.1 | 24 |
+| hwtgh.2 | 24 |
+| hwtgh.3 | 24 |
+| hwthf.1 | 24 |
+| hwthf.2 | 24 |
+| hwthw.1 | 24 |
+| hwthw.2 | 24 |
+| hwthw.3 | 24 |
+| hww2v.1 | 24 |
+| hww2v.2 | 24 |
+| hww2v.3 | 24 |
+| hww5h.1 | 24 |
+| hww5h.2 | 24 |
+| hww5h.3 | 24 |
+| hwwc2.1 | 24 |
+
+### analysis.metadata.read_groups.read_group_qcs.adapter_content
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| pass | 7003 |
+| warn | 36 |
+| fail | 31 |
+
+### analysis.metadata.read_groups.read_group_qcs.basic_statistics
+
+| Value | Count |
+|-------|-------|
+| _missing | 65889 |
+| pass | 4885 |
+
+### analysis.metadata.read_groups.read_group_qcs.encoding
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| sanger / illumina 1.9 | 7060 |
+
+### analysis.metadata.read_groups.read_group_qcs.fastq_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 65889 |
+| 131121_s.fq | 17 |
+| 127039_s.fq | 16 |
+| 130188_s.fq | 16 |
+| 133900_s.fq | 16 |
+| 133901_s.fq | 16 |
+| 134143_s.fq | 16 |
+| 134394_s.fq | 16 |
+| 138998_s.fq | 16 |
+| 145355_s.fq | 16 |
+| 145755_s.fq | 16 |
+| 120561_s.fq | 12 |
+| 121317_s.fq | 12 |
+| 121318_s.fq | 12 |
+| 121443_s.fq | 12 |
+| 121582_s.fq | 12 |
+| 121586_s.fq | 12 |
+| 121587_s.fq | 12 |
+| 121588_s.fq | 12 |
+| 121590_s.fq | 12 |
+| 121737_s.fq | 12 |
+| 121738_s.fq | 12 |
+| 121739_s.fq | 12 |
+| 121740_s.fq | 12 |
+| 121741_s.fq | 12 |
+| 121742_s.fq | 12 |
+| 122243_s.fq | 12 |
+| 122244_s.fq | 12 |
+| 122256_s.fq | 12 |
+| 122530_s.fq | 12 |
+| 122531_s.fq | 12 |
+| 122532_s.fq | 12 |
+| 122533_s.fq | 12 |
+| 122534_s.fq | 12 |
+| 122536_s.fq | 12 |
+| 122988_s.fq | 12 |
+| 122989_s.fq | 12 |
+| 123351_s.fq | 12 |
+| 123352_s.fq | 12 |
+| 123434_s.fq | 12 |
+| 123435_s.fq | 12 |
+| 130187_s.fq | 12 |
+| 120559_s.fq | 11 |
+| 121316_s.fq | 11 |
+| 121585_s.fq | 11 |
+| 121589_s.fq | 11 |
+| 121591_s.fq | 11 |
+| 122535_s.fq | 11 |
+| 123353_s.fq | 11 |
+| 123354_s.fq | 11 |
+| 124337_s.fq | 11 |
+| 129925_s.fq | 11 |
+| 130189_s.fq | 11 |
+| 134395_s.fq | 11 |
+| 137669_s.fq | 11 |
+| 138999_s.fq | 11 |
+| 122240_s.fq | 10 |
+| 122241_s.fq | 10 |
+| 122242_s.fq | 10 |
+| 122245_s.fq | 10 |
+| 128075_s.fq | 10 |
+| 121319_s.fq | 9 |
+| 113909_s.fq | 8 |
+| 113913_s.fq | 8 |
+| 115085_s.fq | 8 |
+| 115087_s.fq | 8 |
+| 115591_s.fq | 8 |
+| 115906_s.fq | 8 |
+| 115907_s.fq | 8 |
+| 115908_s.fq | 8 |
+| 115910_s.fq | 8 |
+| 115911_s.fq | 8 |
+| 116200_s.fq | 8 |
+| 116201_s.fq | 8 |
+| 118655_s.fq | 8 |
+| 120095_s.fq | 8 |
+| 120096_s.fq | 8 |
+| 120097_s.fq | 8 |
+| 122987_s.fq | 8 |
+| 131597_s.fq | 8 |
+| 141976_s.fq | 8 |
+| 113907_s.fq | 7 |
+| 113908_s.fq | 7 |
+| 113910_s.fq | 7 |
+| 113911_s.fq | 7 |
+| 113912_s.fq | 7 |
+| 115086_s.fq | 7 |
+| 115590_s.fq | 7 |
+| 115592_s.fq | 7 |
+| 115593_s.fq | 7 |
+| 115885_s.fq | 7 |
+| 116199_s.fq | 7 |
+| 118653_s.fq | 7 |
+| 118654_s.fq | 7 |
+| 118656_s.fq | 7 |
+| 121736_s.fq | 7 |
+| 123433_s.fq | 7 |
+| 129470_s.fq | 7 |
+| 113328_s.fq | 6 |
+| 113330_s.fq | 6 |
+| 113331_s.fq | 6 |
+| 115084_s.fq | 6 |
+| 115594_s.fq | 6 |
+| 115909_s.fq | 6 |
+| 116202_s.fq | 6 |
+| 122522_s.fq | 6 |
+| 123436_s.fq | 6 |
+| 123715_s.fq | 6 |
+| 131598_s.fq | 6 |
+| 113325_s.fq | 5 |
+| 113326_s.fq | 5 |
+| 113327_s.fq | 5 |
+| 113534_s.fq | 5 |
+| 115905_s.fq | 5 |
+| 133697_s.fq | 5 |
+| 139177_s.fq | 5 |
+| 139549_s.fq | 5 |
+| 139550_s.fq | 5 |
+| 113308_s.fq | 4 |
+| 113329_s.fq | 4 |
+| 115886_s.fq | 4 |
+| 115887_s.fq | 4 |
+| 118652_s.fq | 4 |
+| 133402_s.fq | 4 |
+| 134390_s.fq | 4 |
+| 134915_s.fq | 4 |
+| 110209_sn627_0058_b81dh0abxx.3_1.fastq | 3 |
+| 110209_sn627_0058_b81dh0abxx.3_2.fastq | 3 |
+| 110209_sn627_0058_b81dh0abxx.5_1.fastq | 3 |
+| 110209_sn627_0058_b81dh0abxx.5_2.fastq | 3 |
+| 110209_sn627_0058_b81dh0abxx.6_1.fastq | 3 |
+| 110209_sn627_0058_b81dh0abxx.6_2.fastq | 3 |
+| 110209_sn627_0058_b81dh0abxx.7_1.fastq | 3 |
+| 110209_sn627_0058_b81dh0abxx.7_2.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.1_1.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.1_2.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.3_1.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.3_2.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.4_1.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.4_2.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.5_1.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.5_2.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.6_1.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.6_2.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.7_1.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.7_2.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.8_1.fastq | 3 |
+| 110218_unc12-sn629_0061_a81dh9abxx.8_2.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.1_1.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.1_2.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.2_1.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.2_2.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.3_1.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.3_2.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.4_1.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.4_2.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.5_1.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.5_2.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.7_1.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.7_2.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.8_1.fastq | 3 |
+| 110218_unc12-sn629_0062_b81dehabxx.8_2.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.1_1.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.1_2.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.2_1.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.2_2.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.3_1.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.3_2.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.4_1.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.4_2.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.5_1.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.5_2.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.6_1.fastq | 3 |
+| 110222_sn627_0062_a81fpkabxx.6_2.fastq | 3 |
+| 110222_sn627_0063_b81fpvabxx.2_1.fastq | 3 |
+| 110222_sn627_0063_b81fpvabxx.2_2.fastq | 3 |
+| 110222_sn627_0063_b81fpvabxx.3_1.fastq | 3 |
+| 110222_sn627_0063_b81fpvabxx.3_2.fastq | 3 |
+| 110222_sn627_0063_b81fpvabxx.4_1.fastq | 3 |
+| 110222_sn627_0063_b81fpvabxx.4_2.fastq | 3 |
+| 110222_sn627_0063_b81fpvabxx.7_1.fastq | 3 |
+| 110222_sn627_0063_b81fpvabxx.7_2.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.1_1.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.1_2.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.2_1.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.2_2.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.3_1.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.3_2.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.5_1.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.5_2.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.6_1.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.6_2.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.8_1.fastq | 3 |
+| 110225_sn254_0195_a81lh6abxx.8_2.fastq | 3 |
+| 110225_unc12-sn629_0063_ab041jabxx.3_1.fastq | 3 |
+| 110225_unc12-sn629_0063_ab041jabxx.3_2.fastq | 3 |
+| 110225_unc12-sn629_0063_ab041jabxx.4_1.fastq | 3 |
+| 110225_unc12-sn629_0063_ab041jabxx.4_2.fastq | 3 |
+| 110225_unc12-sn629_0063_ab041jabxx.5_1.fastq | 3 |
+| 110225_unc12-sn629_0063_ab041jabxx.5_2.fastq | 3 |
+| 110225_unc12-sn629_0063_ab041jabxx.6_1.fastq | 3 |
+
+### analysis.metadata.read_groups.read_group_qcs.kmer_content
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| fail | 6481 |
+| warn | 584 |
+| pass | 534 |
+
+### analysis.metadata.read_groups.read_group_qcs.overrepresented_sequences
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| pass | 3984 |
+| warn | 2794 |
+| fail | 1559 |
+
+### analysis.metadata.read_groups.read_group_qcs.per_base_n_content
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| pass | 6787 |
+| warn | 253 |
+| fail | 228 |
+
+### analysis.metadata.read_groups.read_group_qcs.per_base_sequence_content
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| fail | 5008 |
+| warn | 2030 |
+| pass | 410 |
+
+### analysis.metadata.read_groups.read_group_qcs.per_base_sequence_quality
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| pass | 5576 |
+| fail | 1941 |
+| warn | 29 |
+
+### analysis.metadata.read_groups.read_group_qcs.per_sequence_gc_content
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| pass | 3638 |
+| warn | 2728 |
+| fail | 1510 |
+
+### analysis.metadata.read_groups.read_group_qcs.per_sequence_quality_score
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| pass | 6894 |
+| fail | 170 |
+| warn | 3 |
+
+### analysis.metadata.read_groups.read_group_qcs.per_tile_sequence_quality
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| pass | 5316 |
+| warn | 2289 |
+| fail | 2166 |
+
+### analysis.metadata.read_groups.read_group_qcs.sequence_duplication_levels
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| fail | 4606 |
+| pass | 2255 |
+| warn | 512 |
+
+### analysis.metadata.read_groups.read_group_qcs.sequence_length_distribution
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+| pass | 5853 |
+| warn | 1207 |
+
+### analysis.metadata.read_groups.read_group_qcs.workflow_end_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.read_group_qcs.workflow_link
+
+| Value | Count |
+|-------|-------|
+| _missing | 63714 |
+|  | 7060 |
+
+### analysis.metadata.read_groups.read_group_qcs.workflow_start_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.read_group_qcs.workflow_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 65889 |
+| Read Group Quality Control | 4885 |
+
+### analysis.metadata.read_groups.read_group_qcs.workflow_version
+
+| Value | Count |
+|-------|-------|
+| _missing | 65889 |
+| v1 | 4885 |
+
+### analysis.metadata.read_groups.sequencing_center
+
+| Value | Count |
+|-------|-------|
+| _missing | 61492 |
+| unc | 3678 |
+| wugsc | 2406 |
+| bi | 1861 |
+| bcgsc | 1207 |
+| sfgf | 75 |
+| harvard_gcc_02 | 40 |
+| unc-lccc | 15 |
+
+### analysis.metadata.read_groups.sequencing_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 66544 |
+| 1969-12-31 07:00:00 | 130 |
+| 2011-08-09t19 | 123 |
+| 2022-04-08t12:27:54 | 95 |
+| 2022-04-08t12:38:01 | 95 |
+| 2022-04-22t11:15:08 | 95 |
+| 2022-04-22t11:24:19 | 95 |
+| 2022-09-18t07:08:20 | 95 |
+| 2022-09-18t07:17:31 | 95 |
+| 2022-09-20t09:57:28 | 95 |
+| 2022-09-20t10:06:54 | 95 |
+| 2022-09-20t10:16:23 | 95 |
+| 2022-09-20t10:25:56 | 95 |
+| 2022-09-20t10:35:20 | 95 |
+| 2022-09-23t09:25:47 | 95 |
+| 2022-09-23t09:44:11 | 95 |
+| 2022-09-23t09:34:32 | 95 |
+| 2022-04-09t08:29:19 | 95 |
+| 2022-04-09t08:37:24 | 95 |
+| 2022-04-25t09:16:39 | 95 |
+| 2022-04-25t09:25:50 | 95 |
+| 2022-04-09t08:22:02 | 95 |
+| 2022-04-09t08:44:38 | 95 |
+| 2022-04-22t11:03:31 | 95 |
+| 2022-04-25t12:24:03 | 95 |
+| 2022-09-18t07:26:15 | 94 |
+| 2022-09-18t07:34:12 | 94 |
+| 2022-09-18t07:42:48 | 94 |
+| 2022-09-18t07:51:24 | 94 |
+| 2022-09-19t09:19:40 | 94 |
+| 2022-09-19t09:28:23 | 94 |
+| 2022-09-19t09:37:16 | 94 |
+| 2022-09-19t09:46:11 | 94 |
+| 2022-09-20t09:48:03 | 94 |
+| 2022-09-22t09:24:04 | 94 |
+| 2022-09-23t09:17:51 | 94 |
+| 2022-04-10t09:20:39 | 93 |
+| 2022-05-04t11:52:34 | 93 |
+| 2022-05-04t12:01:58 | 93 |
+| 2022-05-04t12:11:17 | 93 |
+| 2022-05-04t12:55:19 | 93 |
+| 2022-05-04t13:04:36 | 93 |
+| 2022-05-05t09:09:34 | 93 |
+| 2022-05-05t09:18:12 | 93 |
+| 2022-09-21t08:45:20 | 93 |
+| 2022-09-21t08:53:58 | 93 |
+| 2022-09-21t09:02:05 | 93 |
+| 2022-09-21t09:09:51 | 93 |
+| 2022-09-22t08:39:56 | 93 |
+| 2022-09-24t07:21:48 | 93 |
+| 2022-09-24t07:29:35 | 93 |
+| 2022-09-24t07:37:31 | 93 |
+| 2022-09-24t07:45:32 | 93 |
+| 2022-04-10t09:29:15 | 93 |
+| 2022-09-24t07:14:02 | 93 |
+| 2022-09-17t08:47:00 | 92 |
+| 2022-09-17t08:57:06 | 92 |
+| 2022-04-01t11:57:49 | 90 |
+| 2022-04-01t11:49:26 | 90 |
+| 2022-04-01t12:06:40 | 90 |
+| 2022-09-19t09:55:40 | 87 |
+| 2022-09-19t10:03:44 | 87 |
+| 2013-05-08t19 | 80 |
+| 2013-06-10t19 | 75 |
+| 2011-08-08t19 | 64 |
+| 2011-10-26t19 | 63 |
+| 2022-05-15t09:01:11 | 60 |
+| 2022-05-15t09:09:24 | 60 |
+| 2022-05-16t09:27:20 | 60 |
+| 2022-05-16t09:36:12 | 60 |
+| 2022-05-17t10:46:56 | 60 |
+| 2022-05-17t10:57:57 | 60 |
+| 2022-05-17t11:11:20 | 60 |
+| 2011-11-11t18 | 54 |
+| 2014-07-24t19 | 53 |
+| 2022-09-17t08:27:36 | 48 |
+| 2022-09-17t08:37:01 | 48 |
+| 2011-10-11t19 | 46 |
+| 2013-05-13t19 | 44 |
+| 2022-09-25t06:50:31 | 43 |
+| 2022-09-25t06:58:30 | 43 |
+| 2022-09-25t07:07:00 | 43 |
+| 2022-09-25t07:15:22 | 43 |
+| 2022-09-25t06:42:35 | 43 |
+| 2022-09-25t07:24:06 | 43 |
+| 2013-05-07t19 | 40 |
+| 2011-08-23t19 | 40 |
+| 2010-12-10t18 | 40 |
+| 2012-01-09t18 | 33 |
+| 2010-12-02t18 | 33 |
+| 2014-02-11t18 | 32 |
+| 2011-11-09t18 | 31 |
+| 2013-06-19t19 | 30 |
+| 2013-05-09t19 | 29 |
+| 2011-05-08t19 | 29 |
+| 2012-02-14t18 | 29 |
+| 2010-09-17t19 | 27 |
+| 2011-08-03t19 | 27 |
+| 2014-08-12t19 | 27 |
+| 2011-05-10t19 | 25 |
+| 2011-05-12t19 | 25 |
+| 2011-10-17t19 | 25 |
+| 2011-08-11t19 | 24 |
+| 2010-12-08t18 | 24 |
+| 2011-08-17t19 | 24 |
+| 2010-12-12t18 | 23 |
+| 2011-09-15t19 | 23 |
+| 2013-10-31t19 | 22 |
+| 2011-05-09t19 | 22 |
+| 2011-12-20t18 | 22 |
+| 2011-05-11t19 | 22 |
+| 2022-09-28t09:05:28 | 22 |
+| 2014-02-17t18 | 21 |
+| 2011-04-15t19 | 20 |
+| 2011-05-18t19 | 20 |
+| 2011-05-03t19 | 20 |
+| 2011-09-23t19 | 20 |
+| 2011-10-06t19 | 20 |
+| 2013-05-15t19 | 20 |
+| 2010-09-16t19 | 19 |
+| 2013-05-14t19 | 19 |
+| 2013-05-21t19 | 19 |
+| 2010-09-15t19 | 18 |
+| 2010-11-12t18 | 18 |
+| 2014-08-04t19 | 18 |
+| 2010-09-11t19 | 17 |
+| 2011-11-02t19 | 17 |
+| 2010-11-18t18 | 16 |
+| 2010-09-07t19 | 16 |
+| 2011-02-01t18 | 16 |
+| 2011-08-28t19 | 16 |
+| 2014-03-27t19 | 16 |
+| 2010-09-09t19 | 16 |
+| 2011-05-21t19 | 16 |
+| 2011-05-23t19 | 16 |
+| 2010-09-19t19 | 15 |
+| 2010-12-26t18 | 15 |
+| 2013-07-22t19 | 14 |
+| 2012-07-11t19 | 14 |
+| 2011-03-14t19 | 14 |
+| 2011-04-20t19 | 14 |
+| 2010-09-08t19 | 13 |
+| 2010-11-05t19 | 13 |
+| 2013-07-24t19 | 13 |
+| 2011-03-24t19 | 13 |
+| 2011-04-24t19 | 13 |
+| 2013-08-21t19 | 12 |
+| 2011-08-15t19 | 12 |
+| 2011-09-22t19 | 12 |
+| 2011-03-05t18 | 12 |
+| 2011-03-06t18 | 12 |
+| 2010-12-22t18 | 12 |
+| 2011-03-28t19 | 11 |
+| 2013-07-25t19 | 11 |
+| 2011-04-22t19 | 11 |
+| 2010-09-06t19 | 11 |
+| 2011-04-17t19 | 11 |
+| 2010-11-22t18 | 11 |
+| 2011-12-13t18 | 10 |
+| 2011-03-26t19 | 10 |
+| 2013-05-20t19 | 10 |
+| 2013-06-17t19 | 10 |
+| 2013-09-25t19 | 10 |
+| 2013-10-07t19 | 10 |
+| 2011-05-19t19 | 10 |
+| 2010-09-18t19 | 9 |
+| 2010-11-17t18 | 9 |
+| 2010-11-08t18 | 9 |
+| 2010-11-10t18 | 9 |
+| 2011-03-19t19 | 9 |
+| 2011-04-16t19 | 9 |
+| 2010-09-13t19 | 9 |
+| 06-sep-18 12.00.00.000000000 am | 8 |
+| 2011-04-13t19 | 8 |
+| 2013-09-16t19 | 8 |
+| 31-aug-18 12.00.00.000000000 am | 8 |
+| 2010-09-26t19 | 8 |
+| 05-sep-18 12.00.00.000000000 am | 8 |
+| 2010-10-31t19 | 8 |
+| 2011-02-03t18 | 8 |
+| 2011-03-04t18 | 8 |
+| 2011-04-23t19 | 8 |
+| 2011-03-11t18 | 7 |
+| 2013-08-14t19 | 7 |
+| 2012-07-16t19 | 7 |
+| 2010-10-05t19 | 7 |
+| 2010-11-06t19 | 7 |
+| 2012-04-17t19 | 6 |
+| 2012-01-11t18 | 6 |
+| 2010-11-11t18 | 6 |
+| 2011-03-16t19 | 5 |
+| 2011-04-01t19 | 5 |
+| 2013-09-18t19 | 5 |
+| 2013-09-23t19 | 5 |
+| 2013-09-12t19 | 5 |
+| 2011-03-15t19 | 4 |
+| 2011-03-07t18 | 3 |
+| 2011-03-09t18 | 2 |
+| 2011-03-12t18 | 2 |
+| 2011-03-18t19 | 2 |
+| 2011-05-30t19 | 2 |
+
+### analysis.metadata.read_groups.single_cell_library
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.size_selection_range
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.spike_ins_concentration
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.spike_ins_fasta
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.target_capture_kit
+
+| Value | Count |
+|-------|-------|
+| _missing | 68552 |
+| not applicable | 2058 |
+| unknown | 138 |
+| custom sureselect human all exon v1.1 plus 3 boosters | 26 |
+
+### analysis.metadata.read_groups.target_capture_kit_catalog_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 68599 |
+| na | 1039 |
+| 06465692001 | 489 |
+| 05860504001 | 295 |
+| s0293689 | 278 |
+| 06465692001|na | 49 |
+| na|05860504001 | 14 |
+| 06465692001|na|na|na|na | 4 |
+| s0293689|na | 3 |
+| 05860504001|na | 2 |
+| na|na|na|na|06465692001 | 2 |
+
+### analysis.metadata.read_groups.target_capture_kit_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 68599 |
+| hg18 nimblegen exome version 2 | 1039 |
+| nimblegen ez exome v3.0 | 322 |
+| nimblegen seqcap ez human exome library v2.0 | 295 |
+| sureselect human all exon 38 mb v2 | 278 |
+| nimblegen seqcap ez human exome library v3.0 | 167 |
+| nimblegen ez exome v3.0|wo2736953 pooled probes | 49 |
+| hg18 nimblegen exome version 2|nimblegen seqcap ez human exome library v2.0 | 14 |
+| nimblegen ez exome v3.0|wo2791991 pooled probes|wo2768646 pooled probes|wo2793950 pooled probes|wo2790654 pooled probes | 4 |
+| sureselect human all exon 38 mb v2|hg18 nimblegen exome version 2 | 3 |
+| nimblegen seqcap ez human exome library v2.0|hg18 nimblegen exome version 2 | 2 |
+| wo2791991 pooled probes|wo2768646 pooled probes|wo2793950 pooled probes|wo2790654 pooled probes|nimblegen ez exome v3.0 | 2 |
+
+### analysis.metadata.read_groups.target_capture_kit_target_region
+
+| Value | Count |
+|-------|-------|
+| _missing | 68599 |
+| ftp://genome.wustl.edu/pub/custom_capture/hg18_nimblegen_exome_version_2/hg18_nimblegen_exome_version_2.bed | 1039 |
+| http://www.nimblegen.com/downloads/annotation/ez_exome_v3/seqcapez_exome_v3.0_design_annotation_files.zip#seqcap_ez_exome_v3_capture.bed | 489 |
+| http://www.nimblegen.com/downloads/annotation/ez_exome_v2/seqcapez_exome_v2.0_design_annotation_files.zip#design_annotation_files/target_regions/seqcap_ez_exome_v2.bed | 295 |
+| https://earray.chem.agilent.com/earray/ | 278 |
+| http://www.nimblegen.com/downloads/annotation/ez_exome_v3/seqcapez_exome_v3.0_design_annotation_files.zip#seqcap_ez_exome_v3_capture.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2736953_pooled_probes/784c240d7e6942afb8514ebdb6a950d9.bed | 49 |
+| ftp://genome.wustl.edu/pub/custom_capture/hg18_nimblegen_exome_version_2/hg18_nimblegen_exome_version_2.bed|http://www.nimblegen.com/downloads/annotation/ez_exome_v2/seqcapez_exome_v2.0_design_annotation_files.zip#design_annotation_files/target_regions/seqcap_ez_exome_v2.bed | 14 |
+| http://www.nimblegen.com/downloads/annotation/ez_exome_v3/seqcapez_exome_v3.0_design_annotation_files.zip#seqcap_ez_exome_v3_capture.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2791991_pooled_probes/ce2c7958845b4895b878a6eda8a9c521.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2768646_pooled_probes/562e962c09834121a17bf931182c90e7.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2793950_pooled_probes/0383d24d42694f7a98b17df4f5104b4d.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2790654_pooled_probes/1d60152280514553b6a01cd20d2b12e8.bed | 4 |
+| https://earray.chem.agilent.com/earray/|ftp://genome.wustl.edu/pub/custom_capture/hg18_nimblegen_exome_version_2/hg18_nimblegen_exome_version_2.bed | 3 |
+| http://www.nimblegen.com/downloads/annotation/ez_exome_v2/seqcapez_exome_v2.0_design_annotation_files.zip#design_annotation_files/target_regions/seqcap_ez_exome_v2.bed|ftp://genome.wustl.edu/pub/custom_capture/hg18_nimblegen_exome_version_2/hg18_nimblegen_exome_version_2.bed | 2 |
+| ftp://genome.wustl.edu/pub/custom_capture/wo2791991_pooled_probes/ce2c7958845b4895b878a6eda8a9c521.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2768646_pooled_probes/562e962c09834121a17bf931182c90e7.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2793950_pooled_probes/0383d24d42694f7a98b17df4f5104b4d.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2790654_pooled_probes/1d60152280514553b6a01cd20d2b12e8.bed|http://www.nimblegen.com/downloads/annotation/ez_exome_v3/seqcapez_exome_v3.0_design_annotation_files.zip#seqcap_ez_exome_v3_capture.bed | 2 |
+
+### analysis.metadata.read_groups.target_capture_kit_vendor
+
+| Value | Count |
+|-------|-------|
+| _missing | 68599 |
+| nimblegen | 1823 |
+| agilent | 278 |
+| nimblegen|idt | 49 |
+| nimblegen|nimblegen | 16 |
+| nimblegen|idt|idt|idt|idt | 4 |
+| agilent|nimblegen | 3 |
+| idt|idt|idt|idt|nimblegen | 2 |
+
+### analysis.metadata.read_groups.target_capture_kit_version
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.metadata.read_groups.to_trim_adapter_sequence
+
+| Value | Count |
+|-------|-------|
+| _missing | 68841 |
+| true | 1933 |
+
+### analysis.workflow_end_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.workflow_link
+
+| Value | Count |
+|-------|-------|
+| _missing | 10787 |
+| docker.osdc.io/ncigdc | 9600 |
+| https://github.com/nci-gdc/vep-cwl/blob/63378a5197b1a8c850e27c0dd4d4c575a726d571/v102/workflows/vep-annotation-workflow.cwl | 8576 |
+| https://github.com/nci-gdc/gdc-rnaseq-cwl/blob/5d8c131bbff59fb0c969217fc1d44e6d1503cd1f/rnaseq-star-align/star2pass.rnaseq_harmonization.cwl | 6120 |
+| quay.io/ncigdc | 5814 |
+| https://github.com/nci-gdc/dnacopy-tool | 4458 |
+| https://github.com/nci-gdc/gdc-somatic-variant-calling-workflow/blob/e00e464344272a1ac6ada9b3322d81849f507848/gpas-somatic-mutation-calling-workflow.cwl | 3204 |
+| https://github.com/nci-gdc/arriba_cwl/blob/ccf62b9226985da89b695dd99528b1f65ac17710/cwl/workflows/gdc_gpas_arriba.cwl | 2462 |
+| https://github.com/nci-gdc/star_fusion_cwl/blob/bbd02bd6b33b506f018e33d33b2e1cafc8e0bc0c/cwl/workflows/gdc_gpas_star_fusion.cwl | 2462 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/gdc-active-submission/workflows/mirnaseq/runner.cwl | 2414 |
+| https://www.broadinstitute.org/birdsuite | 2263 |
+| https://github.com/crick-cancergenomics/ascat/releases/tag/v2.5.2 | 2168 |
+| https://github.com/vanloo-lab/ascat/tree/master/releaseddata/tcga_snp6_hg38 | 2120 |
+| https://github.com/nci-gdc/aliquot-maf-cwl/blob/3dd621a8745ee2b91716911604bf3f096337a9b7/ensemble_aliquot_maf/ensemble_aliquot_maf_wf.cwl | 1984 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/cde5c3998b3d5c8651749b0e1bad3f432ec5b92e/workflows/gdc_dnaseq.bamfastq_align.workflow.cwl | 1944 |
+| https://github.com/nci-gdc/mirna-profiler | 1207 |
+| https://github.com/nci-gdc/pindel-cwl/blob/9de690e9eb0e888c1d8ac4d41b192960a619b9c3/workflow/pindel.internal_chunk.cwl | 1068 |
+| https://gdc.cancer.gov/about-data/publications/pancanatlas | 1057 |
+| https://github.com/nci-gdc/gdc-sanger-somatic-cwl/blob/d82167c739cd97869f77998d5ab175b70a1850ee/workflows/gdc_sanger_wgs_somatic_workflow.cwl | 324 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/ac59a0523af18df87bfc45b26d4cb59a9e34bb7d/workflows/gdc_dnaseq.bamfastq_align.workflow.cwl | 300 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/1a0c9a99ed9bcae8f9d5d4b9c3196fdc74131b6f/workflows/gdc_dnaseq.bamfastq_align.workflow.cwl | 234 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/a57b8f0d8708078e87f13297e065d72db10e38a0/workflows/bamfastq_align/etl.cwl | 75 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/6698fbd8d0a6155d2008d4e89ab1110fbef9ebbf/workflows/bamfastq_align/etl.cwl | 69 |
+| https://github.com/nci-gdc/gdc-sanger-somatic-cwl/blob/24db0854fc8f555ad7925ebf9a6c020a4b1ef019/workflows/gdc_sanger_wgs_somatic_workflow.cwl | 48 |
+| https://github.com/nci-gdc/gdc-somatic-variant-calling-workflow/blob/6e096f6fc590589014842434774dd8a4de90433b/gpas-somatic-mutation-calling-workflow.cwl | 12 |
+| https://github.com/nci-gdc/pindel-cwl/blob/03f78a57d10a045a7483cb1d7ceab95ff009b51b/workflow/pindel.internal_chunk.cwl | 4 |
+
+### analysis.workflow_start_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### analysis.workflow_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 10787 |
+| DNAcopy | 4458 |
+| BWA with Mark Duplicates and BQSR | 4382 |
+| SeSAMe Methylation Beta Estimation | 3714 |
+| VarScan2 Annotation | 2986 |
+| Arriba | 2462 |
+| STAR - Counts | 2462 |
+| STAR-Fusion | 2462 |
+| BCGSC miRNA Profiling | 2414 |
+| Birdseed | 2263 |
+| ASCAT2 | 2168 |
+| MuSE Annotation | 2144 |
+| MuTect2 Annotation | 2144 |
+| Pindel Annotation | 2144 |
+| ASCAT3 | 2120 |
+| VarScan2 | 2097 |
+| GATK4 CNV | 2054 |
+| Manta | 2054 |
+| Aliquot Ensemble Somatic Variant Merging and Masking | 1984 |
+| SvABA | 1696 |
+| STAR 2-Pass Chimeric | 1231 |
+| STAR 2-Pass Genome | 1231 |
+| STAR 2-Pass Transcriptome | 1231 |
+| BWA-aln | 1207 |
+| Pindel | 1185 |
+| MuSE | 1072 |
+| MuTect2 | 1072 |
+| ABSOLUTE LiftOver | 1057 |
+| GATK4 MuTect2 | 1022 |
+| GATK4 MuTect2 Annotation | 526 |
+| AscatNGS | 226 |
+| BRASS | 226 |
+| SvABA Indel | 190 |
+| SvABA Indel Annotation | 190 |
+| CaVEMan | 113 |
+
+### analysis.workflow_version
+
+| Value | Count |
+|-------|-------|
+| _missing | 20821 |
+| 63378a5197b1a8c850e27c0dd4d4c575a726d571 | 8576 |
+| 5d8c131bbff59fb0c969217fc1d44e6d1503cd1f | 6120 |
+| v1 | 5653 |
+| e00e464344272a1ac6ada9b3322d81849f507848 | 3204 |
+| bbd02bd6b33b506f018e33d33b2e1cafc8e0bc0c | 2462 |
+| ccf62b9226985da89b695dd99528b1f65ac17710 | 2462 |
+| f7cfd3d | 2054 |
+| 3dd621a8745ee2b91716911604bf3f096337a9b7 | 1984 |
+| 8f03679 | 1964 |
+| cde5c3998b3d5c8651749b0e1bad3f432ec5b92e | 1944 |
+| 20241025t1647z | 1886 |
+| 20220323t1818z | 1719 |
+| 0049bcb | 1558 |
+| f8ef9dc6375573fc05fee47b70278d89f79a4cd7 | 1158 |
+| 9de690e9eb0e888c1d8ac4d41b192960a619b9c3 | 1068 |
+| 20230629t1512z | 1029 |
+| dc9467b78cf538a0430cd4027dc5092f77d47e20 | 1026 |
+| 66779bc | 1024 |
+| 20250324t0157z | 1022 |
+| 9e258094ac9d4febe3721ceba25c1b8dbd1a27f8 | 501 |
+| d82167c739cd97869f77998d5ab175b70a1850ee | 324 |
+| d1099de8dad87b076a826114bff939249c4b49e8 | 306 |
+| ac59a0523af18df87bfc45b26d4cb59a9e34bb7d | 300 |
+| 1a0c9a99ed9bcae8f9d5d4b9c3196fdc74131b6f | 234 |
+| 20241210t1721z | 90 |
+| a57b8f0d8708078e87f13297e065d72db10e38a0 | 75 |
+| 6698fbd8d0a6155d2008d4e89ab1110fbef9ebbf | 69 |
+| 24db0854fc8f555ad7925ebf9a6c020a4b1ef019 | 48 |
+| 20220125t1752z | 40 |
+| 5a02c12930eb23436322a7494047b907b97570c5 | 25 |
+| 6e096f6fc590589014842434774dd8a4de90433b | 12 |
+| 470801dfbc085958058a5b50518e4f3a5e4721c3 | 10 |
+| 03f78a57d10a045a7483cb1d7ceab95ff009b51b | 4 |
+| 20241117t2122z | 1 |
+| 438e478 | 1 |
+
+### annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 64992 |
+| general | 3645 |
+| prior malignancy | 1070 |
+| history of unacceptable prior treatment related to a prior/other malignancy | 713 |
+| neoadjuvant therapy | 463 |
+| item flagged dnu | 276 |
+| item does not meet study protocol | 115 |
+| item is noncanonical | 1 |
+
+### annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 64992 |
+| notification | 5018 |
+| observation | 520 |
+| centernotification | 276 |
+
+### annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 64992 |
+| case | 1897 |
+| aliquot | 1491 |
+| aggregated_somatic_mutation | 988 |
+| masked_somatic_mutation | 988 |
+| analyte | 511 |
+| sample | 15 |
+
+### annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 64992 |
+| variants from somaticsniper are not included. | 1976 |
+| all or some of the wxs data may have been removed from this aliquot due to the molecular data having a contamination value of >0.04 as estimated by gatk. | 1175 |
+| no note specified | 932 |
+| systemic treatment given to the prior/other malignancy | 467 |
+| the aliquot failed broad pipeline qc and not all files are suitable for use. consult the sdrf file to determine which files are usable. | 276 |
+| case had prior malignancy | 157 |
+| systemic treatment | 146 |
+| tumor is dcis and not invasive which is required by the tcga brca study | 100 |
+| subject is positive for neoadjuvant therapy. | 90 |
+| patient had prior breast malignancy (in opposite breast) with systemic chemotherapy (tamoxifen). | 82 |
+| during enrollment it was found that patient recieved systemic tamoxifen 3 years prior to resection of tcga tumor (left breast) for a prior right breast malignancy. | 81 |
+| patient had prior primary breast cancer in the same breast as the tcga primary and received chemotherapy (adriamycin and cytoxan) | 81 |
+| patient recieved neoadjuvant therapy for the tcga sample (armidex). | 81 |
+| the patient had neoadjuvant therapy (5-fluorouracil, epirubicin, and cyclophosphamide) 2 months prior to tcga cancer procurement. | 81 |
+| during enrollment tss discovered patient had 5fu, epirubicin and cyclophosphamide prior to cancer procuemnt of the tcga maliganncy. | 80 |
+| patient had hormone therapy (exemestane) 2 months prior to tcga specimen procurement | 80 |
+| the patient had a prior thyroid cancer (~28 years prior) and a prior lung cancer (~23 years prior) to the tcga cancer procurement. the tss does not know if radiation or chemotherapy was given which is unacceptable for tcga. | 78 |
+| dna analyte uuid: 11f3c3e2-2b1d-4409-a43e-42eae8358ce3 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 34 |
+| dna analyte uuid: 36228261-b2db-4465-869a-672916782b71 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 34 |
+| dna analyte uuid: fe7f0b20-42ce-48c7-a407-61dc0ea0878e was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 34 |
+| dna analyte uuid: 4c130ae4-b1aa-4ec6-ba88-6b32460e0f9c was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 33 |
+| dna analyte uuid: 5b31eb4a-2559-498b-9204-f6fd17338905 was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 33 |
+| dna analyte uuid: 7291657b-2a8c-467d-a763-3de577b6401b was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 33 |
+| dna analyte uuid: d0c0f4f4-2ae0-4f76-8faf-a4e35622f14e was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 33 |
+| dna analyte uuid: e277fe01-b1da-4a50-a5f7-9d97706c29fe was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 33 |
+| dna analyte uuid: 5493f123-5740-48c9-a531-b351fda6b081 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 32 |
+| dna analyte uuid: 74f3a478-527e-4d49-9c3f-29f353e1fb6c was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 32 |
+| dna analyte uuid: 96db3a0e-2d63-4e79-bf6d-bc7d2fe60157 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 32 |
+| dna analyte uuid: e27e9375-d153-4d0d-80ea-19c0f58c6c60 was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 32 |
+| users should discard data fpr this analyte obtained before 5/7/13, and use the latest data available on the data portal instead. see http://tcgadcc.com/browse/tcga-955. | 24 |
+| dna analyte uuid: 44e34ec8-b65b-451c-aea9-89a6537bc689 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 23 |
+| dna analyte uuid: 87a5cafc-582e-4d14-8c3d-dfffce15e63b was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 23 |
+| dna analyte uuid: c88eb59e-18a1-4f37-9fc8-9be86ea9cbdf was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 23 |
+| dna analyte uuid: d0330be0-6b5b-4f07-a73f-2bf53bce86cd was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 23 |
+| tcga-b6-a1kc-01a was not pathology reviewed and should not be used. tcga-b6-a1kc-01b should be used instead. | 15 |
+| this is the correct replacement barcode for rna aliquot uuid: 50f23d00-f6fd-4b3d-aed2-0705f7ae6a17, which is a replacement aliquot for uuid: 60770e58-3b35-4222-97e9-d92e973f0203 that was found to have inconclusive identity (rna only).   note that this replacement aliquot is derived from a different portion than the dna. | 9 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 1ee60bda-48df-4288-90cb-480fbfbc5d50.  it replaces the incorrect tcgabarcode: tcga-c4-a0f1-01a-11r-a10u-07. | 9 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 6f0cf450-76f1-489d-9890-5093816c0680.  it replaces the incorrect tcgabarcode: tcga-c4-a0f7-01a-11r-a10u-07. | 9 |
+| wxs data may no longer be available for this aliquot due to new aliquot-pairing rules being implemented by gdc harmonization pipelines. | 6 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 2688aaae-389f-4fe9-a198-a95fa9b3ee9b.  it replaces the incorrect tcgabarcode: tcga-c4-a0f7-01a-11r-a10v-13.  due to platform incompatibility, data will not be available for this aliquot. | 3 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 4819bd80-3cad-4071-9cbd-16eece970f4f.  it replaces the incorrect tcgabarcode: tcga-c4-a0f1-01a-11r-a10v-13.  due to platform incompatibility, data will not be available for this aliquot. | 3 |
+| the bam associated with tcga-aq-a04l-10a-01d-a12j-09 was derived from a pool of two aliquots: tcga-aq-a04l-10a-01d-a12j-09 and tcga-aq-a04l-10a-01d-a10m-09 | 1 |
+
+### annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 64992 |
+| approved | 5782 |
+
+### archive.data_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### archive.data_format
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### archive.data_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### archive.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### archive.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### associated_entities.entity_type
+
+| Value | Count |
+|-------|-------|
+| aliquot | 62250 |
+| case | 3388 |
+| slide | 3112 |
+| sample | 1105 |
+| portion | 919 |
+
+### cases.aliquot_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.analyte_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 68877 |
+| prior malignancy | 1070 |
+| history of unacceptable prior treatment related to a prior/other malignancy | 713 |
+| neoadjuvant therapy | 463 |
+| item does not meet study protocol | 100 |
+
+### cases.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 68877 |
+| notification | 1897 |
+
+### cases.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 68877 |
+| case | 1897 |
+
+### cases.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 68877 |
+| no note specified | 932 |
+| systemic treatment given to the prior/other malignancy | 467 |
+| case had prior malignancy | 157 |
+| systemic treatment | 146 |
+| tumor is dcis and not invasive which is required by the tcga brca study | 100 |
+| subject is positive for neoadjuvant therapy. | 90 |
+| patient had prior breast malignancy (in opposite breast) with systemic chemotherapy (tamoxifen). | 82 |
+| during enrollment it was found that patient recieved systemic tamoxifen 3 years prior to resection of tcga tumor (left breast) for a prior right breast malignancy. | 81 |
+| patient had prior primary breast cancer in the same breast as the tcga primary and received chemotherapy (adriamycin and cytoxan) | 81 |
+| patient recieved neoadjuvant therapy for the tcga sample (armidex). | 81 |
+| the patient had neoadjuvant therapy (5-fluorouracil, epirubicin, and cyclophosphamide) 2 months prior to tcga cancer procurement. | 81 |
+| during enrollment tss discovered patient had 5fu, epirubicin and cyclophosphamide prior to cancer procuemnt of the tcga maliganncy. | 80 |
+| patient had hormone therapy (exemestane) 2 months prior to tcga specimen procurement | 80 |
+| the patient had a prior thyroid cancer (~28 years prior) and a prior lung cancer (~23 years prior) to the tcga cancer procurement. the tss does not know if radiation or chemotherapy was given which is unacceptable for tcga. | 78 |
+
+### cases.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 68877 |
+| approved | 1897 |
+
+### cases.consent_type
+
+| Value | Count |
+|-------|-------|
+| informed consent | 67305 |
+| consent by death | 2841 |
+| _missing | 600 |
+| consent waiver | 66 |
+
+### cases.days_to_consent
+
+| Value | Count |
+|-------|-------|
+| 0 | 8532 |
+| -1 | 3613 |
+| _missing | 2983 |
+| 7 | 2030 |
+| 31 | 1671 |
+| 10 | 1561 |
+| 14 | 1536 |
+| 9 | 1363 |
+| 6 | 1348 |
+| 19 | 1336 |
+| 24 | 1282 |
+| 29 | 1192 |
+| 16 | 1144 |
+| 21 | 1088 |
+| 17 | 1065 |
+| 30 | 1024 |
+| 11 | 1020 |
+| 33 | 1005 |
+| 13 | 976 |
+| 8 | 975 |
+| 2 | 931 |
+| 34 | 930 |
+| 15 | 907 |
+| 28 | 907 |
+| 12 | 878 |
+| 27 | 849 |
+| 22 | 836 |
+| 5 | 823 |
+| 36 | 782 |
+| 26 | 757 |
+| 20 | 740 |
+| 18 | 674 |
+| 35 | 628 |
+| 40 | 602 |
+| -8 | 585 |
+| 41 | 580 |
+| 1 | 571 |
+| 42 | 565 |
+| 37 | 506 |
+| 44 | 498 |
+| -20 | 484 |
+| -6 | 480 |
+| 43 | 434 |
+| 32 | 430 |
+| 55 | 407 |
+| 23 | 396 |
+| 47 | 394 |
+| 53 | 384 |
+| -5 | 383 |
+| 25 | 380 |
+| -7 | 377 |
+| 3 | 361 |
+| -10 | 358 |
+| 49 | 355 |
+| -2 | 344 |
+| 56 | 331 |
+| -15 | 329 |
+| -29 | 322 |
+| 45 | 300 |
+| 73 | 297 |
+| 50 | 287 |
+| -13 | 268 |
+| 4 | 267 |
+| -4 | 266 |
+| -3 | 265 |
+| 39 | 265 |
+| 46 | 214 |
+| 63 | 211 |
+| 90 | 211 |
+| 38 | 204 |
+| 57 | 203 |
+| -41 | 202 |
+| -34 | 201 |
+| -16 | 201 |
+| -9 | 201 |
+| 59 | 198 |
+| 72 | 196 |
+| -18 | 190 |
+| 61 | 187 |
+| -19 | 167 |
+| -55 | 160 |
+| 74 | 155 |
+| 457 | 155 |
+| -57 | 150 |
+| -22 | 149 |
+| -14 | 143 |
+| 58 | 143 |
+| 193 | 143 |
+| 65 | 142 |
+| 77 | 142 |
+| 83 | 142 |
+| -50 | 141 |
+| 48 | 141 |
+| 140 | 131 |
+| 85 | 127 |
+| 78 | 112 |
+| -84 | 112 |
+| 71 | 111 |
+| 1819 | 101 |
+| 1209 | 99 |
+| 3120 | 97 |
+| 1461 | 95 |
+| -12 | 94 |
+| 126 | 94 |
+| 578 | 94 |
+| -21 | 93 |
+| 117 | 93 |
+| 421 | 93 |
+| 1717 | 93 |
+| -744 | 92 |
+| -86 | 92 |
+| -48 | 92 |
+| 161 | 92 |
+| 184 | 90 |
+| 235 | 90 |
+| 270 | 90 |
+| 655 | 90 |
+| 52 | 89 |
+| 76 | 89 |
+| -212 | 88 |
+| 69 | 88 |
+| 358 | 88 |
+| 1030 | 88 |
+| 1122 | 88 |
+| 1018 | 87 |
+| 393 | 85 |
+| 963 | 85 |
+| 113 | 84 |
+| 2253 | 84 |
+| -1235 | 83 |
+| -124 | 83 |
+| 67 | 83 |
+| 177 | 83 |
+| 215 | 83 |
+| 394 | 83 |
+| 1135 | 83 |
+| 1138 | 83 |
+| 1472 | 83 |
+| 1813 | 83 |
+| -32 | 82 |
+| -27 | 82 |
+| 62 | 82 |
+| 66 | 82 |
+| 189 | 82 |
+| 279 | 82 |
+| 1017 | 82 |
+| 1259 | 82 |
+| 1591 | 82 |
+| 1623 | 82 |
+| 2331 | 82 |
+| -1452 | 81 |
+| -366 | 81 |
+| -140 | 81 |
+| -43 | 81 |
+| -24 | 81 |
+| -23 | 81 |
+| 51 | 81 |
+| 79 | 81 |
+| 84 | 81 |
+| 92 | 81 |
+| 142 | 81 |
+| 194 | 81 |
+| 210 | 81 |
+| 371 | 81 |
+| 467 | 81 |
+| 829 | 81 |
+| 977 | 81 |
+| 1217 | 81 |
+| 1896 | 81 |
+| 3754 | 81 |
+| 54 | 80 |
+| 60 | 80 |
+| 75 | 80 |
+| 93 | 80 |
+| 100 | 80 |
+| 108 | 80 |
+| 132 | 80 |
+| 412 | 80 |
+| 1184 | 80 |
+| 2980 | 80 |
+| -924 | 79 |
+| -33 | 79 |
+| -28 | 79 |
+| 743 | 79 |
+| 2972 | 79 |
+| 3548 | 79 |
+| 87 | 78 |
+| 551 | 78 |
+| 2350 | 78 |
+| -442 | 77 |
+| 1319 | 74 |
+| 1522 | 74 |
+| -65 | 73 |
+| -365 | 72 |
+| 151 | 71 |
+| 1883 | 71 |
+| -26 | 70 |
+| 1441 | 70 |
+| 2540 | 70 |
+| 70 | 69 |
+| 6029 | 69 |
+
+### cases.days_to_lost_to_followup
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.demographic.age_at_index
+
+| Value | Count |
+|-------|-------|
+| 62 | 3400 |
+| 63 | 2388 |
+| 61 | 2263 |
+| 56 | 2170 |
+| 50 | 2130 |
+| 54 | 2114 |
+| 58 | 2057 |
+| 59 | 2007 |
+| 51 | 1945 |
+| 49 | 1897 |
+| 48 | 1892 |
+| 52 | 1831 |
+| 45 | 1819 |
+| 46 | 1791 |
+| 53 | 1688 |
+| 66 | 1658 |
+| 64 | 1650 |
+| 47 | 1632 |
+| 40 | 1592 |
+| 55 | 1582 |
+| 68 | 1536 |
+| 65 | 1452 |
+| 60 | 1426 |
+| 71 | 1388 |
+| 69 | 1323 |
+| 67 | 1299 |
+| 41 | 1233 |
+| 70 | 1202 |
+| 79 | 1198 |
+| 73 | 1115 |
+| 80 | 1099 |
+| 57 | 1095 |
+| 44 | 1083 |
+| 74 | 1080 |
+| 43 | 1028 |
+| 78 | 942 |
+| 72 | 901 |
+| 39 | 852 |
+| 42 | 851 |
+| 76 | 818 |
+| 77 | 811 |
+| 75 | 764 |
+| 38 | 753 |
+| 89 | 728 |
+| 34 | 673 |
+| 84 | 627 |
+| 36 | 620 |
+| 37 | 519 |
+| 35 | 513 |
+| 81 | 469 |
+| 82 | 405 |
+| 88 | 404 |
+| 29 | 352 |
+| 85 | 323 |
+| 83 | 316 |
+| 31 | 260 |
+| 87 | 195 |
+| 30 | 178 |
+| 32 | 144 |
+| 26 | 131 |
+| 28 | 87 |
+| 27 | 83 |
+| 86 | 79 |
+| 33 | 77 |
+| _missing | 33 |
+
+### cases.demographic.age_is_obfuscated
+
+| Value | Count |
+|-------|-------|
+| false | 69598 |
+| true | 1081 |
+| _missing | 114 |
+
+### cases.demographic.cause_of_death
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.demographic.cause_of_death_source
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.demographic.country_of_birth
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.demographic.country_of_residence_at_enrollment
+
+| Value | Count |
+|-------|-------|
+| _missing | 26955 |
+| united states | 25963 |
+| germany | 5226 |
+| poland | 4978 |
+| vietnam | 2980 |
+| russia | 2042 |
+| ukraine | 2001 |
+| nigeria | 254 |
+| canada | 146 |
+| brazil | 144 |
+| pakistan | 140 |
+| afghanistan | 81 |
+| moldova | 73 |
+
+### cases.demographic.days_to_birth
+
+| Value | Count |
+|-------|-------|
+| _missing | 976 |
+| -32872 | 486 |
+| -22199 | 216 |
+| -26274 | 172 |
+| -22798 | 171 |
+| -22690 | 171 |
+| -21514 | 170 |
+| -16736 | 161 |
+| -14920 | 161 |
+| -14894 | 160 |
+| -20570 | 159 |
+| -23021 | 156 |
+| -22380 | 156 |
+| -16642 | 154 |
+| -18942 | 151 |
+| -17930 | 151 |
+| -17070 | 151 |
+| -18771 | 150 |
+| -17702 | 149 |
+| -29529 | 148 |
+| -24779 | 148 |
+| -19415 | 147 |
+| -23404 | 145 |
+| -21910 | 145 |
+| -21918 | 144 |
+| -25477 | 142 |
+| -21628 | 142 |
+| -21479 | 142 |
+| -20694 | 142 |
+| -19216 | 142 |
+| -24923 | 141 |
+| -21428 | 141 |
+| -24315 | 137 |
+| -28969 | 137 |
+| -18038 | 136 |
+| -19030 | 134 |
+| -18741 | 133 |
+| -23150 | 131 |
+| -14122 | 131 |
+| -20210 | 131 |
+| -26052 | 130 |
+| -19479 | 130 |
+| -22449 | 127 |
+| -17682 | 127 |
+| -11650 | 127 |
+| -11204 | 127 |
+| -13836 | 125 |
+| -14175 | 123 |
+| -18014 | 121 |
+| -16750 | 121 |
+| -29751 | 119 |
+| -25974 | 118 |
+| -21488 | 118 |
+| -25186 | 116 |
+| -16363 | 115 |
+| -13138 | 114 |
+| -23628 | 112 |
+| -18237 | 112 |
+| -12443 | 112 |
+| -23948 | 111 |
+| -15078 | 111 |
+| -26588 | 109 |
+| -20448 | 109 |
+| -17969 | 109 |
+| -28084 | 108 |
+| -29104 | 106 |
+| -22703 | 105 |
+| -21949 | 105 |
+| -19192 | 105 |
+| -28699 | 104 |
+| -23168 | 104 |
+| -23006 | 104 |
+| -16163 | 104 |
+| -15980 | 104 |
+| -15903 | 104 |
+| -15593 | 104 |
+| -14731 | 104 |
+| -30125 | 103 |
+| -25289 | 103 |
+| -22896 | 103 |
+| -22800 | 103 |
+| -15027 | 103 |
+| -28733 | 102 |
+| -27729 | 102 |
+| -25994 | 102 |
+| -23397 | 102 |
+| -23058 | 102 |
+| -21981 | 102 |
+| -21024 | 102 |
+| -19117 | 102 |
+| -25119 | 101 |
+| -24266 | 101 |
+| -23366 | 101 |
+| -20374 | 101 |
+| -15055 | 101 |
+| -14755 | 101 |
+| -14653 | 101 |
+| -23294 | 100 |
+| -21397 | 100 |
+| -20625 | 100 |
+| -19723 | 100 |
+| -17221 | 100 |
+| -14854 | 100 |
+| -14494 | 100 |
+| -30711 | 99 |
+| -27400 | 99 |
+| -23224 | 99 |
+| -21856 | 99 |
+| -21228 | 99 |
+| -20795 | 99 |
+| -17465 | 99 |
+| -16688 | 99 |
+| -15942 | 99 |
+| -24719 | 98 |
+| -22858 | 98 |
+| -21386 | 98 |
+| -11379 | 98 |
+| -20863 | 97 |
+| -15625 | 97 |
+| -14174 | 97 |
+| -22115 | 96 |
+| -16702 | 96 |
+| -23972 | 95 |
+| -19758 | 95 |
+| -32842 | 94 |
+| -29144 | 94 |
+| -26221 | 94 |
+| -25515 | 94 |
+| -25475 | 94 |
+| -23653 | 94 |
+| -22707 | 94 |
+| -21559 | 94 |
+| -20900 | 94 |
+| -19767 | 94 |
+| -16138 | 94 |
+| -15324 | 94 |
+| -15052 | 94 |
+| -14784 | 94 |
+| -14374 | 94 |
+| -13805 | 94 |
+| -25770 | 93 |
+| -25263 | 93 |
+| -24710 | 93 |
+| -23327 | 93 |
+| -22688 | 93 |
+| -20705 | 93 |
+| -18875 | 93 |
+| -18171 | 93 |
+| -17807 | 93 |
+| -16623 | 93 |
+| -16615 | 93 |
+| -16310 | 93 |
+| -13238 | 93 |
+| -12642 | 93 |
+| -26902 | 92 |
+| -25666 | 92 |
+| -23845 | 92 |
+| -22284 | 92 |
+| -20504 | 92 |
+| -20401 | 92 |
+| -20105 | 92 |
+| -20080 | 92 |
+| -20049 | 92 |
+| -18524 | 92 |
+| -18362 | 92 |
+| -18334 | 92 |
+| -17660 | 92 |
+| -27106 | 91 |
+| -26269 | 91 |
+| -22849 | 91 |
+| -22683 | 91 |
+| -22373 | 91 |
+| -21640 | 91 |
+| -20713 | 91 |
+| -19596 | 91 |
+| -19073 | 91 |
+| -18839 | 91 |
+| -15774 | 91 |
+| -15122 | 91 |
+| -14669 | 91 |
+| -13985 | 91 |
+| -13004 | 91 |
+| -12841 | 91 |
+| -12729 | 91 |
+| -32404 | 90 |
+| -30085 | 90 |
+| -29463 | 90 |
+| -29285 | 90 |
+| -28706 | 90 |
+| -25110 | 90 |
+| -24850 | 90 |
+| -24279 | 90 |
+| -23927 | 90 |
+| -23922 | 90 |
+| -23126 | 90 |
+| -22656 | 90 |
+| -22625 | 90 |
+| -22462 | 90 |
+| -22422 | 90 |
+| -22377 | 90 |
+| -21501 | 90 |
+
+### cases.demographic.days_to_death
+
+| Value | Count |
+|-------|-------|
+| _missing | 60806 |
+| 2965 | 215 |
+| 991 | 176 |
+| 614 | 171 |
+| 792 | 157 |
+| 385 | 154 |
+| 1034 | 149 |
+| 0 | 143 |
+| 1556 | 127 |
+| 2273 | 127 |
+| 3462 | 114 |
+| 786 | 103 |
+| 1649 | 103 |
+| 1072 | 102 |
+| 336 | 101 |
+| 976 | 101 |
+| 426 | 98 |
+| 30 | 94 |
+| 639 | 94 |
+| 548 | 93 |
+| 860 | 93 |
+| 2854 | 93 |
+| 1142 | 92 |
+| 2097 | 92 |
+| 2361 | 92 |
+| 239 | 90 |
+| 468 | 90 |
+| 584 | 90 |
+| 723 | 90 |
+| 825 | 90 |
+| 1365 | 90 |
+| 1411 | 90 |
+| 1884 | 90 |
+| 2520 | 90 |
+| 3472 | 90 |
+| 365 | 89 |
+| 785 | 89 |
+| 811 | 89 |
+| 1642 | 89 |
+| 1692 | 89 |
+| 1927 | 89 |
+| 2009 | 89 |
+| 577 | 88 |
+| 612 | 88 |
+| 754 | 88 |
+| 1439 | 88 |
+| 1694 | 88 |
+| 2207 | 88 |
+| 2798 | 88 |
+| 1 | 87 |
+| 1174 | 87 |
+| 1286 | 87 |
+| 1324 | 87 |
+| 1563 | 87 |
+| 1759 | 87 |
+| 2127 | 87 |
+| 2192 | 87 |
+| 959 | 86 |
+| 1009 | 86 |
+| 1388 | 86 |
+| 2534 | 86 |
+| 3959 | 86 |
+| 158 | 85 |
+| 2483 | 85 |
+| 2763 | 85 |
+| 571 | 84 |
+| 883 | 84 |
+| 1127 | 84 |
+| 1275 | 84 |
+| 1688 | 84 |
+| 3409 | 84 |
+| 160 | 83 |
+| 255 | 83 |
+| 678 | 83 |
+| 1920 | 83 |
+| 2348 | 83 |
+| 2373 | 83 |
+| 3262 | 83 |
+| 3941 | 83 |
+| 3945 | 83 |
+| 6456 | 83 |
+| 172 | 82 |
+| 912 | 82 |
+| 921 | 82 |
+| 967 | 82 |
+| 1900 | 82 |
+| 2551 | 82 |
+| 3063 | 82 |
+| 3126 | 82 |
+| 4267 | 82 |
+| 116 | 81 |
+| 227 | 81 |
+| 320 | 81 |
+| 322 | 81 |
+| 362 | 81 |
+| 616 | 81 |
+| 749 | 81 |
+| 904 | 81 |
+| 1430 | 81 |
+| 2296 | 81 |
+| 2417 | 81 |
+| 2469 | 81 |
+| 2573 | 81 |
+| 2911 | 81 |
+| 3873 | 81 |
+| 821 | 80 |
+| 943 | 80 |
+| 1104 | 80 |
+| 1468 | 80 |
+| 1699 | 80 |
+| 302 | 79 |
+| 348 | 79 |
+| 524 | 79 |
+| 538 | 79 |
+| 573 | 79 |
+| 1004 | 79 |
+| 3461 | 79 |
+| 377 | 78 |
+| 1048 | 78 |
+| 1152 | 78 |
+| 2712 | 78 |
+| 7455 | 78 |
+| 446 | 77 |
+| 558 | 77 |
+| 563 | 77 |
+| 2866 | 77 |
+| 1032 | 76 |
+| 224 | 74 |
+| 1093 | 74 |
+| 1812 | 74 |
+| 3926 | 74 |
+| 266 | 73 |
+| 1793 | 73 |
+| 1508 | 72 |
+| 1673 | 71 |
+| 295 | 70 |
+| 879 | 70 |
+| 1993 | 70 |
+| 2636 | 70 |
+| 3669 | 70 |
+| 6593 | 69 |
+| 197 | 68 |
+| 4456 | 68 |
+| 1781 | 66 |
+| 1272 | 61 |
+
+### cases.demographic.education_level
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.demographic.ethnicity
+
+| Value | Count |
+|-------|-------|
+| not hispanic or latino | 57105 |
+| not reported | 10846 |
+| hispanic or latino | 2332 |
+| unknown | 515 |
+| _missing | 33 |
+
+### cases.demographic.gender
+
+| Value | Count |
+|-------|-------|
+| female | 70013 |
+| male | 747 |
+| _missing | 33 |
+
+### cases.demographic.marital_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.demographic.occupation_duration_years
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.demographic.population_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.demographic.race
+
+| Value | Count |
+|-------|-------|
+| white | 49230 |
+| black or african american | 11592 |
+| not reported | 5980 |
+| asian | 3930 |
+| american indian or alaska native | 85 |
+| _missing | 33 |
+
+### cases.demographic.sex_at_birth
+
+| Value | Count |
+|-------|-------|
+| female | 70013 |
+| male | 747 |
+| _missing | 33 |
+
+### cases.demographic.vital_status
+
+| Value | Count |
+|-------|-------|
+| alive | 60729 |
+| dead | 10031 |
+| _missing | 33 |
+
+### cases.demographic.year_of_birth
+
+| Value | Count |
+|-------|-------|
+| _missing | 70674 |
+| 1946 | 100 |
+
+### cases.demographic.year_of_death
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.adrenal_hormone
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.age_at_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 976 |
+| 32872 | 548 |
+| 23404 | 219 |
+| 22199 | 216 |
+| 29555 | 201 |
+| 26274 | 172 |
+| 22798 | 171 |
+| 22690 | 171 |
+| 23246 | 171 |
+| 21514 | 170 |
+| 14920 | 161 |
+| 16736 | 161 |
+| 14894 | 160 |
+| 20570 | 159 |
+| 17996 | 157 |
+| 22380 | 156 |
+| 23021 | 156 |
+| 16642 | 154 |
+| 18942 | 151 |
+| 17070 | 151 |
+| 17930 | 151 |
+| 18771 | 150 |
+| 17702 | 149 |
+| 18345 | 148 |
+| 24779 | 148 |
+| 29529 | 148 |
+| 15720 | 147 |
+| 19415 | 147 |
+| 21910 | 145 |
+| 18538 | 144 |
+| 19131 | 144 |
+| 21918 | 144 |
+| 25010 | 144 |
+| 19975 | 143 |
+| 19216 | 142 |
+| 20694 | 142 |
+| 21479 | 142 |
+| 21628 | 142 |
+| 25477 | 142 |
+| 21428 | 141 |
+| 24923 | 141 |
+| 24315 | 137 |
+| 28969 | 137 |
+| 18038 | 136 |
+| 19030 | 134 |
+| 23682 | 134 |
+| 18741 | 133 |
+| 14122 | 131 |
+| 23150 | 131 |
+| 20210 | 131 |
+| 26052 | 130 |
+| 19479 | 130 |
+| 11204 | 127 |
+| 11650 | 127 |
+| 17682 | 127 |
+| 22449 | 127 |
+| 13836 | 125 |
+| 14175 | 123 |
+| 16750 | 121 |
+| 18014 | 121 |
+| 18873 | 121 |
+| 29751 | 119 |
+| 21488 | 118 |
+| 25974 | 118 |
+| 25186 | 116 |
+| 16363 | 115 |
+| 13138 | 114 |
+| 12443 | 112 |
+| 18237 | 112 |
+| 23628 | 112 |
+| 15078 | 111 |
+| 23948 | 111 |
+| 17969 | 109 |
+| 20448 | 109 |
+| 26588 | 109 |
+| 28084 | 108 |
+| 29104 | 106 |
+| 19192 | 105 |
+| 21949 | 105 |
+| 22703 | 105 |
+| 14731 | 104 |
+| 15593 | 104 |
+| 15903 | 104 |
+| 15980 | 104 |
+| 16163 | 104 |
+| 23006 | 104 |
+| 23168 | 104 |
+| 28699 | 104 |
+| 15027 | 103 |
+| 22800 | 103 |
+| 22896 | 103 |
+| 24104 | 103 |
+| 25289 | 103 |
+| 30125 | 103 |
+| 19117 | 102 |
+| 21024 | 102 |
+| 21981 | 102 |
+| 22071 | 102 |
+| 23058 | 102 |
+| 23397 | 102 |
+| 25994 | 102 |
+| 27729 | 102 |
+| 28733 | 102 |
+| 14653 | 101 |
+| 14755 | 101 |
+| 15055 | 101 |
+| 20374 | 101 |
+| 23366 | 101 |
+| 24266 | 101 |
+| 25119 | 101 |
+| 14494 | 100 |
+| 14854 | 100 |
+| 16203 | 100 |
+| 16473 | 100 |
+| 17221 | 100 |
+| 19723 | 100 |
+| 19895 | 100 |
+| 20625 | 100 |
+| 21397 | 100 |
+| 23294 | 100 |
+| 15942 | 99 |
+| 16688 | 99 |
+| 17465 | 99 |
+| 20795 | 99 |
+| 21228 | 99 |
+| 21856 | 99 |
+| 23224 | 99 |
+| 27400 | 99 |
+| 30711 | 99 |
+| 11379 | 98 |
+| 21386 | 98 |
+| 22858 | 98 |
+| 24719 | 98 |
+| 14174 | 97 |
+| 15625 | 97 |
+| 20863 | 97 |
+| 16702 | 96 |
+| 22115 | 96 |
+| 19758 | 95 |
+| 23972 | 95 |
+| 13805 | 94 |
+| 14374 | 94 |
+| 14784 | 94 |
+| 15052 | 94 |
+| 15324 | 94 |
+| 15347 | 94 |
+| 16138 | 94 |
+| 17238 | 94 |
+| 19767 | 94 |
+| 20900 | 94 |
+| 21559 | 94 |
+| 22707 | 94 |
+| 23653 | 94 |
+| 25475 | 94 |
+| 25515 | 94 |
+| 26221 | 94 |
+| 29144 | 94 |
+| 32842 | 94 |
+| 13417 | 93 |
+| 13418 | 93 |
+| 12642 | 93 |
+| 13238 | 93 |
+| 13340 | 93 |
+| 13551 | 93 |
+| 16310 | 93 |
+| 16615 | 93 |
+| 16623 | 93 |
+| 17807 | 93 |
+| 18171 | 93 |
+| 18282 | 93 |
+| 18875 | 93 |
+| 20705 | 93 |
+| 20759 | 93 |
+| 20788 | 93 |
+| 21671 | 93 |
+| 22688 | 93 |
+| 23327 | 93 |
+| 24710 | 93 |
+| 25263 | 93 |
+| 25770 | 93 |
+| 17660 | 92 |
+| 18334 | 92 |
+| 18362 | 92 |
+| 23461 | 86 |
+| 17033 | 83 |
+| 23708 | 83 |
+| 13642 | 82 |
+| 26399 | 82 |
+| 25142 | 81 |
+| 26931 | 81 |
+| 13450 | 81 |
+| 20722 | 81 |
+| 21646 | 81 |
+| 17301 | 78 |
+| 19123 | 78 |
+| 19428 | 78 |
+| 11120 | 77 |
+| 23870 | 77 |
+| 32375 | 75 |
+| 26841 | 74 |
+| 14531 | 67 |
+
+### cases.diagnoses.ajcc_clinical_m
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ajcc_clinical_n
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ajcc_clinical_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ajcc_clinical_t
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ajcc_pathologic_m
+
+| Value | Count |
+|-------|-------|
+| m0 | 59280 |
+| mx | 10203 |
+| m1 | 1435 |
+| cm0 (i+) | 414 |
+| _missing | 33 |
+
+### cases.diagnoses.ajcc_pathologic_n
+
+| Value | Count |
+|-------|-------|
+| n0 | 22293 |
+| n1a | 10995 |
+| n0 (i-) | 10042 |
+| n1 | 8130 |
+| n2a | 4132 |
+| n2 | 3723 |
+| n3a | 3021 |
+| n1mi | 2378 |
+| n1b | 2173 |
+| n0 (i+) | 1748 |
+| n3 | 1662 |
+| nx | 1407 |
+| n3b | 203 |
+| n1c | 171 |
+| n3c | 93 |
+| n0 (mol+) | 76 |
+| _missing | 33 |
+
+### cases.diagnoses.ajcc_pathologic_stage
+
+| Value | Count |
+|-------|-------|
+| stage iia | 23628 |
+| stage iib | 16649 |
+| stage iiia | 10083 |
+| stage i | 5899 |
+| stage ia | 5830 |
+| stage iiic | 4191 |
+| stage iiib | 1681 |
+| stage iv | 1312 |
+| stage x | 843 |
+| _missing | 738 |
+| stage ii | 532 |
+| stage ib | 432 |
+| stage 0 | 310 |
+| stage iii | 225 |
+| stage 0is | 82 |
+
+### cases.diagnoses.ajcc_pathologic_t
+
+| Value | Count |
+|-------|-------|
+| t2 | 41387 |
+| t1c | 14138 |
+| t3 | 8887 |
+| t1 | 2748 |
+| t4b | 1781 |
+| t1b | 1105 |
+| t4 | 631 |
+| t1a | 361 |
+| tx | 251 |
+| t4d | 211 |
+| tis | 208 |
+| tis (lcis) | 135 |
+| tis (dcis) | 132 |
+| t2b | 92 |
+| t2a | 83 |
+| t3a | 78 |
+| _missing | 33 |
+
+### cases.diagnoses.ajcc_serum_tumor_markers
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ajcc_staging_system_edition
+
+| Value | Count |
+|-------|-------|
+| 6th | 28218 |
+| 7th | 26815 |
+| _missing | 9934 |
+| 5th | 3851 |
+| 4th | 1835 |
+| 3rd | 584 |
+| 2nd | 81 |
+| 1st | 67 |
+
+### cases.diagnoses.ann_arbor_b_symptoms
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ann_arbor_b_symptoms_described
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ann_arbor_clinical_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ann_arbor_extranodal_involvement
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ann_arbor_pathologic_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.best_overall_response
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.burkitt_lymphoma_clinical_variant
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.calgb_risk_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.cancer_detection_method
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.child_pugh_classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.clark_level
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.classification_of_tumor
+
+| Value | Count |
+|-------|-------|
+| primary | 70660 |
+| metastasis | 4421 |
+| prior primary | 2932 |
+| synchronous primary | 2341 |
+| recurrence | 1609 |
+| not reported | 1436 |
+| subsequent primary | 1221 |
+| _missing | 33 |
+
+### cases.diagnoses.cog_liver_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.cog_neuroblastoma_risk_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.cog_renal_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.cog_rhabdomyosarcoma_risk_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.contiguous_organ_invaded
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.days_to_best_overall_response
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.days_to_diagnosis
+
+| Value | Count |
+|-------|-------|
+| 0 | 70741 |
+| 16 | 209 |
+| 556 | 171 |
+| 54 | 157 |
+| 443 | 144 |
+| 192 | 142 |
+| 586 | 137 |
+| 859 | 121 |
+| 1304 | 103 |
+| 90 | 102 |
+| 1619 | 100 |
+| 1709 | 100 |
+| 2674 | 100 |
+| 3076 | 95 |
+| 563 | 94 |
+| 1100 | 94 |
+| 179 | 93 |
+| 180 | 93 |
+| 83 | 93 |
+| 102 | 93 |
+| 313 | 93 |
+| 716 | 93 |
+| 966 | 93 |
+| 1640 | 93 |
+| 1120 | 92 |
+| 1343 | 92 |
+| 136 | 91 |
+| -57 | 90 |
+| 207 | 90 |
+| 653 | 90 |
+| 1123 | 90 |
+| 1239 | 90 |
+| 1353 | 90 |
+| 46 | 88 |
+| 382 | 88 |
+| 1290 | 88 |
+| 559 | 87 |
+| 1645 | 86 |
+| -18790 | 86 |
+| -5300 | 86 |
+| 780 | 86 |
+| -3287 | 84 |
+| 181 | 84 |
+| 489 | 84 |
+| 2557 | 84 |
+| 3287 | 84 |
+| 1066 | 83 |
+| 1313 | 83 |
+| 10 | 83 |
+| 33 | 83 |
+| 648 | 83 |
+| 672 | 83 |
+| 1470 | 83 |
+| 2165 | 83 |
+| 2717 | 83 |
+| 5117 | 83 |
+| 596 | 82 |
+| -3886 | 82 |
+| -2439 | 82 |
+| 75 | 82 |
+| 92 | 82 |
+| 305 | 82 |
+| 574 | 82 |
+| 654 | 82 |
+| 667 | 82 |
+| 729 | 82 |
+| 762 | 82 |
+| 791 | 82 |
+| 795 | 82 |
+| 968 | 82 |
+| 1543 | 82 |
+| 1552 | 82 |
+| 1609 | 82 |
+| 1673 | 82 |
+| 2041 | 82 |
+| 2561 | 82 |
+| 2787 | 82 |
+| 301 | 81 |
+| 524 | 81 |
+| 143 | 81 |
+| 434 | 81 |
+| 1922 | 81 |
+| -27 | 81 |
+| 39 | 81 |
+| 243 | 81 |
+| 275 | 81 |
+| 289 | 81 |
+| 291 | 81 |
+| 311 | 81 |
+| 431 | 81 |
+| 746 | 81 |
+| 1412 | 81 |
+| 1810 | 81 |
+| 2989 | 81 |
+| 7 | 80 |
+| 174 | 80 |
+| 258 | 80 |
+| 366 | 80 |
+| 419 | 80 |
+| 544 | 80 |
+| 588 | 80 |
+| 597 | 80 |
+| 739 | 80 |
+| 971 | 80 |
+| 1364 | 80 |
+| 3862 | 80 |
+| 268 | 79 |
+| 387 | 79 |
+| 396 | 79 |
+| 456 | 79 |
+| 1034 | 79 |
+| 1136 | 79 |
+| 1808 | 79 |
+| 2011 | 79 |
+| 790 | 78 |
+| 994 | 78 |
+| 490 | 78 |
+| 188 | 77 |
+| 1414 | 77 |
+| 237 | 77 |
+| 447 | 77 |
+| 682 | 76 |
+| 1516 | 76 |
+| 2330 | 76 |
+| 1351 | 74 |
+| 536 | 74 |
+| 802 | 74 |
+| 813 | 74 |
+| 1072 | 74 |
+| 1303 | 74 |
+| 155 | 73 |
+| 1614 | 73 |
+| 756 | 72 |
+| 798 | 72 |
+| 21 | 71 |
+| 361 | 70 |
+| 766 | 70 |
+| 834 | 70 |
+| 1014 | 70 |
+| 1094 | 70 |
+| 2496 | 70 |
+| 4203 | 70 |
+| 4224 | 70 |
+| 18 | 69 |
+| 3014 | 69 |
+| 4343 | 69 |
+| 6535 | 69 |
+| 6536 | 69 |
+| 681 | 68 |
+| 267 | 67 |
+| 1104 | 66 |
+| 195 | 63 |
+| _missing | 33 |
+
+### cases.diagnoses.days_to_last_follow_up
+
+| Value | Count |
+|-------|-------|
+| 0.0 | 1262 |
+| 10.0 | 995 |
+| 385.0 | 493 |
+| 365.0 | 388 |
+| 375.0 | 335 |
+| 396.0 | 317 |
+| 554.0 | 315 |
+| 30.0 | 306 |
+| 1004.0 | 287 |
+| 577.0 | 278 |
+| 575.0 | 277 |
+| 584.0 | 277 |
+| 31.0 | 272 |
+| 304.0 | 272 |
+| 943.0 | 270 |
+| 477.0 | 240 |
+| 426.0 | 235 |
+| 275.0 | 232 |
+| 614.0 | 232 |
+| 2255.0 | 231 |
+| 747.0 | 228 |
+| 1051.0 | 227 |
+| 1611.0 | 224 |
+| 912.0 | 220 |
+| 588.0 | 218 |
+| 792.0 | 218 |
+| 1043.0 | 218 |
+| 358.0 | 215 |
+| 2965.0 | 215 |
+| 5.0 | 214 |
+| 441.0 | 214 |
+| 635.0 | 214 |
+| 612.0 | 213 |
+| 965.0 | 213 |
+| 532.0 | 212 |
+| 616.0 | 207 |
+| 78.0 | 205 |
+| 518.0 | 205 |
+| 762.0 | 204 |
+| 322.0 | 203 |
+| 394.0 | 203 |
+| 447.0 | 203 |
+| 1308.0 | 201 |
+| 1.0 | 200 |
+| 754.0 | 200 |
+| 1001.0 | 196 |
+| 1034.0 | 193 |
+| 620.0 | 192 |
+| 727.0 | 190 |
+| 1203.0 | 188 |
+| 439.0 | 185 |
+| 991.0 | 176 |
+| 2442.0 | 175 |
+| 1692.0 | 174 |
+| 1673.0 | 173 |
+| 373.0 | 172 |
+| 954.0 | 172 |
+| 336.0 | 170 |
+| 1156.0 | 170 |
+| 450.0 | 168 |
+| 501.0 | 167 |
+| 488.0 | 166 |
+| 666.0 | 164 |
+| 767.0 | 164 |
+| 974.0 | 163 |
+| 1371.0 | 162 |
+| 1234.0 | 161 |
+| 630.0 | 160 |
+| 34.0 | 159 |
+| 1120.0 | 159 |
+| 1007.0 | 159 |
+| 1474.0 | 158 |
+| 639.0 | 157 |
+| 393.0 | 155 |
+| 607.0 | 155 |
+| 707.0 | 155 |
+| 1417.0 | 155 |
+| 574.0 | 154 |
+| 626.0 | 154 |
+| 860.0 | 154 |
+| 1642.0 | 154 |
+| 2190.0 | 153 |
+| 659.0 | 152 |
+| 1728.0 | 152 |
+| 1935.0 | 152 |
+| 579.0 | 151 |
+| 752.0 | 151 |
+| 627.0 | 151 |
+| 541.0 | 150 |
+| 348.0 | 149 |
+| 519.0 | 149 |
+| 785.0 | 149 |
+| 1026.0 | 149 |
+| 403.0 | 148 |
+| 1174.0 | 148 |
+| 1563.0 | 148 |
+| 408.0 | 147 |
+| 410.0 | 147 |
+| 431.0 | 147 |
+| 2483.0 | 147 |
+| 3283.0 | 147 |
+| 172.0 | 146 |
+| 303.0 | 146 |
+| 371.0 | 146 |
+| 1009.0 | 146 |
+| 317.0 | 145 |
+| 380.0 | 145 |
+| 424.0 | 145 |
+| 552.0 | 145 |
+| 640.0 | 145 |
+| 1688.0 | 145 |
+| 381.0 | 144 |
+| 643.0 | 144 |
+| 679.0 | 144 |
+| 883.0 | 144 |
+| 1229.0 | 144 |
+| 1363.0 | 144 |
+| 2645.0 | 144 |
+| 383.0 | 143 |
+| 496.0 | 143 |
+| 499.0 | 143 |
+| 504.0 | 143 |
+| 562.0 | 143 |
+| 595.0 | 143 |
+| 608.0 | 143 |
+| 611.0 | 143 |
+| 714.0 | 143 |
+| 760.0 | 143 |
+| 931.0 | 143 |
+| 996.0 | 143 |
+| 1062.0 | 143 |
+| 302.0 | 142 |
+| 320.0 | 142 |
+| 343.0 | 142 |
+| 528.0 | 142 |
+| 530.0 | 142 |
+| 533.0 | 142 |
+| 812.0 | 142 |
+| 1208.0 | 142 |
+| 1604.0 | 142 |
+| 2596.0 | 142 |
+| 2632.0 | 142 |
+| 2991.0 | 142 |
+| 366.0 | 141 |
+| 376.0 | 141 |
+| 538.0 | 141 |
+| 1220.0 | 141 |
+| 170.0 | 140 |
+| 563.0 | 140 |
+| 675.0 | 140 |
+| 975.0 | 140 |
+| 313.0 | 139 |
+| 448.0 | 139 |
+| 1148.0 | 138 |
+| 1309.0 | 138 |
+| 718.0 | 137 |
+| 446.0 | 136 |
+| 242.0 | 135 |
+| 345.0 | 135 |
+| 461.0 | 135 |
+| 759.0 | 135 |
+| 1093.0 | 135 |
+| 2372.0 | 135 |
+| 428.0 | 134 |
+| 160.0 | 133 |
+| 227.0 | 133 |
+| 266.0 | 133 |
+| 463.0 | 133 |
+| 273.0 | 132 |
+| 622.0 | 131 |
+| 738.0 | 131 |
+| 2330.0 | 128 |
+| 878.0 | 127 |
+| 1556.0 | 127 |
+| 2041.0 | 127 |
+| 2273.0 | 127 |
+| 7777.0 | 127 |
+| 224.0 | 126 |
+| 1139.0 | 125 |
+| 694.0 | 123 |
+| 134.0 | 123 |
+| 865.0 | 122 |
+| 710.0 | 121 |
+| 178.0 | 119 |
+| 715.0 | 118 |
+| 1005.0 | 118 |
+| 2371.0 | 118 |
+| 293.0 | 117 |
+| 451.0 | 116 |
+| 765.0 | 115 |
+| 3462.0 | 114 |
+| 423.0 | 112 |
+| 2381.0 | 112 |
+| 661.0 | 111 |
+| 2403.0 | 111 |
+| 397.0 | 109 |
+| 806.0 | 109 |
+| 1079.0 | 106 |
+| 777.0 | 105 |
+| 495.0 | 104 |
+| _missing | 33 |
+
+### cases.diagnoses.days_to_last_known_disease_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.days_to_recurrence
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.diagnosis_is_primary_disease
+
+| Value | Count |
+|-------|-------|
+| true | 70660 |
+| false | 11823 |
+| _missing | 114 |
+
+### cases.diagnoses.double_expressor_lymphoma
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.double_hit_lymphoma
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.eln_risk_classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.enneking_msts_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.enneking_msts_metastasis
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.enneking_msts_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.enneking_msts_tumor_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ensat_clinical_m
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ensat_pathologic_n
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ensat_pathologic_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ensat_pathologic_t
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.esophageal_columnar_dysplasia_degree
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.esophageal_columnar_metaplasia_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.fab_morphology_code
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.figo_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70693 |
+| stage ib2 | 81 |
+
+### cases.diagnoses.figo_staging_edition_year
+
+| Value | Count |
+|-------|-------|
+| _missing | 70693 |
+| 2009 | 81 |
+
+### cases.diagnoses.first_symptom_longest_duration
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.first_symptom_prior_to_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.gastric_esophageal_junction_involvement
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.gleason_grade_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.gleason_grade_tertiary
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.gleason_patterns_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.gleason_score
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.goblet_cells_columnar_mucosa_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.icd_10_code
+
+| Value | Count |
+|-------|-------|
+| c50.9 | 69984 |
+| c50.3 | 221 |
+| c50.4 | 195 |
+| c50.2 | 150 |
+| c50.8 | 140 |
+| c50.919 | 83 |
+| c50.5 | 82 |
+| _missing | 33 |
+
+### cases.diagnoses.igcccg_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.inpc_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.inpc_histologic_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.inrg_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.inss_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.international_prognostic_index
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.irs_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.irs_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ishak_fibrosis_score
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.iss_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.last_known_disease_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70674 |
+| not reported | 100 |
+
+### cases.diagnoses.laterality
+
+| Value | Count |
+|-------|-------|
+| left | 38086 |
+| right | 35359 |
+| _missing | 114 |
+
+### cases.diagnoses.margin_distance
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.margins_involved_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.masaoka_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.max_tumor_bulk_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.medulloblastoma_molecular_classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.melanoma_known_primary
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.metastasis_at_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 43793 |
+| no metastasis | 25120 |
+| metastasis, nos | 1880 |
+
+### cases.diagnoses.method_of_diagnosis
+
+| Value | Count |
+|-------|-------|
+| core biopsy | 39046 |
+| surgical resection | 13406 |
+| fine needle aspiration | 6191 |
+| _missing | 6184 |
+| excisional biopsy | 1893 |
+| cytology | 1504 |
+| biopsy | 1338 |
+| incisional biopsy | 1037 |
+| unknown | 187 |
+| ultrasound guided biopsy | 140 |
+
+### cases.diagnoses.mitosis_karyorrhexis_index
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.morphology
+
+| Value | Count |
+|-------|-------|
+| 8500/3 | 50988 |
+| 8520/3 | 12733 |
+| not reported | 4328 |
+| 8522/3 | 1938 |
+| 8523/3 | 1277 |
+| 8575/3 | 985 |
+| 8480/3 | 980 |
+| 8524/3 | 473 |
+| 8500/2 | 426 |
+| 8510/3 | 399 |
+| 8503/3 | 378 |
+| 8310/3 | 289 |
+| 8090/3 | 287 |
+| 8507/3 | 270 |
+| 8140/3 | 253 |
+| 8541/3 | 212 |
+| 8520/2 | 198 |
+| 8022/3 | 155 |
+| 8200/3 | 147 |
+| 9020/3 | 137 |
+| 8720/2 | 137 |
+| 8050/3 | 127 |
+| 9591/3 | 90 |
+| 8211/3 | 89 |
+| 8070/2 | 86 |
+| 8936/1 | 86 |
+| 8401/3 | 85 |
+| 8010/2 | 84 |
+| 8010/3 | 83 |
+| 8201/3 | 83 |
+| 8700/0 | 83 |
+| 8013/3 | 82 |
+| 9989/3 | 82 |
+| 9650/3 | 81 |
+| 8720/3 | 79 |
+| 8045/3 | 78 |
+| 8502/3 | 73 |
+| _missing | 33 |
+
+### cases.diagnoses.ovarian_specimen_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ovarian_surface_involvement
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.additional_pathology_findings
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.anaplasia_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.anaplasia_present_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.bone_marrow_malignant_cells
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.breslow_thickness
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.breslow_thickness_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.circumferential_resection_margin
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.columnar_mucosa_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.consistent_pathology_review
+
+| Value | Count |
+|-------|-------|
+| yes | 70595 |
+| _missing | 114 |
+| no | 84 |
+
+### cases.diagnoses.pathology_details.days_to_pathology_detail
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.dysplasia_degree
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.dysplasia_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.epithelioid_cell_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.epithelioid_cell_percent_range
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.extracapsular_extension
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.extracapsular_extension_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.extranodal_extension
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.extraocular_nodule_size
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.extrascleral_extension
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.extrascleral_extension_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.extrathyroid_extension
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.greatest_tumor_dimension
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.gross_tumor_weight
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.histologic_progression_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.intratubular_germ_cell_neoplasia_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.largest_extrapelvic_peritoneal_focus
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.lymph_node_dissection_method
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.lymph_node_dissection_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.lymph_node_involved_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.lymph_node_involvement
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.lymph_nodes_positive
+
+| Value | Count |
+|-------|-------|
+| 0 | 29729 |
+| _missing | 10302 |
+| 1 | 10158 |
+| 2 | 5931 |
+| 3 | 3335 |
+| 4 | 2234 |
+| 5 | 1808 |
+| 6 | 1244 |
+| 8 | 808 |
+| 10 | 759 |
+| 9 | 673 |
+| 12 | 585 |
+| 7 | 477 |
+| 11 | 446 |
+| 14 | 416 |
+| 13 | 304 |
+| 19 | 294 |
+| 25 | 212 |
+| 27 | 206 |
+| 18 | 193 |
+| 21 | 149 |
+| 15 | 141 |
+| 29 | 141 |
+| 22 | 139 |
+| 26 | 90 |
+| 35 | 87 |
+| 23 | 82 |
+| 17 | 81 |
+| 20 | 81 |
+| 28 | 81 |
+| 24 | 80 |
+| 16 | 78 |
+
+### cases.diagnoses.pathology_details.lymph_nodes_removed
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.lymph_nodes_tested
+
+| Value | Count |
+|-------|-------|
+| _missing | 7951 |
+| 2 | 7258 |
+| 1 | 5618 |
+| 4 | 4531 |
+| 3 | 4449 |
+| 10 | 4271 |
+| 14 | 2549 |
+| 5 | 2509 |
+| 15 | 2500 |
+| 8 | 2152 |
+| 7 | 2013 |
+| 11 | 1955 |
+| 19 | 1932 |
+| 12 | 1840 |
+| 13 | 1746 |
+| 16 | 1665 |
+| 9 | 1662 |
+| 17 | 1644 |
+| 18 | 1561 |
+| 6 | 1405 |
+| 23 | 1143 |
+| 21 | 1053 |
+| 25 | 991 |
+| 22 | 825 |
+| 24 | 765 |
+| 28 | 704 |
+| 27 | 701 |
+| 26 | 642 |
+| 20 | 571 |
+| 29 | 395 |
+| 31 | 365 |
+| 32 | 365 |
+| 39 | 294 |
+| 0 | 276 |
+| 30 | 256 |
+| 35 | 235 |
+| 44 | 150 |
+| 36 | 144 |
+| 40 | 141 |
+| 34 | 82 |
+| 43 | 82 |
+| 37 | 81 |
+| 38 | 81 |
+
+### cases.diagnoses.pathology_details.lymphatic_invasion_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.margin_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.measurement_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.measurement_unit
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.metaplasia_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.micrometastasis_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.morphologic_architectural_pattern
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.necrosis_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.necrosis_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.non_nodal_regional_disease
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.non_nodal_tumor_deposits
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.number_proliferating_cells
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.percent_tumor_invasion
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.percent_tumor_nuclei
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.perineural_invasion_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.peripancreatic_lymph_nodes_positive
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.peripancreatic_lymph_nodes_tested
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.prcc_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.prostatic_chips_positive_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.prostatic_chips_total_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.prostatic_involvement_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.residual_tumor
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.residual_tumor_measurement
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.rhabdoid_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.rhabdoid_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.sarcomatoid_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.sarcomatoid_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.size_extraocular_nodule
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.spindle_cell_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.spindle_cell_percent_range
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.timepoint_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.transglottic_extension
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_basal_diameter
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_burden
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_depth_descriptor
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_depth_measurement
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_infiltrating_lymphocytes
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_infiltrating_macrophages
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_largest_dimension_diameter
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_length_measurement
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_shape
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_thickness
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.tumor_width_measurement
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.vascular_invasion_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pathology_details.vascular_invasion_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.pediatric_kidney_staging
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.peritoneal_fluid_cytological_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.primary_diagnosis
+
+| Value | Count |
+|-------|-------|
+| infiltrating duct carcinoma, nos | 50988 |
+| lobular carcinoma, nos | 12672 |
+| not reported | 4328 |
+| infiltrating duct and lobular carcinoma | 1938 |
+| infiltrating duct mixed with other types of carcinoma | 1277 |
+| metaplastic carcinoma, nos | 985 |
+| mucinous adenocarcinoma | 980 |
+| infiltrating lobular mixed with other types of carcinoma | 473 |
+| intraductal carcinoma, noninfiltrating, nos | 426 |
+| medullary carcinoma, nos | 399 |
+| intraductal papillary adenocarcinoma with invasion | 378 |
+| clear cell carcinoma | 289 |
+| basal cell carcinoma, nos | 287 |
+| invasive micropapillary carcinoma | 270 |
+| adenocarcinoma, nos | 253 |
+| paget disease and infiltrating duct carcinoma of breast | 212 |
+| lobular carcinoma in situ, nos | 198 |
+| pleomorphic carcinoma | 155 |
+| adenoid cystic carcinoma | 147 |
+| phyllodes tumor, malignant | 137 |
+| melanoma in situ | 137 |
+| papillary carcinoma, nos | 127 |
+| malignant lymphoma, non-hodgkin, nos | 90 |
+| tubular adenocarcinoma | 89 |
+| gastrointestinal stromal tumor, nos | 86 |
+| squamous cell carcinoma in situ, nos | 86 |
+| apocrine adenocarcinoma | 85 |
+| carcinoma in situ, nos | 84 |
+| carcinoma, nos | 83 |
+| cribriform carcinoma, nos | 83 |
+| pheochromocytoma, nos | 83 |
+| large cell neuroendocrine carcinoma | 82 |
+| myelodysplastic syndrome, nos | 82 |
+| hodgkin lymphoma, nos | 81 |
+| infiltrating lobular carcinoma, nos | 80 |
+| malignant melanoma, nos | 79 |
+| combined small cell carcinoma | 78 |
+| secretory carcinoma of breast | 73 |
+| _missing | 33 |
+
+### cases.diagnoses.primary_gleason_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.prior_malignancy
+
+| Value | Count |
+|-------|-------|
+| no | 67721 |
+| yes | 2488 |
+| not reported | 570 |
+| _missing | 33 |
+
+### cases.diagnoses.prior_treatment
+
+| Value | Count |
+|-------|-------|
+| no | 69778 |
+| yes | 8258 |
+| not reported | 144 |
+| _missing | 33 |
+
+### cases.diagnoses.progression_or_recurrence
+
+| Value | Count |
+|-------|-------|
+| _missing | 70674 |
+| not reported | 100 |
+
+### cases.diagnoses.residual_disease
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.satellite_nodule_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.secondary_gleason_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.site_of_resection_or_biopsy
+
+| Value | Count |
+|-------|-------|
+| breast, nos | 70741 |
+| not reported | 11823 |
+| _missing | 33 |
+
+### cases.diagnoses.sites_of_involvement
+
+| Value | Count |
+|-------|-------|
+| breast, nos | 32270 |
+| breast, left upper outer | 17053 |
+| breast, right upper outer | 14006 |
+| breast, right upper inner | 5900 |
+| breast, left upper inner | 5423 |
+| breast, right lower outer | 4637 |
+| breast, left lower outer | 4212 |
+| breast, left lower inner | 2871 |
+| breast, right lower inner | 2675 |
+| bone, nos | 1033 |
+| liver | 543 |
+| lung, nos | 331 |
+| skin | 216 |
+| lymph node, nos | 127 |
+| _missing | 114 |
+| adrenal gland, nos | 86 |
+| abdomen | 83 |
+| ovary, nos | 83 |
+
+### cases.diagnoses.sites_of_involvement_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.supratentorial_localization
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.synchronous_malignancy
+
+| Value | Count |
+|-------|-------|
+| no | 68880 |
+| yes | 1329 |
+| not reported | 570 |
+| _missing | 33 |
+
+### cases.diagnoses.tissue_or_organ_of_origin
+
+| Value | Count |
+|-------|-------|
+| breast, nos | 70048 |
+| bone, nos | 2607 |
+| not reported | 1805 |
+| lung, nos | 1369 |
+| liver | 1151 |
+| thorax, nos | 473 |
+| kidney, nos | 421 |
+| head, face or neck, nos | 379 |
+| brain, nos | 373 |
+| colon, nos | 323 |
+| intrathoracic lymph nodes | 293 |
+| skin, nos | 265 |
+| lower-inner quadrant of breast | 221 |
+| cervix uteri | 210 |
+| uterus, nos | 198 |
+| upper-outer quadrant of breast | 195 |
+| upper-inner quadrant of breast | 150 |
+| bone marrow | 149 |
+| adrenal gland, nos | 145 |
+| skin of trunk | 143 |
+| overlapping lesion of breast | 140 |
+| other ill-defined sites | 137 |
+| skin of lower limb and hip | 137 |
+| stomach, nos | 134 |
+| endometrium | 131 |
+| lower limb, nos | 111 |
+| unknown | 90 |
+| lymph nodes of head, face and neck | 87 |
+| bladder, nos | 84 |
+| lip, nos | 84 |
+| lower-outer quadrant of breast | 82 |
+| ovary | 82 |
+| rectum, nos | 82 |
+| specified parts of peritoneum | 82 |
+| abdomen, nos | 81 |
+| connective, subcutaneous and other soft tissues of thorax | 81 |
+| skin of scalp and neck | 81 |
+| upper limb, nos | 79 |
+| thyroid gland | 78 |
+| lymph node, nos | 76 |
+| _missing | 33 |
+
+### cases.diagnoses.treatments.chemo_concurrent_to_radiation
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.clinical_trial_indicator
+
+| Value | Count |
+|-------|-------|
+| _missing | 47165 |
+| no | 22539 |
+| yes | 1734 |
+
+### cases.diagnoses.treatments.course_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 53851 |
+| 1.0 | 16875 |
+| 2.0 | 464 |
+| 3.0 | 234 |
+
+### cases.diagnoses.treatments.days_to_treatment_end
+
+| Value | Count |
+|-------|-------|
+| _missing | 24727 |
+| 122 | 1012 |
+| 153 | 958 |
+| 184 | 955 |
+| 134 | 920 |
+| 147 | 911 |
+| 155 | 907 |
+| 246 | 891 |
+| 141 | 875 |
+| 162 | 840 |
+| 212 | 831 |
+| 92 | 821 |
+| 140 | 808 |
+| 91 | 786 |
+| 151 | 774 |
+| 154 | 773 |
+| 161 | 763 |
+| 111 | 711 |
+| 105 | 710 |
+| 181 | 679 |
+| 182 | 668 |
+| 262 | 650 |
+| 169 | 636 |
+| 107 | 630 |
+| 210 | 627 |
+| 97 | 618 |
+| 173 | 615 |
+| 123 | 612 |
+| 119 | 610 |
+| 197 | 605 |
+| 167 | 597 |
+| 233 | 591 |
+| 160 | 590 |
+| 143 | 578 |
+| 104 | 573 |
+| 202 | 569 |
+| 266 | 568 |
+| 196 | 559 |
+| 166 | 553 |
+| 217 | 553 |
+| 263 | 547 |
+| 78 | 546 |
+| 224 | 546 |
+| 126 | 545 |
+| 237 | 541 |
+| 247 | 537 |
+| 221 | 534 |
+| 275 | 519 |
+| 174 | 518 |
+| 112 | 517 |
+| 133 | 515 |
+| 273 | 509 |
+| 245 | 508 |
+| 118 | 506 |
+| 193 | 505 |
+| 175 | 498 |
+| 208 | 484 |
+| 128 | 480 |
+| 139 | 478 |
+| 108 | 477 |
+| 98 | 475 |
+| 223 | 469 |
+| 238 | 467 |
+| 185 | 466 |
+| 177 | 465 |
+| 121 | 465 |
+| 179 | 463 |
+| 144 | 461 |
+| 125 | 456 |
+| 287 | 456 |
+| 176 | 451 |
+| 242 | 448 |
+| 249 | 441 |
+| 170 | 440 |
+| 131 | 437 |
+| 145 | 436 |
+| 120 | 434 |
+| 198 | 432 |
+| 164 | 430 |
+| 209 | 429 |
+| 168 | 424 |
+| 228 | 416 |
+| 117 | 412 |
+| 251 | 404 |
+| 148 | 403 |
+| 149 | 403 |
+| 199 | 401 |
+| 138 | 400 |
+| 226 | 397 |
+| 150 | 396 |
+| 127 | 392 |
+| 106 | 391 |
+| 220 | 389 |
+| 93 | 388 |
+| 178 | 388 |
+| 236 | 385 |
+| 115 | 384 |
+| 244 | 384 |
+| 191 | 383 |
+| 294 | 381 |
+| 248 | 378 |
+| 205 | 377 |
+| 207 | 376 |
+| 216 | 366 |
+| 213 | 365 |
+| 194 | 362 |
+| 232 | 360 |
+| 171 | 354 |
+| 271 | 351 |
+| 204 | 350 |
+| 280 | 344 |
+| 99 | 343 |
+| 300 | 340 |
+| 314 | 337 |
+| 211 | 337 |
+| 189 | 335 |
+| 316 | 333 |
+| 96 | 331 |
+| 136 | 330 |
+| 124 | 330 |
+| 102 | 330 |
+| 84 | 324 |
+| 222 | 323 |
+| 135 | 322 |
+| 163 | 322 |
+| 218 | 321 |
+| 252 | 321 |
+| 259 | 321 |
+| 195 | 320 |
+| 200 | 318 |
+| 231 | 313 |
+| 254 | 309 |
+| 89 | 306 |
+| 180 | 305 |
+| 203 | 301 |
+| 79 | 300 |
+| 303 | 299 |
+| 201 | 293 |
+| 137 | 292 |
+| 239 | 288 |
+| 101 | 285 |
+| 183 | 280 |
+| 85 | 278 |
+| 214 | 276 |
+| 243 | 273 |
+| 100 | 272 |
+| 240 | 272 |
+| 253 | 272 |
+| 278 | 271 |
+| 225 | 270 |
+| 267 | 266 |
+| 235 | 265 |
+| 281 | 264 |
+| 116 | 263 |
+| 215 | 262 |
+| 188 | 257 |
+| 190 | 254 |
+| 187 | 254 |
+| 308 | 252 |
+| 293 | 242 |
+| 574 | 235 |
+| 192 | 230 |
+| 302 | 227 |
+| 229 | 223 |
+| 95 | 222 |
+| 94 | 220 |
+| 30 | 219 |
+| 172 | 218 |
+| 129 | 213 |
+| 159 | 210 |
+| 87 | 209 |
+| 62 | 209 |
+| 50 | 208 |
+| 157 | 208 |
+| 74 | 208 |
+| 257 | 207 |
+| 113 | 205 |
+| 43 | 205 |
+| 80 | 202 |
+| 146 | 197 |
+| 289 | 194 |
+| 0 | 189 |
+| 114 | 184 |
+| 356 | 167 |
+| 76 | 162 |
+| 63 | 160 |
+| 83 | 160 |
+| 503 | 155 |
+| 142 | 154 |
+| 152 | 154 |
+| 31 | 147 |
+| 234 | 143 |
+| 51 | 142 |
+| 282 | 142 |
+| 324 | 141 |
+| 206 | 140 |
+| 312 | 138 |
+| 49 | 136 |
+| 132 | 136 |
+| 45 | 135 |
+| 434 | 81 |
+
+### cases.diagnoses.treatments.days_to_treatment_start
+
+| Value | Count |
+|-------|-------|
+| _missing | 18713 |
+| 61 | 1815 |
+| 31 | 1585 |
+| 105 | 1414 |
+| 63 | 1337 |
+| 92 | 1247 |
+| 62 | 1222 |
+| 50 | 1164 |
+| 119 | 1117 |
+| 118 | 1070 |
+| 55 | 1066 |
+| 65 | 1042 |
+| 77 | 1012 |
+| 64 | 977 |
+| 0 | 922 |
+| 181 | 918 |
+| 71 | 897 |
+| 47 | 817 |
+| 112 | 807 |
+| 70 | 791 |
+| 98 | 788 |
+| 57 | 787 |
+| 203 | 785 |
+| 211 | 773 |
+| 42 | 757 |
+| 74 | 754 |
+| 141 | 754 |
+| 218 | 750 |
+| 153 | 745 |
+| 189 | 742 |
+| 85 | 739 |
+| 80 | 728 |
+| 69 | 718 |
+| 84 | 716 |
+| 91 | 707 |
+| 76 | 703 |
+| 53 | 700 |
+| 48 | 686 |
+| 111 | 675 |
+| 170 | 665 |
+| 154 | 663 |
+| 140 | 648 |
+| 58 | 644 |
+| 196 | 643 |
+| 67 | 635 |
+| 184 | 635 |
+| 126 | 627 |
+| 167 | 625 |
+| 41 | 624 |
+| 30 | 623 |
+| 78 | 623 |
+| 97 | 618 |
+| 49 | 616 |
+| 122 | 611 |
+| 252 | 605 |
+| 54 | 603 |
+| 175 | 600 |
+| 123 | 598 |
+| 190 | 598 |
+| 130 | 590 |
+| 182 | 584 |
+| 52 | 580 |
+| 169 | 580 |
+| 160 | 579 |
+| 136 | 576 |
+| 82 | 575 |
+| 200 | 556 |
+| 44 | 549 |
+| 89 | 548 |
+| 32 | 544 |
+| 157 | 536 |
+| 132 | 536 |
+| 60 | 533 |
+| 120 | 532 |
+| 214 | 525 |
+| 230 | 523 |
+| 273 | 523 |
+| 96 | 522 |
+| 93 | 520 |
+| 148 | 520 |
+| 239 | 519 |
+| 36 | 509 |
+| 125 | 505 |
+| 101 | 500 |
+| 243 | 500 |
+| 103 | 499 |
+| 79 | 494 |
+| 131 | 480 |
+| 113 | 479 |
+| 225 | 478 |
+| 38 | 477 |
+| 75 | 475 |
+| 188 | 470 |
+| 232 | 470 |
+| 72 | 466 |
+| 68 | 465 |
+| 231 | 462 |
+| 73 | 458 |
+| 146 | 458 |
+| 88 | 451 |
+| 108 | 447 |
+| 245 | 436 |
+| 94 | 435 |
+| 251 | 431 |
+| 137 | 429 |
+| 151 | 422 |
+| 162 | 421 |
+| 205 | 416 |
+| 109 | 413 |
+| 28 | 410 |
+| 46 | 406 |
+| 56 | 404 |
+| 43 | 402 |
+| 23 | 402 |
+| 114 | 401 |
+| 33 | 400 |
+| 34 | 398 |
+| 149 | 396 |
+| 212 | 395 |
+| 35 | 390 |
+| 129 | 390 |
+| 269 | 388 |
+| 166 | 387 |
+| 128 | 387 |
+| 201 | 386 |
+| 86 | 385 |
+| 24 | 381 |
+| 279 | 381 |
+| 209 | 380 |
+| 192 | 375 |
+| 227 | 374 |
+| 102 | 367 |
+| 217 | 366 |
+| 236 | 366 |
+| 22 | 365 |
+| 158 | 365 |
+| 234 | 364 |
+| 194 | 364 |
+| 121 | 363 |
+| 179 | 363 |
+| 206 | 363 |
+| 191 | 358 |
+| 143 | 357 |
+| 51 | 354 |
+| 107 | 354 |
+| 147 | 352 |
+| 145 | 351 |
+| 229 | 348 |
+| 21 | 346 |
+| 282 | 346 |
+| 172 | 345 |
+| 100 | 344 |
+| 202 | 344 |
+| 183 | 343 |
+| 237 | 343 |
+| 174 | 342 |
+| 250 | 341 |
+| 66 | 339 |
+| 165 | 337 |
+| 134 | 337 |
+| 9 | 336 |
+| 163 | 336 |
+| 274 | 335 |
+| 59 | 334 |
+| 106 | 334 |
+| 10 | 333 |
+| 16 | 333 |
+| 207 | 332 |
+| 256 | 331 |
+| 95 | 330 |
+| 152 | 329 |
+| 39 | 328 |
+| 193 | 326 |
+| 11 | 325 |
+| 161 | 322 |
+| 45 | 316 |
+| 208 | 314 |
+| 249 | 313 |
+| 29 | 312 |
+| 257 | 310 |
+| 164 | 300 |
+| 15 | 293 |
+| 14 | 288 |
+| 13 | 280 |
+| 27 | 279 |
+| 317 | 279 |
+| 265 | 277 |
+| 81 | 276 |
+| 133 | 273 |
+| 261 | 271 |
+| 176 | 267 |
+| 155 | 265 |
+| 37 | 264 |
+| 127 | 261 |
+| 226 | 259 |
+| 104 | 256 |
+| 83 | 214 |
+| 90 | 207 |
+| 117 | 204 |
+| 26 | 201 |
+| 40 | 154 |
+
+### cases.diagnoses.treatments.drug_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.embolic_agent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.initial_disease_status
+
+| Value | Count |
+|-------|-------|
+| initial diagnosis | 70660 |
+| recurrent disease | 4242 |
+| progressive disease | 3879 |
+| not reported | 1254 |
+| _missing | 114 |
+
+### cases.diagnoses.treatments.lesions_treated_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.margin_distance
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.margin_status
+
+| Value | Count |
+|-------|-------|
+| uninvolved | 62016 |
+| involved | 5004 |
+| not reported | 4619 |
+| indeterminate | 2255 |
+| unknown | 215 |
+| _missing | 114 |
+
+### cases.diagnoses.treatments.margins_involved_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.number_of_cycles
+
+| Value | Count |
+|-------|-------|
+| _missing | 49954 |
+| 4 | 14090 |
+| 6 | 3868 |
+| 3 | 2369 |
+| 1 | 2289 |
+| 12 | 2232 |
+| 8 | 1052 |
+| 5 | 1038 |
+| 2 | 974 |
+| 7 | 333 |
+| 22 | 312 |
+| 17 | 296 |
+| 24 | 290 |
+| 9 | 254 |
+| 14 | 206 |
+| 16 | 206 |
+| 174 | 172 |
+| 10 | 161 |
+| 11 | 144 |
+| 15 | 137 |
+| 13 | 128 |
+| 23 | 101 |
+| 20 | 93 |
+| 18 | 85 |
+| 19 | 82 |
+| 208 | 82 |
+| 27 | 81 |
+| 47 | 81 |
+
+### cases.diagnoses.treatments.number_of_fractions
+
+| Value | Count |
+|-------|-------|
+| _missing | 45493 |
+| 33.0 | 6904 |
+| 30.0 | 3845 |
+| 25.0 | 3843 |
+| 28.0 | 3211 |
+| 36.0 | 1102 |
+| 20.0 | 989 |
+| 10.0 | 945 |
+| 5.0 | 935 |
+| 23.0 | 678 |
+| 34.0 | 616 |
+| 21.0 | 553 |
+| 22.0 | 333 |
+| 31.0 | 328 |
+| 26.0 | 319 |
+| 45.0 | 317 |
+| 32.0 | 285 |
+| 35.0 | 230 |
+| 61.0 | 218 |
+| 7.0 | 208 |
+| 16.0 | 206 |
+| 8.0 | 199 |
+| 24.0 | 178 |
+| 54.0 | 172 |
+| 18.0 | 151 |
+| 19.0 | 145 |
+| 55.0 | 145 |
+| 6.0 | 140 |
+| 42.0 | 135 |
+| 1.0 | 134 |
+| 29.0 | 133 |
+| 27.0 | 104 |
+| 62.0 | 99 |
+| 3.0 | 93 |
+| 59.0 | 93 |
+| 14.0 | 90 |
+| 43.0 | 85 |
+| 12.0 | 83 |
+| 17.0 | 82 |
+| 40.0 | 82 |
+| 15.0 | 81 |
+| 56.0 | 81 |
+| 84.0 | 81 |
+| 13.0 | 79 |
+| 52.0 | 79 |
+| 57.0 | 79 |
+| 65.0 | 79 |
+| 2.0 | 73 |
+
+### cases.diagnoses.treatments.prescribed_dose
+
+| Value | Count |
+|-------|-------|
+| _missing | 46225 |
+| 1.0 | 9306 |
+| 20.0 | 8237 |
+| 600.0 | 3961 |
+| 60.0 | 3926 |
+| 175.0 | 2821 |
+| 2.5 | 1897 |
+| 25.0 | 1651 |
+| 100.0 | 1286 |
+| 4.0 | 1259 |
+| 130.0 | 1007 |
+| 80.0 | 990 |
+| 1000.0 | 953 |
+| 10.0 | 735 |
+| 90.0 | 722 |
+| 1600.0 | 688 |
+| 900.0 | 658 |
+| 140.0 | 614 |
+| 120.0 | 594 |
+| 6.0 | 578 |
+| 40.0 | 559 |
+| 1500.0 | 494 |
+| 2000.0 | 491 |
+| 95.0 | 460 |
+| 800.0 | 440 |
+| 3.6 | 440 |
+| 1200.0 | 439 |
+| 1100.0 | 362 |
+| 110.0 | 353 |
+| 75.0 | 319 |
+| 115.0 | 311 |
+| 164.0 | 311 |
+| 200.0 | 302 |
+| 1080.0 | 301 |
+| 500.0 | 270 |
+| 2.0 | 269 |
+| 160.0 | 259 |
+| 124.0 | 237 |
+| 116.0 | 236 |
+| 122.0 | 228 |
+| 106.0 | 222 |
+| 50.0 | 218 |
+| 126.0 | 217 |
+| 135.0 | 216 |
+| 3.75 | 213 |
+| 86.0 | 208 |
+| 113.0 | 199 |
+| 152.0 | 196 |
+| 1128.0 | 194 |
+| 87.0 | 186 |
+| 1130.0 | 180 |
+| 1230.0 | 180 |
+| 380.0 | 172 |
+| 157.0 | 171 |
+| 70.0 | 161 |
+| 232.0 | 160 |
+| 954.0 | 160 |
+| 98.0 | 158 |
+| 984.0 | 158 |
+| 860.0 | 157 |
+| 950.0 | 156 |
+| 118.0 | 155 |
+| 127.0 | 154 |
+| 155.0 | 152 |
+| 145.0 | 151 |
+| 610.0 | 151 |
+| 180.0 | 150 |
+| 104.0 | 148 |
+| 121.0 | 145 |
+| 1218.0 | 145 |
+| 142.0 | 144 |
+| 146.0 | 144 |
+| 170.0 | 143 |
+| 870.0 | 141 |
+| 7.5 | 141 |
+| 1182.0 | 141 |
+| 1122.0 | 138 |
+| 1284.0 | 138 |
+| 129.0 | 137 |
+| 24.0 | 136 |
+| 1260.0 | 136 |
+| 150.0 | 131 |
+| 154.0 | 130 |
+| 131.0 | 129 |
+| 1038.0 | 127 |
+| 918.0 | 124 |
+| 820.0 | 123 |
+| 280.0 | 121 |
+| 948.0 | 121 |
+| 133.0 | 109 |
+| 1068.0 | 109 |
+| 366.0 | 108 |
+| 1236.0 | 105 |
+| 620.0 | 104 |
+| 123.0 | 103 |
+| 101.0 | 102 |
+| 229.0 | 102 |
+| 1224.0 | 102 |
+| 359.0 | 100 |
+| 153.0 | 96 |
+| 765.0 | 95 |
+| 58.0 | 94 |
+| 236.0 | 94 |
+| 1150.0 | 94 |
+| 1304.0 | 94 |
+| 114.0 | 93 |
+| 156.0 | 93 |
+| 460.0 | 93 |
+| 942.0 | 93 |
+| 1086.0 | 93 |
+| 1140.0 | 93 |
+| 128.0 | 92 |
+| 159.0 | 92 |
+| 171.0 | 92 |
+| 1060.0 | 92 |
+| 1470.0 | 92 |
+| 75200.0 | 92 |
+| 835.0 | 91 |
+| 137.0 | 91 |
+| 138.0 | 91 |
+| 167.0 | 91 |
+| 169.0 | 91 |
+| 536.0 | 91 |
+| 94.0 | 90 |
+| 250.0 | 90 |
+| 540.0 | 90 |
+| 549.0 | 90 |
+| 940.0 | 90 |
+| 1115.0 | 90 |
+| 1158.0 | 90 |
+| 1800.0 | 90 |
+| 3000.0 | 90 |
+| 570.0 | 89 |
+| 697.8 | 89 |
+| 1062.0 | 88 |
+| 1308.0 | 88 |
+| 165.0 | 87 |
+| 328.0 | 87 |
+| 496.0 | 87 |
+| 1008.0 | 87 |
+| 1164.0 | 87 |
+| 1206.0 | 87 |
+| 1250.0 | 87 |
+| 27.0 | 86 |
+| 300.0 | 85 |
+| 62.0 | 85 |
+| 115.5 | 85 |
+| 619.0 | 85 |
+| 924.0 | 85 |
+| 99.0 | 84 |
+| 103.0 | 84 |
+| 290.0 | 84 |
+| 990.0 | 84 |
+| 1030.0 | 84 |
+| 1044.0 | 84 |
+| 3.0 | 83 |
+| 92.0 | 83 |
+| 102.0 | 83 |
+| 112.0 | 83 |
+| 173.0 | 83 |
+| 268.0 | 83 |
+| 287.0 | 83 |
+| 355.0 | 83 |
+| 1020.0 | 83 |
+| 1146.0 | 83 |
+| 1160.0 | 83 |
+| 8.0 | 82 |
+| 234.0 | 82 |
+| 276.0 | 82 |
+| 550.0 | 82 |
+| 768.0 | 82 |
+| 1032.0 | 82 |
+| 1104.0 | 82 |
+| 1314.0 | 82 |
+| 890.0 | 81 |
+| 1040.0 | 81 |
+| 52.5 | 81 |
+| 101.4 | 81 |
+| 178.0 | 81 |
+| 195.0 | 81 |
+| 341.0 | 81 |
+| 398.0 | 81 |
+| 516.0 | 81 |
+| 545.0 | 81 |
+| 552.0 | 81 |
+| 669.0 | 81 |
+| 672.0 | 81 |
+| 700.0 | 81 |
+| 810.0 | 81 |
+| 962.0 | 81 |
+| 1362.0 | 81 |
+| 1370.0 | 81 |
+| 1464.0 | 81 |
+| 182.0 | 80 |
+| 910.0 | 80 |
+| 69.0 | 80 |
+| 108.6 | 80 |
+| 132.0 | 80 |
+| 139.0 | 80 |
+| 143.0 | 80 |
+| 965.0 | 62 |
+
+### cases.diagnoses.treatments.prescribed_dose_units
+
+| Value | Count |
+|-------|-------|
+| _missing | 46225 |
+| mg/day | 15076 |
+| mg | 12167 |
+| mg/m2 | 4892 |
+| mg/kg | 825 |
+| mg/m2/day | 384 |
+| ug | 275 |
+| auc | 132 |
+| mg/m2/wk | 127 |
+| g/day | 83 |
+| mg/dl | 83 |
+
+### cases.diagnoses.treatments.pretreatment
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.protocol_identifier
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.radiosensitizing_agent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.reason_treatment_ended
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.reason_treatment_not_given
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.regimen_or_line_of_therapy
+
+| Value | Count |
+|-------|-------|
+| _missing | 70579 |
+| tc | 134 |
+| tch | 80 |
+
+### cases.diagnoses.treatments.residual_disease
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.route_of_administration
+
+| Value | Count |
+|-------|-------|
+| _missing | 42911 |
+| intravenous | 20427 |
+| oral | 19659 |
+| intramuscular | 893 |
+| subcutaneous | 487 |
+
+### cases.diagnoses.treatments.therapeutic_agents
+
+| Value | Count |
+|-------|-------|
+| cyclophosphamide | 33212 |
+| _missing | 20635 |
+| tamoxifen | 16259 |
+| anastrozole | 15877 |
+| paclitaxel | 14766 |
+| doxorubicin | 13113 |
+| docetaxel | 12341 |
+| doxorubicin hydrochloride | 10825 |
+| fluorouracil | 6395 |
+| trastuzumab | 4783 |
+| letrozole | 4635 |
+| exemestane | 3086 |
+| epirubicin | 2662 |
+| carboplatin | 2126 |
+| methotrexate | 1780 |
+| zoledronic acid | 1382 |
+| nab-paclitaxel | 997 |
+| capecitabine | 941 |
+| bevacizumab | 836 |
+| goserelin acetate | 675 |
+| fulvestrant | 543 |
+| pegfilgrastim | 459 |
+| gemcitabine | 382 |
+| clodronate disodium | 363 |
+| leuprolide acetate | 362 |
+| unknown | 321 |
+| vinorelbine | 293 |
+| denosumab | 272 |
+| goserelin | 269 |
+| tamoxifen citrate | 267 |
+| nelipepimut-s | 207 |
+| triptorelin | 206 |
+| pamidronate disodium | 203 |
+| vinorelbine tartrate | 200 |
+| gemcitabine hydrochloride | 193 |
+| lapatinib | 188 |
+| mitomycin | 182 |
+| toremifene citrate | 174 |
+| leuprolide | 164 |
+| cisplatin | 161 |
+| mitoxantrone | 158 |
+| clinical trial | 153 |
+| vincristine | 153 |
+| ae37 peptide/gm-csf vaccine | 148 |
+| pegylated liposomal doxorubicin hydrochloride | 147 |
+| clinical trial agent | 131 |
+| palonosetron hydrochloride | 118 |
+| taxane compound | 104 |
+| clodronic acid | 92 |
+| prednisone | 90 |
+| rituximab | 90 |
+| metformin | 87 |
+| tesetaxel | 86 |
+| ibandronate sodium | 82 |
+| etoposide | 81 |
+| everolimus | 81 |
+| ifosfamide | 81 |
+| mesna | 81 |
+| not reported | 81 |
+| pamidronic acid | 81 |
+| hormone therapy | 70 |
+| ixabepilone | 69 |
+| megestrol acetate | 69 |
+| trabectedin | 69 |
+| vinblastine | 69 |
+| pemetrexed | 63 |
+
+### cases.diagnoses.treatments.therapeutic_level_achieved
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.therapeutic_levels_achieved
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.therapeutic_target_level
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.timepoint_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.treatment_anatomic_sites
+
+| Value | Count |
+|-------|-------|
+| breast | 70660 |
+| primary tumor field | 27541 |
+| regional site | 7244 |
+| locoregional site | 4141 |
+| distant site | 943 |
+| body, total | 457 |
+| not reported | 339 |
+| unknown | 280 |
+| _missing | 114 |
+| lymph node | 90 |
+| thymus | 90 |
+| stomach | 86 |
+| adrenal | 83 |
+| kidney | 81 |
+| lymph node(s) axilla | 80 |
+
+### cases.diagnoses.treatments.treatment_dose
+
+| Value | Count |
+|-------|-------|
+| _missing | 35216 |
+| 6040 | 5042 |
+| 6000 | 3709 |
+| 5040 | 2778 |
+| 5000 | 2134 |
+| 60 | 1773 |
+| 1 | 1702 |
+| 6100 | 1525 |
+| 4500 | 1320 |
+| 50 | 1146 |
+| 20 | 1039 |
+| 4000 | 947 |
+| 480 | 903 |
+| 6640 | 892 |
+| 4800 | 852 |
+| 1000 | 830 |
+| 1600 | 694 |
+| 3600 | 656 |
+| 4600 | 618 |
+| 3000 | 572 |
+| 2000 | 543 |
+| 360 | 530 |
+| 240 | 525 |
+| 380 | 522 |
+| 45 | 500 |
+| 600 | 470 |
+| 560 | 464 |
+| 4400 | 441 |
+| 400 | 436 |
+| 520 | 415 |
+| 10 | 414 |
+| 10000 | 379 |
+| 460 | 366 |
+| 440 | 361 |
+| 4680 | 360 |
+| 6600 | 359 |
+| 6240 | 342 |
+| 320 | 334 |
+| 100 | 332 |
+| 200 | 326 |
+| 5256 | 325 |
+| 9000 | 325 |
+| 3400 | 319 |
+| 5940 | 310 |
+| 500 | 306 |
+| 452 | 297 |
+| 424 | 291 |
+| 488 | 283 |
+| 540 | 282 |
+| 3800 | 282 |
+| 435 | 280 |
+| 66 | 278 |
+| 1560 | 278 |
+| 1200 | 263 |
+| 25 | 257 |
+| 16 | 253 |
+| 3740 | 247 |
+| 4176 | 245 |
+| 5240 | 238 |
+| 44 | 236 |
+| 9720 | 236 |
+| 1520 | 233 |
+| 1360 | 231 |
+| 6120 | 229 |
+| 4848 | 229 |
+| 1280 | 227 |
+| 840 | 226 |
+| 10080 | 219 |
+| 11080 | 218 |
+| 140 | 215 |
+| 1320 | 215 |
+| 3200 | 210 |
+| 416 | 210 |
+| 1400 | 209 |
+| 1500 | 209 |
+| 2400 | 209 |
+| 1080 | 208 |
+| 6440 | 208 |
+| 40 | 206 |
+| 6060 | 205 |
+| 6400 | 204 |
+| 5500 | 201 |
+| 4872 | 200 |
+| 10500 | 200 |
+| 52 | 199 |
+| 1800 | 194 |
+| 46 | 193 |
+| 6080 | 193 |
+| 4540 | 192 |
+| 55 | 190 |
+| 4 | 188 |
+| 4320 | 188 |
+| 30 | 185 |
+| 420 | 185 |
+| 48 | 181 |
+| 4920 | 180 |
+| 376 | 173 |
+| 157 | 171 |
+| 379 | 171 |
+| 486 | 171 |
+| 1908 | 171 |
+| 9136 | 171 |
+| 4520 | 170 |
+| 495 | 169 |
+| 785 | 167 |
+| 6300 | 164 |
+| 300 | 162 |
+| 612 | 160 |
+| 3816 | 160 |
+| 4900 | 160 |
+| 6098 | 160 |
+| 216 | 159 |
+| 392 | 158 |
+| 3936 | 158 |
+| 9600 | 158 |
+| 344 | 157 |
+| 1380 | 157 |
+| 3440 | 157 |
+| 10620 | 157 |
+| 504 | 155 |
+| 8800 | 154 |
+| 464 | 153 |
+| 1920 | 152 |
+| 4248 | 152 |
+| 4860 | 152 |
+| 828 | 151 |
+| 889 | 151 |
+| 5540 | 151 |
+| 7104 | 151 |
+| 1250 | 150 |
+| 3900 | 148 |
+| 12 | 147 |
+| 280 | 147 |
+| 4032 | 147 |
+| 4512 | 146 |
+| 310 | 145 |
+| 396 | 145 |
+| 484 | 145 |
+| 872 | 145 |
+| 900 | 145 |
+| 1220 | 145 |
+| 3960 | 145 |
+| 550 | 144 |
+| 5900 | 144 |
+| 7240 | 144 |
+| 130 | 143 |
+| 340 | 143 |
+| 110 | 142 |
+| 7000 | 142 |
+| 80 | 141 |
+| 4728 | 141 |
+| 6280 | 140 |
+| 5136 | 138 |
+| 516 | 137 |
+| 158 | 136 |
+| 5216 | 136 |
+| 640 | 135 |
+| 11000 | 135 |
+| 1260 | 132 |
+| 522 | 131 |
+| 454 | 130 |
+| 1873 | 130 |
+| 408 | 128 |
+| 1296 | 128 |
+| 4080 | 128 |
+| 4200 | 126 |
+| 4140 | 125 |
+| 503 | 123 |
+| 763 | 123 |
+| 5034 | 123 |
+| 1120 | 121 |
+| 3792 | 121 |
+| 418 | 118 |
+| 8640 | 115 |
+| 106 | 115 |
+| 487 | 115 |
+| 798 | 115 |
+| 4854 | 115 |
+| 404 | 111 |
+| 6780 | 111 |
+| 539 | 109 |
+| 4326 | 109 |
+| 366 | 108 |
+| 6575 | 108 |
+| 247 | 106 |
+| 1264 | 105 |
+| 2505 | 91 |
+| 8448 | 87 |
+| 8700 | 83 |
+| 2690 | 81 |
+| 3120 | 81 |
+| 8064 | 81 |
+| 546 | 80 |
+| 2730 | 80 |
+| 2990 | 80 |
+| 6808 | 80 |
+| 2590 | 78 |
+| 3 | 75 |
+| 7776 | 67 |
+| 3924 | 66 |
+| 2895 | 62 |
+
+### cases.diagnoses.treatments.treatment_dose_max
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.treatment_dose_units
+
+| Value | Count |
+|-------|-------|
+| _missing | 35216 |
+| cgy | 24380 |
+| mg | 15932 |
+| gy | 4840 |
+| mg/day | 2739 |
+| mg/m2 | 336 |
+| ug | 275 |
+| mg/wk | 183 |
+| meq | 90 |
+| mg/kg | 82 |
+
+### cases.diagnoses.treatments.treatment_duration
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.treatment_effect
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.treatment_effect_indicator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.treatment_frequency
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.treatment_intent_type
+
+| Value | Count |
+|-------|-------|
+| first-line therapy | 70660 |
+| adjuvant | 53444 |
+| re-excision | 3653 |
+| not reported | 470 |
+| palliative | 380 |
+| neoadjuvant | 154 |
+| maintenance therapy | 147 |
+| _missing | 114 |
+| prevention | 81 |
+
+### cases.diagnoses.treatments.treatment_or_therapy
+
+| Value | Count |
+|-------|-------|
+| yes | 70379 |
+| no | 34764 |
+| unknown | 3071 |
+| _missing | 33 |
+
+### cases.diagnoses.treatments.treatment_outcome
+
+| Value | Count |
+|-------|-------|
+| treatment ongoing | 28703 |
+| _missing | 25316 |
+| complete response | 16083 |
+| not reported | 5899 |
+| unknown | 3437 |
+| progressive disease | 1247 |
+| stable disease | 1178 |
+| partial response | 367 |
+
+### cases.diagnoses.treatments.treatment_outcome_duration
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.treatments.treatment_type
+
+| Value | Count |
+|-------|-------|
+| surgery, nos | 70660 |
+| chemotherapy | 37896 |
+| radiation therapy, nos | 37886 |
+| hormone therapy | 33319 |
+| radiation, external beam | 32520 |
+| pharmaceutical therapy, nos | 23556 |
+| targeted molecular therapy | 2063 |
+| immunotherapy (including vaccines) | 1622 |
+| ancillary treatment | 1443 |
+| bisphosphonate therapy | 955 |
+| brachytherapy, high dose | 86 |
+| radiation, stereotactic/gamma knife/srs | 82 |
+| radiation, radioisotope | 80 |
+| radiation, implants | 77 |
+| brachytherapy, nos | 72 |
+| _missing | 33 |
+
+### cases.diagnoses.tumor_burden
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.tumor_confined_to_organ_of_origin
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.tumor_depth
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.tumor_focality
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.tumor_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 70674 |
+| not reported | 100 |
+
+### cases.diagnoses.tumor_grade_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.tumor_of_origin
+
+| Value | Count |
+|-------|-------|
+| _missing | 65269 |
+| tcga-a7-a13e_diagnosis | 171 |
+| tcga-b6-a0i6_diagnosis | 121 |
+| tcga-ar-a2lk_diagnosis | 103 |
+| tcga-c8-a12q_diagnosis | 102 |
+| tcga-e9-a1nf_diagnosis | 102 |
+| tcga-bh-a0bq_diagnosis | 100 |
+| tcga-bh-a0c3_diagnosis | 100 |
+| tcga-b6-a0ri_diagnosis | 94 |
+| tcga-b6-a0wx_diagnosis | 94 |
+| tcga-a2-a04p_diagnosis | 93 |
+| tcga-e2-a152_diagnosis | 93 |
+| tcga-ar-a256_diagnosis | 93 |
+| tcga-b6-a0x4_diagnosis | 93 |
+| tcga-b6-a0i1_diagnosis | 92 |
+| tcga-b6-a0x5_diagnosis | 92 |
+| tcga-c8-a137_diagnosis | 91 |
+| tcga-a2-a0ew_diagnosis | 90 |
+| tcga-bh-a0c1_diagnosis | 90 |
+| tcga-ew-a1p8_diagnosis | 90 |
+| tcga-a2-a25b_diagnosis | 88 |
+| tcga-a2-a0yj_diagnosis | 87 |
+| tcga-ac-a2fm_diagnosis | 86 |
+| tcga-ao-a03n_diagnosis | 86 |
+| tcga-z7-a8r5_diagnosis | 84 |
+| tcga-b6-a0ik_diagnosis | 84 |
+| tcga-e9-a1n6_diagnosis | 83 |
+| tcga-ao-a0j9_diagnosis | 83 |
+| tcga-ar-a0tz_diagnosis | 83 |
+| tcga-b6-a0ib_diagnosis | 83 |
+| tcga-b6-a0rh_diagnosis | 83 |
+| tcga-a2-a3xu_diagnosis | 82 |
+| tcga-hn-a2ob_diagnosis | 82 |
+| tcga-e2-a10a_diagnosis | 82 |
+| tcga-ar-a0u2_diagnosis | 82 |
+| tcga-b6-a0rp_diagnosis | 82 |
+| tcga-e9-a243_diagnosis | 82 |
+| tcga-ew-a1p7_diagnosis | 82 |
+| tcga-ar-a5qq_diagnosis | 81 |
+| tcga-e9-a2js_diagnosis | 81 |
+| tcga-a2-a25e_diagnosis | 81 |
+| tcga-a7-a26h_diagnosis | 81 |
+| tcga-ao-a03p_diagnosis | 81 |
+| tcga-ao-a0ja_diagnosis | 81 |
+| tcga-ar-a2lh_diagnosis | 81 |
+| tcga-b6-a0i8_diagnosis | 81 |
+| tcga-b6-a0in_diagnosis | 81 |
+| tcga-d8-a1ja_diagnosis | 81 |
+| tcga-e2-a15o_diagnosis | 81 |
+| tcga-e2-a1ie_diagnosis | 81 |
+| tcga-ll-a73z_diagnosis | 81 |
+| tcga-ol-a97c_diagnosis | 81 |
+| tcga-a7-a3rf_diagnosis | 80 |
+| tcga-a7-a425_diagnosis | 80 |
+| tcga-ar-a0ty_diagnosis | 80 |
+| tcga-e2-a2p5_diagnosis | 80 |
+| tcga-ll-a5ym_diagnosis | 80 |
+| tcga-3c-aaau_diagnosis | 79 |
+| tcga-b6-a0wy_diagnosis | 79 |
+| tcga-b6-a409_diagnosis | 79 |
+| tcga-bh-a1ey_diagnosis | 79 |
+| tcga-c8-a3m7_diagnosis | 79 |
+| tcga-b6-a3zx_diagnosis | 78 |
+| tcga-e9-a226_diagnosis | 78 |
+| tcga-b6-a0x1_diagnosis | 78 |
+| tcga-d8-a1xc_diagnosis | 78 |
+| tcga-e2-a14z_diagnosis | 77 |
+| tcga-ac-a2qj_diagnosis | 77 |
+| tcga-ar-a24l_diagnosis | 77 |
+| tcga-b6-a0ww_diagnosis | 77 |
+| tcga-b6-a402_diagnosis | 76 |
+| tcga-a2-a3xs_diagnosis | 76 |
+| tcga-a2-a3xy_diagnosis | 74 |
+| tcga-gm-a2d9_diagnosis | 74 |
+| tcga-e2-a1ll_diagnosis | 74 |
+| tcga-e2-a1lk_diagnosis | 73 |
+| tcga-a2-a0yc_diagnosis | 72 |
+| tcga-d8-a73w_diagnosis | 71 |
+| tcga-ac-a2fe_diagnosis | 70 |
+| tcga-b6-a0ie_diagnosis | 70 |
+| tcga-e2-a1le_diagnosis | 70 |
+| tcga-ew-a1p0_diagnosis | 70 |
+| tcga-ew-a1p1_diagnosis | 70 |
+| tcga-gm-a2da_diagnosis | 69 |
+| tcga-lq-a4e4_diagnosis | 68 |
+| tcga-ao-a126_diagnosis | 67 |
+
+### cases.diagnoses.tumor_regression_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.uicc_clinical_m
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.uicc_clinical_n
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.uicc_clinical_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.uicc_clinical_t
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.uicc_pathologic_m
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.uicc_pathologic_n
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.uicc_pathologic_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.uicc_pathologic_t
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.uicc_staging_system_edition
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.ulceration_indicator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.weiss_assessment_findings
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.weiss_assessment_score
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.who_cns_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.who_nte_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.wilms_tumor_histologic_subtype
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.diagnoses.year_of_diagnosis
+
+| Value | Count |
+|-------|-------|
+| 2010 | 14873 |
+| 2009 | 9486 |
+| 2011 | 8171 |
+| 2008 | 7329 |
+| 2007 | 5891 |
+| 2006 | 4528 |
+| 2012 | 4309 |
+| 2013 | 3884 |
+| 2005 | 2282 |
+| 2003 | 1664 |
+| 2004 | 1619 |
+| 1998 | 913 |
+| 1996 | 888 |
+| 2001 | 792 |
+| 2002 | 751 |
+| 1999 | 730 |
+| 1995 | 553 |
+| 1992 | 405 |
+| 1997 | 397 |
+| 1994 | 365 |
+| 1993 | 331 |
+| 2000 | 322 |
+| 1990 | 197 |
+| _missing | 160 |
+| 1988 | 145 |
+| 1991 | 137 |
+| 1989 | 127 |
+
+### cases.diagnosis_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.disease_type
+
+| Value | Count |
+|-------|-------|
+| ductal and lobular neoplasms | 68045 |
+| complex epithelial neoplasms | 985 |
+| cystic, mucinous and serous neoplasms | 980 |
+| epithelial neoplasms, nos | 282 |
+| adenomas and adenocarcinomas | 223 |
+| fibroepithelial neoplasms | 137 |
+| squamous cell neoplasms | 127 |
+| adnexal and skin appendage neoplasms | 85 |
+| basal cell neoplasms | 62 |
+
+### cases.exposures.age_at_last_exposure
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.age_at_onset
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.alcohol_days_per_week
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.alcohol_drinks_per_day
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.alcohol_frequency
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.alcohol_history
+
+| Value | Count |
+|-------|-------|
+| _missing | 70674 |
+| not reported | 100 |
+
+### cases.exposures.alcohol_intensity
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.alcohol_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.asbestos_exposure_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.chemical_exposure_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.cigarettes_per_day
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.environmental_tobacco_smoke_exposure
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.exposure_duration
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.exposure_duration_hrs_per_day
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.exposure_duration_years
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.exposure_source
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.exposure_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.occupation_duration_years
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.occupation_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.pack_years_smoked
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.parent_with_radiation_exposure
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.secondhand_smoke_as_child
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.smoking_frequency
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.time_between_waking_and_first_smoke
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.tobacco_smoking_onset_year
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.tobacco_smoking_quit_year
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.tobacco_smoking_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.type_of_smoke_exposure
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.type_of_tobacco_used
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.exposures.use_per_day
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.family_histories.relationship_age_at_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.family_histories.relationship_gender
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.family_histories.relationship_primary_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.family_histories.relationship_sex_at_birth
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.family_histories.relationship_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.family_histories.relative_deceased
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.family_histories.relative_smoker
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.family_histories.relative_with_cancer_history
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.family_histories.relatives_with_cancer_history_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.adverse_event
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.adverse_event_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.barretts_esophagus_goblet_cells_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.cause_of_response
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.days_to_adverse_event
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.days_to_first_event
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.days_to_follow_up
+
+| Value | Count |
+|-------|-------|
+| 0 | 3938 |
+| 10 | 1109 |
+| 34 | 731 |
+| 365 | 642 |
+| 385 | 618 |
+| 7 | 574 |
+| 396 | 554 |
+| 30 | 490 |
+| 210 | 480 |
+| 518 | 462 |
+| 267 | 462 |
+| 31 | 430 |
+| 326 | 422 |
+| 21 | 399 |
+| 375 | 394 |
+| 322 | 377 |
+| 1004 | 362 |
+| 13 | 359 |
+| 635 | 350 |
+| 19 | 349 |
+| 2 | 348 |
+| 304 | 343 |
+| 371 | 343 |
+| 274 | 340 |
+| 441 | 339 |
+| 410 | 336 |
+| 29 | 334 |
+| 943 | 332 |
+| 252 | 325 |
+| 447 | 322 |
+| 1 | 318 |
+| 554 | 315 |
+| 160 | 313 |
+| 9 | 307 |
+| 287 | 303 |
+| 369 | 303 |
+| 273 | 300 |
+| 426 | 297 |
+| 439 | 297 |
+| 5 | 296 |
+| 421 | 296 |
+| 1673 | 295 |
+| 588 | 292 |
+| 1120 | 292 |
+| 496 | 287 |
+| 14 | 287 |
+| 912 | 282 |
+| 577 | 278 |
+| 358 | 278 |
+| 575 | 277 |
+| 584 | 277 |
+| 313 | 276 |
+| 574 | 275 |
+| 229 | 275 |
+| 380 | 273 |
+| 1288 | 273 |
+| 168 | 273 |
+| 834 | 269 |
+| 762 | 267 |
+| 348 | 267 |
+| 140 | 267 |
+| 1001 | 266 |
+| 456 | 265 |
+| 608 | 264 |
+| 366 | 264 |
+| 519 | 263 |
+| 1309 | 262 |
+| 8 | 259 |
+| 428 | 257 |
+| 463 | 256 |
+| 1034 | 254 |
+| 620 | 254 |
+| 224 | 252 |
+| 786 | 247 |
+| 502 | 243 |
+| 196 | 242 |
+| 477 | 240 |
+| 991 | 239 |
+| 373 | 236 |
+| 626 | 234 |
+| 425 | 233 |
+| 614 | 232 |
+| 275 | 232 |
+| 2255 | 231 |
+| 488 | 230 |
+| 501 | 229 |
+| 162 | 229 |
+| 747 | 228 |
+| 1051 | 227 |
+| 530 | 227 |
+| 334 | 227 |
+| 974 | 226 |
+| 1611 | 224 |
+| 630 | 224 |
+| 383 | 223 |
+| 997 | 222 |
+| 643 | 221 |
+| 1286 | 221 |
+| 1072 | 220 |
+| 1471 | 219 |
+| 792 | 218 |
+| 1043 | 218 |
+| 98 | 217 |
+| 2965 | 215 |
+| 468 | 215 |
+| 1935 | 215 |
+| 541 | 215 |
+| 563 | 215 |
+| 54 | 215 |
+| 612 | 213 |
+| 965 | 213 |
+| 659 | 213 |
+| 16 | 213 |
+| 532 | 212 |
+| 172 | 211 |
+| 239 | 210 |
+| 258 | 210 |
+| 431 | 209 |
+| 317 | 209 |
+| 303 | 208 |
+| 227 | 208 |
+| 362 | 208 |
+| 616 | 207 |
+| 1165 | 207 |
+| 549 | 207 |
+| 218 | 207 |
+| 92 | 207 |
+| 381 | 206 |
+| 562 | 206 |
+| 523 | 206 |
+| 352 | 206 |
+| 78 | 205 |
+| 413 | 205 |
+| 402 | 205 |
+| 170 | 204 |
+| 595 | 204 |
+| 302 | 204 |
+| 376 | 204 |
+| 394 | 203 |
+| 2596 | 203 |
+| 1308 | 201 |
+| 754 | 200 |
+| 448 | 200 |
+| 242 | 198 |
+| 461 | 198 |
+| 791 | 193 |
+| 622 | 192 |
+| 727 | 190 |
+| 1519 | 190 |
+| 1203 | 188 |
+| 266 | 183 |
+| 134 | 183 |
+| 715 | 179 |
+| 293 | 178 |
+| 2442 | 175 |
+| 1692 | 174 |
+| 954 | 172 |
+| 336 | 170 |
+| 1156 | 170 |
+| 450 | 168 |
+| 666 | 164 |
+| 767 | 164 |
+| 1371 | 162 |
+| 1234 | 161 |
+| 1474 | 158 |
+| 639 | 157 |
+| 393 | 155 |
+| 607 | 155 |
+| 707 | 155 |
+| 1417 | 155 |
+| 860 | 154 |
+| 1642 | 154 |
+| 1066 | 153 |
+| 2190 | 153 |
+| 1728 | 152 |
+| 579 | 151 |
+| 752 | 151 |
+| 1150 | 150 |
+| 1026 | 149 |
+| 785 | 149 |
+| 403 | 148 |
+| 1174 | 148 |
+| 1563 | 148 |
+| 408 | 147 |
+| 2483 | 147 |
+| 3283 | 147 |
+| 1009 | 146 |
+| 424 | 145 |
+| 434 | 145 |
+| 552 | 145 |
+| 640 | 145 |
+| 1688 | 145 |
+| 679 | 144 |
+| 883 | 144 |
+| 1229 | 144 |
+| 1363 | 144 |
+| 2645 | 144 |
+| 524 | 141 |
+| 289 | 134 |
+| _missing | 114 |
+| 301 | 81 |
+
+### cases.follow_ups.days_to_imaging
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.days_to_progression
+
+| Value | Count |
+|-------|-------|
+| _missing | 66495 |
+| 556 | 171 |
+| 443 | 144 |
+| 192 | 142 |
+| 859 | 121 |
+| 1304 | 103 |
+| 90 | 102 |
+| 2674 | 100 |
+| 563 | 94 |
+| 54 | 93 |
+| 83 | 93 |
+| 102 | 93 |
+| 180 | 93 |
+| 313 | 93 |
+| 716 | 93 |
+| 1120 | 92 |
+| 1343 | 92 |
+| 207 | 90 |
+| 1123 | 90 |
+| 1353 | 90 |
+| 1290 | 88 |
+| 559 | 87 |
+| 780 | 86 |
+| 489 | 84 |
+| 672 | 83 |
+| 1066 | 83 |
+| 1313 | 83 |
+| 2717 | 83 |
+| 75 | 82 |
+| 92 | 82 |
+| 305 | 82 |
+| 574 | 82 |
+| 729 | 82 |
+| 1543 | 82 |
+| 1552 | 82 |
+| 1609 | 82 |
+| 1673 | 82 |
+| 2787 | 82 |
+| 301 | 81 |
+| 524 | 81 |
+| 143 | 81 |
+| 275 | 81 |
+| 291 | 81 |
+| 434 | 81 |
+| 1412 | 81 |
+| 1810 | 81 |
+| 1922 | 81 |
+| 174 | 80 |
+| 544 | 80 |
+| 597 | 80 |
+| 396 | 79 |
+| 456 | 79 |
+| 1808 | 79 |
+| 2011 | 79 |
+| 790 | 78 |
+| 490 | 78 |
+| 994 | 78 |
+| 188 | 77 |
+| 237 | 77 |
+| 447 | 77 |
+| 682 | 76 |
+| 1351 | 74 |
+| 536 | 74 |
+| 802 | 74 |
+| 1072 | 74 |
+| 1303 | 74 |
+| 798 | 72 |
+| 21 | 71 |
+| 361 | 70 |
+| 766 | 70 |
+| 834 | 70 |
+| 1014 | 70 |
+| 1094 | 70 |
+| 2496 | 70 |
+| 3014 | 69 |
+| 4343 | 69 |
+| 6535 | 69 |
+| 6536 | 69 |
+| 681 | 68 |
+
+### cases.follow_ups.days_to_progression_free
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.days_to_recurrence
+
+| Value | Count |
+|-------|-------|
+| _missing | 69165 |
+| 1709 | 100 |
+| 1100 | 94 |
+| 179 | 93 |
+| 966 | 93 |
+| 1640 | 93 |
+| 136 | 91 |
+| 1645 | 86 |
+| 181 | 84 |
+| 3287 | 84 |
+| 648 | 83 |
+| 2165 | 83 |
+| 596 | 82 |
+| 667 | 82 |
+| 289 | 81 |
+| 301 | 81 |
+| 431 | 81 |
+| 746 | 81 |
+| 2989 | 81 |
+| 258 | 80 |
+| 419 | 80 |
+| 1034 | 79 |
+| 1414 | 77 |
+| 1516 | 76 |
+| 2330 | 76 |
+| 813 | 74 |
+| 155 | 73 |
+| 756 | 72 |
+| 267 | 67 |
+
+### cases.follow_ups.discontiguous_lesion_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.disease_response
+
+| Value | Count |
+|-------|-------|
+| tf-tumor free | 62197 |
+| wt-with tumor | 8629 |
+| unknown | 2180 |
+| _missing | 1862 |
+
+### cases.follow_ups.ecog_performance_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.evidence_of_progression_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.evidence_of_recurrence_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.first_event
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.histologic_progression
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.history_of_tumor
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.history_of_tumor_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.hormone_replacement_therapy_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.imaging_anatomic_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.imaging_findings
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.imaging_result
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.imaging_suv
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.imaging_suv_max
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.imaging_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.karnofsky_performance_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.aa_change
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.aneuploidy
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.antigen
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.biospecimen_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.biospecimen_volume
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.blood_test_normal_range_lower
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.blood_test_normal_range_upper
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.cell_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 63883 |
+| 60 | 1772 |
+| 40 | 1269 |
+| 20 | 1061 |
+| 30 | 652 |
+| 200 | 318 |
+| 561 | 171 |
+| 197 | 151 |
+| 33 | 147 |
+| 330 | 131 |
+| 403 | 115 |
+| 229 | 111 |
+| 389 | 97 |
+| 32 | 91 |
+| 25 | 90 |
+| 65 | 86 |
+| 279 | 86 |
+| 29 | 85 |
+| 556 | 84 |
+| 28 | 83 |
+| 167 | 83 |
+| 113 | 82 |
+| 371 | 82 |
+| 243 | 81 |
+| 549 | 81 |
+| 228 | 80 |
+| 569 | 80 |
+| 303 | 78 |
+| 21 | 74 |
+| 31 | 66 |
+| 23 | 55 |
+
+### cases.follow_ups.molecular_tests.chromosomal_translocation
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.chromosome
+
+| Value | Count |
+|-------|-------|
+| _missing | 55716 |
+| chr17 | 15058 |
+
+### cases.follow_ups.molecular_tests.chromosome_arm
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.clonality
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.copy_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 63904 |
+| 2.0 | 781 |
+| 1.8 | 696 |
+| 3.2 | 564 |
+| 2.2 | 530 |
+| 1.9 | 461 |
+| 2.6 | 382 |
+| 2.4 | 347 |
+| 1.7 | 338 |
+| 3.0 | 328 |
+| 2.5 | 322 |
+| 2.8 | 288 |
+| 2.9 | 274 |
+| 1.67 | 230 |
+| 74.0 | 211 |
+| 5.0 | 203 |
+| 49.0 | 196 |
+| 35.0 | 190 |
+| 2.13 | 168 |
+| 2.65 | 163 |
+| 71.0 | 154 |
+| 1.57 | 149 |
+| 68.0 | 149 |
+| 2.3 | 146 |
+| 1.0 | 145 |
+| 1.5 | 145 |
+| 61.0 | 145 |
+| 1.73 | 144 |
+| 118.0 | 144 |
+| 2.7 | 143 |
+| 3.3 | 143 |
+| 54.0 | 140 |
+| 172.0 | 140 |
+| 1.78 | 138 |
+| 4.0 | 138 |
+| 125.0 | 137 |
+| 21.0 | 135 |
+| 3.8 | 133 |
+| 52.0 | 132 |
+| 1.1 | 131 |
+| 2.25 | 131 |
+| 3.1 | 131 |
+| 79.0 | 130 |
+| 69.0 | 128 |
+| 66.0 | 127 |
+| 2.23 | 123 |
+| 60.0 | 122 |
+| 47.0 | 112 |
+| 63.0 | 112 |
+| 2.58 | 109 |
+| 2.81 | 105 |
+| 12.45 | 104 |
+| 2.98 | 103 |
+| 3.43 | 103 |
+| 366.0 | 101 |
+| 3.5 | 94 |
+| 132.0 | 92 |
+| 441.0 | 91 |
+| 64.0 | 90 |
+| 6.4 | 89 |
+| 1.4 | 88 |
+| 33.0 | 88 |
+| 42.0 | 88 |
+| 4.6 | 86 |
+| 73.0 | 85 |
+| 1.45 | 83 |
+| 1.62 | 83 |
+| 40.0 | 83 |
+| 59.0 | 83 |
+| 70.0 | 83 |
+| 105.0 | 83 |
+| 127.0 | 83 |
+| 149.0 | 83 |
+| 269.0 | 83 |
+| 1.66 | 82 |
+| 1.85 | 82 |
+| 4.5 | 82 |
+| 5.65 | 81 |
+| 5.8 | 81 |
+| 51.0 | 81 |
+| 58.0 | 81 |
+| 114.0 | 81 |
+| 160.0 | 81 |
+| 185.0 | 81 |
+| 816.0 | 81 |
+| 3.65 | 80 |
+| 145.0 | 80 |
+| 39.0 | 79 |
+| 1.98 | 78 |
+| 1.93 | 74 |
+| 50.0 | 74 |
+| 131.0 | 74 |
+| 3.33 | 71 |
+| 3.53 | 71 |
+| 2.08 | 70 |
+| 4.43 | 70 |
+| 4.7 | 70 |
+| 3.7 | 69 |
+| 15.0 | 69 |
+| 46.0 | 69 |
+| 2.38 | 67 |
+| 2.83 | 67 |
+| 78.0 | 64 |
+| 67.0 | 55 |
+
+### cases.follow_ups.molecular_tests.cytoband
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.days_to_test
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.exon
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.gene_symbol
+
+| Value | Count |
+|-------|-------|
+| esr1 | 67499 |
+| pgr | 67430 |
+| erbb2 | 63296 |
+| not applicable | 6807 |
+| _missing | 3221 |
+
+### cases.follow_ups.molecular_tests.histone_family
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.histone_variant
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.hpv_strain
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.intron
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.laboratory_test
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.loci_abnormal_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.loci_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.locus
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.mismatch_repair_mutation
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.mitotic_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.mitotic_total_area
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.molecular_analysis_method
+
+| Value | Count |
+|-------|-------|
+| ihc | 67553 |
+| fish | 26842 |
+| _missing | 3221 |
+
+### cases.follow_ups.molecular_tests.molecular_consequence
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.mutation_codon
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.pathogenicity
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.ploidy
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.second_exon
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.second_gene_symbol
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.specialized_molecular_test
+
+| Value | Count |
+|-------|-------|
+| _missing | 55837 |
+| signal ratio | 14937 |
+
+### cases.follow_ups.molecular_tests.staining_intensity_scale
+
+| Value | Count |
+|-------|-------|
+| _missing | 60777 |
+| 3 point scale | 8838 |
+| 4 point scale | 1425 |
+
+### cases.follow_ups.molecular_tests.staining_intensity_value
+
+| Value | Count |
+|-------|-------|
+| _missing | 27638 |
+| 1+ | 19726 |
+| 2+ | 16257 |
+| 3+ | 13881 |
+| 0 | 5407 |
+| 4+ | 1509 |
+
+### cases.follow_ups.molecular_tests.test_analyte_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.test_result
+
+| Value | Count |
+|-------|-------|
+| negative | 56670 |
+| positive | 55640 |
+| test value reported | 14937 |
+| equivocal | 13209 |
+| copy number reported | 6870 |
+| _missing | 3221 |
+| unknown | 80 |
+
+### cases.follow_ups.molecular_tests.test_units
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.test_value
+
+| Value | Count |
+|-------|-------|
+| _missing | 55837 |
+| 1.1 | 2537 |
+| 1.0 | 1490 |
+| 1.3 | 1141 |
+| 1.2 | 1054 |
+| 1.5 | 544 |
+| 0.9 | 496 |
+| 1.4 | 473 |
+| 1.04 | 427 |
+| 1.05 | 408 |
+| 1.13 | 371 |
+| 3.2 | 331 |
+| 1.7 | 302 |
+| 2.2 | 270 |
+| 1.8 | 256 |
+| 1.6 | 255 |
+| 1.21 | 225 |
+| 3.8 | 207 |
+| 2.6 | 199 |
+| 1.23 | 194 |
+| 1.11 | 190 |
+| 1.22 | 151 |
+| 1.12 | 149 |
+| 1.25 | 147 |
+| 1.29 | 145 |
+| 1.08 | 144 |
+| 0.99 | 142 |
+| 1.02 | 142 |
+| 1.15 | 141 |
+| 1.03 | 140 |
+| 1.41 | 136 |
+| 2.7 | 131 |
+| 1.07 | 123 |
+| 1.06 | 122 |
+| 5.5 | 108 |
+| 1.69 | 105 |
+| 4.7 | 104 |
+| 5.0 | 101 |
+| 1.17 | 96 |
+| 0.97 | 94 |
+| 1.14 | 94 |
+| 6.7 | 91 |
+| 1.33 | 90 |
+| 1.09 | 89 |
+| 1.32 | 89 |
+| 0.93 | 88 |
+| 0.5 | 84 |
+| 3.4 | 83 |
+| 0.8 | 82 |
+| 0.92 | 82 |
+| 7.1 | 82 |
+| 10.3 | 82 |
+| 1.31 | 81 |
+| 1.91 | 81 |
+| 2.1 | 81 |
+| 2.83 | 81 |
+| 15.12 | 81 |
+| 16.3 | 81 |
+| 1.35 | 80 |
+| 1.9 | 80 |
+| 4.8 | 80 |
+| 7.6 | 80 |
+| 1.65 | 79 |
+| 3.0 | 79 |
+| 4.1 | 76 |
+| 1.46 | 75 |
+| 1.16 | 74 |
+| 7.0 | 74 |
+| 0.95 | 73 |
+| 1.18 | 72 |
+| 11.0 | 72 |
+| 1.36 | 70 |
+| 4.05 | 69 |
+| 0.42 | 68 |
+| 1.19 | 67 |
+| 0.89 | 61 |
+
+### cases.follow_ups.molecular_tests.test_value_range
+
+| Value | Count |
+|-------|-------|
+| _missing | 36499 |
+| 90-99% | 17124 |
+| <10% | 14815 |
+| 70-79% | 5097 |
+| 10-19% | 4711 |
+| 80-89% | 3573 |
+| 50-59% | 2242 |
+| 60-69% | 2222 |
+| 20-29% | 2100 |
+| 30-39% | 2098 |
+| 40-49% | 2011 |
+
+### cases.follow_ups.molecular_tests.timepoint_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.transcript
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.variant_origin
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.molecular_tests.variant_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 43932 |
+| amplification | 26842 |
+
+### cases.follow_ups.molecular_tests.zygosity
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.aids_risk_factors
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.bmi
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.body_surface_area
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.cd4_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.cdc_hiv_risk_factors
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.comorbidities
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.comorbidity_method_of_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.days_to_comorbidity
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.days_to_risk_factor
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.diabetes_treatment_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.dlco_ref_predictive_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.exercise_frequency_weekly
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.eye_color
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.fertility_history
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.fev1_fvc_post_bronch_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.fev1_fvc_pre_bronch_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.fev1_ref_post_bronch_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.fev1_ref_pre_bronch_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.haart_treatment_indicator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.height
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.hepatitis_sustained_virological_response
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.hiv_viral_load
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.hormonal_contraceptive_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.hormonal_contraceptive_use
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.hormonal_replacement_therapy_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.hormone_replacement_therapy_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.hysterectomy_margins_involved
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.hysterectomy_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.immunosuppressive_treatment_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.menopause_status
+
+| Value | Count |
+|-------|-------|
+| postmenopausal | 45142 |
+| premenopausal | 15216 |
+| _missing | 4760 |
+| unknown | 3264 |
+| perimenopausal | 2449 |
+
+### cases.follow_ups.other_clinical_attributes.myasthenia_gravis_classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.nadir_cd4_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.nononcologic_therapeutic_agents
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.number_of_pregnancies
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.oxygen_use_indicator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.oxygen_use_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.pancreatitis_onset_year
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.pregnancy_outcome
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.pregnant_at_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.premature_at_birth
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.reflux_treatment_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.risk_factor_method_of_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.risk_factor_treatment
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.risk_factors
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.timepoint_category
+
+| Value | Count |
+|-------|-------|
+| initial diagnosis | 66014 |
+| _missing | 4760 |
+
+### cases.follow_ups.other_clinical_attributes.treatment_frequency
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.undescended_testis_corrected
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.undescended_testis_corrected_age
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.undescended_testis_corrected_age_range
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.undescended_testis_corrected_laterality
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.undescended_testis_corrected_method
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.undescended_testis_history
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.undescended_testis_history_laterality
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.viral_hepatitis_serology_tests
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.weeks_gestation_at_birth
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.other_clinical_attributes.weight
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.peritoneal_washing_results
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.procedures_performed
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.progression_or_recurrence
+
+| Value | Count |
+|-------|-------|
+| _missing | 64556 |
+| yes | 6218 |
+
+### cases.follow_ups.progression_or_recurrence_anatomic_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 64556 |
+| bone, nos | 2543 |
+| not reported | 1805 |
+| lung, nos | 1161 |
+| liver | 1151 |
+| thorax, nos | 473 |
+| brain, nos | 373 |
+| intrathoracic lymph nodes | 293 |
+| breast, nos | 274 |
+| skin, nos | 202 |
+| lymph nodes of head, face and neck | 87 |
+| bone marrow | 86 |
+| specified parts of peritoneum | 82 |
+| adrenal gland, nos | 81 |
+| connective, subcutaneous and other soft tissues of thorax | 81 |
+| skin of trunk | 80 |
+| lymph node, nos | 76 |
+
+### cases.follow_ups.progression_or_recurrence_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 64556 |
+| distant | 4421 |
+| locoregional | 1609 |
+| unknown | 1355 |
+
+### cases.follow_ups.recist_targeted_regions_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.recist_targeted_regions_sum
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.scan_tracer_used
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.timepoint_category
+
+| Value | Count |
+|-------|-------|
+| follow-up | 70660 |
+| last contact | 70599 |
+| post initial treatment | 6218 |
+| _missing | 114 |
+
+### cases.follow_ups.treatment_emergent_adverse_event
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.follow_ups.year_of_follow_up
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.index_date
+
+| Value | Count |
+|-------|-------|
+| diagnosis | 70660 |
+| _missing | 114 |
+
+### cases.lost_to_followup
+
+| Value | Count |
+|-------|-------|
+| no | 35445 |
+| _missing | 31233 |
+| yes | 4115 |
+
+### cases.portion_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.primary_site
+
+| Value | Count |
+|-------|-------|
+| breast | 70774 |
+
+### cases.project.dbgap_accession_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.project.disease_type
+
+| Value | Count |
+|-------|-------|
+| breast invasive carcinoma | 70774 |
+
+### cases.project.intended_release_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.project.name
+
+| Value | Count |
+|-------|-------|
+| Breast Invasive Carcinoma | 70774 |
+
+### cases.project.primary_site
+
+| Value | Count |
+|-------|-------|
+| breast | 70774 |
+
+### cases.project.program.dbgap_accession_number
+
+| Value | Count |
+|-------|-------|
+| phs000178 | 70774 |
+
+### cases.project.program.name
+
+| Value | Count |
+|-------|-------|
+| TCGA | 70774 |
+
+### cases.project.releasable
+
+| Value | Count |
+|-------|-------|
+| true | 70774 |
+
+### cases.sample_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70759 |
+| item does not meet study protocol | 15 |
+
+### cases.samples.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 70759 |
+| notification | 15 |
+
+### cases.samples.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70759 |
+| sample | 15 |
+
+### cases.samples.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 70759 |
+| tcga-b6-a1kc-01a was not pathology reviewed and should not be used. tcga-b6-a1kc-01b should be used instead. | 15 |
+
+### cases.samples.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70759 |
+| approved | 15 |
+
+### cases.samples.biospecimen_anatomic_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.biospecimen_laterality
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.catalog_reference
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.current_weight
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.days_to_collection
+
+| Value | Count |
+|-------|-------|
+| _missing | 4631 |
+| 57 | 777 |
+| 63 | 552 |
+| 394 | 467 |
+| 637 | 426 |
+| 163 | 409 |
+| 162 | 403 |
+| 241 | 399 |
+| 44 | 355 |
+| 121 | 346 |
+| 65 | 316 |
+| 84 | 308 |
+| 34 | 302 |
+| 62 | 301 |
+| 77 | 301 |
+| 210 | 300 |
+| 180 | 297 |
+| 86 | 286 |
+| 93 | 286 |
+| 78 | 280 |
+| 1033 | 277 |
+| 272 | 276 |
+| 136 | 268 |
+| 69 | 268 |
+| 51 | 263 |
+| 198 | 258 |
+| 224 | 253 |
+| 344 | 252 |
+| 37 | 250 |
+| 220 | 246 |
+| 38 | 245 |
+| 173 | 243 |
+| 169 | 236 |
+| 94 | 234 |
+| 52 | 232 |
+| 80 | 231 |
+| 59 | 229 |
+| 36 | 226 |
+| 343 | 226 |
+| 114 | 225 |
+| 58 | 222 |
+| 98 | 218 |
+| 149 | 208 |
+| 85 | 207 |
+| 238 | 206 |
+| 698 | 205 |
+| 575 | 205 |
+| 302 | 204 |
+| 31 | 203 |
+| 30 | 198 |
+| 42 | 196 |
+| 303 | 188 |
+| 102 | 187 |
+| 204 | 184 |
+| 759 | 184 |
+| 140 | 184 |
+| 76 | 183 |
+| 372 | 183 |
+| 91 | 182 |
+| 273 | 182 |
+| 264 | 180 |
+| 156 | 178 |
+| 212 | 177 |
+| 127 | 177 |
+| 129 | 176 |
+| 112 | 174 |
+| 120 | 174 |
+| 545 | 174 |
+| 45 | 173 |
+| 70 | 173 |
+| 75 | 173 |
+| 282 | 173 |
+| 79 | 173 |
+| 56 | 173 |
+| 41 | 172 |
+| 1932 | 171 |
+| 158 | 170 |
+| 240 | 170 |
+| 819 | 168 |
+| 119 | 167 |
+| 215 | 165 |
+| 106 | 164 |
+| 184 | 164 |
+| 1030 | 163 |
+| 260 | 163 |
+| 49 | 163 |
+| 1184 | 163 |
+| 161 | 163 |
+| 35 | 162 |
+| 191 | 157 |
+| 583 | 155 |
+| 1357 | 155 |
+| 261 | 154 |
+| 141 | 153 |
+| 869 | 151 |
+| 1391 | 151 |
+| 203 | 149 |
+| 1074 | 148 |
+| 309 | 147 |
+| 4456 | 147 |
+| 107 | 142 |
+| 254 | 142 |
+| 542 | 139 |
+| 1828 | 138 |
+| 275 | 138 |
+| 387 | 137 |
+| 1164 | 137 |
+| 436 | 137 |
+| 1415 | 136 |
+| 64 | 134 |
+| 1910 | 134 |
+| 280 | 133 |
+| 468 | 132 |
+| 595 | 132 |
+| 40 | 130 |
+| 422 | 127 |
+| 47 | 126 |
+| 756 | 126 |
+| 289 | 126 |
+| 306 | 126 |
+| 484 | 125 |
+| 223 | 125 |
+| 155 | 125 |
+| 263 | 125 |
+| 590 | 124 |
+| 205 | 124 |
+| 447 | 124 |
+| 66 | 124 |
+| 6035 | 123 |
+| 183 | 121 |
+| 233 | 121 |
+| 157 | 121 |
+| 576 | 121 |
+| 32 | 121 |
+| 247 | 120 |
+| 617 | 120 |
+| 33 | 120 |
+| 167 | 120 |
+| 211 | 119 |
+| 453 | 119 |
+| 788 | 119 |
+| 909 | 119 |
+| 287 | 119 |
+| 83 | 118 |
+| 295 | 118 |
+| 177 | 118 |
+| 728 | 118 |
+| 1812 | 118 |
+| 5890 | 118 |
+| 1276 | 117 |
+| 100 | 117 |
+| 170 | 117 |
+| 1259 | 117 |
+| 1315 | 117 |
+| 941 | 117 |
+| 995 | 117 |
+| 147 | 116 |
+| 393 | 116 |
+| 1720 | 116 |
+| 74 | 116 |
+| 667 | 116 |
+| 333 | 115 |
+| 29 | 115 |
+| 441 | 115 |
+| 73 | 115 |
+| 168 | 115 |
+| 194 | 115 |
+| 1317 | 115 |
+| 1405 | 115 |
+| 132 | 114 |
+| 656 | 114 |
+| 109 | 114 |
+| 197 | 114 |
+| 358 | 114 |
+| 554 | 113 |
+| 214 | 113 |
+| 798 | 113 |
+| 3080 | 113 |
+| 416 | 113 |
+| 160 | 111 |
+| 567 | 110 |
+| 142 | 110 |
+| 245 | 109 |
+| 1717 | 109 |
+| 174 | 106 |
+| 1339 | 105 |
+| 143 | 105 |
+| 54 | 105 |
+| 7492 | 104 |
+| 972 | 104 |
+| 2164 | 104 |
+| 1517 | 104 |
+| 131 | 103 |
+| 134 | 103 |
+| 101 | 102 |
+| 7362 | 98 |
+| 426 | 98 |
+| 1344 | 95 |
+| 2456 | 89 |
+| 739 | 86 |
+| 28 | 86 |
+
+### cases.samples.days_to_sample_procurement
+
+| Value | Count |
+|-------|-------|
+| _missing | 69450 |
+| 0 | 1324 |
+
+### cases.samples.diagnosis_pathologically_confirmed
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.distance_normal_to_tumor
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.distributor_reference
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.freezing_method
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.growth_rate
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.initial_weight
+
+| Value | Count |
+|-------|-------|
+| _missing | 10999 |
+| 110.0 | 2170 |
+| 200.0 | 2108 |
+| 130.0 | 2048 |
+| 120.0 | 2034 |
+| 100.0 | 2012 |
+| 140.0 | 1994 |
+| 190.0 | 1963 |
+| 170.0 | 1948 |
+| 210.0 | 1824 |
+| 80.0 | 1759 |
+| 160.0 | 1598 |
+| 230.0 | 1593 |
+| 150.0 | 1559 |
+| 180.0 | 1401 |
+| 260.0 | 1381 |
+| 280.0 | 1275 |
+| 70.0 | 1246 |
+| 240.0 | 1168 |
+| 300.0 | 1163 |
+| 250.0 | 1054 |
+| 220.0 | 1002 |
+| 290.0 | 958 |
+| 310.0 | 850 |
+| 90.0 | 835 |
+| 360.0 | 828 |
+| 60.0 | 821 |
+| 400.0 | 803 |
+| 50.0 | 796 |
+| 420.0 | 712 |
+| 350.0 | 702 |
+| 340.0 | 701 |
+| 270.0 | 687 |
+| 490.0 | 634 |
+| 370.0 | 614 |
+| 380.0 | 605 |
+| 330.0 | 594 |
+| 320.0 | 589 |
+| 410.0 | 577 |
+| 430.0 | 528 |
+| 40.0 | 504 |
+| 20.0 | 497 |
+| 730.0 | 472 |
+| 510.0 | 420 |
+| 600.0 | 401 |
+| 590.0 | 399 |
+| 620.0 | 392 |
+| 470.0 | 385 |
+| 450.0 | 380 |
+| 650.0 | 373 |
+| 520.0 | 365 |
+| 540.0 | 358 |
+| 550.0 | 356 |
+| 580.0 | 351 |
+| 440.0 | 325 |
+| 480.0 | 323 |
+| 460.0 | 320 |
+| 30.0 | 309 |
+| 390.0 | 293 |
+| 500.0 | 256 |
+| 630.0 | 256 |
+| 680.0 | 247 |
+| 530.0 | 239 |
+| 740.0 | 235 |
+| 990.0 | 215 |
+| 750.0 | 204 |
+| 610.0 | 189 |
+| 770.0 | 186 |
+| 800.0 | 175 |
+| 890.0 | 175 |
+| 830.0 | 170 |
+| 980.0 | 169 |
+| 560.0 | 165 |
+| 700.0 | 163 |
+| 640.0 | 158 |
+| 760.0 | 156 |
+| 1100.0 | 152 |
+| 900.0 | 143 |
+| 960.0 | 135 |
+| 670.0 | 132 |
+| 780.0 | 122 |
+| 710.0 | 121 |
+| 1500.0 | 114 |
+| 970.0 | 111 |
+| 840.0 | 110 |
+| 690.0 | 108 |
+| 920.0 | 108 |
+| 950.0 | 108 |
+| 570.0 | 94 |
+| 1180.0 | 92 |
+| 1390.0 | 92 |
+| 10.0 | 89 |
+| 1360.0 | 81 |
+| 720.0 | 77 |
+| 1070.0 | 73 |
+| 810.0 | 72 |
+| 850.0 | 72 |
+| 1530.0 | 72 |
+| 1760.0 | 72 |
+| 1050.0 | 70 |
+| 1020.0 | 63 |
+| 910.0 | 61 |
+| 1710.0 | 61 |
+| 1740.0 | 60 |
+| 1080.0 | 58 |
+| 880.0 | 55 |
+| 2190.0 | 55 |
+| 940.0 | 54 |
+| 1550.0 | 54 |
+| 1300.0 | 53 |
+| 1460.0 | 53 |
+| 1650.0 | 53 |
+| 1270.0 | 52 |
+| 5.0 | 50 |
+| 1250.0 | 50 |
+| 1350.0 | 50 |
+| 158.0 | 47 |
+| 1170.0 | 44 |
+| 1030.0 | 41 |
+| 1210.0 | 41 |
+| 930.0 | 23 |
+| 1830.0 | 22 |
+| 1520.0 | 20 |
+| 1040.0 | 18 |
+| 1190.0 | 17 |
+| 1430.0 | 11 |
+| 1.0 | 9 |
+| 1130.0 | 2 |
+
+### cases.samples.intermediate_dimension
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.longest_dimension
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.method_of_sample_procurement
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.passage_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.analytes.a260_a280_ratio
+
+| Value | Count |
+|-------|-------|
+| _missing | 24247 |
+| 2.0 | 4415 |
+| 1.95 | 3977 |
+| 1.98 | 3170 |
+| 1.93 | 3045 |
+| 1.97 | 2810 |
+| 1.91 | 2529 |
+| 1.9 | 2343 |
+| 1.92 | 2291 |
+| 1.88 | 2178 |
+| 1.86 | 2060 |
+| 1.85 | 2030 |
+| 1.87 | 1961 |
+| 1.89 | 1902 |
+| 1.84 | 1776 |
+| 2.03 | 1760 |
+| 1.83 | 1648 |
+| 1.8 | 1476 |
+| 1.94 | 1393 |
+| 2.05 | 1347 |
+| 1.82 | 1335 |
+| 1.81 | 1305 |
+| 1.78 | 1295 |
+| 2.02 | 1276 |
+| 1.96 | 1174 |
+| 1.79 | 1080 |
+| 1.77 | 1040 |
+| 2.08 | 948 |
+| 1.75 | 792 |
+| 1.76 | 747 |
+| 2.06 | 583 |
+| 1.71 | 527 |
+| 1.74 | 438 |
+| 1.73 | 433 |
+| 2.1 | 364 |
+| 2.11 | 358 |
+| 1.72 | 304 |
+| 2.09 | 272 |
+| 2.13 | 272 |
+| 2.07 | 265 |
+| 2.14 | 245 |
+| 2.12 | 233 |
+| 2.04 | 205 |
+| 1.65 | 190 |
+| 1.7 | 178 |
+| 1.69 | 172 |
+| 2.17 | 149 |
+| 1.64 | 147 |
+| 1.63 | 146 |
+| 2.25 | 142 |
+| 2.18 | 140 |
+| 2.16 | 136 |
+| 2.01 | 131 |
+| 1.67 | 121 |
+| 1.68 | 111 |
+| 2.22 | 106 |
+| 2.15 | 85 |
+| 2.26 | 82 |
+| 2.24 | 81 |
+| 1.66 | 80 |
+| 1.59 | 79 |
+| 2.39 | 78 |
+| 1.56 | 71 |
+| 1.33 | 69 |
+| 2.3 | 68 |
+| 1.61 | 67 |
+| 1.53 | 62 |
+| 2.23 | 62 |
+| 1.62 | 60 |
+| 2.34 | 56 |
+| 2.44 | 48 |
+| 1.48 | 47 |
+| 0.71 | 39 |
+| 2.4 | 39 |
+| 1.22 | 37 |
+| 1.4 | 37 |
+| 2.29 | 37 |
+| 1.29 | 36 |
+| 1.6 | 36 |
+| 1761.0 | 36 |
+| 2.53 | 35 |
+| 2.68 | 35 |
+| 0.65 | 34 |
+| 1.47 | 34 |
+| 2.28 | 33 |
+| 2.33 | 32 |
+| 1.03 | 31 |
+| 2.31 | 30 |
+| 2.27 | 27 |
+| 1.35 | 26 |
+| 1.32 | 25 |
+| 1.43 | 24 |
+| 1.57 | 24 |
+| 2.5 | 24 |
+| 1.54 | 21 |
+| 1.99 | 20 |
+| 0.48 | 17 |
+| 0.85 | 17 |
+| 0.38 | 12 |
+| 0.88 | 12 |
+| 1.02 | 12 |
+| 1.05 | 12 |
+| 1.3 | 12 |
+| 1.44 | 12 |
+| 1.51 | 12 |
+| 1.52 | 12 |
+| 1.58 | 12 |
+| 0.75 | 9 |
+| 2.41 | 8 |
+| 2.2 | 3 |
+
+### cases.samples.portions.analytes.aliquots.aliquot_quantity
+
+| Value | Count |
+|-------|-------|
+| _missing | 8683 |
+| 3.2 | 8049 |
+| 1.07 | 5069 |
+| 8.0 | 4454 |
+| 4.27 | 4403 |
+| 7.5 | 4218 |
+| 2.08 | 4142 |
+| 40.0 | 3800 |
+| 1.0 | 3274 |
+| 8.5 | 3196 |
+| 4.01 | 2979 |
+| 3.6 | 2822 |
+| 2.8 | 2589 |
+| 1.13 | 2116 |
+| 7.0 | 1825 |
+| 4.54 | 1821 |
+| 2.0 | 1820 |
+| 1.01 | 1528 |
+| 1.82 | 1477 |
+| 2.34 | 1298 |
+| 0.93 | 1266 |
+| 3.74 | 1176 |
+| 4.81 | 1144 |
+| 1.14 | 1144 |
+| 2.21 | 1137 |
+| 9.0 | 1097 |
+| 3.0 | 904 |
+| 1.2 | 896 |
+| 1.95 | 795 |
+| 3.4 | 741 |
+| 6.4 | 704 |
+| 0.94 | 659 |
+| 6.5 | 562 |
+| 4.16 | 490 |
+| 0.87 | 479 |
+| 3.47 | 381 |
+| 1.56 | 361 |
+| 1.3 | 342 |
+| 1.21 | 306 |
+| 0.67 | 220 |
+| 2.64 | 220 |
+| 0.8 | 206 |
+| 1.04 | 192 |
+| 1.6 | 176 |
+| 4.68 | 164 |
+| 0.73 | 163 |
+| 2.42 | 162 |
+| 5.6 | 153 |
+| 2.2 | 151 |
+| 2.4 | 127 |
+| 2.6 | 105 |
+| 7.2 | 103 |
+| 2.1 | 94 |
+| 0.53 | 87 |
+| 1.12 | 75 |
+| 1.68 | 72 |
+| 1.4 | 64 |
+| 1.5 | 64 |
+| 2.55 | 63 |
+| 2.94 | 63 |
+| 1.8 | 61 |
+| 1.19 | 59 |
+| 6.0 | 59 |
+| 2.67 | 57 |
+| 1.05 | 55 |
+| 0.47 | 55 |
+| 5.5 | 51 |
+| 1.69 | 46 |
+| 0.6 | 42 |
+| 4.0 | 37 |
+| 7.36 | 36 |
+| 4.5 | 31 |
+| 1.64 | 29 |
+| 3.9 | 27 |
+| 2.25 | 26 |
+| 1.48 | 21 |
+| 3.52 | 19 |
+| 1.26 | 18 |
+| 1.27 | 18 |
+| 0.27 | 17 |
+| 1.24 | 17 |
+| 1.54 | 17 |
+| 3.08 | 17 |
+| 0.4 | 16 |
+| 0.74 | 16 |
+| 15.0 | 16 |
+| 16.0 | 16 |
+| 0.52 | 15 |
+| 1.39 | 15 |
+| 2.24 | 15 |
+| 2.45 | 15 |
+| 2.58 | 15 |
+| 3.18 | 15 |
+| 3.24 | 15 |
+| 3.64 | 15 |
+| 3.89 | 15 |
+| 4.35 | 15 |
+| 4.8 | 15 |
+| 5.02 | 15 |
+| 5.2 | 15 |
+| 5.47 | 15 |
+| 6.11 | 15 |
+| 7.53 | 15 |
+| 1.72 | 13 |
+| 1.16 | 12 |
+| 1.32 | 11 |
+| 9.5 | 11 |
+| 1.28 | 10 |
+| 1.52 | 10 |
+| 1.84 | 10 |
+| 3.5 | 10 |
+| 6.9 | 10 |
+| 12.5 | 10 |
+| 0.5 | 9 |
+| 0.86 | 9 |
+| 1.06 | 9 |
+| 1.33 | 9 |
+| 1.41 | 9 |
+| 1.76 | 9 |
+| 1.98 | 9 |
+| 4.42 | 9 |
+| 0.33 | 8 |
+| 1.61 | 8 |
+| 1.67 | 8 |
+| 2.5 | 8 |
+| 2.14 | 6 |
+| 1.65 | 4 |
+| 1.87 | 3 |
+| 1.96 | 3 |
+| 2.04 | 3 |
+| 2.37 | 3 |
+| 2.47 | 3 |
+| 2.73 | 3 |
+| 2.88 | 3 |
+| 5.07 | 3 |
+| 0.07 | 2 |
+| 0.2 | 1 |
+| 0.32 | 1 |
+| 0.45 | 1 |
+| 0.91 | 1 |
+| 2.28 | 1 |
+
+### cases.samples.portions.analytes.aliquots.aliquot_volume
+
+| Value | Count |
+|-------|-------|
+| 26.7 | 10920 |
+| 50.0 | 10781 |
+| 6.67 | 9707 |
+| _missing | 8683 |
+| 40.0 | 8492 |
+| 80.0 | 4528 |
+| 6.7 | 4461 |
+| 26.0 | 4405 |
+| 13.0 | 3975 |
+| 20.0 | 3900 |
+| 100.0 | 1058 |
+| 53.4 | 887 |
+| 52.0 | 627 |
+| 22.0 | 578 |
+| 15.0 | 181 |
+| 13.34 | 168 |
+| 7.0 | 167 |
+| 42.0 | 59 |
+| 46.0 | 56 |
+| 66.5 | 37 |
+| 12.0 | 31 |
+| 41.0 | 29 |
+| 37.0 | 21 |
+| 6.6 | 18 |
+| 45.0 | 18 |
+| 11.0 | 17 |
+| 31.0 | 17 |
+| 35.0 | 15 |
+| 36.8 | 15 |
+| 41.6 | 15 |
+| 45.4 | 15 |
+| 54.0 | 15 |
+| 55.6 | 15 |
+| 56.0 | 15 |
+| 62.2 | 15 |
+| 62.8 | 15 |
+| 68.4 | 15 |
+| 69.6 | 15 |
+| 76.4 | 15 |
+| 107.6 | 15 |
+| 10.0 | 14 |
+| 75.0 | 14 |
+| 39.0 | 13 |
+| 43.0 | 13 |
+| 29.0 | 12 |
+| 30.0 | 12 |
+| 33.0 | 11 |
+| 32.0 | 10 |
+| 38.0 | 10 |
+| 44.0 | 9 |
+| 14.0 | 6 |
+| 18.2 | 6 |
+| 12.67 | 4 |
+| 16.7 | 3 |
+| 20.6 | 3 |
+| 3.0 | 1 |
+| 4.0 | 1 |
+| 45.6 | 1 |
+| 60.0 | 1 |
+
+### cases.samples.portions.analytes.aliquots.amount
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.analytes.aliquots.analyte_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70699 |
+| dna | 75 |
+
+### cases.samples.portions.analytes.aliquots.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 69283 |
+| general | 1214 |
+| item flagged dnu | 276 |
+| item is noncanonical | 1 |
+
+### cases.samples.portions.analytes.aliquots.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 69283 |
+| notification | 1182 |
+| centernotification | 276 |
+| observation | 33 |
+
+### cases.samples.portions.analytes.aliquots.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.analytes.aliquots.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 69283 |
+| aliquot | 1491 |
+
+### cases.samples.portions.analytes.aliquots.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 69283 |
+| all or some of the wxs data may have been removed from this aliquot due to the molecular data having a contamination value of >0.04 as estimated by gatk. | 1175 |
+| the aliquot failed broad pipeline qc and not all files are suitable for use. consult the sdrf file to determine which files are usable. | 276 |
+| this is the correct replacement barcode for rna aliquot uuid: 50f23d00-f6fd-4b3d-aed2-0705f7ae6a17, which is a replacement aliquot for uuid: 60770e58-3b35-4222-97e9-d92e973f0203 that was found to have inconclusive identity (rna only).   note that this replacement aliquot is derived from a different portion than the dna. | 9 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 1ee60bda-48df-4288-90cb-480fbfbc5d50.  it replaces the incorrect tcgabarcode: tcga-c4-a0f1-01a-11r-a10u-07. | 9 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 6f0cf450-76f1-489d-9890-5093816c0680.  it replaces the incorrect tcgabarcode: tcga-c4-a0f7-01a-11r-a10u-07. | 9 |
+| wxs data may no longer be available for this aliquot due to new aliquot-pairing rules being implemented by gdc harmonization pipelines. | 6 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 2688aaae-389f-4fe9-a198-a95fa9b3ee9b.  it replaces the incorrect tcgabarcode: tcga-c4-a0f7-01a-11r-a10v-13.  due to platform incompatibility, data will not be available for this aliquot. | 3 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 4819bd80-3cad-4071-9cbd-16eece970f4f.  it replaces the incorrect tcgabarcode: tcga-c4-a0f1-01a-11r-a10v-13.  due to platform incompatibility, data will not be available for this aliquot. | 3 |
+| the bam associated with tcga-aq-a04l-10a-01d-a12j-09 was derived from a pool of two aliquots: tcga-aq-a04l-10a-01d-a12j-09 and tcga-aq-a04l-10a-01d-a10m-09 | 1 |
+
+### cases.samples.portions.analytes.aliquots.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 69283 |
+| approved | 1491 |
+
+### cases.samples.portions.analytes.aliquots.center.center_type
+
+| Value | Count |
+|-------|-------|
+| cgcc | 32934 |
+| _missing | 19684 |
+| gsc | 18156 |
+
+### cases.samples.portions.analytes.aliquots.center.code
+
+| Value | Count |
+|-------|-------|
+| _missing | 19684 |
+| 09 | 18153 |
+| 01 | 14329 |
+| 07 | 11079 |
+| 05 | 3714 |
+| 13 | 3621 |
+| 02 | 179 |
+| 26 | 12 |
+| 08 | 3 |
+
+### cases.samples.portions.analytes.aliquots.center.name
+
+| Value | Count |
+|-------|-------|
+| _missing | 19684 |
+| Washington University School of Medicine | 18153 |
+| Broad Institute of MIT and Harvard | 14332 |
+| University of North Carolina | 11079 |
+| Johns Hopkins / University of Southern California | 3714 |
+| Canada's Michael Smith Genome Sciences Centre | 3621 |
+| Harvard Medical School | 179 |
+| MD Anderson - Institute for Applied Cancer Science | 12 |
+
+### cases.samples.portions.analytes.aliquots.center.namespace
+
+| Value | Count |
+|-------|-------|
+| _missing | 19684 |
+| genome.wustl.edu | 18153 |
+| broad.mit.edu | 14332 |
+| unc.edu | 11079 |
+| jhu-usc.edu | 3714 |
+| bcgsc.ca | 3621 |
+| hms.harvard.edu | 179 |
+| mdanderson.org | 12 |
+
+### cases.samples.portions.analytes.aliquots.center.short_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 19684 |
+| wusm | 18153 |
+| bi | 14332 |
+| unc | 11079 |
+| jhu_usc | 3714 |
+| bcgsc | 3621 |
+| hms | 179 |
+| mda | 12 |
+
+### cases.samples.portions.analytes.aliquots.concentration
+
+| Value | Count |
+|-------|-------|
+| 0.16 | 15845 |
+| 0.15 | 13806 |
+| 0.08 | 11663 |
+| 0.17 | 10298 |
+| _missing | 8599 |
+| 0.14 | 5559 |
+| 0.09 | 4067 |
+| 0.07 | 3963 |
+| 0.5 | 3833 |
+| 0.18 | 3769 |
+| 0.13 | 1536 |
+| 0.04 | 1164 |
+| 0.02 | 1092 |
+| 0.12 | 559 |
+| 0.1 | 487 |
+| 0.06 | 464 |
+| 0.11 | 440 |
+| 0.05 | 418 |
+| 0.03 | 57 |
+| 0.19 | 35 |
+| 0.25 | 18 |
+| 0.01 | 12 |
+| 0.21 | 12 |
+| 0.24 | 8 |
+
+### cases.samples.portions.analytes.aliquots.no_matched_normal_low_pass_wgs
+
+| Value | Count |
+|-------|-------|
+| _missing | 59938 |
+| false | 10836 |
+
+### cases.samples.portions.analytes.aliquots.no_matched_normal_targeted_sequencing
+
+| Value | Count |
+|-------|-------|
+| _missing | 59938 |
+| false | 10836 |
+
+### cases.samples.portions.analytes.aliquots.no_matched_normal_wgs
+
+| Value | Count |
+|-------|-------|
+| _missing | 59938 |
+| false | 10836 |
+
+### cases.samples.portions.analytes.aliquots.no_matched_normal_wxs
+
+| Value | Count |
+|-------|-------|
+| _missing | 59938 |
+| false | 10836 |
+
+### cases.samples.portions.analytes.aliquots.selected_normal_low_pass_wgs
+
+| Value | Count |
+|-------|-------|
+| _missing | 59938 |
+| false | 10836 |
+
+### cases.samples.portions.analytes.aliquots.selected_normal_targeted_sequencing
+
+| Value | Count |
+|-------|-------|
+| _missing | 59938 |
+| false | 10836 |
+
+### cases.samples.portions.analytes.aliquots.selected_normal_wgs
+
+| Value | Count |
+|-------|-------|
+| _missing | 58154 |
+| false | 10836 |
+| true | 1784 |
+
+### cases.samples.portions.analytes.aliquots.selected_normal_wxs
+
+| Value | Count |
+|-------|-------|
+| _missing | 58977 |
+| false | 10836 |
+| true | 961 |
+
+### cases.samples.portions.analytes.aliquots.source_center
+
+| Value | Count |
+|-------|-------|
+| 23 | 62175 |
+| _missing | 8599 |
+
+### cases.samples.portions.analytes.amount
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.analytes.analyte_quantity
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.analytes.analyte_type
+
+| Value | Count |
+|-------|-------|
+| dna | 44249 |
+| rna | 14700 |
+| _missing | 8524 |
+| repli-g (qiagen) dna | 3818 |
+| repli-g x (qiagen) dna | 15 |
+
+### cases.samples.portions.analytes.analyte_volume
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.analytes.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70263 |
+| general | 511 |
+
+### cases.samples.portions.analytes.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 70263 |
+| observation | 511 |
+
+### cases.samples.portions.analytes.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.analytes.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70263 |
+| analyte | 511 |
+
+### cases.samples.portions.analytes.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 70263 |
+| dna analyte uuid: 11f3c3e2-2b1d-4409-a43e-42eae8358ce3 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 34 |
+| dna analyte uuid: 36228261-b2db-4465-869a-672916782b71 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 34 |
+| dna analyte uuid: fe7f0b20-42ce-48c7-a407-61dc0ea0878e was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 34 |
+| dna analyte uuid: 4c130ae4-b1aa-4ec6-ba88-6b32460e0f9c was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 33 |
+| dna analyte uuid: 5b31eb4a-2559-498b-9204-f6fd17338905 was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 33 |
+| dna analyte uuid: 7291657b-2a8c-467d-a763-3de577b6401b was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 33 |
+| dna analyte uuid: d0c0f4f4-2ae0-4f76-8faf-a4e35622f14e was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 33 |
+| dna analyte uuid: e277fe01-b1da-4a50-a5f7-9d97706c29fe was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 33 |
+| dna analyte uuid: 5493f123-5740-48c9-a531-b351fda6b081 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 32 |
+| dna analyte uuid: 74f3a478-527e-4d49-9c3f-29f353e1fb6c was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 32 |
+| dna analyte uuid: 96db3a0e-2d63-4e79-bf6d-bc7d2fe60157 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 32 |
+| dna analyte uuid: e27e9375-d153-4d0d-80ea-19c0f58c6c60 was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 32 |
+| users should discard data fpr this analyte obtained before 5/7/13, and use the latest data available on the data portal instead. see http://tcgadcc.com/browse/tcga-955. | 24 |
+| dna analyte uuid: 44e34ec8-b65b-451c-aea9-89a6537bc689 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 23 |
+| dna analyte uuid: 87a5cafc-582e-4d14-8c3d-dfffce15e63b was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 23 |
+| dna analyte uuid: c88eb59e-18a1-4f37-9fc8-9be86ea9cbdf was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 23 |
+| dna analyte uuid: d0330be0-6b5b-4f07-a73f-2bf53bce86cd was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 23 |
+
+### cases.samples.portions.analytes.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70263 |
+| approved | 511 |
+
+### cases.samples.portions.analytes.concentration
+
+| Value | Count |
+|-------|-------|
+| 0.16 | 23116 |
+| 0.15 | 20236 |
+| 0.17 | 15292 |
+| _missing | 11900 |
+| 0.14 | 8081 |
+| 0.18 | 5755 |
+| 0.13 | 2200 |
+| 0.1 | 969 |
+| 0.12 | 948 |
+| 0.11 | 768 |
+| 0.08 | 434 |
+| 0.07 | 243 |
+| 0.09 | 187 |
+| 0.19 | 82 |
+| 0.04 | 69 |
+| 0.06 | 54 |
+| 0.05 | 48 |
+| 0.25 | 33 |
+| 0.03 | 29 |
+| 0.21 | 26 |
+| 0.24 | 22 |
+| 0.01 | 12 |
+| 0.02 | 11 |
+
+### cases.samples.portions.analytes.dna_integrity_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.analytes.experimental_protocol_type
+
+| Value | Count |
+|-------|-------|
+| adna preparation type | 41787 |
+| mirvana (allprep dna) rna | 14376 |
+| pre-extracted dna received by tss | 11872 |
+| _missing | 10057 |
+| repli-g | 2468 |
+| allprep ffpe dna | 242 |
+| highpure mirna (allprep dna) ffpe rna | 144 |
+| allprep rna extraction | 120 |
+| repli-g x | 15 |
+
+### cases.samples.portions.analytes.normal_tumor_genotype_snp_match
+
+| Value | Count |
+|-------|-------|
+| yes | 62091 |
+| _missing | 8683 |
+
+### cases.samples.portions.analytes.ribosomal_rna_28s_16s_ratio
+
+| Value | Count |
+|-------|-------|
+| _missing | 56098 |
+| 1.7 | 1836 |
+| 1.6 | 1668 |
+| 1.8 | 1632 |
+| 1.5 | 1461 |
+| 1.4 | 1365 |
+| 1.3 | 1008 |
+| 1.9 | 822 |
+| 2.0 | 564 |
+| 1.2 | 543 |
+| 2.1 | 399 |
+| 2.2 | 240 |
+| 1.1 | 222 |
+| 2.3 | 156 |
+| 1.0 | 144 |
+| 0.0 | 132 |
+| 2.6 | 120 |
+| 1.77 | 111 |
+| 2.4 | 84 |
+| 1.62 | 72 |
+| 1.64 | 72 |
+| 1.31 | 60 |
+| 1.43 | 60 |
+| 1.47 | 60 |
+| 1.54 | 60 |
+| 1.81 | 60 |
+| 1.29 | 48 |
+| 1.42 | 48 |
+| 1.52 | 48 |
+| 1.59 | 48 |
+| 1.63 | 48 |
+| 1.48 | 45 |
+| 0.7 | 36 |
+| 0.9 | 36 |
+| 1.13 | 36 |
+| 1.24 | 36 |
+| 1.26 | 36 |
+| 1.44 | 36 |
+| 1.58 | 36 |
+| 1.69 | 36 |
+| 1.71 | 36 |
+| 1.35 | 27 |
+| 0.8 | 24 |
+| 1.23 | 24 |
+| 1.25 | 24 |
+| 1.27 | 24 |
+| 1.33 | 24 |
+| 1.34 | 24 |
+| 1.38 | 24 |
+| 1.49 | 24 |
+| 1.53 | 24 |
+| 1.55 | 24 |
+| 1.56 | 24 |
+| 1.57 | 24 |
+| 1.66 | 24 |
+| 1.72 | 24 |
+| 1.73 | 24 |
+| 1.78 | 24 |
+| 1.79 | 24 |
+| 1.86 | 24 |
+| 1.88 | 24 |
+| 1.89 | 24 |
+| 2.18 | 24 |
+| 2.5 | 24 |
+| 2.7 | 24 |
+| 3.0 | 21 |
+| 0.05 | 12 |
+| 0.31 | 12 |
+| 0.6 | 12 |
+| 0.65 | 12 |
+| 0.68 | 12 |
+| 0.69 | 12 |
+| 0.75 | 12 |
+| 0.92 | 12 |
+| 0.97 | 12 |
+| 1.01 | 12 |
+| 1.06 | 12 |
+| 1.11 | 12 |
+| 1.12 | 12 |
+| 1.14 | 12 |
+| 1.18 | 12 |
+| 1.22 | 12 |
+| 1.32 | 12 |
+| 1.37 | 12 |
+| 1.39 | 12 |
+| 1.41 | 12 |
+| 1.45 | 12 |
+| 1.46 | 12 |
+| 1.61 | 12 |
+| 1.67 | 12 |
+| 1.76 | 12 |
+| 1.82 | 12 |
+| 1.83 | 12 |
+| 1.84 | 12 |
+| 1.85 | 12 |
+| 1.87 | 12 |
+| 1.91 | 12 |
+| 1.93 | 12 |
+| 1.96 | 12 |
+| 1.99 | 12 |
+| 2.02 | 12 |
+| 2.05 | 12 |
+| 2.09 | 12 |
+| 2.19 | 12 |
+| 2.21 | 12 |
+| 2.8 | 12 |
+| 2.9 | 12 |
+| 3.2 | 12 |
+| 3.5 | 12 |
+
+### cases.samples.portions.analytes.ribosomal_rna_28s_18s_ratio
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.analytes.rna_integrity_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 56098 |
+| 9.3 | 789 |
+| 8.8 | 768 |
+| 8.6 | 747 |
+| 9.2 | 741 |
+| 9.1 | 735 |
+| 9.5 | 720 |
+| 9.0 | 714 |
+| 8.7 | 660 |
+| 8.9 | 621 |
+| 8.4 | 618 |
+| 8.3 | 609 |
+| 8.5 | 573 |
+| 8.0 | 537 |
+| 7.9 | 522 |
+| 8.2 | 513 |
+| 9.4 | 504 |
+| 8.1 | 480 |
+| 7.4 | 465 |
+| 7.6 | 444 |
+| 9.6 | 369 |
+| 7.5 | 354 |
+| 7.8 | 348 |
+| 7.7 | 288 |
+| 7.3 | 285 |
+| 7.1 | 264 |
+| 7.2 | 213 |
+| 7.0 | 177 |
+| 9.7 | 168 |
+| 9.8 | 108 |
+| 9.9 | 84 |
+| 10.0 | 72 |
+| 2.2 | 36 |
+| 2.4 | 36 |
+| 2.3 | 24 |
+| 2.6 | 24 |
+| 2.1 | 12 |
+| 2.7 | 12 |
+| 5.8 | 12 |
+| 6.6 | 12 |
+| 6.5 | 9 |
+| 6.7 | 9 |
+
+### cases.samples.portions.analytes.spectrophotometer_method
+
+| Value | Count |
+|-------|-------|
+| uv spec | 44135 |
+| picogreen | 15424 |
+| _missing | 11900 |
+
+### cases.samples.portions.analytes.well_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.center.center_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.center.code
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.center.name
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.center.namespace
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.center.short_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.creation_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 6541 |
+| 1275955200.0 | 5820 |
+| 1276041600.0 | 2674 |
+| 1271030400.0 | 2312 |
+| 1277164800.0 | 1542 |
+| 1291939200.0 | 1397 |
+| 1300924800.0 | 1150 |
+| 1289952000.0 | 1107 |
+| 1304899200.0 | 1087 |
+| 1302134400.0 | 1004 |
+| 1293494400.0 | 967 |
+| 1272585600.0 | 857 |
+| 1292976000.0 | 833 |
+| 1302480000.0 | 819 |
+| 1303862400.0 | 819 |
+| 1276473600.0 | 787 |
+| 1306195200.0 | 766 |
+| 1275523200.0 | 713 |
+| 1286409600.0 | 701 |
+| 1291248000.0 | 691 |
+| 1303084800.0 | 659 |
+| 1274918400.0 | 648 |
+| 1276560000.0 | 648 |
+| 1300060800.0 | 629 |
+| 1292889600.0 | 624 |
+| 1301875200.0 | 621 |
+| 1297900800.0 | 610 |
+| 1277078400.0 | 583 |
+| 1298851200.0 | 573 |
+| 1291680000.0 | 565 |
+| 1283472000.0 | 559 |
+| 1298419200.0 | 552 |
+| 1279670400.0 | 539 |
+| 1280361600.0 | 533 |
+| 1298246400.0 | 531 |
+| 1302220800.0 | 530 |
+| 1294617600.0 | 528 |
+| 1305244800.0 | 527 |
+| 1300320000.0 | 525 |
+| 1290556800.0 | 511 |
+| 1300406400.0 | 509 |
+| 1337904000.0 | 499 |
+| 1286150400.0 | 486 |
+| 1296000000.0 | 467 |
+| 1273190400.0 | 466 |
+| 1291161600.0 | 464 |
+| 1305849600.0 | 460 |
+| 1301529600.0 | 455 |
+| 1291334400.0 | 452 |
+| 1301011200.0 | 450 |
+| 1278028800.0 | 444 |
+| 1305590400.0 | 444 |
+| 1313107200.0 | 443 |
+| 1284422400.0 | 435 |
+| 1271203200.0 | 429 |
+| 1297728000.0 | 427 |
+| 1307577600.0 | 423 |
+| 1296691200.0 | 419 |
+| 1298505600.0 | 406 |
+| 1297296000.0 | 402 |
+| 1313712000.0 | 402 |
+| 1290038400.0 | 395 |
+| 1291075200.0 | 386 |
+| 1278547200.0 | 385 |
+| 1297814400.0 | 381 |
+| 1293062400.0 | 380 |
+| 1294099200.0 | 378 |
+| 1279065600.0 | 367 |
+| 1293408000.0 | 358 |
+| 1302566400.0 | 355 |
+| 1280966400.0 | 351 |
+| 1361232000.0 | 350 |
+| 1269302400.0 | 349 |
+| 1290988800.0 | 346 |
+| 1277856000.0 | 342 |
+| 1357516800.0 | 340 |
+| 1297209600.0 | 336 |
+| 1299628800.0 | 330 |
+| 1279584000.0 | 327 |
+| 1300838400.0 | 323 |
+| 1363737600.0 | 316 |
+| 1286755200.0 | 315 |
+| 1337644800.0 | 312 |
+| 1314144000.0 | 311 |
+| 1352678400.0 | 310 |
+| 1390435200.0 | 308 |
+| 1292371200.0 | 307 |
+| 1355184000.0 | 306 |
+| 1291852800.0 | 300 |
+| 1308700800.0 | 290 |
+| 1360886400.0 | 289 |
+| 1290729600.0 | 285 |
+| 1296604800.0 | 282 |
+| 1291593600.0 | 280 |
+| 1292544000.0 | 278 |
+| 1280707200.0 | 275 |
+| 1366070400.0 | 271 |
+| 1286236800.0 | 266 |
+| 1281398400.0 | 260 |
+| 1290470400.0 | 259 |
+| 1376006400.0 | 257 |
+| 1294012800.0 | 255 |
+| 1293580800.0 | 249 |
+| 1302739200.0 | 249 |
+| 1298332800.0 | 248 |
+| 1273795200.0 | 243 |
+| 1286928000.0 | 241 |
+| 1304380800.0 | 238 |
+| 1374019200.0 | 236 |
+| 1333497600.0 | 234 |
+| 1375228800.0 | 232 |
+| 1278460800.0 | 231 |
+| 1360627200.0 | 231 |
+| 1287100800.0 | 230 |
+| 1304467200.0 | 230 |
+| 1299542400.0 | 228 |
+| 1351728000.0 | 227 |
+| 1366588800.0 | 226 |
+| 1385078400.0 | 226 |
+| 1364169600.0 | 223 |
+| 1301616000.0 | 222 |
+| 1360281600.0 | 222 |
+| 1306972800.0 | 218 |
+| 1302825600.0 | 214 |
+| 1276732800.0 | 211 |
+| 1397001600.0 | 210 |
+| 1307059200.0 | 209 |
+| 1306281600.0 | 208 |
+| 1390780800.0 | 207 |
+| 1288569600.0 | 206 |
+| 1294358400.0 | 206 |
+| 1276214400.0 | 203 |
+| 1304640000.0 | 202 |
+| 1303776000.0 | 201 |
+| 1304553600.0 | 201 |
+| 1297641600.0 | 200 |
+| 1277769600.0 | 198 |
+| 1306886400.0 | 196 |
+| 1341187200.0 | 195 |
+| 1316044800.0 | 194 |
+| 1277337600.0 | 193 |
+| 1374451200.0 | 190 |
+| 1287532800.0 | 186 |
+| 1344211200.0 | 184 |
+| 1297123200.0 | 183 |
+| 1287360000.0 | 177 |
+| 1385942400.0 | 177 |
+| 1341273600.0 | 175 |
+| 1286496000.0 | 173 |
+| 1366934400.0 | 172 |
+| 1294272000.0 | 171 |
+| 1303344000.0 | 171 |
+| 1360800000.0 | 169 |
+| 1306800000.0 | 167 |
+| 1292803200.0 | 164 |
+| 1291766400.0 | 163 |
+| 1340668800.0 | 161 |
+| 1285891200.0 | 161 |
+| 1334275200.0 | 161 |
+| 1343952000.0 | 159 |
+| 1302048000.0 | 158 |
+| 1363651200.0 | 157 |
+| 1374105600.0 | 156 |
+| 1289865600.0 | 154 |
+| 1281052800.0 | 153 |
+| 1297382400.0 | 151 |
+| 1386633600.0 | 150 |
+| 1299456000.0 | 149 |
+| 1305158400.0 | 148 |
+| 1284076800.0 | 147 |
+| 1289260800.0 | 147 |
+| 1324425600.0 | 146 |
+| 1277251200.0 | 145 |
+| 1278979200.0 | 145 |
+| 1354838400.0 | 145 |
+| 1308268800.0 | 142 |
+| 1370304000.0 | 141 |
+| 1377216000.0 | 141 |
+| 1306108800.0 | 140 |
+| 1312329600.0 | 140 |
+| 1395792000.0 | 139 |
+| 1336003200.0 | 138 |
+| 1271289600.0 | 134 |
+| 1303257600.0 | 133 |
+| 1352419200.0 | 133 |
+| 1365552000.0 | 132 |
+| 1280880000.0 | 130 |
+| 1297987200.0 | 130 |
+| 1304294400.0 | 128 |
+| 1276646400.0 | 123 |
+| 1300752000.0 | 122 |
+| 1301961600.0 | 122 |
+| 1293667200.0 | 121 |
+| 1356652800.0 | 121 |
+| 1388966400.0 | 121 |
+| 1308528000.0 | 120 |
+| 1384992000.0 | 120 |
+| 1325116800.0 | 116 |
+| 1296432000.0 | 115 |
+| 1377648000.0 | 115 |
+| 1268870400.0 | 95 |
+
+### cases.samples.portions.is_ffpe
+
+| Value | Count |
+|-------|-------|
+| false | 63997 |
+| _missing | 6541 |
+| true | 414 |
+
+### cases.samples.portions.portion_number
+
+| Value | Count |
+|-------|-------|
+| 11 | 38874 |
+| 01 | 32467 |
+| 21 | 7790 |
+| _missing | 6541 |
+| 12 | 3864 |
+| 31 | 2865 |
+| 22 | 1664 |
+| 32 | 649 |
+| 13 | 599 |
+| 1 | 586 |
+| 02 | 571 |
+| 23 | 549 |
+| 42 | 519 |
+| 33 | 357 |
+| 41 | 326 |
+| 04 | 240 |
+| 43 | 235 |
+| 51 | 157 |
+| 03 | 153 |
+| 2 | 148 |
+| 61 | 146 |
+| 52 | 136 |
+| 06 | 124 |
+| 34 | 120 |
+| 53 | 61 |
+| 81 | 58 |
+| 14 | 55 |
+| 24 | 41 |
+| 94 | 41 |
+| 62 | 21 |
+| 73 | 19 |
+| 71 | 16 |
+| 3 | 13 |
+| 44 | 10 |
+| 72 | 10 |
+
+### cases.samples.portions.slides.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.bone_marrow_malignant_cells
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.number_proliferating_cells
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.percent_eosinophil_infiltration
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.percent_follicular_component
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.percent_granulocyte_infiltration
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.percent_inflam_infiltration
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.percent_lymphocyte_infiltration
+
+| Value | Count |
+|-------|-------|
+| 0.0 | 22306 |
+| _missing | 13107 |
+| 2.0 | 11241 |
+| 1.0 | 10933 |
+| 3.0 | 4796 |
+| 5.0 | 4271 |
+| 40.0 | 3121 |
+| 10.0 | 2638 |
+| 4.0 | 2422 |
+| 20.0 | 1288 |
+| 15.0 | 1260 |
+| 8.0 | 967 |
+| 7.0 | 764 |
+| 6.0 | 764 |
+| 30.0 | 597 |
+| 12.0 | 447 |
+| 18.0 | 334 |
+| 60.0 | 322 |
+| 25.0 | 312 |
+| 100.0 | 300 |
+| 50.0 | 284 |
+| 9.0 | 222 |
+| 13.0 | 204 |
+| 35.0 | 184 |
+| 11.0 | 172 |
+| 70.0 | 170 |
+| 14.0 | 154 |
+| 21.0 | 138 |
+| 22.0 | 112 |
+| 17.0 | 90 |
+| 80.0 | 78 |
+| 19.0 | 62 |
+| 24.0 | 58 |
+| 27.0 | 58 |
+| 95.0 | 53 |
+| 23.0 | 52 |
+| 26.0 | 50 |
+| 16.0 | 49 |
+| 36.0 | 42 |
+| 28.0 | 1 |
+
+### cases.samples.portions.slides.percent_monocyte_infiltration
+
+| Value | Count |
+|-------|-------|
+| 0.0 | 45625 |
+| _missing | 13107 |
+| 1.0 | 8129 |
+| 20.0 | 2826 |
+| 2.0 | 2215 |
+| 10.0 | 1103 |
+| 3.0 | 403 |
+| 5.0 | 329 |
+| 30.0 | 221 |
+| 25.0 | 201 |
+| 15.0 | 144 |
+| 4.0 | 128 |
+| 50.0 | 29 |
+
+### cases.samples.portions.slides.percent_necrosis
+
+| Value | Count |
+|-------|-------|
+| 0.0 | 37531 |
+| _missing | 13665 |
+| 1.0 | 9395 |
+| 2.0 | 7050 |
+| 5.0 | 4185 |
+| 10.0 | 2277 |
+| 3.0 | 1823 |
+| 4.0 | 854 |
+| 15.0 | 793 |
+| 20.0 | 733 |
+| 8.0 | 538 |
+| 30.0 | 360 |
+| 7.0 | 305 |
+| 6.0 | 180 |
+| 18.0 | 150 |
+| 12.0 | 128 |
+| 9.0 | 102 |
+| 35.0 | 57 |
+| 23.0 | 53 |
+| 17.0 | 42 |
+| 50.0 | 1 |
+| 60.0 | 1 |
+
+### cases.samples.portions.slides.percent_neutrophil_infiltration
+
+| Value | Count |
+|-------|-------|
+| 0.0 | 48497 |
+| _missing | 13107 |
+| 1.0 | 6042 |
+| 20.0 | 3022 |
+| 2.0 | 916 |
+| 10.0 | 619 |
+| 30.0 | 499 |
+| 5.0 | 358 |
+| 40.0 | 133 |
+| 3.0 | 131 |
+| 25.0 | 83 |
+| 50.0 | 48 |
+| 15.0 | 47 |
+| 4.0 | 40 |
+
+### cases.samples.portions.slides.percent_normal_cells
+
+| Value | Count |
+|-------|-------|
+| 0.0 | 38788 |
+| _missing | 13080 |
+| 5.0 | 6237 |
+| 2.0 | 3959 |
+| 10.0 | 3851 |
+| 100.0 | 2756 |
+| 1.0 | 2571 |
+| 3.0 | 2350 |
+| 15.0 | 1868 |
+| 20.0 | 1768 |
+| 8.0 | 916 |
+| 30.0 | 834 |
+| 4.0 | 830 |
+| 7.0 | 787 |
+| 25.0 | 468 |
+| 40.0 | 440 |
+| 50.0 | 373 |
+| 12.0 | 287 |
+| 6.0 | 253 |
+| 34.0 | 184 |
+| 29.0 | 142 |
+| 80.0 | 139 |
+| 22.0 | 139 |
+| 64.0 | 134 |
+| 60.0 | 126 |
+| 39.0 | 112 |
+| 90.0 | 104 |
+| 35.0 | 104 |
+| 9.0 | 98 |
+| 18.0 | 93 |
+| 75.0 | 89 |
+| 55.0 | 74 |
+| 70.0 | 74 |
+| 95.0 | 74 |
+| 59.0 | 61 |
+| 23.0 | 60 |
+| 14.0 | 52 |
+| 17.0 | 52 |
+| 79.0 | 52 |
+| 31.0 | 51 |
+| 54.0 | 50 |
+| 36.0 | 49 |
+| 97.0 | 42 |
+| 24.0 | 41 |
+| 13.0 | 39 |
+| 49.0 | 36 |
+| 72.0 | 35 |
+| 89.0 | 35 |
+| 71.0 | 22 |
+| 96.0 | 22 |
+| 45.0 | 17 |
+| 28.0 | 7 |
+| 84.0 | 2 |
+| 16.0 | 1 |
+| 67.0 | 1 |
+
+### cases.samples.portions.slides.percent_rhabdoid_features
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.percent_sarcomatoid_features
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.percent_stromal_cells
+
+| Value | Count |
+|-------|-------|
+| _missing | 13665 |
+| 0.0 | 9930 |
+| 20.0 | 7645 |
+| 10.0 | 6487 |
+| 15.0 | 5160 |
+| 5.0 | 4755 |
+| 25.0 | 4114 |
+| 30.0 | 4014 |
+| 40.0 | 2292 |
+| 18.0 | 2101 |
+| 14.0 | 1622 |
+| 19.0 | 1517 |
+| 35.0 | 1506 |
+| 23.0 | 1445 |
+| 24.0 | 1279 |
+| 13.0 | 1240 |
+| 60.0 | 1195 |
+| 17.0 | 1154 |
+| 50.0 | 1057 |
+| 9.0 | 985 |
+| 28.0 | 883 |
+| 27.0 | 875 |
+| 8.0 | 870 |
+| 4.0 | 756 |
+| 45.0 | 738 |
+| 100.0 | 716 |
+| 22.0 | 698 |
+| 12.0 | 658 |
+| 55.0 | 638 |
+| 38.0 | 614 |
+| 80.0 | 552 |
+| 34.0 | 547 |
+| 70.0 | 524 |
+| 90.0 | 517 |
+| 95.0 | 488 |
+| 16.0 | 484 |
+| 26.0 | 480 |
+| 32.0 | 460 |
+| 33.0 | 453 |
+| 21.0 | 432 |
+| 7.0 | 416 |
+| 43.0 | 409 |
+| 75.0 | 354 |
+| 85.0 | 325 |
+| 54.0 | 303 |
+| 29.0 | 258 |
+| 39.0 | 221 |
+| 11.0 | 213 |
+| 48.0 | 201 |
+| 98.0 | 195 |
+| 65.0 | 194 |
+| 49.0 | 192 |
+| 2.0 | 191 |
+| 97.0 | 183 |
+| 52.0 | 177 |
+| 57.0 | 175 |
+| 69.0 | 154 |
+| 47.0 | 153 |
+| 6.0 | 151 |
+| 41.0 | 150 |
+| 63.0 | 142 |
+| 42.0 | 140 |
+| 53.0 | 132 |
+| 44.0 | 119 |
+| 3.0 | 116 |
+| 64.0 | 103 |
+| 92.0 | 93 |
+| 56.0 | 92 |
+| 36.0 | 91 |
+| 37.0 | 91 |
+| 46.0 | 90 |
+| 73.0 | 88 |
+| 96.0 | 87 |
+| 78.0 | 74 |
+| 82.0 | 52 |
+| 88.0 | 52 |
+| 74.0 | 51 |
+| 84.0 | 51 |
+| 31.0 | 50 |
+| 71.0 | 50 |
+| 1.0 | 49 |
+| 61.0 | 48 |
+| 67.0 | 48 |
+| 72.0 | 47 |
+| 62.0 | 41 |
+| 59.0 | 40 |
+| 68.0 | 40 |
+| 58.0 | 31 |
+| 79.0 | 29 |
+| 83.0 | 25 |
+| 93.0 | 25 |
+| 94.0 | 19 |
+| 99.0 | 18 |
+
+### cases.samples.portions.slides.percent_tumor_cells
+
+| Value | Count |
+|-------|-------|
+| _missing | 13080 |
+| 80.0 | 10482 |
+| 70.0 | 8798 |
+| 85.0 | 6896 |
+| 75.0 | 6137 |
+| 90.0 | 5700 |
+| 100.0 | 5521 |
+| 60.0 | 5015 |
+| 0.0 | 4688 |
+| 95.0 | 3551 |
+| 65.0 | 3296 |
+| 50.0 | 2450 |
+| 40.0 | 2358 |
+| 30.0 | 1650 |
+| 55.0 | 1175 |
+| 35.0 | 875 |
+| 45.0 | 852 |
+| 25.0 | 671 |
+| 74.0 | 475 |
+| 78.0 | 440 |
+| 89.0 | 396 |
+| 83.0 | 377 |
+| 88.0 | 367 |
+| 20.0 | 358 |
+| 72.0 | 279 |
+| 99.0 | 257 |
+| 15.0 | 256 |
+| 93.0 | 233 |
+| 82.0 | 221 |
+| 58.0 | 196 |
+| 79.0 | 186 |
+| 73.0 | 169 |
+| 63.0 | 164 |
+| 98.0 | 157 |
+| 67.0 | 150 |
+| 10.0 | 147 |
+| 84.0 | 146 |
+| 64.0 | 143 |
+| 57.0 | 134 |
+| 53.0 | 132 |
+| 69.0 | 125 |
+| 49.0 | 113 |
+| 66.0 | 112 |
+| 59.0 | 103 |
+| 76.0 | 102 |
+| 77.0 | 102 |
+| 68.0 | 96 |
+| 92.0 | 96 |
+| 62.0 | 91 |
+| 38.0 | 89 |
+| 43.0 | 89 |
+| 61.0 | 87 |
+| 5.0 | 79 |
+| 27.0 | 51 |
+| 39.0 | 51 |
+| 81.0 | 51 |
+| 87.0 | 51 |
+| 22.0 | 50 |
+| 33.0 | 50 |
+| 97.0 | 50 |
+| 42.0 | 42 |
+| 41.0 | 41 |
+| 14.0 | 40 |
+| 18.0 | 40 |
+| 96.0 | 37 |
+| 23.0 | 37 |
+| 12.0 | 25 |
+| 6.0 | 1 |
+| 13.0 | 1 |
+| 94.0 | 1 |
+
+### cases.samples.portions.slides.percent_tumor_nuclei
+
+| Value | Count |
+|-------|-------|
+| 80.0 | 15388 |
+| _missing | 13665 |
+| 85.0 | 11343 |
+| 70.0 | 9854 |
+| 90.0 | 9113 |
+| 75.0 | 8673 |
+| 60.0 | 5957 |
+| 0.0 | 3893 |
+| 65.0 | 3791 |
+| 95.0 | 2961 |
+| 88.0 | 575 |
+| 55.0 | 513 |
+| 92.0 | 433 |
+| 50.0 | 416 |
+| 40.0 | 404 |
+| 82.0 | 189 |
+| 30.0 | 188 |
+| 98.0 | 187 |
+| 96.0 | 182 |
+| 25.0 | 165 |
+| 93.0 | 152 |
+| 45.0 | 142 |
+| 87.0 | 132 |
+| 94.0 | 118 |
+| 68.0 | 94 |
+| 35.0 | 93 |
+| 10.0 | 57 |
+| 15.0 | 52 |
+| 73.0 | 51 |
+| 97.0 | 50 |
+| 78.0 | 49 |
+| 8.0 | 43 |
+| 5.0 | 2 |
+| 20.0 | 1 |
+
+### cases.samples.portions.slides.prostatic_chips_positive_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.prostatic_chips_total_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.prostatic_involvement_percent
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.slides.section_location
+
+| Value | Count |
+|-------|-------|
+| top | 57558 |
+| bottom | 24067 |
+| _missing | 11956 |
+| not reported | 1324 |
+
+### cases.samples.portions.slides.tissue_microarray_coordinates
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.portions.weight
+
+| Value | Count |
+|-------|-------|
+| 30.0 | 50244 |
+| 2.0 | 12724 |
+| _missing | 9591 |
+| 20.0 | 3776 |
+| 200.0 | 2538 |
+| 10.0 | 1578 |
+| 1000.0 | 507 |
+| 260.0 | 431 |
+| 400.0 | 414 |
+| 40.0 | 365 |
+| 100.0 | 330 |
+| 500.0 | 283 |
+| 80.0 | 265 |
+| 70.0 | 262 |
+| 270.0 | 202 |
+| 210.0 | 195 |
+| 1.0 | 187 |
+| 290.0 | 174 |
+| 280.0 | 169 |
+| 250.0 | 153 |
+| 60.0 | 152 |
+| 150.0 | 147 |
+| 230.0 | 130 |
+| 140.0 | 115 |
+| 300.0 | 115 |
+| 160.0 | 112 |
+| 170.0 | 111 |
+| 90.0 | 108 |
+| 180.0 | 85 |
+| 130.0 | 82 |
+| 115.0 | 65 |
+| 220.0 | 59 |
+| 1.5 | 53 |
+| 50.0 | 46 |
+| 110.0 | 42 |
+| 350.0 | 30 |
+| 240.0 | 28 |
+| 190.0 | 26 |
+| 120.0 | 23 |
+| 750.0 | 17 |
+| 8.0 | 9 |
+
+### cases.samples.preservation_method
+
+| Value | Count |
+|-------|-------|
+| unknown | 46247 |
+| oct | 37136 |
+| _missing | 3388 |
+| ffpe | 1592 |
+
+### cases.samples.sample_ordinal
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.sample_type
+
+| Value | Count |
+|-------|-------|
+| primary tumor | 58244 |
+| blood derived normal | 33721 |
+| solid tissue normal | 4525 |
+| _missing | 3388 |
+| metastatic | 309 |
+
+### cases.samples.shortest_dimension
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.specimen_type
+
+| Value | Count |
+|-------|-------|
+| solid tissue | 41385 |
+| peripheral blood nos | 33721 |
+| unknown | 20538 |
+| _missing | 3388 |
+
+### cases.samples.time_between_clamping_and_freezing
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.time_between_excision_and_freezing
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.tissue_collection_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.samples.tissue_type
+
+| Value | Count |
+|-------|-------|
+| tumor | 58553 |
+| normal | 38246 |
+| _missing | 3388 |
+
+### cases.samples.tumor_descriptor
+
+| Value | Count |
+|-------|-------|
+| primary | 58244 |
+| not applicable | 38246 |
+| _missing | 3388 |
+| metastatic | 309 |
+
+### cases.slide_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.submitter_aliquot_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.submitter_analyte_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.submitter_diagnosis_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.submitter_portion_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.submitter_sample_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.submitter_slide_ids
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.summary.data_categories.data_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.summary.data_categories.file_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.summary.experimental_strategies.experimental_strategy
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.summary.experimental_strategies.file_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.summary.file_count
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### cases.tissue_source_site.code
+
+| Value | Count |
+|-------|-------|
+| BH | 10358 |
+| A2 | 6665 |
+| E2 | 5787 |
+| A8 | 5226 |
+| D8 | 4978 |
+| AR | 4416 |
+| E9 | 4142 |
+| B6 | 3705 |
+| A7 | 3312 |
+| C8 | 3188 |
+| AC | 2970 |
+| AO | 2969 |
+| EW | 2613 |
+| AN | 2489 |
+| OL | 1398 |
+| GM | 1271 |
+| LL | 1158 |
+| A1 | 872 |
+| S3 | 654 |
+| AQ | 557 |
+| LD | 324 |
+| 3C | 272 |
+| PL | 254 |
+| PE | 204 |
+| XX | 151 |
+| GI | 147 |
+| HN | 146 |
+| 5L | 144 |
+| WT | 141 |
+| JL | 140 |
+| Z7 | 135 |
+| 4H | 89 |
+| OK | 84 |
+| 5T | 83 |
+| W8 | 83 |
+| V7 | 82 |
+| UL | 81 |
+| UU | 81 |
+| MS | 78 |
+| LQ | 68 |
+
+### cases.tissue_source_site.name
+
+| Value | Count |
+|-------|-------|
+| University of Pittsburgh | 10358 |
+| Walter Reed | 6665 |
+| Roswell Park | 5787 |
+| Indivumed | 5226 |
+| Greater Poland Cancer Center | 4978 |
+| Mayo | 4416 |
+| Asterand | 4142 |
+| Duke | 3705 |
+| Christiana Healthcare | 3312 |
+| ILSBio | 3188 |
+| International Genomics Consortium | 2970 |
+| MSKCC | 2969 |
+| University of Miami | 2613 |
+| Cureline | 2489 |
+| University of Chicago | 1398 |
+| MD Anderson | 1271 |
+| Candler | 1158 |
+| UCSF | 872 |
+| Albert Einstein Medical Center | 654 |
+| UNC  | 557 |
+| Hartford Hospital | 324 |
+| Columbia University | 272 |
+| Institute of Human Virology Nigeria | 254 |
+| Fox Chase | 204 |
+| Spectrum Health | 151 |
+| ABS - IUPUI | 147 |
+| Ontario Institute for Cancer Research (OICR) | 146 |
+| University of Sao Paulo | 144 |
+| University of Kansas | 141 |
+| ABS - Research Metrics Pakistan | 140 |
+| John Wayne Cancer Center | 135 |
+| Proteogenex, Inc. | 89 |
+| Mount Sinai School of Medicine | 84 |
+| Greenville Health System | 83 |
+| Holy Cross | 83 |
+| Medical College of Georgia | 82 |
+|  Boston Medical Center | 81 |
+| Mary Bird Perkins Cancer Center - Our Lady of the Lake | 81 |
+| University of Minnesota | 78 |
+| Gundersen Lutheran Health System | 68 |
+
+### cases.tissue_source_site.project
+
+| Value | Count |
+|-------|-------|
+| Breast invasive carcinoma | 70774 |
+
+### center.center_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### center.code
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### center.name
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### center.namespace
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### center.short_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### channel
+
+| Value | Count |
+|-------|-------|
+| _missing | 68298 |
+| green | 1238 |
+| red | 1238 |
+
+### chip_position
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### data_category
+
+| Value | Count |
+|-------|-------|
+| simple nucleotide variation | 21132 |
+| copy number variation | 14346 |
+| sequencing reads | 9282 |
+| structural variation | 5772 |
+| biospecimen | 5317 |
+| transcriptome profiling | 4876 |
+| dna methylation | 3714 |
+| somatic structural variation | 3128 |
+| clinical | 2288 |
+| proteome profiling | 919 |
+
+### data_format
+
+| Value | Count |
+|-------|-------|
+| vcf | 14585 |
+| tsv | 11420 |
+| txt | 11394 |
+| bam | 9282 |
+| maf | 6272 |
+| bedpe | 4450 |
+| svs | 3112 |
+| idat | 2476 |
+| cel | 2263 |
+| bcr xml | 2195 |
+| pdf | 1105 |
+| bcr ssf xml | 1097 |
+| tar | 1027 |
+| bcr omf xml | 77 |
+| bcr biotab | 19 |
+
+### data_type
+
+| Value | Count |
+|-------|-------|
+| Annotated Somatic Mutation | 10134 |
+| Aligned Reads | 9282 |
+| Raw Simple Somatic Mutation | 6751 |
+| Transcript Fusion | 4924 |
+| Structural Rearrangement | 3976 |
+| Gene Level Copy Number | 3314 |
+| Copy Number Segment | 3256 |
+| Slide Image | 3112 |
+| Masked Intensities | 2476 |
+| Raw Intensities | 2263 |
+| Simple Germline Variation | 2263 |
+| Allele-specific Copy Number Segment | 2257 |
+| Masked Copy Number Segment | 2229 |
+| Biospecimen Supplement | 2205 |
+| Methylation Beta Value | 1238 |
+| Gene Expression Quantification | 1231 |
+| Splice Junction Quantification | 1231 |
+| Isoform Expression Quantification | 1207 |
+| miRNA Expression Quantification | 1207 |
+| Clinical Supplement | 1183 |
+| Pathology Report | 1105 |
+| Intermediate Analysis Archive | 1027 |
+| Aggregated Somatic Mutation | 992 |
+| Masked Somatic Mutation | 992 |
+| Protein Expression Quantification | 919 |
+
+### downstream_analyses.analysis_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.access
+
+| Value | Count |
+|-------|-------|
+| _missing | 50950 |
+| controlled | 18617 |
+| open | 10557 |
+
+### downstream_analyses.output_files.channel
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.chip_position
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.data_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 50950 |
+| simple nucleotide variation | 16155 |
+| copy number variation | 4151 |
+| structural variation | 4075 |
+| transcriptome profiling | 2438 |
+| somatic structural variation | 1954 |
+
+### downstream_analyses.output_files.data_format
+
+| Value | Count |
+|-------|-------|
+| _missing | 50950 |
+| vcf | 9924 |
+| maf | 8256 |
+| txt | 5348 |
+| tsv | 4939 |
+| bedpe | 4416 |
+| tar | 1954 |
+
+### downstream_analyses.output_files.data_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 50950 |
+| Annotated Somatic Mutation | 5846 |
+| Raw Simple Somatic Mutation | 4078 |
+| Aggregated Somatic Mutation | 3968 |
+| Masked Somatic Mutation | 3968 |
+| Transcript Fusion | 2462 |
+| Gene Level Copy Number | 2411 |
+| Allele-specific Copy Number Segment | 2401 |
+| Simple Germline Variation | 2263 |
+| Structural Rearrangement | 1954 |
+| Copy Number Segment | 1954 |
+| Intermediate Analysis Archive | 1954 |
+| Gene Expression Quantification | 1231 |
+| Splice Junction Quantification | 1231 |
+| Isoform Expression Quantification | 1207 |
+| miRNA Expression Quantification | 1207 |
+
+### downstream_analyses.output_files.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.experimental_strategy
+
+| Value | Count |
+|-------|-------|
+| _missing | 50950 |
+| WXS | 10376 |
+| WGS | 3516 |
+| RNA-Seq | 2462 |
+| Genotyping Array | 2263 |
+| miRNA-Seq | 1207 |
+
+### downstream_analyses.output_files.imaging_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.msi_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.plate_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.plate_well
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.platform
+
+| Value | Count |
+|-------|-------|
+| _missing | 52512 |
+| illumina | 15999 |
+| affymetrix snp 6.0 | 2263 |
+
+### downstream_analyses.output_files.proc_internal
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.read_pair_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.stain_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.output_files.wgs_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.workflow_end_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.workflow_link
+
+| Value | Count |
+|-------|-------|
+| _missing | 46320 |
+| https://github.com/nci-gdc/aliquot-maf-cwl/blob/3dd621a8745ee2b91716911604bf3f096337a9b7/ensemble_aliquot_maf/ensemble_aliquot_maf_wf.cwl | 4288 |
+| https://github.com/nci-gdc/vep-cwl/blob/63378a5197b1a8c850e27c0dd4d4c575a726d571/v102/workflows/vep-annotation-workflow.cwl | 4288 |
+| docker.osdc.io/ncigdc | 3516 |
+| https://github.com/nci-gdc/somatic-maf-cwl | 3198 |
+| https://github.com/nci-gdc/arriba_cwl/blob/ccf62b9226985da89b695dd99528b1f65ac17710/cwl/workflows/gdc_gpas_arriba.cwl | 2462 |
+| https://www.broadinstitute.org/birdsuite | 2263 |
+| https://github.com/crick-cancergenomics/ascat/releases/tag/v2.5.2 | 2151 |
+| https://github.com/vanloo-lab/ascat/tree/master/releaseddata/tcga_snp6_hg38 | 2120 |
+| https://github.com/nci-gdc/gdc-somatic-variant-calling-workflow/blob/e00e464344272a1ac6ada9b3322d81849f507848/gpas-somatic-mutation-calling-workflow.cwl | 2112 |
+| https://github.com/nci-gdc/pindel-cwl/blob/9de690e9eb0e888c1d8ac4d41b192960a619b9c3/workflow/pindel.internal_chunk.cwl | 2112 |
+| https://github.com/nci-gdc/star_fusion_cwl/blob/bbd02bd6b33b506f018e33d33b2e1cafc8e0bc0c/cwl/workflows/gdc_gpas_star_fusion.cwl | 1231 |
+| https://github.com/nci-gdc/gdc-rnaseq-cwl/blob/5d8c131bbff59fb0c969217fc1d44e6d1503cd1f/rnaseq-star-align/star2pass.rnaseq_harmonization.cwl | 1224 |
+| https://github.com/nci-gdc/htseq-cwl | 1222 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/gdc-active-submission/workflows/mirnaseq/runner.cwl | 1207 |
+| ftp://ftp.broadinstitute.org/pub/gistic2.0/gisticdocumentation_standalone.htm | 1106 |
+| https://gdc.cancer.gov/about-data/publications/pancanatlas | 1057 |
+| quay.io/ncigdc | 123 |
+| https://github.com/nci-gdc/gdc-sanger-somatic-cwl/blob/d82167c739cd97869f77998d5ab175b70a1850ee/workflows/gdc_sanger_wgs_somatic_workflow.cwl | 108 |
+| https://github.com/nci-gdc/muse-cwl | 20 |
+| https://github.com/nci-gdc/mutect-cwl | 20 |
+| https://github.com/nci-gdc/somaticsniper-cwl | 20 |
+| https://github.com/nci-gdc/varscan-cwl | 20 |
+| https://github.com/nci-gdc/gdc-sanger-somatic-cwl/blob/24db0854fc8f555ad7925ebf9a6c020a4b1ef019/workflows/gdc_sanger_wgs_somatic_workflow.cwl | 16 |
+| https://github.com/nci-gdc/gdc-somatic-variant-calling-workflow/blob/6e096f6fc590589014842434774dd8a4de90433b/gpas-somatic-mutation-calling-workflow.cwl | 8 |
+| https://github.com/nci-gdc/pindel-cwl/blob/03f78a57d10a045a7483cb1d7ceab95ff009b51b/workflow/pindel.internal_chunk.cwl | 8 |
+
+### downstream_analyses.workflow_start_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### downstream_analyses.workflow_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 46320 |
+| Aliquot Ensemble Somatic Variant Merging and Masking | 4288 |
+| VarScan2 | 4078 |
+| Arriba | 2462 |
+| Pindel | 2334 |
+| Birdseed | 2263 |
+| ASCAT2 | 2151 |
+| MuSE | 2126 |
+| MuTect2 | 2126 |
+| ASCAT3 | 2120 |
+| SomaticSniper | 2118 |
+| GATK4 CNV | 1956 |
+| Manta | 1956 |
+| GATK4 MuTect2 | 1948 |
+| VarScan2 Annotation | 1914 |
+| SvABA | 1613 |
+| STAR - Counts | 1231 |
+| STAR-Fusion | 1231 |
+| HTSeq - Counts | 1222 |
+| HTSeq - FPKM | 1222 |
+| HTSeq - FPKM-UQ | 1222 |
+| BCGSC miRNA Profiling | 1207 |
+| GISTIC - Copy Number Score | 1106 |
+| MuSE Annotation | 1072 |
+| MuTect2 Annotation | 1072 |
+| Pindel Annotation | 1072 |
+| MuSE Variant Aggregation and Masking | 1066 |
+| MuTect2 Variant Aggregation and Masking | 1066 |
+| VarScan2 Variant Aggregation and Masking | 1066 |
+| ABSOLUTE LiftOver | 1057 |
+| GATK4 MuTect2 Annotation | 526 |
+| SvABA Indel | 359 |
+| AscatNGS | 214 |
+| BRASS | 214 |
+| CaVEMan | 214 |
+| SvABA Indel Annotation | 190 |
+
+### downstream_analyses.workflow_version
+
+| Value | Count |
+|-------|-------|
+| _missing | 50896 |
+| v1 | 4440 |
+| 3dd621a8745ee2b91716911604bf3f096337a9b7 | 4288 |
+| 63378a5197b1a8c850e27c0dd4d4c575a726d571 | 4288 |
+| ccf62b9226985da89b695dd99528b1f65ac17710 | 2462 |
+| e00e464344272a1ac6ada9b3322d81849f507848 | 2112 |
+| 9de690e9eb0e888c1d8ac4d41b192960a619b9c3 | 2112 |
+| f7cfd3d | 1956 |
+| 66779bc | 1950 |
+| 20250324t0157z | 1946 |
+| 8f03679 | 1870 |
+| 20241025t1647z | 1613 |
+| 0049bcb | 1558 |
+| bbd02bd6b33b506f018e33d33b2e1cafc8e0bc0c | 1231 |
+| 5d8c131bbff59fb0c969217fc1d44e6d1503cd1f | 1224 |
+| d82167c739cd97869f77998d5ab175b70a1850ee | 108 |
+| d1099de8dad87b076a826114bff939249c4b49e8 | 91 |
+| 20241210t1721z | 86 |
+| 20211008t1907z | 25 |
+| 24db0854fc8f555ad7925ebf9a6c020a4b1ef019 | 16 |
+| 6e096f6fc590589014842434774dd8a4de90433b | 8 |
+| 03f78a57d10a045a7483cb1d7ceab95ff009b51b | 8 |
+| 5a02c12930eb23436322a7494047b907b97570c5 | 5 |
+| 0dc34c0 | 2 |
+| 20241117t2122z | 2 |
+| 470801dfbc085958058a5b50518e4f3a5e4721c3 | 2 |
+
+### error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70770 |
+| file_size | 4 |
+
+### experimental_strategy
+
+| Value | Count |
+|-------|-------|
+| WXS | 17049 |
+| Genotyping Array | 14329 |
+| WGS | 12383 |
+| RNA-Seq | 11079 |
+| _missing | 4493 |
+| Methylation Array | 3714 |
+| miRNA-Seq | 3621 |
+| Tissue Slide | 1979 |
+| Diagnostic Slide | 1133 |
+| Reverse Phase Protein Array | 919 |
+| ATAC-Seq | 75 |
+
+### file_autocomplete
+
+| Value | Count |
+|-------|-------|
+| simple nucleotide variation | 21132 |
+| wxs | 17049 |
+| copy number variation | 14346 |
+| genotyping array | 14329 |
+| wgs | 12383 |
+| rna-seq | 11079 |
+| annotated somatic mutation | 10134 |
+| aligned reads | 9282 |
+| sequencing reads | 9282 |
+| raw simple somatic mutation | 6751 |
+| structural variation | 5772 |
+| biospecimen | 5317 |
+| transcript fusion | 4924 |
+| transcriptome profiling | 4876 |
+| structural rearrangement | 3976 |
+| dna methylation | 3714 |
+| methylation array | 3714 |
+| mirna-seq | 3621 |
+| gene level copy number | 3314 |
+| copy number segment | 3256 |
+| somatic structural variation | 3128 |
+| slide image | 3112 |
+| masked intensities | 2476 |
+| clinical | 2288 |
+| raw intensities | 2263 |
+| simple germline variation | 2263 |
+| allele-specific copy number segment | 2257 |
+| masked copy number segment | 2229 |
+| biospecimen supplement | 2205 |
+| tissue slide | 1979 |
+| methylation beta value | 1238 |
+| gene expression quantification | 1231 |
+| splice junction quantification | 1231 |
+| isoform expression quantification | 1207 |
+| mirna expression quantification | 1207 |
+| clinical supplement | 1183 |
+| diagnostic slide | 1133 |
+| pathology report | 1105 |
+| intermediate analysis archive | 1027 |
+| aggregated somatic mutation | 992 |
+| masked somatic mutation | 992 |
+| protein expression quantification | 919 |
+| proteome profiling | 919 |
+| reverse phase protein array | 919 |
+| 6e5690795ff424264402ab9d2661b62b | 274 |
+| b1afeba0fb7f76577dd6942a72137537 | 274 |
+| atac-seq | 75 |
+| f874f29d8cff281871c3b96c817ed728 | 56 |
+| 11ed6c62b39490d14c86e5c1e5646559 | 18 |
+| 38e3bef096a9f4c91c38e73114e849ae | 6 |
+| f5569b4cfd9ed978482b3818e8780e8c | 2 |
+| 00000073-27e1-4dcd-bfdc-e458c31feec2 | 1 |
+| 00002a6c29b95ebfc26c4700649aa569 | 1 |
+| 00004e5585297e8365eb6a3895c69395 | 1 |
+| 000089a8-212e-42e7-9d04-8d65819629c2 | 1 |
+| 0000ab34c51b917e5cfb53f5f8cef370 | 1 |
+| 0000f530-6360-487e-abe7-4dd4dc4f1dce | 1 |
+| 0001387e2a101531fe43861b3a601be2 | 1 |
+| 0001516c-18b3-43c3-a06b-560742e343b3 | 1 |
+| 00019bab1108f454a983c67eab65fede | 1 |
+| 0001c5e4-a6d7-46bc-85cd-173197cad042 | 1 |
+| 00020280-6040-4071-b30e-b882a3dfbc2b.wxs.pindel.aliquot.maf.gz | 1 |
+| 0002185d-fff5-46b6-8fcb-d8259619d73a | 1 |
+| 00026b14-e03c-4e67-9061-2e2eafe407d3 | 1 |
+| 0002d54d-c65a-4189-baf3-c5d5dca793ac | 1 |
+| 0002e71c035387839b8efb4f79ec0d4b | 1 |
+| 0003415a-bc8f-4819-9cdf-ff2730fb261c | 1 |
+| 0003740f-88f2-4ed5-af0b-d23fc0c19486_legacy | 1 |
+| 0003f4fe2491b192503c00e36e852f3f | 1 |
+| 0003f746e9d2ce2284a8e1567fcf3ac0 | 1 |
+| 00046848-02a3-4fff-8ef1-19b6e665d6f3.wxs.muse.raw_somatic_mutation.vcf.gz | 1 |
+| 00046848-02a3-4fff-8ef1-19b6e665d6f3.wxs.mutect2.raw_somatic_mutation.vcf.gz | 1 |
+| 00046848-02a3-4fff-8ef1-19b6e665d6f3.wxs.varscan2.raw_somatic_mutation.vcf.gz | 1 |
+| 00049989-fa21-48fb-8dda-710c0dd5932e | 1 |
+| 00052887-a82d-4927-95a4-31ced93462f6 | 1 |
+| 0005883e-a762-4656-b5ee-775024be2f25 | 1 |
+| 00063026-2a67-41de-b105-f80dca277978.rna_seq.augmented_star_gene_counts.tsv | 1 |
+| 00063026-2a67-41de-b105-f80dca277978.rna_seq.chimeric.gdc_realn.bam | 1 |
+| 00063026-2a67-41de-b105-f80dca277978.rna_seq.genomic.gdc_realn.bam | 1 |
+| 00063026-2a67-41de-b105-f80dca277978.rna_seq.star_splice_junctions.tsv.gz | 1 |
+| 00063026-2a67-41de-b105-f80dca277978.rna_seq.transcriptome.gdc_realn.bam | 1 |
+| 00064e27-bfd4-45a3-850f-c92cd9509215 | 1 |
+| 000662997e7c6a550ccb4aa7bc6d30cd | 1 |
+| 00066936400a37225184270c70d2d1bb | 1 |
+| 00067e6df3336d13ee4510eb95ee6273 | 1 |
+| 0006c477713fcb649e7398661a856a43 | 1 |
+| 00075316-f54d-4728-8872-086c9184da2a | 1 |
+| 0007e90d-3186-4967-905c-22aa24049d44.methylation_array.sesame.level3betas.txt | 1 |
+| 0007e90d-3186-4967-905c-22aa24049d44_noid_grn.idat | 1 |
+| 0007e90d-3186-4967-905c-22aa24049d44_noid_red.idat | 1 |
+| 0008ed4d-a9c4-4e03-bed3-1db8465c3a5b | 1 |
+| 00092a32ba38745ed85a6aff33db8478 | 1 |
+| 000991be-6624-4ede-98ed-9f83428e31b7 | 1 |
+| 0009b561-824f-44f5-9b66-a911d7da3a96 | 1 |
+| 000a8d12-995f-41ac-82fe-b824f76a7b78 | 1 |
+| 000cf1b8064102eab2d474609fc82380 | 1 |
+| 000dbfe5-8b24-461e-8195-02055959a469.wxs.muse.aliquot.maf.gz | 1 |
+| 000de9398ad005197de3b826446836c5 | 1 |
+| 000def84-ce0b-4ac2-b688-c98a30b0ba3d | 1 |
+| 000e43418e9eecd5b7b1497ccf8d99af | 1 |
+| 000e8c013b8c363c7510c6f97932abf9 | 1 |
+| 000f5adc-5a2b-4bdf-bed0-a17d0db31904.wxs.pindel.aliquot.maf.gz | 1 |
+| 000f9e17-6eaa-4e62-8f72-93e36ceb6b32 | 1 |
+| 00102ede2f1798b7e079d9b6823314c3 | 1 |
+| 001032a0-f6b4-44c6-a6d3-c946c4a21612 | 1 |
+| 001056c0-9029-40f9-9c78-81dc1259c2ca | 1 |
+| 00106621-d4da-4379-bccf-45c98fd6ae0c | 1 |
+| 0010759d1bf695d5faf273897a779523 | 1 |
+| 0010ce59-fd1e-4a45-8753-a224164fb818 | 1 |
+| 00110ae3-e23e-4ac8-86ac-c05dfce12dbd | 1 |
+| 001112e9-7b61-4ad4-87c9-fd8aab859087 | 1 |
+| 0011b4a5-766d-4a22-923c-9960baf7b998 | 1 |
+| 00126c25-bce8-4ad1-ad68-13fea78f3d8c | 1 |
+| 00127e3945dccc282a3a70eb0506d474 | 1 |
+| 001292e5-820b-4805-b85c-d4eed2b173aa | 1 |
+| 0012a118-d4ab-41d3-b7bb-cb4d897e6f72 | 1 |
+| 00135764-7b33-461a-aee0-52561d2f8409 | 1 |
+| 00136342cc19b6444169d302b59f9cf1 | 1 |
+| 001388ce8201735c6bf2cc3090a512a2 | 1 |
+| 0013c20f-4bbe-4af0-803b-115a666cdfef | 1 |
+| 0013f35fd31b9181225791fffaa2ec6c | 1 |
+| 001480bf-0f9d-4d4a-9f97-3d42524be4bd.wxs.muse.aliquot.maf.gz | 1 |
+| 00157a93-7d77-41d8-ac9c-6317c9ae38fe | 1 |
+| 0015ca9f-f4d4-4c90-ac39-ff2bc623d2c9 | 1 |
+| 0015dea1-e015-4927-b198-577a72c956c9 | 1 |
+| 001605fb-e758-4737-97fd-b77a117e5fe8 | 1 |
+| 001697c9-0662-48e8-8ef3-ffe135c411ca | 1 |
+| 00176eb9-9223-4d44-8e1f-b7b0e4596877 | 1 |
+| 0017d37d-13d5-48c7-ad48-c002a8cbf390 | 1 |
+| 0017edb92ef95bd496dbb02b941acfd9 | 1 |
+| 0018cc22-498a-45b8-bfd4-b0fe0c3a2f0a | 1 |
+| 0018e81a-69bc-4439-b0c5-0b57219b546d | 1 |
+| 00190533-2222-4e4f-8535-32de641b0749 | 1 |
+| 001968f6627c0f231b4aff3d8cb775a6 | 1 |
+| 00199110-e329-445c-89d4-27b4fdaec059.methylation_array.sesame.level3betas.txt | 1 |
+| 00199110-e329-445c-89d4-27b4fdaec059_noid_grn.idat | 1 |
+| 00199110-e329-445c-89d4-27b4fdaec059_noid_red.idat | 1 |
+| 0019a350-858e-4609-9ac9-5258c5745578 | 1 |
+| 0019c951-16c5-48d0-85c8-58d96b12d330 | 1 |
+| 0019ddd2-b4f0-4369-b699-3aafe1167787 | 1 |
+| 0019f2dc-8a49-4ae7-a365-6d97376f6c59 | 1 |
+| 0019ffac-c13d-4386-a14a-b0f6834b04d9.somatic.sv.bedpe | 1 |
+| 0019ffac-c13d-4386-a14a-b0f6834b04d9.svaba.somatic.sv.vcf.gz | 1 |
+| 001a0d7d-b022-4fd9-b1f2-1f2d3f30d3a7 | 1 |
+| 001a52de-b9b7-4ace-90af-8550fc319754 | 1 |
+| 001a6d827bfa38c5e880f5dd4b623cc6 | 1 |
+| 001b2ef0-526e-46f5-8e76-f315023c070c_wxs_gdc_realn.bam | 1 |
+| 001b4207-ac46-405f-bbc9-267dab4e999c | 1 |
+| 001b63148890ccc335634c4f93aa0611 | 1 |
+| 001b6b10-dae1-4319-8b22-ff48a130b4b4 | 1 |
+| 001b6b19f65760e2b17bccfe2809a503 | 1 |
+| 001bfeff-96f4-4978-8bc6-c457159d7c79 | 1 |
+| 001c2b19-de6d-4c24-bb57-67f8f9812318.wgs.gatk4.copy_number_variation.supplementary.tar.gz | 1 |
+| 001c2e42e2ee86ca59c51fef702357bc | 1 |
+| 001ca047-fbe1-4fd8-a3b2-7e851dbb7dd9 | 1 |
+| 001ce342-4ac3-4475-bd94-8103bc83fce8 | 1 |
+| 001d4597-4a2f-4651-aef7-e3c8f5487c35.somatic.sv.bedpe | 1 |
+| 001d4597-4a2f-4651-aef7-e3c8f5487c35.somatic_sv.vcf.gz | 1 |
+| 001d6fb3-3c8b-4499-9680-615fac498f4e | 1 |
+| 001d9a0cad81262b4ffa4839bc4aa005 | 1 |
+| 001dc883-5c35-4a83-a4cb-a4ee5fbad1d8 | 1 |
+| 001dca50f80d2897eb676091d61b233e | 1 |
+| 001dcbcc-21e1-41f4-9c26-20a916085b5f | 1 |
+| 001dee73-2087-4f43-af01-cdbd3474b806 | 1 |
+| 001e419e-cf20-4bc6-84eb-ffad32fdda01.wxs.mutect2.aliquot.maf.gz | 1 |
+| 001e9c1ef9386daa96e06e646b1fef57 | 1 |
+| 001edec1-2226-4d82-8e68-2351dc4e8f80 | 1 |
+| 001f324d469ef78b3427457522e915d5 | 1 |
+| 001fa113bcfcfa30e4426e02c06a6799 | 1 |
+| 001fd170caaf223e14c7a97f8d8fb708 | 1 |
+| 001ff0d6022066f72feee29096feeae3 | 1 |
+| 002030cb-bfa9-4e5c-924f-6f185c839e31 | 1 |
+| 0020509e-3edf-42f1-ac05-f91e28da4518 | 1 |
+| 002073b1-e34e-4970-bb9b-7ad2c3576d92 | 1 |
+| 00207bd97771200b60786f43b35c31f4 | 1 |
+| 00208976d8bc3f87b0c4f0f728ec8883 | 1 |
+| 00209623-744c-40e2-8b60-b10c382a494c | 1 |
+| 0020ea3dfefca5eaf01219f981228efa | 1 |
+| 00210d29-8ab3-4117-9de9-97652f49c6bd | 1 |
+| 00218259eebda12ec307a1d976da9b1e | 1 |
+| 00218bae33c036805927780d71080d42 | 1 |
+| 0021e159-20fc-49a4-847e-8da5e3e94c21 | 1 |
+| 0022b2280e4418b4e7073754d22c867c | 1 |
+| 0022cd20-f64f-4773-b9ff-a3de0b71b259 | 1 |
+| 0022e7b5-7b29-4073-8965-b53c1162487c | 1 |
+| 0023410c-feff-48c9-a53a-9fdfff6d2da0 | 1 |
+| 00235ef3-02cd-48f5-858a-613632e795e0_legacy | 1 |
+| 002381d2-5daf-4e96-81ee-4023c7003a78 | 1 |
+| 0023af100818fbafcc9ca398fad4b8c4 | 1 |
+| 0023c2911dec00f4c85583acd90fce50 | 1 |
+| 002468c6-2ffb-4e45-b145-8dc4438f2acf | 1 |
+| 00249983-dae8-4175-8366-79d5531fefa3 | 1 |
+| 0024d745-c533-4dbc-8341-e99ef6071fd8.wxs.pindel.raw_somatic_mutation.vcf.gz | 1 |
+| 0024fa92-6358-41ba-a2ce-e0f2d9cb26ae.somatic.sv.bedpe | 1 |
+| 0024fa92-6358-41ba-a2ce-e0f2d9cb26ae.somatic_sv.vcf.gz | 1 |
+| 0025c303d1c5c894bd897954e8f69f6e | 1 |
+| 00260539-46f2-426a-8c48-1fc102b82618 | 1 |
+| 002674ff6e6df6eb73361bee91914f1b | 1 |
+| 0026e76c-a1bd-4e00-844c-c2429dd49f72 | 1 |
+| 0026e7b3-6e38-44cb-83cb-6618a7681f0a | 1 |
+
+### imaging_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.access
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.channel
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.chip_position
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.data_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 48162 |
+| simple nucleotide variation | 12597 |
+| sequencing reads | 8027 |
+| somatic structural variation | 1988 |
+
+### index_files.data_format
+
+| Value | Count |
+|-------|-------|
+| _missing | 48162 |
+| tbi | 14585 |
+| bai | 8027 |
+
+### index_files.data_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 48162 |
+| Somatic Mutation Index | 14585 |
+| Aligned Reads Index | 8027 |
+
+### index_files.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70770 |
+| file_size | 4 |
+
+### index_files.experimental_strategy
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.imaging_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.msi_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.plate_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.plate_well
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.platform
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.proc_internal
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.read_pair_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.stain_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### index_files.wgs_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### metadata_files.access
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### metadata_files.data_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### metadata_files.data_format
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### metadata_files.data_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### metadata_files.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### metadata_files.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### metadata_files.type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### msi_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 68635 |
+| mss | 2128 |
+| msi | 11 |
+
+### plate_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### plate_well
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### platform
+
+| Value | Count |
+|-------|-------|
+| illumina | 36662 |
+| _missing | 15150 |
+| affymetrix snp 6.0 | 14329 |
+| illumina human methylation 450 | 2685 |
+| illumina human methylation 27 | 1029 |
+| rppa | 919 |
+
+### proc_internal
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### read_pair_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### stain_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### tags
+
+| Value | Count |
+|-------|-------|
+| _missing | 70774 |
+
+### type
+
+| Value | Count |
+|-------|-------|
+| annotated_somatic_mutation | 10134 |
+| aligned_reads | 9282 |
+| structural_variation | 8900 |
+| copy_number_segment | 7742 |
+| simple_somatic_mutation | 6751 |
+| copy_number_estimate | 3314 |
+| slide_image | 3112 |
+| masked_methylation_array | 2476 |
+| gene_expression | 2462 |
+| mirna_expression | 2414 |
+| simple_germline_variation | 2263 |
+| submitted_genotyping_array | 2263 |
+| biospecimen_supplement | 2205 |
+| methylation_beta_value | 1238 |
+| clinical_supplement | 1183 |
+| pathology_report | 1105 |
+| copy_number_auxiliary_file | 1027 |
+| aggregated_somatic_mutation | 992 |
+| masked_somatic_mutation | 992 |
+| protein_expression | 919 |
+
+### wgs_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 61492 |
+| not applicable | 7176 |
+| 25x-150x | 2061 |
+| 0x-10x | 40 |
+| 10x-25x | 4 |
+| unknown | 1 |
+
+
+## 4. GDC TCGA-BRCA: Case Inventory
+
+**Case project filter field:** `project.project_id`
+
+### aliquot_ids
+
+| Value | Count |
+|-------|-------|
+| 0006f0d6-0acd-4f06-82ff-05619ce612fd | 1 |
+| 00075575-e93e-4a96-a158-139387a4625b | 1 |
+| 0008c8dc-f219-46b8-8c32-689a07521ae6 | 1 |
+| 000bef24-c05c-46ee-a84c-9611a41aeb4e | 1 |
+| 000d877f-8d03-44bc-8607-27b5ba84b5fe | 1 |
+| 001201ec-e31a-4887-b4d7-9b4139b7cdf2 | 1 |
+| 00168e86-d23a-48ae-8c60-36d970051907 | 1 |
+| 0016bb20-f9ab-42ad-9d22-154bc12dfc14 | 1 |
+| 001773a6-9cf3-48a1-8ea1-1f0da4991bc5 | 1 |
+| 0018ce1e-21f6-41cc-a93e-7633f6f76215 | 1 |
+| 001a9851-7ebd-4011-afad-145cc1673e22 | 1 |
+| 001b2ef0-526e-46f5-8e76-f315023c070c | 1 |
+| 001f4515-ff7a-415d-bc99-f1fa50e0b3bf | 1 |
+| 00280c49-f731-49be-b5cf-badaf71e572f | 1 |
+| 002c078d-4b86-4f8b-ae84-b1320d3c8675 | 1 |
+| 002d83af-9d57-4ddf-b6e4-99d541a4359b | 1 |
+| 00354d33-c6b3-45b0-8a21-4a8c8a7df3a5 | 1 |
+| 0035e0c2-0376-4050-a03e-df556d408b94 | 1 |
+| 0039524b-b0fe-4317-852d-c2842d00c64c | 1 |
+| 0042b857-502f-4d8e-baac-845c1a9bb64b | 1 |
+| 0046ad7e-1eee-4982-a807-5b9e31da6f9a | 1 |
+| 004bf993-1126-4c1d-b38f-53ac0ac1db67 | 1 |
+| 004c867a-73e0-4e7d-8c27-2462b648c722 | 1 |
+| 00535de9-f140-4576-bb85-d53911eaac81 | 1 |
+| 0055b879-e084-4a7f-bf87-69d38b671742 | 1 |
+| 0058ce19-7651-4a8d-af6a-4813da314687 | 1 |
+| 0065ce98-da04-4e19-9be8-97ae7d38e0f0 | 1 |
+| 0067afac-d3c7-4a34-bd4a-0fbc36d9f4a8 | 1 |
+| 00683b30-d386-48a8-ad29-4f4698864c66 | 1 |
+| 00696e9b-48ff-4ad7-b30c-cbd3a0e822fd | 1 |
+| 006e88ce-ad31-45bf-8da5-802f0e387b3a | 1 |
+| 006faa97-572b-4015-a803-e1c9fa4a1be2 | 1 |
+| 006ff264-ef7d-4021-a879-77080c0440cf | 1 |
+| 00741e84-d5ca-4d90-9b67-328e808705ae | 1 |
+| 0077cf20-d598-4e04-863c-534e3386580e | 1 |
+| 007d2851-c30e-4b3a-864f-7bf7b89178b4 | 1 |
+| 007e0edb-30fc-40b3-a52b-ae93f9ea4d10 | 1 |
+| 0080f3ee-d1fb-4dbb-a1f7-74493849be15 | 1 |
+| 0086959f-43d5-459d-8570-48f64abc4604 | 1 |
+| 0086d16a-315f-4190-8ec1-b04f005e061a | 1 |
+| 0089c75f-1a46-4f13-a89d-d567f1add1b1 | 1 |
+| 008b1a28-0527-4f95-9a98-42239d6f212d | 1 |
+| 008ba655-a0a3-42c4-8c72-f1341365ef02 | 1 |
+| 008f746c-ac9a-46fb-907c-dec94c6ffd9e | 1 |
+| 00919664-1563-46f2-a9de-290ba63f8ca0 | 1 |
+| 00a173ee-32df-4747-8b04-05b3913e3118 | 1 |
+| 00a31122-f2d5-4d09-b165-1231703d8dc2 | 1 |
+| 00a3c8f4-bd75-4aa8-abb7-21005b1a5ad8 | 1 |
+| 00a42020-55cb-4491-819c-e7a3258887c1 | 1 |
+| 00a592bc-59d0-4972-bb9a-a539d8081d7d | 1 |
+| 00a595c5-0565-4289-878a-80ff4ba89d97 | 1 |
+| 00a93e06-5edd-4360-9ab5-55a65b155d9f | 1 |
+| 00b14c77-845c-432e-923c-c2c412f5df31 | 1 |
+| 00b6f358-1b1f-4bdf-a41c-a692425c407c | 1 |
+| 00bd0921-b765-4fbd-ab79-4d85aba0d1f6 | 1 |
+| 00be7a5c-ffe3-447f-a060-81bb49954791 | 1 |
+| 00c8d151-2223-4e36-8c66-6c09e42d8777 | 1 |
+| 00ca8c9f-2d42-4846-8145-72cffea10676 | 1 |
+| 00cb48ab-1928-49b9-996f-427551490222 | 1 |
+| 00d2d597-82c5-4a9a-83ba-cc8398e2746d | 1 |
+| 00d38469-0a07-4d87-8b9f-1f819ee8f3e3 | 1 |
+| 00d8d966-3b07-4ecc-aa3e-3adf967de41c | 1 |
+| 00daaa0a-dc00-447b-8f04-4b933ba40e01 | 1 |
+| 00e26efc-b39a-470f-ad82-e3c6d796ecb0 | 1 |
+| 00e597fa-72b4-4e92-9428-7ec686e4cc0b | 1 |
+| 00e9a279-eec2-4842-9cb7-f031cbaae7a6 | 1 |
+| 00ecfe21-9fc6-42b7-ba86-c5bd81df0c09 | 1 |
+| 00ee8acd-0841-4c85-a99a-8966a6828dd7 | 1 |
+| 00ef5a41-7101-4347-8e48-06fe1690aa8f | 1 |
+| 00f0dea2-9444-4308-8748-efc385d66e62 | 1 |
+| 00f17d05-c711-41e0-ab96-f2d4a2253124 | 1 |
+| 00f7299a-af35-437b-90a9-cb794754a25a | 1 |
+| 00fceb8f-c88b-48d7-994c-8a4a9100f8e4 | 1 |
+| 01028be5-c2bf-4696-911d-a3c54c70aace | 1 |
+| 01058436-8fa9-4ad9-886d-6668403e1d94 | 1 |
+| 0108b1be-b930-440a-96e8-1de9e56be913 | 1 |
+| 0113db6d-e1de-4e88-8c2a-f356e88eb8d3 | 1 |
+| 01163f75-8956-40a6-97a5-3c0478d904f8 | 1 |
+| 011f64de-d7b6-426e-b845-6e52faa74d1b | 1 |
+| 011f9e39-3f8f-48df-b392-ab2963cfde84 | 1 |
+| 012094ad-98a4-44d4-ace9-8e30463e9694 | 1 |
+| 012165ee-3207-4fea-8597-86ca6a3a4906 | 1 |
+| 0122ecac-cccf-436a-a6ad-59b0d44ea5ea | 1 |
+| 012e1ff3-7ed3-4dee-ae3d-44a8050d774e | 1 |
+| 012e6e92-ef34-41f4-bf9b-fa3e81a7c438 | 1 |
+| 01334fdd-64d4-4f83-b66a-e5e973ce0c24 | 1 |
+| 01337e66-6c96-483b-8ae6-53cc90510f0c | 1 |
+| 0135d16e-46e7-460b-b189-a816757cd9d7 | 1 |
+| 01370d42-f75c-4532-9b9c-24ff7302b033 | 1 |
+| 013b0a8d-79f3-4165-9f32-61609f775472 | 1 |
+| 013b8901-2f00-46f4-b864-0a5e7d4efa6c | 1 |
+| 01420f07-57ba-4283-ac6e-7ca7f4141c42 | 1 |
+| 01428281-1653-4839-b5cf-167bc62eb147 | 1 |
+| 0147a2e5-c5bb-458e-a14e-df0acf2aff29 | 1 |
+| 0147d2d5-b6ce-4411-8f4d-f91f26d7c157 | 1 |
+| 014e64a6-e34a-4f1d-ba2c-b255ff426dc2 | 1 |
+| 015b557c-ff43-4ed9-8006-59edda9bb12f | 1 |
+| 0160a89f-1fc7-4776-8f24-48efb9ed3279 | 1 |
+| 01639d59-1234-44d0-8e5b-17980b4e5647 | 1 |
+| 0164fc71-7db6-481d-a782-4178f665ecff | 1 |
+| 01658141-8398-4585-9f0f-8355dd9b0604 | 1 |
+| 01711c99-dbb2-423c-9c1c-ec1bb4c18bc8 | 1 |
+| 0172d30c-287c-4f3e-b70c-5760c6dccb7c | 1 |
+| 0172e4c7-e2d6-4995-abbf-03f31f54a54b | 1 |
+| 01744ee0-5950-4a8a-8775-f7cca1ab8f14 | 1 |
+| 01745d1c-ed24-4173-9f3f-27ec76e34fb4 | 1 |
+| 0179d350-8a90-4269-8eee-a0b971d23cb8 | 1 |
+| 017d8d0d-3540-40d2-adf7-3bfaf849635d | 1 |
+| 017e4419-707b-4fcc-9968-a61953164139 | 1 |
+| 0181f0cd-997f-44d7-92a2-7e050f0a041b | 1 |
+| 01897936-ba75-4f18-95b9-7854c9c3b0eb | 1 |
+| 01a1e8a0-51e3-400b-81dc-581a93199892 | 1 |
+| 01ab6993-11fd-4165-b6a6-00114e3fac21 | 1 |
+| 01ba4ece-7a7c-4043-ae19-cead60bd41e2 | 1 |
+| 01bc5261-bf91-4f7b-a6b4-0e727c5e31d2 | 1 |
+| 01bd06a9-e3f7-4db9-85c3-e28dd00501c5 | 1 |
+| 01bfa925-d8f2-4ead-ad89-8cc91b8c3c92 | 1 |
+| 01c05d72-7d1a-480e-a20b-dd32d1b53fcb | 1 |
+| 01c3cc25-bb81-4cc3-a9aa-e07f44991c3f | 1 |
+| 01cb5da5-f78d-42b5-8a5d-f106e7f1d92b | 1 |
+| 01cc65d8-79a2-44de-b87b-de49293ba8f0 | 1 |
+| 01d029e9-3ea6-4763-84bb-de8462b86b74 | 1 |
+| 01d0dc64-67c3-46bd-a24c-02e6c21d9875 | 1 |
+| 01d11e4c-038d-4408-93dd-f714b6489866 | 1 |
+| 01d288fb-b0ea-4c3d-9405-f94909e0d0f3 | 1 |
+| 01d3fddf-b447-4925-a5cb-c5fd70c97278 | 1 |
+| 01d904f5-ded8-4f60-8e5f-62bb3c2f6ef8 | 1 |
+| 01dff91f-779c-4daa-997e-7d666129a7ca | 1 |
+| 01e84bc0-6221-4c01-a67f-c07238a0f6e0 | 1 |
+| 01e89317-68cc-49b0-88ac-ad994a9084c3 | 1 |
+| 01ea194f-dc06-4e15-9b9e-1c73668040e0 | 1 |
+| 01ef4e1e-bf45-43b4-8f30-4716f927eae3 | 1 |
+| 01f0dc6b-09ef-4ac9-ba34-5babe855b2be | 1 |
+| 01f78efa-ba0b-4263-81fd-d3d8ea1bc5fd | 1 |
+| 01fc1da6-afe7-4e42-ac30-beed04d9ac18 | 1 |
+| 02009466-1916-40a2-974d-72b2a781018c | 1 |
+| 0206daa6-8853-411b-8ca5-a3539d05765d | 1 |
+| 020dd1e2-bfd1-4161-8702-8d902ff3483b | 1 |
+| 0212e1a1-d848-4b05-9a51-2dbe17cdd8b8 | 1 |
+| 02155449-2a25-4e7f-ac89-d75619f6851e | 1 |
+| 0215d4f1-6697-4e8f-afc4-ff7c6439e56d | 1 |
+| 021c11b1-88bc-49fe-95b2-557ec3daea46 | 1 |
+| 02222fea-f3da-4328-8188-8ef24d1f55e4 | 1 |
+| 022260f8-19dc-4bef-839d-131d7e6d4166 | 1 |
+| 022439b2-d8e6-4ee4-9be8-23c08de629ea | 1 |
+| 02275f5e-a3bf-4759-b481-d5ef710dff56 | 1 |
+| 0236da6e-fcb5-4ba1-a240-7faad5291525 | 1 |
+| 023ceb74-14a9-4316-8e15-cad12165baa0 | 1 |
+| 023e5be8-ad7b-4c19-a669-d07f5cf2be07 | 1 |
+| 024af7a1-f497-49a7-85c7-d10e5f541f84 | 1 |
+| 024bd92a-eab0-4913-bd2e-c21deaf6bd74 | 1 |
+| 0251918a-7b76-43d1-96f5-4c15419982f5 | 1 |
+| 0257d030-6d78-452c-9dcc-79fe50533543 | 1 |
+| 02585ddf-6869-4c92-86dc-1b584f37a808 | 1 |
+| 025ce3f6-080b-486e-a0ba-f3a1de23d0fd | 1 |
+| 02600c52-6742-4d06-b417-16694f0c026b | 1 |
+| 02613b8d-b01c-401a-a0be-71f258dea92a | 1 |
+| 026b8552-1025-43c1-8051-1b332cbc5d2d | 1 |
+| 026eb95c-5a67-4026-8d88-a4185c0ef7de | 1 |
+| 0281e062-4b02-44ed-a3f8-d6db65ff8847 | 1 |
+| 02825e2e-a430-4b98-8674-1fc4ca909687 | 1 |
+| 02873204-1097-45ea-b143-a97f3e047537 | 1 |
+| 028caa59-49aa-4305-8b0a-9fe133c9ffcf | 1 |
+| 028ec3c0-5771-4053-8443-fcc5ba54b1b2 | 1 |
+| 0294d2fd-4e55-4b7b-99ff-b8e0ff67bdfd | 1 |
+| 02957ae5-22ed-48d1-8585-476f6f25b10f | 1 |
+| 0297dfd8-fd20-4591-bea5-5433cb264d27 | 1 |
+| 029b7fb5-ba9b-4ba9-b6af-12b875f45ae3 | 1 |
+| 02a65cb0-158c-478b-b72e-d6bae04429c7 | 1 |
+| 02a7b2f2-7ae3-426c-9ec5-cdb5ffcaaaa6 | 1 |
+| 02b3aea7-906f-416b-95b2-dc21f2c158bf | 1 |
+| 02b5a2c4-832d-4c8b-b4f2-be0566eb6677 | 1 |
+| 02b8059b-9095-4f29-a462-c3579b4d36a3 | 1 |
+| 02bde32b-37e9-4768-9222-aba698b4ef49 | 1 |
+| 02cc24bb-ae71-484e-b317-8ad89f4f6b36 | 1 |
+| 02ccecdb-f6e0-4b71-8f58-e146f1163e1d | 1 |
+| 02cf1db9-55c0-4ece-b230-966b30cd0b94 | 1 |
+| 02d9d59b-de6f-41c7-b529-142116debfd9 | 1 |
+| 02de2811-80ba-491d-a9bb-7544ae9b2f4d | 1 |
+| 02e56a7d-9169-4beb-9a82-b91122b466e3 | 1 |
+| 02eb17d4-9e9e-4e32-96b0-90ccdda3f167 | 1 |
+| 02ec9ea0-51fe-4d72-96c1-047c6f1d1170 | 1 |
+| 02ed0491-6316-4863-8041-c50be247d8e7 | 1 |
+| 02ed13b6-5cc2-423d-9b5a-b1c802c33569 | 1 |
+| 02f21d38-e1e9-4126-b1a4-93cfd3b814da | 1 |
+| 0303bc2a-8c67-46dd-a923-781d8068625d | 1 |
+| 03068972-3e44-476f-8f00-c1758c739c4f | 1 |
+| 0307bd0b-b59a-4996-b89d-612e72652890 | 1 |
+| 030a5636-ea5f-4ba5-b197-7c6c2228d0bc | 1 |
+| 030b228c-52e3-47bc-ac78-01eed70499a2 | 1 |
+| 030c632d-4eab-4041-b433-8e4ef64cab29 | 1 |
+| 030cfc8a-7b43-4d73-8bfa-b68a47749e49 | 1 |
+| 030eab57-3bc4-47b1-aba1-053589099a69 | 1 |
+| 030fea78-6657-4a10-b04c-8231a1781e01 | 1 |
+| 03206ea9-2429-42e5-8399-671a9d7e4855 | 1 |
+| 0321c2ab-8953-4419-8108-d0ea82d1e1e5 | 1 |
+| 0323e53c-a64f-426b-9f8e-f76b6bdf6118 | 1 |
+| 032b2649-73ad-4838-bd51-afd845fee9b1 | 1 |
+| 032c284b-6734-4804-921d-3c3c86a42347 | 1 |
+| 032cc4cf-846a-4b47-9d7d-f9f38edb0f6e | 1 |
+
+### analyte_ids
+
+| Value | Count |
+|-------|-------|
+| 000d0385-f816-4319-af03-17e9b415f3a3 | 1 |
+| 00122172-5bb8-4a0d-aeb7-746825412b59 | 1 |
+| 001c86af-570e-4d11-8259-1c9aad41e306 | 1 |
+| 00233ea4-04b9-44bc-aa0e-e96ea8abd136 | 1 |
+| 0025f0ec-4d83-4bb0-be77-95f4bb30a64d | 1 |
+| 003488d3-298f-4691-9de0-1ee1f3c12265 | 1 |
+| 0035b11d-434b-42ca-b1e8-e492ab03701a | 1 |
+| 00404cce-2688-405f-97de-717e2c1c6b06 | 1 |
+| 00486322-9cb7-48d6-a720-5a0f78de73c9 | 1 |
+| 00572d19-2480-44af-90e3-ece4256e73c6 | 1 |
+| 00615421-0e03-412e-9627-c160cbdcf6b2 | 1 |
+| 006e7eb6-2fa4-46c3-a2c8-1bbec8352983 | 1 |
+| 006f4a58-726b-4eeb-985e-73fcca9e70a4 | 1 |
+| 0070cfc5-73f7-4ef9-813f-cce732268ff8 | 1 |
+| 0072b9e9-9071-4f37-994b-88cebfbfb84f | 1 |
+| 007468e1-90cb-48b7-b940-ea96c90e7076 | 1 |
+| 00926fd9-9180-40f1-ba27-34f97c2314ce | 1 |
+| 009afea7-bc7e-4b20-8a97-5dbdd46f790a | 1 |
+| 009ea160-2de6-47e2-9a0f-c7fbc5576731 | 1 |
+| 00ae30d1-f0ae-4541-90c5-2d59945b1aa3 | 1 |
+| 00c1536e-f38f-4645-bf6a-b0ff4e3b4be1 | 1 |
+| 00c56292-cc9b-4a9c-bf27-0746059098e8 | 1 |
+| 00d2a2a6-c208-4ba6-ba86-4cd213355c60 | 1 |
+| 00d95599-cbd9-4ea7-90eb-ab901a530507 | 1 |
+| 00e728b2-6b0e-4ec7-af15-57c92537dd18 | 1 |
+| 00eb4202-749d-44c0-bf6c-f49d0ccdce64 | 1 |
+| 00f4a5d0-cb3a-4f42-90f3-52d7742ac412 | 1 |
+| 01014fbf-81c1-4f6f-bcab-91e23941f9ae | 1 |
+| 01024a40-3fc9-4d3f-b294-b1464eefbcc5 | 1 |
+| 01235157-dc0c-4bd3-afa5-bcf4e97e3a4a | 1 |
+| 014135eb-07e1-4540-a320-e6ff090fd56f | 1 |
+| 0141a1d0-27d4-4a9b-8d88-3375c56b7b1e | 1 |
+| 014e4b99-22cd-4a43-a274-c20d67e07002 | 1 |
+| 014fafed-0dfc-448c-84ee-68b596710991 | 1 |
+| 0153f010-f079-436b-943b-c800192218a1 | 1 |
+| 0158a3bd-471b-4416-8c1f-b400ad07373c | 1 |
+| 01620a02-13d5-4855-8b96-9dfe92d74bcb | 1 |
+| 0165581c-f120-404a-8325-84d96f34a486 | 1 |
+| 0173ec6e-1587-4b36-b8b0-209a7ae2b341 | 1 |
+| 0177e221-d5a8-4ad6-b1d4-33dcb2867748 | 1 |
+| 0195ffcb-1c16-4516-9c43-292b975b09f4 | 1 |
+| 019a53aa-342a-421e-848b-8654e2cdb6a7 | 1 |
+| 019f21a8-5b9f-43a6-ad17-f82b55ff35d8 | 1 |
+| 01aee434-3634-485a-869e-4ae1033fae4c | 1 |
+| 01bb731c-a6df-4a4f-a831-bd2e7f449b03 | 1 |
+| 01d0efc2-ac83-4490-92ca-76368439b2f4 | 1 |
+| 01d548c9-9555-4ea4-9677-f9c7a85b9ca5 | 1 |
+| 01d72b1f-e07a-4543-8d5c-2e4259d56812 | 1 |
+| 02016730-1f7d-4e0e-b9ab-fe79365198a1 | 1 |
+| 0204ceeb-4169-4e41-8d6c-0cbe099f0911 | 1 |
+| 020b2e18-4e97-4e48-824d-c7f1e515818d | 1 |
+| 020b334c-d38a-418a-8dc1-819640107f9b | 1 |
+| 021b3581-3e0e-4ff4-af1f-45c17fed4182 | 1 |
+| 021b4c46-74a8-492d-bf31-f11c2bcac1e7 | 1 |
+| 021be28c-188d-4b08-b254-cff72653052d | 1 |
+| 021dbffa-1c3e-4b00-be58-6d5e74277399 | 1 |
+| 021ec532-36fe-4649-8853-c2a53a478962 | 1 |
+| 0221593d-c416-45c6-8bce-3f16fca5d47a | 1 |
+| 022dacdc-ecff-4be0-8f2e-e112c89b4973 | 1 |
+| 022ec031-f4c6-4ded-9e8d-cf96badd2bea | 1 |
+| 0233dd50-a33f-40a8-b0ca-ded4cb31d70e | 1 |
+| 023ac910-302a-4219-8134-4b6fe4a71ab7 | 1 |
+| 023b32b7-fcc3-4892-9465-b7d95ba209ee | 1 |
+| 023f06ed-3f21-4683-9cc0-1ad63ab384eb | 1 |
+| 024a03ea-f05e-4ac4-b3ea-3d350ed727eb | 1 |
+| 024b6e54-dc95-457d-a70d-9db56806159f | 1 |
+| 024c6a27-ceb3-4268-8aef-53973de1b7b3 | 1 |
+| 024d0d82-a51c-405c-809a-0e443b03c24b | 1 |
+| 02524009-1415-46de-8c35-5ee513e174e1 | 1 |
+| 02545f68-4ca1-433a-b9a9-f26ae3f7e15d | 1 |
+| 026e82dd-76f2-4d83-863a-761cd098f4e1 | 1 |
+| 02707f2d-0944-44b4-953c-7b7fbac0bbae | 1 |
+| 0270ad7e-fd30-478d-9e22-934491f613d2 | 1 |
+| 02727ea1-7b20-47b6-9404-af0f6ca09b0e | 1 |
+| 027bf864-1e0f-4489-af86-8654064cb15e | 1 |
+| 027e44dc-6ef4-4d25-9abf-a10b74730f8c | 1 |
+| 02829def-7ee2-4c2f-8cac-b91719a30052 | 1 |
+| 028dd28a-a098-4694-8507-0065c3920261 | 1 |
+| 028dd2e8-5b70-41c3-91bd-8b14d2970d8e | 1 |
+| 029093f4-818c-47a3-a28c-3ae730160f62 | 1 |
+| 029d8dec-5484-4e60-a46f-173a8f6958c2 | 1 |
+| 02a465d5-c2c9-45da-a7f8-a0c6978b6c5d | 1 |
+| 02b062ef-8571-4ebb-ae09-72d3ef111a01 | 1 |
+| 02c30da0-65c8-405a-a779-5577a88f9be5 | 1 |
+| 02cd6604-3ff5-470e-b385-655d9a55ff99 | 1 |
+| 02d638e3-ad73-465b-af2e-3b4d9bcea213 | 1 |
+| 02e6c5a1-c36c-4011-a463-c9088c021aea | 1 |
+| 02e734cb-729a-40df-89c8-c8cca35b110e | 1 |
+| 02ea6466-48eb-49b4-be9a-6137b415999a | 1 |
+| 02ea8b30-7c27-4a1c-87cb-6301964cf19c | 1 |
+| 02ef37fd-172b-477a-b49f-fb824f517697 | 1 |
+| 02f430f3-f5f6-4c3e-92bc-0d73b87adee7 | 1 |
+| 02f76ca7-60c9-4889-ad63-589f9687c45c | 1 |
+| 030b4ff7-1dd5-4857-a447-fc58a686b0e8 | 1 |
+| 030b921f-ec0d-49f4-b970-ba3526f0107f | 1 |
+| 030f8395-0f2e-4ec3-a5fe-06d50bbc987d | 1 |
+| 0310b8a9-6b26-4d22-878e-0785b295cb76 | 1 |
+| 03167eee-e01c-4625-857d-550240b6d212 | 1 |
+| 031d35a0-5f7c-46c1-91ff-d5349c4b3392 | 1 |
+| 0322c219-fa3c-45b0-ae88-18014d529d63 | 1 |
+| 03250f33-3e50-4ce2-bb52-0fda6290e74c | 1 |
+| 032d9f47-d9c3-490c-829f-0fd041f55248 | 1 |
+| 0331d818-15d6-4ab5-8ab0-fcbd0a5e4409 | 1 |
+| 0345959b-a33f-465b-bb9f-359bf0813761 | 1 |
+| 03473225-0870-4dcd-8495-0ea5916ae5c3 | 1 |
+| 0349624c-5835-43e7-b790-197bfd27442c | 1 |
+| 0349c99a-eac7-4143-9f1d-d04c7d91fa48 | 1 |
+| 03558b1a-c693-4e95-be43-f2fb56e4afb4 | 1 |
+| 0371531f-478f-4bd9-b00f-ebcd38d9b671 | 1 |
+| 03a1ad52-6b14-406d-924b-2e81ed760a52 | 1 |
+| 03d37d53-8940-4d08-bfaf-3a6686c36e90 | 1 |
+| 03d6deca-ee61-4f7f-949b-e99ca4d1089f | 1 |
+| 03ef1645-745e-4418-91a4-ab399c98d687 | 1 |
+| 03f211ad-205e-44bb-aeb7-89bf4b1c4969 | 1 |
+| 0407b6cb-c6ae-4269-b17c-8724f7a37c97 | 1 |
+| 044f4562-43f7-4eb0-8805-e81210031b1e | 1 |
+| 04517e18-da0a-4662-9e64-7429e4916be6 | 1 |
+| 04535a6b-5873-4295-9a76-fdc08c3a1693 | 1 |
+| 0461a5f9-1ea7-4c86-9761-c5d3f1df41ce | 1 |
+| 04723c9d-9d7f-417c-8d86-ab87b3bbf89b | 1 |
+| 04727f81-231a-4f9d-80ab-7fd3d3564a98 | 1 |
+| 048074fe-7129-443b-8e63-39c590342816 | 1 |
+| 04842da5-1fc1-4e9f-a9f6-7834cf8fac02 | 1 |
+| 04860dea-f18f-444a-bfc4-0a08c04a1577 | 1 |
+| 049018a9-b405-466e-a599-09734e5a5153 | 1 |
+| 049b3c8e-8a2c-4e8e-85e1-06dd760d33cd | 1 |
+| 04ad9995-3804-4d90-9af9-c31179142b8c | 1 |
+| 04ae5de6-16ec-4bdc-adbf-3c8bbe271c34 | 1 |
+| 04c804ac-2c47-4270-8d61-764a957a75a3 | 1 |
+| 04cad0e6-7159-4e07-9e9e-0d527fea67e0 | 1 |
+| 04d035be-0376-454d-8aa4-3b56f4a0199e | 1 |
+| 04d9bddc-4a25-4af4-91b2-d9676cc0acee | 1 |
+| 04e9420c-b22c-46cc-a157-ceecb6c56fb3 | 1 |
+| 04ea6d2a-7833-437a-a3c9-67f6428053cd | 1 |
+| 04f4f04a-8cd0-478e-b9ad-32171b814c3d | 1 |
+| 04f6fd4f-ce7a-4e24-b9db-38cca2df73d6 | 1 |
+| 05033aed-0f9f-4240-b62b-87a1d2b0764d | 1 |
+| 050f939a-c0e5-44eb-80e1-ceb52ab51adc | 1 |
+| 052f6e3b-59c4-44ea-a4b6-2f64eb5f6104 | 1 |
+| 053ffa9e-03f9-4337-a449-be3d1551b029 | 1 |
+| 054213d5-2d11-4664-afa4-433bc40241c7 | 1 |
+| 055143f0-b62a-4e02-84ff-6809377de459 | 1 |
+| 05587528-6aaf-4c4c-a327-1253118f4bee | 1 |
+| 055cdbf7-8b55-4e1e-bd44-b65abb68fdfc | 1 |
+| 05649aee-30b8-4201-8ca1-b093c3d30841 | 1 |
+| 056dd61a-c8ec-44f8-af8a-84aca047399f | 1 |
+| 0584a050-c651-4d1e-b469-4229625a23cf | 1 |
+| 058979d0-fc17-4a31-959a-2a7c47bad097 | 1 |
+| 058c6ab4-ae8a-4206-b492-1b1a239dde4c | 1 |
+| 058dd490-91a0-471f-a421-c661be9f5978 | 1 |
+| 0599e7cd-cd3a-4791-8feb-09d4fd13c9cd | 1 |
+| 05a4a267-26ac-4d23-a0a0-b66395d0d600 | 1 |
+| 05a7bb34-2770-4bf3-8428-4a7b40e591d2 | 1 |
+| 05af606a-4895-4f60-8cd2-27c5564a21f8 | 1 |
+| 05b9eeec-9f05-4500-bdcc-8af7cc9278c0 | 1 |
+| 05c472a1-65ae-4d69-8436-762c6d4e96f2 | 1 |
+| 05ea201a-a401-43ea-816f-ccedd81e2249 | 1 |
+| 05f99235-756b-43f8-a7c2-87a369b12e73 | 1 |
+| 0614b76c-a927-4997-9b8d-05f78a55d44c | 1 |
+| 06164a3c-6c66-4b2c-b361-cdebed94a1f8 | 1 |
+| 0619e407-621d-4f06-9006-678fc8af1ea5 | 1 |
+| 061efac2-8f48-435f-89c2-f27c6f03cba7 | 1 |
+| 062205b3-4dfe-42c3-a440-833b658a4bf3 | 1 |
+| 0625e5be-a3e2-4f68-8f32-5c48596db1fa | 1 |
+| 0635a26a-1cc3-410c-b9e4-5a9a544e0ae7 | 1 |
+| 06420d34-39b2-4175-8f50-60e4576cf4a9 | 1 |
+| 065b60ac-a875-48f7-bfb2-f357746c9d9b | 1 |
+| 066e8479-4f2b-4c88-816f-f96d40bd5590 | 1 |
+| 0676955c-13ff-4381-90f6-8ed15b81de38 | 1 |
+| 0681b0e7-b46e-431d-bc74-083ad44a7cb3 | 1 |
+| 06988ca2-5d47-4829-8412-29e1d09bad6b | 1 |
+| 069a68b9-abbd-43c9-a016-0b0242204c7f | 1 |
+| 069a965a-4153-48d9-a77d-d6d1c6a3e09f | 1 |
+| 069d9329-c8ca-4946-869e-622094c34a4b | 1 |
+| 06a1257c-0e97-45b7-9478-7329f897c8fe | 1 |
+| 06b145bb-316c-4f0d-bd8a-5a9f4d4cd87f | 1 |
+| 06b2e125-6738-4bc4-ba5d-b718845521b4 | 1 |
+| 06b306c3-b7ab-4a25-9b9d-4d8923593a45 | 1 |
+| 06b4d558-a263-473d-8b11-86d9afa21d86 | 1 |
+| 06bc3ecb-597d-4549-a3f9-91696e5376b2 | 1 |
+| 06bd84f6-9868-428d-bb3a-320ad307f4fc | 1 |
+| 06bdeb42-ae66-48b7-a734-36f0e9329cba | 1 |
+| 06c31c22-6718-4eb6-b496-0016ee1c8801 | 1 |
+| 06c56d1e-667c-4564-949b-3ec1ed537a9e | 1 |
+| 06d901a7-8ca4-461a-9c36-ac1066f880d3 | 1 |
+| 07024709-03aa-4df6-bf9e-78a7da32c9f9 | 1 |
+| 071ec092-f059-47c2-9661-483ffcb77205 | 1 |
+| 07208066-d481-4e6a-b9e3-4155d1346c15 | 1 |
+| 072cc530-8ffb-47de-9635-34d694dcadf3 | 1 |
+| 0743bdbf-3623-4a43-b3e2-a0162e09af5a | 1 |
+| 07458fd3-8988-4f39-8516-b9cb91c8625a | 1 |
+| 074a7cfa-3b24-454b-be4f-1ca6c7c97b60 | 1 |
+| 074beb99-4111-411e-a331-14489368cd81 | 1 |
+| 0751a927-f2a2-443a-ae56-1faf07a1f7ba | 1 |
+| 0755d759-1573-4a66-8d78-d1b86fe85539 | 1 |
+| 075fc820-0efc-469c-9081-18ce49628c44 | 1 |
+| 07614268-0c42-4823-90ee-9a49ca471d16 | 1 |
+| 0761ba0a-2a22-4cd7-8a26-0f238b907872 | 1 |
+| 0768560e-0630-49e2-a9a9-954879782a91 | 1 |
+| 076d3a8e-0298-45cf-9500-e3bf68fb2ec2 | 1 |
+
+### annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1069 |
+| prior malignancy | 16 |
+| history of unacceptable prior treatment related to a prior/other malignancy | 11 |
+| neoadjuvant therapy | 7 |
+| item does not meet study protocol | 1 |
+
+### annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1069 |
+| notification | 29 |
+
+### annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1069 |
+| case | 29 |
+
+### annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 1069 |
+| no note specified | 14 |
+| systemic treatment given to the prior/other malignancy | 7 |
+| case had prior malignancy | 2 |
+| systemic treatment | 2 |
+| during enrollment it was found that patient recieved systemic tamoxifen 3 years prior to resection of tcga tumor (left breast) for a prior right breast malignancy. | 1 |
+| during enrollment tss discovered patient had 5fu, epirubicin and cyclophosphamide prior to cancer procuemnt of the tcga maliganncy. | 1 |
+| patient had hormone therapy (exemestane) 2 months prior to tcga specimen procurement | 1 |
+| patient had prior breast malignancy (in opposite breast) with systemic chemotherapy (tamoxifen). | 1 |
+| patient had prior primary breast cancer in the same breast as the tcga primary and received chemotherapy (adriamycin and cytoxan) | 1 |
+| patient recieved neoadjuvant therapy for the tcga sample (armidex). | 1 |
+| subject is positive for neoadjuvant therapy. | 1 |
+| the patient had a prior thyroid cancer (~28 years prior) and a prior lung cancer (~23 years prior) to the tcga cancer procurement. the tss does not know if radiation or chemotherapy was given which is unacceptable for tcga. | 1 |
+| the patient had neoadjuvant therapy (5-fluorouracil, epirubicin, and cyclophosphamide) 2 months prior to tcga cancer procurement. | 1 |
+| tumor is dcis and not invasive which is required by the tcga brca study | 1 |
+
+### annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1069 |
+| approved | 29 |
+
+### case_autocomplete
+
+| Value | Count |
+|-------|-------|
+| adenomas and adenocarcinomas | 1098 |
+| adnexal and skin appendage neoplasms | 1098 |
+| basal cell neoplasms | 1098 |
+| breast | 1098 |
+| complex epithelial neoplasms | 1098 |
+| cystic, mucinous and serous neoplasms | 1098 |
+| ductal and lobular neoplasms | 1098 |
+| epithelial neoplasms, nos | 1098 |
+| fibroepithelial neoplasms | 1098 |
+| squamous cell neoplasms | 1098 |
+| tcga-brca | 1098 |
+| 000002fc-53a0-420e-b2aa-a40a358bba37 | 1 |
+| 0006f0d6-0acd-4f06-82ff-05619ce612fd | 1 |
+| 00075575-e93e-4a96-a158-139387a4625b | 1 |
+| 0008c8dc-f219-46b8-8c32-689a07521ae6 | 1 |
+| 000bef24-c05c-46ee-a84c-9611a41aeb4e | 1 |
+| 000cfd9f-addf-4304-9e60-6041549e189c | 1 |
+| 000d0385-f816-4319-af03-17e9b415f3a3 | 1 |
+| 000d877f-8d03-44bc-8607-27b5ba84b5fe | 1 |
+| 001201ec-e31a-4887-b4d7-9b4139b7cdf2 | 1 |
+| 00122172-5bb8-4a0d-aeb7-746825412b59 | 1 |
+| 0012aaaf-f0e6-49f4-8102-b4d3a7db0ec5 | 1 |
+| 00168e86-d23a-48ae-8c60-36d970051907 | 1 |
+| 0016bb20-f9ab-42ad-9d22-154bc12dfc14 | 1 |
+| 001773a6-9cf3-48a1-8ea1-1f0da4991bc5 | 1 |
+| 0018ce1e-21f6-41cc-a93e-7633f6f76215 | 1 |
+| 001a0f2d-8efc-4555-aba1-6017c0cc253a | 1 |
+| 001a9851-7ebd-4011-afad-145cc1673e22 | 1 |
+| 001b2ef0-526e-46f5-8e76-f315023c070c | 1 |
+| 001c86af-570e-4d11-8259-1c9aad41e306 | 1 |
+| 001cef41-ff86-4d3f-a140-a647ac4b10a1 | 1 |
+| 001d9539-9344-444c-bd29-85b5b0224201 | 1 |
+| 001e174b-7d90-42a4-b074-d929fbb26346 | 1 |
+| 001f4515-ff7a-415d-bc99-f1fa50e0b3bf | 1 |
+| 0020e53b-2519-42a2-b9e3-7b4225124bfb | 1 |
+| 00233ea4-04b9-44bc-aa0e-e96ea8abd136 | 1 |
+| 0023ba61-b112-4d22-810b-2043915ae8db | 1 |
+| 00252b16-56c0-4a34-8beb-6ad3d0f737f4 | 1 |
+| 0025f0ec-4d83-4bb0-be77-95f4bb30a64d | 1 |
+| 00280c49-f731-49be-b5cf-badaf71e572f | 1 |
+| 002997ef-3b93-443a-80a3-bae63e129d99 | 1 |
+| 002c078d-4b86-4f8b-ae84-b1320d3c8675 | 1 |
+| 002d4ec5-715e-452b-b751-64b4fb0bb029 | 1 |
+| 002d83af-9d57-4ddf-b6e4-99d541a4359b | 1 |
+| 003260e6-bfb6-4d16-bd64-cdba0a639eb2 | 1 |
+| 003488d3-298f-4691-9de0-1ee1f3c12265 | 1 |
+| 00354d33-c6b3-45b0-8a21-4a8c8a7df3a5 | 1 |
+| 0035b11d-434b-42ca-b1e8-e492ab03701a | 1 |
+| 0035e0c2-0376-4050-a03e-df556d408b94 | 1 |
+| 0039524b-b0fe-4317-852d-c2842d00c64c | 1 |
+| 0039a298-3369-4da5-9bfd-19792e9632be | 1 |
+| 003c8cff-ec0e-4f7c-b38b-93575fd68a23 | 1 |
+| 004018c3-d6b4-4e44-a79b-e590d582f1ce | 1 |
+| 00404cce-2688-405f-97de-717e2c1c6b06 | 1 |
+| 0042b857-502f-4d8e-baac-845c1a9bb64b | 1 |
+| 0045349c-69d9-4306-a403-c9c1fa836644 | 1 |
+| 0046ad7e-1eee-4982-a807-5b9e31da6f9a | 1 |
+| 00486322-9cb7-48d6-a720-5a0f78de73c9 | 1 |
+| 00487b78-e4a2-5142-8013-d2d4995e4662 | 1 |
+| 004be263-a3a3-4d1f-a5bf-5b39231b3686 | 1 |
+| 004bf993-1126-4c1d-b38f-53ac0ac1db67 | 1 |
+| 004c867a-73e0-4e7d-8c27-2462b648c722 | 1 |
+| 004d1044-5ebe-49e0-b7ac-ff3bed44b919 | 1 |
+| 0050d7c9-ece9-4b6c-8023-1ff2efcb3c9c | 1 |
+| 0053578b-c481-4378-a158-c22a022f73c7 | 1 |
+| 00535de9-f140-4576-bb85-d53911eaac81 | 1 |
+| 0055b879-e084-4a7f-bf87-69d38b671742 | 1 |
+| 00572d19-2480-44af-90e3-ece4256e73c6 | 1 |
+| 0058ce19-7651-4a8d-af6a-4813da314687 | 1 |
+| 00615421-0e03-412e-9627-c160cbdcf6b2 | 1 |
+| 0065ce98-da04-4e19-9be8-97ae7d38e0f0 | 1 |
+| 006698bb-82dd-4ae2-8fdd-e451d4e640c7 | 1 |
+| 0067afac-d3c7-4a34-bd4a-0fbc36d9f4a8 | 1 |
+| 00683b30-d386-48a8-ad29-4f4698864c66 | 1 |
+| 006891ac-3fe2-59bf-8285-1483cd642c88 | 1 |
+| 0068f1b1-4c4a-4556-90be-cfa8732893df | 1 |
+| 00696e9b-48ff-4ad7-b30c-cbd3a0e822fd | 1 |
+| 006e7eb6-2fa4-46c3-a2c8-1bbec8352983 | 1 |
+| 006e88ce-ad31-45bf-8da5-802f0e387b3a | 1 |
+| 006f4a58-726b-4eeb-985e-73fcca9e70a4 | 1 |
+| 006faa97-572b-4015-a803-e1c9fa4a1be2 | 1 |
+| 006fc1c5-95e1-43d7-a9dd-8ec9f6bb60b0 | 1 |
+| 006ff264-ef7d-4021-a879-77080c0440cf | 1 |
+| 00703887-7145-5e46-b4ba-a0efd5bc4b85 | 1 |
+| 00703e0f-8964-4b44-a5f3-d1246e5358ff | 1 |
+| 0070cfc5-73f7-4ef9-813f-cce732268ff8 | 1 |
+| 00723768-d5ed-44ac-b6f3-7d399186d814 | 1 |
+| 0072b9e9-9071-4f37-994b-88cebfbfb84f | 1 |
+| 00741e84-d5ca-4d90-9b67-328e808705ae | 1 |
+| 007468e1-90cb-48b7-b940-ea96c90e7076 | 1 |
+| 0077cf20-d598-4e04-863c-534e3386580e | 1 |
+| 007d2851-c30e-4b3a-864f-7bf7b89178b4 | 1 |
+| 007e0edb-30fc-40b3-a52b-ae93f9ea4d10 | 1 |
+| 00807dae-9f4a-4fd1-aac2-82eb11bf2afb | 1 |
+| 0080f3ee-d1fb-4dbb-a1f7-74493849be15 | 1 |
+| 0086959f-43d5-459d-8570-48f64abc4604 | 1 |
+| 0086d16a-315f-4190-8ec1-b04f005e061a | 1 |
+| 0086f228-becb-4282-ad3f-c54ecaccea84 | 1 |
+| 0088505b-5e18-49c4-bc2b-7946b2780383 | 1 |
+| 0088b960-4ea8-4bd3-b9b4-7c1fe59d4925 | 1 |
+| 0089c75f-1a46-4f13-a89d-d567f1add1b1 | 1 |
+| 008b1a28-0527-4f95-9a98-42239d6f212d | 1 |
+| 008ba655-a0a3-42c4-8c72-f1341365ef02 | 1 |
+| 008dafdd-a3d1-4801-8c0a-8714e2b58e48 | 1 |
+| 008f746c-ac9a-46fb-907c-dec94c6ffd9e | 1 |
+| 00919664-1563-46f2-a9de-290ba63f8ca0 | 1 |
+| 00926fd9-9180-40f1-ba27-34f97c2314ce | 1 |
+| 0098fcca-e2df-487a-976f-dcc9ea0146ad | 1 |
+| 009afea7-bc7e-4b20-8a97-5dbdd46f790a | 1 |
+| 009ea160-2de6-47e2-9a0f-c7fbc5576731 | 1 |
+| 00a173ee-32df-4747-8b04-05b3913e3118 | 1 |
+| 00a2d166-78c9-4687-a195-3d6315c27574 | 1 |
+| 00a2f69b-99b6-42d2-9074-d27f43b91ed2 | 1 |
+| 00a31122-f2d5-4d09-b165-1231703d8dc2 | 1 |
+| 00a3c8f4-bd75-4aa8-abb7-21005b1a5ad8 | 1 |
+| 00a42020-55cb-4491-819c-e7a3258887c1 | 1 |
+| 00a592bc-59d0-4972-bb9a-a539d8081d7d | 1 |
+| 00a595c5-0565-4289-878a-80ff4ba89d97 | 1 |
+| 00a59c97-91b4-413e-8d9e-674753997221 | 1 |
+| 00a93e06-5edd-4360-9ab5-55a65b155d9f | 1 |
+| 00ae30d1-f0ae-4541-90c5-2d59945b1aa3 | 1 |
+| 00af80a8-4672-4434-99b0-474c720f1090 | 1 |
+| 00afa1c3-9645-409a-b1d0-663570f3adde | 1 |
+| 00b07121-246b-43b2-a0df-957dca3bd6ad | 1 |
+| 00b11ca8-8540-4a3d-b602-ec754b00230b | 1 |
+| 00b14c77-845c-432e-923c-c2c412f5df31 | 1 |
+| 00b274b6-1755-455a-9f2f-1d4ba833b338 | 1 |
+| 00b54c99-c26d-423a-9871-2552c1603a9c | 1 |
+| 00b6f358-1b1f-4bdf-a41c-a692425c407c | 1 |
+| 00bd0921-b765-4fbd-ab79-4d85aba0d1f6 | 1 |
+| 00bd646a-58cb-4be4-b2ae-9368143eaa9b | 1 |
+| 00be7a5c-ffe3-447f-a060-81bb49954791 | 1 |
+| 00c1536e-f38f-4645-bf6a-b0ff4e3b4be1 | 1 |
+| 00c53463-683f-443f-b693-5673b3b564ff | 1 |
+| 00c56292-cc9b-4a9c-bf27-0746059098e8 | 1 |
+| 00c72a8a-e03d-49cc-ad44-893168b4909d | 1 |
+| 00c8d151-2223-4e36-8c66-6c09e42d8777 | 1 |
+| 00ca8c9f-2d42-4846-8145-72cffea10676 | 1 |
+| 00cb48ab-1928-49b9-996f-427551490222 | 1 |
+| 00cd3143-044b-4ff7-92ef-8924008a0904 | 1 |
+| 00d2a2a6-c208-4ba6-ba86-4cd213355c60 | 1 |
+| 00d2d597-82c5-4a9a-83ba-cc8398e2746d | 1 |
+| 00d38274-8ed5-46af-9a69-91d968a050ab | 1 |
+| 00d38469-0a07-4d87-8b9f-1f819ee8f3e3 | 1 |
+| 00d3beec-4e44-4585-a6c0-ec25b8ee3538 | 1 |
+| 00d40fd2-65e8-4dd2-9c1a-38529809fa03 | 1 |
+| 00d8d966-3b07-4ecc-aa3e-3adf967de41c | 1 |
+| 00d95599-cbd9-4ea7-90eb-ab901a530507 | 1 |
+| 00daaa0a-dc00-447b-8f04-4b933ba40e01 | 1 |
+| 00e26efc-b39a-470f-ad82-e3c6d796ecb0 | 1 |
+| 00e597fa-72b4-4e92-9428-7ec686e4cc0b | 1 |
+| 00e66faa-74a8-4b02-a76a-d2e8fd78d425 | 1 |
+| 00e728b2-6b0e-4ec7-af15-57c92537dd18 | 1 |
+| 00e9a279-eec2-4842-9cb7-f031cbaae7a6 | 1 |
+| 00eb4202-749d-44c0-bf6c-f49d0ccdce64 | 1 |
+| 00eb938e-8d64-4103-8782-ce13f24cd2a6 | 1 |
+| 00ebb120-00b3-4e76-bf8d-0c944f35c6df | 1 |
+| 00ecfe21-9fc6-42b7-ba86-c5bd81df0c09 | 1 |
+| 00ee8acd-0841-4c85-a99a-8966a6828dd7 | 1 |
+| 00ef5a41-7101-4347-8e48-06fe1690aa8f | 1 |
+| 00f0dea2-9444-4308-8748-efc385d66e62 | 1 |
+| 00f17d05-c711-41e0-ab96-f2d4a2253124 | 1 |
+| 00f4a5d0-cb3a-4f42-90f3-52d7742ac412 | 1 |
+| 00f51c5e-51b3-5d57-a490-1280088200ab | 1 |
+| 00f7299a-af35-437b-90a9-cb794754a25a | 1 |
+| 00f81e98-e5c3-43b2-9757-f769ec17f3f8 | 1 |
+| 00fceb8f-c88b-48d7-994c-8a4a9100f8e4 | 1 |
+| 01014fbf-81c1-4f6f-bcab-91e23941f9ae | 1 |
+| 01024a40-3fc9-4d3f-b294-b1464eefbcc5 | 1 |
+| 01028be5-c2bf-4696-911d-a3c54c70aace | 1 |
+| 01058436-8fa9-4ad9-886d-6668403e1d94 | 1 |
+| 01083b39-09ef-40dd-86c0-5cb8a2a5a646 | 1 |
+| 0108b1be-b930-440a-96e8-1de9e56be913 | 1 |
+| 010a31fc-4218-4110-b2d0-4791ca77d417 | 1 |
+| 010d7af0-073a-48aa-a257-10583b33c6f7 | 1 |
+| 01112370-4f6f-4a20-9be0-7975c3465268 | 1 |
+| 0111dca5-0698-5190-abab-41266f65d0c3 | 1 |
+| 01137285-1247-4de7-9571-251c3b796c04 | 1 |
+| 0113db6d-e1de-4e88-8c2a-f356e88eb8d3 | 1 |
+| 01163f75-8956-40a6-97a5-3c0478d904f8 | 1 |
+| 011b9b2d-ebe5-42bf-9662-d922faccc7a1 | 1 |
+| 011f64de-d7b6-426e-b845-6e52faa74d1b | 1 |
+| 011f9e39-3f8f-48df-b392-ab2963cfde84 | 1 |
+| 012094ad-98a4-44d4-ace9-8e30463e9694 | 1 |
+| 012165ee-3207-4fea-8597-86ca6a3a4906 | 1 |
+| 01216acd-4715-44f0-9f6b-f903e67e1247 | 1 |
+| 0122ecac-cccf-436a-a6ad-59b0d44ea5ea | 1 |
+| 01235157-dc0c-4bd3-afa5-bcf4e97e3a4a | 1 |
+| 01259988-0451-41e7-8296-8ffeb97e6e8e | 1 |
+| 01263518-5f7c-49dc-8d7e-84b0c03a6a63 | 1 |
+| 0126489d-c12a-4651-8700-d7090732d7ab | 1 |
+| 012b6985-6ea9-52dd-aa42-97d8b17e089f | 1 |
+| 012e1ff3-7ed3-4dee-ae3d-44a8050d774e | 1 |
+| 012e6e92-ef34-41f4-bf9b-fa3e81a7c438 | 1 |
+| 0130d616-885e-4a6c-9d03-2f17dd692a05 | 1 |
+| 01334fdd-64d4-4f83-b66a-e5e973ce0c24 | 1 |
+| 01337e66-6c96-483b-8ae6-53cc90510f0c | 1 |
+| 0135d16e-46e7-460b-b189-a816757cd9d7 | 1 |
+| 01370d42-f75c-4532-9b9c-24ff7302b033 | 1 |
+| 013b0a8d-79f3-4165-9f32-61609f775472 | 1 |
+
+### consent_type
+
+| Value | Count |
+|-------|-------|
+| informed consent | 1046 |
+| consent by death | 41 |
+| _missing | 10 |
+| consent waiver | 1 |
+
+### demographic.age_is_obfuscated
+
+| Value | Count |
+|-------|-------|
+| false | 1079 |
+| true | 17 |
+| _missing | 2 |
+
+### demographic.cause_of_death
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### demographic.cause_of_death_source
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### demographic.country_of_birth
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### demographic.country_of_residence_at_enrollment
+
+| Value | Count |
+|-------|-------|
+| united states | 417 |
+| _missing | 401 |
+| germany | 84 |
+| poland | 78 |
+| vietnam | 46 |
+| russia | 30 |
+| ukraine | 30 |
+| nigeria | 4 |
+| brazil | 2 |
+| canada | 2 |
+| pakistan | 2 |
+| afghanistan | 1 |
+| moldova | 1 |
+
+### demographic.education_level
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### demographic.ethnicity
+
+| Value | Count |
+|-------|-------|
+| not hispanic or latino | 884 |
+| not reported | 166 |
+| hispanic or latino | 39 |
+| unknown | 8 |
+| _missing | 1 |
+
+### demographic.gender
+
+| Value | Count |
+|-------|-------|
+| female | 1085 |
+| male | 12 |
+| _missing | 1 |
+
+### demographic.marital_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### demographic.population_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### demographic.race
+
+| Value | Count |
+|-------|-------|
+| white | 757 |
+| black or african american | 183 |
+| not reported | 95 |
+| asian | 61 |
+| american indian or alaska native | 1 |
+| _missing | 1 |
+
+### demographic.sex_at_birth
+
+| Value | Count |
+|-------|-------|
+| female | 1085 |
+| male | 12 |
+| _missing | 1 |
+
+### demographic.vital_status
+
+| Value | Count |
+|-------|-------|
+| alive | 945 |
+| dead | 152 |
+| _missing | 1 |
+
+### diagnoses.adrenal_hormone
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ajcc_clinical_m
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ajcc_clinical_n
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ajcc_clinical_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ajcc_clinical_t
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ajcc_pathologic_m
+
+| Value | Count |
+|-------|-------|
+| m0 | 912 |
+| mx | 164 |
+| m1 | 22 |
+| cm0 (i+) | 6 |
+| _missing | 1 |
+
+### diagnoses.ajcc_pathologic_n
+
+| Value | Count |
+|-------|-------|
+| n0 | 346 |
+| n1a | 168 |
+| n0 (i-) | 154 |
+| n1 | 126 |
+| n2a | 65 |
+| n2 | 56 |
+| n3a | 47 |
+| n1mi | 37 |
+| n1b | 33 |
+| n0 (i+) | 28 |
+| n3 | 26 |
+| nx | 22 |
+| n3b | 3 |
+| n1c | 2 |
+| n0 (mol+) | 1 |
+| n3c | 1 |
+| _missing | 1 |
+
+### diagnoses.ajcc_pathologic_stage
+
+| Value | Count |
+|-------|-------|
+| stage iia | 362 |
+| stage iib | 257 |
+| stage iiia | 155 |
+| stage i | 94 |
+| stage ia | 90 |
+| stage iiic | 65 |
+| stage iiib | 27 |
+| stage iv | 20 |
+| stage x | 13 |
+| _missing | 12 |
+| stage ii | 8 |
+| stage ib | 7 |
+| stage 0 | 5 |
+| stage iii | 3 |
+| stage 0is | 1 |
+
+### diagnoses.ajcc_pathologic_t
+
+| Value | Count |
+|-------|-------|
+| t2 | 637 |
+| t1c | 224 |
+| t3 | 137 |
+| t1 | 42 |
+| t4b | 28 |
+| t1b | 17 |
+| t4 | 10 |
+| t1a | 4 |
+| t4d | 3 |
+| tis | 3 |
+| tx | 3 |
+| tis (dcis) | 2 |
+| tis (lcis) | 2 |
+| t2a | 1 |
+| t2b | 1 |
+| t3a | 1 |
+| _missing | 1 |
+
+### diagnoses.ajcc_serum_tumor_markers
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ajcc_staging_system_edition
+
+| Value | Count |
+|-------|-------|
+| 6th | 446 |
+| 7th | 420 |
+| _missing | 142 |
+| 5th | 59 |
+| 4th | 29 |
+| 3rd | 8 |
+| 1st | 1 |
+| 2nd | 1 |
+
+### diagnoses.ann_arbor_b_symptoms
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ann_arbor_b_symptoms_described
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ann_arbor_clinical_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ann_arbor_extranodal_involvement
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ann_arbor_pathologic_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.best_overall_response
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.burkitt_lymphoma_clinical_variant
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.calgb_risk_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.cancer_detection_method
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.child_pugh_classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.clark_level
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.classification_of_tumor
+
+| Value | Count |
+|-------|-------|
+| primary | 1096 |
+| metastasis | 68 |
+| prior primary | 43 |
+| synchronous primary | 35 |
+| recurrence | 25 |
+| not reported | 22 |
+| subsequent primary | 19 |
+| _missing | 1 |
+
+### diagnoses.cog_liver_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.cog_neuroblastoma_risk_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.cog_renal_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.cog_rhabdomyosarcoma_risk_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.contiguous_organ_invaded
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.diagnosis_is_primary_disease
+
+| Value | Count |
+|-------|-------|
+| true | 1096 |
+| false | 182 |
+| _missing | 2 |
+
+### diagnoses.double_expressor_lymphoma
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.double_hit_lymphoma
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.eln_risk_classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.enneking_msts_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.enneking_msts_metastasis
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.enneking_msts_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.enneking_msts_tumor_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ensat_clinical_m
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ensat_pathologic_n
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ensat_pathologic_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ensat_pathologic_t
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.esophageal_columnar_dysplasia_degree
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.esophageal_columnar_metaplasia_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.fab_morphology_code
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.figo_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| stage ib2 | 1 |
+
+### diagnoses.figo_staging_edition_year
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| 2009 | 1 |
+
+### diagnoses.first_symptom_longest_duration
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.first_symptom_prior_to_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.gastric_esophageal_junction_involvement
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.gleason_grade_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.gleason_grade_tertiary
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.goblet_cells_columnar_mucosa_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.icd_10_code
+
+| Value | Count |
+|-------|-------|
+| c50.9 | 1086 |
+| c50.3 | 3 |
+| c50.2 | 2 |
+| c50.4 | 2 |
+| c50.8 | 2 |
+| c50.5 | 1 |
+| c50.919 | 1 |
+| _missing | 1 |
+
+### diagnoses.igcccg_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.inpc_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.inpc_histologic_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.inrg_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.inss_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.international_prognostic_index
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.irs_group
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.irs_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ishak_fibrosis_score
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.iss_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.last_known_disease_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| not reported | 1 |
+
+### diagnoses.laterality
+
+| Value | Count |
+|-------|-------|
+| left | 590 |
+| right | 548 |
+| _missing | 2 |
+
+### diagnoses.margins_involved_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.masaoka_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.max_tumor_bulk_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.medulloblastoma_molecular_classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.melanoma_known_primary
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.metastasis_at_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 688 |
+| no metastasis | 381 |
+| metastasis, nos | 29 |
+
+### diagnoses.method_of_diagnosis
+
+| Value | Count |
+|-------|-------|
+| core biopsy | 605 |
+| surgical resection | 205 |
+| _missing | 100 |
+| fine needle aspiration | 97 |
+| excisional biopsy | 29 |
+| cytology | 22 |
+| biopsy | 20 |
+| incisional biopsy | 16 |
+| ultrasound guided biopsy | 2 |
+| unknown | 2 |
+
+### diagnoses.mitosis_karyorrhexis_index
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.morphology
+
+| Value | Count |
+|-------|-------|
+| 8500/3 | 783 |
+| 8520/3 | 202 |
+| not reported | 67 |
+| 8522/3 | 29 |
+| 8523/3 | 19 |
+| 8480/3 | 16 |
+| 8575/3 | 14 |
+| 8500/2 | 7 |
+| 8524/3 | 7 |
+| 8503/3 | 6 |
+| 8510/3 | 6 |
+| 8090/3 | 4 |
+| 8140/3 | 4 |
+| 8507/3 | 4 |
+| 8541/3 | 3 |
+| 8022/3 | 3 |
+| 8310/3 | 3 |
+| 8520/2 | 3 |
+| 9020/3 | 2 |
+| 8050/3 | 2 |
+| 8200/3 | 2 |
+| 8010/2 | 1 |
+| 8010/3 | 1 |
+| 8013/3 | 1 |
+| 8045/3 | 1 |
+| 8070/2 | 1 |
+| 8201/3 | 1 |
+| 8211/3 | 1 |
+| 8401/3 | 1 |
+| 8502/3 | 1 |
+| 8700/0 | 1 |
+| 8720/2 | 1 |
+| 8720/3 | 1 |
+| 8936/1 | 1 |
+| 9591/3 | 1 |
+| 9650/3 | 1 |
+| 9989/3 | 1 |
+| _missing | 1 |
+
+### diagnoses.ovarian_specimen_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ovarian_surface_involvement
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.additional_pathology_findings
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.anaplasia_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.anaplasia_present_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.bone_marrow_malignant_cells
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.breslow_thickness_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.columnar_mucosa_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.consistent_pathology_review
+
+| Value | Count |
+|-------|-------|
+| yes | 1095 |
+| _missing | 2 |
+| no | 1 |
+
+### diagnoses.pathology_details.dysplasia_degree
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.dysplasia_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.epithelioid_cell_percent_range
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.extracapsular_extension
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.extracapsular_extension_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.extranodal_extension
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.extraocular_nodule_size
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.extrascleral_extension
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.extrascleral_extension_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.extrathyroid_extension
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.histologic_progression_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.intratubular_germ_cell_neoplasia_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.largest_extrapelvic_peritoneal_focus
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.lymph_node_dissection_method
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.lymph_node_dissection_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.lymph_node_involved_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.lymph_node_involvement
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.lymph_nodes_removed
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.lymphatic_invasion_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.margin_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.measurement_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.measurement_unit
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.metaplasia_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.micrometastasis_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.morphologic_architectural_pattern
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.necrosis_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.non_nodal_regional_disease
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.non_nodal_tumor_deposits
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.perineural_invasion_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.peripancreatic_lymph_nodes_positive
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.prcc_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.residual_tumor
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.residual_tumor_measurement
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.rhabdoid_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.sarcomatoid_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.spindle_cell_percent_range
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.timepoint_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.transglottic_extension
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.tumor_depth_descriptor
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.tumor_infiltrating_lymphocytes
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.tumor_infiltrating_macrophages
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.tumor_shape
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.vascular_invasion_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pathology_details.vascular_invasion_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.pediatric_kidney_staging
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.peritoneal_fluid_cytological_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.primary_diagnosis
+
+| Value | Count |
+|-------|-------|
+| infiltrating duct carcinoma, nos | 783 |
+| lobular carcinoma, nos | 201 |
+| not reported | 67 |
+| infiltrating duct and lobular carcinoma | 29 |
+| infiltrating duct mixed with other types of carcinoma | 19 |
+| mucinous adenocarcinoma | 16 |
+| metaplastic carcinoma, nos | 14 |
+| infiltrating lobular mixed with other types of carcinoma | 7 |
+| intraductal carcinoma, noninfiltrating, nos | 7 |
+| intraductal papillary adenocarcinoma with invasion | 6 |
+| medullary carcinoma, nos | 6 |
+| adenocarcinoma, nos | 4 |
+| basal cell carcinoma, nos | 4 |
+| invasive micropapillary carcinoma | 4 |
+| paget disease and infiltrating duct carcinoma of breast | 3 |
+| clear cell carcinoma | 3 |
+| lobular carcinoma in situ, nos | 3 |
+| pleomorphic carcinoma | 3 |
+| phyllodes tumor, malignant | 2 |
+| adenoid cystic carcinoma | 2 |
+| papillary carcinoma, nos | 2 |
+| apocrine adenocarcinoma | 1 |
+| carcinoma in situ, nos | 1 |
+| carcinoma, nos | 1 |
+| combined small cell carcinoma | 1 |
+| cribriform carcinoma, nos | 1 |
+| gastrointestinal stromal tumor, nos | 1 |
+| hodgkin lymphoma, nos | 1 |
+| infiltrating lobular carcinoma, nos | 1 |
+| large cell neuroendocrine carcinoma | 1 |
+| malignant lymphoma, non-hodgkin, nos | 1 |
+| malignant melanoma, nos | 1 |
+| melanoma in situ | 1 |
+| myelodysplastic syndrome, nos | 1 |
+| pheochromocytoma, nos | 1 |
+| secretory carcinoma of breast | 1 |
+| squamous cell carcinoma in situ, nos | 1 |
+| tubular adenocarcinoma | 1 |
+| _missing | 1 |
+
+### diagnoses.primary_gleason_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.prior_malignancy
+
+| Value | Count |
+|-------|-------|
+| no | 1050 |
+| yes | 38 |
+| not reported | 9 |
+| _missing | 1 |
+
+### diagnoses.prior_treatment
+
+| Value | Count |
+|-------|-------|
+| no | 1082 |
+| yes | 128 |
+| not reported | 2 |
+| _missing | 1 |
+
+### diagnoses.progression_or_recurrence
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| not reported | 1 |
+
+### diagnoses.residual_disease
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.satellite_nodule_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.secondary_gleason_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.site_of_resection_or_biopsy
+
+| Value | Count |
+|-------|-------|
+| breast, nos | 1097 |
+| not reported | 182 |
+| _missing | 1 |
+
+### diagnoses.sites_of_involvement
+
+| Value | Count |
+|-------|-------|
+| breast, nos | 490 |
+| breast, left upper outer | 268 |
+| breast, right upper outer | 214 |
+| breast, right upper inner | 91 |
+| breast, left upper inner | 87 |
+| breast, right lower outer | 71 |
+| breast, left lower outer | 66 |
+| breast, left lower inner | 46 |
+| breast, right lower inner | 42 |
+| bone, nos | 16 |
+| liver | 8 |
+| lung, nos | 5 |
+| skin | 3 |
+| _missing | 2 |
+| abdomen | 1 |
+| adrenal gland, nos | 1 |
+| lymph node, nos | 1 |
+| ovary, nos | 1 |
+
+### diagnoses.supratentorial_localization
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.synchronous_malignancy
+
+| Value | Count |
+|-------|-------|
+| no | 1067 |
+| yes | 21 |
+| not reported | 9 |
+| _missing | 1 |
+
+### diagnoses.tissue_or_organ_of_origin
+
+| Value | Count |
+|-------|-------|
+| breast, nos | 1087 |
+| bone, nos | 41 |
+| not reported | 28 |
+| lung, nos | 21 |
+| liver | 18 |
+| thorax, nos | 7 |
+| brain, nos | 6 |
+| colon, nos | 5 |
+| intrathoracic lymph nodes | 5 |
+| kidney, nos | 5 |
+| head, face or neck, nos | 4 |
+| cervix uteri | 3 |
+| lower-inner quadrant of breast | 3 |
+| skin, nos | 3 |
+| uterus, nos | 3 |
+| adrenal gland, nos | 2 |
+| bone marrow | 2 |
+| endometrium | 2 |
+| overlapping lesion of breast | 2 |
+| skin of trunk | 2 |
+| stomach, nos | 2 |
+| upper-inner quadrant of breast | 2 |
+| upper-outer quadrant of breast | 2 |
+| abdomen, nos | 1 |
+| bladder, nos | 1 |
+| connective, subcutaneous and other soft tissues of thorax | 1 |
+| lip, nos | 1 |
+| lower limb, nos | 1 |
+| lower-outer quadrant of breast | 1 |
+| lymph node, nos | 1 |
+| lymph nodes of head, face and neck | 1 |
+| other ill-defined sites | 1 |
+| ovary | 1 |
+| rectum, nos | 1 |
+| skin of lower limb and hip | 1 |
+| skin of scalp and neck | 1 |
+| specified parts of peritoneum | 1 |
+| thyroid gland | 1 |
+| unknown | 1 |
+| upper limb, nos | 1 |
+| _missing | 1 |
+
+### diagnoses.treatments.chemo_concurrent_to_radiation
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.clinical_trial_indicator
+
+| Value | Count |
+|-------|-------|
+| _missing | 723 |
+| no | 358 |
+| yes | 28 |
+
+### diagnoses.treatments.drug_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.embolic_agent
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.initial_disease_status
+
+| Value | Count |
+|-------|-------|
+| initial diagnosis | 1096 |
+| recurrent disease | 65 |
+| progressive disease | 60 |
+| not reported | 19 |
+| _missing | 2 |
+
+### diagnoses.treatments.margin_status
+
+| Value | Count |
+|-------|-------|
+| uninvolved | 963 |
+| involved | 79 |
+| not reported | 71 |
+| indeterminate | 32 |
+| unknown | 3 |
+| _missing | 2 |
+
+### diagnoses.treatments.margins_involved_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.prescribed_dose_units
+
+| Value | Count |
+|-------|-------|
+| _missing | 727 |
+| mg/day | 235 |
+| mg | 177 |
+| mg/m2 | 77 |
+| mg/kg | 13 |
+| mg/m2/day | 6 |
+| ug | 4 |
+| auc | 2 |
+| mg/m2/wk | 2 |
+| g/day | 1 |
+| mg/dl | 1 |
+
+### diagnoses.treatments.pretreatment
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.protocol_identifier
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.radiosensitizing_agent
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.reason_treatment_ended
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.reason_treatment_not_given
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.regimen_or_line_of_therapy
+
+| Value | Count |
+|-------|-------|
+| _missing | 1095 |
+| tc | 2 |
+| tch | 1 |
+
+### diagnoses.treatments.residual_disease
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.route_of_administration
+
+| Value | Count |
+|-------|-------|
+| _missing | 677 |
+| intravenous | 307 |
+| oral | 299 |
+| intramuscular | 13 |
+| subcutaneous | 8 |
+
+### diagnoses.treatments.therapeutic_agents
+
+| Value | Count |
+|-------|-------|
+| cyclophosphamide | 510 |
+| _missing | 322 |
+| tamoxifen | 254 |
+| anastrozole | 247 |
+| paclitaxel | 227 |
+| doxorubicin | 198 |
+| docetaxel | 190 |
+| doxorubicin hydrochloride | 166 |
+| fluorouracil | 101 |
+| trastuzumab | 74 |
+| letrozole | 74 |
+| exemestane | 48 |
+| epirubicin | 43 |
+| carboplatin | 33 |
+| methotrexate | 28 |
+| zoledronic acid | 20 |
+| capecitabine | 15 |
+| nab-paclitaxel | 15 |
+| bevacizumab | 12 |
+| goserelin acetate | 11 |
+| fulvestrant | 8 |
+| pegfilgrastim | 7 |
+| gemcitabine | 6 |
+| leuprolide acetate | 5 |
+| unknown | 5 |
+| clodronate disodium | 4 |
+| denosumab | 4 |
+| goserelin | 4 |
+| tamoxifen citrate | 4 |
+| vinorelbine | 4 |
+| gemcitabine hydrochloride | 3 |
+| lapatinib | 3 |
+| nelipepimut-s | 3 |
+| pamidronate disodium | 3 |
+| triptorelin | 3 |
+| vinorelbine tartrate | 3 |
+| ae37 peptide/gm-csf vaccine | 2 |
+| cisplatin | 2 |
+| clinical trial | 2 |
+| clinical trial agent | 2 |
+| leuprolide | 2 |
+| mitomycin | 2 |
+| mitoxantrone | 2 |
+| pegylated liposomal doxorubicin hydrochloride | 2 |
+| toremifene citrate | 2 |
+| vincristine | 2 |
+| clodronic acid | 1 |
+| etoposide | 1 |
+| everolimus | 1 |
+| hormone therapy | 1 |
+| ibandronate sodium | 1 |
+| ifosfamide | 1 |
+| ixabepilone | 1 |
+| megestrol acetate | 1 |
+| mesna | 1 |
+| metformin | 1 |
+| not reported | 1 |
+| palonosetron hydrochloride | 1 |
+| pamidronic acid | 1 |
+| pemetrexed | 1 |
+| prednisone | 1 |
+| rituximab | 1 |
+| taxane compound | 1 |
+| tesetaxel | 1 |
+| trabectedin | 1 |
+| vinblastine | 1 |
+
+### diagnoses.treatments.therapeutic_level_achieved
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.therapeutic_levels_achieved
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.therapeutic_target_level
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.timepoint_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.treatment_anatomic_sites
+
+| Value | Count |
+|-------|-------|
+| breast | 1096 |
+| primary tumor field | 427 |
+| regional site | 110 |
+| locoregional site | 64 |
+| distant site | 14 |
+| body, total | 7 |
+| not reported | 5 |
+| unknown | 4 |
+| _missing | 2 |
+| adrenal | 1 |
+| kidney | 1 |
+| lymph node | 1 |
+| lymph node(s) axilla | 1 |
+| stomach | 1 |
+| thymus | 1 |
+
+### diagnoses.treatments.treatment_dose_units
+
+| Value | Count |
+|-------|-------|
+| _missing | 553 |
+| cgy | 371 |
+| mg | 235 |
+| gy | 77 |
+| mg/day | 43 |
+| mg/m2 | 5 |
+| ug | 4 |
+| mg/wk | 3 |
+| meq | 1 |
+| mg/kg | 1 |
+
+### diagnoses.treatments.treatment_effect
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.treatment_effect_indicator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.treatment_frequency
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.treatments.treatment_intent_type
+
+| Value | Count |
+|-------|-------|
+| first-line therapy | 1096 |
+| adjuvant | 824 |
+| re-excision | 56 |
+| not reported | 7 |
+| palliative | 4 |
+| neoadjuvant | 2 |
+| maintenance therapy | 2 |
+| _missing | 2 |
+| prevention | 1 |
+
+### diagnoses.treatments.treatment_or_therapy
+
+| Value | Count |
+|-------|-------|
+| yes | 1091 |
+| no | 540 |
+| unknown | 49 |
+| _missing | 1 |
+
+### diagnoses.treatments.treatment_outcome
+
+| Value | Count |
+|-------|-------|
+| treatment ongoing | 444 |
+| _missing | 391 |
+| complete response | 255 |
+| not reported | 91 |
+| unknown | 56 |
+| progressive disease | 20 |
+| stable disease | 19 |
+| partial response | 6 |
+
+### diagnoses.treatments.treatment_type
+
+| Value | Count |
+|-------|-------|
+| surgery, nos | 1096 |
+| radiation therapy, nos | 589 |
+| chemotherapy | 583 |
+| hormone therapy | 521 |
+| radiation, external beam | 503 |
+| pharmaceutical therapy, nos | 367 |
+| targeted molecular therapy | 30 |
+| immunotherapy (including vaccines) | 26 |
+| ancillary treatment | 22 |
+| bisphosphonate therapy | 13 |
+| radiation, stereotactic/gamma knife/srs | 1 |
+| brachytherapy, high dose | 1 |
+| brachytherapy, nos | 1 |
+| radiation, implants | 1 |
+| radiation, radioisotope | 1 |
+| _missing | 1 |
+
+### diagnoses.tumor_confined_to_organ_of_origin
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.tumor_focality
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.tumor_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| not reported | 1 |
+
+### diagnoses.tumor_grade_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.tumor_of_origin
+
+| Value | Count |
+|-------|-------|
+| _missing | 1013 |
+| tcga-a2-a3xu_diagnosis | 1 |
+| tcga-ar-a5qq_diagnosis | 1 |
+| tcga-a2-a04p_diagnosis | 1 |
+| tcga-gm-a2da_diagnosis | 1 |
+| tcga-a2-a3xy_diagnosis | 1 |
+| tcga-e2-a152_diagnosis | 1 |
+| tcga-e9-a1n6_diagnosis | 1 |
+| tcga-e9-a2js_diagnosis | 1 |
+| tcga-gm-a2d9_diagnosis | 1 |
+| tcga-hn-a2ob_diagnosis | 1 |
+| tcga-a2-a0yc_diagnosis | 1 |
+| tcga-a7-a3rf_diagnosis | 1 |
+| tcga-a7-a425_diagnosis | 1 |
+| tcga-ac-a2fe_diagnosis | 1 |
+| tcga-b6-a3zx_diagnosis | 1 |
+| tcga-b6-a402_diagnosis | 1 |
+| tcga-e2-a10a_diagnosis | 1 |
+| tcga-e2-a14z_diagnosis | 1 |
+| tcga-e9-a226_diagnosis | 1 |
+| tcga-z7-a8r5_diagnosis | 1 |
+| tcga-3c-aaau_diagnosis | 1 |
+| tcga-a2-a0ew_diagnosis | 1 |
+| tcga-a2-a0yj_diagnosis | 1 |
+| tcga-a2-a25b_diagnosis | 1 |
+| tcga-a2-a25e_diagnosis | 1 |
+| tcga-a2-a3xs_diagnosis | 1 |
+| tcga-a7-a13e_diagnosis | 1 |
+| tcga-a7-a26h_diagnosis | 1 |
+| tcga-ac-a2fm_diagnosis | 1 |
+| tcga-ac-a2qj_diagnosis | 1 |
+| tcga-ao-a03n_diagnosis | 1 |
+| tcga-ao-a03p_diagnosis | 1 |
+| tcga-ao-a0j9_diagnosis | 1 |
+| tcga-ao-a0ja_diagnosis | 1 |
+| tcga-ao-a126_diagnosis | 1 |
+| tcga-ar-a0ty_diagnosis | 1 |
+| tcga-ar-a0tz_diagnosis | 1 |
+| tcga-ar-a0u2_diagnosis | 1 |
+| tcga-ar-a24l_diagnosis | 1 |
+| tcga-ar-a256_diagnosis | 1 |
+| tcga-ar-a2lh_diagnosis | 1 |
+| tcga-ar-a2lk_diagnosis | 1 |
+| tcga-b6-a0i1_diagnosis | 1 |
+| tcga-b6-a0i6_diagnosis | 1 |
+| tcga-b6-a0i8_diagnosis | 1 |
+| tcga-b6-a0ib_diagnosis | 1 |
+| tcga-b6-a0ie_diagnosis | 1 |
+| tcga-b6-a0ik_diagnosis | 1 |
+| tcga-b6-a0in_diagnosis | 1 |
+| tcga-b6-a0rh_diagnosis | 1 |
+| tcga-b6-a0ri_diagnosis | 1 |
+| tcga-b6-a0rp_diagnosis | 1 |
+| tcga-b6-a0ww_diagnosis | 1 |
+| tcga-b6-a0wx_diagnosis | 1 |
+| tcga-b6-a0wy_diagnosis | 1 |
+| tcga-b6-a0x1_diagnosis | 1 |
+| tcga-b6-a0x4_diagnosis | 1 |
+| tcga-b6-a0x5_diagnosis | 1 |
+| tcga-b6-a409_diagnosis | 1 |
+| tcga-bh-a0bq_diagnosis | 1 |
+| tcga-bh-a0c1_diagnosis | 1 |
+| tcga-bh-a0c3_diagnosis | 1 |
+| tcga-bh-a1ey_diagnosis | 1 |
+| tcga-c8-a12q_diagnosis | 1 |
+| tcga-c8-a137_diagnosis | 1 |
+| tcga-c8-a3m7_diagnosis | 1 |
+| tcga-d8-a1ja_diagnosis | 1 |
+| tcga-d8-a1xc_diagnosis | 1 |
+| tcga-d8-a73w_diagnosis | 1 |
+| tcga-e2-a15o_diagnosis | 1 |
+| tcga-e2-a1ie_diagnosis | 1 |
+| tcga-e2-a1le_diagnosis | 1 |
+| tcga-e2-a1lk_diagnosis | 1 |
+| tcga-e2-a1ll_diagnosis | 1 |
+| tcga-e2-a2p5_diagnosis | 1 |
+| tcga-e9-a1nf_diagnosis | 1 |
+| tcga-e9-a243_diagnosis | 1 |
+| tcga-ew-a1p0_diagnosis | 1 |
+| tcga-ew-a1p1_diagnosis | 1 |
+| tcga-ew-a1p7_diagnosis | 1 |
+| tcga-ew-a1p8_diagnosis | 1 |
+| tcga-ll-a5ym_diagnosis | 1 |
+| tcga-ll-a73z_diagnosis | 1 |
+| tcga-lq-a4e4_diagnosis | 1 |
+| tcga-ol-a97c_diagnosis | 1 |
+
+### diagnoses.tumor_regression_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.uicc_clinical_m
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.uicc_clinical_n
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.uicc_clinical_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.uicc_clinical_t
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.uicc_pathologic_m
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.uicc_pathologic_n
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.uicc_pathologic_stage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.uicc_pathologic_t
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.uicc_staging_system_edition
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.ulceration_indicator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.weiss_assessment_findings
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.weiss_assessment_score
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.who_cns_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.who_nte_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnoses.wilms_tumor_histologic_subtype
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### diagnosis_ids
+
+| Value | Count |
+|-------|-------|
+| 0002644c-fa09-44f4-b284-568c0de0be62 | 1 |
+| 003f1965-f1c7-5613-87cd-c286b6a9eec5 | 1 |
+| 00570edc-addd-4be6-9f8a-29d14953f57e | 1 |
+| 00a2a8bb-b604-4d82-a886-7bf317179e7e | 1 |
+| 00b8f6ee-24e4-4e18-a2ec-aaa7ab38d18c | 1 |
+| 00d300c4-3004-5cda-ba0e-40e3d64a278b | 1 |
+| 00ed16a9-2545-5e01-ad24-17786c542068 | 1 |
+| 00fb09a1-624d-5e05-a090-f9af63ecbc8c | 1 |
+| 01236db8-8096-5497-9fc5-0b1126a0da2d | 1 |
+| 0143b634-d731-5d48-8475-7c73b7000e7a | 1 |
+| 01818221-ebff-586b-9692-21a1b21c712c | 1 |
+| 01979e6e-803e-5da4-995e-6a0b1036a745 | 1 |
+| 01b995bc-c2a8-4257-9262-24ffc312b0ab | 1 |
+| 01fc892a-89a5-5f63-89ce-040530413049 | 1 |
+| 02279494-0bc9-57fd-8b68-43ad9d2662ba | 1 |
+| 024cdb47-ac95-4015-84b6-7aebf80d2fa5 | 1 |
+| 02588c42-b8bf-52cb-ac54-964c49a18838 | 1 |
+| 0336bd05-fa44-5118-9e13-b7f00f8b4c55 | 1 |
+| 03ae026a-ccb8-4268-b12b-5d5a8b70f4f5 | 1 |
+| 03d50a8e-3f4a-5362-aa26-8de2256d2ea5 | 1 |
+| 03e9958e-df29-42aa-981a-6f89d5cf4a81 | 1 |
+| 0437385a-66ec-4113-b3de-aa0c303029b0 | 1 |
+| 046c2db8-33b4-5c68-8ac0-711c8ac87706 | 1 |
+| 04a2c55a-c6e4-50da-ba6a-c3af6373be9d | 1 |
+| 04a52d85-9895-4d69-a379-4360a8b2e268 | 1 |
+| 05208c22-ce72-54d0-891c-a46b511df45d | 1 |
+| 055e481b-4493-5186-b0cf-db2bc83cd8bd | 1 |
+| 05714139-06b4-5b46-9d6b-a40b8e3ba7eb | 1 |
+| 059b1be9-4658-53be-8740-b89c522ca642 | 1 |
+| 05b37f74-473c-58fd-adc5-1665c363d90e | 1 |
+| 05eacb53-b519-5668-8cf8-ca51f21dc11f | 1 |
+| 05fac853-1e8d-59b5-a166-14d79a332351 | 1 |
+| 0642ad9a-1641-5aea-81a0-c75928dad4b4 | 1 |
+| 064606b1-6336-55a6-b257-d85ab462702d | 1 |
+| 06575088-9d96-50c4-afd3-66bc0800b798 | 1 |
+| 066489fe-03cb-5f80-968c-55b89c453e30 | 1 |
+| 067e4e69-7956-56b4-9a84-c15b41602629 | 1 |
+| 06807abd-2113-5ef1-a1d7-9685f7457432 | 1 |
+| 06a9dfa6-9a82-5dcd-9adb-a1ed0c14bce6 | 1 |
+| 06e52562-2ec1-5b5d-aedf-36556324d026 | 1 |
+| 06e6a950-bf28-53f8-97c9-597f354fc875 | 1 |
+| 06e9cb5f-e8a7-5e59-b2cb-a010a1dfc91a | 1 |
+| 06ed1b09-fd5b-497b-af6d-13def7a7e2dd | 1 |
+| 07011898-89b4-5e64-ad87-10ee83a2f313 | 1 |
+| 070f43d3-aa22-4b2c-9b18-bf603f27bc49 | 1 |
+| 0713f268-7738-54ed-8dc1-3e8fca07ecfb | 1 |
+| 073366c4-401f-4d01-a495-06b38ed09b9c | 1 |
+| 0752b45e-d9ff-5c62-b668-5f9df36c4d72 | 1 |
+| 07727340-a641-5ae5-b954-546435706d73 | 1 |
+| 0774740e-a550-44c3-9aca-6e1b421a84ee | 1 |
+| 0779f8ae-53e6-537b-b92b-56d391978518 | 1 |
+| 078851b6-5292-51e7-8761-0a257147f1bb | 1 |
+| 07a63ca9-3934-4963-9697-8346e7331bef | 1 |
+| 07ba7587-dff7-54c7-9cb3-9e0aa81ab889 | 1 |
+| 07ec9f35-0dcd-419f-aa19-c737c71c897a | 1 |
+| 086ff633-6e56-53ad-8282-b8337f9ff91d | 1 |
+| 0884e6cd-3b0e-4ed3-b79c-2c172beab122 | 1 |
+| 088e206d-790e-50cf-8125-c3bb64ebc429 | 1 |
+| 08e67af7-3bdb-56c2-bd26-8aeac62c2135 | 1 |
+| 08fe3526-6680-40b6-9fcd-8a46ac4baa36 | 1 |
+| 093b38c8-2f93-4a36-9874-67f5a73ef119 | 1 |
+| 0a0702a1-34b5-4287-9711-51c08c42a2eb | 1 |
+| 0a2cc774-57b8-43c7-9378-2fe86450edcd | 1 |
+| 0a45af50-0452-5c32-b692-007a5f7559ec | 1 |
+| 0b4e8000-6329-58fc-aa9d-14732e7636ca | 1 |
+| 0b5cbcdb-1ab2-4c22-a553-861d428d0221 | 1 |
+| 0b8bc678-1bc1-52f2-bf5d-3afedea8d9ae | 1 |
+| 0b952469-20d9-5831-b719-8d55fd60d25b | 1 |
+| 0ba26802-f0ee-5236-ba2c-b109c886d1dc | 1 |
+| 0bfec736-f736-5736-b25b-6fea5243eca3 | 1 |
+| 0c03df8f-1136-53ba-93c0-a01996a17623 | 1 |
+| 0c102a46-69f5-57c5-861e-09295f6a26ef | 1 |
+| 0c1466c4-a4ea-550b-89ad-fd8eecf99ea3 | 1 |
+| 0c52eb7a-c683-4b46-ab61-fd9a1f9ebe13 | 1 |
+| 0d0bce6c-3ebe-5954-820c-f14119c7d07b | 1 |
+| 0d4f9079-36be-5934-8448-13aa1d6cce0f | 1 |
+| 0d8ef45d-7d93-581c-9b73-f26a67673795 | 1 |
+| 0db594f4-ffae-5684-9089-8f653a2bd595 | 1 |
+| 0de47eb1-3fb3-5cee-8b1c-47372631aecc | 1 |
+| 0de83bd7-37ab-5691-82af-e6a064ab8c92 | 1 |
+| 0df22b89-d612-5f71-88d4-bd24c6ef1f7b | 1 |
+| 0dfbf533-666d-50f1-8c82-b625072b9866 | 1 |
+| 0dfceaa1-ac27-57f9-ab48-fb4ab806604b | 1 |
+| 0e187f53-1fea-4624-8797-1925fcabc45e | 1 |
+| 0ead9151-5419-41b3-b2e3-8cf8ecbbb2ae | 1 |
+| 0edc213c-4b50-53f6-b352-649e572080af | 1 |
+| 0ede2d2c-1133-5f76-82a5-78fd35121290 | 1 |
+| 0efcdf43-db17-4155-8251-ad6a2faeccff | 1 |
+| 0f059577-3ee3-51f0-980f-d28cf9d3a4c1 | 1 |
+| 0f0c5855-9f1d-5250-a755-c494d7ffbbfc | 1 |
+| 0f4e8e32-a545-5325-9be3-b9c037bdce97 | 1 |
+| 0f6db9a8-bed9-5d4c-ad78-6702171ba5f7 | 1 |
+| 0fe21c1f-c0b0-5ee9-a500-e318900f2eef | 1 |
+| 0fe82c74-4917-5b90-a43a-5e549665f99a | 1 |
+| 1026a718-fc9f-5a3a-bf7f-b4c88fc5e585 | 1 |
+| 102cd71e-5a56-53f9-acf7-143c23589b1b | 1 |
+| 103b471c-bb6d-5dcd-84e4-ed30ccfae7c3 | 1 |
+| 104c9e7c-c3d7-435c-856c-08665000070d | 1 |
+| 10bf984a-c40c-5fc7-8a9b-8c7952b0b6b1 | 1 |
+| 1189745e-6a2a-5868-ba2c-a02b34e6a721 | 1 |
+| 11be3f73-e127-5958-819f-5703a64c7a1e | 1 |
+| 11c5a2e5-5a80-558d-847f-838f7129de82 | 1 |
+| 11f5202f-1ad1-4928-9dba-02e98b39f42d | 1 |
+| 121914eb-647d-5fb1-9395-5abef61fd057 | 1 |
+| 128cd95f-b603-5ade-80cf-079a207888ce | 1 |
+| 1291c86b-7262-528e-8726-938a33607881 | 1 |
+| 12d205f4-4a52-59b8-a397-86bd28deed7c | 1 |
+| 12d2e280-95d9-5baa-a72d-f80317de2692 | 1 |
+| 12daff90-df16-5927-a8ac-8623a1d0b093 | 1 |
+| 130ea829-30bb-5f27-a4cc-2ea5afb1477e | 1 |
+| 137d89a7-55f4-5cff-bf41-85dbdcc4e384 | 1 |
+| 13c55a83-b339-5650-a733-aff8021cbaa5 | 1 |
+| 13dc2e45-4c2f-5a39-9aab-16c0bb6318a4 | 1 |
+| 13dcd036-4382-55ed-8d2c-69d6d5a81352 | 1 |
+| 14047651-e3d9-5a6a-b989-19b0548d8193 | 1 |
+| 1456910a-0a55-5e34-ab34-1801766d13b7 | 1 |
+| 14fc4b98-36e3-512a-a460-1a5da170de65 | 1 |
+| 153967de-b4f1-5645-959a-17d221d01aa3 | 1 |
+| 1540326d-f7ac-5fc2-a072-1ceb1710deae | 1 |
+| 155eb4ad-a2a6-4099-b73b-0abe1a695903 | 1 |
+| 1566ac99-feca-5f29-be17-45e941bc0d57 | 1 |
+| 15fec5e7-b443-5feb-b3c6-d138d0f97f48 | 1 |
+| 1662da6d-5eb6-5892-80d5-b391d489f17d | 1 |
+| 169d45c0-608c-56ff-ad4e-7e1e10c171bb | 1 |
+| 16e917ef-bd7b-56c9-a6fa-f7d8f8375a16 | 1 |
+| 16fe4d2d-95c4-48cf-8e50-49b4b6489f93 | 1 |
+| 17120920-a9aa-5655-95f3-6715ae148bb1 | 1 |
+| 1733e8ee-a96b-5aad-bd3c-4375edf35f99 | 1 |
+| 17834a6c-47a1-54d5-b23f-fae923273971 | 1 |
+| 1788faef-167c-5b1c-baa9-c4ff0b6829d3 | 1 |
+| 17cb53ab-f8d2-5bf7-b70e-795bb54011ab | 1 |
+| 17e235e1-b7f9-4a53-85eb-ff34159ce418 | 1 |
+| 180a1601-357c-55a5-95cf-ee18ad756e63 | 1 |
+| 1833e933-8075-51a9-8a20-1f9cba8a0b9b | 1 |
+| 18d4a1ce-6451-5da2-b00a-1bbcaad7f8d3 | 1 |
+| 19219bcb-97be-547c-90fa-0332dc4d3ace | 1 |
+| 193010ec-2c8e-5bc2-9042-49bb0fc90cc4 | 1 |
+| 19bd928a-a92b-5cdd-8bdd-0f6036777d5a | 1 |
+| 1a0707e2-a7af-5aee-997d-1d45ceebd50c | 1 |
+| 1a64453a-09de-500f-a97a-945bf7cb6a56 | 1 |
+| 1ab06c52-3801-50fc-8596-28374b4db4b5 | 1 |
+| 1ae80483-c3e1-59b1-858d-01b68c3581a2 | 1 |
+| 1aefde8f-e3ac-4264-bbd2-8cdad18462d8 | 1 |
+| 1b485d95-f6f1-4ec8-9c4d-c5959264f0e3 | 1 |
+| 1bdc1a36-c315-5279-8747-537c5b0a63c3 | 1 |
+| 1c3d1be0-e46a-5492-929f-90e41b8a0b2b | 1 |
+| 1c60ad51-6c85-51a8-9c43-2f682474830b | 1 |
+| 1cc3db14-c9f6-5a41-a0f3-56216749e7af | 1 |
+| 1cc80f4c-de80-56b9-9415-233812f863ca | 1 |
+| 1ce814be-ebaf-53ba-97ee-ed5208f9a8d9 | 1 |
+| 1d660016-9860-5ed7-a8ef-c628cb40b16a | 1 |
+| 1da73695-02b9-5cd5-ad45-6b176a2d5935 | 1 |
+| 1dad6aeb-7fb0-4c25-a6b4-47b0e7824df5 | 1 |
+| 1dc4a35b-e2c6-5a9e-9183-7a6d3f2acc6f | 1 |
+| 1e21017d-7cd5-5890-b94c-f38e792c4a8f | 1 |
+| 1e7676fb-ffb7-57f4-9e36-c73294096eb8 | 1 |
+| 1e7db6ea-4809-4bc7-a9c6-e33d2cdb421a | 1 |
+| 1e908dda-c642-5759-aafb-577419bbbecb | 1 |
+| 1eabcbf7-79a2-5790-8fbc-09e3356dc253 | 1 |
+| 1eb1a11d-d9f4-5c7a-baf9-705fe7a1bacf | 1 |
+| 1ec5faca-740b-5837-9f0d-8b2784765d1b | 1 |
+| 1ed4f97f-4af2-40ca-8365-4567d8c0487f | 1 |
+| 1ef67b21-9228-56c1-b7c9-9327fa038490 | 1 |
+| 1f0912d3-4899-5871-bc2b-007f9bf8ca10 | 1 |
+| 1f41548f-081a-5bc8-937e-58e6205f3794 | 1 |
+| 1f4f0caa-ff96-50df-a43a-6d4ca4e01795 | 1 |
+| 1f7ab1c9-21b3-54b1-b946-f49d46677135 | 1 |
+| 1fbad9f2-e383-5406-ac38-488270b2c615 | 1 |
+| 1ffc0e0b-5921-43b9-a664-57e9e1d4d835 | 1 |
+| 2039420e-307f-5ae4-8e00-b95d972e7adc | 1 |
+| 208260a3-e4e9-565e-b95e-ba6250c8557c | 1 |
+| 208a676a-d81e-5600-b22d-80f4de33f95e | 1 |
+| 20cd5425-e669-5dff-80eb-b7065c5ca2fe | 1 |
+| 20ea7b7f-857d-51f4-a72d-bd6db1a08d48 | 1 |
+| 210a9205-2154-414b-ae8c-cf9c13f3969c | 1 |
+| 213ed88f-4bbc-544e-902b-169b71276d9b | 1 |
+| 21515926-12de-5440-9d4a-a12d91a85ee2 | 1 |
+| 216c4ef0-2d17-5082-855a-afac2b27aad3 | 1 |
+| 217788fc-5aff-59f7-9a38-cbb48d7e6a35 | 1 |
+| 21794b74-4832-5346-a0d2-79222f769c14 | 1 |
+| 217fbebd-f527-5ecc-8c11-75dad17933ee | 1 |
+| 21dc8dec-77b0-5f4c-bbed-7b2a1b6af9e9 | 1 |
+| 2211b5cd-d1cb-51ec-b306-788c5715ec24 | 1 |
+| 223df51c-bc03-59ca-887d-f35d08d98e91 | 1 |
+| 2299fb53-af86-56c4-9554-d0cd1ad2b6bb | 1 |
+| 229fcf7b-5ff1-49b2-8bca-d7fa5eabeca9 | 1 |
+| 22c0c31d-4b98-555e-9d22-8c75ab1b0b5e | 1 |
+| 22fc0835-3cb1-401d-8362-f866b844899c | 1 |
+| 2331ed7d-4bb9-53fd-a9b3-8c665e153712 | 1 |
+| 233eb37a-259f-58ff-9ab5-7de0de3208ab | 1 |
+| 234eb141-d6ba-5529-8704-933ec510302f | 1 |
+| 235801a2-15e7-542c-b5d2-336e46d1da73 | 1 |
+| 236cd04a-9c42-5813-ac80-9a4a89105010 | 1 |
+| 238e0a23-5354-4351-84b1-53889d4b9ad3 | 1 |
+| 2396dbfd-05cb-52df-b953-b718ce95ad45 | 1 |
+| 23bafe39-f12a-5631-82ec-70325a9ea4e2 | 1 |
+| 23bfad7b-cba1-40d9-ae10-4df01553c01f | 1 |
+| 23d88b17-21eb-5efc-a76c-8d79a1c7334f | 1 |
+| 23df93d0-05b9-54f8-a1a9-438e8576de4f | 1 |
+| 23fad028-2100-5c6c-8e06-cd475b4b1f24 | 1 |
+| _missing | 1 |
+
+### disease_type
+
+| Value | Count |
+|-------|-------|
+| ductal and lobular neoplasms | 1054 |
+| cystic, mucinous and serous neoplasms | 16 |
+| complex epithelial neoplasms | 14 |
+| epithelial neoplasms, nos | 5 |
+| adenomas and adenocarcinomas | 3 |
+| fibroepithelial neoplasms | 2 |
+| squamous cell neoplasms | 2 |
+| adnexal and skin appendage neoplasms | 1 |
+| basal cell neoplasms | 1 |
+
+### exposures.alcohol_frequency
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.alcohol_history
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| not reported | 1 |
+
+### exposures.alcohol_intensity
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.alcohol_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.asbestos_exposure_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.chemical_exposure_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.environmental_tobacco_smoke_exposure
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.exposure_duration
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.exposure_source
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.exposure_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.occupation_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.parent_with_radiation_exposure
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.secondhand_smoke_as_child
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.smoking_frequency
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.time_between_waking_and_first_smoke
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.tobacco_smoking_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.type_of_smoke_exposure
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### exposures.type_of_tobacco_used
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### family_histories.relationship_gender
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### family_histories.relationship_primary_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### family_histories.relationship_sex_at_birth
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### family_histories.relationship_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### family_histories.relative_deceased
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### family_histories.relative_smoker
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### family_histories.relative_with_cancer_history
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.access
+
+| Value | Count |
+|-------|-------|
+| open | 1098 |
+| controlled | 1098 |
+
+### files.acl
+
+| Value | Count |
+|-------|-------|
+| open | 1098 |
+| phs000178 | 1098 |
+
+### files.analysis.analysis_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.access
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.average_base_quality
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.average_insert_size
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.average_read_length
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.cancer_dna_fraction
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.channel
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.chip_position
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.contamination
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.contamination_error
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.data_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.data_format
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.data_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.experimental_strategy
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.genome_doubling
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.imaging_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.magnification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.mean_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.msi_score
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.msi_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.pairs_on_diff_chr
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.plate_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.plate_well
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.platform
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.proc_internal
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.proportion_base_mismatch
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.proportion_coverage_10x
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.proportion_coverage_30x
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.proportion_reads_duplicated
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.proportion_reads_mapped
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.proportion_targets_no_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.read_pair_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.revision
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.stain_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.subclonal_genome_fraction
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.tmb
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.tmb_exonic
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.tmb_nonsynonymous
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.tmb_nonsynonymous_exonic
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.total_reads
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.tumor_ploidy
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.tumor_purity
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.input_files.wgs_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.adapter_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 1024 |
+| ad2.10+ad1.11 | 1 |
+| ad2.14+ad1.4 | 1 |
+| ad2.14+ad1.9 | 1 |
+| ad2.20+ad1.3 | 1 |
+| ad2.21+ad1.16 | 1 |
+| ad2.5+ad1.10 | 1 |
+| ad2.9+ad1.18 | 1 |
+| ad2.9+ad1.20 | 1 |
+| ad2.1+ad1.13 | 1 |
+| ad2.1+ad1.14 | 1 |
+| ad2.1+ad1.16 | 1 |
+| ad2.1+ad1.18 | 1 |
+| ad2.1+ad1.20 | 1 |
+| ad2.1+ad1.3 | 1 |
+| ad2.10+ad1.13 | 1 |
+| ad2.10+ad1.14 | 1 |
+| ad2.10+ad1.18 | 1 |
+| ad2.10+ad1.20 | 1 |
+| ad2.10+ad1.23 | 1 |
+| ad2.10+ad1.3 | 1 |
+| ad2.11+ad1.11 | 1 |
+| ad2.11+ad1.12 | 1 |
+| ad2.11+ad1.18 | 1 |
+| ad2.11+ad1.23 | 1 |
+| ad2.12+ad1.1 | 1 |
+| ad2.12+ad1.12 | 1 |
+| ad2.12+ad1.18 | 1 |
+| ad2.13+ad1.1 | 1 |
+| ad2.13+ad1.14 | 1 |
+| ad2.13+ad1.15 | 1 |
+| ad2.13+ad1.16 | 1 |
+| ad2.13+ad1.17 | 1 |
+| ad2.13+ad1.22 | 1 |
+| ad2.13+ad1.24 | 1 |
+| ad2.13+ad1.4 | 1 |
+| ad2.14+ad1.1 | 1 |
+| ad2.14+ad1.14 | 1 |
+| ad2.14+ad1.15 | 1 |
+| ad2.14+ad1.16 | 1 |
+| ad2.14+ad1.17 | 1 |
+| ad2.14+ad1.24 | 1 |
+| ad2.15+ad1.1 | 1 |
+| ad2.15+ad1.12 | 1 |
+| ad2.15+ad1.17 | 1 |
+| ad2.15+ad1.21 | 1 |
+| ad2.15+ad1.9 | 1 |
+| ad2.16+ad1.11 | 1 |
+| ad2.16+ad1.12 | 1 |
+| ad2.16+ad1.17 | 1 |
+| ad2.16+ad1.2 | 1 |
+| ad2.16+ad1.21 | 1 |
+| ad2.16+ad1.22 | 1 |
+| ad2.16+ad1.23 | 1 |
+| ad2.17+ad1.15 | 1 |
+| ad2.17+ad1.17 | 1 |
+| ad2.17+ad1.2 | 1 |
+| ad2.17+ad1.22 | 1 |
+| ad2.17+ad1.23 | 1 |
+| ad2.17+ad1.24 | 1 |
+| ad2.17+ad1.3 | 1 |
+| ad2.18+ad1.15 | 1 |
+| ad2.18+ad1.17 | 1 |
+| ad2.18+ad1.2 | 1 |
+| ad2.18+ad1.24 | 1 |
+| ad2.18+ad1.3 | 1 |
+| ad2.18+ad1.9 | 1 |
+| ad2.19+ad1.16 | 1 |
+| ad2.19+ad1.18 | 1 |
+| ad2.19+ad1.19 | 1 |
+| ad2.19+ad1.2 | 1 |
+| ad2.19+ad1.21 | 1 |
+| ad2.19+ad1.3 | 1 |
+| ad2.19+ad1.9 | 1 |
+| ad2.2+ad1.13 | 1 |
+| ad2.2+ad1.14 | 1 |
+| ad2.2+ad1.16 | 1 |
+| ad2.2+ad1.20 | 1 |
+| ad2.20+ad1.1 | 1 |
+| ad2.20+ad1.16 | 1 |
+| ad2.20+ad1.18 | 1 |
+| ad2.20+ad1.19 | 1 |
+| ad2.20+ad1.2 | 1 |
+| ad2.20+ad1.21 | 1 |
+| ad2.20+ad1.9 | 1 |
+| ad2.21+ad1.1 | 1 |
+| ad2.21+ad1.14 | 1 |
+| ad2.21+ad1.20 | 1 |
+| ad2.21+ad1.21 | 1 |
+| ad2.21+ad1.3 | 1 |
+| ad2.21+ad1.9 | 1 |
+| ad2.22+ad1.14 | 1 |
+| ad2.22+ad1.16 | 1 |
+| ad2.22+ad1.20 | 1 |
+| ad2.22+ad1.21 | 1 |
+| ad2.22+ad1.22 | 1 |
+| ad2.22+ad1.3 | 1 |
+| ad2.23+ad1.16 | 1 |
+| ad2.23+ad1.22 | 1 |
+| ad2.24+ad1.16 | 1 |
+| ad2.3+ad1.1 | 1 |
+| ad2.3+ad1.21 | 1 |
+| ad2.3+ad1.9 | 1 |
+| ad2.4+ad1.10 | 1 |
+| ad2.4+ad1.11 | 1 |
+| ad2.4+ad1.20 | 1 |
+| ad2.4+ad1.21 | 1 |
+| ad2.4+ad1.24 | 1 |
+| ad2.4+ad1.9 | 1 |
+| ad2.5+ad1.11 | 1 |
+| ad2.5+ad1.12 | 1 |
+| ad2.5+ad1.14 | 1 |
+| ad2.5+ad1.19 | 1 |
+| ad2.5+ad1.21 | 1 |
+| ad2.5+ad1.22 | 1 |
+| ad2.5+ad1.24 | 1 |
+| ad2.6+ad1.1 | 1 |
+| ad2.6+ad1.12 | 1 |
+| ad2.6+ad1.14 | 1 |
+| ad2.6+ad1.19 | 1 |
+| ad2.6+ad1.21 | 1 |
+| ad2.6+ad1.22 | 1 |
+| ad2.61+ad1.37 | 1 |
+| ad2.62+ad1.37 | 1 |
+| ad2.63+ad1.35 | 1 |
+| ad2.63+ad1.37 | 1 |
+| ad2.64+ad1.35 | 1 |
+| ad2.65+ad1.35 | 1 |
+| ad2.66+ad1.35 | 1 |
+| ad2.7+ad1.1 | 1 |
+| ad2.7+ad1.16 | 1 |
+| ad2.7+ad1.9 | 1 |
+| ad2.71+ad1.33 | 1 |
+| ad2.72+ad1.33 | 1 |
+| ad2.8+ad1.1 | 1 |
+| ad2.8+ad1.11 | 1 |
+| ad2.8+ad1.16 | 1 |
+| ad2.9+ad1.1 | 1 |
+| ad2.9+ad1.11 | 1 |
+| ad2.9+ad1.13 | 1 |
+| ad2.9+ad1.14 | 1 |
+| ad2.9+ad1.3 | 1 |
+
+### files.analysis.metadata.read_groups.adapter_sequence
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.base_caller_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.base_caller_version
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.chipseq_antibody
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.chipseq_target
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.days_to_sequencing
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.experiment_name
+
+| Value | Count |
+|-------|-------|
+| h_ls-a2-a0cm-01a-31d-a128-09 | 1 |
+| h_ls-a2-a04q-01a-21d-a128-09 | 1 |
+| h_ls-a2-a0d2-10a-01d-a128-09 | 1 |
+| h_ls-a7-a0ce-11a-21d-a12l-09 | 1 |
+| h_ls-b6-a0i2-01a-11d-a12l-09 | 1 |
+| h_ls-b6-a0i6-10a-01d-a128-09 | 1 |
+| h_ls-b6-a0ij-01a-11d-a128-09 | 1 |
+| h_ls-b6-a0iq-01a-11d-a128-09 | 1 |
+| h_ls-b6-a0rt-01a-21d-a128-09 | 1 |
+| h_ls-bh-a0e0-11a-13d-a128-09 | 1 |
+| tcga-b6-a0x1-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-bh-a0ds-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-bh-a0dz-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-bh-a0e9-01b-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-e2-a1l8-01a-11d-a897-36.wgs.rp-1657 | 1 |
+| tcga-ew-a1iw-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| h_ls-aq-a04j-01a-02d-a128-09 | 1 |
+| h_ls-b6-a0ij-10a-01d-a128-09 | 1 |
+| h_ls-bh-a0b9-01a-11d-a128-09 | 1 |
+| tcga-a2-a0yg-01a-21d-a724-36.bam | 1 |
+| h_ls-e2-a15k-06a-11d-a12q-09 | 1 |
+| tcga-a2-a0es-01a-11d-a723-36.bam | 1 |
+| tcga-a2-a0ex-01a-21d-a723-36.bam | 1 |
+| tcga-a2-a0sx-01a-12d-a744-36.bam | 1 |
+| tcga-a2-a0yk-01a-22d-a723-36.bam | 1 |
+| tcga-a2-a1g4-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3kc-01a-11d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3kd-01a-12d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xv-01a-21d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xy-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xz-01a-42d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4rw-01a-21d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4rx-01a-11d-a702-36.bam | 1 |
+| tcga-a7-a0cg-01a-12d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-a7-a0db-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a7-a13h-01a-11d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a7-a2kd-01a-31d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a7-a3iy-01a-12d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a7-a3iz-01a-11d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a7-a3j0-01a-11d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a7-a3rf-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a7-a5zv-01a-11d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a7-a6vv-01a-22d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a7-a6vy-01a-12d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a8-a06t-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a8-a06z-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a07f-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a07l-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a07p-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a07s-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a07w-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a081-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a082-01a-11d-a88z-36.wgs.rp-1657 | 1 |
+| tcga-a8-a084-01a-21d-a88z-36.wgs.rp-1657 | 1 |
+| tcga-a8-a08l-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-a8-a08o-01a-21d-a88z-36.wgs.rp-1657 | 1 |
+| tcga-a8-a08t-01a-21d-a88z-36.wgs.rp-1657 | 1 |
+| tcga-a8-a08x-01a-21d-a88z-36.wgs.rp-1657 | 1 |
+| tcga-an-a04d-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-ao-a12d-01a-11d-a723-36.bam | 1 |
+| tcga-ar-a0u0-01a-11d-a723-36.bam | 1 |
+| tcga-ar-a0u4-01a-11d-a723-36.bam | 1 |
+| tcga-ar-a255-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-b6-a0rm-01a-11d-a892-36.wgs.rp-1657 | 1 |
+| tcga-bh-a0hp-01a-11d-a75x-36.bam | 1 |
+| tcga-c8-a133-01a-51d-a76g-36.bam | 1 |
+| tcga-c8-a137-01a-11d-a724-36.bam | 1 |
+| tcga-c8-a26w-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-c8-a8hr-01a-11d-a703-36.bam | 1 |
+| tcga-d8-a140-01a-11d-a894-36.wgs.rp-1657 | 1 |
+| tcga-e2-a154-01a-11d-a895-36.wgs.rp-1657 | 1 |
+| tcga-e9-a1r5-01a-11d-a898-36.wgs.rp-1657 | 1 |
+| tcga-pl-a8lz-01a-31d-a706-36.bam | 1 |
+| tcga-s3-aa0z-01a-11d-a706-36.bam | 1 |
+| h_ls-a2-a04q-10a-01d-a128-09 | 1 |
+| h_ls-a2-a0cm-10a-01d-a128-09 | 1 |
+| h_ls-b6-a0ru-01a-11d-a12l-09 | 1 |
+| tcga-3c-aaau-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-3c-aali-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-3c-aalj-01a-31d-a702-36.bam | 1 |
+| tcga-3c-aalk-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-5l-aat0-01a-12d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-5l-aat1-01a-12d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-5t-a9qa-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sb-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sd-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0se-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sf-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sg-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0si-01a-11d-a89f-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sk-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sn-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0so-01a-22d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sp-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a1-a0sq-01a-21d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04n-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04p-01a-31d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04q-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04r-01a-41d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04t-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04u-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04v-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04w-01a-31d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04x-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a04y-01a-21d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0ck-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cl-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cm-01a-31d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0co-01a-21d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cp-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cq-01a-21d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cr-01a-21d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cs-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0ct-01a-31d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cu-01a-12d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cv-01a-31d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cw-01a-21d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0cx-01a-21d-a744-36.bam | 1 |
+| tcga-a2-a0cy-01a-12d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0d0-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0d1-01a-11d-a890-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0d2-01a-22d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0d3-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0d4-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0em-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0en-01a-13d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0eo-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0ep-01a-52d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0eq-01a-11d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0er-01a-21d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0et-01a-31d-a744-36.bam | 1 |
+| tcga-a2-a0eu-01a-22d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0ev-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a0st-01a-12d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0su-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0sv-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a0sw-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a0sy-01a-31d-a744-36.bam | 1 |
+| tcga-a2-a0t0-01a-22d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0t1-01a-21d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0t2-01a-11d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0t3-01a-21d-a893-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0t4-01a-32d-a75x-36.bam | 1 |
+| tcga-a2-a0t7-01a-21d-a744-36.bam | 1 |
+| tcga-a2-a0yd-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a0ye-01a-11d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0yh-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a0yi-01a-31d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0yl-01a-21d-a744-36.bam | 1 |
+| tcga-a2-a0ym-01a-11d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a2-a0yt-01a-11d-a744-36.bam | 1 |
+| tcga-a2-a1fv-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a1fw-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a1fx-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a1fz-01a-21d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a1g0-01a-11d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a1g1-01a-21d-a896-36.wgs.rp-1657 | 1 |
+| tcga-a2-a259-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a25b-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a25c-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a25d-01a-12d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a25e-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a25f-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xs-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xt-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xu-01a-12d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xw-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3xx-01a-21d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a3y0-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4s0-01a-21d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4s1-01a-11d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4s2-01a-11d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a2-a4s3-01a-21d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a7-a0cd-01a-11d-a930-36.wgs.rp-1657 | 1 |
+| tcga-a7-a0ch-01a-21d-a744-36.bam | 1 |
+| tcga-a7-a0cj-01a-21d-a930-36.wgs.rp-1657 | 1 |
+| tcga-a7-a0d9-01a-31d-a744-36.bam | 1 |
+| tcga-a7-a0da-01a-31d-a891-36.wgs.rp-1657 | 1 |
+| tcga-a7-a13d-01a-13d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a7-a13e-01a-11d-a744-36.bam | 1 |
+| tcga-a7-a13f-01a-12d-a75x-36.bam | 1 |
+| tcga-a7-a13g-01a-11d-a894-36.wgs.rp-1657 | 1 |
+| tcga-a7-a26e-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a7-a26f-01a-21d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a7-a26g-01a-21d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a7-a26h-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a7-a26i-01a-11d-a89a-36.wgs.rp-1657 | 1 |
+| tcga-a7-a3j1-01a-11d-a89b-36.wgs.rp-1657 | 1 |
+| tcga-a7-a425-01a-11d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a7-a426-01a-22d-a89c-36.wgs.rp-1657 | 1 |
+| tcga-a7-a4sb-01a-12d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a7-a4se-01a-11d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a7-a4sf-01a-11d-a89d-36.wgs.rp-1657 | 1 |
+| tcga-a7-a5zw-01a-11d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a7-a5zx-01a-12d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a7-a6vw-01a-21d-a89g-36.wgs.rp-1657 | 1 |
+| tcga-a7-a6vx-01a-12d-a89e-36.wgs.rp-1657 | 1 |
+| tcga-a8-a06n-01a-11d-a744-36.bam | 1 |
+| tcga-a8-a06o-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+| tcga-a8-a06p-01a-11d-a89h-36.wgs.rp-1657 | 1 |
+
+### files.analysis.metadata.read_groups.flow_cell_barcode
+
+| Value | Count |
+|-------|-------|
+| _missing | 160 |
+| h72cndsx5 | 95 |
+| hc7n3dsx3 | 95 |
+| hc7tfdsx3 | 95 |
+| hc7tkdsx3 | 95 |
+| hcct2dsx3 | 95 |
+| hccvtdsx3 | 95 |
+| hcf5vdsx3 | 95 |
+| hcf7ydsx3 | 95 |
+| hckg3dsx3 | 95 |
+| hflghdsx3 | 95 |
+| hflgydsx3 | 95 |
+| hflhtdsx3 | 95 |
+| hfm2fdsx3 | 95 |
+| hfn2gdsx3 | 95 |
+| hfngvdsx3 | 95 |
+| hfnn2dsx3 | 95 |
+| hfnnhdsx3 | 95 |
+| hwglkdsx3 | 95 |
+| hwhwldsx3 | 95 |
+| hwn52dsx3 | 95 |
+| hwncwdsx3 | 95 |
+| hwngjdsx3 | 95 |
+| hwnjvdsx3 | 95 |
+| hwnkcdsx3 | 95 |
+| hwnkfdsx3 | 95 |
+| hwnmjdsx3 | 95 |
+| hwnncdsx3 | 95 |
+| hwnt2dsx3 | 95 |
+| hwnt3dsx3 | 95 |
+| hwntldsx3 | 95 |
+| hwthwdsx3 | 95 |
+| hww2vdsx3 | 95 |
+| hww5hdsx3 | 95 |
+| hwwcwdsx3 | 95 |
+| hwwkgdsx3 | 95 |
+| h72h2dsx5 | 94 |
+| hwf5wdsx3 | 94 |
+| hwgckdsx3 | 94 |
+| hwgljdsx3 | 94 |
+| hwglwdsx3 | 94 |
+| hwhfgdsx3 | 94 |
+| hwhj7dsx3 | 94 |
+| hwht3dsx3 | 94 |
+| hwhtgdsx3 | 94 |
+| hwhwkdsx3 | 94 |
+| hwmncdsx3 | 94 |
+| hwnffdsx3 | 94 |
+| hwngtdsx3 | 94 |
+| hwnhjdsx3 | 94 |
+| hwnjndsx3 | 94 |
+| hwntmdsx3 | 94 |
+| hwnw5dsx3 | 94 |
+| hwtg5dsx3 | 94 |
+| hwtghdsx3 | 94 |
+| hwwc2dsx3 | 94 |
+| hwwg3dsx3 | 94 |
+| hwwkcdsx3 | 94 |
+| hyhkhdsx3 | 94 |
+| h5whldsx5 | 93 |
+| h777ydsx5 | 93 |
+| hc7h5dsx3 | 93 |
+| hckcwdsx3 | 93 |
+| hcm72dsx3 | 93 |
+| hcm7kdsx3 | 93 |
+| hcm7ldsx3 | 93 |
+| hfmvwdsx3 | 93 |
+| hfnf3dsx3 | 93 |
+| hg3vhdsx3 | 93 |
+| hg532dsx3 | 93 |
+| hg53fdsx3 | 93 |
+| hg53gdsx3 | 93 |
+| hg53wdsx3 | 93 |
+| hg55tdsx3 | 93 |
+| hg55wdsx3 | 93 |
+| hg57wdsx3 | 93 |
+| hg5c2dsx3 | 93 |
+| hg5cgdsx3 | 93 |
+| hg5cmdsx3 | 93 |
+| hg5hcdsx3 | 93 |
+| hg5ljdsx3 | 93 |
+| hg5y7dsx3 | 93 |
+| hwthfdsx3 | 93 |
+| hwwkldsx3 | 93 |
+| hwymtdsx3 | 93 |
+| hwynkdsx3 | 93 |
+| hwynldsx3 | 93 |
+| hwytkdsx3 | 93 |
+| hwytvdsx3 | 93 |
+| hwyywdsx3 | 93 |
+| hy22vdsx3 | 93 |
+| hy23cdsx3 | 93 |
+| hy23tdsx3 | 93 |
+| hy25ndsx3 | 93 |
+| hy25vdsx3 | 93 |
+| hy277dsx3 | 93 |
+| hy27ndsx3 | 93 |
+| hy2c2dsx3 | 93 |
+| hy3yhdsx3 | 93 |
+| hwmycdsx3 | 92 |
+| hwmyndsx3 | 92 |
+| hwn5gdsx3 | 92 |
+| hwnt5dsx3 | 92 |
+| hc5vjdsx3 | 90 |
+| hc72gdsx3 | 90 |
+| hc7mjdsx3 | 90 |
+| hcm5vdsx3 | 87 |
+| hwlwmdsx3 | 87 |
+| hwmhndsx3 | 87 |
+| hwmnldsx3 | 87 |
+| hwn7kdsx3 | 69 |
+| hc7nndsx3 | 61 |
+| hgnvvdsx3 | 60 |
+| hgnyfdsx3 | 60 |
+| hgt2jdsx3 | 60 |
+| hgt2ldsx3 | 60 |
+| hhgfhdsx3 | 60 |
+| hhgjgdsx3 | 60 |
+| hhgjmdsx3 | 60 |
+| hhhhfdsx3 | 60 |
+| hhhhjdsx3 | 60 |
+| hhhhkdsx3 | 60 |
+| hhhjcdsx3 | 60 |
+| hhhkfdsx3 | 60 |
+| hhhnfdsx3 | 60 |
+| hhht3dsx3 | 60 |
+| hwmgydsx3 | 48 |
+| hwmwmdsx3 | 48 |
+| hwnltdsx3 | 48 |
+| hwnmvdsx3 | 48 |
+| hy3kvdsx3 | 43 |
+| hy3lydsx3 | 43 |
+| hy3vkdsx3 | 43 |
+| hy3vvdsx3 | 43 |
+| hy3yvdsx3 | 43 |
+| hy53vdsx3 | 43 |
+| hy55hdsx3 | 43 |
+| hy5fwdsx3 | 43 |
+| hy5ghdsx3 | 43 |
+| hy5jjdsx3 | 43 |
+| h755cdsxx | 35 |
+| h75n2dsxx | 35 |
+| h75nndsxx | 35 |
+| h75kmdsxx | 32 |
+| h75h5dsxx | 30 |
+| h75hgdsxx | 30 |
+| h75l2dsxx | 30 |
+| h75mtdsxx | 30 |
+| h75n3dsxx | 30 |
+| h57cgdsxx | 29 |
+| h57cvdsxx | 29 |
+| h57cwdsxx | 29 |
+| h57f3dsxx | 29 |
+| h75kndsxx | 23 |
+| h55mydsxx | 22 |
+| h55n2dsxx | 22 |
+| h57c5dsxx | 22 |
+| h7kj3dsx5 | 22 |
+| h57cmdsxx | 19 |
+| h75khdsxx | 19 |
+| h75hcdsxx | 15 |
+| h75kfdsxx | 15 |
+| h75kkdsxx | 15 |
+| h75lndsxx | 15 |
+| h75mcdsxx | 15 |
+| hgnhhdsx3 | 14 |
+| hkf77bbxx | 13 |
+| hgngcdsx3 | 12 |
+| hlhyhbbxx | 11 |
+| hln3gbbxx | 10 |
+| h75kcdsxx | 10 |
+| h75nkdsxx | 10 |
+| h75nmdsxx | 10 |
+| h7tj5dsxx | 10 |
+| h7tn7dsxx | 10 |
+| h7ttydsxx | 10 |
+| h7tv2dsxx | 10 |
+| h7tvmdsxx | 10 |
+| h7tvndsxx | 10 |
+| h7twgdsxx | 10 |
+| h7twhdsxx | 10 |
+| h7v2wdsxx | 10 |
+| h7vvmdsxx | 10 |
+| h7vwgdsxx | 10 |
+| h7wt5dsxx | 10 |
+| hkckvbbxx | 9 |
+| hkcktbbxx | 9 |
+| hlhhnbbxx | 9 |
+| h573tdsxx | 9 |
+| hl7hhbbxx | 8 |
+| h757ydsxx | 8 |
+| h75n5dsxx | 8 |
+| h7kkhdsxx | 8 |
+| h2lvwdsx5 | 7 |
+| h2lw5dsx5 | 7 |
+| h2lywdsx5 | 7 |
+| h2mhhdsx5 | 7 |
+| h75kgdsxx | 7 |
+| h75mjdsxx | 7 |
+| hk7k7bbxx | 5 |
+| hlkj2bbxx | 5 |
+
+### files.analysis.metadata.read_groups.fragment_maximum_length
+
+| Value | Count |
+|-------|-------|
+| _missing | 238 |
+| 245073802 | 4 |
+| 247629189 | 3 |
+| 247251042 | 2 |
+| 246618053 | 1 |
+| 247048210 | 1 |
+| 247231666 | 1 |
+| 247405946 | 1 |
+| 247795347 | 1 |
+| 247862481 | 1 |
+| 245846494 | 1 |
+| 246033237 | 1 |
+| 246039139 | 1 |
+| 246256286 | 1 |
+| 246353408 | 1 |
+| 246386109 | 1 |
+| 246481419 | 1 |
+| 246662065 | 1 |
+| 246870416 | 1 |
+| 246879860 | 1 |
+| 246912075 | 1 |
+| 246976753 | 1 |
+| 247013823 | 1 |
+| 247027296 | 1 |
+| 247049630 | 1 |
+| 247150340 | 1 |
+| 247165281 | 1 |
+| 247193682 | 1 |
+| 247203498 | 1 |
+| 247407147 | 1 |
+| 247497392 | 1 |
+| 247546352 | 1 |
+| 247621319 | 1 |
+| 247661099 | 1 |
+| 247677726 | 1 |
+| 247799347 | 1 |
+| 247946990 | 1 |
+| 247977592 | 1 |
+| 248082371 | 1 |
+| 248088369 | 1 |
+| 248107167 | 1 |
+| 248196683 | 1 |
+| 248316004 | 1 |
+| 248339909 | 1 |
+| 248378716 | 1 |
+| 248511356 | 1 |
+| 248531616 | 1 |
+| 248631230 | 1 |
+| 248648189 | 1 |
+| 244628769 | 1 |
+| 244823625 | 1 |
+| 244823864 | 1 |
+| 245137924 | 1 |
+| 245219461 | 1 |
+| 245253268 | 1 |
+| 245338029 | 1 |
+| 245455204 | 1 |
+| 245523371 | 1 |
+| 245583762 | 1 |
+| 245631230 | 1 |
+| 245631234 | 1 |
+| 245631388 | 1 |
+| 245641475 | 1 |
+| 245695520 | 1 |
+| 245706487 | 1 |
+| 245787158 | 1 |
+| 245787323 | 1 |
+| 245839830 | 1 |
+| 245848050 | 1 |
+| 245884220 | 1 |
+| 245884945 | 1 |
+| 245908747 | 1 |
+| 245912386 | 1 |
+| 245917063 | 1 |
+| 246017160 | 1 |
+| 246031004 | 1 |
+| 246064656 | 1 |
+| 246068573 | 1 |
+| 246078328 | 1 |
+| 246093062 | 1 |
+| 246102113 | 1 |
+| 246111418 | 1 |
+| 246136421 | 1 |
+| 246138099 | 1 |
+| 246141672 | 1 |
+| 246144070 | 1 |
+| 246152058 | 1 |
+| 246154981 | 1 |
+| 246160918 | 1 |
+| 246180064 | 1 |
+| 246188510 | 1 |
+| 246199960 | 1 |
+| 246223239 | 1 |
+| 246229122 | 1 |
+| 246241556 | 1 |
+| 246251051 | 1 |
+| 246258373 | 1 |
+| 246261427 | 1 |
+| 246265545 | 1 |
+| 246265929 | 1 |
+| 246265936 | 1 |
+| 246272074 | 1 |
+| 246274388 | 1 |
+| 246277161 | 1 |
+| 246282498 | 1 |
+| 246302659 | 1 |
+| 246319857 | 1 |
+| 246342630 | 1 |
+| 246347768 | 1 |
+| 246347896 | 1 |
+| 246373777 | 1 |
+| 246382873 | 1 |
+| 246388460 | 1 |
+| 246390002 | 1 |
+| 246391232 | 1 |
+| 246400602 | 1 |
+| 246413609 | 1 |
+| 246416333 | 1 |
+| 246416334 | 1 |
+| 246419715 | 1 |
+| 246421320 | 1 |
+| 246421327 | 1 |
+| 246421916 | 1 |
+| 246432294 | 1 |
+| 246438168 | 1 |
+| 246439242 | 1 |
+| 246447708 | 1 |
+| 246464110 | 1 |
+| 246467544 | 1 |
+| 246468813 | 1 |
+| 246470651 | 1 |
+| 246472002 | 1 |
+| 246477699 | 1 |
+| 246486991 | 1 |
+| 246487283 | 1 |
+| 246497349 | 1 |
+| 246503146 | 1 |
+| 246519680 | 1 |
+| 246551332 | 1 |
+| 246571000 | 1 |
+| 246579180 | 1 |
+| 246579618 | 1 |
+| 246579640 | 1 |
+| 246580987 | 1 |
+| 246581152 | 1 |
+| 246585765 | 1 |
+| 246592570 | 1 |
+| 246599693 | 1 |
+| 246600050 | 1 |
+| 246606842 | 1 |
+| 246614540 | 1 |
+| 246614780 | 1 |
+| 246623806 | 1 |
+| 246626973 | 1 |
+| 246631333 | 1 |
+| 246638603 | 1 |
+| 246640026 | 1 |
+| 246643435 | 1 |
+| 246646441 | 1 |
+| 246658196 | 1 |
+| 246658891 | 1 |
+| 246661230 | 1 |
+| 246663341 | 1 |
+| 246666674 | 1 |
+| 246669197 | 1 |
+| 246672345 | 1 |
+| 246682303 | 1 |
+| 246688959 | 1 |
+| 246689554 | 1 |
+| 246700099 | 1 |
+| 246702378 | 1 |
+| 246710223 | 1 |
+| 246712301 | 1 |
+| 246720037 | 1 |
+| 246722656 | 1 |
+| 246729322 | 1 |
+| 246737916 | 1 |
+| 246741071 | 1 |
+| 246744985 | 1 |
+| 246753860 | 1 |
+| 246755487 | 1 |
+| 246758696 | 1 |
+| 246762568 | 1 |
+| 246762840 | 1 |
+| 246770479 | 1 |
+| 246784371 | 1 |
+| 246785745 | 1 |
+| 246789608 | 1 |
+| 246792497 | 1 |
+| 246797003 | 1 |
+| 246800911 | 1 |
+| 246805307 | 1 |
+| 246807581 | 1 |
+| 246817237 | 1 |
+| 246817911 | 1 |
+| 246818669 | 1 |
+| 246820422 | 1 |
+| 246824341 | 1 |
+| 246827286 | 1 |
+| 246839989 | 1 |
+| 246842138 | 1 |
+
+### files.analysis.metadata.read_groups.fragment_mean_length
+
+| Value | Count |
+|-------|-------|
+| _missing | 169 |
+| 429.817714 | 1 |
+| 438.071837 | 1 |
+| 442.171179 | 1 |
+| 443.323463 | 1 |
+| 449.165124 | 1 |
+| 454.949098 | 1 |
+| 338.9835 | 1 |
+| 386.880406 | 1 |
+| 419.038302 | 1 |
+| 424.614853 | 1 |
+| 425.27536 | 1 |
+| 428.578627 | 1 |
+| 430.535372 | 1 |
+| 436.422426 | 1 |
+| 436.726234 | 1 |
+| 438.072625 | 1 |
+| 440.943416 | 1 |
+| 441.839745 | 1 |
+| 442.054025 | 1 |
+| 442.861996 | 1 |
+| 444.182366 | 1 |
+| 445.112846 | 1 |
+| 446.300772 | 1 |
+| 449.531258 | 1 |
+| 450.661958 | 1 |
+| 456.741232 | 1 |
+| 461.550338 | 1 |
+| 461.994097 | 1 |
+| 462.669998 | 1 |
+| 462.732165 | 1 |
+| 463.175372 | 1 |
+| 463.559795 | 1 |
+| 467.703808 | 1 |
+| 469.392784 | 1 |
+| 469.695822 | 1 |
+| 474.17607 | 1 |
+| 475.119478 | 1 |
+| 475.422334 | 1 |
+| 477.114979 | 1 |
+| 478.444318 | 1 |
+| 478.605771 | 1 |
+| 486.361933 | 1 |
+| 487.392609 | 1 |
+| 493.973145 | 1 |
+| 501.959437 | 1 |
+| 524.259692 | 1 |
+| 317.89498 | 1 |
+| 326.28222 | 1 |
+| 326.66409 | 1 |
+| 327.44882 | 1 |
+| 329.92884 | 1 |
+| 333.93051 | 1 |
+| 334.65999 | 1 |
+| 334.78157 | 1 |
+| 340.15573 | 1 |
+| 350.01349 | 1 |
+| 403.053864 | 1 |
+| 404.010981 | 1 |
+| 404.296898 | 1 |
+| 405.223237 | 1 |
+| 408.426605 | 1 |
+| 410.182496 | 1 |
+| 410.348547 | 1 |
+| 410.447878 | 1 |
+| 410.624561 | 1 |
+| 411.887235 | 1 |
+| 411.905293 | 1 |
+| 411.959628 | 1 |
+| 413.537295 | 1 |
+| 413.556264 | 1 |
+| 413.772217 | 1 |
+| 414.032428 | 1 |
+| 414.78275 | 1 |
+| 415.422842 | 1 |
+| 415.571667 | 1 |
+| 416.193537 | 1 |
+| 416.463769 | 1 |
+| 416.612089 | 1 |
+| 416.705504 | 1 |
+| 416.88172 | 1 |
+| 417.30779 | 1 |
+| 417.339034 | 1 |
+| 417.406961 | 1 |
+| 417.689855 | 1 |
+| 417.741649 | 1 |
+| 417.762365 | 1 |
+| 417.978355 | 1 |
+| 418.347138 | 1 |
+| 418.934738 | 1 |
+| 418.987032 | 1 |
+| 419.037294 | 1 |
+| 419.851561 | 1 |
+| 419.884886 | 1 |
+| 419.918944 | 1 |
+| 419.957798 | 1 |
+| 420.312414 | 1 |
+| 420.50614 | 1 |
+| 420.864288 | 1 |
+| 421.095131 | 1 |
+| 421.258164 | 1 |
+| 421.287915 | 1 |
+| 421.369514 | 1 |
+| 421.504785 | 1 |
+| 421.608447 | 1 |
+| 421.765545 | 1 |
+| 421.836808 | 1 |
+| 422.084938 | 1 |
+| 422.23622 | 1 |
+| 422.438491 | 1 |
+| 423.002406 | 1 |
+| 423.081148 | 1 |
+| 423.396995 | 1 |
+| 423.448699 | 1 |
+| 423.455042 | 1 |
+| 423.622088 | 1 |
+| 423.905588 | 1 |
+| 423.920414 | 1 |
+| 424.013694 | 1 |
+| 424.03287 | 1 |
+| 424.208799 | 1 |
+| 424.341305 | 1 |
+| 424.376473 | 1 |
+| 424.425311 | 1 |
+| 424.615955 | 1 |
+| 424.642865 | 1 |
+| 424.645712 | 1 |
+| 424.658454 | 1 |
+| 424.702097 | 1 |
+| 424.764479 | 1 |
+| 424.7717 | 1 |
+| 424.791948 | 1 |
+| 424.80988 | 1 |
+| 424.844885 | 1 |
+| 425.051734 | 1 |
+| 425.085991 | 1 |
+| 425.092979 | 1 |
+| 425.223113 | 1 |
+| 425.505825 | 1 |
+| 425.54507 | 1 |
+| 425.568231 | 1 |
+| 426.05189 | 1 |
+| 426.087788 | 1 |
+| 426.11193 | 1 |
+| 426.114715 | 1 |
+| 426.212043 | 1 |
+| 426.229947 | 1 |
+| 426.252284 | 1 |
+| 426.259609 | 1 |
+| 426.300758 | 1 |
+| 426.354414 | 1 |
+| 426.719431 | 1 |
+| 426.755771 | 1 |
+| 426.833626 | 1 |
+| 426.940541 | 1 |
+| 427.026013 | 1 |
+| 427.048243 | 1 |
+| 427.120581 | 1 |
+| 427.264454 | 1 |
+| 427.393405 | 1 |
+| 427.403069 | 1 |
+| 427.541557 | 1 |
+| 427.751811 | 1 |
+| 427.76667 | 1 |
+| 427.917773 | 1 |
+| 427.935232 | 1 |
+| 428.006695 | 1 |
+| 428.207663 | 1 |
+| 428.215465 | 1 |
+| 428.328265 | 1 |
+| 428.369736 | 1 |
+| 428.382958 | 1 |
+| 428.400378 | 1 |
+| 428.610017 | 1 |
+| 428.623866 | 1 |
+| 428.703408 | 1 |
+| 429.164844 | 1 |
+| 429.185188 | 1 |
+| 429.228268 | 1 |
+| 429.433864 | 1 |
+| 429.51277 | 1 |
+| 429.528083 | 1 |
+| 429.743701 | 1 |
+| 429.913716 | 1 |
+| 430.222327 | 1 |
+| 430.289912 | 1 |
+| 430.319001 | 1 |
+| 430.328078 | 1 |
+| 430.476454 | 1 |
+| 430.515304 | 1 |
+| 430.56795 | 1 |
+| 430.570258 | 1 |
+| 430.618558 | 1 |
+| 430.728779 | 1 |
+| 430.805813 | 1 |
+| 430.854561 | 1 |
+| 430.892769 | 1 |
+| 430.937936 | 1 |
+| 430.95516 | 1 |
+| 430.986567 | 1 |
+| 430.98805 | 1 |
+
+### files.analysis.metadata.read_groups.fragment_minimum_length
+
+| Value | Count |
+|-------|-------|
+| 2 | 860 |
+| _missing | 238 |
+
+### files.analysis.metadata.read_groups.fragment_standard_deviation_length
+
+| Value | Count |
+|-------|-------|
+| _missing | 169 |
+| 157.375258 | 1 |
+| 158.254224 | 1 |
+| 159.176556 | 1 |
+| 162.249383 | 1 |
+| 163.784552 | 1 |
+| 165.923425 | 1 |
+| 119.54898 | 1 |
+| 149.499101 | 1 |
+| 150.382874 | 1 |
+| 150.493252 | 1 |
+| 153.623049 | 1 |
+| 154.479409 | 1 |
+| 155.492763 | 1 |
+| 156.311481 | 1 |
+| 156.633494 | 1 |
+| 157.038214 | 1 |
+| 157.616406 | 1 |
+| 157.858821 | 1 |
+| 158.573986 | 1 |
+| 158.890021 | 1 |
+| 159.184969 | 1 |
+| 160.886036 | 1 |
+| 162.536675 | 1 |
+| 164.892184 | 1 |
+| 165.699024 | 1 |
+| 166.289124 | 1 |
+| 166.844648 | 1 |
+| 167.582354 | 1 |
+| 168.638866 | 1 |
+| 170.301706 | 1 |
+| 170.365222 | 1 |
+| 170.471354 | 1 |
+| 171.282611 | 1 |
+| 172.654975 | 1 |
+| 173.387023 | 1 |
+| 173.585981 | 1 |
+| 174.450503 | 1 |
+| 175.521766 | 1 |
+| 176.132843 | 1 |
+| 177.8091 | 1 |
+| 178.080372 | 1 |
+| 178.950619 | 1 |
+| 179.04283 | 1 |
+| 182.291309 | 1 |
+| 198.146159 | 1 |
+| 203.054988 | 1 |
+| 107.95904 | 1 |
+| 108.59482 | 1 |
+| 109.69945 | 1 |
+| 110.96725 | 1 |
+| 111.6558 | 1 |
+| 113.55568 | 1 |
+| 114.02437 | 1 |
+| 116.30749 | 1 |
+| 119.1009 | 1 |
+| 125.75092 | 1 |
+| 140.508545 | 1 |
+| 141.375386 | 1 |
+| 142.796704 | 1 |
+| 142.89433 | 1 |
+| 143.318977 | 1 |
+| 143.723313 | 1 |
+| 143.753376 | 1 |
+| 143.933266 | 1 |
+| 144.10295 | 1 |
+| 144.450449 | 1 |
+| 144.687275 | 1 |
+| 144.694561 | 1 |
+| 144.758518 | 1 |
+| 144.801896 | 1 |
+| 144.949887 | 1 |
+| 145.061097 | 1 |
+| 145.20473 | 1 |
+| 145.497013 | 1 |
+| 145.506534 | 1 |
+| 145.663041 | 1 |
+| 145.903784 | 1 |
+| 145.950615 | 1 |
+| 146.271463 | 1 |
+| 146.284266 | 1 |
+| 146.930017 | 1 |
+| 146.935488 | 1 |
+| 146.941501 | 1 |
+| 147.215498 | 1 |
+| 147.400393 | 1 |
+| 147.473196 | 1 |
+| 147.520408 | 1 |
+| 147.758182 | 1 |
+| 147.984577 | 1 |
+| 148.190378 | 1 |
+| 148.271034 | 1 |
+| 148.348228 | 1 |
+| 148.380935 | 1 |
+| 148.488018 | 1 |
+| 148.519232 | 1 |
+| 148.623483 | 1 |
+| 148.696102 | 1 |
+| 148.824222 | 1 |
+| 148.848563 | 1 |
+| 148.857536 | 1 |
+| 148.888535 | 1 |
+| 148.978241 | 1 |
+| 148.985436 | 1 |
+| 149.073481 | 1 |
+| 149.091426 | 1 |
+| 149.104321 | 1 |
+| 149.140514 | 1 |
+| 149.164924 | 1 |
+| 149.210179 | 1 |
+| 149.22438 | 1 |
+| 149.234635 | 1 |
+| 149.258238 | 1 |
+| 149.285584 | 1 |
+| 149.462117 | 1 |
+| 149.490815 | 1 |
+| 149.505533 | 1 |
+| 149.522974 | 1 |
+| 149.543612 | 1 |
+| 149.677938 | 1 |
+| 149.758283 | 1 |
+| 149.895625 | 1 |
+| 149.920418 | 1 |
+| 149.928149 | 1 |
+| 150.037621 | 1 |
+| 150.095053 | 1 |
+| 150.117354 | 1 |
+| 150.136167 | 1 |
+| 150.193406 | 1 |
+| 150.217348 | 1 |
+| 150.263248 | 1 |
+| 150.282426 | 1 |
+| 150.368193 | 1 |
+| 150.486537 | 1 |
+| 150.543442 | 1 |
+| 150.545135 | 1 |
+| 150.693522 | 1 |
+| 150.74354 | 1 |
+| 150.746493 | 1 |
+| 150.81393 | 1 |
+| 150.858826 | 1 |
+| 150.936313 | 1 |
+| 150.947452 | 1 |
+| 151.045597 | 1 |
+| 151.071979 | 1 |
+| 151.073928 | 1 |
+| 151.096793 | 1 |
+| 151.312274 | 1 |
+| 151.31605 | 1 |
+| 151.399563 | 1 |
+| 151.538969 | 1 |
+| 151.592565 | 1 |
+| 151.665234 | 1 |
+| 151.727497 | 1 |
+| 151.732812 | 1 |
+| 151.785183 | 1 |
+| 151.823891 | 1 |
+| 151.916165 | 1 |
+| 151.922195 | 1 |
+| 151.94472 | 1 |
+| 152.101443 | 1 |
+| 152.107928 | 1 |
+| 152.116195 | 1 |
+| 152.128966 | 1 |
+| 152.143987 | 1 |
+| 152.266767 | 1 |
+| 152.319986 | 1 |
+| 152.419518 | 1 |
+| 152.526494 | 1 |
+| 152.596151 | 1 |
+| 152.600839 | 1 |
+| 152.611338 | 1 |
+| 152.620553 | 1 |
+| 152.662145 | 1 |
+| 152.675029 | 1 |
+| 152.686009 | 1 |
+| 152.707129 | 1 |
+| 152.712526 | 1 |
+| 152.723135 | 1 |
+| 152.751771 | 1 |
+| 152.754354 | 1 |
+| 152.756186 | 1 |
+| 152.801713 | 1 |
+| 152.820297 | 1 |
+| 152.906115 | 1 |
+| 152.976041 | 1 |
+| 153.007454 | 1 |
+| 153.019157 | 1 |
+| 153.07211 | 1 |
+| 153.079197 | 1 |
+| 153.136868 | 1 |
+| 153.173287 | 1 |
+| 153.186714 | 1 |
+| 153.221574 | 1 |
+| 153.242223 | 1 |
+| 153.365507 | 1 |
+| 153.366394 | 1 |
+| 153.390834 | 1 |
+| 153.397107 | 1 |
+| 153.42245 | 1 |
+| 153.496904 | 1 |
+
+### files.analysis.metadata.read_groups.fragmentation_enzyme
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.includes_spike_ins
+
+| Value | Count |
+|-------|-------|
+| false | 860 |
+| _missing | 238 |
+
+### files.analysis.metadata.read_groups.instrument_model
+
+| Value | Count |
+|-------|-------|
+| other | 929 |
+| _missing | 160 |
+| illumina hiseq 4000 | 74 |
+
+### files.analysis.metadata.read_groups.is_paired_end
+
+| Value | Count |
+|-------|-------|
+| true | 1098 |
+| false | 17 |
+
+### files.analysis.metadata.read_groups.lane_number
+
+| Value | Count |
+|-------|-------|
+| 3 | 462 |
+| 1 | 453 |
+| 4 | 452 |
+| 2 | 426 |
+| _missing | 160 |
+| 5 | 25 |
+| 6 | 17 |
+| 7 | 14 |
+| 8 | 14 |
+
+### files.analysis.metadata.read_groups.library_name
+
+| Value | Count |
+|-------|-------|
+| unknown | 1095 |
+| mx0871 | 17 |
+| mx0603 | 16 |
+| mx0837 | 16 |
+| mx0959 | 16 |
+| mx0960 | 16 |
+| mx0961 | 16 |
+| mx0983 | 16 |
+| mx1085 | 16 |
+| mx1284 | 16 |
+| mx1285 | 16 |
+| mx0356 | 12 |
+| mx0357 | 12 |
+| mx0359 | 12 |
+| mx0361 | 12 |
+| mx0363 | 12 |
+| mx0364 | 12 |
+| mx0367 | 12 |
+| mx0370 | 12 |
+| mx0371 | 12 |
+| mx0372 | 12 |
+| mx0374 | 12 |
+| mx0376 | 12 |
+| mx0388 | 12 |
+| mx0389 | 12 |
+| mx0390 | 12 |
+| mx0391 | 12 |
+| mx0396 | 12 |
+| mx0397 | 12 |
+| mx0398 | 12 |
+| mx0420 | 12 |
+| mx0421 | 12 |
+| mx0440 | 12 |
+| mx0441 | 12 |
+| mx0442 | 12 |
+| mx0443 | 12 |
+| mx0449 | 12 |
+| mx0450 | 12 |
+| mx0836 | 12 |
+| mx0365 | 11 |
+| mx0355 | 11 |
+| mx0362 | 11 |
+| mx0366 | 11 |
+| mx0368 | 11 |
+| mx0375 | 11 |
+| mx0445 | 11 |
+| mx0579 | 11 |
+| mx0791 | 11 |
+| mx0838 | 11 |
+| mx0984 | 11 |
+| mx1067 | 11 |
+| mx0373 | 10 |
+| mx0444 | 10 |
+| mx1086 | 10 |
+| mx0402 | 9 |
+| mx0354 | 9 |
+| h_ls-b6-a0i6-10a-01d-a128-09-lib1 | 1 |
+| 0306815866_illumina_p5-xayol_p7-pepac | 1 |
+| 2105991542_illumina_p5-lipof_p7-nehin | 1 |
+| 2105991558_illumina_p5-nalok_p7-difew | 1 |
+| 2105991562_illumina_p5-xazen_p7-zidel | 1 |
+| 2105991564_illumina_p5-kefaz_p7-zepon | 1 |
+| 2105991565_illumina_p5-fibow_p7-hopow | 1 |
+| 2105991567_illumina_p5-nerow_p7-hoden | 1 |
+| 2105991568_illumina_p5-wihoy_p7-doyez | 1 |
+| 2105991570_illumina_p5-poxew_p7-jocef | 1 |
+| 2105991573_illumina_p5-zaped_p7-yoxen | 1 |
+| 2105991576_illumina_p5-wexed_p7-fapix | 1 |
+| 2105991580_illumina_p5-boxac_p7-xoren | 1 |
+| 2105991581_illumina_p5-lorez_p7-wayac | 1 |
+| 2105991582_illumina_p5-liwox_p7-fofiz | 1 |
+| 2105991583_illumina_p5-zecan_p7-fotey | 1 |
+| 2105991584_illumina_p5-lazap_p7-nanat | 1 |
+| 2105991585_illumina_p5-pifoc_p7-nedob | 1 |
+| 2105991586_illumina_p5-hohez_p7-joxih | 1 |
+| 2105991588_illumina_p5-naxic_p7-xezit | 1 |
+| 2105991589_illumina_p5-xebeh_p7-tefew | 1 |
+| 2105991590_illumina_p5-litaz_p7-najod | 1 |
+| 2105991591_illumina_p5-jolac_p7-hihar | 1 |
+| 2105991592_illumina_p5-nakew_p7-koweh | 1 |
+| 2105991593_illumina_p5-boyij_p7-xedeb | 1 |
+| 2105991594_illumina_p5-tehax_p7-hinij | 1 |
+| 2105991598_illumina_p5-kacox_p7-janil | 1 |
+| 2105991600_illumina_p5-faxen_p7-teyay | 1 |
+| 2105991602_illumina_p5-yahih_p7-bical | 1 |
+| 2105991608_illumina_p5-xayol_p7-pepac | 1 |
+| 2105991613_illumina_p5-lolip_p7-diyen | 1 |
+| 2105991616_illumina_p5-jacob_p7-yebiw | 1 |
+| 2105991621_illumina_p5-xepaw_p7-kewot | 1 |
+| 2105991623_illumina_p5-nawoh_p7-layet | 1 |
+| 2105992861_illumina_p5-lolip_p7-diyen | 1 |
+| 3543985838_illumina_p5-wexed_p7-fapix | 1 |
+| 3543987452_illumina_p5-nalok_p7-difew | 1 |
+| 3543987473_illumina_p5-xefac_p7-zibod | 1 |
+| 3543990498_illumina_p5-henox_p7-diwar | 1 |
+| 3543990958_illumina_p5-xayol_p7-pepac | 1 |
+| 0306825681_illumina_p5-wexed_p7-fapix | 1 |
+| 0306825687_illumina_p5-tehax_p7-hinij | 1 |
+| 0306825706_illumina_p5-litaz_p7-najod | 1 |
+| 0306825710_illumina_p5-boyez_p7-liwax | 1 |
+| 0306825714_illumina_p5-lipof_p7-nehin | 1 |
+| 0306825718_illumina_p5-zafec_p7-peten | 1 |
+| 0306825726_illumina_p5-hikaz_p7-tacax | 1 |
+| 0306825734_illumina_p5-hojor_p7-narad | 1 |
+| 0306825738_illumina_p5-jaxah_p7-nekoy | 1 |
+| 0306825745_illumina_p5-hewij_p7-liyik | 1 |
+| 0415014885_illumina_p5-depob_p7-defin | 1 |
+| 0415017333_illumina_p5-hikaz_p7-tacax | 1 |
+| 0415017412_illumina_p5-rowol_p7-likif | 1 |
+| 2105991532_illumina_p5-henox_p7-diwar | 1 |
+| 2105991534_illumina_p5-dohel_p7-botol | 1 |
+| 2105991535_illumina_p5-zecez_p7-xopad | 1 |
+| 2105991536_illumina_p5-yalor_p7-hikiw | 1 |
+| 2105991538_illumina_p5-hilec_p7-hawix | 1 |
+| 2105991539_illumina_p5-kalex_p7-fofeb | 1 |
+| 2105991540_illumina_p5-polez_p7-jacaz | 1 |
+| 2105991541_illumina_p5-zitey_p7-pewij | 1 |
+| 2105991543_illumina_p5-boyez_p7-liwax | 1 |
+| 2105991544_illumina_p5-zehil_p7-cobic | 1 |
+| 2105991545_illumina_p5-docop_p7-xilan | 1 |
+| 2105991546_illumina_p5-paroy_p7-bepaz | 1 |
+| 2105991547_illumina_p5-telef_p7-yeyey | 1 |
+| 2105991548_illumina_p5-jacil_p7-wolij | 1 |
+| 2105991549_illumina_p5-pifaz_p7-fojol | 1 |
+| 2105991550_illumina_p5-fezex_p7-halex | 1 |
+| 2105991551_illumina_p5-zafec_p7-peten | 1 |
+| 2105991552_illumina_p5-xecox_p7-wojar | 1 |
+| 2105991553_illumina_p5-nefob_p7-wapah | 1 |
+| 2105991554_illumina_p5-kenaw_p7-tehed | 1 |
+| 2105991555_illumina_p5-bocef_p7-cakax | 1 |
+| 2105991556_illumina_p5-yezec_p7-tawah | 1 |
+| 2105991557_illumina_p5-xarez_p7-yokif | 1 |
+| 2105991559_illumina_p5-lilel_p7-debox | 1 |
+| 2105991560_illumina_p5-hapow_p7-jofij | 1 |
+| 2105991561_illumina_p5-hezef_p7-binot | 1 |
+| 2105991563_illumina_p5-popal_p7-hefel | 1 |
+| 2105991566_illumina_p5-feney_p7-biwid | 1 |
+| 2105991569_illumina_p5-belez_p7-pahol | 1 |
+| 2105991571_illumina_p5-felob_p7-yexic | 1 |
+| 2105991572_illumina_p5-jotef_p7-jatod | 1 |
+| 2105991574_illumina_p5-kizez_p7-rojan | 1 |
+| 2105991575_illumina_p5-lahoy_p7-xinay | 1 |
+| 2105991577_illumina_p5-poded_p7-bezic | 1 |
+| 2105991578_illumina_p5-zezip_p7-folar | 1 |
+| 2105991579_illumina_p5-xefac_p7-zibod | 1 |
+| 2105991587_illumina_p5-wexoj_p7-honok | 1 |
+| 2105991595_illumina_p5-nehol_p7-zakec | 1 |
+| 2105991596_illumina_p5-fefaj_p7-dizax | 1 |
+| 2105991597_illumina_p5-ponox_p7-xijoy | 1 |
+| 2105991599_illumina_p5-diweh_p7-wezap | 1 |
+| 2105991601_illumina_p5-licax_p7-xokix | 1 |
+| 2105991603_illumina_p5-halif_p7-lajar | 1 |
+| 2105991604_illumina_p5-yewow_p7-cotax | 1 |
+| 2105991605_illumina_p5-hewij_p7-liyik | 1 |
+| 2105991606_illumina_p5-boleh_p7-yoboh | 1 |
+| 2105991607_illumina_p5-teyec_p7-zawol | 1 |
+| 2105991609_illumina_p5-kahiz_p7-yobex | 1 |
+| 2105991610_illumina_p5-rowol_p7-likif | 1 |
+| 2105991611_illumina_p5-jaxah_p7-nekoy | 1 |
+| 2105991612_illumina_p5-wizap_p7-bebor | 1 |
+| 2105991614_illumina_p5-pahaz_p7-dixih | 1 |
+| 2105991615_illumina_p5-reboc_p7-cebey | 1 |
+| 2105991617_illumina_p5-poheh_p7-nelac | 1 |
+| 2105991618_illumina_p5-depob_p7-defin | 1 |
+| 2105991619_illumina_p5-pojif_p7-caton | 1 |
+| 2105991620_illumina_p5-lonax_p7-zixof | 1 |
+| 2105991622_illumina_p5-jafey_p7-zafed | 1 |
+| 2105991624_illumina_p5-razac_p7-nofeh | 1 |
+| 2105991625_illumina_p5-hojor_p7-narad | 1 |
+| 2105991626_illumina_p5-worox_p7-lacok | 1 |
+| 2105992779_illumina_p5-hikaz_p7-tacax | 1 |
+| 2105992780_illumina_p5-henox_p7-diwar | 1 |
+| 2105992782_illumina_p5-dohel_p7-botol | 1 |
+| 2105992783_illumina_p5-zecez_p7-xopad | 1 |
+| 2105992784_illumina_p5-yalor_p7-hikiw | 1 |
+| 2105992785_illumina_p5-pinez_p7-keloj | 1 |
+| 2105992786_illumina_p5-hilec_p7-hawix | 1 |
+| 2105992787_illumina_p5-kalex_p7-fofeb | 1 |
+| 2105992788_illumina_p5-polez_p7-jacaz | 1 |
+| 2105992789_illumina_p5-zitey_p7-pewij | 1 |
+| 2105992790_illumina_p5-lipof_p7-nehin | 1 |
+| 2105992791_illumina_p5-boyez_p7-liwax | 1 |
+| 2105992792_illumina_p5-zehil_p7-cobic | 1 |
+| 2105992793_illumina_p5-docop_p7-xilan | 1 |
+| 2105992794_illumina_p5-paroy_p7-bepaz | 1 |
+| 2105992795_illumina_p5-telef_p7-yeyey | 1 |
+| 2105992796_illumina_p5-jacil_p7-wolij | 1 |
+| 2105992797_illumina_p5-pifaz_p7-fojol | 1 |
+| 2105992798_illumina_p5-fezex_p7-halex | 1 |
+| 2105992799_illumina_p5-zafec_p7-peten | 1 |
+| 2105992800_illumina_p5-xecox_p7-wojar | 1 |
+| 2105992801_illumina_p5-nefob_p7-wapah | 1 |
+| 2105992802_illumina_p5-kenaw_p7-tehed | 1 |
+| 2105992803_illumina_p5-bocef_p7-cakax | 1 |
+| 2105992804_illumina_p5-yezec_p7-tawah | 1 |
+| 2105992805_illumina_p5-xarez_p7-yokif | 1 |
+| 2105992806_illumina_p5-nalok_p7-difew | 1 |
+| 2105992807_illumina_p5-lilel_p7-debox | 1 |
+| 2105992808_illumina_p5-hapow_p7-jofij | 1 |
+| 2105992809_illumina_p5-hezef_p7-binot | 1 |
+
+### files.analysis.metadata.read_groups.library_preparation_kit_catalog_number
+
+| Value | Count |
+|-------|-------|
+| kk8505 | 929 |
+| _missing | 169 |
+
+### files.analysis.metadata.read_groups.library_preparation_kit_name
+
+| Value | Count |
+|-------|-------|
+| kapa hyperprep kit (no amp) | 927 |
+| _missing | 169 |
+| kapa hyper prep kit with kapa library amplification primer mix (10x) | 10 |
+
+### files.analysis.metadata.read_groups.library_preparation_kit_vendor
+
+| Value | Count |
+|-------|-------|
+| kapa biosystems | 929 |
+| _missing | 169 |
+
+### files.analysis.metadata.read_groups.library_preparation_kit_version
+
+| Value | Count |
+|-------|-------|
+| v1.1 | 929 |
+| _missing | 169 |
+
+### files.analysis.metadata.read_groups.library_selection
+
+| Value | Count |
+|-------|-------|
+| poly-t enrichment | 1095 |
+| mirna size fractionation | 1079 |
+| hybrid selection | 1072 |
+| random | 930 |
+| other | 181 |
+
+### files.analysis.metadata.read_groups.library_strand
+
+| Value | Count |
+|-------|-------|
+| not applicable | 929 |
+| _missing | 169 |
+
+### files.analysis.metadata.read_groups.library_strategy
+
+| Value | Count |
+|-------|-------|
+| rna-seq | 1095 |
+| mirna-seq | 1079 |
+| wxs | 1072 |
+| wgs | 952 |
+| atac-seq | 74 |
+
+### files.analysis.metadata.read_groups.multiplex_barcode
+
+| Value | Count |
+|-------|-------|
+| _missing | 160 |
+| atcatacc+aggttatc | 19 |
+| cctgtcat+ccagttag | 19 |
+| gaacttcg+aggatcta | 19 |
+| tccaacca+gtcatcta | 19 |
+| atgaatta+catgctta | 19 |
+| cttctggc+aggtgcga | 19 |
+| tccgcata+cgctatgt | 19 |
+| ttagccag+tgttccga | 19 |
+| atcgactg+aagtagag | 19 |
+| ctggtatt+gaacctag | 19 |
+| gcacaatt+aggtcgca | 19 |
+| tcaggctt+tgtcggat | 19 |
+| ttcacctt+tctgcaag | 19 |
+| agtcacct+aatgttct | 19 |
+| cactagcc+ctgtggcg | 19 |
+| cggttctt+ggtccaga | 19 |
+| gctgattc+tcgccttg | 19 |
+| ttggtctg+gcctagcc | 19 |
+| gcgatatt+attcctct | 19 |
+| tagttagc+aacaatgg | 18 |
+| aattcaac+tctggcga | 18 |
+| gaatcgac+tccttggt | 18 |
+| aggtacca+tacttagc | 18 |
+| ctgctcct+agcaattc | 18 |
+| ctgtattc+attatgtt | 18 |
+| gacggtta+catagcga | 18 |
+| cgaacttc+ccagagct | 18 |
+| atcttctc+caactctc | 18 |
+| ggcaatac+accaactg | 18 |
+| gtctgcac+ttatatct | 18 |
+| ttaatcac+gccgtcga | 18 |
+| ctggctat+gaccagga | 18 |
+| aatctcca+tgtaatca | 18 |
+| ccatcaca+gaccgttg | 17 |
+| gctctctt+ccaacatt | 17 |
+| cgcatatt+ttcgctga | 17 |
+| gtccaatc+caggagcc | 17 |
+| cacttcat+aaggatgt | 17 |
+| tgctatta+actgtatc | 17 |
+| cctctaac+cagcaagg | 17 |
+| ctacattg+tcggaatg | 17 |
+| cttgaatc+ttgtctat | 17 |
+| tgcttcac+gtataaca | 17 |
+| aattgctt+ctgtaatc | 17 |
+| cttggctt+taatgaac | 17 |
+| ttcacaga+attgtctg | 17 |
+| tatggttc+ctaactcg | 17 |
+| tccacttc+tatccagg | 17 |
+| tgacttgg+cagcggta | 17 |
+| ccaacgct+tatctgcc | 17 |
+| tactctcc+catgatcg | 16 |
+| caactgat+ctaccagg | 16 |
+| cacgattc+aggtaagg | 16 |
+| gcaggttg+aacgcatt | 16 |
+| aacctctt+gcacatct | 16 |
+| ttcttggc+attctagg | 16 |
+| tgacagca+aagacact | 16 |
+| gacattaa+taagcaca | 16 |
+| gctcacca+gacctaac | 16 |
+| tactccag+atagcgtc | 16 |
+| tagcattg+agttgctt | 16 |
+| tcatgtct+gccgcaac | 16 |
+| catcactt+ccttcgca | 16 |
+| ctattagc+gaagaagt | 16 |
+| ccaatctg+ttaatcag | 16 |
+| gaatatca+ctatgcgt | 16 |
+| ttccagct+actaagac | 16 |
+| gctgcact+cacatcct | 15 |
+| aataccat+acacgatc | 15 |
+| cgactctc+attatcaa | 15 |
+| gcgattac+gacagtaa | 15 |
+| tccataac+ttgaatag | 15 |
+| gctagcag+aacttgac | 15 |
+| ctgacatc+tctcggtc | 15 |
+| cagctcac+caatagtc | 15 |
+| cgacagtt+tgtaactc | 15 |
+| cgcgaata+gtccacag | 15 |
+| gctccgat+acagttga | 15 |
+| gcttccta+cctaccat | 15 |
+| agtactgc+tcgctaga | 15 |
+| ccaactaa+tgcaagta | 15 |
+| gaacgcta+cgttacca | 15 |
+| atatccga+gtctgatg | 15 |
+| gtcctcat+tgctgctg | 14 |
+| aattggcc+tccagcaa | 14 |
+| atccttaa+tgctcgac | 14 |
+| gaccatct+ttacgcac | 14 |
+| ggttatct+ctgcggat | 14 |
+| tcattcga+ttgagcct | 14 |
+| catcctgg+gaaggaag | 14 |
+| ggattaac+gatatcca | 14 |
+| caagctta+cctatgcc | 14 |
+| agcgctaa+agcatgga | 13 |
+| gcggactt+cgccttcc | 12 |
+| cagcgatt+gtaacatc | 9 |
+| ctatgcgt+gaatatca | 6 |
+| cctaccat+gcttccta | 5 |
+| gaccgttg+ccatcaca | 5 |
+| acagttga+gctccgat | 5 |
+| attgtctg+ttcacaga | 5 |
+| gaccagga+ctggctat | 5 |
+| gatatcca+ggattaac | 5 |
+| gtaacatc+cagcgatt | 4 |
+| atagcgtc+tactccag | 4 |
+| gccgcaac+tcatgtct | 4 |
+| gaacctag+ctggtatt | 4 |
+| attatcaa+cgactctc | 4 |
+| agcatgga+agcgctaa | 4 |
+| caatagtc+cagctcac | 4 |
+| tcgctaga+agtactgc | 4 |
+| gaaggaag+catcctgg | 4 |
+| gtccacag+cgcgaata | 3 |
+| ttgtctat+cttgaatc | 3 |
+| aaggatgt+cacttcat | 3 |
+| ctgtggcg+cactagcc | 3 |
+| tacttagc+aggtacca | 3 |
+| ttgagcct+tcattcga | 3 |
+| attctagg+ttcttggc | 3 |
+| tcggaatg+ctacattg | 3 |
+| ctaccagg+caactgat | 3 |
+| acacgatc+aataccat | 3 |
+| cgccttcc+gcggactt | 3 |
+| caggagcc+gtccaatc | 2 |
+| cctatgcc+caagctta | 2 |
+| ctgtaatc+aattgctt | 2 |
+| gccgtcga+ttaatcac | 2 |
+| tatctgcc+ccaacgct | 2 |
+| ttgaatag+tccataac | 2 |
+| ttacgcac+gaccatct | 2 |
+| actaagac+ttccagct | 2 |
+| actgtatc+tgctatta | 2 |
+| aggtgcga+cttctggc | 2 |
+| tgtcggat+tcaggctt | 2 |
+| ttcgctga+cgcatatt | 2 |
+| attatgtt+ctgtattc | 2 |
+| attcctct+gcgatatt | 2 |
+| cagcggta+tgacttgg | 2 |
+| ctgcggat+ggttatct | 2 |
+| gcctagcc+ttggtctg | 2 |
+| taatgaac+cttggctt | 2 |
+| gtctgatg+atatccga | 2 |
+| tccagcaa+aattggcc | 2 |
+| caactctc+atcttctc | 2 |
+| cagcaagg+cctctaac | 2 |
+| gaagaagt+ctattagc | 2 |
+| tgtaatca+aatctcca | 2 |
+| aacgcatt+gcaggttg | 1 |
+| aagacact+tgacagca | 1 |
+| aggtaagg+cacgattc | 1 |
+| ccttcgca+catcactt | 1 |
+| gacagtaa+gcgattac | 1 |
+| gacctaac+gctcacca | 1 |
+| gtcatcta+tccaacca | 1 |
+| tatccagg+tccacttc | 1 |
+| tcgccttg+gctgattc | 1 |
+| tgctcgac+atccttaa | 1 |
+| cgctatgt+tccgcata | 1 |
+| taagcaca+gacattaa | 1 |
+| agttgctt+tagcattg | 1 |
+| catagcga+gacggtta | 1 |
+| catgatcg+tactctcc | 1 |
+| ccaacatt+gctctctt | 1 |
+| ccagttag+cctgtcat | 1 |
+| ctaactcg+tatggttc | 1 |
+| gtataaca+tgcttcac | 1 |
+| tccttggt+gaatcgac | 1 |
+| tctgcaag+ttcacctt | 1 |
+| tctggcga+aattcaac | 1 |
+| tgcaagta+ccaactaa | 1 |
+| tgtaactc+cgacagtt | 1 |
+| tgttccga+ttagccag | 1 |
+| ttatatct+gtctgcac | 1 |
+| ccgtttgt+gatttcca | 1 |
+| ccgtttgt+tctactct | 1 |
+| cgaggctg+tttcatca | 1 |
+| cgcggaca+ttgatgga | 1 |
+| gctacgct+cgttgctg | 1 |
+| gctacgct+ggcaacct | 1 |
+| ggactcct+atcatgtt | 1 |
+| ttgaccct+agaggata | 1 |
+| aaacggtc+tccgtgcc | 1 |
+| aagaggca+agtccgac | 1 |
+| aagaggca+ggcaacct | 1 |
+| aagaggca+tgggaatc | 1 |
+| aagaggca+tttcatca | 1 |
+| aattcgtt+acgaatgt | 1 |
+| aattcgtt+ttgatgga | 1 |
+| aggcagaa+attgaacc | 1 |
+| aggcagaa+gatttcca | 1 |
+| aggcagaa+gcgatcta | 1 |
+| aggttggg+acgaatgt | 1 |
+| aggttggg+agtccgac | 1 |
+| aggttggg+atagagag | 1 |
+| aggttggg+attgaacc | 1 |
+| aggttggg+tgcacgaa | 1 |
+| aggttggg+tgggaatc | 1 |
+| aggttggg+tttcatca | 1 |
+| atgatgat+cccgcagg | 1 |
+| atgatgat+tccgtgcc | 1 |
+| cagagagg+gcgatcta | 1 |
+
+### files.analysis.metadata.read_groups.number_expect_cells
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.platform
+
+| Value | Count |
+|-------|-------|
+| illumina | 1098 |
+
+### files.analysis.metadata.read_groups.read_group_name
+
+| Value | Count |
+|-------|-------|
+| h5whl.1 | 24 |
+| h5whl.2 | 24 |
+| h72cn.1 | 24 |
+| h72cn.2 | 24 |
+| h72cn.4 | 24 |
+| h72h2.2 | 24 |
+| h72h2.4 | 24 |
+| h777y.1 | 24 |
+| h777y.2 | 24 |
+| hc5vj.1 | 24 |
+| hc5vj.4 | 24 |
+| hc72g.1 | 24 |
+| hc72g.4 | 24 |
+| hc7h5.2 | 24 |
+| hc7h5.4 | 24 |
+| hc7mj.1 | 24 |
+| hc7mj.4 | 24 |
+| hc7n3.1 | 24 |
+| hc7n3.2 | 24 |
+| hc7n3.4 | 24 |
+| hc7tf.1 | 24 |
+| hc7tf.2 | 24 |
+| hc7tf.4 | 24 |
+| hc7tk.1 | 24 |
+| hc7tk.2 | 24 |
+| hc7tk.4 | 24 |
+| hcct2.1 | 24 |
+| hcct2.2 | 24 |
+| hcct2.4 | 24 |
+| hccvt.1 | 24 |
+| hccvt.2 | 24 |
+| hccvt.4 | 24 |
+| hcf5v.1 | 24 |
+| hcf5v.2 | 24 |
+| hcf5v.4 | 24 |
+| hcf7y.1 | 24 |
+| hcf7y.2 | 24 |
+| hcf7y.4 | 24 |
+| hckcw.2 | 24 |
+| hckcw.4 | 24 |
+| hckg3.1 | 24 |
+| hckg3.2 | 24 |
+| hckg3.4 | 24 |
+| hcm5v.2 | 24 |
+| hcm72.2 | 24 |
+| hcm7k.2 | 24 |
+| hcm7l.2 | 24 |
+| hflgh.2 | 24 |
+| hflgh.3 | 24 |
+| hflgh.4 | 24 |
+| hflgy.2 | 24 |
+| hflgy.3 | 24 |
+| hflgy.4 | 24 |
+| hflht.2 | 24 |
+| hflht.3 | 24 |
+| hflht.4 | 24 |
+| hfm2f.2 | 24 |
+| hfm2f.3 | 24 |
+| hfm2f.4 | 24 |
+| hfmvw.2 | 24 |
+| hfmvw.3 | 24 |
+| hfmvw.4 | 24 |
+| hfn2g.2 | 24 |
+| hfn2g.3 | 24 |
+| hfn2g.4 | 24 |
+| hfnf3.2 | 24 |
+| hfnf3.3 | 24 |
+| hfnf3.4 | 24 |
+| hfngv.2 | 24 |
+| hfngv.3 | 24 |
+| hfngv.4 | 24 |
+| hfnn2.2 | 24 |
+| hfnn2.3 | 24 |
+| hfnn2.4 | 24 |
+| hfnnh.2 | 24 |
+| hfnnh.3 | 24 |
+| hfnnh.4 | 24 |
+| hg3vh.1 | 24 |
+| hg3vh.2 | 24 |
+| hg3vh.4 | 24 |
+| hg532.1 | 24 |
+| hg53f.1 | 24 |
+| hg53g.1 | 24 |
+| hg53w.1 | 24 |
+| hg55t.1 | 24 |
+| hg55w.1 | 24 |
+| hg57w.1 | 24 |
+| hg57w.2 | 24 |
+| hg57w.4 | 24 |
+| hg5c2.1 | 24 |
+| hg5c2.2 | 24 |
+| hg5c2.4 | 24 |
+| hg5cg.1 | 24 |
+| hg5cg.2 | 24 |
+| hg5cg.4 | 24 |
+| hg5cm.1 | 24 |
+| hg5hc.1 | 24 |
+| hg5lj.1 | 24 |
+| hg5y7.1 | 24 |
+| hwf5w.2 | 24 |
+| hwf5w.4 | 24 |
+| hwgck.2 | 24 |
+| hwgck.4 | 24 |
+| hwglj.3 | 24 |
+| hwglj.4 | 24 |
+| hwglk.1 | 24 |
+| hwglk.2 | 24 |
+| hwglk.4 | 24 |
+| hwglw.2 | 24 |
+| hwglw.3 | 24 |
+| hwhfg.2 | 24 |
+| hwhfg.4 | 24 |
+| hwhj7.2 | 24 |
+| hwhj7.3 | 24 |
+| hwht3.3 | 24 |
+| hwht3.4 | 24 |
+| hwhtg.3 | 24 |
+| hwhtg.4 | 24 |
+| hwhwk.3 | 24 |
+| hwhwk.4 | 24 |
+| hwhwl.1 | 24 |
+| hwhwl.2 | 24 |
+| hwhwl.4 | 24 |
+| hwlwm.1 | 24 |
+| hwmhn.1 | 24 |
+| hwmnc.2 | 24 |
+| hwmnc.4 | 24 |
+| hwmnl.1 | 24 |
+| hwmyc.2 | 24 |
+| hwmyc.4 | 24 |
+| hwmyn.2 | 24 |
+| hwmyn.4 | 24 |
+| hwn52.1 | 24 |
+| hwn52.2 | 24 |
+| hwn52.4 | 24 |
+| hwn5g.2 | 24 |
+| hwn5g.4 | 24 |
+| hwn7k.1 | 24 |
+| hwncw.1 | 24 |
+| hwncw.2 | 24 |
+| hwncw.4 | 24 |
+| hwnff.2 | 24 |
+| hwnff.4 | 24 |
+| hwngj.1 | 24 |
+| hwngj.2 | 24 |
+| hwngj.4 | 24 |
+| hwngt.2 | 24 |
+| hwngt.4 | 24 |
+| hwnhj.2 | 24 |
+| hwnhj.4 | 24 |
+| hwnjn.2 | 24 |
+| hwnjn.3 | 24 |
+| hwnjv.1 | 24 |
+| hwnjv.2 | 24 |
+| hwnjv.4 | 24 |
+| hwnkc.1 | 24 |
+| hwnkc.2 | 24 |
+| hwnkc.4 | 24 |
+| hwnkf.1 | 24 |
+| hwnkf.2 | 24 |
+| hwnkf.4 | 24 |
+| hwnmj.1 | 24 |
+| hwnmj.2 | 24 |
+| hwnmj.4 | 24 |
+| hwnnc.1 | 24 |
+| hwnnc.2 | 24 |
+| hwnnc.4 | 24 |
+| hwnt2.1 | 24 |
+| hwnt2.2 | 24 |
+| hwnt2.4 | 24 |
+| hwnt3.1 | 24 |
+| hwnt3.2 | 24 |
+| hwnt3.4 | 24 |
+| hwnt5.2 | 24 |
+| hwnt5.4 | 24 |
+| hwntl.1 | 24 |
+| hwntl.2 | 24 |
+| hwntl.4 | 24 |
+| hwntm.2 | 24 |
+| hwntm.3 | 24 |
+| hwnw5.2 | 24 |
+| hwnw5.4 | 24 |
+| hwtg5.1 | 24 |
+| hwtg5.2 | 24 |
+| hwtg5.3 | 24 |
+| hwtgh.1 | 24 |
+| hwtgh.2 | 24 |
+| hwtgh.3 | 24 |
+| hwthf.1 | 24 |
+| hwthf.2 | 24 |
+| hwthw.1 | 24 |
+| hwthw.2 | 24 |
+| hwthw.3 | 24 |
+| hww2v.1 | 24 |
+| hww2v.2 | 24 |
+| hww2v.3 | 24 |
+| hww5h.1 | 24 |
+| hww5h.2 | 24 |
+| hww5h.3 | 24 |
+| hwwc2.1 | 24 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.adapter_content
+
+| Value | Count |
+|-------|-------|
+| pass | 1098 |
+| warn | 15 |
+| fail | 12 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.basic_statistics
+
+| Value | Count |
+|-------|-------|
+| pass | 1097 |
+| _missing | 1 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.encoding
+
+| Value | Count |
+|-------|-------|
+| sanger / illumina 1.9 | 1098 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.fastq_name
+
+| Value | Count |
+|-------|-------|
+| 131121_s.fq | 17 |
+| 127039_s.fq | 16 |
+| 130188_s.fq | 16 |
+| 133900_s.fq | 16 |
+| 133901_s.fq | 16 |
+| 134143_s.fq | 16 |
+| 134394_s.fq | 16 |
+| 138998_s.fq | 16 |
+| 145355_s.fq | 16 |
+| 145755_s.fq | 16 |
+| 120561_s.fq | 12 |
+| 121317_s.fq | 12 |
+| 121318_s.fq | 12 |
+| 121443_s.fq | 12 |
+| 121582_s.fq | 12 |
+| 121586_s.fq | 12 |
+| 121587_s.fq | 12 |
+| 121590_s.fq | 12 |
+| 121737_s.fq | 12 |
+| 121738_s.fq | 12 |
+| 121739_s.fq | 12 |
+| 121740_s.fq | 12 |
+| 121741_s.fq | 12 |
+| 121742_s.fq | 12 |
+| 122243_s.fq | 12 |
+| 122244_s.fq | 12 |
+| 122530_s.fq | 12 |
+| 122531_s.fq | 12 |
+| 122532_s.fq | 12 |
+| 122534_s.fq | 12 |
+| 122536_s.fq | 12 |
+| 122988_s.fq | 12 |
+| 122989_s.fq | 12 |
+| 123351_s.fq | 12 |
+| 123352_s.fq | 12 |
+| 123434_s.fq | 12 |
+| 123435_s.fq | 12 |
+| 130187_s.fq | 12 |
+| 121588_s.fq | 11 |
+| 121316_s.fq | 11 |
+| 121585_s.fq | 11 |
+| 121589_s.fq | 11 |
+| 121591_s.fq | 11 |
+| 122535_s.fq | 11 |
+| 123354_s.fq | 11 |
+| 124337_s.fq | 11 |
+| 129925_s.fq | 11 |
+| 130189_s.fq | 11 |
+| 134395_s.fq | 11 |
+| 137669_s.fq | 11 |
+| 122533_s.fq | 10 |
+| 123353_s.fq | 10 |
+| 138999_s.fq | 10 |
+| 122240_s.fq | 10 |
+| 122241_s.fq | 10 |
+| 122242_s.fq | 10 |
+| 122245_s.fq | 10 |
+| 128075_s.fq | 10 |
+| 122256_s.fq | 9 |
+| 120559_s.fq | 9 |
+| 121319_s.fq | 9 |
+| 113909_s.fq | 8 |
+| 113913_s.fq | 8 |
+| 115085_s.fq | 8 |
+| 115087_s.fq | 8 |
+| 115591_s.fq | 8 |
+| 115906_s.fq | 8 |
+| 115907_s.fq | 8 |
+| 115908_s.fq | 8 |
+| 115910_s.fq | 8 |
+| 115911_s.fq | 8 |
+| 116200_s.fq | 8 |
+| 116201_s.fq | 8 |
+| 118655_s.fq | 8 |
+| 120095_s.fq | 8 |
+| 120096_s.fq | 8 |
+| 120097_s.fq | 8 |
+| 122987_s.fq | 8 |
+| 131597_s.fq | 8 |
+| 141976_s.fq | 8 |
+| 113907_s.fq | 7 |
+| 113908_s.fq | 7 |
+| 113910_s.fq | 7 |
+| 113911_s.fq | 7 |
+| 113912_s.fq | 7 |
+| 115086_s.fq | 7 |
+| 115590_s.fq | 7 |
+| 115592_s.fq | 7 |
+| 115593_s.fq | 7 |
+| 115885_s.fq | 7 |
+| 116199_s.fq | 7 |
+| 118653_s.fq | 7 |
+| 118654_s.fq | 7 |
+| 118656_s.fq | 7 |
+| 121736_s.fq | 7 |
+| 123433_s.fq | 7 |
+| 129470_s.fq | 7 |
+| 113328_s.fq | 6 |
+| 113330_s.fq | 6 |
+| 113331_s.fq | 6 |
+| 115084_s.fq | 6 |
+| 115594_s.fq | 6 |
+| 115909_s.fq | 6 |
+| 116202_s.fq | 6 |
+| 122522_s.fq | 6 |
+| 123436_s.fq | 6 |
+| 123715_s.fq | 6 |
+| 131598_s.fq | 6 |
+| 113325_s.fq | 5 |
+| 113326_s.fq | 5 |
+| 113327_s.fq | 5 |
+| 113534_s.fq | 5 |
+| 115905_s.fq | 5 |
+| 133697_s.fq | 5 |
+| 139177_s.fq | 5 |
+| 139549_s.fq | 5 |
+| 139550_s.fq | 5 |
+| 113308_s.fq | 4 |
+| 113329_s.fq | 4 |
+| 115886_s.fq | 4 |
+| 115887_s.fq | 4 |
+| 118652_s.fq | 4 |
+| 133402_s.fq | 4 |
+| 134390_s.fq | 4 |
+| 134915_s.fq | 4 |
+| 110209_sn627_0058_b81dh0abxx.3_1.fastq | 1 |
+| 110209_sn627_0058_b81dh0abxx.3_2.fastq | 1 |
+| 110209_sn627_0058_b81dh0abxx.5_1.fastq | 1 |
+| 110209_sn627_0058_b81dh0abxx.5_2.fastq | 1 |
+| 110209_sn627_0058_b81dh0abxx.6_1.fastq | 1 |
+| 110209_sn627_0058_b81dh0abxx.6_2.fastq | 1 |
+| 110209_sn627_0058_b81dh0abxx.7_1.fastq | 1 |
+| 110209_sn627_0058_b81dh0abxx.7_2.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.1_1.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.1_2.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.3_1.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.3_2.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.4_1.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.4_2.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.5_1.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.5_2.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.6_1.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.6_2.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.7_1.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.7_2.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.8_1.fastq | 1 |
+| 110218_unc12-sn629_0061_a81dh9abxx.8_2.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.1_1.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.1_2.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.2_1.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.2_2.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.3_1.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.3_2.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.4_1.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.4_2.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.5_1.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.5_2.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.7_1.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.7_2.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.8_1.fastq | 1 |
+| 110218_unc12-sn629_0062_b81dehabxx.8_2.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.1_1.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.1_2.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.2_1.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.2_2.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.3_1.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.3_2.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.4_1.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.4_2.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.5_1.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.5_2.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.6_1.fastq | 1 |
+| 110222_sn627_0062_a81fpkabxx.6_2.fastq | 1 |
+| 110222_sn627_0063_b81fpvabxx.2_1.fastq | 1 |
+| 110222_sn627_0063_b81fpvabxx.2_2.fastq | 1 |
+| 110222_sn627_0063_b81fpvabxx.3_1.fastq | 1 |
+| 110222_sn627_0063_b81fpvabxx.3_2.fastq | 1 |
+| 110222_sn627_0063_b81fpvabxx.4_1.fastq | 1 |
+| 110222_sn627_0063_b81fpvabxx.4_2.fastq | 1 |
+| 110222_sn627_0063_b81fpvabxx.7_1.fastq | 1 |
+| 110222_sn627_0063_b81fpvabxx.7_2.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.1_1.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.1_2.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.2_1.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.2_2.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.3_1.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.3_2.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.5_1.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.5_2.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.6_1.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.6_2.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.8_1.fastq | 1 |
+| 110225_sn254_0195_a81lh6abxx.8_2.fastq | 1 |
+| 110225_unc12-sn629_0063_ab041jabxx.3_1.fastq | 1 |
+| 110225_unc12-sn629_0063_ab041jabxx.3_2.fastq | 1 |
+| 110225_unc12-sn629_0063_ab041jabxx.4_1.fastq | 1 |
+| 110225_unc12-sn629_0063_ab041jabxx.4_2.fastq | 1 |
+| 110225_unc12-sn629_0063_ab041jabxx.5_1.fastq | 1 |
+| 110225_unc12-sn629_0063_ab041jabxx.5_2.fastq | 1 |
+| 110225_unc12-sn629_0063_ab041jabxx.6_1.fastq | 1 |
+| _missing | 1 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.kmer_content
+
+| Value | Count |
+|-------|-------|
+| fail | 1098 |
+| warn | 438 |
+| pass | 367 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.overrepresented_sequences
+
+| Value | Count |
+|-------|-------|
+| pass | 1067 |
+| fail | 979 |
+| warn | 862 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.per_base_n_content
+
+| Value | Count |
+|-------|-------|
+| pass | 1098 |
+| fail | 196 |
+| warn | 172 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.per_base_sequence_content
+
+| Value | Count |
+|-------|-------|
+| fail | 1097 |
+| warn | 1013 |
+| pass | 303 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.per_base_sequence_quality
+
+| Value | Count |
+|-------|-------|
+| pass | 1098 |
+| fail | 1089 |
+| warn | 27 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.per_sequence_gc_content
+
+| Value | Count |
+|-------|-------|
+| fail | 1031 |
+| warn | 1015 |
+| pass | 980 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.per_sequence_quality_score
+
+| Value | Count |
+|-------|-------|
+| pass | 1098 |
+| fail | 155 |
+| warn | 1 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.per_tile_sequence_quality
+
+| Value | Count |
+|-------|-------|
+| pass | 1085 |
+| fail | 930 |
+| warn | 890 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.percent_gc_content
+
+| Value | Count |
+|-------|-------|
+| 44 | 631 |
+| 45 | 564 |
+| 43 | 490 |
+| 46 | 488 |
+| 48 | 481 |
+| 49 | 475 |
+| 47 | 379 |
+| 50 | 316 |
+| 42 | 216 |
+| 51 | 132 |
+| 41 | 42 |
+| 52 | 39 |
+| 53 | 10 |
+| 54 | 8 |
+| 40 | 6 |
+| 37 | 1 |
+| 38 | 1 |
+| 39 | 1 |
+| 58 | 1 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.sequence_duplication_levels
+
+| Value | Count |
+|-------|-------|
+| fail | 1095 |
+| pass | 1050 |
+| warn | 260 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.sequence_length_distribution
+
+| Value | Count |
+|-------|-------|
+| pass | 1098 |
+| warn | 1079 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.total_sequences
+
+| Value | Count |
+|-------|-------|
+| 24300451 | 1 |
+| 28941898 | 1 |
+| 29367929 | 1 |
+| 29795391 | 1 |
+| 30639379 | 1 |
+| 31348608 | 1 |
+| 31927639 | 1 |
+| 31963555 | 1 |
+| 33207634 | 1 |
+| 34152579 | 1 |
+| 35557383 | 1 |
+| 37453124 | 1 |
+| 37832150 | 1 |
+| 38259206 | 1 |
+| 38394954 | 1 |
+| 38941564 | 1 |
+| 39353594 | 1 |
+| 40393934 | 1 |
+| 41199232 | 1 |
+| 41339635 | 1 |
+| 41567220 | 1 |
+| 41615827 | 1 |
+| 42220396 | 1 |
+| 42477554 | 1 |
+| 42633785 | 1 |
+| 43544158 | 1 |
+| 43633997 | 1 |
+| 43769148 | 1 |
+| 43868717 | 1 |
+| 43984627 | 1 |
+| 43988354 | 1 |
+| 44206297 | 1 |
+| 44294225 | 1 |
+| 44436031 | 1 |
+| 44437972 | 1 |
+| 44446739 | 1 |
+| 44777761 | 1 |
+| 45619456 | 1 |
+| 45852357 | 1 |
+| 46396257 | 1 |
+| 46421893 | 1 |
+| 46439066 | 1 |
+| 46473461 | 1 |
+| 46532907 | 1 |
+| 46770572 | 1 |
+| 46928634 | 1 |
+| 47132824 | 1 |
+| 47169406 | 1 |
+| 47682795 | 1 |
+| 47752159 | 1 |
+| 47765332 | 1 |
+| 47781662 | 1 |
+| 47782593 | 1 |
+| 47996573 | 1 |
+| 48235304 | 1 |
+| 48260877 | 1 |
+| 48352389 | 1 |
+| 48398718 | 1 |
+| 48613166 | 1 |
+| 48981504 | 1 |
+| 49041491 | 1 |
+| 49052815 | 1 |
+| 49055246 | 1 |
+| 49448591 | 1 |
+| 49452473 | 1 |
+| 49580376 | 1 |
+| 49656633 | 1 |
+| 49678613 | 1 |
+| 49728932 | 1 |
+| 49787699 | 1 |
+| 49896971 | 1 |
+| 50330848 | 1 |
+| 50444585 | 1 |
+| 50503162 | 1 |
+| 50509980 | 1 |
+| 50557709 | 1 |
+| 50583658 | 1 |
+| 50781706 | 1 |
+| 50813171 | 1 |
+| 50921896 | 1 |
+| 50934796 | 1 |
+| 50985765 | 1 |
+| 51037001 | 1 |
+| 51082775 | 1 |
+| 51122666 | 1 |
+| 51286108 | 1 |
+| 51340155 | 1 |
+| 51374307 | 1 |
+| 51384199 | 1 |
+| 51416222 | 1 |
+| 51463734 | 1 |
+| 51556372 | 1 |
+| 51592078 | 1 |
+| 51749218 | 1 |
+| 51752475 | 1 |
+| 51940843 | 1 |
+| 51960222 | 1 |
+| 52010034 | 1 |
+| 52068773 | 1 |
+| 52330651 | 1 |
+| 52355409 | 1 |
+| 52357936 | 1 |
+| 52412653 | 1 |
+| 52417250 | 1 |
+| 52520496 | 1 |
+| 52560429 | 1 |
+| 52673662 | 1 |
+| 52717800 | 1 |
+| 52739929 | 1 |
+| 52741397 | 1 |
+| 52773073 | 1 |
+| 52778879 | 1 |
+| 52850672 | 1 |
+| 52965897 | 1 |
+| 52970095 | 1 |
+| 53006239 | 1 |
+| 53009088 | 1 |
+| 53146651 | 1 |
+| 53298893 | 1 |
+| 53340894 | 1 |
+| 53386794 | 1 |
+| 53407892 | 1 |
+| 53458004 | 1 |
+| 53643900 | 1 |
+| 53770010 | 1 |
+| 53798792 | 1 |
+| 53857518 | 1 |
+| 53869158 | 1 |
+| 53898214 | 1 |
+| 54012418 | 1 |
+| 54032779 | 1 |
+| 54040864 | 1 |
+| 54053049 | 1 |
+| 54090345 | 1 |
+| 54150013 | 1 |
+| 54229916 | 1 |
+| 54298311 | 1 |
+| 54352655 | 1 |
+| 54368070 | 1 |
+| 54380037 | 1 |
+| 54552046 | 1 |
+| 54570525 | 1 |
+| 54645825 | 1 |
+| 54692573 | 1 |
+| 54745933 | 1 |
+| 54895945 | 1 |
+| 55137432 | 1 |
+| 55190188 | 1 |
+| 55198119 | 1 |
+| 55212596 | 1 |
+| 55319063 | 1 |
+| 55334434 | 1 |
+| 55381333 | 1 |
+| 55394598 | 1 |
+| 55394853 | 1 |
+| 55410325 | 1 |
+| 55488572 | 1 |
+| 55533261 | 1 |
+| 55705811 | 1 |
+| 55723582 | 1 |
+| 55732451 | 1 |
+| 55741441 | 1 |
+| 55752089 | 1 |
+| 55910130 | 1 |
+| 55942143 | 1 |
+| 55965646 | 1 |
+| 56024402 | 1 |
+| 56038996 | 1 |
+| 56076388 | 1 |
+| 56078615 | 1 |
+| 56164166 | 1 |
+| 56196655 | 1 |
+| 56265711 | 1 |
+| 56274569 | 1 |
+| 56478145 | 1 |
+| 56485008 | 1 |
+| 56651158 | 1 |
+| 56738922 | 1 |
+| 56817516 | 1 |
+| 56848947 | 1 |
+| 57146577 | 1 |
+| 57207672 | 1 |
+| 57233533 | 1 |
+| 57276606 | 1 |
+| 57300270 | 1 |
+| 57312252 | 1 |
+| 57316344 | 1 |
+| 57384826 | 1 |
+| 57410291 | 1 |
+| 57437774 | 1 |
+| 57536066 | 1 |
+| 57561860 | 1 |
+| 57625616 | 1 |
+| 57629425 | 1 |
+| 57713261 | 1 |
+| 57714383 | 1 |
+| 57770755 | 1 |
+| 57815913 | 1 |
+| 57882743 | 1 |
+| 57968994 | 1 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.workflow_end_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.workflow_link
+
+| Value | Count |
+|-------|-------|
+|  | 1098 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.workflow_start_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.workflow_type
+
+| Value | Count |
+|-------|-------|
+| Read Group Quality Control | 1097 |
+| _missing | 1 |
+
+### files.analysis.metadata.read_groups.read_group_qcs.workflow_version
+
+| Value | Count |
+|-------|-------|
+| v1 | 1097 |
+| _missing | 1 |
+
+### files.analysis.metadata.read_groups.read_length
+
+| Value | Count |
+|-------|-------|
+| 15 | 1079 |
+| 100 | 1053 |
+| 151 | 929 |
+| 50 | 808 |
+| 48 | 300 |
+| 75 | 74 |
+| 76 | 39 |
+| 51 | 21 |
+| 94 | 2 |
+| 150 | 1 |
+
+### files.analysis.metadata.read_groups.rin
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.sequencing_center
+
+| Value | Count |
+|-------|-------|
+| unc | 1095 |
+| bcgsc | 1079 |
+| wugsc | 1075 |
+| bi | 930 |
+| sfgf | 74 |
+| harvard_gcc_02 | 21 |
+| unc-lccc | 5 |
+
+### files.analysis.metadata.read_groups.sequencing_date
+
+| Value | Count |
+|-------|-------|
+| 2022-04-08t12:27:54 | 95 |
+| 2022-04-08t12:38:01 | 95 |
+| 2022-04-22t11:15:08 | 95 |
+| 2022-04-22t11:24:19 | 95 |
+| 2022-09-18t07:08:20 | 95 |
+| 2022-09-18t07:17:31 | 95 |
+| 2022-09-20t09:57:28 | 95 |
+| 2022-09-20t10:06:54 | 95 |
+| 2022-09-20t10:16:23 | 95 |
+| 2022-09-20t10:25:56 | 95 |
+| 2022-09-20t10:35:20 | 95 |
+| 2022-09-23t09:25:47 | 95 |
+| 2022-09-23t09:44:11 | 95 |
+| 2022-09-23t09:34:32 | 95 |
+| 2022-04-09t08:29:19 | 95 |
+| 2022-04-09t08:37:24 | 95 |
+| 2022-04-25t09:16:39 | 95 |
+| 2022-04-25t09:25:50 | 95 |
+| 2022-04-09t08:22:02 | 95 |
+| 2022-04-09t08:44:38 | 95 |
+| 2022-04-22t11:03:31 | 95 |
+| 2022-04-25t12:24:03 | 95 |
+| 2022-09-18t07:26:15 | 94 |
+| 2022-09-18t07:34:12 | 94 |
+| 2022-09-18t07:42:48 | 94 |
+| 2022-09-18t07:51:24 | 94 |
+| 2022-09-19t09:19:40 | 94 |
+| 2022-09-19t09:28:23 | 94 |
+| 2022-09-19t09:37:16 | 94 |
+| 2022-09-19t09:46:11 | 94 |
+| 2022-09-20t09:48:03 | 94 |
+| 2022-09-22t09:24:04 | 94 |
+| 2022-09-23t09:17:51 | 94 |
+| 2022-04-10t09:20:39 | 93 |
+| 2022-05-04t11:52:34 | 93 |
+| 2022-05-04t12:01:58 | 93 |
+| 2022-05-04t12:11:17 | 93 |
+| 2022-05-04t12:55:19 | 93 |
+| 2022-05-04t13:04:36 | 93 |
+| 2022-05-05t09:09:34 | 93 |
+| 2022-05-05t09:18:12 | 93 |
+| 2022-09-21t08:45:20 | 93 |
+| 2022-09-21t08:53:58 | 93 |
+| 2022-09-21t09:02:05 | 93 |
+| 2022-09-21t09:09:51 | 93 |
+| 2022-09-22t08:39:56 | 93 |
+| 2022-09-24t07:21:48 | 93 |
+| 2022-09-24t07:29:35 | 93 |
+| 2022-09-24t07:37:31 | 93 |
+| 2022-09-24t07:45:32 | 93 |
+| 2022-04-10t09:29:15 | 93 |
+| 2022-09-24t07:14:02 | 93 |
+| 2011-08-09t19 | 92 |
+| 2022-09-17t08:47:00 | 92 |
+| 2022-09-17t08:57:06 | 92 |
+| 2022-04-01t11:57:49 | 90 |
+| 2022-04-01t11:49:26 | 90 |
+| 2022-04-01t12:06:40 | 90 |
+| 2022-09-19t09:55:40 | 87 |
+| 2022-09-19t10:03:44 | 87 |
+| 1969-12-31 07:00:00 | 67 |
+| 2013-05-08t19 | 65 |
+| 2022-05-15t09:01:11 | 60 |
+| 2022-05-15t09:09:24 | 60 |
+| 2022-05-16t09:27:20 | 60 |
+| 2022-05-16t09:36:12 | 60 |
+| 2022-05-17t10:46:56 | 60 |
+| 2022-05-17t10:57:57 | 60 |
+| 2022-05-17t11:11:20 | 60 |
+| 2011-08-08t19 | 52 |
+| 2022-09-17t08:27:36 | 48 |
+| 2022-09-17t08:37:01 | 48 |
+| 2011-11-11t18 | 46 |
+| 2011-10-26t19 | 44 |
+| 2022-09-25t06:50:31 | 43 |
+| 2022-09-25t06:58:30 | 43 |
+| 2022-09-25t07:07:00 | 43 |
+| 2022-09-25t07:15:22 | 43 |
+| 2022-09-25t06:42:35 | 43 |
+| 2022-09-25t07:24:06 | 43 |
+| 2013-06-10t19 | 42 |
+| 2013-05-13t19 | 40 |
+| 2013-05-07t19 | 39 |
+| 2011-10-11t19 | 38 |
+| 2010-12-10t18 | 37 |
+| 2014-07-24t19 | 34 |
+| 2011-08-23t19 | 33 |
+| 2010-12-02t18 | 30 |
+| 2011-11-09t18 | 29 |
+| 2013-06-19t19 | 28 |
+| 2011-08-03t19 | 27 |
+| 2013-05-09t19 | 27 |
+| 2014-08-12t19 | 26 |
+| 2011-05-08t19 | 26 |
+| 2010-12-08t18 | 24 |
+| 2011-10-17t19 | 24 |
+| 2011-08-17t19 | 22 |
+| 2022-09-28t09:05:28 | 22 |
+| 2011-08-11t19 | 21 |
+| 2010-12-12t18 | 21 |
+| 2012-01-09t18 | 20 |
+| 2011-04-15t19 | 20 |
+| 2011-12-20t18 | 20 |
+| 2010-09-17t19 | 19 |
+| 2012-02-14t18 | 19 |
+| 2011-09-15t19 | 19 |
+| 2011-10-06t19 | 19 |
+| 2013-05-14t19 | 18 |
+| 2011-05-18t19 | 18 |
+| 2013-05-21t19 | 18 |
+| 2011-05-09t19 | 17 |
+| 2011-05-11t19 | 17 |
+| 2014-08-04t19 | 17 |
+| 2011-11-02t19 | 17 |
+| 2014-02-11t18 | 16 |
+| 2011-05-10t19 | 16 |
+| 2011-09-23t19 | 16 |
+| 2010-09-16t19 | 15 |
+| 2010-11-12t18 | 15 |
+| 2010-12-26t18 | 15 |
+| 2010-11-18t18 | 14 |
+| 2010-09-07t19 | 14 |
+| 2011-08-28t19 | 14 |
+| 2010-09-09t19 | 14 |
+| 2010-09-11t19 | 14 |
+| 2011-05-12t19 | 14 |
+| 2011-04-20t19 | 14 |
+| 2011-02-01t18 | 13 |
+| 2011-03-14t19 | 13 |
+| 2011-03-24t19 | 13 |
+| 2011-04-24t19 | 13 |
+| 2011-05-21t19 | 13 |
+| 2010-09-15t19 | 12 |
+| 2011-05-23t19 | 12 |
+| 2013-10-31t19 | 11 |
+| 2014-02-17t18 | 11 |
+| 2012-07-11t19 | 11 |
+| 2011-03-06t18 | 11 |
+| 2013-07-24t19 | 11 |
+| 2011-04-22t19 | 11 |
+| 2010-12-22t18 | 11 |
+| 2011-04-17t19 | 11 |
+| 2011-05-03t19 | 11 |
+| 2010-09-19t19 | 10 |
+| 2010-11-05t19 | 10 |
+| 2011-08-15t19 | 10 |
+| 2011-09-22t19 | 10 |
+| 2014-03-27t19 | 10 |
+| 2011-03-26t19 | 10 |
+| 2013-05-15t19 | 10 |
+| 2011-03-05t18 | 9 |
+| 2010-09-06t19 | 9 |
+| 2011-04-16t19 | 9 |
+| 2013-05-20t19 | 9 |
+| 2013-06-17t19 | 9 |
+| 2011-05-19t19 | 9 |
+| 2010-11-22t18 | 9 |
+| 06-sep-18 12.00.00.000000000 am | 8 |
+| 2011-03-28t19 | 8 |
+| 2010-09-08t19 | 8 |
+| 31-aug-18 12.00.00.000000000 am | 8 |
+| 2010-11-10t18 | 8 |
+| 05-sep-18 12.00.00.000000000 am | 8 |
+| 2010-09-13t19 | 8 |
+| 2011-02-03t18 | 8 |
+| 2011-04-23t19 | 8 |
+| 2013-07-22t19 | 7 |
+| 2011-03-11t18 | 7 |
+| 2010-11-17t18 | 7 |
+| 2010-11-08t18 | 7 |
+| 2013-09-25t19 | 7 |
+| 2013-10-07t19 | 7 |
+| 2010-10-31t19 | 7 |
+| 2011-03-04t18 | 7 |
+| 2013-08-21t19 | 6 |
+| 2013-07-25t19 | 6 |
+| 2011-04-13t19 | 6 |
+| 2010-09-26t19 | 6 |
+| 2012-01-11t18 | 6 |
+| 2010-11-06t19 | 6 |
+| 2010-11-11t18 | 6 |
+| 2011-12-13t18 | 5 |
+| 2010-09-18t19 | 5 |
+| 2011-04-01t19 | 5 |
+| 2011-03-19t19 | 5 |
+| 2010-10-05t19 | 5 |
+| _missing | 5 |
+| 2011-03-16t19 | 4 |
+| 2013-09-16t19 | 4 |
+| 2013-08-14t19 | 4 |
+| 2012-07-16t19 | 4 |
+| 2011-03-15t19 | 4 |
+| 2012-04-17t19 | 3 |
+| 2013-09-18t19 | 3 |
+| 2013-09-23t19 | 3 |
+| 2013-09-12t19 | 3 |
+| 2011-03-07t18 | 2 |
+| 2011-03-09t18 | 2 |
+| 2011-03-12t18 | 2 |
+| 2011-03-18t19 | 2 |
+| 2011-05-30t19 | 2 |
+
+### files.analysis.metadata.read_groups.single_cell_library
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.size_selection_range
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.spike_ins_concentration
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.spike_ins_fasta
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.target_capture_kit
+
+| Value | Count |
+|-------|-------|
+| not applicable | 955 |
+| _missing | 137 |
+| unknown | 69 |
+| custom sureselect human all exon v1.1 plus 3 boosters | 25 |
+
+### files.analysis.metadata.read_groups.target_capture_kit_catalog_number
+
+| Value | Count |
+|-------|-------|
+| na | 568 |
+| 06465692001 | 260 |
+| 05860504001 | 207 |
+| s0293689 | 131 |
+| _missing | 48 |
+| 06465692001|na | 44 |
+| na|05860504001 | 13 |
+| 06465692001|na|na|na|na | 4 |
+| s0293689|na | 3 |
+| 05860504001|na | 2 |
+| na|na|na|na|06465692001 | 2 |
+
+### files.analysis.metadata.read_groups.target_capture_kit_name
+
+| Value | Count |
+|-------|-------|
+| hg18 nimblegen exome version 2 | 568 |
+| nimblegen seqcap ez human exome library v2.0 | 207 |
+| nimblegen ez exome v3.0 | 178 |
+| sureselect human all exon 38 mb v2 | 131 |
+| nimblegen seqcap ez human exome library v3.0 | 82 |
+| _missing | 48 |
+| nimblegen ez exome v3.0|wo2736953 pooled probes | 44 |
+| hg18 nimblegen exome version 2|nimblegen seqcap ez human exome library v2.0 | 13 |
+| nimblegen ez exome v3.0|wo2791991 pooled probes|wo2768646 pooled probes|wo2793950 pooled probes|wo2790654 pooled probes | 4 |
+| sureselect human all exon 38 mb v2|hg18 nimblegen exome version 2 | 3 |
+| nimblegen seqcap ez human exome library v2.0|hg18 nimblegen exome version 2 | 2 |
+| wo2791991 pooled probes|wo2768646 pooled probes|wo2793950 pooled probes|wo2790654 pooled probes|nimblegen ez exome v3.0 | 2 |
+
+### files.analysis.metadata.read_groups.target_capture_kit_target_region
+
+| Value | Count |
+|-------|-------|
+| ftp://genome.wustl.edu/pub/custom_capture/hg18_nimblegen_exome_version_2/hg18_nimblegen_exome_version_2.bed | 568 |
+| http://www.nimblegen.com/downloads/annotation/ez_exome_v3/seqcapez_exome_v3.0_design_annotation_files.zip#seqcap_ez_exome_v3_capture.bed | 260 |
+| http://www.nimblegen.com/downloads/annotation/ez_exome_v2/seqcapez_exome_v2.0_design_annotation_files.zip#design_annotation_files/target_regions/seqcap_ez_exome_v2.bed | 207 |
+| https://earray.chem.agilent.com/earray/ | 131 |
+| _missing | 48 |
+| http://www.nimblegen.com/downloads/annotation/ez_exome_v3/seqcapez_exome_v3.0_design_annotation_files.zip#seqcap_ez_exome_v3_capture.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2736953_pooled_probes/784c240d7e6942afb8514ebdb6a950d9.bed | 44 |
+| ftp://genome.wustl.edu/pub/custom_capture/hg18_nimblegen_exome_version_2/hg18_nimblegen_exome_version_2.bed|http://www.nimblegen.com/downloads/annotation/ez_exome_v2/seqcapez_exome_v2.0_design_annotation_files.zip#design_annotation_files/target_regions/seqcap_ez_exome_v2.bed | 13 |
+| http://www.nimblegen.com/downloads/annotation/ez_exome_v3/seqcapez_exome_v3.0_design_annotation_files.zip#seqcap_ez_exome_v3_capture.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2791991_pooled_probes/ce2c7958845b4895b878a6eda8a9c521.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2768646_pooled_probes/562e962c09834121a17bf931182c90e7.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2793950_pooled_probes/0383d24d42694f7a98b17df4f5104b4d.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2790654_pooled_probes/1d60152280514553b6a01cd20d2b12e8.bed | 4 |
+| https://earray.chem.agilent.com/earray/|ftp://genome.wustl.edu/pub/custom_capture/hg18_nimblegen_exome_version_2/hg18_nimblegen_exome_version_2.bed | 3 |
+| http://www.nimblegen.com/downloads/annotation/ez_exome_v2/seqcapez_exome_v2.0_design_annotation_files.zip#design_annotation_files/target_regions/seqcap_ez_exome_v2.bed|ftp://genome.wustl.edu/pub/custom_capture/hg18_nimblegen_exome_version_2/hg18_nimblegen_exome_version_2.bed | 2 |
+| ftp://genome.wustl.edu/pub/custom_capture/wo2791991_pooled_probes/ce2c7958845b4895b878a6eda8a9c521.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2768646_pooled_probes/562e962c09834121a17bf931182c90e7.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2793950_pooled_probes/0383d24d42694f7a98b17df4f5104b4d.bed|ftp://genome.wustl.edu/pub/custom_capture/wo2790654_pooled_probes/1d60152280514553b6a01cd20d2b12e8.bed|http://www.nimblegen.com/downloads/annotation/ez_exome_v3/seqcapez_exome_v3.0_design_annotation_files.zip#seqcap_ez_exome_v3_capture.bed | 2 |
+
+### files.analysis.metadata.read_groups.target_capture_kit_vendor
+
+| Value | Count |
+|-------|-------|
+| nimblegen | 917 |
+| agilent | 131 |
+| _missing | 48 |
+| nimblegen|idt | 44 |
+| nimblegen|nimblegen | 15 |
+| nimblegen|idt|idt|idt|idt | 4 |
+| agilent|nimblegen | 3 |
+| idt|idt|idt|idt|nimblegen | 2 |
+
+### files.analysis.metadata.read_groups.target_capture_kit_version
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.metadata.read_groups.to_trim_adapter_sequence
+
+| Value | Count |
+|-------|-------|
+| true | 938 |
+| _missing | 160 |
+
+### files.analysis.workflow_end_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.workflow_link
+
+| Value | Count |
+|-------|-------|
+| quay.io/ncigdc | 1098 |
+| https://github.com/nci-gdc/dnacopy-tool | 1098 |
+| https://www.broadinstitute.org/birdsuite | 1098 |
+| https://github.com/nci-gdc/arriba_cwl/blob/ccf62b9226985da89b695dd99528b1f65ac17710/cwl/workflows/gdc_gpas_arriba.cwl | 1095 |
+| https://github.com/nci-gdc/star_fusion_cwl/blob/bbd02bd6b33b506f018e33d33b2e1cafc8e0bc0c/cwl/workflows/gdc_gpas_star_fusion.cwl | 1095 |
+| https://github.com/nci-gdc/gdc-rnaseq-cwl/blob/5d8c131bbff59fb0c969217fc1d44e6d1503cd1f/rnaseq-star-align/star2pass.rnaseq_harmonization.cwl | 1094 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/gdc-active-submission/workflows/mirnaseq/runner.cwl | 1079 |
+| https://github.com/nci-gdc/mirna-profiler | 1079 |
+| https://github.com/crick-cancergenomics/ascat/releases/tag/v2.5.2 | 1067 |
+| https://github.com/vanloo-lab/ascat/tree/master/releaseddata/tcga_snp6_hg38 | 1060 |
+| https://gdc.cancer.gov/about-data/publications/pancanatlas | 1050 |
+| https://github.com/nci-gdc/vep-cwl/blob/63378a5197b1a8c850e27c0dd4d4c575a726d571/v102/workflows/vep-annotation-workflow.cwl | 1048 |
+| https://github.com/nci-gdc/gdc-somatic-variant-calling-workflow/blob/e00e464344272a1ac6ada9b3322d81849f507848/gpas-somatic-mutation-calling-workflow.cwl | 1044 |
+| https://github.com/nci-gdc/pindel-cwl/blob/9de690e9eb0e888c1d8ac4d41b192960a619b9c3/workflow/pindel.internal_chunk.cwl | 1044 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/cde5c3998b3d5c8651749b0e1bad3f432ec5b92e/workflows/gdc_dnaseq.bamfastq_align.workflow.cwl | 1036 |
+| https://github.com/nci-gdc/aliquot-maf-cwl/blob/3dd621a8745ee2b91716911604bf3f096337a9b7/ensemble_aliquot_maf/ensemble_aliquot_maf_wf.cwl | 969 |
+| docker.osdc.io/ncigdc | 929 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/ac59a0523af18df87bfc45b26d4cb59a9e34bb7d/workflows/gdc_dnaseq.bamfastq_align.workflow.cwl | 274 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/1a0c9a99ed9bcae8f9d5d4b9c3196fdc74131b6f/workflows/gdc_dnaseq.bamfastq_align.workflow.cwl | 117 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/a57b8f0d8708078e87f13297e065d72db10e38a0/workflows/bamfastq_align/etl.cwl | 74 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/6698fbd8d0a6155d2008d4e89ab1110fbef9ebbf/workflows/bamfastq_align/etl.cwl | 69 |
+| https://github.com/nci-gdc/gdc-sanger-somatic-cwl/blob/d82167c739cd97869f77998d5ab175b70a1850ee/workflows/gdc_sanger_wgs_somatic_workflow.cwl | 54 |
+| https://github.com/nci-gdc/gdc-sanger-somatic-cwl/blob/24db0854fc8f555ad7925ebf9a6c020a4b1ef019/workflows/gdc_sanger_wgs_somatic_workflow.cwl | 8 |
+| https://github.com/nci-gdc/gdc-somatic-variant-calling-workflow/blob/6e096f6fc590589014842434774dd8a4de90433b/gpas-somatic-mutation-calling-workflow.cwl | 4 |
+| https://github.com/nci-gdc/pindel-cwl/blob/03f78a57d10a045a7483cb1d7ceab95ff009b51b/workflow/pindel.internal_chunk.cwl | 4 |
+
+### files.analysis.workflow_start_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.analysis.workflow_type
+
+| Value | Count |
+|-------|-------|
+| DNAcopy | 1098 |
+| Birdseed | 1098 |
+| SeSAMe Methylation Beta Estimation | 1097 |
+| Arriba | 1095 |
+| STAR - Counts | 1095 |
+| STAR-Fusion | 1095 |
+| STAR 2-Pass Chimeric | 1095 |
+| STAR 2-Pass Genome | 1095 |
+| STAR 2-Pass Transcriptome | 1095 |
+| BWA with Mark Duplicates and BQSR | 1094 |
+| VarScan2 | 1091 |
+| VarScan2 Annotation | 1081 |
+| BCGSC miRNA Profiling | 1079 |
+| BWA-aln | 1079 |
+| ASCAT2 | 1067 |
+| ASCAT3 | 1060 |
+| Pindel | 1054 |
+| ABSOLUTE LiftOver | 1050 |
+| MuSE Annotation | 1048 |
+| MuTect2 Annotation | 1048 |
+| Pindel Annotation | 1048 |
+| MuSE | 1048 |
+| MuTect2 | 1048 |
+| Aliquot Ensemble Somatic Variant Merging and Masking | 969 |
+| GATK4 CNV | 927 |
+| Manta | 927 |
+| GATK4 MuTect2 | 924 |
+| SvABA | 765 |
+| GATK4 MuTect2 Annotation | 497 |
+| SvABA Indel | 169 |
+| SvABA Indel Annotation | 169 |
+| AscatNGS | 101 |
+| BRASS | 101 |
+| CaVEMan | 101 |
+
+### files.analysis.workflow_version
+
+| Value | Count |
+|-------|-------|
+| v1 | 1098 |
+| bbd02bd6b33b506f018e33d33b2e1cafc8e0bc0c | 1095 |
+| ccf62b9226985da89b695dd99528b1f65ac17710 | 1095 |
+| 5d8c131bbff59fb0c969217fc1d44e6d1503cd1f | 1094 |
+| 63378a5197b1a8c850e27c0dd4d4c575a726d571 | 1048 |
+| e00e464344272a1ac6ada9b3322d81849f507848 | 1044 |
+| 9de690e9eb0e888c1d8ac4d41b192960a619b9c3 | 1044 |
+| cde5c3998b3d5c8651749b0e1bad3f432ec5b92e | 1036 |
+| 3dd621a8745ee2b91716911604bf3f096337a9b7 | 969 |
+| f7cfd3d | 927 |
+| 66779bc | 924 |
+| 20250324t0157z | 924 |
+| 8f03679 | 886 |
+| 0049bcb | 872 |
+| 20220323t1818z | 860 |
+| 20241025t1647z | 765 |
+| f8ef9dc6375573fc05fee47b70278d89f79a4cd7 | 365 |
+| dc9467b78cf538a0430cd4027dc5092f77d47e20 | 329 |
+| 20230629t1512z | 314 |
+| ac59a0523af18df87bfc45b26d4cb59a9e34bb7d | 274 |
+| 9e258094ac9d4febe3721ceba25c1b8dbd1a27f8 | 161 |
+| 1a0c9a99ed9bcae8f9d5d4b9c3196fdc74131b6f | 117 |
+| a57b8f0d8708078e87f13297e065d72db10e38a0 | 74 |
+| 6698fbd8d0a6155d2008d4e89ab1110fbef9ebbf | 69 |
+| d82167c739cd97869f77998d5ab175b70a1850ee | 54 |
+| 20241210t1721z | 41 |
+| d1099de8dad87b076a826114bff939249c4b49e8 | 40 |
+| 20220125t1752z | 36 |
+| 24db0854fc8f555ad7925ebf9a6c020a4b1ef019 | 8 |
+| 5a02c12930eb23436322a7494047b907b97570c5 | 5 |
+| 6e096f6fc590589014842434774dd8a4de90433b | 4 |
+| 03f78a57d10a045a7483cb1d7ceab95ff009b51b | 4 |
+| 470801dfbc085958058a5b50518e4f3a5e4721c3 | 2 |
+| 20241117t2122z | 1 |
+| 438e478 | 1 |
+
+### files.archive.data_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.archive.data_format
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.archive.data_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.archive.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.archive.revision
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.archive.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.average_base_quality
+
+| Value | Count |
+|-------|-------|
+| 31.0 | 791 |
+| 30.0 | 690 |
+| 37.0 | 557 |
+| 36.0 | 424 |
+| 32.0 | 411 |
+| 34.0 | 327 |
+| 38.0 | 282 |
+| 33.0 | 274 |
+| 35.0 | 270 |
+| 29.0 | 99 |
+| 28.0 | 32 |
+| 27.0 | 10 |
+| 39.0 | 8 |
+| 10.0 | 1 |
+| 23.0 | 1 |
+| 24.0 | 1 |
+| 26.0 | 1 |
+
+### files.average_insert_size
+
+| Value | Count |
+|-------|-------|
+| 210 | 58 |
+| 212 | 58 |
+| 206 | 55 |
+| 214 | 52 |
+| 213 | 52 |
+| 450 | 49 |
+| 436 | 48 |
+| 443 | 47 |
+| 446 | 45 |
+| 444 | 45 |
+| 217 | 44 |
+| 219 | 44 |
+| 216 | 43 |
+| 204 | 42 |
+| 220 | 42 |
+| 440 | 41 |
+| 208 | 40 |
+| 438 | 40 |
+| 453 | 40 |
+| 221 | 39 |
+| 224 | 39 |
+| 202 | 39 |
+| 200 | 38 |
+| 439 | 38 |
+| 207 | 37 |
+| 434 | 37 |
+| 226 | 37 |
+| 211 | 36 |
+| 199 | 36 |
+| 442 | 36 |
+| 225 | 35 |
+| 194 | 34 |
+| 222 | 34 |
+| 432 | 34 |
+| 209 | 33 |
+| 218 | 33 |
+| 448 | 33 |
+| 205 | 32 |
+| 215 | 32 |
+| 437 | 32 |
+| 447 | 31 |
+| 441 | 31 |
+| 201 | 30 |
+| 445 | 30 |
+| 449 | 30 |
+| 451 | 30 |
+| 454 | 30 |
+| 197 | 28 |
+| 223 | 28 |
+| 230 | 28 |
+| 456 | 28 |
+| 460 | 28 |
+| 466 | 28 |
+| 198 | 27 |
+| 234 | 27 |
+| 452 | 27 |
+| 196 | 26 |
+| 235 | 25 |
+| 435 | 25 |
+| 195 | 24 |
+| 228 | 24 |
+| 433 | 24 |
+| 458 | 24 |
+| 462 | 24 |
+| 429 | 23 |
+| 457 | 23 |
+| 463 | 23 |
+| 203 | 22 |
+| 425 | 22 |
+| 430 | 22 |
+| 229 | 21 |
+| 227 | 21 |
+| 231 | 21 |
+| 455 | 21 |
+| 459 | 21 |
+| 464 | 21 |
+| 428 | 20 |
+| 461 | 20 |
+| 472 | 20 |
+| 193 | 19 |
+| 232 | 18 |
+| 426 | 18 |
+| 468 | 18 |
+| 192 | 17 |
+| 186 | 17 |
+| 190 | 17 |
+| 191 | 17 |
+| 233 | 17 |
+| 238 | 17 |
+| 467 | 16 |
+| 431 | 16 |
+| 469 | 16 |
+| 474 | 16 |
+| 479 | 16 |
+| 482 | 16 |
+| 236 | 15 |
+| 237 | 15 |
+| 240 | 15 |
+| 476 | 15 |
+| 477 | 15 |
+| 465 | 13 |
+| 239 | 13 |
+| 241 | 13 |
+| 242 | 13 |
+| 244 | 13 |
+| 424 | 13 |
+| 276 | 12 |
+| 189 | 12 |
+| 245 | 12 |
+| 250 | 12 |
+| 256 | 12 |
+| 330 | 12 |
+| 337 | 12 |
+| 342 | 12 |
+| 427 | 12 |
+| 484 | 12 |
+| 275 | 11 |
+| 473 | 11 |
+| 288 | 11 |
+| 346 | 11 |
+| 421 | 11 |
+| 486 | 11 |
+| 260 | 10 |
+| 266 | 10 |
+| 304 | 10 |
+| 324 | 10 |
+| 326 | 10 |
+| 423 | 10 |
+| 481 | 10 |
+| 483 | 10 |
+| 255 | 9 |
+| 302 | 9 |
+| 249 | 9 |
+| 258 | 9 |
+| 286 | 9 |
+| 296 | 9 |
+| 309 | 9 |
+| 331 | 9 |
+| 334 | 9 |
+| 344 | 9 |
+| 419 | 9 |
+| 470 | 9 |
+| 480 | 9 |
+| 487 | 9 |
+| 181 | 8 |
+| 187 | 8 |
+| 243 | 8 |
+| 248 | 8 |
+| 254 | 8 |
+| 257 | 8 |
+| 268 | 8 |
+| 273 | 8 |
+| 290 | 8 |
+| 300 | 8 |
+| 301 | 8 |
+| 310 | 8 |
+| 350 | 8 |
+| 356 | 8 |
+| 418 | 8 |
+| 422 | 8 |
+| 478 | 8 |
+| 494 | 8 |
+| 1198 | 8 |
+| 1216 | 8 |
+| 311 | 7 |
+| 182 | 7 |
+| 188 | 7 |
+| 251 | 7 |
+| 263 | 7 |
+| 299 | 7 |
+| 303 | 7 |
+| 313 | 7 |
+| 316 | 7 |
+| 319 | 7 |
+| 320 | 7 |
+| 322 | 7 |
+| 339 | 7 |
+| 351 | 7 |
+| 354 | 7 |
+| 417 | 7 |
+| 420 | 7 |
+| 471 | 7 |
+| 485 | 7 |
+| 488 | 7 |
+| 493 | 7 |
+| 1174 | 7 |
+| 1214 | 7 |
+| 1264 | 7 |
+| 1307 | 7 |
+| 1321 | 7 |
+| 1364 | 7 |
+| 274 | 6 |
+| 312 | 6 |
+| 180 | 6 |
+| 183 | 6 |
+| 246 | 6 |
+| 247 | 6 |
+| 253 | 6 |
+| 264 | 6 |
+| 265 | 6 |
+
+### files.average_read_length
+
+| Value | Count |
+|-------|-------|
+| 100 | 1074 |
+| 151 | 930 |
+| 50 | 811 |
+| 48 | 300 |
+| 76 | 74 |
+| 51 | 21 |
+| 95 | 2 |
+| 71 | 1 |
+| 83 | 1 |
+| 94 | 1 |
+| 97 | 1 |
+
+### files.cancer_dna_fraction
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.center.center_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.center.code
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.center.name
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.center.namespace
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.center.short_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.channel
+
+| Value | Count |
+|-------|-------|
+| green | 1097 |
+| red | 1097 |
+| _missing | 1 |
+
+### files.chip_position
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.contamination
+
+| Value | Count |
+|-------|-------|
+| 0.0 | 897 |
+| _missing | 4 |
+| 6.6e-05 | 2 |
+| 2.078571628856652e-05 | 1 |
+| 2.337804032875603e-05 | 1 |
+| 2.4405503294559906e-05 | 1 |
+| 2.5449047812424023e-05 | 1 |
+| 2.6535633003279597e-05 | 1 |
+| 2.6676717742532915e-05 | 1 |
+| 2.7326120275973045e-05 | 1 |
+| 2.8061683284000423e-05 | 1 |
+| 2.87e-05 | 1 |
+| 2.883275299248656e-05 | 1 |
+| 3.052058845647862e-05 | 1 |
+| 3.054728267257932e-05 | 1 |
+| 3.166566930363583e-05 | 1 |
+| 3.308343430397483e-05 | 1 |
+| 3.385351745494131e-05 | 1 |
+| 3.602897868401922e-05 | 1 |
+| 3.6570449570044885e-05 | 1 |
+| 3.671316707457443e-05 | 1 |
+| 3.731622876818532e-05 | 1 |
+| 3.76510716304484e-05 | 1 |
+| 3.852636945062322e-05 | 1 |
+| 3.96191772982748e-05 | 1 |
+| 4.258861071522632e-05 | 1 |
+| 4.671705802130134e-05 | 1 |
+| 4.69653370920632e-05 | 1 |
+| 4.700117907157818e-05 | 1 |
+| 4.7116248813465614e-05 | 1 |
+| 4.757755319586752e-05 | 1 |
+| 4.866511823993452e-05 | 1 |
+| 5.0305892525384485e-05 | 1 |
+| 5.111480364452639e-05 | 1 |
+| 5.26521396078853e-05 | 1 |
+| 5.292243507978427e-05 | 1 |
+| 5.303899379088412e-05 | 1 |
+| 5.377366653002778e-05 | 1 |
+| 5.4154220334514404e-05 | 1 |
+| 5.4154777549367974e-05 | 1 |
+| 5.4395140990845575e-05 | 1 |
+| 5.809906314389194e-05 | 1 |
+| 5.820511716108034e-05 | 1 |
+| 5.940760753623522e-05 | 1 |
+| 6.0295564031236e-05 | 1 |
+| 6.07e-05 | 1 |
+| 6.107346881790224e-05 | 1 |
+| 6.127564933575818e-05 | 1 |
+| 6.184577605409477e-05 | 1 |
+| 6.245720315332678e-05 | 1 |
+| 6.292985416824385e-05 | 1 |
+| 6.307784828339313e-05 | 1 |
+| 6.346467294512099e-05 | 1 |
+| 6.501854198780409e-05 | 1 |
+| 6.50621219646731e-05 | 1 |
+| 6.507284188848155e-05 | 1 |
+| 6.51366798779052e-05 | 1 |
+| 6.720912043894546e-05 | 1 |
+| 6.785867670558882e-05 | 1 |
+| 6.831379266631852e-05 | 1 |
+| 6.926251490529321e-05 | 1 |
+| 7.027566237622817e-05 | 1 |
+| 7.39e-05 | 1 |
+| 7.414657294539847e-05 | 1 |
+| 7.76e-05 | 1 |
+| 7.784434074367345e-05 | 1 |
+| 7.789201767276411e-05 | 1 |
+| 7.981679172893707e-05 | 1 |
+| 8.013982797184527e-05 | 1 |
+| 8.09214132908647e-05 | 1 |
+| 8.306836601284386e-05 | 1 |
+| 8.330965256459185e-05 | 1 |
+| 8.338740659203298e-05 | 1 |
+| 8.406866442676919e-05 | 1 |
+| 8.466725535809317e-05 | 1 |
+| 8.483478531603184e-05 | 1 |
+| 8.576168742409198e-05 | 1 |
+| 8.649594212937094e-05 | 1 |
+| 8.72e-05 | 1 |
+| 8.721547586289902e-05 | 1 |
+| 8.741968644132027e-05 | 1 |
+| 8.763572144179691e-05 | 1 |
+| 8.904654480706373e-05 | 1 |
+| 8.90710186687214e-05 | 1 |
+| 9.03e-05 | 1 |
+| 9.25445922261617e-05 | 1 |
+| 9.394334126778792e-05 | 1 |
+| 9.409666239608964e-05 | 1 |
+| 9.58940360161889e-05 | 1 |
+| 9.737565785777252e-05 | 1 |
+| 9.87174749057094e-05 | 1 |
+| 9.91481586798859e-05 | 1 |
+| 9.989115260665063e-05 | 1 |
+| 0.00010038699521277844 | 1 |
+| 0.00010053723748470576 | 1 |
+| 0.00010090044566717847 | 1 |
+| 0.00010137080187396092 | 1 |
+| 0.00010166342199383422 | 1 |
+| 0.0001017831906078543 | 1 |
+| 0.0001021656225808298 | 1 |
+| 0.00010219922512547512 | 1 |
+| 0.00010220484206170776 | 1 |
+| 0.00010266411320484303 | 1 |
+| 0.00010271587976202374 | 1 |
+| 0.000103776 | 1 |
+| 0.00010402961415187244 | 1 |
+| 0.000104701 | 1 |
+| 0.00010550132992338968 | 1 |
+| 0.00010551210537747194 | 1 |
+| 0.00010581706455928738 | 1 |
+| 0.00010581791667696188 | 1 |
+| 0.00010679080029292716 | 1 |
+| 0.00010703173335698022 | 1 |
+| 0.00010978866998491945 | 1 |
+| 0.00011082734385424696 | 1 |
+| 0.00011149499249973184 | 1 |
+| 0.00011207863113974308 | 1 |
+| 0.00011381616731340808 | 1 |
+| 0.000114571 | 1 |
+| 0.0001147678151841538 | 1 |
+| 0.0001147943296958199 | 1 |
+| 0.00011537873994416592 | 1 |
+| 0.0001163851934407749 | 1 |
+| 0.00011654123333722581 | 1 |
+| 0.000117328119584574 | 1 |
+| 0.000117451 | 1 |
+| 0.00011844236446492184 | 1 |
+| 0.0001188900684765183 | 1 |
+| 0.00011947683721474085 | 1 |
+| 0.00012000467298196592 | 1 |
+| 0.00012017937974220321 | 1 |
+| 0.00012099030565175966 | 1 |
+| 0.00012214400595085597 | 1 |
+| 0.0001226838515662802 | 1 |
+| 0.00012311636577232063 | 1 |
+| 0.0001236771339159928 | 1 |
+| 0.00012372138204578192 | 1 |
+| 0.0001237979988053493 | 1 |
+| 0.0001262852603443256 | 1 |
+| 0.00012641182253929115 | 1 |
+| 0.0001266877821416088 | 1 |
+| 0.00012837383007044856 | 1 |
+| 0.0001289696952813664 | 1 |
+| 0.00013304902088061356 | 1 |
+| 0.00013312040576519626 | 1 |
+| 0.000133279 | 1 |
+| 0.00013392937261321117 | 1 |
+| 0.00013610306704178488 | 1 |
+| 0.00013654985312242632 | 1 |
+| 0.00013813087015910006 | 1 |
+| 0.0001385788489597252 | 1 |
+| 0.00013886672325254194 | 1 |
+| 0.00013941408627845202 | 1 |
+| 0.00013943261022559164 | 1 |
+| 0.00014085525763025256 | 1 |
+| 0.000142359204255705 | 1 |
+| 0.00014305723223930156 | 1 |
+| 0.000143382 | 1 |
+| 0.00014472682738966784 | 1 |
+| 0.00014646794231037863 | 1 |
+| 0.00014783365668249893 | 1 |
+| 0.00014826129531149353 | 1 |
+| 0.0001484520806121095 | 1 |
+| 0.00014893444109446757 | 1 |
+| 0.0001498212781972385 | 1 |
+| 0.00015041823036862845 | 1 |
+| 0.00015320232695950373 | 1 |
+| 0.0001540748206331556 | 1 |
+| 0.00015601888483785856 | 1 |
+| 0.00015760197517602283 | 1 |
+| 0.00015772604468662751 | 1 |
+| 0.00015887349288235632 | 1 |
+| 0.00015963242399521168 | 1 |
+| 0.00015987718873869847 | 1 |
+| 0.00016014519831313725 | 1 |
+| 0.0001608644838980167 | 1 |
+| 0.00016167319600036035 | 1 |
+| 0.00016191043956417597 | 1 |
+| 0.000162608712054444 | 1 |
+| 0.0001636874996112422 | 1 |
+| 0.000165297 | 1 |
+| 0.0001654831586961979 | 1 |
+| 0.000167177 | 1 |
+| 0.000168705 | 1 |
+| 0.00016980454138849853 | 1 |
+| 0.00017052227840528674 | 1 |
+| 0.0001713010157978936 | 1 |
+| 0.00017275179091781647 | 1 |
+| 0.00017285418384045003 | 1 |
+| 0.000173074 | 1 |
+| 0.00017322214319443111 | 1 |
+| 0.000173232120734473 | 1 |
+| 0.00017345544689304174 | 1 |
+| 0.00017526461305224786 | 1 |
+| 0.00017892371658912712 | 1 |
+| 0.00017903522571776563 | 1 |
+| 0.00018212363074142468 | 1 |
+| 0.0001842562267088613 | 1 |
+| 0.0001847775453892182 | 1 |
+| 0.00018554142472064885 | 1 |
+| 0.00018560488422964948 | 1 |
+
+### files.contamination_error
+
+| Value | Count |
+|-------|-------|
+| 4.76837158203125e-07 | 798 |
+| 0.0 | 177 |
+| 1.0 | 5 |
+| _missing | 4 |
+| 6.6e-05 | 2 |
+| 4.76837e-07 | 1 |
+| 1.4460067428855828e-05 | 1 |
+| 2.03e-05 | 1 |
+| 2.2296324963411155e-05 | 1 |
+| 2.4405503294559906e-05 | 1 |
+| 2.813237871659168e-05 | 1 |
+| 3.331621904007416e-05 | 1 |
+| 3.385351745494131e-05 | 1 |
+| 3.385473452288795e-05 | 1 |
+| 3.671316707457443e-05 | 1 |
+| 3.7669254844100014e-05 | 1 |
+| 3.829281642840556e-05 | 1 |
+| 3.8293210438807094e-05 | 1 |
+| 3.852636945062322e-05 | 1 |
+| 4.148377701417938e-05 | 1 |
+| 4.27e-05 | 1 |
+| 4.339102383550903e-05 | 1 |
+| 4.3391029957483615e-05 | 1 |
+| 4.416391188366319e-05 | 1 |
+| 4.434464391270367e-05 | 1 |
+| 4.4876300605281466e-05 | 1 |
+| 4.529825884823226e-05 | 1 |
+| 4.625187073848711e-05 | 1 |
+| 4.720467329561992e-05 | 1 |
+| 4.817392665016605e-05 | 1 |
+| 4.87762145429472e-05 | 1 |
+| 4.911272698873744e-05 | 1 |
+| 4.911272829980325e-05 | 1 |
+| 4.951453332045605e-05 | 1 |
+| 5.0305892525384485e-05 | 1 |
+| 5.101996029538369e-05 | 1 |
+| 5.197104433343472e-05 | 1 |
+| 5.226709056389948e-05 | 1 |
+| 5.237788161728784e-05 | 1 |
+| 5.292530878496839e-05 | 1 |
+| 5.2926137739421615e-05 | 1 |
+| 5.387743185707579e-05 | 1 |
+| 5.387803678519464e-05 | 1 |
+| 5.38788122416265e-05 | 1 |
+| 5.3880816255533074e-05 | 1 |
+| 5.48e-05 | 1 |
+| 5.4825432613573726e-05 | 1 |
+| 5.5359678628088155e-05 | 1 |
+| 5.578437458760501e-05 | 1 |
+| 5.675880728871351e-05 | 1 |
+| 5.76912939151228e-05 | 1 |
+| 5.7693943983726295e-05 | 1 |
+| 5.820511716108034e-05 | 1 |
+| 5.944552270146477e-05 | 1 |
+| 5.959833758684642e-05 | 1 |
+| 5.96000048911128e-05 | 1 |
+| 5.960246500673473e-05 | 1 |
+| 5.961484135981099e-05 | 1 |
+| 5.99e-05 | 1 |
+| 5.9992683456036114e-05 | 1 |
+| 6.04e-05 | 1 |
+| 6.0551051810517895e-05 | 1 |
+| 6.0552620756090016e-05 | 1 |
+| 6.055466769379045e-05 | 1 |
+| 6.0556039006186926e-05 | 1 |
+| 6.055605928370783e-05 | 1 |
+| 6.07e-05 | 1 |
+| 6.107200297542798e-05 | 1 |
+| 6.116186722479738e-05 | 1 |
+| 6.150822422086511e-05 | 1 |
+| 6.175880113485064e-05 | 1 |
+| 6.235615894893104e-05 | 1 |
+| 6.245866665807755e-05 | 1 |
+| 6.307784828339313e-05 | 1 |
+| 6.341308144370916e-05 | 1 |
+| 6.341407389989868e-05 | 1 |
+| 6.436562840697774e-05 | 1 |
+| 6.43704659514736e-05 | 1 |
+| 6.501854198780409e-05 | 1 |
+| 6.50621219646731e-05 | 1 |
+| 6.532001396972538e-05 | 1 |
+| 6.53200165318043e-05 | 1 |
+| 6.595088078907142e-05 | 1 |
+| 6.596702876077431e-05 | 1 |
+| 6.627356037533978e-05 | 1 |
+| 6.685181337878449e-05 | 1 |
+| 6.689487040776605e-05 | 1 |
+| 6.722694602607762e-05 | 1 |
+| 6.795607083672319e-05 | 1 |
+| 6.807550197554509e-05 | 1 |
+| 6.817759101508737e-05 | 1 |
+| 6.818164007393379e-05 | 1 |
+| 6.82e-05 | 1 |
+| 6.820353945905544e-05 | 1 |
+| 6.91328283739916e-05 | 1 |
+| 6.913844330379786e-05 | 1 |
+| 6.926251490529321e-05 | 1 |
+| 6.943336162627097e-05 | 1 |
+| 6.982435779669837e-05 | 1 |
+| 7.000687024088922e-05 | 1 |
+| 7.08909658726172e-05 | 1 |
+| 7.104216139591137e-05 | 1 |
+| 7.105038598155555e-05 | 1 |
+| 7.13473893560067e-05 | 1 |
+| 7.167998141939575e-05 | 1 |
+| 7.17e-05 | 1 |
+| 7.192431440247244e-05 | 1 |
+| 7.199013287351644e-05 | 1 |
+| 7.199106316649838e-05 | 1 |
+| 7.230245127929056e-05 | 1 |
+| 7.272082677748526e-05 | 1 |
+| 7.348258468046039e-05 | 1 |
+| 7.370122096206442e-05 | 1 |
+| 7.38978700661639e-05 | 1 |
+| 7.39e-05 | 1 |
+| 7.414657294539847e-05 | 1 |
+| 7.441166187005994e-05 | 1 |
+| 7.460832520968e-05 | 1 |
+| 7.475088553736275e-05 | 1 |
+| 7.485465025197279e-05 | 1 |
+| 7.485472084266176e-05 | 1 |
+| 7.485614396177119e-05 | 1 |
+| 7.581354466081984e-05 | 1 |
+| 7.581354737825507e-05 | 1 |
+| 7.585193077252137e-05 | 1 |
+| 7.639405759912066e-05 | 1 |
+| 7.66131171959184e-05 | 1 |
+| 7.673107733761162e-05 | 1 |
+| 7.67589540261641e-05 | 1 |
+| 7.676307568253077e-05 | 1 |
+| 7.676712990471621e-05 | 1 |
+| 7.75716340640892e-05 | 1 |
+| 7.771664258493901e-05 | 1 |
+| 7.808226151388284e-05 | 1 |
+| 7.86743022229626e-05 | 1 |
+| 7.87e-05 | 1 |
+| 7.961577491004014e-05 | 1 |
+| 7.962195326290057e-05 | 1 |
+| 7.962544946469368e-05 | 1 |
+| 8.014137413080993e-05 | 1 |
+| 8.057257435869456e-05 | 1 |
+| 8.059517798082998e-05 | 1 |
+| 8.07444410598257e-05 | 1 |
+| 8.109853139639338e-05 | 1 |
+| 8.152882403814974e-05 | 1 |
+| 8.219112489865221e-05 | 1 |
+| 8.239780529868923e-05 | 1 |
+| 8.24070963805961e-05 | 1 |
+| 8.248218929420294e-05 | 1 |
+| 8.248861176441647e-05 | 1 |
+| 8.259413154288356e-05 | 1 |
+| 8.330965256459185e-05 | 1 |
+| 8.343954429809875e-05 | 1 |
+| 8.407789943154979e-05 | 1 |
+| 8.438221978450796e-05 | 1 |
+| 8.500740651171979e-05 | 1 |
+| 8.533322044388482e-05 | 1 |
+| 8.534249507201311e-05 | 1 |
+| 8.534433479134683e-05 | 1 |
+| 8.534661034270688e-05 | 1 |
+| 8.534933418470413e-05 | 1 |
+| 8.572759068171872e-05 | 1 |
+| 8.592846314520483e-05 | 1 |
+| 8.6e-05 | 1 |
+| 8.62e-05 | 1 |
+| 8.630294797044937e-05 | 1 |
+| 8.715809517856083e-05 | 1 |
+| 8.7189448988964e-05 | 1 |
+| 8.72e-05 | 1 |
+| 8.721547586289902e-05 | 1 |
+| 8.725126821583825e-05 | 1 |
+| 8.725357160443368e-05 | 1 |
+| 8.72565075965047e-05 | 1 |
+| 8.763572144179691e-05 | 1 |
+| 8.819941332177417e-05 | 1 |
+| 8.820474770021736e-05 | 1 |
+| 8.821007580705483e-05 | 1 |
+| 8.84e-05 | 1 |
+| 8.87e-05 | 1 |
+| 8.91448069593201e-05 | 1 |
+| 8.915111477350297e-05 | 1 |
+| 8.916060843282755e-05 | 1 |
+| 9.008222566910476e-05 | 1 |
+| 9.010038210324823e-05 | 1 |
+| 9.03e-05 | 1 |
+| 9.103578766831669e-05 | 1 |
+| 9.105224811091865e-05 | 1 |
+| 9.10548435772481e-05 | 1 |
+| 9.129254250880862e-05 | 1 |
+| 9.129582486069719e-05 | 1 |
+| 9.187773637149812e-05 | 1 |
+| 9.194216054900299e-05 | 1 |
+| 9.247184862935722e-05 | 1 |
+| 9.295385213812364e-05 | 1 |
+| 9.298783699412796e-05 | 1 |
+| 9.328091360570532e-05 | 1 |
+| 9.328188550779188e-05 | 1 |
+| 9.37e-05 | 1 |
+| 9.42e-05 | 1 |
+| 9.420014358003097e-05 | 1 |
+| 9.438855331136282e-05 | 1 |
+
+### files.data_category
+
+| Value | Count |
+|-------|-------|
+| simple nucleotide variation | 1098 |
+| biospecimen | 1098 |
+| copy number variation | 1098 |
+| clinical | 1098 |
+| sequencing reads | 1098 |
+| structural variation | 1098 |
+| transcriptome profiling | 1097 |
+| dna methylation | 1097 |
+| somatic structural variation | 927 |
+| proteome profiling | 881 |
+
+### files.data_format
+
+| Value | Count |
+|-------|-------|
+| bcr biotab | 1098 |
+| tsv | 1098 |
+| txt | 1098 |
+| bam | 1098 |
+| bedpe | 1098 |
+| svs | 1098 |
+| cel | 1098 |
+| bcr xml | 1098 |
+| pdf | 1098 |
+| idat | 1097 |
+| bcr ssf xml | 1097 |
+| vcf | 1091 |
+| maf | 1048 |
+| tar | 927 |
+| bcr omf xml | 77 |
+
+### files.data_type
+
+| Value | Count |
+|-------|-------|
+| Biospecimen Supplement | 1098 |
+| Clinical Supplement | 1098 |
+| Aligned Reads | 1098 |
+| Copy Number Segment | 1098 |
+| Slide Image | 1098 |
+| Raw Intensities | 1098 |
+| Simple Germline Variation | 1098 |
+| Masked Copy Number Segment | 1098 |
+| Pathology Report | 1098 |
+| Masked Intensities | 1097 |
+| Methylation Beta Value | 1097 |
+| Transcript Fusion | 1095 |
+| Gene Expression Quantification | 1095 |
+| Splice Junction Quantification | 1095 |
+| Gene Level Copy Number | 1094 |
+| Raw Simple Somatic Mutation | 1091 |
+| Annotated Somatic Mutation | 1088 |
+| Allele-specific Copy Number Segment | 1084 |
+| Isoform Expression Quantification | 1079 |
+| miRNA Expression Quantification | 1079 |
+| Aggregated Somatic Mutation | 969 |
+| Masked Somatic Mutation | 969 |
+| Structural Rearrangement | 927 |
+| Intermediate Analysis Archive | 927 |
+| Protein Expression Quantification | 881 |
+
+### files.downstream_analyses.analysis_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.access
+
+| Value | Count |
+|-------|-------|
+| controlled | 1098 |
+| open | 1098 |
+
+### files.downstream_analyses.output_files.average_base_quality
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.average_insert_size
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.average_read_length
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.cancer_dna_fraction
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.channel
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.chip_position
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.contamination
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.contamination_error
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.data_category
+
+| Value | Count |
+|-------|-------|
+| simple nucleotide variation | 1098 |
+| structural variation | 1098 |
+| transcriptome profiling | 1097 |
+| copy number variation | 1096 |
+| somatic structural variation | 927 |
+
+### files.downstream_analyses.output_files.data_format
+
+| Value | Count |
+|-------|-------|
+| tsv | 1098 |
+| txt | 1098 |
+| bedpe | 1098 |
+| vcf | 1091 |
+| maf | 1048 |
+| tar | 927 |
+
+### files.downstream_analyses.output_files.data_type
+
+| Value | Count |
+|-------|-------|
+| Simple Germline Variation | 1098 |
+| Transcript Fusion | 1095 |
+| Gene Expression Quantification | 1095 |
+| Splice Junction Quantification | 1095 |
+| Gene Level Copy Number | 1094 |
+| Raw Simple Somatic Mutation | 1091 |
+| Annotated Somatic Mutation | 1088 |
+| Allele-specific Copy Number Segment | 1084 |
+| Isoform Expression Quantification | 1079 |
+| miRNA Expression Quantification | 1079 |
+| Aggregated Somatic Mutation | 969 |
+| Masked Somatic Mutation | 969 |
+| Structural Rearrangement | 927 |
+| Copy Number Segment | 927 |
+| Intermediate Analysis Archive | 927 |
+
+### files.downstream_analyses.output_files.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.experimental_strategy
+
+| Value | Count |
+|-------|-------|
+| Genotyping Array | 1098 |
+| RNA-Seq | 1095 |
+| miRNA-Seq | 1079 |
+| WXS | 1048 |
+| WGS | 929 |
+
+### files.downstream_analyses.output_files.genome_doubling
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.imaging_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.magnification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.mean_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.msi_score
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.msi_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.pairs_on_diff_chr
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.plate_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.plate_well
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.platform
+
+| Value | Count |
+|-------|-------|
+| illumina | 1098 |
+| affymetrix snp 6.0 | 1098 |
+
+### files.downstream_analyses.output_files.proc_internal
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.proportion_base_mismatch
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.proportion_coverage_10x
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.proportion_coverage_30x
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.proportion_reads_duplicated
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.proportion_reads_mapped
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.proportion_targets_no_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.read_pair_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.revision
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.stain_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.subclonal_genome_fraction
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.tmb
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.tmb_exonic
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.tmb_nonsynonymous
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.tmb_nonsynonymous_exonic
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.total_reads
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.output_files.tumor_ploidy
+
+| Value | Count |
+|-------|-------|
+| _missing | 997 |
+| 1.68110942429001 | 1 |
+| 1.6866745007658 | 1 |
+| 1.75779284479348 | 1 |
+| 1.79848157722561 | 1 |
+| 1.80214333549328 | 1 |
+| 1.82386152749971 | 1 |
+| 1.87228860169606 | 1 |
+| 1.89880100549293 | 1 |
+| 1.91921361174152 | 1 |
+| 1.94129079834913 | 1 |
+| 1.94648850196286 | 1 |
+| 1.94960547165978 | 1 |
+| 1.97045459102415 | 1 |
+| 1.9756093330804 | 1 |
+| 1.98004304006779 | 1 |
+| 1.98308897445138 | 1 |
+| 1.99395820982229 | 1 |
+| 1.9971551114519 | 1 |
+| 1.99889633873786 | 1 |
+| 1.99952640123461 | 1 |
+| 1.9996825014981 | 1 |
+| 2.0050648203828 | 1 |
+| 2.0184584105956 | 1 |
+| 2.01872294131893 | 1 |
+| 2.02218279240744 | 1 |
+| 2.02840353444535 | 1 |
+| 2.04574349706207 | 1 |
+| 2.0607792162757 | 1 |
+| 2.06593311910349 | 1 |
+| 2.07464190346013 | 1 |
+| 2.08672325015928 | 1 |
+| 2.09001851974265 | 1 |
+| 2.09295447475077 | 1 |
+| 2.10301723157139 | 1 |
+| 2.10494107570715 | 1 |
+| 2.10681410023385 | 1 |
+| 2.12861866690948 | 1 |
+| 2.13713722553863 | 1 |
+| 2.14903759410718 | 1 |
+| 2.16575220960657 | 1 |
+| 2.16778580226876 | 1 |
+| 2.18295917090294 | 1 |
+| 2.34090461797037 | 1 |
+| 2.37326465277883 | 1 |
+| 2.57757667403694 | 1 |
+| 2.79290434496187 | 1 |
+| 2.79394865475903 | 1 |
+| 2.80274958473426 | 1 |
+| 2.80709477305666 | 1 |
+| 2.85756375859657 | 1 |
+| 2.90499574483299 | 1 |
+| 2.99272097955221 | 1 |
+| 3.02216382229229 | 1 |
+| 3.04583616677675 | 1 |
+| 3.06820687910017 | 1 |
+| 3.08262781992831 | 1 |
+| 3.09135421237682 | 1 |
+| 3.10222240286132 | 1 |
+| 3.1197416440224 | 1 |
+| 3.12108222279298 | 1 |
+| 3.14937447909385 | 1 |
+| 3.16951703609275 | 1 |
+| 3.17616058961317 | 1 |
+| 3.26754331064506 | 1 |
+| 3.30180326163064 | 1 |
+| 3.30253408601999 | 1 |
+| 3.33520545434631 | 1 |
+| 3.34056277922034 | 1 |
+| 3.36840267933952 | 1 |
+| 3.40189919190354 | 1 |
+| 3.44386620766563 | 1 |
+| 3.46035099430687 | 1 |
+| 3.4708406099281 | 1 |
+| 3.49033192880242 | 1 |
+| 3.49575287566839 | 1 |
+| 3.54878998790259 | 1 |
+| 3.58090404124686 | 1 |
+| 3.5815330051439 | 1 |
+| 3.59377990508448 | 1 |
+| 3.59944357757406 | 1 |
+| 3.61630169129641 | 1 |
+| 3.62230671736375 | 1 |
+| 3.63471668256308 | 1 |
+| 3.64313792634486 | 1 |
+| 3.66301826494657 | 1 |
+| 3.69431051056714 | 1 |
+| 3.7441214834709 | 1 |
+| 3.77346381776972 | 1 |
+| 3.78066027892223 | 1 |
+| 3.78445922990268 | 1 |
+| 3.85719454451069 | 1 |
+| 3.86424638613333 | 1 |
+| 3.8810539407619 | 1 |
+| 3.88514828630321 | 1 |
+| 3.89011274831345 | 1 |
+| 3.89878783182352 | 1 |
+| 3.91537665909395 | 1 |
+| 3.93076283331121 | 1 |
+| 3.9338494788686 | 1 |
+| 3.95709760342634 | 1 |
+| 3.96764219633164 | 1 |
+| 3.99264532142509 | 1 |
+| 4.03159535747437 | 1 |
+| 4.12652554613969 | 1 |
+| 4.17369608171485 | 1 |
+| 4.1967107601838 | 1 |
+| 4.2462190954447 | 1 |
+| 4.25025914095316 | 1 |
+| 4.2544885880966 | 1 |
+| 4.35619786970243 | 1 |
+| 4.50606809662573 | 1 |
+| 4.8227783560428 | 1 |
+| 5.12657130378521 | 1 |
+
+### files.downstream_analyses.output_files.tumor_purity
+
+| Value | Count |
+|-------|-------|
+| _missing | 997 |
+| 1.0 | 2 |
+| 0.201495036158088 | 1 |
+| 0.234607731717526 | 1 |
+| 0.249584968774981 | 1 |
+| 0.269968709181441 | 1 |
+| 0.292276396438051 | 1 |
+| 0.301932781700804 | 1 |
+| 0.342277553358272 | 1 |
+| 0.344216618514419 | 1 |
+| 0.393028832120449 | 1 |
+| 0.414606700296619 | 1 |
+| 0.426523810296427 | 1 |
+| 0.430444869534153 | 1 |
+| 0.431203375352749 | 1 |
+| 0.441459906797365 | 1 |
+| 0.44365822728241 | 1 |
+| 0.449613956125399 | 1 |
+| 0.449776366581992 | 1 |
+| 0.460132823505736 | 1 |
+| 0.48082881964565 | 1 |
+| 0.487741078193204 | 1 |
+| 0.493968349003754 | 1 |
+| 0.495158629781701 | 1 |
+| 0.503670023355014 | 1 |
+| 0.525059532487534 | 1 |
+| 0.525560551205471 | 1 |
+| 0.526556321878914 | 1 |
+| 0.530984877739553 | 1 |
+| 0.531326966471976 | 1 |
+| 0.534440985687879 | 1 |
+| 0.537118125422225 | 1 |
+| 0.537187883042034 | 1 |
+| 0.539250597079423 | 1 |
+| 0.547273365299544 | 1 |
+| 0.549647669398316 | 1 |
+| 0.558952922021669 | 1 |
+| 0.568023216482538 | 1 |
+| 0.569210055407233 | 1 |
+| 0.574636260530071 | 1 |
+| 0.574655720134229 | 1 |
+| 0.577493151938162 | 1 |
+| 0.581892851437464 | 1 |
+| 0.58203678649056 | 1 |
+| 0.592183516290859 | 1 |
+| 0.592410723596209 | 1 |
+| 0.594306545048906 | 1 |
+| 0.597590740358696 | 1 |
+| 0.602057432967565 | 1 |
+| 0.610601531157118 | 1 |
+| 0.613349582725833 | 1 |
+| 0.614788975354349 | 1 |
+| 0.617360273206958 | 1 |
+| 0.61893680833405 | 1 |
+| 0.623871753747034 | 1 |
+| 0.628986493639271 | 1 |
+| 0.633438619075488 | 1 |
+| 0.633723179684738 | 1 |
+| 0.639031374196376 | 1 |
+| 0.64173829988024 | 1 |
+| 0.658604617383176 | 1 |
+| 0.664828544618667 | 1 |
+| 0.667313231783476 | 1 |
+| 0.67371373093131 | 1 |
+| 0.674980620219771 | 1 |
+| 0.690510702198536 | 1 |
+| 0.691216132968438 | 1 |
+| 0.692756470057882 | 1 |
+| 0.697782539837469 | 1 |
+| 0.697922021029645 | 1 |
+| 0.706248886853016 | 1 |
+| 0.706864286712665 | 1 |
+| 0.712273792427739 | 1 |
+| 0.714038170645329 | 1 |
+| 0.714873118549341 | 1 |
+| 0.716061887194148 | 1 |
+| 0.721111209438473 | 1 |
+| 0.723391888735042 | 1 |
+| 0.727562597663026 | 1 |
+| 0.729403265627473 | 1 |
+| 0.73474821241096 | 1 |
+| 0.737810206084051 | 1 |
+| 0.738589114644671 | 1 |
+| 0.740210322122607 | 1 |
+| 0.751218071855692 | 1 |
+| 0.7517368820926 | 1 |
+| 0.754689841351431 | 1 |
+| 0.757274862891051 | 1 |
+| 0.758447739348542 | 1 |
+| 0.763990143662316 | 1 |
+| 0.764058838611995 | 1 |
+| 0.765480864443877 | 1 |
+| 0.767187661268466 | 1 |
+| 0.775693843738819 | 1 |
+| 0.776151977931569 | 1 |
+| 0.776324733845373 | 1 |
+| 0.796684773369837 | 1 |
+| 0.807956403659508 | 1 |
+| 0.811695790916015 | 1 |
+| 0.829922101018709 | 1 |
+| 0.843736249793592 | 1 |
+| 0.85897860811968 | 1 |
+| 0.860867757244639 | 1 |
+| 0.866147838235967 | 1 |
+| 0.871303797549052 | 1 |
+| 0.872412427791016 | 1 |
+| 0.872615602238727 | 1 |
+| 0.874725916424453 | 1 |
+| 0.884901080613406 | 1 |
+| 0.895631495231202 | 1 |
+| 0.895780268438799 | 1 |
+| 0.903429314293189 | 1 |
+| 0.919092238641083 | 1 |
+
+### files.downstream_analyses.output_files.wgs_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.workflow_end_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.workflow_link
+
+| Value | Count |
+|-------|-------|
+| https://www.broadinstitute.org/birdsuite | 1098 |
+| https://github.com/nci-gdc/arriba_cwl/blob/ccf62b9226985da89b695dd99528b1f65ac17710/cwl/workflows/gdc_gpas_arriba.cwl | 1095 |
+| https://github.com/nci-gdc/star_fusion_cwl/blob/bbd02bd6b33b506f018e33d33b2e1cafc8e0bc0c/cwl/workflows/gdc_gpas_star_fusion.cwl | 1095 |
+| https://github.com/nci-gdc/gdc-rnaseq-cwl/blob/5d8c131bbff59fb0c969217fc1d44e6d1503cd1f/rnaseq-star-align/star2pass.rnaseq_harmonization.cwl | 1094 |
+| https://github.com/nci-gdc/htseq-cwl | 1092 |
+| ftp://ftp.broadinstitute.org/pub/gistic2.0/gisticdocumentation_standalone.htm | 1089 |
+| https://github.com/nci-gdc/gdc-dnaseq-cwl/blob/gdc-active-submission/workflows/mirnaseq/runner.cwl | 1079 |
+| https://github.com/crick-cancergenomics/ascat/releases/tag/v2.5.2 | 1067 |
+| https://github.com/vanloo-lab/ascat/tree/master/releaseddata/tcga_snp6_hg38 | 1060 |
+| https://gdc.cancer.gov/about-data/publications/pancanatlas | 1050 |
+| https://github.com/nci-gdc/aliquot-maf-cwl/blob/3dd621a8745ee2b91716911604bf3f096337a9b7/ensemble_aliquot_maf/ensemble_aliquot_maf_wf.cwl | 1048 |
+| https://github.com/nci-gdc/vep-cwl/blob/63378a5197b1a8c850e27c0dd4d4c575a726d571/v102/workflows/vep-annotation-workflow.cwl | 1048 |
+| https://github.com/nci-gdc/gdc-somatic-variant-calling-workflow/blob/e00e464344272a1ac6ada9b3322d81849f507848/gpas-somatic-mutation-calling-workflow.cwl | 1044 |
+| https://github.com/nci-gdc/pindel-cwl/blob/9de690e9eb0e888c1d8ac4d41b192960a619b9c3/workflow/pindel.internal_chunk.cwl | 1044 |
+| https://github.com/nci-gdc/somatic-maf-cwl | 1043 |
+| docker.osdc.io/ncigdc | 929 |
+| quay.io/ncigdc | 55 |
+| https://github.com/nci-gdc/gdc-sanger-somatic-cwl/blob/d82167c739cd97869f77998d5ab175b70a1850ee/workflows/gdc_sanger_wgs_somatic_workflow.cwl | 54 |
+| https://github.com/nci-gdc/gdc-sanger-somatic-cwl/blob/24db0854fc8f555ad7925ebf9a6c020a4b1ef019/workflows/gdc_sanger_wgs_somatic_workflow.cwl | 8 |
+| https://github.com/nci-gdc/muse-cwl | 6 |
+| https://github.com/nci-gdc/mutect-cwl | 6 |
+| https://github.com/nci-gdc/somaticsniper-cwl | 6 |
+| https://github.com/nci-gdc/varscan-cwl | 6 |
+| https://github.com/nci-gdc/gdc-somatic-variant-calling-workflow/blob/6e096f6fc590589014842434774dd8a4de90433b/gpas-somatic-mutation-calling-workflow.cwl | 4 |
+| https://github.com/nci-gdc/pindel-cwl/blob/03f78a57d10a045a7483cb1d7ceab95ff009b51b/workflow/pindel.internal_chunk.cwl | 4 |
+
+### files.downstream_analyses.workflow_start_datetime
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.downstream_analyses.workflow_type
+
+| Value | Count |
+|-------|-------|
+| Birdseed | 1098 |
+| Arriba | 1095 |
+| STAR - Counts | 1095 |
+| STAR-Fusion | 1095 |
+| HTSeq - Counts | 1092 |
+| HTSeq - FPKM | 1092 |
+| HTSeq - FPKM-UQ | 1092 |
+| VarScan2 | 1091 |
+| GISTIC - Copy Number Score | 1089 |
+| VarScan2 Annotation | 1081 |
+| BCGSC miRNA Profiling | 1079 |
+| ASCAT2 | 1067 |
+| ASCAT3 | 1060 |
+| Pindel | 1054 |
+| ABSOLUTE LiftOver | 1050 |
+| Aliquot Ensemble Somatic Variant Merging and Masking | 1048 |
+| MuSE | 1048 |
+| MuTect2 | 1048 |
+| MuSE Annotation | 1048 |
+| MuTect2 Annotation | 1048 |
+| Pindel Annotation | 1048 |
+| SomaticSniper | 1044 |
+| MuSE Variant Aggregation and Masking | 1043 |
+| MuTect2 Variant Aggregation and Masking | 1043 |
+| VarScan2 Variant Aggregation and Masking | 1043 |
+| GATK4 CNV | 928 |
+| Manta | 928 |
+| GATK4 MuTect2 | 925 |
+| SvABA | 765 |
+| GATK4 MuTect2 Annotation | 497 |
+| SvABA Indel | 169 |
+| SvABA Indel Annotation | 169 |
+| AscatNGS | 101 |
+| BRASS | 101 |
+| CaVEMan | 101 |
+
+### files.downstream_analyses.workflow_version
+
+| Value | Count |
+|-------|-------|
+| v1 | 1098 |
+| ccf62b9226985da89b695dd99528b1f65ac17710 | 1095 |
+| bbd02bd6b33b506f018e33d33b2e1cafc8e0bc0c | 1095 |
+| 5d8c131bbff59fb0c969217fc1d44e6d1503cd1f | 1094 |
+| 3dd621a8745ee2b91716911604bf3f096337a9b7 | 1048 |
+| 63378a5197b1a8c850e27c0dd4d4c575a726d571 | 1048 |
+| e00e464344272a1ac6ada9b3322d81849f507848 | 1044 |
+| 9de690e9eb0e888c1d8ac4d41b192960a619b9c3 | 1044 |
+| f7cfd3d | 928 |
+| 66779bc | 925 |
+| 20250324t0157z | 924 |
+| 8f03679 | 887 |
+| 0049bcb | 872 |
+| 20241025t1647z | 765 |
+| d82167c739cd97869f77998d5ab175b70a1850ee | 54 |
+| 20241210t1721z | 41 |
+| d1099de8dad87b076a826114bff939249c4b49e8 | 40 |
+| 24db0854fc8f555ad7925ebf9a6c020a4b1ef019 | 8 |
+| 20211008t1907z | 8 |
+| 5a02c12930eb23436322a7494047b907b97570c5 | 5 |
+| 6e096f6fc590589014842434774dd8a4de90433b | 4 |
+| 03f78a57d10a045a7483cb1d7ceab95ff009b51b | 4 |
+| 470801dfbc085958058a5b50518e4f3a5e4721c3 | 2 |
+| 0dc34c0 | 1 |
+| 20241117t2122z | 1 |
+
+### files.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1094 |
+| file_size | 4 |
+
+### files.experimental_strategy
+
+| Value | Count |
+|-------|-------|
+| Genotyping Array | 1098 |
+| Methylation Array | 1097 |
+| RNA-Seq | 1095 |
+| Tissue Slide | 1093 |
+| miRNA-Seq | 1079 |
+| WXS | 1072 |
+| Diagnostic Slide | 1062 |
+| WGS | 952 |
+| Reverse Phase Protein Array | 881 |
+| ATAC-Seq | 74 |
+
+### files.genome_doubling
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.imaging_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.access
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.average_base_quality
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.average_insert_size
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.average_read_length
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.cancer_dna_fraction
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.channel
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.chip_position
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.contamination
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.contamination_error
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.data_category
+
+| Value | Count |
+|-------|-------|
+| sequencing reads | 1098 |
+| simple nucleotide variation | 1091 |
+| somatic structural variation | 927 |
+
+### files.index_files.data_format
+
+| Value | Count |
+|-------|-------|
+| bai | 1098 |
+| tbi | 1091 |
+
+### files.index_files.data_type
+
+| Value | Count |
+|-------|-------|
+| Aligned Reads Index | 1098 |
+| Somatic Mutation Index | 1091 |
+
+### files.index_files.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1094 |
+| file_size | 4 |
+
+### files.index_files.experimental_strategy
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.genome_doubling
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.imaging_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.magnification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.mean_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.msi_score
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.msi_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.pairs_on_diff_chr
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.plate_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.plate_well
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.platform
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.proc_internal
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.proportion_base_mismatch
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.proportion_coverage_10x
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.proportion_coverage_30x
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.proportion_reads_duplicated
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.proportion_reads_mapped
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.proportion_targets_no_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.read_pair_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.revision
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.stain_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.subclonal_genome_fraction
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.tmb
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.tmb_exonic
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.tmb_nonsynonymous
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.tmb_nonsynonymous_exonic
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.total_reads
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.tumor_ploidy
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.tumor_purity
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.index_files.wgs_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.magnification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.mean_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 4 |
+| 0.636068 | 1 |
+| 2.909733 | 1 |
+| 3.29013 | 1 |
+| 3.433039 | 1 |
+| 3.631858 | 1 |
+| 3.692748 | 1 |
+| 3.719434 | 1 |
+| 3.759748 | 1 |
+| 3.94626 | 1 |
+| 4.020731 | 1 |
+| 4.716419 | 1 |
+| 5.003882 | 1 |
+| 5.039985 | 1 |
+| 5.088225 | 1 |
+| 5.114509 | 1 |
+| 5.170853 | 1 |
+| 5.310192 | 1 |
+| 5.383973 | 1 |
+| 5.452655 | 1 |
+| 5.600974 | 1 |
+| 5.652079 | 1 |
+| 5.669789 | 1 |
+| 5.740798 | 1 |
+| 5.761005 | 1 |
+| 5.824888 | 1 |
+| 5.840768 | 1 |
+| 5.909111 | 1 |
+| 5.948748 | 1 |
+| 6.005051 | 1 |
+| 6.006054 | 1 |
+| 6.019161 | 1 |
+| 6.050753 | 1 |
+| 6.078766 | 1 |
+| 6.184 | 1 |
+| 6.187069 | 1 |
+| 6.197885 | 1 |
+| 6.204669 | 1 |
+| 6.234065 | 1 |
+| 6.236552 | 1 |
+| 6.333315 | 1 |
+| 12.40914 | 1 |
+| 14.852471 | 1 |
+| 14.913076 | 1 |
+| 15.225107 | 1 |
+| 17.933337 | 1 |
+| 18.016349 | 1 |
+| 23.39187 | 1 |
+| 25.245576 | 1 |
+| 26.022604 | 1 |
+| 26.139442 | 1 |
+| 26.726536 | 1 |
+| 26.940461 | 1 |
+| 27.145265 | 1 |
+| 27.16059 | 1 |
+| 27.287944 | 1 |
+| 27.3471 | 1 |
+| 27.391446 | 1 |
+| 27.417404 | 1 |
+| 27.441377 | 1 |
+| 27.505664 | 1 |
+| 27.549642 | 1 |
+| 27.574189 | 1 |
+| 27.640174 | 1 |
+| 27.658608 | 1 |
+| 27.663742 | 1 |
+| 27.674824 | 1 |
+| 27.702646 | 1 |
+| 27.704915 | 1 |
+| 27.712242 | 1 |
+| 27.773585 | 1 |
+| 27.773794 | 1 |
+| 27.77441 | 1 |
+| 27.781393 | 1 |
+| 27.814978 | 1 |
+| 27.913532 | 1 |
+| 27.954443 | 1 |
+| 28.019454 | 1 |
+| 28.022116 | 1 |
+| 28.031262 | 1 |
+| 28.034524 | 1 |
+| 28.047794 | 1 |
+| 28.06525 | 1 |
+| 28.083645 | 1 |
+| 28.088759 | 1 |
+| 28.113083 | 1 |
+| 28.119849 | 1 |
+| 28.163976 | 1 |
+| 28.189719 | 1 |
+| 28.206654 | 1 |
+| 28.219701 | 1 |
+| 28.289429 | 1 |
+| 28.294184 | 1 |
+| 28.34585 | 1 |
+| 28.365432 | 1 |
+| 28.37088 | 1 |
+| 28.379979 | 1 |
+| 28.395824 | 1 |
+| 28.503693 | 1 |
+| 28.533774 | 1 |
+| 28.569244 | 1 |
+| 28.575625 | 1 |
+| 28.576568 | 1 |
+| 28.658648 | 1 |
+| 28.664775 | 1 |
+| 28.675835 | 1 |
+| 28.681815 | 1 |
+| 28.705946 | 1 |
+| 28.717264 | 1 |
+| 28.783562 | 1 |
+| 28.787437 | 1 |
+| 28.802822 | 1 |
+| 28.820565 | 1 |
+| 28.852355 | 1 |
+| 28.858968 | 1 |
+| 28.867572 | 1 |
+| 28.882888 | 1 |
+| 28.939063 | 1 |
+| 28.988188 | 1 |
+| 29.040125 | 1 |
+| 29.043854 | 1 |
+| 29.055049 | 1 |
+| 29.07549 | 1 |
+| 29.111879 | 1 |
+| 29.113802 | 1 |
+| 29.123111 | 1 |
+| 29.147581 | 1 |
+| 29.180852 | 1 |
+| 29.208633 | 1 |
+| 29.210229 | 1 |
+| 29.218526 | 1 |
+| 29.240641 | 1 |
+| 29.254761 | 1 |
+| 29.272891 | 1 |
+| 29.273844 | 1 |
+| 29.298262 | 1 |
+| 29.307857 | 1 |
+| 29.330924 | 1 |
+| 29.343672 | 1 |
+| 29.382182 | 1 |
+| 29.394785 | 1 |
+| 29.40631 | 1 |
+| 29.412442 | 1 |
+| 29.445606 | 1 |
+| 29.450862 | 1 |
+| 29.492245 | 1 |
+| 29.50346 | 1 |
+| 29.513569 | 1 |
+| 29.523896 | 1 |
+| 29.527329 | 1 |
+| 29.534307 | 1 |
+| 29.542304 | 1 |
+| 29.553518 | 1 |
+| 29.579466 | 1 |
+| 29.585758 | 1 |
+| 29.602671 | 1 |
+| 29.622898 | 1 |
+| 29.634067 | 1 |
+| 29.637974 | 1 |
+| 29.662305 | 1 |
+| 29.66617 | 1 |
+| 29.701816 | 1 |
+| 29.715729 | 1 |
+| 29.721248 | 1 |
+| 29.726978 | 1 |
+| 29.788646 | 1 |
+| 29.799641 | 1 |
+| 29.808578 | 1 |
+| 29.83445 | 1 |
+| 29.880578 | 1 |
+| 29.902643 | 1 |
+| 29.916271 | 1 |
+| 29.916464 | 1 |
+| 29.943339 | 1 |
+| 29.958095 | 1 |
+| 29.981174 | 1 |
+| 29.985194 | 1 |
+| 29.993208 | 1 |
+| 29.993395 | 1 |
+| 30.02068 | 1 |
+| 30.02496 | 1 |
+| 30.059573 | 1 |
+| 30.105469 | 1 |
+| 30.154308 | 1 |
+| 30.159998 | 1 |
+| 30.183894 | 1 |
+| 30.197091 | 1 |
+| 30.204367 | 1 |
+| 30.218547 | 1 |
+| 30.225815 | 1 |
+| 30.241459 | 1 |
+| 30.245509 | 1 |
+| 30.269019 | 1 |
+| 30.280541 | 1 |
+| 30.295327 | 1 |
+| 30.325413 | 1 |
+| 30.333751 | 1 |
+| 30.377129 | 1 |
+| 30.405162 | 1 |
+| 30.420288 | 1 |
+| 30.42175 | 1 |
+
+### files.metadata_files.access
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.metadata_files.data_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.metadata_files.data_format
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.metadata_files.data_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.metadata_files.error_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.metadata_files.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.metadata_files.type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.msi_score
+
+| Value | Count |
+|-------|-------|
+| 0.0 | 21 |
+| 0.0264191360228 | 8 |
+| 0.0278571428571 | 8 |
+| 0.0274509803922 | 6 |
+| 0.0282445477297 | 6 |
+| 0.0245989304813 | 5 |
+| 0.0253480899679 | 5 |
+| 0.025787965616 | 5 |
+| _missing | 5 |
+| 0.0246164823403 | 4 |
+| 0.0253209700428 | 4 |
+| 0.0254297994269 | 4 |
+| 0.0254389107847 | 4 |
+| 0.0257326661901 | 4 |
+| 0.0260900643317 | 4 |
+| 0.0264569181266 | 4 |
+| 0.0271816881259 | 4 |
+| 0.0275 | 4 |
+| 0.0283662477558 | 4 |
+| 0.0238944365193 | 3 |
+| 0.024625267666 | 3 |
+| 0.0253300035676 | 3 |
+| 0.0254115962777 | 3 |
+| 0.0257142857143 | 3 |
+| 0.0260528194147 | 3 |
+| 0.0261087267525 | 3 |
+| 0.0261180679785 | 3 |
+| 0.0264097073519 | 3 |
+| 0.0265042979943 | 3 |
+| 0.0265613783202 | 3 |
+| 0.0267379679144 | 3 |
+| 0.0267665952891 | 3 |
+| 0.0268048606147 | 3 |
+| 0.02689135891 | 3 |
+| 0.0272011453114 | 3 |
+| 0.0275098249375 | 3 |
+| 0.027539341917 | 3 |
+| 0.0275689223058 | 3 |
+| 0.0277975766215 | 3 |
+| 0.0282243658449 | 3 |
+| 0.0285103349964 | 3 |
+| 0.028551034975 | 3 |
+| 0.0286430361618 | 3 |
+| 0.0286841161707 | 3 |
+| 0.0291786743516 | 3 |
+| 0.0292752588361 | 3 |
+| 0.0293171254916 | 3 |
+| 0.029664045747 | 3 |
+| 0.0299892895395 | 3 |
+| 0.0306923625981 | 3 |
+| 0.0444763271162 | 3 |
+| 0.00642742367434 | 2 |
+| 0.00720720720721 | 2 |
+| 0.00790513833992 | 2 |
+| 0.00819672131148 | 2 |
+| 0.00870574579222 | 2 |
+| 0.00960080848914 | 2 |
+| 0.00981308411215 | 2 |
+| 0.01 | 2 |
+| 0.0100871160018 | 2 |
+| 0.010111223458 | 2 |
+| 0.010447761194 | 2 |
+| 0.01050558109 | 2 |
+| 0.0105524518932 | 2 |
+| 0.0105695830887 | 2 |
+| 0.0106382978723 | 2 |
+| 0.0111695137976 | 2 |
+| 0.0111731843575 | 2 |
+| 0.0115 | 2 |
+| 0.0120025268478 | 2 |
+| 0.012812690665 | 2 |
+| 0.0133333333333 | 2 |
+| 0.0134228187919 | 2 |
+| 0.0135501355014 | 2 |
+| 0.0135635018496 | 2 |
+| 0.0138888888889 | 2 |
+| 0.0149031296572 | 2 |
+| 0.0156739811912 | 2 |
+| 0.0169491525424 | 2 |
+| 0.0220125786164 | 2 |
+| 0.022930849158 | 2 |
+| 0.0232142857143 | 2 |
+| 0.0236051502146 | 2 |
+| 0.0236559139785 | 2 |
+| 0.0239114917916 | 2 |
+| 0.0239456754825 | 2 |
+| 0.0241906794735 | 2 |
+| 0.0242770439129 | 2 |
+| 0.0243291592129 | 2 |
+| 0.0243902439024 | 2 |
+| 0.024607703281 | 2 |
+| 0.024678111588 | 2 |
+| 0.0249465431219 | 2 |
+| 0.025 | 2 |
+| 0.0250089317613 | 2 |
+| 0.0253390435403 | 2 |
+| 0.0253752680486 | 2 |
+| 0.0253843403647 | 2 |
+| 0.0254754216003 | 2 |
+| 0.0256776034237 | 2 |
+| 0.0256867641812 | 2 |
+| 0.0257051053195 | 2 |
+| 0.0257787325456 | 2 |
+| 0.0258620689655 | 2 |
+| 0.0259971509972 | 2 |
+| 0.0260156806842 | 2 |
+| 0.0260621206712 | 2 |
+| 0.0260714285714 | 2 |
+| 0.0261742560057 | 2 |
+| 0.0263814616756 | 2 |
+| 0.0263908701854 | 2 |
+| 0.0264002854085 | 2 |
+| 0.0264380135763 | 2 |
+| 0.0265137943389 | 2 |
+| 0.0265423242468 | 2 |
+| 0.0267475035663 | 2 |
+| 0.0267761513745 | 2 |
+| 0.0267857142857 | 2 |
+| 0.0268336314848 | 2 |
+| 0.0268528464017 | 2 |
+| 0.0268624641834 | 2 |
+| 0.02691065662 | 2 |
+| 0.026920315865 | 2 |
+| 0.0271041369472 | 2 |
+| 0.0271525544837 | 2 |
+| 0.0272303833751 | 2 |
+| 0.0274314214464 | 2 |
+| 0.0274705672494 | 2 |
+| 0.0275294958885 | 2 |
+| 0.0276282741299 | 2 |
+| 0.0277678889284 | 2 |
+| 0.0277777777778 | 2 |
+| 0.027807486631 | 2 |
+| 0.0278670953912 | 2 |
+| 0.0278870218091 | 2 |
+| 0.0279069767442 | 2 |
+| 0.0279469724113 | 2 |
+| 0.0279670132664 | 2 |
+| 0.0279770444763 | 2 |
+| 0.0279870828848 | 2 |
+| 0.0280172413793 | 2 |
+| 0.0281639928699 | 2 |
+| 0.0281740370899 | 2 |
+| 0.0281840884766 | 2 |
+| 0.0282748747316 | 2 |
+| 0.0283357245337 | 2 |
+| 0.0285204991087 | 2 |
+| 0.0288080662586 | 2 |
+| 0.0288667141839 | 2 |
+| 0.0288976097039 | 2 |
+| 0.0289182434845 | 2 |
+| 0.0289285714286 | 2 |
+| 0.0289389067524 | 2 |
+| 0.0289492494639 | 2 |
+| 0.0290010741139 | 2 |
+| 0.0290322580645 | 2 |
+| 0.0290948275862 | 2 |
+| 0.0291262135922 | 2 |
+| 0.0293276108727 | 2 |
+| 0.0295900178253 | 2 |
+| 0.0296958855098 | 2 |
+| 0.0297491039427 | 2 |
+| 0.0298991354467 | 2 |
+| 0.0299785867238 | 2 |
+| 0.03 | 2 |
+| 0.030281439259 | 2 |
+| 0.0303246521584 | 2 |
+| 0.030335474661 | 2 |
+| 0.0305206463196 | 2 |
+| 0.0306704707561 | 2 |
+| 0.0307582260372 | 2 |
+| 0.0312163616792 | 2 |
+| 0.0313278746885 | 2 |
+| 0.0313837375178 | 2 |
+| 0.0314622810154 | 2 |
+| 0.0319683908046 | 2 |
+| 0.0321658327377 | 2 |
+| 0.0326750448833 | 2 |
+| 0.0329630956646 | 2 |
+| 0.0355093256815 | 2 |
+| 0.0375939849624 | 2 |
+| 0.0394265232975 | 2 |
+| 0.0425912670007 | 2 |
+| 0.044733044733 | 2 |
+| 0.0474649406688 | 2 |
+| 0.0478073328541 | 2 |
+| 0.0504322766571 | 2 |
+| 0.00190294957184 | 1 |
+| 0.00229042601924 | 1 |
+| 0.00239923224568 | 1 |
+| 0.00271739130435 | 1 |
+| 0.00319284802043 | 1 |
+| 0.00322729368373 | 1 |
+| 0.00329411764706 | 1 |
+| 0.00330188679245 | 1 |
+| 0.00331439393939 | 1 |
+| 0.00337268128162 | 1 |
+| 0.00341296928328 | 1 |
+| 0.00346620450607 | 1 |
+| 0.00349895031491 | 1 |
+| 0.003600360036 | 1 |
+
+### files.msi_status
+
+| Value | Count |
+|-------|-------|
+| mss | 1088 |
+| msi | 7 |
+| _missing | 5 |
+
+### files.pairs_on_diff_chr
+
+| Value | Count |
+|-------|-------|
+| 196341 | 2 |
+| 225239 | 2 |
+| 361933 | 2 |
+| 373150 | 2 |
+| 695574 | 2 |
+| 69728 | 1 |
+| 69901 | 1 |
+| 70652 | 1 |
+| 81293 | 1 |
+| 84801 | 1 |
+| 87130 | 1 |
+| 88401 | 1 |
+| 94652 | 1 |
+| 96097 | 1 |
+| 97768 | 1 |
+| 101141 | 1 |
+| 101514 | 1 |
+| 103766 | 1 |
+| 105682 | 1 |
+| 107105 | 1 |
+| 107354 | 1 |
+| 107946 | 1 |
+| 110304 | 1 |
+| 110663 | 1 |
+| 112735 | 1 |
+| 113230 | 1 |
+| 117075 | 1 |
+| 117957 | 1 |
+| 122340 | 1 |
+| 124188 | 1 |
+| 124720 | 1 |
+| 125257 | 1 |
+| 125849 | 1 |
+| 126639 | 1 |
+| 127236 | 1 |
+| 127423 | 1 |
+| 129132 | 1 |
+| 129239 | 1 |
+| 130343 | 1 |
+| 131489 | 1 |
+| 133302 | 1 |
+| 133912 | 1 |
+| 134651 | 1 |
+| 135783 | 1 |
+| 136306 | 1 |
+| 136402 | 1 |
+| 136451 | 1 |
+| 137981 | 1 |
+| 139812 | 1 |
+| 140737 | 1 |
+| 141724 | 1 |
+| 141882 | 1 |
+| 143841 | 1 |
+| 145000 | 1 |
+| 145020 | 1 |
+| 145330 | 1 |
+| 147111 | 1 |
+| 147270 | 1 |
+| 147880 | 1 |
+| 148547 | 1 |
+| 149286 | 1 |
+| 150210 | 1 |
+| 151107 | 1 |
+| 151343 | 1 |
+| 151365 | 1 |
+| 151840 | 1 |
+| 152439 | 1 |
+| 153949 | 1 |
+| 154885 | 1 |
+| 155847 | 1 |
+| 155958 | 1 |
+| 156155 | 1 |
+| 158344 | 1 |
+| 159440 | 1 |
+| 160365 | 1 |
+| 161905 | 1 |
+| 162485 | 1 |
+| 163002 | 1 |
+| 163197 | 1 |
+| 163427 | 1 |
+| 163882 | 1 |
+| 164234 | 1 |
+| 165524 | 1 |
+| 165907 | 1 |
+| 166389 | 1 |
+| 167165 | 1 |
+| 168920 | 1 |
+| 170015 | 1 |
+| 170315 | 1 |
+| 170518 | 1 |
+| 170548 | 1 |
+| 170774 | 1 |
+| 170870 | 1 |
+| 171541 | 1 |
+| 171627 | 1 |
+| 172462 | 1 |
+| 172507 | 1 |
+| 172546 | 1 |
+| 172759 | 1 |
+| 172980 | 1 |
+| 174414 | 1 |
+| 174785 | 1 |
+| 175011 | 1 |
+| 175563 | 1 |
+| 175603 | 1 |
+| 175696 | 1 |
+| 176362 | 1 |
+| 176760 | 1 |
+| 176971 | 1 |
+| 177584 | 1 |
+| 178860 | 1 |
+| 179687 | 1 |
+| 179938 | 1 |
+| 180355 | 1 |
+| 180568 | 1 |
+| 180899 | 1 |
+| 181600 | 1 |
+| 181625 | 1 |
+| 181734 | 1 |
+| 182217 | 1 |
+| 182384 | 1 |
+| 183213 | 1 |
+| 183405 | 1 |
+| 183664 | 1 |
+| 183857 | 1 |
+| 183945 | 1 |
+| 184013 | 1 |
+| 184282 | 1 |
+| 184412 | 1 |
+| 184461 | 1 |
+| 184471 | 1 |
+| 184827 | 1 |
+| 184908 | 1 |
+| 185848 | 1 |
+| 185937 | 1 |
+| 186452 | 1 |
+| 186533 | 1 |
+| 186753 | 1 |
+| 186888 | 1 |
+| 187117 | 1 |
+| 187388 | 1 |
+| 188177 | 1 |
+| 188933 | 1 |
+| 189212 | 1 |
+| 189215 | 1 |
+| 189253 | 1 |
+| 189436 | 1 |
+| 190791 | 1 |
+| 190877 | 1 |
+| 191181 | 1 |
+| 192221 | 1 |
+| 192512 | 1 |
+| 192692 | 1 |
+| 193321 | 1 |
+| 194237 | 1 |
+| 194855 | 1 |
+| 194993 | 1 |
+| 195371 | 1 |
+| 196134 | 1 |
+| 196482 | 1 |
+| 196838 | 1 |
+| 197702 | 1 |
+| 197819 | 1 |
+| 197916 | 1 |
+| 199173 | 1 |
+| 199378 | 1 |
+| 199493 | 1 |
+| 199502 | 1 |
+| 199639 | 1 |
+| 199803 | 1 |
+| 200091 | 1 |
+| 200308 | 1 |
+| 200351 | 1 |
+| 200438 | 1 |
+| 200455 | 1 |
+| 201038 | 1 |
+| 201067 | 1 |
+| 201593 | 1 |
+| 201823 | 1 |
+| 202671 | 1 |
+| 202725 | 1 |
+| 203219 | 1 |
+| 203286 | 1 |
+| 203599 | 1 |
+| 204266 | 1 |
+| 204325 | 1 |
+| 204377 | 1 |
+| 204609 | 1 |
+| 204827 | 1 |
+| 204840 | 1 |
+| 205545 | 1 |
+| 205773 | 1 |
+| 205858 | 1 |
+| 206261 | 1 |
+| 206331 | 1 |
+| 206485 | 1 |
+| 207656 | 1 |
+| 207678 | 1 |
+| 207748 | 1 |
+| 207905 | 1 |
+
+### files.plate_name
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.plate_well
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.platform
+
+| Value | Count |
+|-------|-------|
+| illumina | 1098 |
+| affymetrix snp 6.0 | 1098 |
+| rppa | 881 |
+| illumina human methylation 450 | 791 |
+| illumina human methylation 27 | 314 |
+
+### files.proc_internal
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.proportion_base_mismatch
+
+| Value | Count |
+|-------|-------|
+| 0.004118135 | 2 |
+| 0.006382698 | 2 |
+| 0.001416891 | 1 |
+| 0.001501283 | 1 |
+| 0.001513507 | 1 |
+| 0.001536663 | 1 |
+| 0.001538839 | 1 |
+| 0.001583161 | 1 |
+| 0.001594496 | 1 |
+| 0.00160318 | 1 |
+| 0.001644709 | 1 |
+| 0.001662439 | 1 |
+| 0.001670212 | 1 |
+| 0.001724419 | 1 |
+| 0.001733216 | 1 |
+| 0.001747491 | 1 |
+| 0.001755657 | 1 |
+| 0.001778078 | 1 |
+| 0.001809836 | 1 |
+| 0.001842363 | 1 |
+| 0.001856423 | 1 |
+| 0.00186091 | 1 |
+| 0.001862118 | 1 |
+| 0.001866135 | 1 |
+| 0.0018792 | 1 |
+| 0.001907878 | 1 |
+| 0.001911255 | 1 |
+| 0.001916372 | 1 |
+| 0.001923832 | 1 |
+| 0.001931707 | 1 |
+| 0.001932766 | 1 |
+| 0.001934265 | 1 |
+| 0.001934689 | 1 |
+| 0.001936483 | 1 |
+| 0.001942016 | 1 |
+| 0.001947885 | 1 |
+| 0.001950764 | 1 |
+| 0.001957255 | 1 |
+| 0.001958829 | 1 |
+| 0.00196636 | 1 |
+| 0.001969603 | 1 |
+| 0.001972484 | 1 |
+| 0.001973038 | 1 |
+| 0.001973594 | 1 |
+| 0.001982523 | 1 |
+| 0.001987606 | 1 |
+| 0.00198822 | 1 |
+| 0.001988345 | 1 |
+| 0.001989649 | 1 |
+| 0.001990619 | 1 |
+| 0.002002556 | 1 |
+| 0.002015735 | 1 |
+| 0.002016328 | 1 |
+| 0.00201736 | 1 |
+| 0.002023304 | 1 |
+| 0.002026648 | 1 |
+| 0.002029743 | 1 |
+| 0.002035452 | 1 |
+| 0.002044932 | 1 |
+| 0.00204647 | 1 |
+| 0.002047857 | 1 |
+| 0.002053271 | 1 |
+| 0.00205477 | 1 |
+| 0.002061023 | 1 |
+| 0.002065263 | 1 |
+| 0.002069104 | 1 |
+| 0.002070926 | 1 |
+| 0.002074501 | 1 |
+| 0.002074892 | 1 |
+| 0.002075835 | 1 |
+| 0.002075905 | 1 |
+| 0.002077847 | 1 |
+| 0.002078501 | 1 |
+| 0.002078913 | 1 |
+| 0.00208005 | 1 |
+| 0.002081725 | 1 |
+| 0.002082392 | 1 |
+| 0.002085115 | 1 |
+| 0.002085228 | 1 |
+| 0.00211117 | 1 |
+| 0.002123651 | 1 |
+| 0.002125765 | 1 |
+| 0.002127776 | 1 |
+| 0.002129257 | 1 |
+| 0.00213081 | 1 |
+| 0.002132419 | 1 |
+| 0.002134202 | 1 |
+| 0.002139605 | 1 |
+| 0.002139671 | 1 |
+| 0.002140391 | 1 |
+| 0.002141528 | 1 |
+| 0.002146641 | 1 |
+| 0.002146869 | 1 |
+| 0.002149501 | 1 |
+| 0.002149966 | 1 |
+| 0.002158307 | 1 |
+| 0.002158341 | 1 |
+| 0.002161346 | 1 |
+| 0.002163315 | 1 |
+| 0.00216719 | 1 |
+| 0.002169805 | 1 |
+| 0.002170942 | 1 |
+| 0.002172854 | 1 |
+| 0.00217372 | 1 |
+| 0.002173873 | 1 |
+| 0.002178548 | 1 |
+| 0.002179127 | 1 |
+| 0.002184731 | 1 |
+| 0.002186432 | 1 |
+| 0.00218988 | 1 |
+| 0.002190993 | 1 |
+| 0.0021922 | 1 |
+| 0.002192985 | 1 |
+| 0.002193274 | 1 |
+| 0.002193757 | 1 |
+| 0.002194762 | 1 |
+| 0.002198387 | 1 |
+| 0.00219875 | 1 |
+| 0.002198967 | 1 |
+| 0.002202692 | 1 |
+| 0.002202811 | 1 |
+| 0.002207506 | 1 |
+| 0.002210697 | 1 |
+| 0.002212888 | 1 |
+| 0.00221688 | 1 |
+| 0.002219383 | 1 |
+| 0.00222033 | 1 |
+| 0.002220734 | 1 |
+| 0.002225823 | 1 |
+| 0.002232232 | 1 |
+| 0.002233153 | 1 |
+| 0.002234526 | 1 |
+| 0.002236748 | 1 |
+| 0.002237773 | 1 |
+| 0.002238457 | 1 |
+| 0.002243392 | 1 |
+| 0.002243501 | 1 |
+| 0.002244204 | 1 |
+| 0.00224805 | 1 |
+| 0.002250139 | 1 |
+| 0.002251809 | 1 |
+| 0.002254304 | 1 |
+| 0.002257248 | 1 |
+| 0.002258233 | 1 |
+| 0.002258598 | 1 |
+| 0.002262716 | 1 |
+| 0.002266847 | 1 |
+| 0.002272809 | 1 |
+| 0.002274919 | 1 |
+| 0.002281169 | 1 |
+| 0.002281299 | 1 |
+| 0.002281605 | 1 |
+| 0.00228752 | 1 |
+| 0.002288283 | 1 |
+| 0.002288917 | 1 |
+| 0.002291009 | 1 |
+| 0.002291461 | 1 |
+| 0.002291547 | 1 |
+| 0.002292849 | 1 |
+| 0.002293508 | 1 |
+| 0.002293739 | 1 |
+| 0.002294148 | 1 |
+| 0.00229445 | 1 |
+| 0.002295192 | 1 |
+| 0.002298343 | 1 |
+| 0.002299761 | 1 |
+| 0.00230082 | 1 |
+| 0.002300912 | 1 |
+| 0.002302319 | 1 |
+| 0.002303771 | 1 |
+| 0.002303937 | 1 |
+| 0.00231103 | 1 |
+| 0.002313563 | 1 |
+| 0.002313571 | 1 |
+| 0.002315498 | 1 |
+| 0.002317074 | 1 |
+| 0.0023179 | 1 |
+| 0.002318909 | 1 |
+| 0.002319727 | 1 |
+| 0.002320302 | 1 |
+| 0.002322357 | 1 |
+| 0.002322727 | 1 |
+| 0.002323367 | 1 |
+| 0.002324592 | 1 |
+| 0.002325199 | 1 |
+| 0.002327251 | 1 |
+| 0.002327789 | 1 |
+| 0.002330523 | 1 |
+| 0.002330863 | 1 |
+| 0.002332313 | 1 |
+| 0.002340221 | 1 |
+| 0.002342098 | 1 |
+| 0.002346364 | 1 |
+| 0.002347097 | 1 |
+| 0.002348024 | 1 |
+| 0.002348802 | 1 |
+| 0.002352588 | 1 |
+| 0.002353284 | 1 |
+| 0.002355148 | 1 |
+| 0.002356566 | 1 |
+
+### files.proportion_coverage_10x
+
+| Value | Count |
+|-------|-------|
+| 0.965366 | 4 |
+| _missing | 4 |
+| 0.947738 | 3 |
+| 0.960161 | 3 |
+| 0.960661 | 3 |
+| 0.960668 | 3 |
+| 0.960812 | 3 |
+| 0.960943 | 3 |
+| 0.961116 | 3 |
+| 0.961215 | 3 |
+| 0.961335 | 3 |
+| 0.961508 | 3 |
+| 0.961763 | 3 |
+| 0.964427 | 3 |
+| 0.964787 | 3 |
+| 0.965081 | 3 |
+| 0.965159 | 3 |
+| 0.965168 | 3 |
+| 0.965178 | 3 |
+| 0.96522 | 3 |
+| 0.965247 | 3 |
+| 0.965248 | 3 |
+| 0.965328 | 3 |
+| 0.965344 | 3 |
+| 0.965407 | 3 |
+| 0.965419 | 3 |
+| 0.965423 | 3 |
+| 0.965513 | 3 |
+| 0.965517 | 3 |
+| 0.965533 | 3 |
+| 0.965637 | 3 |
+| 0.965843 | 3 |
+| 0.966 | 3 |
+| 0.837183 | 2 |
+| 0.872829 | 2 |
+| 0.877204 | 2 |
+| 0.894687 | 2 |
+| 0.895194 | 2 |
+| 0.897817 | 2 |
+| 0.903681 | 2 |
+| 0.905025 | 2 |
+| 0.913724 | 2 |
+| 0.913783 | 2 |
+| 0.922006 | 2 |
+| 0.922856 | 2 |
+| 0.926654 | 2 |
+| 0.928526 | 2 |
+| 0.929532 | 2 |
+| 0.930075 | 2 |
+| 0.930737 | 2 |
+| 0.931697 | 2 |
+| 0.931999 | 2 |
+| 0.937688 | 2 |
+| 0.941023 | 2 |
+| 0.947582 | 2 |
+| 0.949076 | 2 |
+| 0.949624 | 2 |
+| 0.95081 | 2 |
+| 0.950933 | 2 |
+| 0.951115 | 2 |
+| 0.952038 | 2 |
+| 0.953141 | 2 |
+| 0.953546 | 2 |
+| 0.955196 | 2 |
+| 0.956309 | 2 |
+| 0.956313 | 2 |
+| 0.957393 | 2 |
+| 0.958287 | 2 |
+| 0.958326 | 2 |
+| 0.9584 | 2 |
+| 0.958427 | 2 |
+| 0.959018 | 2 |
+| 0.959175 | 2 |
+| 0.959432 | 2 |
+| 0.959456 | 2 |
+| 0.959606 | 2 |
+| 0.959667 | 2 |
+| 0.959727 | 2 |
+| 0.959841 | 2 |
+| 0.95986 | 2 |
+| 0.960055 | 2 |
+| 0.960107 | 2 |
+| 0.960237 | 2 |
+| 0.960296 | 2 |
+| 0.960324 | 2 |
+| 0.960366 | 2 |
+| 0.96043 | 2 |
+| 0.960483 | 2 |
+| 0.960488 | 2 |
+| 0.960507 | 2 |
+| 0.96052 | 2 |
+| 0.960533 | 2 |
+| 0.960551 | 2 |
+| 0.960591 | 2 |
+| 0.960595 | 2 |
+| 0.960679 | 2 |
+| 0.960696 | 2 |
+| 0.960702 | 2 |
+| 0.960717 | 2 |
+| 0.960724 | 2 |
+| 0.960774 | 2 |
+| 0.960788 | 2 |
+| 0.960832 | 2 |
+| 0.960843 | 2 |
+| 0.960879 | 2 |
+| 0.960891 | 2 |
+| 0.960895 | 2 |
+| 0.960925 | 2 |
+| 0.960932 | 2 |
+| 0.960942 | 2 |
+| 0.961035 | 2 |
+| 0.961044 | 2 |
+| 0.961055 | 2 |
+| 0.961099 | 2 |
+| 0.961103 | 2 |
+| 0.961126 | 2 |
+| 0.961137 | 2 |
+| 0.961151 | 2 |
+| 0.96118 | 2 |
+| 0.961188 | 2 |
+| 0.961196 | 2 |
+| 0.961198 | 2 |
+| 0.961216 | 2 |
+| 0.961231 | 2 |
+| 0.961262 | 2 |
+| 0.961306 | 2 |
+| 0.961318 | 2 |
+| 0.961319 | 2 |
+| 0.961442 | 2 |
+| 0.961467 | 2 |
+| 0.96147 | 2 |
+| 0.961485 | 2 |
+| 0.961528 | 2 |
+| 0.961541 | 2 |
+| 0.961583 | 2 |
+| 0.961602 | 2 |
+| 0.961606 | 2 |
+| 0.961617 | 2 |
+| 0.961634 | 2 |
+| 0.961649 | 2 |
+| 0.96187 | 2 |
+| 0.962096 | 2 |
+| 0.96379 | 2 |
+| 0.96434 | 2 |
+| 0.964355 | 2 |
+| 0.964418 | 2 |
+| 0.964419 | 2 |
+| 0.964442 | 2 |
+| 0.964561 | 2 |
+| 0.96457 | 2 |
+| 0.964631 | 2 |
+| 0.964654 | 2 |
+| 0.964695 | 2 |
+| 0.964746 | 2 |
+| 0.964778 | 2 |
+| 0.964792 | 2 |
+| 0.964886 | 2 |
+| 0.964954 | 2 |
+| 0.964971 | 2 |
+| 0.964982 | 2 |
+| 0.964985 | 2 |
+| 0.964997 | 2 |
+| 0.965026 | 2 |
+| 0.965056 | 2 |
+| 0.965057 | 2 |
+| 0.965118 | 2 |
+| 0.96512 | 2 |
+| 0.965134 | 2 |
+| 0.965144 | 2 |
+| 0.965149 | 2 |
+| 0.96515 | 2 |
+| 0.965156 | 2 |
+| 0.965166 | 2 |
+| 0.965207 | 2 |
+| 0.965224 | 2 |
+| 0.965245 | 2 |
+| 0.965253 | 2 |
+| 0.965272 | 2 |
+| 0.96529 | 2 |
+| 0.965302 | 2 |
+| 0.96531 | 2 |
+| 0.965318 | 2 |
+| 0.965334 | 2 |
+| 0.965341 | 2 |
+| 0.965349 | 2 |
+| 0.96535 | 2 |
+| 0.965364 | 2 |
+| 0.96538 | 2 |
+| 0.965399 | 2 |
+| 0.965404 | 2 |
+| 0.965408 | 2 |
+| 0.965415 | 2 |
+| 0.965426 | 2 |
+| 0.965432 | 2 |
+| 0.965442 | 2 |
+| 0.965444 | 2 |
+| 0.965447 | 2 |
+| 0.965458 | 2 |
+| 0.965461 | 2 |
+| 0.965467 | 2 |
+| 0.933938 | 1 |
+
+### files.proportion_coverage_30x
+
+| Value | Count |
+|-------|-------|
+| _missing | 4 |
+| 0.956877 | 3 |
+| 0.957485 | 3 |
+| 0.957679 | 3 |
+| 0.957942 | 3 |
+| 0.958091 | 3 |
+| 5.5e-05 | 2 |
+| 5.7e-05 | 2 |
+| 9.6e-05 | 2 |
+| 0.000109 | 2 |
+| 0.00014 | 2 |
+| 0.000163 | 2 |
+| 0.605774 | 2 |
+| 0.623759 | 2 |
+| 0.69216 | 2 |
+| 0.717594 | 2 |
+| 0.736448 | 2 |
+| 0.767919 | 2 |
+| 0.773178 | 2 |
+| 0.828584 | 2 |
+| 0.847268 | 2 |
+| 0.856215 | 2 |
+| 0.8672 | 2 |
+| 0.876834 | 2 |
+| 0.892042 | 2 |
+| 0.905215 | 2 |
+| 0.916611 | 2 |
+| 0.930677 | 2 |
+| 0.944791 | 2 |
+| 0.955905 | 2 |
+| 0.956103 | 2 |
+| 0.956444 | 2 |
+| 0.956694 | 2 |
+| 0.9567 | 2 |
+| 0.956852 | 2 |
+| 0.956983 | 2 |
+| 0.957148 | 2 |
+| 0.957163 | 2 |
+| 0.957283 | 2 |
+| 0.957349 | 2 |
+| 0.95738 | 2 |
+| 0.957574 | 2 |
+| 0.957631 | 2 |
+| 0.957694 | 2 |
+| 0.957709 | 2 |
+| 0.95775 | 2 |
+| 0.957837 | 2 |
+| 0.957849 | 2 |
+| 0.957885 | 2 |
+| 0.957981 | 2 |
+| 0.958008 | 2 |
+| 0.958014 | 2 |
+| 0.958022 | 2 |
+| 0.958097 | 2 |
+| 0.9581 | 2 |
+| 0.958285 | 2 |
+| 0.95831 | 2 |
+| 0.958316 | 2 |
+| 0.95832 | 2 |
+| 0.958322 | 2 |
+| 0.958368 | 2 |
+| 0.958376 | 2 |
+| 0.95839 | 2 |
+| 0.958421 | 2 |
+| 0.958437 | 2 |
+| 0.958447 | 2 |
+| 0.958557 | 2 |
+| 0.958581 | 2 |
+| 0.958618 | 2 |
+| 0.958636 | 2 |
+| 0.958737 | 2 |
+| 0.958755 | 2 |
+| 0.95876 | 2 |
+| 0.958767 | 2 |
+| 0.958806 | 2 |
+| 0.958825 | 2 |
+| 0.958907 | 2 |
+| 0.958926 | 2 |
+| 0.958955 | 2 |
+| 0.958959 | 2 |
+| 0.958995 | 2 |
+| 0.959062 | 2 |
+| 0.959064 | 2 |
+| 0.95907 | 2 |
+| 0.959136 | 2 |
+| 0.959225 | 2 |
+| 0.95927 | 2 |
+| 0.959469 | 2 |
+| 0.959526 | 2 |
+| 0.959565 | 2 |
+| 0.959663 | 2 |
+| 0.959735 | 2 |
+| 0.95997 | 2 |
+| 0.959973 | 2 |
+| 0.960079 | 2 |
+| 1.2e-05 | 1 |
+| 4.5e-05 | 1 |
+| 5.4e-05 | 1 |
+| 6.1e-05 | 1 |
+| 7e-05 | 1 |
+| 7.3e-05 | 1 |
+| 8.7e-05 | 1 |
+| 8.9e-05 | 1 |
+| 9.8e-05 | 1 |
+| 0.000101 | 1 |
+| 0.000104 | 1 |
+| 0.000113 | 1 |
+| 0.000127 | 1 |
+| 0.000131 | 1 |
+| 0.000134 | 1 |
+| 0.000135 | 1 |
+| 0.000139 | 1 |
+| 0.000141 | 1 |
+| 0.000144 | 1 |
+| 0.00015 | 1 |
+| 0.000181 | 1 |
+| 0.000197 | 1 |
+| 0.000388 | 1 |
+| 0.000614 | 1 |
+| 0.000649 | 1 |
+| 0.001348 | 1 |
+| 0.001904 | 1 |
+| 0.004557 | 1 |
+| 0.008906 | 1 |
+| 0.032074 | 1 |
+| 0.033701 | 1 |
+| 0.054793 | 1 |
+| 0.066785 | 1 |
+| 0.14335 | 1 |
+| 0.264957 | 1 |
+| 0.277873 | 1 |
+| 0.352943 | 1 |
+| 0.355043 | 1 |
+| 0.367412 | 1 |
+| 0.369046 | 1 |
+| 0.369693 | 1 |
+| 0.372227 | 1 |
+| 0.374408 | 1 |
+| 0.37655 | 1 |
+| 0.376596 | 1 |
+| 0.377982 | 1 |
+| 0.385958 | 1 |
+| 0.386993 | 1 |
+| 0.387974 | 1 |
+| 0.389293 | 1 |
+| 0.398411 | 1 |
+| 0.401302 | 1 |
+| 0.401321 | 1 |
+| 0.402116 | 1 |
+| 0.402145 | 1 |
+| 0.404167 | 1 |
+| 0.406496 | 1 |
+| 0.408712 | 1 |
+| 0.410718 | 1 |
+| 0.412153 | 1 |
+| 0.412158 | 1 |
+| 0.416036 | 1 |
+| 0.416521 | 1 |
+| 0.418648 | 1 |
+| 0.418679 | 1 |
+| 0.419434 | 1 |
+| 0.419852 | 1 |
+| 0.420123 | 1 |
+| 0.420377 | 1 |
+| 0.421074 | 1 |
+| 0.42121 | 1 |
+| 0.421634 | 1 |
+| 0.422667 | 1 |
+| 0.424412 | 1 |
+| 0.425935 | 1 |
+| 0.426047 | 1 |
+| 0.427228 | 1 |
+| 0.428933 | 1 |
+| 0.430387 | 1 |
+| 0.430759 | 1 |
+| 0.435091 | 1 |
+| 0.435154 | 1 |
+| 0.435968 | 1 |
+| 0.436182 | 1 |
+| 0.43713 | 1 |
+| 0.437801 | 1 |
+| 0.438481 | 1 |
+| 0.438895 | 1 |
+| 0.439147 | 1 |
+| 0.439789 | 1 |
+| 0.44191 | 1 |
+| 0.44211 | 1 |
+| 0.443462 | 1 |
+| 0.445097 | 1 |
+| 0.445228 | 1 |
+| 0.44583 | 1 |
+| 0.446009 | 1 |
+| 0.44641 | 1 |
+| 0.447051 | 1 |
+| 0.447325 | 1 |
+| 0.44824 | 1 |
+| 0.450053 | 1 |
+| 0.450524 | 1 |
+| 0.450759 | 1 |
+| 0.45279 | 1 |
+| 0.453393 | 1 |
+
+### files.proportion_reads_duplicated
+
+| Value | Count |
+|-------|-------|
+| 0.0 | 1095 |
+| 0.008287433 | 1 |
+| 0.008642284 | 1 |
+| 0.009199697 | 1 |
+| 0.009253782 | 1 |
+| 0.009463267 | 1 |
+| 0.009568907 | 1 |
+| 0.009577435 | 1 |
+| 0.009627986 | 1 |
+| 0.009712257 | 1 |
+| 0.010290902 | 1 |
+| 0.010305288 | 1 |
+| 0.01041164 | 1 |
+| 0.01041944 | 1 |
+| 0.010493315 | 1 |
+| 0.010630478 | 1 |
+| 0.010804524 | 1 |
+| 0.011084431 | 1 |
+| 0.011090534 | 1 |
+| 0.011104787 | 1 |
+| 0.011211862 | 1 |
+| 0.011213586 | 1 |
+| 0.011270142 | 1 |
+| 0.011422734 | 1 |
+| 0.012002773 | 1 |
+| 0.012166686 | 1 |
+| 0.012173622 | 1 |
+| 0.012198783 | 1 |
+| 0.012266854 | 1 |
+| 0.013168907 | 1 |
+| 0.013456461 | 1 |
+| 0.013514025 | 1 |
+| 0.01359638 | 1 |
+| 0.013680239 | 1 |
+| 0.014400488 | 1 |
+| 0.0149931 | 1 |
+| 0.015472501 | 1 |
+| 0.016725985 | 1 |
+| 0.017015114 | 1 |
+| 0.017593682 | 1 |
+| 0.01902907258269752 | 1 |
+| 0.020554518 | 1 |
+| 0.022028843562975776 | 1 |
+| 0.023037076978300465 | 1 |
+| 0.023330753048149674 | 1 |
+| 0.02377897827577356 | 1 |
+| 0.024075954 | 1 |
+| 0.024385887 | 1 |
+| 0.025147245 | 1 |
+| 0.025498849 | 1 |
+| 0.026019051 | 1 |
+| 0.026291686 | 1 |
+| 0.02660440512103249 | 1 |
+| 0.027181614 | 1 |
+| 0.027327012 | 1 |
+| 0.027463124381856642 | 1 |
+| 0.027626639837389916 | 1 |
+| 0.02863491993980272 | 1 |
+| 0.028838864 | 1 |
+| 0.029304441 | 1 |
+| 0.029749706681146036 | 1 |
+| 0.029933662 | 1 |
+| 0.030046382 | 1 |
+| 0.030916612337496086 | 1 |
+| 0.03093377 | 1 |
+| 0.031049072545476928 | 1 |
+| 0.03129183945362439 | 1 |
+| 0.031323777 | 1 |
+| 0.031376254 | 1 |
+| 0.031595106 | 1 |
+| 0.031730522 | 1 |
+| 0.03212359747959836 | 1 |
+| 0.032558564 | 1 |
+| 0.032726514 | 1 |
+| 0.032842316 | 1 |
+| 0.03284332971605295 | 1 |
+| 0.032966383 | 1 |
+| 0.03376889 | 1 |
+| 0.033804803 | 1 |
+| 0.03408080716818415 | 1 |
+| 0.034122022 | 1 |
+| 0.034638467620838186 | 1 |
+| 0.034704572 | 1 |
+| 0.034933692 | 1 |
+| 0.035109886 | 1 |
+| 0.035296904 | 1 |
+| 0.03536824 | 1 |
+| 0.03540021428438065 | 1 |
+| 0.035577035 | 1 |
+| 0.03573226448304482 | 1 |
+| 0.0357467 | 1 |
+| 0.035784955 | 1 |
+| 0.03580274554864049 | 1 |
+| 0.036052081 | 1 |
+| 0.036234328 | 1 |
+| 0.036256409 | 1 |
+| 0.03633351952035479 | 1 |
+| 0.036369662 | 1 |
+| 0.036632513 | 1 |
+| 0.036653915 | 1 |
+| 0.03683104356604523 | 1 |
+| 0.036974542 | 1 |
+| 0.037118129 | 1 |
+| 0.03712645021358119 | 1 |
+| 0.03713174097999976 | 1 |
+| 0.03730639 | 1 |
+| 0.037423091 | 1 |
+| 0.03757348912843283 | 1 |
+| 0.037669884 | 1 |
+| 0.03776834090833751 | 1 |
+| 0.037798638045339894 | 1 |
+| 0.03799066538241205 | 1 |
+| 0.03801058996817521 | 1 |
+| 0.03809065645671338 | 1 |
+| 0.038138378 | 1 |
+| 0.03824863644554831 | 1 |
+| 0.03835486096963438 | 1 |
+| 0.038416888349839855 | 1 |
+| 0.038491211 | 1 |
+| 0.03857235848810082 | 1 |
+| 0.03858925721005014 | 1 |
+| 0.038608052 | 1 |
+| 0.03905004277801455 | 1 |
+| 0.03915403607086852 | 1 |
+| 0.039316566 | 1 |
+| 0.039520172365959005 | 1 |
+| 0.039567566904964865 | 1 |
+| 0.039704149 | 1 |
+| 0.03976750835928972 | 1 |
+| 0.039870724 | 1 |
+| 0.04007800940215012 | 1 |
+| 0.04014595970416377 | 1 |
+| 0.040191154468149734 | 1 |
+| 0.04019240568444894 | 1 |
+| 0.04027613281297267 | 1 |
+| 0.040370244040401404 | 1 |
+| 0.040444341 | 1 |
+| 0.04085321687090361 | 1 |
+| 0.04111277005707395 | 1 |
+| 0.04123623589218059 | 1 |
+| 0.041264269135833025 | 1 |
+| 0.041548009 | 1 |
+| 0.041730931 | 1 |
+| 0.04191537170192472 | 1 |
+| 0.042030965270085686 | 1 |
+| 0.04209309824341721 | 1 |
+| 0.04217950603402799 | 1 |
+| 0.04224035598314083 | 1 |
+| 0.042305702 | 1 |
+| 0.04233586136668533 | 1 |
+| 0.042401063348880996 | 1 |
+| 0.04267441680801944 | 1 |
+| 0.04272926316756625 | 1 |
+| 0.042783954 | 1 |
+| 0.042926156233380454 | 1 |
+| 0.042946897 | 1 |
+| 0.04303064133396602 | 1 |
+| 0.04305665854236368 | 1 |
+| 0.04332678645421182 | 1 |
+| 0.043616864 | 1 |
+| 0.04410748181209305 | 1 |
+| 0.04418208480226886 | 1 |
+| 0.044462288 | 1 |
+| 0.04450563 | 1 |
+| 0.044547148 | 1 |
+| 0.04476379786969948 | 1 |
+| 0.04490195633211141 | 1 |
+| 0.04495794047598959 | 1 |
+| 0.045002521 | 1 |
+| 0.04522947079851999 | 1 |
+| 0.045265617655851714 | 1 |
+| 0.04534341032563296 | 1 |
+| 0.04541614670835754 | 1 |
+| 0.045422259 | 1 |
+| 0.0455641909522214 | 1 |
+| 0.045768843 | 1 |
+| 0.045820900237271665 | 1 |
+| 0.046057447 | 1 |
+| 0.04612401440193376 | 1 |
+| 0.046199527 | 1 |
+| 0.04622015986955883 | 1 |
+| 0.04636337748755677 | 1 |
+| 0.04638998036123228 | 1 |
+| 0.04639280353229488 | 1 |
+| 0.04640784009582798 | 1 |
+| 0.046414652 | 1 |
+| 0.04647521928126499 | 1 |
+| 0.046729975 | 1 |
+| 0.04683142618924263 | 1 |
+| 0.046879379866699336 | 1 |
+| 0.04716219154605842 | 1 |
+| 0.047246299 | 1 |
+| 0.04724766374914696 | 1 |
+| 0.04744262779344643 | 1 |
+| 0.047467321 | 1 |
+| 0.04759150011986653 | 1 |
+| 0.047766589 | 1 |
+| 0.04787658521316608 | 1 |
+| 0.04802178 | 1 |
+| 0.04851821286146196 | 1 |
+
+### files.proportion_reads_mapped
+
+| Value | Count |
+|-------|-------|
+| 0.282079871 | 1 |
+| 0.4620948910057368 | 1 |
+| 0.48573595553310117 | 1 |
+| 0.5390140819823522 | 1 |
+| 0.5404624182571814 | 1 |
+| 0.5720581067289343 | 1 |
+| 0.5742028250560601 | 1 |
+| 0.646371173197493 | 1 |
+| 0.6933551569756023 | 1 |
+| 0.7012829148335213 | 1 |
+| 0.7637468293511533 | 1 |
+| 0.7660207369460306 | 1 |
+| 0.7826852738250067 | 1 |
+| 0.786147525909264 | 1 |
+| 0.788067735734378 | 1 |
+| 0.7934771102145447 | 1 |
+| 0.8070350322874998 | 1 |
+| 0.8117089691357897 | 1 |
+| 0.8126951691572861 | 1 |
+| 0.8131947453296243 | 1 |
+| 0.8143115306100915 | 1 |
+| 0.8175468603824556 | 1 |
+| 0.8248492013373486 | 1 |
+| 0.8260853780946709 | 1 |
+| 0.8281762411023671 | 1 |
+| 0.8393396232494419 | 1 |
+| 0.8464059250007464 | 1 |
+| 0.849604112794703 | 1 |
+| 0.8517256882845563 | 1 |
+| 0.8534480129636908 | 1 |
+| 0.8543539378081707 | 1 |
+| 0.8602839788053722 | 1 |
+| 0.863272161 | 1 |
+| 0.8655784817452962 | 1 |
+| 0.8689266751409739 | 1 |
+| 0.873690366074587 | 1 |
+| 0.8852210986544408 | 1 |
+| 0.8877495170029767 | 1 |
+| 0.8881110439030157 | 1 |
+| 0.8890907097148626 | 1 |
+| 0.8913439283574821 | 1 |
+| 0.8952873282721423 | 1 |
+| 0.8984941199743013 | 1 |
+| 0.9003614208653319 | 1 |
+| 0.9024318681471876 | 1 |
+| 0.9041118918234717 | 1 |
+| 0.9071678346360583 | 1 |
+| 0.9098751454879713 | 1 |
+| 0.912147698299593 | 1 |
+| 0.9122280324516051 | 1 |
+| 0.9136046064695793 | 1 |
+| 0.9138412972972659 | 1 |
+| 0.9168523500845198 | 1 |
+| 0.9182449219819088 | 1 |
+| 0.9185141099956651 | 1 |
+| 0.9211650069293704 | 1 |
+| 0.9220620281023467 | 1 |
+| 0.9237454176474059 | 1 |
+| 0.9240998857864255 | 1 |
+| 0.9253229429862699 | 1 |
+| 0.9274375226123288 | 1 |
+| 0.9296441397115918 | 1 |
+| 0.9305658728872828 | 1 |
+| 0.9309455552704824 | 1 |
+| 0.9334659618367642 | 1 |
+| 0.9339470778633716 | 1 |
+| 0.9343649115399727 | 1 |
+| 0.9350357622420576 | 1 |
+| 0.9354722815835068 | 1 |
+| 0.9355360762346678 | 1 |
+| 0.9357409032465028 | 1 |
+| 0.9359588314577171 | 1 |
+| 0.9377819448148349 | 1 |
+| 0.9379530950626528 | 1 |
+| 0.9381116375947665 | 1 |
+| 0.9382930226016061 | 1 |
+| 0.9390112386500996 | 1 |
+| 0.940306960717621 | 1 |
+| 0.9403638474460592 | 1 |
+| 0.9405378005244195 | 1 |
+| 0.9407911693079978 | 1 |
+| 0.9410239042061305 | 1 |
+| 0.9411397540638151 | 1 |
+| 0.9423433295619458 | 1 |
+| 0.94360554310904 | 1 |
+| 0.944155388088715 | 1 |
+| 0.9458313764832431 | 1 |
+| 0.9466930695007004 | 1 |
+| 0.9476815875704798 | 1 |
+| 0.9480647056037057 | 1 |
+| 0.9485306166005909 | 1 |
+| 0.9490603793041227 | 1 |
+| 0.9492847605882259 | 1 |
+| 0.9493142994956101 | 1 |
+| 0.9494982539255883 | 1 |
+| 0.9495642975694815 | 1 |
+| 0.9496599886232832 | 1 |
+| 0.9496944467441598 | 1 |
+| 0.9498083562561396 | 1 |
+| 0.9500199156549354 | 1 |
+| 0.9500661755790424 | 1 |
+| 0.9500933617365265 | 1 |
+| 0.9509714988254018 | 1 |
+| 0.95112046303007 | 1 |
+| 0.9514817886648945 | 1 |
+| 0.9518956666793462 | 1 |
+| 0.9519428660126891 | 1 |
+| 0.9520138635925961 | 1 |
+| 0.9520232778473503 | 1 |
+| 0.9520322466384843 | 1 |
+| 0.9527448049594114 | 1 |
+| 0.9530159133800805 | 1 |
+| 0.953023995795776 | 1 |
+| 0.9530353509588669 | 1 |
+| 0.9531134585011115 | 1 |
+| 0.9531713069272492 | 1 |
+| 0.9533112684398007 | 1 |
+| 0.9535259436304776 | 1 |
+| 0.9535621521326506 | 1 |
+| 0.9536354126645777 | 1 |
+| 0.9541083464452489 | 1 |
+| 0.9541499812049435 | 1 |
+| 0.9543984913289479 | 1 |
+| 0.9547349718023578 | 1 |
+| 0.9547599149033597 | 1 |
+| 0.9549054807913172 | 1 |
+| 0.9553716145997392 | 1 |
+| 0.9556931695985151 | 1 |
+| 0.9557000629835752 | 1 |
+| 0.9557120715714943 | 1 |
+| 0.9557596359345125 | 1 |
+| 0.9558054451058968 | 1 |
+| 0.9558069229720401 | 1 |
+| 0.9558846754979484 | 1 |
+| 0.9560715844154903 | 1 |
+| 0.9561277140886507 | 1 |
+| 0.9561653049823763 | 1 |
+| 0.9562103 | 1 |
+| 0.9562851705702261 | 1 |
+| 0.9563401399950057 | 1 |
+| 0.956432550985795 | 1 |
+| 0.9564793415469697 | 1 |
+| 0.9565148355415745 | 1 |
+| 0.9565829120503985 | 1 |
+| 0.956634885 | 1 |
+| 0.9570928926038466 | 1 |
+| 0.9574117686471019 | 1 |
+| 0.9574278048559026 | 1 |
+| 0.9575662319932752 | 1 |
+| 0.957729189582693 | 1 |
+| 0.9577611967141164 | 1 |
+| 0.957824879523313 | 1 |
+| 0.9578931853844804 | 1 |
+| 0.9580344140037997 | 1 |
+| 0.9585827018347205 | 1 |
+| 0.9586711386933564 | 1 |
+| 0.9587054941248443 | 1 |
+| 0.9589271784355257 | 1 |
+| 0.9594603335351494 | 1 |
+| 0.95946872 | 1 |
+| 0.9594746878683578 | 1 |
+| 0.9595726500042077 | 1 |
+| 0.959581342 | 1 |
+| 0.9597651368085781 | 1 |
+| 0.959851328 | 1 |
+| 0.9598845054668877 | 1 |
+| 0.9599613302475499 | 1 |
+| 0.9600574278112768 | 1 |
+| 0.9601439849948908 | 1 |
+| 0.9602780086973945 | 1 |
+| 0.960357979 | 1 |
+| 0.9606284067097083 | 1 |
+| 0.9606956230228252 | 1 |
+| 0.9607528934666607 | 1 |
+| 0.960888003937557 | 1 |
+| 0.9608990223104666 | 1 |
+| 0.9609890184455789 | 1 |
+| 0.9610092974845306 | 1 |
+| 0.9611633168504025 | 1 |
+| 0.9612641625781944 | 1 |
+| 0.9613955225475059 | 1 |
+| 0.9616091927993975 | 1 |
+| 0.9616711750173206 | 1 |
+| 0.961767276 | 1 |
+| 0.961808971 | 1 |
+| 0.961923259306945 | 1 |
+| 0.9619552234555626 | 1 |
+| 0.9620789331407146 | 1 |
+| 0.9621579085782331 | 1 |
+| 0.9621622424832317 | 1 |
+| 0.9623399521395017 | 1 |
+| 0.9624153260126079 | 1 |
+| 0.9625478618471689 | 1 |
+| 0.9626077886352338 | 1 |
+| 0.962726285889841 | 1 |
+| 0.962764509 | 1 |
+| 0.9629229626837024 | 1 |
+| 0.9629332798983271 | 1 |
+| 0.9629556578983208 | 1 |
+| 0.9632295976343336 | 1 |
+
+### files.proportion_targets_no_coverage
+
+| Value | Count |
+|-------|-------|
+| _missing | 26 |
+| 0.013106 | 6 |
+| 0.010195 | 5 |
+| 0.011543 | 5 |
+| 0.018838 | 5 |
+| 0.019849 | 5 |
+| 0.02038 | 5 |
+| 0.010111 | 4 |
+| 0.011222 | 4 |
+| 0.011601 | 4 |
+| 0.011764 | 4 |
+| 0.011954 | 4 |
+| 0.012385 | 4 |
+| 0.012475 | 4 |
+| 0.012848 | 4 |
+| 0.013233 | 4 |
+| 0.013269 | 4 |
+| 0.014791 | 4 |
+| 0.015185 | 4 |
+| 0.015796 | 4 |
+| 0.016933 | 4 |
+| 0.017733 | 4 |
+| 0.018007 | 4 |
+| 0.018428 | 4 |
+| 0.019186 | 4 |
+| 0.020275 | 4 |
+| 0.009532 | 3 |
+| 0.009874 | 3 |
+| 0.010011 | 3 |
+| 0.010185 | 3 |
+| 0.010295 | 3 |
+| 0.010348 | 3 |
+| 0.010701 | 3 |
+| 0.010753 | 3 |
+| 0.010838 | 3 |
+| 0.01099 | 3 |
+| 0.011069 | 3 |
+| 0.011117 | 3 |
+| 0.011196 | 3 |
+| 0.011322 | 3 |
+| 0.011432 | 3 |
+| 0.011448 | 3 |
+| 0.011532 | 3 |
+| 0.011617 | 3 |
+| 0.011638 | 3 |
+| 0.011664 | 3 |
+| 0.011685 | 3 |
+| 0.011854 | 3 |
+| 0.011859 | 3 |
+| 0.011885 | 3 |
+| 0.011922 | 3 |
+| 0.011959 | 3 |
+| 0.01198 | 3 |
+| 0.01199 | 3 |
+| 0.012038 | 3 |
+| 0.01209 | 3 |
+| 0.012154 | 3 |
+| 0.012301 | 3 |
+| 0.012359 | 3 |
+| 0.01239 | 3 |
+| 0.012417 | 3 |
+| 0.012554 | 3 |
+| 0.012596 | 3 |
+| 0.012659 | 3 |
+| 0.012764 | 3 |
+| 0.012901 | 3 |
+| 0.012996 | 3 |
+| 0.013043 | 3 |
+| 0.013048 | 3 |
+| 0.013338 | 3 |
+| 0.013385 | 3 |
+| 0.013417 | 3 |
+| 0.013438 | 3 |
+| 0.013496 | 3 |
+| 0.013717 | 3 |
+| 0.013912 | 3 |
+| 0.01398 | 3 |
+| 0.014217 | 3 |
+| 0.014564 | 3 |
+| 0.014596 | 3 |
+| 0.014606 | 3 |
+| 0.01468 | 3 |
+| 0.014891 | 3 |
+| 0.014906 | 3 |
+| 0.015101 | 3 |
+| 0.015454 | 3 |
+| 0.015527 | 3 |
+| 0.016043 | 3 |
+| 0.016301 | 3 |
+| 0.016391 | 3 |
+| 0.016464 | 3 |
+| 0.016538 | 3 |
+| 0.016796 | 3 |
+| 0.016807 | 3 |
+| 0.016912 | 3 |
+| 0.017064 | 3 |
+| 0.017175 | 3 |
+| 0.017496 | 3 |
+| 0.017533 | 3 |
+| 0.017607 | 3 |
+| 0.017738 | 3 |
+| 0.01777 | 3 |
+| 0.017817 | 3 |
+| 0.01798 | 3 |
+| 0.018133 | 3 |
+| 0.018201 | 3 |
+| 0.018254 | 3 |
+| 0.018396 | 3 |
+| 0.018486 | 3 |
+| 0.01868 | 3 |
+| 0.018801 | 3 |
+| 0.019096 | 3 |
+| 0.019101 | 3 |
+| 0.019244 | 3 |
+| 0.019265 | 3 |
+| 0.019291 | 3 |
+| 0.019375 | 3 |
+| 0.01948 | 3 |
+| 0.019707 | 3 |
+| 0.019712 | 3 |
+| 0.020028 | 3 |
+| 0.020138 | 3 |
+| 0.021196 | 3 |
+| 0.021217 | 3 |
+| 0.021802 | 3 |
+| 0.009295 | 2 |
+| 0.009322 | 2 |
+| 0.009332 | 2 |
+| 0.009574 | 2 |
+| 0.00959 | 2 |
+| 0.009632 | 2 |
+| 0.009643 | 2 |
+| 0.009727 | 2 |
+| 0.009759 | 2 |
+| 0.009774 | 2 |
+| 0.009806 | 2 |
+| 0.009932 | 2 |
+| 0.009948 | 2 |
+| 0.009953 | 2 |
+| 0.010059 | 2 |
+| 0.010248 | 2 |
+| 0.01028 | 2 |
+| 0.010301 | 2 |
+| 0.010338 | 2 |
+| 0.010343 | 2 |
+| 0.010364 | 2 |
+| 0.010417 | 2 |
+| 0.010459 | 2 |
+| 0.010522 | 2 |
+| 0.010543 | 2 |
+| 0.010548 | 2 |
+| 0.010559 | 2 |
+| 0.010748 | 2 |
+| 0.010759 | 2 |
+| 0.01079 | 2 |
+| 0.010811 | 2 |
+| 0.010869 | 2 |
+| 0.01098 | 2 |
+| 0.010985 | 2 |
+| 0.011001 | 2 |
+| 0.011043 | 2 |
+| 0.011048 | 2 |
+| 0.011053 | 2 |
+| 0.011085 | 2 |
+| 0.011096 | 2 |
+| 0.011101 | 2 |
+| 0.011106 | 2 |
+| 0.011132 | 2 |
+| 0.011138 | 2 |
+| 0.011143 | 2 |
+| 0.011153 | 2 |
+| 0.011243 | 2 |
+| 0.011253 | 2 |
+| 0.011264 | 2 |
+| 0.011275 | 2 |
+| 0.011285 | 2 |
+| 0.011306 | 2 |
+| 0.011317 | 2 |
+| 0.011338 | 2 |
+| 0.011427 | 2 |
+| 0.011464 | 2 |
+| 0.011469 | 2 |
+| 0.011548 | 2 |
+| 0.011553 | 2 |
+| 0.011564 | 2 |
+| 0.011575 | 2 |
+| 0.011622 | 2 |
+| 0.011632 | 2 |
+| 0.011659 | 2 |
+| 0.01169 | 2 |
+| 0.011706 | 2 |
+| 0.011817 | 2 |
+| 0.011838 | 2 |
+| 0.011843 | 2 |
+| 0.01188 | 2 |
+| 0.01189 | 2 |
+| 0.011896 | 2 |
+| 0.011985 | 2 |
+| 0.011996 | 2 |
+| 0.012011 | 2 |
+| 0.012048 | 2 |
+
+### files.read_pair_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.revision
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.stain_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.state_comment
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.subclonal_genome_fraction
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.tags
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.tmb
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.tmb_exonic
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.tmb_nonsynonymous
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.tmb_nonsynonymous_exonic
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### files.total_reads
+
+| Value | Count |
+|-------|-------|
+| 25180632 | 1 |
+| 43613480 | 1 |
+| 44861714 | 1 |
+| 45675684 | 1 |
+| 46772894 | 1 |
+| 47388954 | 1 |
+| 47899912 | 1 |
+| 48427982 | 1 |
+| 48475492 | 1 |
+| 48480516 | 1 |
+| 48600902 | 1 |
+| 48675786 | 1 |
+| 50261138 | 1 |
+| 50709182 | 1 |
+| 50771090 | 1 |
+| 50898684 | 1 |
+| 50937978 | 1 |
+| 51299344 | 1 |
+| 51545952 | 1 |
+| 51696730 | 1 |
+| 51774784 | 1 |
+| 52533328 | 1 |
+| 52534114 | 1 |
+| 52912780 | 1 |
+| 53052594 | 1 |
+| 53151172 | 1 |
+| 53339532 | 1 |
+| 53579478 | 1 |
+| 53924430 | 1 |
+| 54084432 | 1 |
+| 54711316 | 1 |
+| 54746704 | 1 |
+| 54826638 | 1 |
+| 54949702 | 1 |
+| 54989378 | 1 |
+| 54995964 | 1 |
+| 55397146 | 1 |
+| 55407326 | 1 |
+| 55469276 | 1 |
+| 55479480 | 1 |
+| 55651690 | 1 |
+| 55674604 | 1 |
+| 56219174 | 1 |
+| 56221814 | 1 |
+| 56312354 | 1 |
+| 56344386 | 1 |
+| 56668532 | 1 |
+| 56775906 | 1 |
+| 57035158 | 1 |
+| 57441764 | 1 |
+| 57883796 | 1 |
+| 57890232 | 1 |
+| 57907274 | 1 |
+| 57978646 | 1 |
+| 58286682 | 1 |
+| 58664264 | 1 |
+| 58735858 | 1 |
+| 58812062 | 1 |
+| 59089810 | 1 |
+| 59127710 | 1 |
+| 59292394 | 1 |
+| 59590782 | 1 |
+| 59662522 | 1 |
+| 59728530 | 1 |
+| 59734748 | 1 |
+| 59861332 | 1 |
+| 59887388 | 1 |
+| 59930244 | 1 |
+| 60169010 | 1 |
+| 60249702 | 1 |
+| 60298296 | 1 |
+| 60360088 | 1 |
+| 60466328 | 1 |
+| 60661530 | 1 |
+| 61219344 | 1 |
+| 61244002 | 1 |
+| 61278758 | 1 |
+| 61425312 | 1 |
+| 61514670 | 1 |
+| 61557010 | 1 |
+| 61738388 | 1 |
+| 61771020 | 1 |
+| 61779308 | 1 |
+| 61796112 | 1 |
+| 61812502 | 1 |
+| 61949764 | 1 |
+| 62021562 | 1 |
+| 62490510 | 1 |
+| 62553194 | 1 |
+| 62566048 | 1 |
+| 62697216 | 1 |
+| 62713374 | 1 |
+| 62790324 | 1 |
+| 62844740 | 1 |
+| 63024758 | 1 |
+| 63085748 | 1 |
+| 63276178 | 1 |
+| 63305730 | 1 |
+| 63442266 | 1 |
+| 63452884 | 1 |
+| 63585070 | 1 |
+| 63641518 | 1 |
+| 63659708 | 1 |
+| 63691838 | 1 |
+| 63709774 | 1 |
+| 63718958 | 1 |
+| 63753724 | 1 |
+| 63855278 | 1 |
+| 63886212 | 1 |
+| 63927110 | 1 |
+| 64172464 | 1 |
+| 64309374 | 1 |
+| 64319446 | 1 |
+| 64387728 | 1 |
+| 64528890 | 1 |
+| 64673932 | 1 |
+| 64678040 | 1 |
+| 64708268 | 1 |
+| 64715136 | 1 |
+| 64759168 | 1 |
+| 64825974 | 1 |
+| 64938168 | 1 |
+| 65046818 | 1 |
+| 65224994 | 1 |
+| 65573708 | 1 |
+| 65734954 | 1 |
+| 65753024 | 1 |
+| 65782042 | 1 |
+| 65923306 | 1 |
+| 66196444 | 1 |
+| 66273002 | 1 |
+| 66415268 | 1 |
+| 66457674 | 1 |
+| 66570506 | 1 |
+| 66644778 | 1 |
+| 66692122 | 1 |
+| 66757530 | 1 |
+| 66780918 | 1 |
+| 66793208 | 1 |
+| 67074056 | 1 |
+| 67180068 | 1 |
+| 67216144 | 1 |
+| 67458574 | 1 |
+| 67518868 | 1 |
+| 67535164 | 1 |
+| 67538278 | 1 |
+| 67831202 | 1 |
+| 67840182 | 1 |
+| 67932008 | 1 |
+| 67979618 | 1 |
+| 68078992 | 1 |
+| 68281972 | 1 |
+| 68305158 | 1 |
+| 68311274 | 1 |
+| 68312030 | 1 |
+| 68336848 | 1 |
+| 68369166 | 1 |
+| 68428686 | 1 |
+| 68465804 | 1 |
+| 68839400 | 1 |
+| 68887854 | 1 |
+| 69060492 | 1 |
+| 69068270 | 1 |
+| 69110004 | 1 |
+| 69449956 | 1 |
+| 69495214 | 1 |
+| 69611420 | 1 |
+| 69653426 | 1 |
+| 69669650 | 1 |
+| 69838668 | 1 |
+| 69866462 | 1 |
+| 69911814 | 1 |
+| 69947046 | 1 |
+| 69965038 | 1 |
+| 70013642 | 1 |
+| 70038278 | 1 |
+| 70143780 | 1 |
+| 70197908 | 1 |
+| 70225006 | 1 |
+| 70274738 | 1 |
+| 70299880 | 1 |
+| 70423106 | 1 |
+| 70511714 | 1 |
+| 70518748 | 1 |
+| 70533202 | 1 |
+| 70666604 | 1 |
+| 70826012 | 1 |
+| 70877742 | 1 |
+| 70958910 | 1 |
+| 71023328 | 1 |
+| 71114766 | 1 |
+| 71268372 | 1 |
+| 71281770 | 1 |
+| 71368350 | 1 |
+| 71377364 | 1 |
+| 71386822 | 1 |
+| 71517808 | 1 |
+| 71688576 | 1 |
+| 71759980 | 1 |
+| 71993268 | 1 |
+
+### files.tumor_ploidy
+
+| Value | Count |
+|-------|-------|
+| _missing | 926 |
+| 1.68110942429001 | 1 |
+| 1.75779284479348 | 1 |
+| 1.79848157722561 | 1 |
+| 1.80214333549328 | 1 |
+| 1.82386152749971 | 1 |
+| 1.87228860169606 | 1 |
+| 1.97045459102415 | 1 |
+| 1.98004304006779 | 1 |
+| 1.9971551114519 | 1 |
+| 1.99889633873786 | 1 |
+| 1.99952640123461 | 1 |
+| 2.0050648203828 | 1 |
+| 2.0184584105956 | 1 |
+| 2.01872294131893 | 1 |
+| 2.02218279240744 | 1 |
+| 2.02840353444535 | 1 |
+| 2.04574349706207 | 1 |
+| 2.0607792162757 | 1 |
+| 2.06593311910349 | 1 |
+| 2.07464190346013 | 1 |
+| 2.08672325015928 | 1 |
+| 2.09001851974265 | 1 |
+| 2.09295447475077 | 1 |
+| 2.10301723157139 | 1 |
+| 2.10681410023385 | 1 |
+| 2.12861866690948 | 1 |
+| 2.13713722553863 | 1 |
+| 2.18295917090294 | 1 |
+| 2.34090461797037 | 1 |
+| 2.37326465277883 | 1 |
+| 2.57757667403694 | 1 |
+| 2.79290434496187 | 1 |
+| 2.80274958473426 | 1 |
+| 2.80709477305666 | 1 |
+| 2.85756375859657 | 1 |
+| 2.99272097955221 | 1 |
+| 3.02216382229229 | 1 |
+| 3.04583616677675 | 1 |
+| 3.06820687910017 | 1 |
+| 3.09135421237682 | 1 |
+| 3.12108222279298 | 1 |
+| 3.16951703609275 | 1 |
+| 3.17616058961317 | 1 |
+| 3.30180326163064 | 1 |
+| 3.33520545434631 | 1 |
+| 3.36840267933952 | 1 |
+| 3.40189919190354 | 1 |
+| 3.44386620766563 | 1 |
+| 3.46035099430687 | 1 |
+| 3.4708406099281 | 1 |
+| 3.49033192880242 | 1 |
+| 3.49575287566839 | 1 |
+| 3.54878998790259 | 1 |
+| 3.58090404124686 | 1 |
+| 3.5815330051439 | 1 |
+| 3.59377990508448 | 1 |
+| 3.59944357757406 | 1 |
+| 3.61630169129641 | 1 |
+| 3.64313792634486 | 1 |
+| 3.66301826494657 | 1 |
+| 3.69431051056714 | 1 |
+| 3.7441214834709 | 1 |
+| 3.77346381776972 | 1 |
+| 3.78066027892223 | 1 |
+| 3.78445922990268 | 1 |
+| 3.85719454451069 | 1 |
+| 3.86424638613333 | 1 |
+| 3.8810539407619 | 1 |
+| 3.88514828630321 | 1 |
+| 3.89011274831345 | 1 |
+| 3.89878783182352 | 1 |
+| 3.96764219633164 | 1 |
+| 4.03159535747437 | 1 |
+| 4.12652554613969 | 1 |
+| 4.17369608171485 | 1 |
+| 4.1967107601838 | 1 |
+| 4.2462190954447 | 1 |
+| 4.25025914095316 | 1 |
+| 4.2544885880966 | 1 |
+| 4.35619786970243 | 1 |
+| 4.8227783560428 | 1 |
+| 1.6866745007658 | 1 |
+| 1.6866745007658002 | 1 |
+| 1.87746137714654 | 1 |
+| 1.88220542824639 | 1 |
+| 1.8988010054929298 | 1 |
+| 1.89880100549293 | 1 |
+| 1.91921361174152 | 1 |
+| 1.9192136117415202 | 1 |
+| 1.92891758191148 | 1 |
+| 1.9412907983491299 | 1 |
+| 1.94129079834913 | 1 |
+| 1.94223017341892 | 1 |
+| 1.9440853048983704 | 1 |
+| 1.94648850196286 | 1 |
+| 1.9464885019628602 | 1 |
+| 1.94960547165978 | 1 |
+| 1.9496054716597802 | 1 |
+| 1.96675358928278 | 1 |
+| 1.9756093330803999 | 1 |
+| 1.9756093330804 | 1 |
+| 1.97931295716062 | 1 |
+| 1.9830889744513798 | 1 |
+| 1.98308897445138 | 1 |
+| 1.9939582098222899 | 1 |
+| 1.99395820982229 | 1 |
+| 1.99478893225124 | 1 |
+| 1.99939434355889 | 1 |
+| 1.9996825014981 | 1 |
+| 1.9996825014981001 | 1 |
+| 2.00047573017538 | 1 |
+| 2.00277377855396 | 1 |
+| 2.01136888851803 | 1 |
+| 2.02011824499308 | 1 |
+| 2.0203611854843 | 1 |
+| 2.02702153508026 | 1 |
+| 2.03136783866018 | 1 |
+| 2.04134297347156 | 1 |
+| 2.0507146045407096 | 1 |
+| 2.05245766189915 | 1 |
+| 2.0549263130748896 | 1 |
+| 2.05575907648877 | 1 |
+| 2.0575088579994603 | 1 |
+| 2.05798890577277 | 1 |
+| 2.07412779970218 | 1 |
+| 2.0768008999826004 | 1 |
+| 2.07845752388856 | 1 |
+| 2.08580888842894 | 1 |
+| 2.08956315531984 | 1 |
+| 2.1049410757071496 | 1 |
+| 2.10494107570715 | 1 |
+| 2.1073467328678 | 1 |
+| 2.11081991945986 | 1 |
+| 2.1382241445081203 | 1 |
+| 2.14878361436279 | 1 |
+| 2.1490375941071798 | 1 |
+| 2.14903759410718 | 1 |
+| 2.15967602876204 | 1 |
+| 2.16575220960657 | 1 |
+| 2.1657522096065702 | 1 |
+| 2.1677858022687597 | 1 |
+| 2.16778580226876 | 1 |
+| 2.16823309543846 | 1 |
+| 2.19864741199157 | 1 |
+| 2.3107879908181803 | 1 |
+| 2.4156078104607204 | 1 |
+| 2.4453483196505097 | 1 |
+| 2.5265314967561903 | 1 |
+| 2.56022966409702 | 1 |
+| 2.7671694578339703 | 1 |
+| 2.7939486547590295 | 1 |
+| 2.79394865475903 | 1 |
+| 2.90499574483299 | 1 |
+| 2.9049957448329904 | 1 |
+| 2.9606284963495804 | 1 |
+| 2.9765425864081902 | 1 |
+| 2.97812437890374 | 1 |
+| 2.99936412826163 | 1 |
+| 3.04970348599036 | 1 |
+| 3.0527544184141497 | 1 |
+| 3.06334750653836 | 1 |
+| 3.0761457818582203 | 1 |
+| 3.0826278199283097 | 1 |
+| 3.08262781992831 | 1 |
+| 3.1022224028613197 | 1 |
+| 3.10222240286132 | 1 |
+| 3.1197416440223997 | 1 |
+| 3.1197416440224 | 1 |
+| 3.14937447909385 | 1 |
+| 3.1493744790938503 | 1 |
+| 3.19394913466947 | 1 |
+| 3.21324095541467 | 1 |
+| 3.25769255357996 | 1 |
+| 3.2636109205919905 | 1 |
+| 3.2675433106450598 | 1 |
+| 3.26754331064506 | 1 |
+| 3.29013863055529 | 1 |
+| 3.30253408601999 | 1 |
+| 3.3025340860199903 | 1 |
+| 3.30990296585627 | 1 |
+| 3.3183414431943 | 1 |
+| 3.32762656540568 | 1 |
+| 3.3405627792203396 | 1 |
+| 3.34056277922034 | 1 |
+| 3.34310305213624 | 1 |
+| 3.3777791023102 | 1 |
+| 3.45992576809328 | 1 |
+| 3.54236489180942 | 1 |
+| 3.5562245079299104 | 1 |
+| 3.57352785013675 | 1 |
+| 3.59780866715861 | 1 |
+| 3.6223067173637498 | 1 |
+| 3.62230671736375 | 1 |
+| 3.6305562523737698 | 1 |
+| 3.63471668256308 | 1 |
+| 3.6347166825630803 | 1 |
+| 3.6795793726132704 | 1 |
+| 3.742716834198221 | 1 |
+| 3.76903627567432 | 1 |
+| 3.78774491294542 | 1 |
+
+### files.tumor_purity
+
+| Value | Count |
+|-------|-------|
+| _missing | 926 |
+| 1.0 | 3 |
+| 0.234607731717526 | 1 |
+| 0.269968709181441 | 1 |
+| 0.344216618514419 | 1 |
+| 0.441459906797365 | 1 |
+| 0.449613956125399 | 1 |
+| 0.460132823505736 | 1 |
+| 0.493968349003754 | 1 |
+| 0.503670023355014 | 1 |
+| 0.525059532487534 | 1 |
+| 0.526556321878914 | 1 |
+| 0.537118125422225 | 1 |
+| 0.537187883042034 | 1 |
+| 0.539250597079423 | 1 |
+| 0.574636260530071 | 1 |
+| 0.577493151938162 | 1 |
+| 0.58203678649056 | 1 |
+| 0.592410723596209 | 1 |
+| 0.594306545048906 | 1 |
+| 0.597590740358696 | 1 |
+| 0.610601531157118 | 1 |
+| 0.623871753747034 | 1 |
+| 0.639031374196376 | 1 |
+| 0.64173829988024 | 1 |
+| 0.658604617383176 | 1 |
+| 0.664828544618667 | 1 |
+| 0.674980620219771 | 1 |
+| 0.691216132968438 | 1 |
+| 0.706248886853016 | 1 |
+| 0.712273792427739 | 1 |
+| 0.714873118549341 | 1 |
+| 0.716061887194148 | 1 |
+| 0.723391888735042 | 1 |
+| 0.751218071855692 | 1 |
+| 0.7517368820926 | 1 |
+| 0.764058838611995 | 1 |
+| 0.829922101018709 | 1 |
+| 0.85897860811968 | 1 |
+| 0.860867757244639 | 1 |
+| 0.866147838235967 | 1 |
+| 0.871303797549052 | 1 |
+| 0.872615602238727 | 1 |
+| 0.874725916424453 | 1 |
+| 0.20149503615808795 | 1 |
+| 0.201495036158088 | 1 |
+| 0.21003945984696304 | 1 |
+| 0.249584968774981 | 1 |
+| 0.24958496877498104 | 1 |
+| 0.2594983554490829 | 1 |
+| 0.27405173607531697 | 1 |
+| 0.27660569883068603 | 1 |
+| 0.292276396438051 | 1 |
+| 0.29227639643805103 | 1 |
+| 0.29574340547407296 | 1 |
+| 0.30193278170080395 | 1 |
+| 0.301932781700804 | 1 |
+| 0.3292095650546289 | 1 |
+| 0.342277553358272 | 1 |
+| 0.34227755335827204 | 1 |
+| 0.35993022077078096 | 1 |
+| 0.36719583008733003 | 1 |
+| 0.38484752353807 | 1 |
+| 0.3930288321204489 | 1 |
+| 0.393028832120449 | 1 |
+| 0.40188873500866396 | 1 |
+| 0.4116172320689751 | 1 |
+| 0.41460670029661895 | 1 |
+| 0.414606700296619 | 1 |
+| 0.426523810296427 | 1 |
+| 0.4265238102964271 | 1 |
+| 0.43044486953415295 | 1 |
+| 0.430444869534153 | 1 |
+| 0.43120337535274894 | 1 |
+| 0.431203375352749 | 1 |
+| 0.43152043777342 | 1 |
+| 0.4360259235763 | 1 |
+| 0.44365822728240994 | 1 |
+| 0.44365822728241 | 1 |
+| 0.449776366581992 | 1 |
+| 0.4497763665819921 | 1 |
+| 0.460697968024805 | 1 |
+| 0.465752716891452 | 1 |
+| 0.48082881964565 | 1 |
+| 0.4808288196456501 | 1 |
+| 0.48774107819320395 | 1 |
+| 0.487741078193204 | 1 |
+| 0.4896105344839671 | 1 |
+| 0.49515862978170094 | 1 |
+| 0.495158629781701 | 1 |
+| 0.499580933407368 | 1 |
+| 0.5003464820531229 | 1 |
+| 0.506259957747191 | 1 |
+| 0.5126803838745879 | 1 |
+| 0.5164680634850021 | 1 |
+| 0.519090435801687 | 1 |
+| 0.525560551205471 | 1 |
+| 0.5255605512054711 | 1 |
+| 0.530811404189194 | 1 |
+| 0.5309848777395529 | 1 |
+| 0.530984877739553 | 1 |
+| 0.531326966471976 | 1 |
+| 0.5313269664719761 | 1 |
+| 0.5344409856878789 | 1 |
+| 0.534440985687879 | 1 |
+| 0.5352031431202179 | 1 |
+| 0.543159454427497 | 1 |
+| 0.547273365299544 | 1 |
+| 0.5472733652995441 | 1 |
+| 0.549077606987012 | 1 |
+| 0.549647669398316 | 1 |
+| 0.5496476693983161 | 1 |
+| 0.556954010297033 | 1 |
+| 0.5589529220216689 | 1 |
+| 0.558952922021669 | 1 |
+| 0.568023216482538 | 1 |
+| 0.5680232164825381 | 1 |
+| 0.5692100554072329 | 1 |
+| 0.569210055407233 | 1 |
+| 0.569898269983386 | 1 |
+| 0.5746557201342289 | 1 |
+| 0.574655720134229 | 1 |
+| 0.575239839857205 | 1 |
+| 0.5818928514374639 | 1 |
+| 0.581892851437464 | 1 |
+| 0.592183516290859 | 1 |
+| 0.5921835162908591 | 1 |
+| 0.5975020523140371 | 1 |
+| 0.5990986982918879 | 1 |
+| 0.6020574329675649 | 1 |
+| 0.602057432967565 | 1 |
+| 0.613349582725833 | 1 |
+| 0.6133495827258331 | 1 |
+| 0.614788975354349 | 1 |
+| 0.6147889753543491 | 1 |
+| 0.615144714442626 | 1 |
+| 0.617360273206958 | 1 |
+| 0.6173602732069581 | 1 |
+| 0.61893680833405 | 1 |
+| 0.6189368083340501 | 1 |
+| 0.6236595458604921 | 1 |
+| 0.628986493639271 | 1 |
+| 0.6289864936392711 | 1 |
+| 0.6334386190754879 | 1 |
+| 0.633438619075488 | 1 |
+| 0.6337231796847379 | 1 |
+| 0.633723179684738 | 1 |
+| 0.6378026816889331 | 1 |
+| 0.641304948496803 | 1 |
+| 0.642930292923469 | 1 |
+| 0.661230294200255 | 1 |
+| 0.6637381775706371 | 1 |
+| 0.667313231783476 | 1 |
+| 0.6673132317834761 | 1 |
+| 0.6737137309313099 | 1 |
+| 0.67371373093131 | 1 |
+| 0.6762885111335231 | 1 |
+| 0.6763414349002671 | 1 |
+| 0.6905107021985359 | 1 |
+| 0.690510702198536 | 1 |
+| 0.692756470057882 | 1 |
+| 0.6927564700578821 | 1 |
+| 0.697782539837469 | 1 |
+| 0.6977825398374691 | 1 |
+| 0.697922021029645 | 1 |
+| 0.6979220210296451 | 1 |
+| 0.6980645381290089 | 1 |
+| 0.6992916733647199 | 1 |
+| 0.7002454577755078 | 1 |
+| 0.7020976453938941 | 1 |
+| 0.702810679081239 | 1 |
+| 0.706864286712665 | 1 |
+| 0.7068642867126651 | 1 |
+| 0.70987989134441 | 1 |
+| 0.7128439632576871 | 1 |
+| 0.7140381706453289 | 1 |
+| 0.714038170645329 | 1 |
+| 0.721111209438473 | 1 |
+| 0.7211112094384731 | 1 |
+| 0.7228082368072851 | 1 |
+| 0.725064508089315 | 1 |
+| 0.7275625976630259 | 1 |
+| 0.727562597663026 | 1 |
+| 0.7294032656274729 | 1 |
+| 0.729403265627473 | 1 |
+| 0.7304179507997239 | 1 |
+| 0.7315673079865239 | 1 |
+| 0.7332725428493321 | 1 |
+| 0.7347482124109599 | 1 |
+| 0.73474821241096 | 1 |
+| 0.7378102060840508 | 1 |
+| 0.737810206084051 | 1 |
+| 0.7385891146446709 | 1 |
+| 0.738589114644671 | 1 |
+| 0.7388163259939879 | 1 |
+| 0.740210322122607 | 1 |
+| 0.7402103221226071 | 1 |
+| 0.741944099897503 | 1 |
+| 0.7421098353093489 | 1 |
+| 0.743309897770561 | 1 |
+| 0.7449450007252629 | 1 |
+
+### files.type
+
+| Value | Count |
+|-------|-------|
+| biospecimen_supplement | 1098 |
+| clinical_supplement | 1098 |
+| aligned_reads | 1098 |
+| structural_variation | 1098 |
+| copy_number_segment | 1098 |
+| slide_image | 1098 |
+| simple_germline_variation | 1098 |
+| submitted_genotyping_array | 1098 |
+| pathology_report | 1098 |
+| masked_methylation_array | 1097 |
+| methylation_beta_value | 1097 |
+| gene_expression | 1095 |
+| copy_number_estimate | 1094 |
+| simple_somatic_mutation | 1091 |
+| annotated_somatic_mutation | 1088 |
+| mirna_expression | 1079 |
+| aggregated_somatic_mutation | 969 |
+| masked_somatic_mutation | 969 |
+| copy_number_auxiliary_file | 927 |
+| protein_expression | 881 |
+
+### files.wgs_coverage
+
+| Value | Count |
+|-------|-------|
+| not applicable | 1098 |
+| 25x-150x | 945 |
+| 0x-10x | 21 |
+| 10x-25x | 2 |
+| unknown | 1 |
+
+### follow_ups.adverse_event
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.adverse_event_grade
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.barretts_esophagus_goblet_cells_present
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.cause_of_response
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.disease_response
+
+| Value | Count |
+|-------|-------|
+| tf-tumor free | 964 |
+| wt-with tumor | 134 |
+| unknown | 35 |
+| _missing | 28 |
+
+### follow_ups.ecog_performance_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.evidence_of_progression_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.evidence_of_recurrence_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.first_event
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.histologic_progression
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.history_of_tumor
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.history_of_tumor_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.hormone_replacement_therapy_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.imaging_anatomic_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.imaging_findings
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.imaging_result
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.imaging_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.karnofsky_performance_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.aa_change
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.aneuploidy
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.antigen
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.biospecimen_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.chromosomal_translocation
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.chromosome
+
+| Value | Count |
+|-------|-------|
+| _missing | 861 |
+| chr17 | 237 |
+
+### follow_ups.molecular_tests.chromosome_arm
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.clonality
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.cytoband
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.exon
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.gene_symbol
+
+| Value | Count |
+|-------|-------|
+| esr1 | 1048 |
+| pgr | 1047 |
+| erbb2 | 984 |
+| not applicable | 105 |
+| _missing | 49 |
+
+### follow_ups.molecular_tests.histone_family
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.histone_variant
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.hpv_strain
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.intron
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.laboratory_test
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.locus
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.mismatch_repair_mutation
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.molecular_analysis_method
+
+| Value | Count |
+|-------|-------|
+| ihc | 1049 |
+| fish | 424 |
+| _missing | 49 |
+
+### follow_ups.molecular_tests.molecular_consequence
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.mutation_codon
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.pathogenicity
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.ploidy
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.second_exon
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.second_gene_symbol
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.specialized_molecular_test
+
+| Value | Count |
+|-------|-------|
+| _missing | 863 |
+| signal ratio | 235 |
+
+### follow_ups.molecular_tests.staining_intensity_scale
+
+| Value | Count |
+|-------|-------|
+| _missing | 938 |
+| 3 point scale | 140 |
+| 4 point scale | 24 |
+
+### follow_ups.molecular_tests.staining_intensity_value
+
+| Value | Count |
+|-------|-------|
+| _missing | 425 |
+| 1+ | 305 |
+| 2+ | 255 |
+| 3+ | 218 |
+| 0 | 82 |
+| 4+ | 24 |
+
+### follow_ups.molecular_tests.test_analyte_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.test_result
+
+| Value | Count |
+|-------|-------|
+| negative | 881 |
+| positive | 868 |
+| test value reported | 235 |
+| equivocal | 206 |
+| copy number reported | 106 |
+| _missing | 49 |
+| unknown | 1 |
+
+### follow_ups.molecular_tests.test_units
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.test_value_range
+
+| Value | Count |
+|-------|-------|
+| _missing | 560 |
+| 90-99% | 269 |
+| <10% | 229 |
+| 70-79% | 77 |
+| 10-19% | 74 |
+| 80-89% | 58 |
+| 50-59% | 35 |
+| 60-69% | 35 |
+| 40-49% | 33 |
+| 30-39% | 32 |
+| 20-29% | 32 |
+
+### follow_ups.molecular_tests.timepoint_category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.transcript
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.variant_origin
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.molecular_tests.variant_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 674 |
+| amplification | 424 |
+
+### follow_ups.molecular_tests.zygosity
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.aids_risk_factors
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.cdc_hiv_risk_factors
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.comorbidities
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.comorbidity_method_of_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.diabetes_treatment_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.exercise_frequency_weekly
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.eye_color
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.fertility_history
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.haart_treatment_indicator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.hepatitis_sustained_virological_response
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.hormonal_contraceptive_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.hormonal_contraceptive_use
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.hormonal_replacement_therapy_status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.hormone_replacement_therapy_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.hysterectomy_margins_involved
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.hysterectomy_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.immunosuppressive_treatment_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.menopause_status
+
+| Value | Count |
+|-------|-------|
+| postmenopausal | 704 |
+| premenopausal | 229 |
+| _missing | 75 |
+| unknown | 51 |
+| perimenopausal | 39 |
+
+### follow_ups.other_clinical_attributes.myasthenia_gravis_classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.nononcologic_therapeutic_agents
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.number_of_pregnancies
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.oxygen_use_indicator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.oxygen_use_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.pregnancy_outcome
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.pregnant_at_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.premature_at_birth
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.reflux_treatment_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.risk_factor_method_of_diagnosis
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.risk_factor_treatment
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.risk_factors
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.timepoint_category
+
+| Value | Count |
+|-------|-------|
+| initial diagnosis | 1023 |
+| _missing | 75 |
+
+### follow_ups.other_clinical_attributes.treatment_frequency
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.undescended_testis_corrected
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.undescended_testis_corrected_age_range
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.undescended_testis_corrected_laterality
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.undescended_testis_corrected_method
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.undescended_testis_history
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.undescended_testis_history_laterality
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.other_clinical_attributes.viral_hepatitis_serology_tests
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.peritoneal_washing_results
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.procedures_performed
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.progression_or_recurrence
+
+| Value | Count |
+|-------|-------|
+| _missing | 1002 |
+| yes | 96 |
+
+### follow_ups.progression_or_recurrence_anatomic_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 1002 |
+| bone, nos | 40 |
+| not reported | 28 |
+| liver | 18 |
+| lung, nos | 17 |
+| thorax, nos | 7 |
+| brain, nos | 6 |
+| intrathoracic lymph nodes | 5 |
+| breast, nos | 4 |
+| skin, nos | 2 |
+| adrenal gland, nos | 1 |
+| bone marrow | 1 |
+| connective, subcutaneous and other soft tissues of thorax | 1 |
+| lymph node, nos | 1 |
+| lymph nodes of head, face and neck | 1 |
+| skin of trunk | 1 |
+| specified parts of peritoneum | 1 |
+
+### follow_ups.progression_or_recurrence_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1002 |
+| distant | 68 |
+| locoregional | 25 |
+| unknown | 21 |
+
+### follow_ups.scan_tracer_used
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### follow_ups.timepoint_category
+
+| Value | Count |
+|-------|-------|
+| follow-up | 1096 |
+| last contact | 1095 |
+| post initial treatment | 96 |
+| _missing | 2 |
+
+### follow_ups.treatment_emergent_adverse_event
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### index_date
+
+| Value | Count |
+|-------|-------|
+| diagnosis | 1096 |
+| _missing | 2 |
+
+### lost_to_followup
+
+| Value | Count |
+|-------|-------|
+| no | 552 |
+| _missing | 482 |
+| yes | 64 |
+
+### portion_ids
+
+| Value | Count |
+|-------|-------|
+| 000cfd9f-addf-4304-9e60-6041549e189c | 1 |
+| 001e174b-7d90-42a4-b074-d929fbb26346 | 1 |
+| 0023ba61-b112-4d22-810b-2043915ae8db | 1 |
+| 00252b16-56c0-4a34-8beb-6ad3d0f737f4 | 1 |
+| 002d4ec5-715e-452b-b751-64b4fb0bb029 | 1 |
+| 003260e6-bfb6-4d16-bd64-cdba0a639eb2 | 1 |
+| 004018c3-d6b4-4e44-a79b-e590d582f1ce | 1 |
+| 004be263-a3a3-4d1f-a5bf-5b39231b3686 | 1 |
+| 004d1044-5ebe-49e0-b7ac-ff3bed44b919 | 1 |
+| 006698bb-82dd-4ae2-8fdd-e451d4e640c7 | 1 |
+| 0068f1b1-4c4a-4556-90be-cfa8732893df | 1 |
+| 00703e0f-8964-4b44-a5f3-d1246e5358ff | 1 |
+| 00723768-d5ed-44ac-b6f3-7d399186d814 | 1 |
+| 0086f228-becb-4282-ad3f-c54ecaccea84 | 1 |
+| 00b07121-246b-43b2-a0df-957dca3bd6ad | 1 |
+| 00b274b6-1755-455a-9f2f-1d4ba833b338 | 1 |
+| 00e66faa-74a8-4b02-a76a-d2e8fd78d425 | 1 |
+| 00ebb120-00b3-4e76-bf8d-0c944f35c6df | 1 |
+| 01083b39-09ef-40dd-86c0-5cb8a2a5a646 | 1 |
+| 010a31fc-4218-4110-b2d0-4791ca77d417 | 1 |
+| 01112370-4f6f-4a20-9be0-7975c3465268 | 1 |
+| 01137285-1247-4de7-9571-251c3b796c04 | 1 |
+| 01216acd-4715-44f0-9f6b-f903e67e1247 | 1 |
+| 01259988-0451-41e7-8296-8ffeb97e6e8e | 1 |
+| 013e6c9f-a4fb-4588-9159-562bd6f2721c | 1 |
+| 01427736-4cac-4dd6-956f-79040d11bec0 | 1 |
+| 0142aaac-ffe8-43b7-ab99-02f7a1740567 | 1 |
+| 01449692-5d77-4143-8981-2ff5b001751b | 1 |
+| 01473e37-dbc5-42f9-b5e1-332a9b47c175 | 1 |
+| 015e64ce-8dbb-42c1-9f90-d2e735b83f40 | 1 |
+| 0163f532-2e40-4bcd-a090-e213f1dff59a | 1 |
+| 016da2b9-36c0-4cde-bf58-e0a46e381af9 | 1 |
+| 0175cec4-2570-4cd6-a553-3bba76a06589 | 1 |
+| 01769521-9ae7-4e28-95b2-8790f22ca3d6 | 1 |
+| 017dc743-fc1e-45b5-8cc5-8afa4bd3af0e | 1 |
+| 019c4786-d0fa-45c4-a736-b12badf99db7 | 1 |
+| 01a589a8-9408-4010-832b-2750b28fa5a2 | 1 |
+| 01ae7475-63a6-4c5f-88fc-a5cd341eacb3 | 1 |
+| 01cd085c-1e54-4f43-8f0e-bf59c2ea07bd | 1 |
+| 01def6d0-82a1-4c62-b742-7452d62b0bed | 1 |
+| 01e2147c-b77c-4352-a8e4-ab1757c86137 | 1 |
+| 01ee52ba-3e93-42f8-8d2c-d18f0f701581 | 1 |
+| 01f3c352-47f7-410e-9cf4-887a03dafaba | 1 |
+| 01f5ab57-66e5-49a8-9957-1951d80e14e9 | 1 |
+| 01ff2ccf-6b5f-4814-ac2b-4885358050e4 | 1 |
+| 02078025-a509-45ac-94f5-9a235a14a2b3 | 1 |
+| 020a471c-8f4c-40c5-b4e2-6181b5499a0a | 1 |
+| 0210e408-dd7b-4dd9-b50f-f089ed97f846 | 1 |
+| 021117d8-2288-4f93-876f-782c94a351c7 | 1 |
+| 02144bb9-6373-4c2c-abad-53a47642dea9 | 1 |
+| 022c5bf0-d406-44ae-a031-d12e50cf8ef8 | 1 |
+| 02430336-0a4e-429f-83a4-8675d68de208 | 1 |
+| 024e8275-694b-4942-832d-3137b1c5303a | 1 |
+| 025dac81-5536-4c04-8107-bef3c4cc3b5a | 1 |
+| 02857059-5b3e-4a7a-a0e0-93ee7f90cfff | 1 |
+| 02ae8e2a-6a69-4de2-b23c-f4e6a3b8ef7d | 1 |
+| 02c0b5f1-e227-4333-bd72-cf44f301adfc | 1 |
+| 02e51438-7414-459a-8d7c-f802a8b196e1 | 1 |
+| 02e55cff-87a6-4719-b988-4b8f46f079a5 | 1 |
+| 02f240a1-e402-4c63-8923-7de34fe24f4f | 1 |
+| 02f33c53-7060-4987-a570-61cc2a930b2a | 1 |
+| 030c55e2-caad-4d60-80fa-45a1996cb18d | 1 |
+| 030d898a-0496-461e-b953-bc1eb0e59ab7 | 1 |
+| 0314cc39-7baf-4644-bf8c-0577a13148a7 | 1 |
+| 031b3ca5-77cd-442a-915d-95761d2ff678 | 1 |
+| 0321074c-bcf8-42f7-9212-b2673201860d | 1 |
+| 03279a3e-a8de-4712-bd03-7a1f61df1927 | 1 |
+| 0329f3a3-e848-486f-be4b-4042920d25aa | 1 |
+| 033ecfb2-9eb3-432e-ab86-957435f1c659 | 1 |
+| 035adbba-464a-4569-9e07-8b6a6bd12407 | 1 |
+| 037238b0-8fb6-4ecc-9970-93e84f9286ef | 1 |
+| 0398ee15-e9de-46d5-bb6f-0e6d2475f5f7 | 1 |
+| 03a26578-131e-473a-a4f6-2d7e035bb194 | 1 |
+| 03a8f049-2678-4ddc-a8c7-4c99db02e29f | 1 |
+| 03c36239-f261-44e4-829b-01e679a414ad | 1 |
+| 03d5213d-e978-4226-8f98-9df0162cd1c2 | 1 |
+| 03f9304a-416c-4d77-b28a-af9e753f91f9 | 1 |
+| 0405a244-6871-444b-abee-98a5977aeb4f | 1 |
+| 0407e558-cc6f-42bc-898f-0e6cd40ed8f9 | 1 |
+| 040c7b5b-3119-43e7-afc3-651f7b064035 | 1 |
+| 041b7efd-d4f3-478a-ae61-2597108cfb58 | 1 |
+| 04217f65-2907-478b-b0c5-eb65370198da | 1 |
+| 04261359-7266-4b63-a511-2b92e9db7f68 | 1 |
+| 04274462-f367-401d-b905-78cbd5aede4b | 1 |
+| 042a4048-8eee-4a8a-bfed-72c5acdc426a | 1 |
+| 043d7c48-d699-406e-8f15-96d42cabec08 | 1 |
+| 045cb871-2eb7-4bb6-8556-6ffce12a71c3 | 1 |
+| 045e5f24-c3b8-4a9d-a2f3-0f7f55971113 | 1 |
+| 0466e496-e1c2-4cd0-ab1d-34babdbfc80f | 1 |
+| 0466f63c-8d30-43cf-a866-2775a850c7a9 | 1 |
+| 046827fc-57d9-4eff-bd73-c1fc1d5d5391 | 1 |
+| 047431b7-6180-49ab-9dd0-d23d794f2953 | 1 |
+| 049ae25e-31b6-4e0d-b67f-08b7034bf093 | 1 |
+| 049c6f4f-37ba-4507-b37b-0686a3b7bf19 | 1 |
+| 04a8475f-5f04-4baf-be4e-5c1dda2d4936 | 1 |
+| 04c98c5f-c906-4795-b526-3910a307e813 | 1 |
+| 04cefa93-e765-40f9-93c1-92b41a3b375f | 1 |
+| 04dd6fea-a7f3-447e-8bfe-2be7e1d00be2 | 1 |
+| 04e4a6a8-c5ee-435c-8852-dadb485071bc | 1 |
+| 04e86bbc-eaa9-48ed-9ee7-b964592bb522 | 1 |
+| 04ee63ed-25f1-484f-8463-75c45808fcdb | 1 |
+| 04f35825-e128-4a77-b58e-7b98019dad24 | 1 |
+| 053dc2a8-46c2-4d3a-8707-f5cdd2f76ac5 | 1 |
+| 0569a4ef-9553-4812-8319-ad410118739b | 1 |
+| 05a7f504-4e42-4c07-a622-794b6ff204ed | 1 |
+| 05ae559d-453d-4a72-bba2-2360b151ccfd | 1 |
+| 05bd14db-34a1-41e0-8a82-78c918c92554 | 1 |
+| 05c8201b-c015-4c84-ad00-0451c8a88338 | 1 |
+| 05e81cf0-dbc3-45a2-94cc-6bd3d04d1e04 | 1 |
+| 060765d9-b76d-44c2-a8d0-dc5ee48d5480 | 1 |
+| 06141302-8b54-448e-811d-c6b69434ec4a | 1 |
+| 061481e6-4872-4e3a-99d1-eac28e4f081a | 1 |
+| 062d46a5-fb34-4ef7-86a8-c56a88fc5119 | 1 |
+| 0634b4d5-4b63-452f-a8a9-dbd6dc940c2e | 1 |
+| 0642908f-f9d0-4604-b532-92fb7511482b | 1 |
+| 065af0cc-23b6-4e7d-816e-0f5185a341d4 | 1 |
+| 067f2dfd-65b0-4e95-b4fd-8ceb52e09ffc | 1 |
+| 067feb53-e298-42c0-8da9-8fa04e1933a3 | 1 |
+| 068153fa-935a-429c-9719-84aebe91f185 | 1 |
+| 06858d8b-f613-4e7d-ba33-a19be562ecd6 | 1 |
+| 06883945-09f9-45c8-8d4b-a629a0fab7b7 | 1 |
+| 0689c142-eaa1-4273-bf49-d8715a84bb0b | 1 |
+| 068b3d7e-b3b4-4fd1-89c5-2019253806b2 | 1 |
+| 06aa073b-73d5-47e9-b4e6-fe8f54e312c8 | 1 |
+| 06b9b8d5-03f3-477e-a268-b882f869bcb6 | 1 |
+| 06c26283-c91b-4fd9-b5ee-9cc73689d7b2 | 1 |
+| 06c34bd7-091c-4b92-87b0-fa56f8aeea6e | 1 |
+| 06d471f8-c35a-45dc-9fca-9e85f469fdf5 | 1 |
+| 06e8f629-d1ff-4078-af74-c8fab07801cf | 1 |
+| 06fb69cf-906f-4e32-a506-e3b797163fc6 | 1 |
+| 07082d71-e998-4ab5-8c2a-5cce4999f94f | 1 |
+| 07141f15-afd0-4a94-9cf9-1593ea833599 | 1 |
+| 07273b9c-9fc7-434c-bc17-d253397551bb | 1 |
+| 073236c2-ca63-479e-905b-ed017f3d50a2 | 1 |
+| 073458d4-3f24-465a-8204-5766c6c28ff6 | 1 |
+| 073c09b1-ab81-4048-8d69-7a7963c39759 | 1 |
+| 074231b9-2438-4e1e-9965-6ae7e02ae660 | 1 |
+| 07472b4c-24bf-45f1-9b04-aab91f0a04bd | 1 |
+| 074a3b0b-d5dd-44c9-9852-d1fb6e6dc7bf | 1 |
+| 0755ad08-4dd9-4baf-897f-b3ff52ad0165 | 1 |
+| 076897ad-ec3f-4403-ac52-a44930ea2b82 | 1 |
+| 076a487c-3a0c-42f7-8ea0-af387463b714 | 1 |
+| 0772ed0c-4839-4cd5-bc83-bc56863090e7 | 1 |
+| 0772f4fb-ffbb-443b-81b2-32c9c93f179e | 1 |
+| 0779ff70-2384-4df9-ad05-cf7ae7fc57a3 | 1 |
+| 07817555-b5eb-4502-9229-236a38430974 | 1 |
+| 0788f920-2e2d-4012-ab89-2699b21cb0a9 | 1 |
+| 0794c219-5e82-4c62-9e40-091a0c71c6b4 | 1 |
+| 07983fa6-4560-47d3-8478-c2b084e9ae43 | 1 |
+| 07a4c1ab-e54d-46df-9c58-22c32c721331 | 1 |
+| 07a69831-e149-4d80-96ca-f63de6232c1e | 1 |
+| 07c328f0-61af-4d62-8dab-cba99a5b58cb | 1 |
+| 07d51184-85a3-4ba7-9cc2-badcb3ccfa23 | 1 |
+| 07dd3a1f-05f8-488d-9b80-4fe5b94923c4 | 1 |
+| 07e19b85-cee6-4ea4-8588-5df93bf33053 | 1 |
+| 07e57b56-5370-4a69-86e4-cdd0955d371b | 1 |
+| 081e4315-2dfe-4ce1-8ab1-3005e1a2c86c | 1 |
+| 08203cf1-227b-4027-af93-814354333186 | 1 |
+| 082716d5-4300-4a0d-9162-522a6de38490 | 1 |
+| 08272a1f-0084-4134-b049-33bfaecd45b3 | 1 |
+| 083f6892-19ab-475c-ac8e-cc611e1b59a0 | 1 |
+| 0846b423-a60b-4c54-9224-b9d129fb3278 | 1 |
+| 08499a64-3fd8-4e62-af08-3c66af93cae7 | 1 |
+| 085b7387-61df-4f55-a320-72c165bf8647 | 1 |
+| 0861bc67-1d90-48f2-adcd-49044557b525 | 1 |
+| 08674f1c-8459-422e-a3c0-71e870221862 | 1 |
+| 086822fc-18aa-4343-a1e6-f1caa8a597f5 | 1 |
+| 087ce4be-4d28-4d6f-9543-791131ef0de2 | 1 |
+| 087cf1b0-03eb-4902-b365-a204c2c440b5 | 1 |
+| 0880dcae-40c3-4d8c-8506-aa662aab4ba5 | 1 |
+| 08891eb8-2c41-400c-8a66-bee040cca71d | 1 |
+| 088b6f54-de82-4157-b2aa-455bde2acc62 | 1 |
+| 0894e68f-eb24-489a-b3f5-9c47eeea737d | 1 |
+| 089945b8-9944-40c0-9fd1-ed0e04dbff8a | 1 |
+| 08bd259e-9a37-4dd1-b97c-c67f288f833e | 1 |
+| 08c6c9ec-04e4-4ce9-8b57-b35f8e562e32 | 1 |
+| 08e7026b-38ac-4454-8550-40f82bbf691c | 1 |
+| 090008fd-084f-4b88-b93a-772a9b831b14 | 1 |
+| 0934bcb1-df5c-4bce-b7ee-752db3b7921a | 1 |
+| 093939dc-77c5-4c95-bbce-c70efd844cd7 | 1 |
+| 094af0cc-6f01-45cb-b2a2-555399b45b16 | 1 |
+| 096b99b1-ac7e-4b29-96be-76027119d248 | 1 |
+| 096f19c2-8d1a-420c-b189-025160355cb1 | 1 |
+| 098fef58-d5ae-42e5-8eea-f233d23e8d2f | 1 |
+| 099239c3-00c8-4238-a889-dfbd96223e8f | 1 |
+| 099d53c2-eff3-4eeb-8659-18d53b36b3b7 | 1 |
+| 09ba980b-c9fe-4ea6-81cf-226c30fdcedb | 1 |
+| 09bfe5cd-d867-4b00-93e5-4abc1331d5c0 | 1 |
+| 09e2f1d2-0d6a-402c-91e2-76d2e1b5b614 | 1 |
+| 09ed3ee7-34ed-4ce6-91d3-8b843b668c24 | 1 |
+| 09ef7c78-d350-402c-852b-89453f79d2a1 | 1 |
+| 0a257700-c228-4e46-9b2d-af39db001515 | 1 |
+| 0a531eb4-f801-4eb5-bfd1-84d4a32c954c | 1 |
+| 0a5f7c1a-bd8c-4c72-9f74-876d66014281 | 1 |
+| 0a7af48e-5b73-42e8-acf6-a0bca1372cc4 | 1 |
+| 0a81cd6c-78ac-4e00-8caf-9771bb6218be | 1 |
+| 0a890760-02b9-4641-98cc-67de2075a7ca | 1 |
+| 0aa1f103-f080-445f-befc-f3f89f746c33 | 1 |
+| 0aaef408-9f72-439c-8521-ddd09b0ee8c0 | 1 |
+| 0ad252a6-9221-48f8-9cfb-29a109a85c7e | 1 |
+
+### primary_site
+
+| Value | Count |
+|-------|-------|
+| breast | 1098 |
+
+### project.dbgap_accession_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### project.disease_type
+
+| Value | Count |
+|-------|-------|
+| adenomas and adenocarcinomas | 1098 |
+| adnexal and skin appendage neoplasms | 1098 |
+| basal cell neoplasms | 1098 |
+| complex epithelial neoplasms | 1098 |
+| cystic, mucinous and serous neoplasms | 1098 |
+| ductal and lobular neoplasms | 1098 |
+| epithelial neoplasms, nos | 1098 |
+| fibroepithelial neoplasms | 1098 |
+| squamous cell neoplasms | 1098 |
+
+### project.intended_release_date
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### project.name
+
+| Value | Count |
+|-------|-------|
+| Breast Invasive Carcinoma | 1098 |
+
+### project.primary_site
+
+| Value | Count |
+|-------|-------|
+| breast | 1098 |
+
+### project.program.dbgap_accession_number
+
+| Value | Count |
+|-------|-------|
+| phs000178 | 1098 |
+
+### project.program.name
+
+| Value | Count |
+|-------|-------|
+| TCGA | 1098 |
+
+### project.releasable
+
+| Value | Count |
+|-------|-------|
+| true | 1098 |
+
+### sample_ids
+
+| Value | Count |
+|-------|-------|
+| 000002fc-53a0-420e-b2aa-a40a358bba37 | 1 |
+| 0012aaaf-f0e6-49f4-8102-b4d3a7db0ec5 | 1 |
+| 001a0f2d-8efc-4555-aba1-6017c0cc253a | 1 |
+| 002997ef-3b93-443a-80a3-bae63e129d99 | 1 |
+| 0039a298-3369-4da5-9bfd-19792e9632be | 1 |
+| 003c8cff-ec0e-4f7c-b38b-93575fd68a23 | 1 |
+| 0050d7c9-ece9-4b6c-8023-1ff2efcb3c9c | 1 |
+| 008dafdd-a3d1-4801-8c0a-8714e2b58e48 | 1 |
+| 0098fcca-e2df-487a-976f-dcc9ea0146ad | 1 |
+| 00a2f69b-99b6-42d2-9074-d27f43b91ed2 | 1 |
+| 00a59c97-91b4-413e-8d9e-674753997221 | 1 |
+| 00b54c99-c26d-423a-9871-2552c1603a9c | 1 |
+| 00cd3143-044b-4ff7-92ef-8924008a0904 | 1 |
+| 00d38274-8ed5-46af-9a69-91d968a050ab | 1 |
+| 00eb938e-8d64-4103-8782-ce13f24cd2a6 | 1 |
+| 00f81e98-e5c3-43b2-9757-f769ec17f3f8 | 1 |
+| 0126489d-c12a-4651-8700-d7090732d7ab | 1 |
+| 015965ba-53b4-4b89-bae3-5dc351212d9f | 1 |
+| 0177791d-d02d-4433-81ae-458a93fdd60f | 1 |
+| 018b2eaa-216b-4726-a26e-ac726f4b47d3 | 1 |
+| 018e52ac-1643-4f23-8d7d-381606e9d526 | 1 |
+| 0190a751-0a1f-4911-b5dd-26964b7fa5a5 | 1 |
+| 01a618c9-8fd7-46bd-86d2-30085523cc19 | 1 |
+| 01aeb34a-75e4-446d-97ae-6e32c47158ad | 1 |
+| 01f54e78-332b-4944-9ac1-8ce7ed7bba3d | 1 |
+| 01f87142-e24d-4b74-864d-ed6e33ea10a2 | 1 |
+| 0201cf15-d073-447f-b96e-eca0800b8cff | 1 |
+| 02049dcf-4bb4-4ef9-9a24-945bf53bc445 | 1 |
+| 020f29b5-fe97-43ed-b6a2-9861a1f23c6a | 1 |
+| 021be27d-f2cc-47b4-9db0-7bfe7df7522c | 1 |
+| 022bc70d-6ea5-4084-add8-433bb7910eca | 1 |
+| 022d43a0-c559-4528-98f9-ef83afb8dda4 | 1 |
+| 0232d263-73f3-46e1-bdef-a7a08c2f0e65 | 1 |
+| 023d8b1b-4250-4cdf-815c-ddb2f5efda5a | 1 |
+| 025eac6d-539e-4e43-a6f7-4a2d2def571d | 1 |
+| 026232e8-608b-420f-8b69-f51598ba17ca | 1 |
+| 028490aa-d6f3-4366-821a-7cb2c604eff1 | 1 |
+| 02a0a874-6d4e-4e56-8d74-7952c912fed2 | 1 |
+| 02a5b79a-ed1c-4cbd-ab63-a5e9a40631f8 | 1 |
+| 02c5ccad-ef0d-4cf3-aaa4-bc6399c8b97e | 1 |
+| 02c8bf84-4816-49a9-b5d1-0edebb8627c7 | 1 |
+| 02e2a240-cecf-4313-a62c-5b1fd66c2d19 | 1 |
+| 02ec11f4-1d26-4d2f-babe-d576ebfff1c7 | 1 |
+| 02f5c769-65a2-4607-ac57-2420e8752921 | 1 |
+| 02f948c1-bcce-4a51-a6c1-4120a67fa544 | 1 |
+| 02ffeb27-d1f8-42ee-a8f3-05dc07710466 | 1 |
+| 0306c4a7-a39a-4e27-8d82-944546465eba | 1 |
+| 030bfeb7-42de-4fc4-83ee-f0257c2590a7 | 1 |
+| 03115606-c46f-40ef-a95f-cdc1c174797d | 1 |
+| 0322faec-1ae0-41c4-a6d9-f758bd67fa38 | 1 |
+| 0347f8ec-3e55-4a0d-b999-5566592e5413 | 1 |
+| 035ceab2-5468-41d5-9adf-f669225be543 | 1 |
+| 036e0ef2-b08b-4891-8303-16f086328343 | 1 |
+| 037c406b-45c3-4903-997f-7ee3a3903146 | 1 |
+| 037f1b7e-e84b-43b5-93ad-0166e6dc33e0 | 1 |
+| 0392a2a3-1d9a-43b4-9a17-9e1e04bd8046 | 1 |
+| 03b5c7e9-0112-4992-a955-52aa9734add0 | 1 |
+| 03c5b1b1-a950-4d8e-867b-1c0d91ada4a5 | 1 |
+| 03eb5ba8-0307-49b0-aa05-003007d79107 | 1 |
+| 040438cf-a4ba-4f06-b562-73c79738f53e | 1 |
+| 044f9b74-9a16-432e-acac-78c399c001bc | 1 |
+| 045b9095-d3d2-4666-a57f-45fcb454f74a | 1 |
+| 0473f705-72de-4b71-b5c0-0bf769b6e2da | 1 |
+| 04778d0b-7b11-4d8c-bc6b-3cf5c477f8d1 | 1 |
+| 0478567a-9108-40c0-9965-3ff18c7c4c49 | 1 |
+| 049340e0-5ac8-4e7f-9c92-971b1200abae | 1 |
+| 0499c083-b94c-4dab-9860-b21cda51c8a3 | 1 |
+| 04b46e56-9e01-4731-83ef-383aa364a1b4 | 1 |
+| 04e4b4ff-c67a-4a56-8623-31adc50e4855 | 1 |
+| 04fdbb6c-4bd2-4a76-8bb6-f2f4e1864643 | 1 |
+| 04fea6eb-e213-407d-a17a-ddafa386797f | 1 |
+| 050211b5-3b6d-46f2-98ef-ba18b54ecb92 | 1 |
+| 050e66bb-438a-49d5-a005-7967a006b3f0 | 1 |
+| 050ec96b-f110-429e-a138-4a41b38a24ae | 1 |
+| 0513c134-e902-41cd-bb17-87ea095152c8 | 1 |
+| 052e361c-9cf7-4a92-a77d-f3d70f9dec0b | 1 |
+| 052efb54-81a9-4a5b-bc28-b7055a243215 | 1 |
+| 05403f16-4f72-4d39-87fd-1464dc607455 | 1 |
+| 05415f21-4c6d-4cf4-924c-9c1eb769e696 | 1 |
+| 05507d2c-3dea-4554-8f06-039fd555309a | 1 |
+| 0571ca5c-d7e0-494c-8b61-4dc17ebd6102 | 1 |
+| 059a543a-4408-4c82-96ef-eae1cc126763 | 1 |
+| 05b357ef-8129-4b92-8775-42bedec7b7f5 | 1 |
+| 05bf18cd-2346-4ef9-b6df-58aa8a67e8a5 | 1 |
+| 05e4b816-65d4-417f-b41c-27e04b5045bb | 1 |
+| 061e539b-4cde-4e37-bbcf-30937ce689c9 | 1 |
+| 061f9bb8-09f5-4788-b39d-35138a3aa019 | 1 |
+| 06239773-a7e3-4262-9b5f-0105e3b1467a | 1 |
+| 0637d8b1-0d0f-4c89-b31d-ba6df8138c3b | 1 |
+| 0643766d-a24b-44d6-984c-74b071222dd5 | 1 |
+| 06479cfc-c43c-43f5-9d2f-44b3adc45d84 | 1 |
+| 065663ea-1f4d-4b94-9083-9199f696f09a | 1 |
+| 065a531a-14bd-4714-8283-cd9ccf69b66f | 1 |
+| 066fe793-8646-491d-ab68-93cf3f07b673 | 1 |
+| 06877bb2-15b9-40a3-b07b-1433044f6d82 | 1 |
+| 0692591c-b717-4d4e-b3ce-ea1620eb127e | 1 |
+| 06a3d2e0-d0d4-4c80-9a74-bbba9997e928 | 1 |
+| 06a75411-8419-4bf5-9ff9-8fcb6c75c30e | 1 |
+| 06b3e3ca-24b9-4e19-9e59-b51cc6d6735b | 1 |
+| 06bfe6f2-1fb4-4cb6-b1bf-4fd8408bf9cd | 1 |
+| 06c2896f-f1ec-4684-bffb-54a06f3bec81 | 1 |
+| 07005d06-f702-442b-a5b8-ff3b6eeca6ab | 1 |
+| 07033c6f-6e80-4b8b-8859-971fd7815efb | 1 |
+| 070aadae-3567-4087-a323-25c8316b4f55 | 1 |
+| 071f43e9-e416-453b-a519-c197c5aaf1d1 | 1 |
+| 0729326e-9b85-44f5-8134-28cb10805bf4 | 1 |
+| 072ae9bc-16a5-4c63-8ec6-7b0a4d3835a7 | 1 |
+| 0749976c-3f03-4fe3-8c24-c68721c58643 | 1 |
+| 075256e8-f13b-4010-830b-0b870d3c20f2 | 1 |
+| 075277e5-7ef1-42ae-869d-cd588bf9d892 | 1 |
+| 0752ba05-88ed-4d18-95a7-c508208251d5 | 1 |
+| 075393f6-0404-410e-9fd5-7c2c63d3fa84 | 1 |
+| 075ab081-4d27-4173-9946-0cf802ffdde9 | 1 |
+| 076736e4-6b47-40f4-bbd6-3868dfd1b9c5 | 1 |
+| 07c938ad-70f7-418f-b6c9-ec6e4b1dae66 | 1 |
+| 07d37645-7fd3-4343-96a0-fce0cff520af | 1 |
+| 07e65fe5-2cdd-457d-81ca-e9c54d5b1455 | 1 |
+| 07f4726c-7735-4125-8364-62704b6d0f8c | 1 |
+| 08044da0-8cb7-4bf7-bbb6-b80be4fddd8c | 1 |
+| 080d6c51-3aef-4d93-9e90-5fcc41fe5b94 | 1 |
+| 081947cf-1635-4a57-9903-0c405ead6d84 | 1 |
+| 081b3b50-1cee-40b5-8795-2266874673f8 | 1 |
+| 082c5082-8b94-4d8a-8529-b19448eba144 | 1 |
+| 083c43a9-9c3d-4271-9514-9f1a61d3985f | 1 |
+| 083f4985-57c0-4931-ba8a-00f565430da9 | 1 |
+| 0849aa2e-a846-4de6-8ba3-eb916dc13f35 | 1 |
+| 084b2d8f-96a8-41f1-844d-20004cd665e7 | 1 |
+| 0856c285-b57f-47ac-be8b-865dc2ddb58f | 1 |
+| 08612ee4-7c36-49a4-9609-5311d9f45c81 | 1 |
+| 08693317-d839-477c-b145-477a3521e03a | 1 |
+| 086cc603-bbb9-40af-829a-b061a3ef3a61 | 1 |
+| 086eac10-6ea8-4cc4-a6e5-91f051e50c54 | 1 |
+| 087f6b71-593b-4baa-9328-a190d6ba11ec | 1 |
+| 0884a6b0-4aab-4ee7-b2a6-1a9dea8fc18b | 1 |
+| 08891eb6-6193-4a14-b49a-3e90b25ed6ea | 1 |
+| 08a07143-6e25-401d-b469-1a25aa330c44 | 1 |
+| 08add75d-f706-458a-a6a8-41da7e07af19 | 1 |
+| 08b1a520-0728-49c8-8a77-9dc20ab44799 | 1 |
+| 08eaea07-fbc1-48d3-8402-ef71147d0d9b | 1 |
+| 08f10bb1-6dd4-4f36-86a3-1801f9762187 | 1 |
+| 08fa9ecf-6b7b-4cf5-88ef-e13766a5b7ed | 1 |
+| 09191482-34de-4130-afbe-dd47d481d539 | 1 |
+| 0921962d-cf6a-4684-95be-4c38153b23b2 | 1 |
+| 0927da66-1240-460c-96c4-9ea25a71f94a | 1 |
+| 092915ac-dbb0-4ab2-aae5-119eba120667 | 1 |
+| 092e1117-6c06-43cd-a47e-ed7c6989448a | 1 |
+| 093150bc-9ea8-4729-8693-32fe1d9690d2 | 1 |
+| 0958de7c-dce0-49a0-a26a-7b4b874af238 | 1 |
+| 09644a32-44ea-4fac-afb9-448810b90eed | 1 |
+| 09674aa4-1b64-4abe-9a67-4f478bb81f92 | 1 |
+| 09733af3-d6fc-44a4-907e-16581fc48611 | 1 |
+| 097b9dd5-5617-48ba-8600-ec5a99c75a42 | 1 |
+| 0985c5f5-c459-4ab1-90fa-d6bb6f9b23e6 | 1 |
+| 09912c4f-aa56-428b-b313-1b1b95b59b92 | 1 |
+| 09939852-2eb9-489b-be30-2dc19646a7af | 1 |
+| 09a6af22-2dd3-4604-b584-00b7d8231248 | 1 |
+| 09b414c4-a314-43c5-823a-d91442b6b02b | 1 |
+| 09b9b2d0-f77a-4b61-a72e-10697c270081 | 1 |
+| 09c07618-67e0-415a-b542-2176de1482ba | 1 |
+| 09d6f42c-5e9f-4adc-bd8c-e5dca597fc01 | 1 |
+| 09f0cf24-b278-4d63-9e7f-c502a9797a7b | 1 |
+| 0a076287-f515-4857-b23f-fa1637f32098 | 1 |
+| 0a1f4a81-38c6-407a-a33b-716a0f9a6b4d | 1 |
+| 0a2a6248-aea9-4f22-a630-f78203209165 | 1 |
+| 0a3d3653-88d4-4c4b-acdd-8bfef2364b95 | 1 |
+| 0a43ad98-2671-4701-9e5d-35ad63e8ad50 | 1 |
+| 0a4a1b51-ccf0-4e58-a47b-ea3920548479 | 1 |
+| 0a5219e8-4274-40be-aa22-0341116a0661 | 1 |
+| 0a80c44c-c79e-460c-ab78-760d3936a42e | 1 |
+| 0a84f440-20db-433e-8ac5-5a721eaf7db4 | 1 |
+| 0ab0bff3-9c3d-466b-91c2-5c95613a5073 | 1 |
+| 0abbde91-6c79-4386-a6ba-4dd88c487ba3 | 1 |
+| 0ac12a02-8fe3-4c1b-a885-848aa924a339 | 1 |
+| 0ad4c0b6-a950-4646-b103-a50b0beba009 | 1 |
+| 0ae32db1-5a43-423a-9cb8-eb5884b54114 | 1 |
+| 0af54f51-b0e9-4f88-b20d-bba4bac14a67 | 1 |
+| 0b290880-d67c-42b4-aa57-afd3c3d09518 | 1 |
+| 0b2a6d58-29cd-4861-9b99-1f5a78c0b815 | 1 |
+| 0b2e3720-4a7e-44cd-9e38-7d883f559c1c | 1 |
+| 0b3f2524-3370-43e3-b1e4-07505a043165 | 1 |
+| 0b65dc3d-1427-41b0-91c8-48a669c66a7c | 1 |
+| 0b690488-892f-4dc4-a4e4-8fd038db5836 | 1 |
+| 0b6ee423-04a5-4426-b397-9669feae4c44 | 1 |
+| 0b755cf4-785f-466e-a235-ea697b9a6423 | 1 |
+| 0bb6b35e-67d6-409c-a129-247d7e213ead | 1 |
+| 0bbcc10c-ff75-433b-a58b-7915d27eb7d6 | 1 |
+| 0bc7a0cb-2a16-4f63-8188-39fd4c20b8b3 | 1 |
+| 0bde6cde-e334-4fd4-a05a-1d7862f8d021 | 1 |
+| 0bfc4c51-390c-4f53-804e-4ab9589e674f | 1 |
+| 0c020fb8-c19d-425c-b259-bf222b9770ad | 1 |
+| 0c12ea89-eeb4-4865-91eb-10cf75884c21 | 1 |
+| 0c30cd0e-a2d2-42b0-9ca9-8297de64e4a8 | 1 |
+| 0c46653c-0b6f-473b-8277-49c1dd42d1de | 1 |
+| 0c61c676-2a72-4dbe-8dcb-284bd112570c | 1 |
+| 0c7a94a8-4802-4caa-b59a-6013ce8b3170 | 1 |
+| 0c8615d8-e7a2-465a-8de3-961734941c16 | 1 |
+| 0c8df249-80de-4675-93e5-d06ad8ea3001 | 1 |
+| 0c95c75d-c879-4a3e-896c-46c4a1c26f72 | 1 |
+| 0ca24149-4cc4-4ad1-b448-4cc33fef851e | 1 |
+| 0ca59994-8fda-4e93-9180-967a131e4683 | 1 |
+
+### samples.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| item does not meet study protocol | 1 |
+
+### samples.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| notification | 1 |
+
+### samples.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| sample | 1 |
+
+### samples.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| tcga-b6-a1kc-01a was not pathology reviewed and should not be used. tcga-b6-a1kc-01b should be used instead. | 1 |
+
+### samples.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1097 |
+| approved | 1 |
+
+### samples.biospecimen_anatomic_site
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.biospecimen_laterality
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.catalog_reference
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.diagnosis_pathologically_confirmed
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.distance_normal_to_tumor
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.distributor_reference
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.freezing_method
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.method_of_sample_procurement
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.analytes.aliquots.analyte_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1024 |
+| dna | 74 |
+
+### samples.portions.analytes.aliquots.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 964 |
+| general | 89 |
+| item flagged dnu | 52 |
+| item is noncanonical | 1 |
+
+### samples.portions.analytes.aliquots.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 964 |
+| notification | 87 |
+| centernotification | 52 |
+| observation | 3 |
+
+### samples.portions.analytes.aliquots.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.analytes.aliquots.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 964 |
+| aliquot | 134 |
+
+### samples.portions.analytes.aliquots.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 964 |
+| all or some of the wxs data may have been removed from this aliquot due to the molecular data having a contamination value of >0.04 as estimated by gatk. | 80 |
+| the aliquot failed broad pipeline qc and not all files are suitable for use. consult the sdrf file to determine which files are usable. | 52 |
+| wxs data may no longer be available for this aliquot due to new aliquot-pairing rules being implemented by gdc harmonization pipelines. | 6 |
+| the bam associated with tcga-aq-a04l-10a-01d-a12j-09 was derived from a pool of two aliquots: tcga-aq-a04l-10a-01d-a12j-09 and tcga-aq-a04l-10a-01d-a10m-09 | 1 |
+| this is the correct replacement barcode for rna aliquot uuid: 50f23d00-f6fd-4b3d-aed2-0705f7ae6a17, which is a replacement aliquot for uuid: 60770e58-3b35-4222-97e9-d92e973f0203 that was found to have inconclusive identity (rna only).   note that this replacement aliquot is derived from a different portion than the dna. | 1 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 1ee60bda-48df-4288-90cb-480fbfbc5d50.  it replaces the incorrect tcgabarcode: tcga-c4-a0f1-01a-11r-a10u-07. | 1 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 2688aaae-389f-4fe9-a198-a95fa9b3ee9b.  it replaces the incorrect tcgabarcode: tcga-c4-a0f7-01a-11r-a10v-13.  due to platform incompatibility, data will not be available for this aliquot. | 1 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 4819bd80-3cad-4071-9cbd-16eece970f4f.  it replaces the incorrect tcgabarcode: tcga-c4-a0f1-01a-11r-a10v-13.  due to platform incompatibility, data will not be available for this aliquot. | 1 |
+| this is the corrected tcgabarcode for rna aliquot uuid: 6f0cf450-76f1-489d-9890-5093816c0680.  it replaces the incorrect tcgabarcode: tcga-c4-a0f7-01a-11r-a10u-07. | 1 |
+
+### samples.portions.analytes.aliquots.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 964 |
+| approved | 134 |
+
+### samples.portions.analytes.aliquots.center.center_type
+
+| Value | Count |
+|-------|-------|
+| cgcc | 1098 |
+| gsc | 1098 |
+| bcr | 1 |
+
+### samples.portions.analytes.aliquots.center.code
+
+| Value | Count |
+|-------|-------|
+| 09 | 1098 |
+| 01 | 1098 |
+| 05 | 1098 |
+| 07 | 1097 |
+| 13 | 1096 |
+| 02 | 807 |
+| 08 | 231 |
+| 26 | 5 |
+| 36 | 1 |
+
+### samples.portions.analytes.aliquots.center.name
+
+| Value | Count |
+|-------|-------|
+| Washington University School of Medicine | 1098 |
+| Broad Institute of MIT and Harvard | 1098 |
+| Johns Hopkins / University of Southern California | 1098 |
+| University of North Carolina | 1097 |
+| Canada's Michael Smith Genome Sciences Centre | 1096 |
+| Harvard Medical School | 807 |
+| MD Anderson - Institute for Applied Cancer Science | 5 |
+| Nationwide Children's Hospital BCR | 1 |
+
+### samples.portions.analytes.aliquots.center.namespace
+
+| Value | Count |
+|-------|-------|
+| genome.wustl.edu | 1098 |
+| broad.mit.edu | 1098 |
+| jhu-usc.edu | 1098 |
+| unc.edu | 1097 |
+| bcgsc.ca | 1096 |
+| hms.harvard.edu | 807 |
+| mdanderson.org | 5 |
+| nationwidechildrens.org | 1 |
+
+### samples.portions.analytes.aliquots.center.short_name
+
+| Value | Count |
+|-------|-------|
+| wusm | 1098 |
+| bi | 1098 |
+| jhu_usc | 1098 |
+| unc | 1097 |
+| bcgsc | 1096 |
+| hms | 807 |
+| mda | 5 |
+| nch | 1 |
+
+### samples.portions.analytes.aliquots.no_matched_normal_low_pass_wgs
+
+| Value | Count |
+|-------|-------|
+| false | 860 |
+| _missing | 238 |
+
+### samples.portions.analytes.aliquots.no_matched_normal_targeted_sequencing
+
+| Value | Count |
+|-------|-------|
+| false | 860 |
+| _missing | 238 |
+
+### samples.portions.analytes.aliquots.no_matched_normal_wgs
+
+| Value | Count |
+|-------|-------|
+| false | 860 |
+| _missing | 238 |
+
+### samples.portions.analytes.aliquots.no_matched_normal_wxs
+
+| Value | Count |
+|-------|-------|
+| false | 860 |
+| _missing | 238 |
+
+### samples.portions.analytes.aliquots.selected_normal_low_pass_wgs
+
+| Value | Count |
+|-------|-------|
+| false | 860 |
+| _missing | 238 |
+
+### samples.portions.analytes.aliquots.selected_normal_targeted_sequencing
+
+| Value | Count |
+|-------|-------|
+| false | 860 |
+| _missing | 238 |
+
+### samples.portions.analytes.aliquots.selected_normal_wgs
+
+| Value | Count |
+|-------|-------|
+| false | 860 |
+| true | 173 |
+| _missing | 148 |
+
+### samples.portions.analytes.aliquots.selected_normal_wxs
+
+| Value | Count |
+|-------|-------|
+| false | 860 |
+| _missing | 220 |
+| true | 55 |
+
+### samples.portions.analytes.aliquots.source_center
+
+| Value | Count |
+|-------|-------|
+| 23 | 1098 |
+
+### samples.portions.analytes.analyte_type
+
+| Value | Count |
+|-------|-------|
+| dna | 1098 |
+| rna | 1098 |
+| repli-g (qiagen) dna | 1024 |
+| repli-g x (qiagen) dna | 317 |
+
+### samples.portions.analytes.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1080 |
+| general | 18 |
+
+### samples.portions.analytes.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1080 |
+| observation | 18 |
+
+### samples.portions.analytes.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.analytes.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1080 |
+| analyte | 18 |
+
+### samples.portions.analytes.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 1080 |
+| users should discard data fpr this analyte obtained before 5/7/13, and use the latest data available on the data portal instead. see http://tcgadcc.com/browse/tcga-955. | 2 |
+| dna analyte uuid: 11f3c3e2-2b1d-4409-a43e-42eae8358ce3 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: 36228261-b2db-4465-869a-672916782b71 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: 44e34ec8-b65b-451c-aea9-89a6537bc689 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: 4c130ae4-b1aa-4ec6-ba88-6b32460e0f9c was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: 5493f123-5740-48c9-a531-b351fda6b081 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: 5b31eb4a-2559-498b-9204-f6fd17338905 was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: 7291657b-2a8c-467d-a763-3de577b6401b was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: 74f3a478-527e-4d49-9c3f-29f353e1fb6c was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: 87a5cafc-582e-4d14-8c3d-dfffce15e63b was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: 96db3a0e-2d63-4e79-bf6d-bc7d2fe60157 was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: c88eb59e-18a1-4f37-9fc8-9be86ea9cbdf was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: d0330be0-6b5b-4f07-a73f-2bf53bce86cd was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: d0c0f4f4-2ae0-4f76-8faf-a4e35622f14e was involved in an extraction protocol deviation wherein isopropanol precipitation was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: e277fe01-b1da-4a50-a5f7-9d97706c29fe was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: e27e9375-d153-4d0d-80ea-19c0f58c6c60 was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+| dna analyte uuid: fe7f0b20-42ce-48c7-a407-61dc0ea0878e was involved in an extraction protocol deviation wherein an additional column purification step was used as a means of buffer exchange on the column-eluted analyte. | 1 |
+
+### samples.portions.analytes.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1080 |
+| approved | 18 |
+
+### samples.portions.analytes.experimental_protocol_type
+
+| Value | Count |
+|-------|-------|
+| adna preparation type | 1096 |
+| mirvana (allprep dna) rna | 1089 |
+| repli-g | 937 |
+| pre-extracted dna received by tss | 385 |
+| repli-g x | 231 |
+| allprep ffpe dna | 12 |
+| highpure mirna (allprep dna) ffpe rna | 12 |
+| allprep rna extraction | 10 |
+| _missing | 2 |
+| genomplex | 1 |
+
+### samples.portions.analytes.normal_tumor_genotype_snp_match
+
+| Value | Count |
+|-------|-------|
+| yes | 1096 |
+| _missing | 2 |
+
+### samples.portions.analytes.spectrophotometer_method
+
+| Value | Count |
+|-------|-------|
+| uv spec | 1098 |
+| picogreen | 390 |
+
+### samples.portions.analytes.well_number
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.center.center_type
+
+| Value | Count |
+|-------|-------|
+| cgcc | 887 |
+| _missing | 211 |
+
+### samples.portions.center.code
+
+| Value | Count |
+|-------|-------|
+| 20 | 887 |
+| _missing | 211 |
+| 30 | 126 |
+
+### samples.portions.center.name
+
+| Value | Count |
+|-------|-------|
+| MD Anderson - RPPA Core Facility (Proteomics) | 887 |
+| _missing | 211 |
+| Washington University School of Medicine Proteomics | 126 |
+
+### samples.portions.center.namespace
+
+| Value | Count |
+|-------|-------|
+| mdanderson.org | 887 |
+| _missing | 211 |
+| genome.wustl.edu | 126 |
+
+### samples.portions.center.short_name
+
+| Value | Count |
+|-------|-------|
+| mda | 887 |
+| _missing | 211 |
+| wusm | 126 |
+
+### samples.portions.is_ffpe
+
+| Value | Count |
+|-------|-------|
+| false | 1098 |
+| true | 12 |
+
+### samples.portions.portion_number
+
+| Value | Count |
+|-------|-------|
+| 01 | 989 |
+| 11 | 936 |
+| 21 | 867 |
+| 31 | 146 |
+| 12 | 116 |
+| 41 | 115 |
+| 22 | 76 |
+| 1 | 44 |
+| 32 | 23 |
+| 13 | 22 |
+| 51 | 22 |
+| 23 | 20 |
+| 02 | 19 |
+| 42 | 16 |
+| 33 | 14 |
+| 2 | 13 |
+| 61 | 11 |
+| 43 | 9 |
+| 04 | 8 |
+| 03 | 5 |
+| 06 | 5 |
+| 71 | 5 |
+| 34 | 4 |
+| 52 | 4 |
+| 81 | 3 |
+| 14 | 2 |
+| 53 | 2 |
+| 24 | 1 |
+| 3 | 1 |
+| 44 | 1 |
+| 62 | 1 |
+| 72 | 1 |
+| 73 | 1 |
+| 91 | 1 |
+| 94 | 1 |
+
+### samples.portions.slides.annotations.category
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.slides.annotations.classification
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.slides.annotations.creator
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.slides.annotations.entity_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.slides.annotations.notes
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.slides.annotations.status
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.slides.bone_marrow_malignant_cells
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.portions.slides.section_location
+
+| Value | Count |
+|-------|-------|
+| top | 1096 |
+| not reported | 1062 |
+| bottom | 459 |
+
+### samples.portions.slides.tissue_microarray_coordinates
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.preservation_method
+
+| Value | Count |
+|-------|-------|
+| unknown | 1064 |
+| ffpe | 1059 |
+| oct | 683 |
+
+### samples.sample_type
+
+| Value | Count |
+|-------|-------|
+| primary tumor | 1098 |
+| blood derived normal | 1023 |
+| solid tissue normal | 162 |
+| metastatic | 7 |
+
+### samples.specimen_type
+
+| Value | Count |
+|-------|-------|
+| solid tissue | 1089 |
+| peripheral blood nos | 1023 |
+| unknown | 394 |
+
+### samples.tissue_collection_type
+
+| Value | Count |
+|-------|-------|
+| _missing | 1098 |
+
+### samples.tissue_type
+
+| Value | Count |
+|-------|-------|
+| tumor | 1098 |
+| normal | 1098 |
+
+### samples.tumor_descriptor
+
+| Value | Count |
+|-------|-------|
+| primary | 1098 |
+| not applicable | 1098 |
+| metastatic | 7 |
+
+### slide_ids
+
+| Value | Count |
+|-------|-------|
+| 001d9539-9344-444c-bd29-85b5b0224201 | 1 |
+| 0020e53b-2519-42a2-b9e3-7b4225124bfb | 1 |
+| 0053578b-c481-4378-a158-c22a022f73c7 | 1 |
+| 006fc1c5-95e1-43d7-a9dd-8ec9f6bb60b0 | 1 |
+| 0088505b-5e18-49c4-bc2b-7946b2780383 | 1 |
+| 0088b960-4ea8-4bd3-b9b4-7c1fe59d4925 | 1 |
+| 00af80a8-4672-4434-99b0-474c720f1090 | 1 |
+| 00afa1c3-9645-409a-b1d0-663570f3adde | 1 |
+| 00bd646a-58cb-4be4-b2ae-9368143eaa9b | 1 |
+| 00c53463-683f-443f-b693-5673b3b564ff | 1 |
+| 00c72a8a-e03d-49cc-ad44-893168b4909d | 1 |
+| 00d3beec-4e44-4585-a6c0-ec25b8ee3538 | 1 |
+| 00d40fd2-65e8-4dd2-9c1a-38529809fa03 | 1 |
+| 010d7af0-073a-48aa-a257-10583b33c6f7 | 1 |
+| 014616a7-f791-425c-987e-5de7b04f8d06 | 1 |
+| 0147607c-ae77-4449-a80a-1610d2657e82 | 1 |
+| 0154e3f1-b5c0-4a16-9aa0-fd5ee6cede9e | 1 |
+| 0158baa4-4e64-4235-95b0-28ef4f494a06 | 1 |
+| 01643d48-402a-4399-b91e-24ce4a64c5cc | 1 |
+| 0197ffcc-ebef-4d76-8d9f-5dc70141f45e | 1 |
+| 01b489e3-2fe7-4ed4-af28-04850e1fd9ff | 1 |
+| 01b86041-ac17-4bcf-884e-b7d48240bbe2 | 1 |
+| 01c004dd-25f5-4a45-8d5a-4158fa1b0e8d | 1 |
+| 01c2a132-3509-42c7-b003-8811f0947bc1 | 1 |
+| 01c3b247-8b3b-4466-9641-4146fbba4f51 | 1 |
+| 01da1142-7d58-419d-998b-acd3be403d31 | 1 |
+| 01fae5c6-f81e-4fd6-a5e1-560ac898857f | 1 |
+| 0200bd2e-e94b-479e-910f-709a4e197250 | 1 |
+| 020c09ab-6ac4-40a1-8519-c966889f3177 | 1 |
+| 02204231-855b-455e-b21a-b4db37703064 | 1 |
+| 02470951-09ac-4436-b9c1-74f7af27106c | 1 |
+| 024804ed-8bfb-437d-ac0c-fedeac3b16c9 | 1 |
+| 024acade-8422-4ed5-9bcc-129fd9423bb3 | 1 |
+| 025c5684-f580-4622-877a-b7e9ec383e0f | 1 |
+| 027f29c9-e640-476a-8638-95613f1319a0 | 1 |
+| 0285891e-2ef3-4133-8f3f-6fc178e43a4b | 1 |
+| 02864812-35dd-4ff2-a6aa-fba55a856a72 | 1 |
+| 028a6732-bbaa-403f-8897-9c74202a01dd | 1 |
+| 028eeb11-c0eb-4311-b541-cddf2ced4a6a | 1 |
+| 0298ed96-b287-42a0-93ba-89932a36da4c | 1 |
+| 02a06b9c-8ae0-4f30-96c5-07cce9563397 | 1 |
+| 02a10d0a-2b31-4165-94e3-4e6ca784a092 | 1 |
+| 02da5bd6-e61a-4986-943e-a0afcfaf3d28 | 1 |
+| 02dba2be-83e3-42f2-aa8a-b5aa4d08c681 | 1 |
+| 02ded2f9-3484-42a5-a755-083c53b27f68 | 1 |
+| 02efafec-b41b-4e3f-bae2-34e4dcd9a097 | 1 |
+| 02f3457d-30fd-4210-8a46-e8c4954282e5 | 1 |
+| 0307cdca-3e07-410e-8496-364fba170087 | 1 |
+| 030abda5-8ce4-47e5-b2ae-dabe131ea95a | 1 |
+| 030be3e7-49d7-49da-9705-733705848c70 | 1 |
+| 030e8ca6-2dd3-41ad-aae4-e69b803dbcaa | 1 |
+| 039aaa5c-0866-45ef-9fd2-36f9a6aa58aa | 1 |
+| 039de300-ceed-495c-a170-e4aa053eebbb | 1 |
+| 03b68b39-7b3d-4825-9af7-76f4136a7786 | 1 |
+| 03b7c94b-cdd8-49a3-a94e-b6a01d74dec7 | 1 |
+| 03b969da-c200-48e2-bed2-ec2830daf487 | 1 |
+| 03c53cb6-b5b2-4a11-a3f1-7eb215ae2f47 | 1 |
+| 03c71807-b82c-4b01-8962-c6ac3d1b3445 | 1 |
+| 04018194-c078-409d-9fcc-6519b9609fb0 | 1 |
+| 0402a8fd-a121-4a86-927e-073a2e4a7e7e | 1 |
+| 040555c8-b5f8-4b28-bf7d-24ea56e0eb00 | 1 |
+| 040c3253-dfe8-4f43-86b7-c855e8e95279 | 1 |
+| 040dcb79-c46d-4c95-b04e-da415e91eaff | 1 |
+| 04366f87-3171-4a2b-8d9c-6a393cd50028 | 1 |
+| 04417171-1d60-461e-a7e3-6a285412945a | 1 |
+| 0444d86a-fee3-439b-8ad5-a5a15195a018 | 1 |
+| 045b6270-0b38-4a1b-bb56-84c45ce65261 | 1 |
+| 046b5a24-2bd4-461a-be9b-41f9834c4313 | 1 |
+| 048773d5-0220-4002-bb70-ae90e5405720 | 1 |
+| 0490ab30-5373-4de5-b969-fb1f3c8bcf1d | 1 |
+| 04ad0cae-1b9c-472f-8d08-ea6995e00bdd | 1 |
+| 05013200-712c-425d-ad4b-31ba52067058 | 1 |
+| 051bda25-69f2-4b3d-830a-46d6c169af21 | 1 |
+| 052218ca-85c4-4cbe-8b63-5633d19bf88e | 1 |
+| 0535cec8-6503-4d27-8bae-3e13cce91454 | 1 |
+| 0544eda9-a392-4eed-961d-9a0683b54b5d | 1 |
+| 055344db-d538-42b6-990e-bcb17db54cca | 1 |
+| 0554a423-cfcb-4daa-9c57-dd3960aa2614 | 1 |
+| 05565e8e-cc7a-4857-9fb4-baf4e6d49fd0 | 1 |
+| 056c6d49-2f06-4e83-82f9-a465b230b32f | 1 |
+| 0570e14a-af12-4d0c-94d0-29f5788baa64 | 1 |
+| 058d4ddb-d74a-46ad-8d7f-1bdd4b713ada | 1 |
+| 058f7de9-4173-4698-8b5c-f52f54d36cf3 | 1 |
+| 059d6dec-9051-4d12-96cc-49bd63ae678e | 1 |
+| 05ee151e-70ac-440c-95a6-e8f6f3f423d2 | 1 |
+| 05ee8628-8199-466f-9e26-012186642f25 | 1 |
+| 060d620b-b2b3-4e5c-baf1-bdf60d81aee6 | 1 |
+| 062a8564-3554-4f64-9f37-a283eceae004 | 1 |
+| 0634cf0b-038e-4a34-9c8e-37634b5bd935 | 1 |
+| 065bca11-661b-4bca-9c63-90a1b19531f4 | 1 |
+| 065ce0e2-0f61-441b-a9e3-fabff123f4ba | 1 |
+| 0665ed7a-c8e2-4b8a-bf73-8c06dab48c47 | 1 |
+| 06703cd3-613e-4203-8b11-e8a97f749172 | 1 |
+| 06755355-f02c-4111-94f3-acfaa8a9db6b | 1 |
+| 06879904-7df1-4d73-b94b-9114e6762f80 | 1 |
+| 0687a88c-a157-4796-a5ac-f05584ba36e4 | 1 |
+| 06909389-ebb0-43bb-ae11-a1c0449eadfa | 1 |
+| 06c28a4f-dd0d-460d-9ee3-086f99e73724 | 1 |
+| 06db6ff3-c6c9-4a57-b0fc-ef2a749865bf | 1 |
+| 06e78372-88dc-4e56-ac02-219351b122b5 | 1 |
+| 06e9fb5e-1c6e-4778-9c52-d026628f39c7 | 1 |
+| 06ebda0b-2dd5-4116-9f51-c3a0ad9fb8bb | 1 |
+| 071b5ba3-05a2-46b2-a1d6-80e1f34b33c5 | 1 |
+| 07310f4c-adca-4b79-ad89-5442f9c5b6af | 1 |
+| 073214cd-89f2-4a19-bea7-cd5c94d2dc5e | 1 |
+| 073882c6-14ca-4b97-8992-fbfe1e9479c7 | 1 |
+| 0757f7d4-521c-428f-9d24-a3535e40a03f | 1 |
+| 0770840e-d781-45f2-bbc8-034f0e4138a5 | 1 |
+| 07761d74-57d6-4859-ad0b-bd2f8c68d905 | 1 |
+| 07792af8-07a1-46d7-b3af-2e7ca29a22cc | 1 |
+| 078f18e0-038e-4065-8468-bf4180c9ab12 | 1 |
+| 0795e2c7-63d2-4b4e-af60-299014b058d1 | 1 |
+| 07c14504-cbf1-40e2-b0c0-88321a515c19 | 1 |
+| 07e1b819-2663-42a7-a85d-ea27aa3669d0 | 1 |
+| 080bd642-ef30-4f1c-bae5-29da64ce2a94 | 1 |
+| 082982e8-33d2-4dfc-ab0e-1bf13caffbea | 1 |
+| 083ad0a0-4226-490c-9d62-aace153bb4a5 | 1 |
+| 084536c6-00fe-428c-b744-47d391f0a0ef | 1 |
+| 08534dd6-3365-4734-ae0f-202dfb7f90d8 | 1 |
+| 086cfa88-a038-4518-86c9-b689ecdf952a | 1 |
+| 087d05ee-9a03-4433-9060-98a80832867a | 1 |
+| 0880d793-c46d-43e9-990e-0dadb9451481 | 1 |
+| 089d9985-6794-4237-a7c7-75c1fb3c1755 | 1 |
+| 08bc6aef-5b96-48e7-81fe-b745374d3946 | 1 |
+| 08e6e61b-dda7-488c-be2f-f2204e2dc0ba | 1 |
+| 094c1ad0-5cd5-4b13-af5e-9c7d3688aa23 | 1 |
+| 0959ac56-81b8-4cb8-aa50-c2d480f8e584 | 1 |
+| 0970c86e-5e9d-4221-b93b-f8590d5f90ac | 1 |
+| 09767559-4f73-4048-9655-76c73dcd8322 | 1 |
+| 097d2dde-b4e2-42fb-ac84-9556f0531d72 | 1 |
+| 098d701e-d135-47a2-ba97-298a12462de1 | 1 |
+| 099aaa2f-dc57-4d07-b4ac-c53fdf724aa1 | 1 |
+| 099f3413-0f82-4126-8e29-b95332156bd4 | 1 |
+| 09a14d8c-2c79-43e9-b08c-73481d3ec01c | 1 |
+| 09beb17d-e7be-4a91-b931-98ff177d1202 | 1 |
+| 09d13493-157c-44e8-b778-b589042820b0 | 1 |
+| 09ff6422-d5b1-45b0-969a-8f31285e23a9 | 1 |
+| 0a0e9510-e048-4b45-9dd8-2caabeaf918e | 1 |
+| 0a106cef-2df0-488d-b56a-ed9a71727703 | 1 |
+| 0a3e4ed9-fcea-4259-8b5c-89ff25f41a82 | 1 |
+| 0a4e3580-9711-488f-8a18-54f72c429035 | 1 |
+| 0a58c0ae-4abd-4b5a-8d07-1de74cc0ab9f | 1 |
+| 0a94decd-c84d-4b79-ab5f-65b3ab54c571 | 1 |
+| 0aa48fb8-b9fb-4eb8-b0d3-fe33322d3acb | 1 |
+| 0aa72ee2-8d99-4e03-8f40-7a55d0acb7ad | 1 |
+| 0aabd351-3555-4340-b57a-a3ac4ff7d897 | 1 |
+| 0ab3ef8b-3590-4449-9fb2-5b9a4cda0df0 | 1 |
+| 0af5f17f-e9a6-4424-8eae-728878063437 | 1 |
+| 0af83844-2ead-4924-a504-3925be7ba61d | 1 |
+| 0afa2bba-fb74-4ae8-84ad-ae65522e5ec9 | 1 |
+| 0b2432b1-5781-4725-bb85-7547c7ae9f36 | 1 |
+| 0b29b3e7-0225-4c95-a89f-459d31ab3ea5 | 1 |
+| 0b346101-acfa-429f-a30d-3ed544719c7a | 1 |
+| 0b545c95-daa0-4bfc-a38b-1a7a2cb15b8a | 1 |
+| 0b568f51-aac9-4185-88ff-5630835f1f0b | 1 |
+| 0b6597b2-442b-4114-a85c-7c0ba052a291 | 1 |
+| 0b65fbb7-a1b4-4151-b15a-5563ac1afb9a | 1 |
+| 0b6b1f20-962e-4775-a5e2-9eef9ab5e97e | 1 |
+| 0b847cf2-8c5e-4f79-91c4-2781eaa137f9 | 1 |
+| 0bbe79f5-903c-4ef1-a9fe-7479a1141316 | 1 |
+| 0bc60489-a3e6-42b4-8488-4958451696f8 | 1 |
+| 0bf921d5-0022-4a59-a409-bae0771291b9 | 1 |
+| 0c127098-1764-4555-9588-1d2de72561a1 | 1 |
+| 0c2b78c5-2579-4a8a-81cb-e2f6cbb4a019 | 1 |
+| 0c3f2a18-2a78-470f-8f03-f955cb7e978f | 1 |
+| 0c5eda2b-eb9f-4eb3-9a90-44c457047598 | 1 |
+| 0c7e7368-5625-4542-a1a0-c98f17f540bb | 1 |
+| 0c86a6ed-1d8f-47a9-ab33-7d232c3e359b | 1 |
+| 0ca5b171-d61d-4e6d-b365-4cd6bd288aec | 1 |
+| 0ca5d58c-89b3-4d0e-9b39-8d74245286ff | 1 |
+| 0cd11145-841a-4fe3-bacb-c014d4782c9e | 1 |
+| 0cda5515-8bec-4df9-a50e-f4a649aba4bf | 1 |
+| 0cf17b37-ec59-40e7-9af4-bb9cb9f97098 | 1 |
+| 0d04021b-90bb-4ba2-9737-134a56087021 | 1 |
+| 0d3812ca-e90f-4426-98de-b994b090880c | 1 |
+| 0d409c64-be21-48b9-a7dc-aaa0031a3047 | 1 |
+| 0d664105-6e7a-4799-8e76-27d720666494 | 1 |
+| 0d7af972-fe18-47c7-b863-2bb47d611f22 | 1 |
+| 0d808566-0f2e-4a22-b3fd-87d3f2db95b3 | 1 |
+| 0dd1e8b3-7435-4705-bb1b-b612a01a26b2 | 1 |
+| 0dde7f0b-aa34-4f87-9ed1-4d1b89b2b1c6 | 1 |
+| 0dfcf370-4597-48c0-9779-97c7a404be88 | 1 |
+| 0e10b440-d667-41bf-baba-a5a70acb04dd | 1 |
+| 0e422cec-f6cb-44b0-a386-d0e862300b90 | 1 |
+| 0e4d0ac5-aab3-4033-b475-a594a427c246 | 1 |
+| 0e522581-fccd-4efe-a915-ff1af3c5ae12 | 1 |
+| 0e5989d3-42ed-4175-93fb-cca715c922bf | 1 |
+| 0e63ef85-144d-4827-9e61-fd54a5320ddf | 1 |
+| 0e6a0f0c-7760-44c4-a558-a6905b5a9267 | 1 |
+| 0e85f1cf-41db-40eb-9121-dd27cd540c4d | 1 |
+| 0e8d431f-4df4-4e2e-a8d2-3febb0f1beb9 | 1 |
+| 0e8db0ab-3ed4-4957-a36e-8ac6e6a151d9 | 1 |
+| 0e9cc322-519c-49e1-ab3b-25e66a24ef92 | 1 |
+| 0eb8a7f8-c3c4-4843-a395-9fffd8b1cc4a | 1 |
+| 0eb990a6-1311-4909-8d86-03ae43a41227 | 1 |
+| 0ec4715e-a5f7-48bf-b95e-8532c3f101d6 | 1 |
+| 0edc7914-6865-4d64-9759-f620647aaa94 | 1 |
+| 0f00a193-4045-4462-b2b2-a76b40a4efb9 | 1 |
+| 0f065643-c3e8-4abd-b95e-187a69939ab5 | 1 |
+| 0f13b36e-14b4-4e59-8800-2e8d86b08079 | 1 |
+
+### submitter_aliquot_ids
+
+| Value | Count |
+|-------|-------|
+| tcga-3c-aaau-01a-11d-a41e-01 | 1 |
+| tcga-3c-aaau-01a-11d-a41f-09 | 1 |
+| tcga-3c-aaau-01a-11d-a41q-05 | 1 |
+| tcga-3c-aaau-01a-11d-a89f-36 | 1 |
+| tcga-3c-aaau-01a-11r-a41b-07 | 1 |
+| tcga-3c-aaau-01a-11r-a41g-13 | 1 |
+| tcga-3c-aaau-10a-01d-a41e-01 | 1 |
+| tcga-3c-aaau-10a-01d-a41f-09 | 1 |
+| tcga-3c-aaau-10a-01d-a89f-36 | 1 |
+| tcga-3c-aali-01a-11d-a41e-01 | 1 |
+| tcga-3c-aali-01a-11d-a41f-09 | 1 |
+| tcga-3c-aali-01a-11d-a41q-05 | 1 |
+| tcga-3c-aali-01a-11d-a89f-36 | 1 |
+| tcga-3c-aali-01a-11r-a41b-07 | 1 |
+| tcga-3c-aali-01a-11r-a41g-13 | 1 |
+| tcga-3c-aali-10a-01d-a41e-01 | 1 |
+| tcga-3c-aali-10a-01d-a41f-09 | 1 |
+| tcga-3c-aali-10a-01d-a89f-36 | 1 |
+| tcga-3c-aalj-01a-11-a617-42-x022-s05_aliquot | 1 |
+| tcga-3c-aalj-01a-31d-a41e-01 | 1 |
+| tcga-3c-aalj-01a-31d-a41f-09 | 1 |
+| tcga-3c-aalj-01a-31d-a41q-05 | 1 |
+| tcga-3c-aalj-01a-31d-a702-36 | 1 |
+| tcga-3c-aalj-01a-31r-a41b-07 | 1 |
+| tcga-3c-aalj-01a-31r-a41g-13 | 1 |
+| tcga-3c-aalj-10a-01d-a41e-01 | 1 |
+| tcga-3c-aalj-10a-01d-a41f-09 | 1 |
+| tcga-3c-aalj-10a-01d-a702-36 | 1 |
+| tcga-3c-aalk-01a-11d-a41e-01 | 1 |
+| tcga-3c-aalk-01a-11d-a41f-09 | 1 |
+| tcga-3c-aalk-01a-11d-a41q-05 | 1 |
+| tcga-3c-aalk-01a-11d-a89f-36 | 1 |
+| tcga-3c-aalk-01a-11r-a41b-07 | 1 |
+| tcga-3c-aalk-01a-11r-a41g-13 | 1 |
+| tcga-3c-aalk-10a-01d-a41e-01 | 1 |
+| tcga-3c-aalk-10a-01d-a41f-09 | 1 |
+| tcga-3c-aalk-10a-01d-a89f-36 | 1 |
+| tcga-4h-aaak-01a-12d-a41e-01 | 1 |
+| tcga-4h-aaak-01a-12d-a41f-09 | 1 |
+| tcga-4h-aaak-01a-12d-a41q-05 | 1 |
+| tcga-4h-aaak-01a-12d-a702-36 | 1 |
+| tcga-4h-aaak-01a-12r-a41b-07 | 1 |
+| tcga-4h-aaak-01a-12r-a41g-13 | 1 |
+| tcga-4h-aaak-01a-31-a617-42-x011-s09_aliquot | 1 |
+| tcga-4h-aaak-10a-01d-a41e-01 | 1 |
+| tcga-4h-aaak-10a-01d-a41f-09 | 1 |
+| tcga-4h-aaak-10a-01d-a702-36 | 1 |
+| tcga-5l-aat0-01a-12d-a41e-01 | 1 |
+| tcga-5l-aat0-01a-12d-a41f-09 | 1 |
+| tcga-5l-aat0-01a-12d-a41q-05 | 1 |
+| tcga-5l-aat0-01a-12d-a89f-36 | 1 |
+| tcga-5l-aat0-01a-12r-a41b-07 | 1 |
+| tcga-5l-aat0-01a-12r-a41g-13 | 1 |
+| tcga-5l-aat0-10a-01d-a41e-01 | 1 |
+| tcga-5l-aat0-10a-01d-a41f-09 | 1 |
+| tcga-5l-aat0-10a-01d-a89f-36 | 1 |
+| tcga-5l-aat1-01a-12d-a41e-01 | 1 |
+| tcga-5l-aat1-01a-12d-a41f-09 | 1 |
+| tcga-5l-aat1-01a-12d-a41q-05 | 1 |
+| tcga-5l-aat1-01a-12d-a89f-36 | 1 |
+| tcga-5l-aat1-01a-12r-a41b-07 | 1 |
+| tcga-5l-aat1-01a-12r-a41g-13 | 1 |
+| tcga-5l-aat1-10a-01d-a41e-01 | 1 |
+| tcga-5l-aat1-10a-01d-a41f-09 | 1 |
+| tcga-5l-aat1-10a-01d-a89f-36 | 1 |
+| tcga-5t-a9qa-01a-11d-a41e-01 | 1 |
+| tcga-5t-a9qa-01a-11d-a41f-09 | 1 |
+| tcga-5t-a9qa-01a-11d-a41q-05 | 1 |
+| tcga-5t-a9qa-01a-11d-a89f-36 | 1 |
+| tcga-5t-a9qa-01a-11r-a41b-07 | 1 |
+| tcga-5t-a9qa-01a-11r-a41g-13 | 1 |
+| tcga-5t-a9qa-10a-01d-a41e-01 | 1 |
+| tcga-5t-a9qa-10a-01d-a41f-09 | 1 |
+| tcga-5t-a9qa-10a-01d-a89f-36 | 1 |
+| tcga-a1-a0sb-01a-11d-a140-02 | 1 |
+| tcga-a1-a0sb-01a-11d-a141-01 | 1 |
+| tcga-a1-a0sb-01a-11d-a142-09 | 1 |
+| tcga-a1-a0sb-01a-11d-a145-05 | 1 |
+| tcga-a1-a0sb-01a-11d-a893-36 | 1 |
+| tcga-a1-a0sb-01a-11r-a143-13 | 1 |
+| tcga-a1-a0sb-01a-11r-a144-07 | 1 |
+| tcga-a1-a0sb-01a-11w-a187-09 | 1 |
+| tcga-a1-a0sb-10a-02d-a893-36 | 1 |
+| tcga-a1-a0sb-10b-01d-a140-02 | 1 |
+| tcga-a1-a0sb-10b-01d-a141-01 | 1 |
+| tcga-a1-a0sb-10b-01d-a142-09 | 1 |
+| tcga-a1-a0sb-10b-01w-a187-09 | 1 |
+| tcga-a1-a0sd-01a-11d-a10x-02 | 1 |
+| tcga-a1-a0sd-01a-11d-a10y-09 | 1 |
+| tcga-a1-a0sd-01a-11d-a111-01 | 1 |
+| tcga-a1-a0sd-01a-11d-a112-05 | 1 |
+| tcga-a1-a0sd-01a-11d-a893-36 | 1 |
+| tcga-a1-a0sd-01a-11r-a114-13 | 1 |
+| tcga-a1-a0sd-01a-11r-a115-07 | 1 |
+| tcga-a1-a0sd-01a-11w-a12t-09 | 1 |
+| tcga-a1-a0sd-10a-01d-a10z-02 | 1 |
+| tcga-a1-a0sd-10a-01d-a110-09 | 1 |
+| tcga-a1-a0sd-10a-01d-a113-01 | 1 |
+| tcga-a1-a0sd-10a-01d-a893-36 | 1 |
+| tcga-a1-a0sd-10a-01w-a12u-09 | 1 |
+| tcga-a1-a0se-01a-11d-a086-02 | 1 |
+| tcga-a1-a0se-01a-11d-a087-01 | 1 |
+| tcga-a1-a0se-01a-11d-a088-05 | 1 |
+| tcga-a1-a0se-01a-11d-a099-09 | 1 |
+| tcga-a1-a0se-01a-11d-a10p-05 | 1 |
+| tcga-a1-a0se-01a-11d-a893-36 | 1 |
+| tcga-a1-a0se-01a-11r-a084-07 | 1 |
+| tcga-a1-a0se-01a-11r-a085-13 | 1 |
+| tcga-a1-a0se-01a-11w-a097-09 | 1 |
+| tcga-a1-a0se-01a-11x-a098-09 | 1 |
+| tcga-a1-a0se-10a-03d-a086-02 | 1 |
+| tcga-a1-a0se-10a-03d-a087-01 | 1 |
+| tcga-a1-a0se-10a-03d-a099-09 | 1 |
+| tcga-a1-a0se-10a-03d-a893-36 | 1 |
+| tcga-a1-a0se-10a-03w-a097-09 | 1 |
+| tcga-a1-a0se-10a-03x-a098-09 | 1 |
+| tcga-a1-a0sf-01a-11d-a140-02 | 1 |
+| tcga-a1-a0sf-01a-11d-a141-01 | 1 |
+| tcga-a1-a0sf-01a-11d-a142-09 | 1 |
+| tcga-a1-a0sf-01a-11d-a145-05 | 1 |
+| tcga-a1-a0sf-01a-11d-a893-36 | 1 |
+| tcga-a1-a0sf-01a-11r-a143-13 | 1 |
+| tcga-a1-a0sf-01a-11r-a144-07 | 1 |
+| tcga-a1-a0sf-01a-11w-a187-09 | 1 |
+| tcga-a1-a0sf-10b-01d-a140-02 | 1 |
+| tcga-a1-a0sf-10b-01d-a141-01 | 1 |
+| tcga-a1-a0sf-10b-01d-a142-09 | 1 |
+| tcga-a1-a0sf-10b-01d-a893-36 | 1 |
+| tcga-a1-a0sf-10b-01w-a187-09 | 1 |
+| tcga-a1-a0sg-01a-11d-a140-02 | 1 |
+| tcga-a1-a0sg-01a-11d-a141-01 | 1 |
+| tcga-a1-a0sg-01a-11d-a142-09 | 1 |
+| tcga-a1-a0sg-01a-11d-a145-05 | 1 |
+| tcga-a1-a0sg-01a-11d-a893-36 | 1 |
+| tcga-a1-a0sg-01a-11r-a143-13 | 1 |
+| tcga-a1-a0sg-01a-11r-a144-07 | 1 |
+| tcga-a1-a0sg-01a-11w-a187-09 | 1 |
+| tcga-a1-a0sg-10a-03d-a893-36 | 1 |
+| tcga-a1-a0sg-10b-01d-a140-02 | 1 |
+| tcga-a1-a0sg-10b-01d-a141-01 | 1 |
+| tcga-a1-a0sg-10b-01d-a142-09 | 1 |
+| tcga-a1-a0sg-10b-01d-a17g-09 | 1 |
+| tcga-a1-a0sg-10b-01w-a187-09 | 1 |
+| tcga-a1-a0sh-01a-11d-a086-02 | 1 |
+| tcga-a1-a0sh-01a-11d-a087-01 | 1 |
+| tcga-a1-a0sh-01a-11d-a088-05 | 1 |
+| tcga-a1-a0sh-01a-11d-a099-09 | 1 |
+| tcga-a1-a0sh-01a-11d-a10p-05 | 1 |
+| tcga-a1-a0sh-01a-11r-a084-07 | 1 |
+| tcga-a1-a0sh-01a-11r-a085-13 | 1 |
+| tcga-a1-a0sh-01a-11w-a097-09 | 1 |
+| tcga-a1-a0sh-01a-11x-a098-09 | 1 |
+| tcga-a1-a0sh-10a-03d-a086-02 | 1 |
+| tcga-a1-a0sh-10a-03d-a087-01 | 1 |
+| tcga-a1-a0sh-10a-03d-a099-09 | 1 |
+| tcga-a1-a0sh-10a-03w-a097-09 | 1 |
+| tcga-a1-a0sh-10a-03x-a098-09 | 1 |
+| tcga-a1-a0si-01a-11d-a140-02 | 1 |
+| tcga-a1-a0si-01a-11d-a141-01 | 1 |
+| tcga-a1-a0si-01a-11d-a142-09 | 1 |
+| tcga-a1-a0si-01a-11d-a145-05 | 1 |
+| tcga-a1-a0si-01a-11d-a89f-36 | 1 |
+| tcga-a1-a0si-01a-11r-a143-13 | 1 |
+| tcga-a1-a0si-01a-11r-a144-07 | 1 |
+| tcga-a1-a0si-01a-11w-a187-09 | 1 |
+| tcga-a1-a0si-10b-01d-a140-02 | 1 |
+| tcga-a1-a0si-10b-01d-a141-01 | 1 |
+| tcga-a1-a0si-10b-01d-a142-09 | 1 |
+| tcga-a1-a0si-10b-01d-a89f-36 | 1 |
+| tcga-a1-a0si-10b-01w-a187-09 | 1 |
+| tcga-a1-a0sj-01a-11d-a086-02 | 1 |
+| tcga-a1-a0sj-01a-11d-a087-01 | 1 |
+| tcga-a1-a0sj-01a-11d-a088-05 | 1 |
+| tcga-a1-a0sj-01a-11d-a099-09 | 1 |
+| tcga-a1-a0sj-01a-11d-a10p-05 | 1 |
+| tcga-a1-a0sj-01a-11r-a084-07 | 1 |
+| tcga-a1-a0sj-01a-11r-a085-13 | 1 |
+| tcga-a1-a0sj-01a-11w-a097-09 | 1 |
+| tcga-a1-a0sj-01a-11x-a098-09 | 1 |
+| tcga-a1-a0sj-10a-02d-a086-02 | 1 |
+| tcga-a1-a0sj-10a-02d-a087-01 | 1 |
+| tcga-a1-a0sj-10a-02d-a099-09 | 1 |
+| tcga-a1-a0sj-10a-02w-a097-09 | 1 |
+| tcga-a1-a0sj-10a-02x-a098-09 | 1 |
+| tcga-a1-a0sk-01a-11d-a893-36 | 1 |
+| tcga-a1-a0sk-01a-12d-a086-02 | 1 |
+| tcga-a1-a0sk-01a-12d-a087-01 | 1 |
+| tcga-a1-a0sk-01a-12d-a088-05 | 1 |
+| tcga-a1-a0sk-01a-12d-a099-09 | 1 |
+| tcga-a1-a0sk-01a-12d-a10p-05 | 1 |
+| tcga-a1-a0sk-01a-12r-a084-07 | 1 |
+| tcga-a1-a0sk-01a-12r-a085-13 | 1 |
+| tcga-a1-a0sk-01a-12w-a097-09 | 1 |
+| tcga-a1-a0sk-01a-12x-a098-09 | 1 |
+| tcga-a1-a0sk-10a-02d-a893-36 | 1 |
+| tcga-a1-a0sk-10a-03d-a086-02 | 1 |
+| tcga-a1-a0sk-10a-03d-a087-01 | 1 |
+| tcga-a1-a0sk-10a-03d-a099-09 | 1 |
+| tcga-a1-a0sk-10a-03w-a097-09 | 1 |
+| tcga-a1-a0sk-10a-03x-a098-09 | 1 |
+
+### submitter_analyte_ids
+
+| Value | Count |
+|-------|-------|
+| tcga-3c-aaau-01a-11d | 1 |
+| tcga-3c-aaau-01a-11r | 1 |
+| tcga-3c-aaau-10a-01d | 1 |
+| tcga-3c-aali-01a-11d | 1 |
+| tcga-3c-aali-01a-11r | 1 |
+| tcga-3c-aali-10a-01d | 1 |
+| tcga-3c-aalj-01a-11-a617-42-x022-s05 | 1 |
+| tcga-3c-aalj-01a-31d | 1 |
+| tcga-3c-aalj-01a-31r | 1 |
+| tcga-3c-aalj-10a-01d | 1 |
+| tcga-3c-aalk-01a-11d | 1 |
+| tcga-3c-aalk-01a-11r | 1 |
+| tcga-3c-aalk-10a-01d | 1 |
+| tcga-4h-aaak-01a-12d | 1 |
+| tcga-4h-aaak-01a-12r | 1 |
+| tcga-4h-aaak-01a-31-a617-42-x011-s09 | 1 |
+| tcga-4h-aaak-10a-01d | 1 |
+| tcga-5l-aat0-01a-12d | 1 |
+| tcga-5l-aat0-01a-12r | 1 |
+| tcga-5l-aat0-10a-01d | 1 |
+| tcga-5l-aat1-01a-12d | 1 |
+| tcga-5l-aat1-01a-12r | 1 |
+| tcga-5l-aat1-10a-01d | 1 |
+| tcga-5t-a9qa-01a-11d | 1 |
+| tcga-5t-a9qa-01a-11r | 1 |
+| tcga-5t-a9qa-10a-01d | 1 |
+| tcga-a1-a0sb-01a-11d | 1 |
+| tcga-a1-a0sb-01a-11r | 1 |
+| tcga-a1-a0sb-01a-11w | 1 |
+| tcga-a1-a0sb-10a-02d | 1 |
+| tcga-a1-a0sb-10b-01d | 1 |
+| tcga-a1-a0sb-10b-01w | 1 |
+| tcga-a1-a0sd-01a-11d | 1 |
+| tcga-a1-a0sd-01a-11r | 1 |
+| tcga-a1-a0sd-01a-11w | 1 |
+| tcga-a1-a0sd-10a-01d | 1 |
+| tcga-a1-a0sd-10a-01w | 1 |
+| tcga-a1-a0se-01a-11d | 1 |
+| tcga-a1-a0se-01a-11r | 1 |
+| tcga-a1-a0se-01a-11w | 1 |
+| tcga-a1-a0se-01a-11x | 1 |
+| tcga-a1-a0se-10a-03d | 1 |
+| tcga-a1-a0se-10a-03w | 1 |
+| tcga-a1-a0se-10a-03x | 1 |
+| tcga-a1-a0sf-01a-11d | 1 |
+| tcga-a1-a0sf-01a-11r | 1 |
+| tcga-a1-a0sf-01a-11w | 1 |
+| tcga-a1-a0sf-10b-01d | 1 |
+| tcga-a1-a0sf-10b-01w | 1 |
+| tcga-a1-a0sg-01a-11d | 1 |
+| tcga-a1-a0sg-01a-11r | 1 |
+| tcga-a1-a0sg-01a-11w | 1 |
+| tcga-a1-a0sg-10a-03d | 1 |
+| tcga-a1-a0sg-10b-01d | 1 |
+| tcga-a1-a0sg-10b-01w | 1 |
+| tcga-a1-a0sh-01a-11d | 1 |
+| tcga-a1-a0sh-01a-11r | 1 |
+| tcga-a1-a0sh-01a-11w | 1 |
+| tcga-a1-a0sh-01a-11x | 1 |
+| tcga-a1-a0sh-10a-03d | 1 |
+| tcga-a1-a0sh-10a-03w | 1 |
+| tcga-a1-a0sh-10a-03x | 1 |
+| tcga-a1-a0si-01a-11d | 1 |
+| tcga-a1-a0si-01a-11r | 1 |
+| tcga-a1-a0si-01a-11w | 1 |
+| tcga-a1-a0si-10b-01d | 1 |
+| tcga-a1-a0si-10b-01w | 1 |
+| tcga-a1-a0sj-01a-11d | 1 |
+| tcga-a1-a0sj-01a-11r | 1 |
+| tcga-a1-a0sj-01a-11w | 1 |
+| tcga-a1-a0sj-01a-11x | 1 |
+| tcga-a1-a0sj-10a-02d | 1 |
+| tcga-a1-a0sj-10a-02w | 1 |
+| tcga-a1-a0sj-10a-02x | 1 |
+| tcga-a1-a0sk-01a-11d | 1 |
+| tcga-a1-a0sk-01a-12d | 1 |
+| tcga-a1-a0sk-01a-12r | 1 |
+| tcga-a1-a0sk-01a-12w | 1 |
+| tcga-a1-a0sk-01a-12x | 1 |
+| tcga-a1-a0sk-10a-02d | 1 |
+| tcga-a1-a0sk-10a-03d | 1 |
+| tcga-a1-a0sk-10a-03w | 1 |
+| tcga-a1-a0sk-10a-03x | 1 |
+| tcga-a1-a0sm-01a-11d | 1 |
+| tcga-a1-a0sm-01a-11r | 1 |
+| tcga-a1-a0sm-01a-11w | 1 |
+| tcga-a1-a0sm-01a-11x | 1 |
+| tcga-a1-a0sm-10a-02d | 1 |
+| tcga-a1-a0sm-10a-02w | 1 |
+| tcga-a1-a0sm-10a-02x | 1 |
+| tcga-a1-a0sn-01a-11d | 1 |
+| tcga-a1-a0sn-01a-11r | 1 |
+| tcga-a1-a0sn-01a-11w | 1 |
+| tcga-a1-a0sn-10a-02d | 1 |
+| tcga-a1-a0sn-10b-01d | 1 |
+| tcga-a1-a0sn-10b-01w | 1 |
+| tcga-a1-a0so-01a-22d | 1 |
+| tcga-a1-a0so-01a-22r | 1 |
+| tcga-a1-a0so-01a-22w | 1 |
+| tcga-a1-a0so-01a-22x | 1 |
+| tcga-a1-a0so-10a-03d | 1 |
+| tcga-a1-a0so-10a-03w | 1 |
+| tcga-a1-a0so-10a-03x | 1 |
+| tcga-a1-a0sp-01a-11d | 1 |
+| tcga-a1-a0sp-01a-11r | 1 |
+| tcga-a1-a0sp-01a-11w | 1 |
+| tcga-a1-a0sp-01a-11x | 1 |
+| tcga-a1-a0sp-10a-02d | 1 |
+| tcga-a1-a0sp-10a-02w | 1 |
+| tcga-a1-a0sp-10a-02x | 1 |
+| tcga-a1-a0sq-01a-21d | 1 |
+| tcga-a1-a0sq-01a-21r | 1 |
+| tcga-a1-a0sq-01a-21w | 1 |
+| tcga-a1-a0sq-10a-02d | 1 |
+| tcga-a1-a0sq-10b-01d | 1 |
+| tcga-a1-a0sq-10b-01w | 1 |
+| tcga-a2-a04n-01a-11d | 1 |
+| tcga-a2-a04n-01a-11r | 1 |
+| tcga-a2-a04n-01a-11w | 1 |
+| tcga-a2-a04n-10a-01d | 1 |
+| tcga-a2-a04n-10a-01w | 1 |
+| tcga-a2-a04p-01a-31d | 1 |
+| tcga-a2-a04p-01a-31r | 1 |
+| tcga-a2-a04p-01a-31w | 1 |
+| tcga-a2-a04p-01a-31x | 1 |
+| tcga-a2-a04p-10a-01d | 1 |
+| tcga-a2-a04p-10a-01w | 1 |
+| tcga-a2-a04p-10a-01x | 1 |
+| tcga-a2-a04q-01a-21d | 1 |
+| tcga-a2-a04q-01a-21r | 1 |
+| tcga-a2-a04q-01a-21w | 1 |
+| tcga-a2-a04q-01a-21x | 1 |
+| tcga-a2-a04q-10a-01d | 1 |
+| tcga-a2-a04q-10a-01w | 1 |
+| tcga-a2-a04q-10a-01x | 1 |
+| tcga-a2-a04r-01a-41d | 1 |
+| tcga-a2-a04r-01a-41r | 1 |
+| tcga-a2-a04r-01a-41x | 1 |
+| tcga-a2-a04r-10b-01d | 1 |
+| tcga-a2-a04r-10b-01x | 1 |
+| tcga-a2-a04t-01a-21d | 1 |
+| tcga-a2-a04t-01a-21r | 1 |
+| tcga-a2-a04t-01a-21w | 1 |
+| tcga-a2-a04t-01a-21x | 1 |
+| tcga-a2-a04t-10a-01d | 1 |
+| tcga-a2-a04t-10a-01w | 1 |
+| tcga-a2-a04t-10a-01x | 1 |
+| tcga-a2-a04u-01a-11d | 1 |
+| tcga-a2-a04u-01a-11r | 1 |
+| tcga-a2-a04u-01a-11w | 1 |
+| tcga-a2-a04u-10a-01d | 1 |
+| tcga-a2-a04u-10a-01w | 1 |
+| tcga-a2-a04v-01a-21d | 1 |
+| tcga-a2-a04v-01a-21r | 1 |
+| tcga-a2-a04v-01a-21w | 1 |
+| tcga-a2-a04v-01a-21x | 1 |
+| tcga-a2-a04v-10a-01d | 1 |
+| tcga-a2-a04v-10a-01w | 1 |
+| tcga-a2-a04v-10a-01x | 1 |
+| tcga-a2-a04w-01a-31d | 1 |
+| tcga-a2-a04w-01a-31r | 1 |
+| tcga-a2-a04w-01a-31w | 1 |
+| tcga-a2-a04w-10a-01d | 1 |
+| tcga-a2-a04w-10a-01w | 1 |
+| tcga-a2-a04x-01a-21d | 1 |
+| tcga-a2-a04x-01a-21r | 1 |
+| tcga-a2-a04x-01a-21w | 1 |
+| tcga-a2-a04x-01a-21x | 1 |
+| tcga-a2-a04x-10a-01d | 1 |
+| tcga-a2-a04x-10a-01w | 1 |
+| tcga-a2-a04x-10a-01x | 1 |
+| tcga-a2-a04y-01a-21d | 1 |
+| tcga-a2-a04y-01a-21r | 1 |
+| tcga-a2-a04y-01a-21w | 1 |
+| tcga-a2-a04y-01a-21x | 1 |
+| tcga-a2-a04y-10a-01d | 1 |
+| tcga-a2-a04y-10a-01w | 1 |
+| tcga-a2-a04y-10a-01x | 1 |
+| tcga-a2-a0ck-01a-11d | 1 |
+| tcga-a2-a0ck-01a-11r | 1 |
+| tcga-a2-a0ck-01a-11w | 1 |
+| tcga-a2-a0ck-10a-01d | 1 |
+| tcga-a2-a0ck-10a-01w | 1 |
+| tcga-a2-a0cl-01a-11d | 1 |
+| tcga-a2-a0cl-01a-11r | 1 |
+| tcga-a2-a0cl-01a-11w | 1 |
+| tcga-a2-a0cl-10a-01d | 1 |
+| tcga-a2-a0cl-10a-01w | 1 |
+| tcga-a2-a0cm-01a-31d | 1 |
+| tcga-a2-a0cm-01a-31r | 1 |
+| tcga-a2-a0cm-01a-31w | 1 |
+| tcga-a2-a0cm-01a-31x | 1 |
+| tcga-a2-a0cm-10a-01d | 1 |
+| tcga-a2-a0cm-10a-01w | 1 |
+| tcga-a2-a0cm-10a-01x | 1 |
+| tcga-a2-a0co-01a-13d | 1 |
+| tcga-a2-a0co-01a-13r | 1 |
+| tcga-a2-a0co-01a-13w | 1 |
+| tcga-a2-a0co-01a-21d | 1 |
+| tcga-a2-a0co-10a-01d | 1 |
+
+### submitter_diagnosis_ids
+
+| Value | Count |
+|-------|-------|
+| tcga-3c-aaau_diagnosis | 1 |
+| tcga-3c-aaau_diagnosis2 | 1 |
+| tcga-3c-aali_diagnosis | 1 |
+| tcga-3c-aalj_diagnosis | 1 |
+| tcga-3c-aalk_diagnosis | 1 |
+| tcga-4h-aaak_diagnosis | 1 |
+| tcga-5l-aat0_diagnosis | 1 |
+| tcga-5l-aat0_diagnosis2 | 1 |
+| tcga-5l-aat1_diagnosis | 1 |
+| tcga-5l-aat1_diagnosis2 | 1 |
+| tcga-5t-a9qa_diagnosis | 1 |
+| tcga-a1-a0sb_diagnosis | 1 |
+| tcga-a1-a0sd_diagnosis | 1 |
+| tcga-a1-a0se_diagnosis | 1 |
+| tcga-a1-a0sf_diagnosis | 1 |
+| tcga-a1-a0sg_diagnosis | 1 |
+| tcga-a1-a0sh_diagnosis | 1 |
+| tcga-a1-a0si_diagnosis | 1 |
+| tcga-a1-a0sj_diagnosis | 1 |
+| tcga-a1-a0sk_diagnosis | 1 |
+| tcga-a1-a0sm_diagnosis | 1 |
+| tcga-a1-a0sn_diagnosis | 1 |
+| tcga-a1-a0so_diagnosis | 1 |
+| tcga-a1-a0sp_diagnosis | 1 |
+| tcga-a1-a0sp_diagnosis2 | 1 |
+| tcga-a1-a0sq_diagnosis | 1 |
+| tcga-a2-a04n_diagnosis | 1 |
+| tcga-a2-a04p_diagnosis | 1 |
+| tcga-a2-a04p_diagnosis2 | 1 |
+| tcga-a2-a04p_diagnosis3 | 1 |
+| tcga-a2-a04p_diagnosis4 | 1 |
+| tcga-a2-a04p_diagnosis5 | 1 |
+| tcga-a2-a04p_diagnosis6 | 1 |
+| tcga-a2-a04p_diagnosis7 | 1 |
+| tcga-a2-a04q_diagnosis | 1 |
+| tcga-a2-a04r_diagnosis | 1 |
+| tcga-a2-a04t_diagnosis | 1 |
+| tcga-a2-a04u_diagnosis | 1 |
+| tcga-a2-a04v_diagnosis | 1 |
+| tcga-a2-a04v_diagnosis2 | 1 |
+| tcga-a2-a04v_diagnosis3 | 1 |
+| tcga-a2-a04w_diagnosis | 1 |
+| tcga-a2-a04x_diagnosis | 1 |
+| tcga-a2-a04y_diagnosis | 1 |
+| tcga-a2-a04y_diagnosis2 | 1 |
+| tcga-a2-a0ck_diagnosis | 1 |
+| tcga-a2-a0ck_diagnosis2 | 1 |
+| tcga-a2-a0cl_diagnosis | 1 |
+| tcga-a2-a0cm_diagnosis | 1 |
+| tcga-a2-a0cm_diagnosis2 | 1 |
+| tcga-a2-a0co_diagnosis | 1 |
+| tcga-a2-a0cp_diagnosis | 1 |
+| tcga-a2-a0cq_diagnosis | 1 |
+| tcga-a2-a0cq_diagnosis2 | 1 |
+| tcga-a2-a0cr_diagnosis | 1 |
+| tcga-a2-a0cs_diagnosis | 1 |
+| tcga-a2-a0ct_diagnosis | 1 |
+| tcga-a2-a0cu_diagnosis | 1 |
+| tcga-a2-a0cv_diagnosis | 1 |
+| tcga-a2-a0cw_diagnosis | 1 |
+| tcga-a2-a0cx_diagnosis | 1 |
+| tcga-a2-a0cy_diagnosis | 1 |
+| tcga-a2-a0cz_diagnosis | 1 |
+| tcga-a2-a0d0_diagnosis | 1 |
+| tcga-a2-a0d1_diagnosis | 1 |
+| tcga-a2-a0d2_diagnosis | 1 |
+| tcga-a2-a0d3_diagnosis | 1 |
+| tcga-a2-a0d4_diagnosis | 1 |
+| tcga-a2-a0em_diagnosis | 1 |
+| tcga-a2-a0en_diagnosis | 1 |
+| tcga-a2-a0eo_diagnosis | 1 |
+| tcga-a2-a0ep_diagnosis | 1 |
+| tcga-a2-a0eq_diagnosis | 1 |
+| tcga-a2-a0er_diagnosis | 1 |
+| tcga-a2-a0es_diagnosis | 1 |
+| tcga-a2-a0et_diagnosis | 1 |
+| tcga-a2-a0eu_diagnosis | 1 |
+| tcga-a2-a0ev_diagnosis | 1 |
+| tcga-a2-a0ew_diagnosis | 1 |
+| tcga-a2-a0ew_diagnosis2 | 1 |
+| tcga-a2-a0ex_diagnosis | 1 |
+| tcga-a2-a0ey_diagnosis | 1 |
+| tcga-a2-a0st_diagnosis | 1 |
+| tcga-a2-a0su_diagnosis | 1 |
+| tcga-a2-a0sv_diagnosis | 1 |
+| tcga-a2-a0sw_diagnosis | 1 |
+| tcga-a2-a0sw_diagnosis2 | 1 |
+| tcga-a2-a0sx_diagnosis | 1 |
+| tcga-a2-a0sx_diagnosis2 | 1 |
+| tcga-a2-a0sy_diagnosis | 1 |
+| tcga-a2-a0t0_diagnosis | 1 |
+| tcga-a2-a0t1_diagnosis | 1 |
+| tcga-a2-a0t2_diagnosis | 1 |
+| tcga-a2-a0t3_diagnosis | 1 |
+| tcga-a2-a0t4_diagnosis | 1 |
+| tcga-a2-a0t5_diagnosis | 1 |
+| tcga-a2-a0t6_diagnosis | 1 |
+| tcga-a2-a0t7_diagnosis | 1 |
+| tcga-a2-a0yc_diagnosis | 1 |
+| tcga-a2-a0yc_diagnosis2 | 1 |
+| tcga-a2-a0yc_diagnosis3 | 1 |
+| tcga-a2-a0yd_diagnosis | 1 |
+| tcga-a2-a0ye_diagnosis | 1 |
+| tcga-a2-a0yf_diagnosis | 1 |
+| tcga-a2-a0yg_diagnosis | 1 |
+| tcga-a2-a0yh_diagnosis | 1 |
+| tcga-a2-a0yi_diagnosis | 1 |
+| tcga-a2-a0yj_diagnosis | 1 |
+| tcga-a2-a0yj_diagnosis2 | 1 |
+| tcga-a2-a0yk_diagnosis | 1 |
+| tcga-a2-a0yl_diagnosis | 1 |
+| tcga-a2-a0ym_diagnosis | 1 |
+| tcga-a2-a0yt_diagnosis | 1 |
+| tcga-a2-a1fv_diagnosis | 1 |
+| tcga-a2-a1fw_diagnosis | 1 |
+| tcga-a2-a1fx_diagnosis | 1 |
+| tcga-a2-a1fz_diagnosis | 1 |
+| tcga-a2-a1g0_diagnosis | 1 |
+| tcga-a2-a1g1_diagnosis | 1 |
+| tcga-a2-a1g4_diagnosis | 1 |
+| tcga-a2-a1g4_diagnosis2 | 1 |
+| tcga-a2-a1g6_diagnosis | 1 |
+| tcga-a2-a259_diagnosis | 1 |
+| tcga-a2-a25a_diagnosis | 1 |
+| tcga-a2-a25a_diagnosis2 | 1 |
+| tcga-a2-a25b_diagnosis | 1 |
+| tcga-a2-a25b_diagnosis2 | 1 |
+| tcga-a2-a25c_diagnosis | 1 |
+| tcga-a2-a25d_diagnosis | 1 |
+| tcga-a2-a25e_diagnosis | 1 |
+| tcga-a2-a25e_diagnosis2 | 1 |
+| tcga-a2-a25f_diagnosis | 1 |
+| tcga-a2-a3kc_diagnosis | 1 |
+| tcga-a2-a3kd_diagnosis | 1 |
+| tcga-a2-a3xs_diagnosis | 1 |
+| tcga-a2-a3xs_diagnosis2 | 1 |
+| tcga-a2-a3xt_diagnosis | 1 |
+| tcga-a2-a3xu_diagnosis | 1 |
+| tcga-a2-a3xu_diagnosis2 | 1 |
+| tcga-a2-a3xu_diagnosis3 | 1 |
+| tcga-a2-a3xu_diagnosis4 | 1 |
+| tcga-a2-a3xu_diagnosis5 | 1 |
+| tcga-a2-a3xu_diagnosis6 | 1 |
+| tcga-a2-a3xv_diagnosis | 1 |
+| tcga-a2-a3xw_diagnosis | 1 |
+| tcga-a2-a3xx_diagnosis | 1 |
+| tcga-a2-a3xy_diagnosis | 1 |
+| tcga-a2-a3xy_diagnosis2 | 1 |
+| tcga-a2-a3xy_diagnosis3 | 1 |
+| tcga-a2-a3xy_diagnosis4 | 1 |
+| tcga-a2-a3xz_diagnosis | 1 |
+| tcga-a2-a3y0_diagnosis | 1 |
+| tcga-a2-a4rw_diagnosis | 1 |
+| tcga-a2-a4rx_diagnosis | 1 |
+| tcga-a2-a4ry_diagnosis | 1 |
+| tcga-a2-a4s0_diagnosis | 1 |
+| tcga-a2-a4s1_diagnosis | 1 |
+| tcga-a2-a4s2_diagnosis | 1 |
+| tcga-a2-a4s3_diagnosis | 1 |
+| tcga-a7-a0cd_diagnosis | 1 |
+| tcga-a7-a0cd_diagnosis2 | 1 |
+| tcga-a7-a0ce_diagnosis | 1 |
+| tcga-a7-a0cg_diagnosis | 1 |
+| tcga-a7-a0ch_diagnosis | 1 |
+| tcga-a7-a0cj_diagnosis | 1 |
+| tcga-a7-a0d9_diagnosis | 1 |
+| tcga-a7-a0da_diagnosis | 1 |
+| tcga-a7-a0db_diagnosis | 1 |
+| tcga-a7-a0dc_diagnosis | 1 |
+| tcga-a7-a13d_diagnosis | 1 |
+| tcga-a7-a13e_diagnosis | 1 |
+| tcga-a7-a13e_diagnosis2 | 1 |
+| tcga-a7-a13f_diagnosis | 1 |
+| tcga-a7-a13g_diagnosis | 1 |
+| tcga-a7-a13g_diagnosis2 | 1 |
+| tcga-a7-a13g_diagnosis3 | 1 |
+| tcga-a7-a13g_diagnosis4 | 1 |
+| tcga-a7-a13h_diagnosis | 1 |
+| tcga-a7-a13h_diagnosis2 | 1 |
+| tcga-a7-a26e_diagnosis | 1 |
+| tcga-a7-a26e_diagnosis2 | 1 |
+| tcga-a7-a26e_diagnosis3 | 1 |
+| tcga-a7-a26f_diagnosis | 1 |
+| tcga-a7-a26f_diagnosis2 | 1 |
+| tcga-a7-a26g_diagnosis | 1 |
+| tcga-a7-a26h_diagnosis | 1 |
+| tcga-a7-a26h_diagnosis2 | 1 |
+| tcga-a7-a26h_diagnosis3 | 1 |
+| tcga-a7-a26h_diagnosis4 | 1 |
+| tcga-a7-a26i_diagnosis | 1 |
+| tcga-a7-a26i_diagnosis2 | 1 |
+| tcga-a7-a26j_diagnosis | 1 |
+| tcga-a7-a2kd_diagnosis | 1 |
+| tcga-a7-a2kd_diagnosis2 | 1 |
+| tcga-a7-a3iy_diagnosis | 1 |
+| tcga-a7-a3iz_diagnosis | 1 |
+| tcga-a7-a3j0_diagnosis | 1 |
+| tcga-a7-a3j1_diagnosis | 1 |
+| tcga-a7-a3j1_diagnosis2 | 1 |
+| tcga-a7-a3j1_diagnosis3 | 1 |
+| _missing | 1 |
+
+### submitter_portion_ids
+
+| Value | Count |
+|-------|-------|
+| tcga-3c-aaau-01a-11 | 1 |
+| tcga-3c-aaau-10a-01 | 1 |
+| tcga-3c-aali-01a-11 | 1 |
+| tcga-3c-aali-01a-21 | 1 |
+| tcga-3c-aali-01a-21-a43f-20 | 1 |
+| tcga-3c-aali-10a-01 | 1 |
+| tcga-3c-aalj-01a-11-a617-42 | 1 |
+| tcga-3c-aalj-01a-31 | 1 |
+| tcga-3c-aalj-10a-01 | 1 |
+| tcga-3c-aalk-01a-11 | 1 |
+| tcga-3c-aalk-01a-21 | 1 |
+| tcga-3c-aalk-01a-21-a43f-20 | 1 |
+| tcga-3c-aalk-10a-01 | 1 |
+| tcga-4h-aaak-01a-12 | 1 |
+| tcga-4h-aaak-01a-21 | 1 |
+| tcga-4h-aaak-01a-21-a43f-20 | 1 |
+| tcga-4h-aaak-01a-31-a617-42 | 1 |
+| tcga-4h-aaak-10a-01 | 1 |
+| tcga-5l-aat0-01a-12 | 1 |
+| tcga-5l-aat0-10a-01 | 1 |
+| tcga-5l-aat1-01a-12 | 1 |
+| tcga-5l-aat1-01a-21 | 1 |
+| tcga-5l-aat1-01a-21-a43f-20 | 1 |
+| tcga-5l-aat1-10a-01 | 1 |
+| tcga-5t-a9qa-01a-11 | 1 |
+| tcga-5t-a9qa-01a-21 | 1 |
+| tcga-5t-a9qa-01a-21-a43f-20 | 1 |
+| tcga-5t-a9qa-10a-01 | 1 |
+| tcga-a1-a0sb-01a-11 | 1 |
+| tcga-a1-a0sb-10a-02 | 1 |
+| tcga-a1-a0sb-10b-01 | 1 |
+| tcga-a1-a0sd-01a-11 | 1 |
+| tcga-a1-a0sd-10a-01 | 1 |
+| tcga-a1-a0se-01a-11 | 1 |
+| tcga-a1-a0se-10a-03 | 1 |
+| tcga-a1-a0sf-01a-11 | 1 |
+| tcga-a1-a0sf-01a-21 | 1 |
+| tcga-a1-a0sf-01a-21-a17i-20 | 1 |
+| tcga-a1-a0sf-10b-01 | 1 |
+| tcga-a1-a0sg-01a-11 | 1 |
+| tcga-a1-a0sg-10a-03 | 1 |
+| tcga-a1-a0sg-10b-01 | 1 |
+| tcga-a1-a0sh-01a-11 | 1 |
+| tcga-a1-a0sh-01a-21 | 1 |
+| tcga-a1-a0sh-01a-21-a13a-20 | 1 |
+| tcga-a1-a0sh-10a-03 | 1 |
+| tcga-a1-a0si-01a-11 | 1 |
+| tcga-a1-a0si-10b-01 | 1 |
+| tcga-a1-a0sj-01a-11 | 1 |
+| tcga-a1-a0sj-01a-21 | 1 |
+| tcga-a1-a0sj-01a-21-a13a-20 | 1 |
+| tcga-a1-a0sj-10a-02 | 1 |
+| tcga-a1-a0sk-01a-11 | 1 |
+| tcga-a1-a0sk-01a-12 | 1 |
+| tcga-a1-a0sk-01a-21 | 1 |
+| tcga-a1-a0sk-01a-21-a13a-20 | 1 |
+| tcga-a1-a0sk-10a-02 | 1 |
+| tcga-a1-a0sk-10a-03 | 1 |
+| tcga-a1-a0sm-01a-11 | 1 |
+| tcga-a1-a0sm-10a-02 | 1 |
+| tcga-a1-a0sn-01a-11 | 1 |
+| tcga-a1-a0sn-10a-02 | 1 |
+| tcga-a1-a0sn-10b-01 | 1 |
+| tcga-a1-a0so-01a-11 | 1 |
+| tcga-a1-a0so-01a-11-a13a-20 | 1 |
+| tcga-a1-a0so-01a-22 | 1 |
+| tcga-a1-a0so-10a-03 | 1 |
+| tcga-a1-a0sp-01a-11 | 1 |
+| tcga-a1-a0sp-10a-02 | 1 |
+| tcga-a1-a0sq-01a-11 | 1 |
+| tcga-a1-a0sq-01a-11-a17i-20 | 1 |
+| tcga-a1-a0sq-01a-21 | 1 |
+| tcga-a1-a0sq-10a-02 | 1 |
+| tcga-a1-a0sq-10b-01 | 1 |
+| tcga-a2-a04n-01a-11 | 1 |
+| tcga-a2-a04n-01a-21 | 1 |
+| tcga-a2-a04n-01a-21-a13a-20 | 1 |
+| tcga-a2-a04n-10a-01 | 1 |
+| tcga-a2-a04p-01a-31 | 1 |
+| tcga-a2-a04p-01a-41 | 1 |
+| tcga-a2-a04p-01a-41-a13a-20 | 1 |
+| tcga-a2-a04p-10a-01 | 1 |
+| tcga-a2-a04q-01a-11 | 1 |
+| tcga-a2-a04q-01a-11-a13a-20 | 1 |
+| tcga-a2-a04q-01a-21 | 1 |
+| tcga-a2-a04q-10a-01 | 1 |
+| tcga-a2-a04r-01a-41 | 1 |
+| tcga-a2-a04r-10b-01 | 1 |
+| tcga-a2-a04t-01a-21 | 1 |
+| tcga-a2-a04t-01a-31 | 1 |
+| tcga-a2-a04t-01a-31-a13a-20 | 1 |
+| tcga-a2-a04t-10a-01 | 1 |
+| tcga-a2-a04u-01a-11 | 1 |
+| tcga-a2-a04u-01a-21 | 1 |
+| tcga-a2-a04u-01a-21-a13a-20 | 1 |
+| tcga-a2-a04u-10a-01 | 1 |
+| tcga-a2-a04v-01a-11 | 1 |
+| tcga-a2-a04v-01a-11-a13a-20 | 1 |
+| tcga-a2-a04v-01a-21 | 1 |
+| tcga-a2-a04v-10a-01 | 1 |
+| tcga-a2-a04w-01a-21 | 1 |
+| tcga-a2-a04w-01a-21-a13a-20 | 1 |
+| tcga-a2-a04w-01a-31 | 1 |
+| tcga-a2-a04w-10a-01 | 1 |
+| tcga-a2-a04x-01a-21 | 1 |
+| tcga-a2-a04x-10a-01 | 1 |
+| tcga-a2-a04y-01a-11 | 1 |
+| tcga-a2-a04y-01a-11-a13a-20 | 1 |
+| tcga-a2-a04y-01a-21 | 1 |
+| tcga-a2-a04y-10a-01 | 1 |
+| tcga-a2-a0ck-01a-11 | 1 |
+| tcga-a2-a0ck-01a-21 | 1 |
+| tcga-a2-a0ck-01a-21-a24a-20 | 1 |
+| tcga-a2-a0ck-10a-01 | 1 |
+| tcga-a2-a0cl-01a-11 | 1 |
+| tcga-a2-a0cl-01a-21 | 1 |
+| tcga-a2-a0cl-01a-21-a13c-20 | 1 |
+| tcga-a2-a0cl-10a-01 | 1 |
+| tcga-a2-a0cm-01a-11-a21v-30 | 1 |
+| tcga-a2-a0cm-01a-21 | 1 |
+| tcga-a2-a0cm-01a-21-a13c-20 | 1 |
+| tcga-a2-a0cm-01a-31 | 1 |
+| tcga-a2-a0cm-10a-01 | 1 |
+| tcga-a2-a0co-01a-13 | 1 |
+| tcga-a2-a0co-01a-21 | 1 |
+| tcga-a2-a0co-10a-01 | 1 |
+| tcga-a2-a0cp-01a-11 | 1 |
+| tcga-a2-a0cp-01a-21 | 1 |
+| tcga-a2-a0cp-01a-21-a13b-20 | 1 |
+| tcga-a2-a0cp-10a-01 | 1 |
+| tcga-a2-a0cq-01a-11 | 1 |
+| tcga-a2-a0cq-01a-11-a13b-20 | 1 |
+| tcga-a2-a0cq-01a-21 | 1 |
+| tcga-a2-a0cq-10a-01 | 1 |
+| tcga-a2-a0cr-01a-11 | 1 |
+| tcga-a2-a0cr-01a-21 | 1 |
+| tcga-a2-a0cr-01a-22 | 1 |
+| tcga-a2-a0cr-01a-22-a24a-20 | 1 |
+| tcga-a2-a0cr-10a-01 | 1 |
+| tcga-a2-a0cs-01a-11 | 1 |
+| tcga-a2-a0cs-01a-21 | 1 |
+| tcga-a2-a0cs-01a-21-a13b-20 | 1 |
+| tcga-a2-a0cs-10a-01 | 1 |
+| tcga-a2-a0ct-01a-11 | 1 |
+| tcga-a2-a0ct-01a-11-a13b-20 | 1 |
+| tcga-a2-a0ct-01a-31 | 1 |
+| tcga-a2-a0ct-10a-01 | 1 |
+| tcga-a2-a0cu-01a-12 | 1 |
+| tcga-a2-a0cu-01a-21 | 1 |
+| tcga-a2-a0cu-01a-21-a13b-20 | 1 |
+| tcga-a2-a0cu-10a-01 | 1 |
+| tcga-a2-a0cv-01a-21 | 1 |
+| tcga-a2-a0cv-01a-21-a13b-20 | 1 |
+| tcga-a2-a0cv-01a-31 | 1 |
+| tcga-a2-a0cv-10a-01 | 1 |
+| tcga-a2-a0cw-01a-11 | 1 |
+| tcga-a2-a0cw-01a-11-a13b-20 | 1 |
+| tcga-a2-a0cw-01a-21 | 1 |
+| tcga-a2-a0cw-10a-01 | 1 |
+| tcga-a2-a0cx-01a-11 | 1 |
+| tcga-a2-a0cx-01a-11-a13b-20 | 1 |
+| tcga-a2-a0cx-01a-21 | 1 |
+| tcga-a2-a0cx-01a-31-a602-42 | 1 |
+| tcga-a2-a0cx-10a-01 | 1 |
+| tcga-a2-a0cy-01a-12 | 1 |
+| tcga-a2-a0cy-01a-21 | 1 |
+| tcga-a2-a0cy-01a-21-a13c-20 | 1 |
+| tcga-a2-a0cy-10a-01 | 1 |
+| tcga-a2-a0cz-01a-11 | 1 |
+| tcga-a2-a0cz-01a-12 | 1 |
+| tcga-a2-a0cz-01a-21 | 1 |
+| tcga-a2-a0cz-01a-21-a13c-20 | 1 |
+| tcga-a2-a0cz-10a-01 | 1 |
+| tcga-a2-a0d0-01a-11 | 1 |
+| tcga-a2-a0d0-01a-21 | 1 |
+| tcga-a2-a0d0-01a-21-a13c-20 | 1 |
+| tcga-a2-a0d0-01a-41-a21w-30 | 1 |
+| tcga-a2-a0d0-10a-01 | 1 |
+| tcga-a2-a0d1-01a-11 | 1 |
+| tcga-a2-a0d1-01a-21 | 1 |
+| tcga-a2-a0d1-01a-21-a13c-20 | 1 |
+| tcga-a2-a0d1-01a-22-a21w-30 | 1 |
+| tcga-a2-a0d1-10a-01 | 1 |
+| tcga-a2-a0d2-01a-11 | 1 |
+| tcga-a2-a0d2-01a-11-a13c-20 | 1 |
+| tcga-a2-a0d2-01a-12-a21w-30 | 1 |
+| tcga-a2-a0d2-01a-21 | 1 |
+| tcga-a2-a0d2-01a-22 | 1 |
+| tcga-a2-a0d2-10a-01 | 1 |
+| tcga-a2-a0d3-01a-11 | 1 |
+| tcga-a2-a0d3-01a-21 | 1 |
+| tcga-a2-a0d3-01a-21-a13a-20 | 1 |
+| tcga-a2-a0d3-01a-41-a21w-30 | 1 |
+| tcga-a2-a0d3-10a-01 | 1 |
+| tcga-a2-a0d4-01a-11 | 1 |
+| tcga-a2-a0d4-01a-21 | 1 |
+| tcga-a2-a0d4-01a-21-a13c-20 | 1 |
+| tcga-a2-a0d4-10a-01 | 1 |
+| tcga-a2-a0em-01a-11 | 1 |
+| tcga-a2-a0em-10a-01 | 1 |
+
+### submitter_sample_ids
+
+| Value | Count |
+|-------|-------|
+| tcga-3c-aaau-01a | 1 |
+| tcga-3c-aaau-10a | 1 |
+| tcga-3c-aali-01a | 1 |
+| tcga-3c-aali-01z | 1 |
+| tcga-3c-aali-10a | 1 |
+| tcga-3c-aalj-01a | 1 |
+| tcga-3c-aalj-01z | 1 |
+| tcga-3c-aalj-10a | 1 |
+| tcga-3c-aalk-01a | 1 |
+| tcga-3c-aalk-01z | 1 |
+| tcga-3c-aalk-10a | 1 |
+| tcga-4h-aaak-01a | 1 |
+| tcga-4h-aaak-01z | 1 |
+| tcga-4h-aaak-10a | 1 |
+| tcga-5l-aat0-01a | 1 |
+| tcga-5l-aat0-01z | 1 |
+| tcga-5l-aat0-10a | 1 |
+| tcga-5l-aat1-01a | 1 |
+| tcga-5l-aat1-01z | 1 |
+| tcga-5l-aat1-10a | 1 |
+| tcga-5t-a9qa-01a | 1 |
+| tcga-5t-a9qa-01z | 1 |
+| tcga-5t-a9qa-10a | 1 |
+| tcga-a1-a0sb-01a | 1 |
+| tcga-a1-a0sb-01z | 1 |
+| tcga-a1-a0sb-10a | 1 |
+| tcga-a1-a0sb-10b | 1 |
+| tcga-a1-a0sd-01a | 1 |
+| tcga-a1-a0sd-01z | 1 |
+| tcga-a1-a0sd-10a | 1 |
+| tcga-a1-a0se-01a | 1 |
+| tcga-a1-a0se-01z | 1 |
+| tcga-a1-a0se-10a | 1 |
+| tcga-a1-a0sf-01a | 1 |
+| tcga-a1-a0sf-01z | 1 |
+| tcga-a1-a0sf-10b | 1 |
+| tcga-a1-a0sg-01a | 1 |
+| tcga-a1-a0sg-10a | 1 |
+| tcga-a1-a0sg-10b | 1 |
+| tcga-a1-a0sh-01a | 1 |
+| tcga-a1-a0sh-01z | 1 |
+| tcga-a1-a0sh-10a | 1 |
+| tcga-a1-a0si-01a | 1 |
+| tcga-a1-a0si-01z | 1 |
+| tcga-a1-a0si-10b | 1 |
+| tcga-a1-a0sj-01a | 1 |
+| tcga-a1-a0sj-01z | 1 |
+| tcga-a1-a0sj-10a | 1 |
+| tcga-a1-a0sk-01a | 1 |
+| tcga-a1-a0sk-01z | 1 |
+| tcga-a1-a0sk-10a | 1 |
+| tcga-a1-a0sm-01a | 1 |
+| tcga-a1-a0sm-01z | 1 |
+| tcga-a1-a0sm-10a | 1 |
+| tcga-a1-a0sn-01a | 1 |
+| tcga-a1-a0sn-01z | 1 |
+| tcga-a1-a0sn-10a | 1 |
+| tcga-a1-a0sn-10b | 1 |
+| tcga-a1-a0so-01a | 1 |
+| tcga-a1-a0so-10a | 1 |
+| tcga-a1-a0sp-01a | 1 |
+| tcga-a1-a0sp-01z | 1 |
+| tcga-a1-a0sp-10a | 1 |
+| tcga-a1-a0sq-01a | 1 |
+| tcga-a1-a0sq-01z | 1 |
+| tcga-a1-a0sq-10a | 1 |
+| tcga-a1-a0sq-10b | 1 |
+| tcga-a2-a04n-01a | 1 |
+| tcga-a2-a04n-01z | 1 |
+| tcga-a2-a04n-10a | 1 |
+| tcga-a2-a04p-01a | 1 |
+| tcga-a2-a04p-01z | 1 |
+| tcga-a2-a04p-10a | 1 |
+| tcga-a2-a04q-01a | 1 |
+| tcga-a2-a04q-01z | 1 |
+| tcga-a2-a04q-10a | 1 |
+| tcga-a2-a04r-01a | 1 |
+| tcga-a2-a04r-01z | 1 |
+| tcga-a2-a04r-10b | 1 |
+| tcga-a2-a04t-01a | 1 |
+| tcga-a2-a04t-01z | 1 |
+| tcga-a2-a04t-10a | 1 |
+| tcga-a2-a04u-01a | 1 |
+| tcga-a2-a04u-01z | 1 |
+| tcga-a2-a04u-10a | 1 |
+| tcga-a2-a04v-01a | 1 |
+| tcga-a2-a04v-01z | 1 |
+| tcga-a2-a04v-10a | 1 |
+| tcga-a2-a04w-01a | 1 |
+| tcga-a2-a04w-01z | 1 |
+| tcga-a2-a04w-10a | 1 |
+| tcga-a2-a04x-01a | 1 |
+| tcga-a2-a04x-01z | 1 |
+| tcga-a2-a04x-10a | 1 |
+| tcga-a2-a04y-01a | 1 |
+| tcga-a2-a04y-01z | 1 |
+| tcga-a2-a04y-10a | 1 |
+| tcga-a2-a0ck-01a | 1 |
+| tcga-a2-a0ck-01z | 1 |
+| tcga-a2-a0ck-10a | 1 |
+| tcga-a2-a0cl-01a | 1 |
+| tcga-a2-a0cl-01z | 1 |
+| tcga-a2-a0cl-10a | 1 |
+| tcga-a2-a0cm-01a | 1 |
+| tcga-a2-a0cm-01z | 1 |
+| tcga-a2-a0cm-10a | 1 |
+| tcga-a2-a0co-01a | 1 |
+| tcga-a2-a0co-01z | 1 |
+| tcga-a2-a0co-10a | 1 |
+| tcga-a2-a0cp-01a | 1 |
+| tcga-a2-a0cp-01z | 1 |
+| tcga-a2-a0cp-10a | 1 |
+| tcga-a2-a0cq-01a | 1 |
+| tcga-a2-a0cq-01z | 1 |
+| tcga-a2-a0cq-10a | 1 |
+| tcga-a2-a0cr-01a | 1 |
+| tcga-a2-a0cr-01z | 1 |
+| tcga-a2-a0cr-10a | 1 |
+| tcga-a2-a0cs-01a | 1 |
+| tcga-a2-a0cs-01z | 1 |
+| tcga-a2-a0cs-10a | 1 |
+| tcga-a2-a0ct-01a | 1 |
+| tcga-a2-a0ct-01z | 1 |
+| tcga-a2-a0ct-10a | 1 |
+| tcga-a2-a0cu-01a | 1 |
+| tcga-a2-a0cu-01z | 1 |
+| tcga-a2-a0cu-10a | 1 |
+| tcga-a2-a0cv-01a | 1 |
+| tcga-a2-a0cv-01z | 1 |
+| tcga-a2-a0cv-10a | 1 |
+| tcga-a2-a0cw-01a | 1 |
+| tcga-a2-a0cw-01z | 1 |
+| tcga-a2-a0cw-10a | 1 |
+| tcga-a2-a0cx-01a | 1 |
+| tcga-a2-a0cx-01z | 1 |
+| tcga-a2-a0cx-10a | 1 |
+| tcga-a2-a0cy-01a | 1 |
+| tcga-a2-a0cy-01z | 1 |
+| tcga-a2-a0cy-10a | 1 |
+| tcga-a2-a0cz-01a | 1 |
+| tcga-a2-a0cz-01z | 1 |
+| tcga-a2-a0cz-10a | 1 |
+| tcga-a2-a0d0-01a | 1 |
+| tcga-a2-a0d0-01z | 1 |
+| tcga-a2-a0d0-10a | 1 |
+| tcga-a2-a0d1-01a | 1 |
+| tcga-a2-a0d1-10a | 1 |
+| tcga-a2-a0d2-01a | 1 |
+| tcga-a2-a0d2-10a | 1 |
+| tcga-a2-a0d3-01a | 1 |
+| tcga-a2-a0d3-01z | 1 |
+| tcga-a2-a0d3-10a | 1 |
+| tcga-a2-a0d4-01a | 1 |
+| tcga-a2-a0d4-01z | 1 |
+| tcga-a2-a0d4-10a | 1 |
+| tcga-a2-a0em-01a | 1 |
+| tcga-a2-a0em-01z | 1 |
+| tcga-a2-a0em-10a | 1 |
+| tcga-a2-a0en-01a | 1 |
+| tcga-a2-a0en-01z | 1 |
+| tcga-a2-a0en-10a | 1 |
+| tcga-a2-a0eo-01a | 1 |
+| tcga-a2-a0eo-01z | 1 |
+| tcga-a2-a0eo-10a | 1 |
+| tcga-a2-a0ep-01a | 1 |
+| tcga-a2-a0ep-01z | 1 |
+| tcga-a2-a0ep-10a | 1 |
+| tcga-a2-a0eq-01a | 1 |
+| tcga-a2-a0eq-01z | 1 |
+| tcga-a2-a0eq-10a | 1 |
+| tcga-a2-a0er-01a | 1 |
+| tcga-a2-a0er-01z | 1 |
+| tcga-a2-a0er-10a | 1 |
+| tcga-a2-a0es-01a | 1 |
+| tcga-a2-a0es-01z | 1 |
+| tcga-a2-a0es-10a | 1 |
+| tcga-a2-a0et-01a | 1 |
+| tcga-a2-a0et-01z | 1 |
+| tcga-a2-a0et-10a | 1 |
+| tcga-a2-a0eu-01a | 1 |
+| tcga-a2-a0eu-01z | 1 |
+| tcga-a2-a0eu-10a | 1 |
+| tcga-a2-a0ev-01a | 1 |
+| tcga-a2-a0ev-01z | 1 |
+| tcga-a2-a0ev-10a | 1 |
+| tcga-a2-a0ew-01a | 1 |
+| tcga-a2-a0ew-01z | 1 |
+| tcga-a2-a0ew-10a | 1 |
+| tcga-a2-a0ex-01a | 1 |
+| tcga-a2-a0ex-01z | 1 |
+| tcga-a2-a0ex-10a | 1 |
+| tcga-a2-a0ey-01a | 1 |
+| tcga-a2-a0ey-01z | 1 |
+| tcga-a2-a0ey-10a | 1 |
+| tcga-a2-a0st-01a | 1 |
+| tcga-a2-a0st-01z | 1 |
+| tcga-a2-a0st-10a | 1 |
+| tcga-a2-a0su-01a | 1 |
+| tcga-a2-a0su-01z | 1 |
+| tcga-a2-a0su-10a | 1 |
+
+### submitter_slide_ids
+
+| Value | Count |
+|-------|-------|
+| tcga-3c-aaau-01a-01-ts1 | 1 |
+| tcga-3c-aali-01a-01-tsa | 1 |
+| tcga-3c-aali-01z-00-dx1 | 1 |
+| tcga-3c-aali-01z-00-dx2 | 1 |
+| tcga-3c-aalj-01a-01-tsa | 1 |
+| tcga-3c-aalj-01a-03-tsc | 1 |
+| tcga-3c-aalj-01z-00-dx1 | 1 |
+| tcga-3c-aalj-01z-00-dx2 | 1 |
+| tcga-3c-aalk-01a-01-tsa | 1 |
+| tcga-3c-aalk-01z-00-dx1 | 1 |
+| tcga-4h-aaak-01a-01-ts1 | 1 |
+| tcga-4h-aaak-01z-00-dx1 | 1 |
+| tcga-5l-aat0-01a-01-ts1 | 1 |
+| tcga-5l-aat0-01z-00-dx1 | 1 |
+| tcga-5l-aat1-01a-01-ts1 | 1 |
+| tcga-5l-aat1-01z-00-dx1 | 1 |
+| tcga-5t-a9qa-01a-01-tsa | 1 |
+| tcga-5t-a9qa-01z-00-dx1 | 1 |
+| tcga-a1-a0sb-01a-01-bs1 | 1 |
+| tcga-a1-a0sb-01a-01-ts1 | 1 |
+| tcga-a1-a0sb-01z-00-dx1 | 1 |
+| tcga-a1-a0sd-01a-01-bs1 | 1 |
+| tcga-a1-a0sd-01a-01-ts1 | 1 |
+| tcga-a1-a0sd-01z-00-dx1 | 1 |
+| tcga-a1-a0se-01a-01-bs1 | 1 |
+| tcga-a1-a0se-01a-01-ts1 | 1 |
+| tcga-a1-a0se-01z-00-dx1 | 1 |
+| tcga-a1-a0sf-01a-01-bsa | 1 |
+| tcga-a1-a0sf-01a-01-msa | 1 |
+| tcga-a1-a0sf-01a-01-tsa | 1 |
+| tcga-a1-a0sf-01z-00-dx1 | 1 |
+| tcga-a1-a0sg-01a-01-bs1 | 1 |
+| tcga-a1-a0sg-01a-01-ts1 | 1 |
+| tcga-a1-a0sh-01a-01-bsa | 1 |
+| tcga-a1-a0sh-01a-01-tsa | 1 |
+| tcga-a1-a0sh-01z-00-dx1 | 1 |
+| tcga-a1-a0si-01a-01-bs1 | 1 |
+| tcga-a1-a0si-01a-01-ts1 | 1 |
+| tcga-a1-a0si-01z-00-dx1 | 1 |
+| tcga-a1-a0sj-01a-01-bsa | 1 |
+| tcga-a1-a0sj-01a-01-tsa | 1 |
+| tcga-a1-a0sj-01z-00-dx1 | 1 |
+| tcga-a1-a0sk-01a-01-bsa | 1 |
+| tcga-a1-a0sk-01a-01-tsa | 1 |
+| tcga-a1-a0sk-01z-00-dx1 | 1 |
+| tcga-a1-a0sm-01a-01-bs1 | 1 |
+| tcga-a1-a0sm-01a-01-ts1 | 1 |
+| tcga-a1-a0sm-01z-00-dx1 | 1 |
+| tcga-a1-a0sn-01a-01-bs1 | 1 |
+| tcga-a1-a0sn-01a-01-ts1 | 1 |
+| tcga-a1-a0sn-01z-00-dx1 | 1 |
+| tcga-a1-a0so-01a-02-bsb | 1 |
+| tcga-a1-a0so-01a-02-tsb | 1 |
+| tcga-a1-a0sp-01a-01-bs1 | 1 |
+| tcga-a1-a0sp-01a-01-ts1 | 1 |
+| tcga-a1-a0sp-01z-00-dx1 | 1 |
+| tcga-a1-a0sq-01a-02-bsb | 1 |
+| tcga-a1-a0sq-01a-02-tsb | 1 |
+| tcga-a1-a0sq-01z-00-dx1 | 1 |
+| tcga-a2-a04n-01a-01-msa | 1 |
+| tcga-a2-a04n-01a-01-tsa | 1 |
+| tcga-a2-a04n-01z-00-dx1 | 1 |
+| tcga-a2-a04p-01a-03-bsc | 1 |
+| tcga-a2-a04p-01a-03-tsc | 1 |
+| tcga-a2-a04p-01z-00-dx1 | 1 |
+| tcga-a2-a04q-01a-02-msb | 1 |
+| tcga-a2-a04q-01a-02-tsb | 1 |
+| tcga-a2-a04q-01z-00-dx1 | 1 |
+| tcga-a2-a04r-01a-04-bsd | 1 |
+| tcga-a2-a04r-01a-04-tsd | 1 |
+| tcga-a2-a04r-01z-00-dx1 | 1 |
+| tcga-a2-a04t-01a-02-bsb | 1 |
+| tcga-a2-a04t-01a-02-tsb | 1 |
+| tcga-a2-a04t-01z-00-dx1 | 1 |
+| tcga-a2-a04u-01a-01-bsa | 1 |
+| tcga-a2-a04u-01a-01-tsa | 1 |
+| tcga-a2-a04u-01z-00-dx1 | 1 |
+| tcga-a2-a04v-01a-02-bs2 | 1 |
+| tcga-a2-a04v-01a-02-ms2 | 1 |
+| tcga-a2-a04v-01z-00-dx1 | 1 |
+| tcga-a2-a04w-01a-03-bsc | 1 |
+| tcga-a2-a04w-01a-03-tsc | 1 |
+| tcga-a2-a04w-01z-00-dx1 | 1 |
+| tcga-a2-a04x-01a-01-bs1 | 1 |
+| tcga-a2-a04x-01a-02-bs2 | 1 |
+| tcga-a2-a04x-01z-00-dx1 | 1 |
+| tcga-a2-a04y-01a-02-bs2 | 1 |
+| tcga-a2-a04y-01a-02-ms2 | 1 |
+| tcga-a2-a04y-01z-00-dx1 | 1 |
+| tcga-a2-a0ck-01a-01-bsa | 1 |
+| tcga-a2-a0ck-01a-01-tsa | 1 |
+| tcga-a2-a0ck-01z-00-dx1 | 1 |
+| tcga-a2-a0cl-01a-01-bs1 | 1 |
+| tcga-a2-a0cl-01a-01-ts1 | 1 |
+| tcga-a2-a0cl-01z-00-dx1 | 1 |
+| tcga-a2-a0cm-01a-03-bsc | 1 |
+| tcga-a2-a0cm-01a-03-tsc | 1 |
+| tcga-a2-a0cm-01z-00-dx1 | 1 |
+| tcga-a2-a0co-01a-01-bsa | 1 |
+| tcga-a2-a0co-01a-01-tsa | 1 |
+| tcga-a2-a0co-01z-00-dx1 | 1 |
+| tcga-a2-a0cp-01a-01-bsa | 1 |
+| tcga-a2-a0cp-01a-01-tsa | 1 |
+| tcga-a2-a0cp-01z-00-dx1 | 1 |
+| tcga-a2-a0cq-01a-02-bsb | 1 |
+| tcga-a2-a0cq-01a-02-tsb | 1 |
+| tcga-a2-a0cq-01z-00-dx1 | 1 |
+| tcga-a2-a0cr-01a-01-bsa | 1 |
+| tcga-a2-a0cr-01a-01-tsa | 1 |
+| tcga-a2-a0cr-01z-00-dx1 | 1 |
+| tcga-a2-a0cs-01a-01-bsa | 1 |
+| tcga-a2-a0cs-01a-01-tsa | 1 |
+| tcga-a2-a0cs-01z-00-dx1 | 1 |
+| tcga-a2-a0ct-01a-02-bsb | 1 |
+| tcga-a2-a0ct-01a-03-bsc | 1 |
+| tcga-a2-a0ct-01z-00-dx1 | 1 |
+| tcga-a2-a0cu-01a-01-bs1 | 1 |
+| tcga-a2-a0cu-01a-01-ts1 | 1 |
+| tcga-a2-a0cu-01z-00-dx1 | 1 |
+| tcga-a2-a0cv-01a-03-bsc | 1 |
+| tcga-a2-a0cv-01a-03-tsc | 1 |
+| tcga-a2-a0cv-01z-00-dx1 | 1 |
+| tcga-a2-a0cw-01a-02-bsb | 1 |
+| tcga-a2-a0cw-01a-02-tsb | 1 |
+| tcga-a2-a0cw-01z-00-dx1 | 1 |
+| tcga-a2-a0cx-01a-02-bsb | 1 |
+| tcga-a2-a0cx-01a-02-tsb | 1 |
+| tcga-a2-a0cx-01z-00-dx1 | 1 |
+| tcga-a2-a0cy-01a-01-bs1 | 1 |
+| tcga-a2-a0cy-01a-01-ts1 | 1 |
+| tcga-a2-a0cy-01z-00-dx1 | 1 |
+| tcga-a2-a0cz-01a-01-bs1 | 1 |
+| tcga-a2-a0cz-01a-01-ts1 | 1 |
+| tcga-a2-a0cz-01z-00-dx1 | 1 |
+| tcga-a2-a0d0-01a-01-bsa | 1 |
+| tcga-a2-a0d0-01a-01-tsa | 1 |
+| tcga-a2-a0d0-01z-00-dx1 | 1 |
+| tcga-a2-a0d1-01a-01-msa | 1 |
+| tcga-a2-a0d1-01a-01-tsa | 1 |
+| tcga-a2-a0d2-01a-02-bsb | 1 |
+| tcga-a2-a0d2-01a-02-tsb | 1 |
+| tcga-a2-a0d3-01a-01-bsa | 1 |
+| tcga-a2-a0d3-01a-01-tsa | 1 |
+| tcga-a2-a0d3-01z-00-dx1 | 1 |
+| tcga-a2-a0d4-01a-01-bsa | 1 |
+| tcga-a2-a0d4-01a-01-tsa | 1 |
+| tcga-a2-a0d4-01z-00-dx1 | 1 |
+| tcga-a2-a0em-01a-01-bsa | 1 |
+| tcga-a2-a0em-01a-01-tsa | 1 |
+| tcga-a2-a0em-01z-00-dx1 | 1 |
+| tcga-a2-a0en-01a-01-bsa | 1 |
+| tcga-a2-a0en-01a-01-tsa | 1 |
+| tcga-a2-a0en-01z-00-dx1 | 1 |
+| tcga-a2-a0eo-01a-01-msa | 1 |
+| tcga-a2-a0eo-01a-01-tsa | 1 |
+| tcga-a2-a0eo-01z-00-dx1 | 1 |
+| tcga-a2-a0ep-01a-05-tse | 1 |
+| tcga-a2-a0ep-01z-00-dx1 | 1 |
+| tcga-a2-a0eq-01a-01-bsa | 1 |
+| tcga-a2-a0eq-01a-01-tsa | 1 |
+| tcga-a2-a0eq-01z-00-dx1 | 1 |
+| tcga-a2-a0er-01a-02-msb | 1 |
+| tcga-a2-a0er-01a-02-tsb | 1 |
+| tcga-a2-a0er-01z-00-dx1 | 1 |
+| tcga-a2-a0es-01a-01-bsa | 1 |
+| tcga-a2-a0es-01a-01-tsa | 1 |
+| tcga-a2-a0es-01a-03-bsc | 1 |
+| tcga-a2-a0es-01a-03-tsc | 1 |
+| tcga-a2-a0es-01z-00-dx1 | 1 |
+| tcga-a2-a0et-01a-01-bsa | 1 |
+| tcga-a2-a0et-01a-01-tsa | 1 |
+| tcga-a2-a0et-01a-03-bsc | 1 |
+| tcga-a2-a0et-01a-03-tsc | 1 |
+| tcga-a2-a0et-01z-00-dx1 | 1 |
+| tcga-a2-a0eu-01a-02-msb | 1 |
+| tcga-a2-a0eu-01a-02-tsb | 1 |
+| tcga-a2-a0eu-01z-00-dx1 | 1 |
+| tcga-a2-a0ev-01a-01-bsa | 1 |
+| tcga-a2-a0ev-01a-01-tsa | 1 |
+| tcga-a2-a0ev-01z-00-dx1 | 1 |
+| tcga-a2-a0ew-01a-01-bsa | 1 |
+| tcga-a2-a0ew-01a-01-tsa | 1 |
+| tcga-a2-a0ew-01a-02-bsb | 1 |
+| tcga-a2-a0ew-01a-02-tsb | 1 |
+| tcga-a2-a0ew-01z-00-dx1 | 1 |
+| tcga-a2-a0ex-01a-02-msb | 1 |
+| tcga-a2-a0ex-01a-02-tsb | 1 |
+| tcga-a2-a0ex-01z-00-dx1 | 1 |
+| tcga-a2-a0ey-01a-01-bsa | 1 |
+| tcga-a2-a0ey-01a-01-tsa | 1 |
+| tcga-a2-a0ey-01a-03-tsc | 1 |
+| tcga-a2-a0ey-01z-00-dx1 | 1 |
+| tcga-a2-a0st-01a-01-bsa | 1 |
+| tcga-a2-a0st-01a-01-tsa | 1 |
+| tcga-a2-a0st-01z-00-dx1 | 1 |
+| tcga-a2-a0su-01a-01-bsa | 1 |
+| tcga-a2-a0su-01a-01-tsa | 1 |
+| tcga-a2-a0su-01z-00-dx1 | 1 |
+| tcga-a2-a0sv-01a-01-bsa | 1 |
+| tcga-a2-a0sv-01a-01-tsa | 1 |
+
+### summary.data_categories.data_category
+
+| Value | Count |
+|-------|-------|
+| biospecimen | 1098 |
+| clinical | 1098 |
+| copy number variation | 1098 |
+| sequencing reads | 1098 |
+| simple nucleotide variation | 1098 |
+| structural variation | 1098 |
+| dna methylation | 1097 |
+| transcriptome profiling | 1097 |
+| somatic structural variation | 927 |
+| proteome profiling | 881 |
+
+### summary.experimental_strategies.experimental_strategy
+
+| Value | Count |
+|-------|-------|
+| Genotyping Array | 1098 |
+| Methylation Array | 1097 |
+| RNA-Seq | 1095 |
+| Tissue Slide | 1093 |
+| miRNA-Seq | 1079 |
+| WXS | 1072 |
+| Diagnostic Slide | 1062 |
+| WGS | 952 |
+| Reverse Phase Protein Array | 881 |
+| ATAC-Seq | 74 |
+
+### tissue_source_site.code
+
+| Value | Count |
+|-------|-------|
+| BH | 151 |
+| A2 | 102 |
+| E2 | 90 |
+| A8 | 84 |
+| D8 | 78 |
+| AR | 70 |
+| E9 | 62 |
+| B6 | 58 |
+| C8 | 49 |
+| AC | 48 |
+| AO | 47 |
+| EW | 43 |
+| A7 | 42 |
+| AN | 39 |
+| OL | 23 |
+| GM | 21 |
+| LL | 19 |
+| A1 | 14 |
+| S3 | 10 |
+| AQ | 9 |
+| LD | 5 |
+| 3C | 4 |
+| PL | 4 |
+| PE | 3 |
+| 5L | 2 |
+| GI | 2 |
+| HN | 2 |
+| JL | 2 |
+| WT | 2 |
+| XX | 2 |
+| Z7 | 2 |
+| 4H | 1 |
+| 5T | 1 |
+| LQ | 1 |
+| MS | 1 |
+| OK | 1 |
+| UL | 1 |
+| UU | 1 |
+| V7 | 1 |
+| W8 | 1 |
+
+### tissue_source_site.name
+
+| Value | Count |
+|-------|-------|
+| University of Pittsburgh | 151 |
+| Walter Reed | 102 |
+| Roswell Park | 90 |
+| Indivumed | 84 |
+| Greater Poland Cancer Center | 78 |
+| Mayo | 70 |
+| Asterand | 62 |
+| Duke | 58 |
+| ILSBio | 49 |
+| International Genomics Consortium | 48 |
+| MSKCC | 47 |
+| University of Miami | 43 |
+| Christiana Healthcare | 42 |
+| Cureline | 39 |
+| University of Chicago | 23 |
+| MD Anderson | 21 |
+| Candler | 19 |
+| UCSF | 14 |
+| Albert Einstein Medical Center | 10 |
+| UNC  | 9 |
+| Hartford Hospital | 5 |
+| Columbia University | 4 |
+| Institute of Human Virology Nigeria | 4 |
+| Fox Chase | 3 |
+| ABS - IUPUI | 2 |
+| ABS - Research Metrics Pakistan | 2 |
+| John Wayne Cancer Center | 2 |
+| Ontario Institute for Cancer Research (OICR) | 2 |
+| Spectrum Health | 2 |
+| University of Kansas | 2 |
+| University of Sao Paulo | 2 |
+|  Boston Medical Center | 1 |
+| Greenville Health System | 1 |
+| Gundersen Lutheran Health System | 1 |
+| Holy Cross | 1 |
+| Mary Bird Perkins Cancer Center - Our Lady of the Lake | 1 |
+| Medical College of Georgia | 1 |
+| Mount Sinai School of Medicine | 1 |
+| Proteogenex, Inc. | 1 |
+| University of Minnesota | 1 |
+
+### tissue_source_site.project
+
+| Value | Count |
+|-------|-------|
+| Breast invasive carcinoma | 1098 |
+
+
+## 5. Xena GDC Hub: Available Datasets for TCGA-BRCA
+
+Cohort: **GDC TCGA Breast Cancer (BRCA)**  |  Datasets found: **19**
+
+| Dataset ID | Sample Count |
+|------------|-------------|
+| TCGA-BRCA.gene-level_absolute.tsv | 1057 |
+| TCGA-BRCA.gene-level_ascat-ngs.tsv | 102 |
+| TCGA-BRCA.masked_cnv_DNAcopy.tsv | 1111 |
+| TCGA-BRCA.methylation450.tsv | 893 |
+| TCGA-BRCA.mirna.tsv | 1202 |
+| TCGA-BRCA.protein.tsv | 919 |
+| TCGA-BRCA.segment_cnv_ascat-ngs.tsv | 102 |
+| TCGA-BRCA.star_counts.tsv | 1226 |
+| TCGA-BRCA.star_fpkm-uq.tsv | 1226 |
+| TCGA-BRCA.star_fpkm.tsv | 1226 |
+| TCGA-BRCA.star_tpm.tsv | 1226 |
+| TCGA-BRCA.survival.tsv | 1232 |
+| TCGA-BRCA.gene-level_ascat2.tsv | 1082 |
+| TCGA-BRCA.gene-level_ascat3.tsv | 1060 |
+| TCGA-BRCA.methylation27.tsv | 343 |
+| TCGA-BRCA.somaticmutation_wxs.tsv | 986 |
+| TCGA-BRCA.allele_cnv_ascat2.tsv | 1082 |
+| TCGA-BRCA.allele_cnv_ascat3.tsv | 1060 |
+| TCGA-BRCA.clinical.tsv | 1255 |
+
+## 6. Gap Analysis: In GDC but Not in Xena
+
+### Covered by Xena
+- clinical
+- copy number variation
+- dna methylation
+- somatic structural variation
+
+### Gaps (GDC data categories with no Xena equivalent)
+- _missing
+- biospecimen
+- proteome profiling
+- sequencing reads
+- simple nucleotide variation
+- structural variation
+- transcriptome profiling
+
+## 7. cBioPortal: All Per-Study Endpoints Discovered
+
+Total per-study endpoints: **30**
+
+### Table A — Endpoints Queried (studyId only required)
+
+| Endpoint Path | Item Count | Status |
+|---------------|------------|--------|
+| `/api/studies/{studyId}/clinical-data/fetch` | 0 | error: [2026-03-31T18:28:16.658906+00:00] HTTP error for https://www.cbioportal.org/api/studies/brca_metabric/clinical-data/fetch: 405 Client Error: Method Not Allowed for url: https://www.cbioportal.org/api/studies/brca_metabric/clinical-data/fetch |
+| `/api/studies/{studyId}` | 1 | ok |
+| `/api/studies/{studyId}/tags` | 1 | ok |
+| `/api/studies/{studyId}/significantly-mutated-genes` | 0 | ok |
+| `/api/studies/{studyId}/significant-copy-number-regions` | 0 | ok |
+| `/api/studies/{studyId}/samples` | 2509 | ok |
+| `/api/studies/{studyId}/sample-lists` | 8 | ok |
+| `/api/studies/{studyId}/resource-definitions` | 0 | ok |
+| `/api/studies/{studyId}/resource-data` | 0 | ok |
+| `/api/studies/{studyId}/resource-data-all` | 0 | ok |
+| `/api/studies/{studyId}/patients` | 2509 | ok |
+| `/api/studies/{studyId}/molecular-profiles` | 5 | ok |
+| `/api/studies/{studyId}/clinical-events` | 0 | ok |
+| `/api/studies/{studyId}/clinical-data` | 27868 | ok |
+| `/api/studies/{studyId}/clinical-attributes` | 36 | ok |
+| `/api/column-store/studies/{studyId}/samples` | 2509 | ok |
+| `/cache/{studyId}` | 0 | error: [2026-03-31T18:28:45.150394+00:00] HTTP error for https://www.cbioportal.org/cache/brca_metabric: 405 Client Error: Method Not Allowed for url: https://www.cbioportal.org/cache/brca_metabric |
+
+### Table B — Endpoints Skipped (additional required parameters)
+
+| Endpoint Path | Required Additional Parameters | Parameter Types |
+|---------------|-------------------------------|-----------------|
+| `/api/studies/{studyId}/samples/{sampleId}` | sampleId | string |
+| `/api/studies/{studyId}/samples/{sampleId}/resource-data` | sampleId | string |
+| `/api/studies/{studyId}/samples/{sampleId}/copy-number-segments` | sampleId | string |
+| `/api/studies/{studyId}/samples/{sampleId}/clinical-data` | sampleId | string |
+| `/api/studies/{studyId}/resource-definitions/{resourceId}` | resourceId | string |
+| `/api/studies/{studyId}/patients/{patientId}` | patientId | string |
+| `/api/studies/{studyId}/patients/{patientId}/samples` | patientId | string |
+| `/api/studies/{studyId}/patients/{patientId}/resource-data` | patientId | string |
+| `/api/studies/{studyId}/patients/{patientId}/clinical-events` | patientId | string |
+| `/api/studies/{studyId}/patients/{patientId}/clinical-data` | patientId | string |
+| `/api/studies/{studyId}/clinical-attributes/{clinicalAttributeId}` | clinicalAttributeId | string |
+| `/api/column-store/studies/{studyId}/samples/{sampleId}` | sampleId | string |
+| `/api/column-store/studies/{studyId}/patients/{patientId}/samples` | patientId | string |
+
+## 8. METABRIC: Results from Each Queried Endpoint
+
+### `/api/studies/{studyId}/clinical-data/fetch`
+
+- **Status:** error: [2026-03-31T18:28:16.658906+00:00] HTTP error for https://www.cbioportal.org/api/studies/brca_metabric/clinical-data/fetch: 405 Client Error: Method Not Allowed for url: https://www.cbioportal.org/api/studies/brca_metabric/clinical-data/fetch
+- **Item count:** 0
+
+### `/api/studies/{studyId}`
+
+- **Status:** ok
+- **Item count:** 1
+- **Response preview:** `{"name": "Breast Cancer (METABRIC, Nature 2012 & Nat Commun 2016)", "description": "Targeted sequencing of 2509 primary breast tumors with 548 matched normals.", "publicStudy": true, "pmid": "27161491,30867590,22522925", "citation": "Pereira et al. Nat Commun 2016, Rueda et al. Nature 2019, Curtis e`
+
+### `/api/studies/{studyId}/tags`
+
+- **Status:** ok
+- **Item count:** 1
+- **Response preview:** `{}`
+
+### `/api/studies/{studyId}/significantly-mutated-genes`
+
+- **Status:** ok
+- **Item count:** 0
+
+### `/api/studies/{studyId}/significant-copy-number-regions`
+
+- **Status:** ok
+- **Item count:** 0
+
+### `/api/studies/{studyId}/samples`
+
+- **Status:** ok
+- **Item count:** 2509
+- **First item preview:** `{"uniqueSampleKey": "TUItMDAwMDpicmNhX21ldGFicmlj", "uniquePatientKey": "TUItMDAwMDpicmNhX21ldGFicmlj", "sampleType": "Primary Solid Tumor", "sampleId": "MB-0000", "patientId": "MB-0000", "studyId": "brca_metabric"}`
+
+### `/api/studies/{studyId}/sample-lists`
+
+- **Status:** ok
+- **Item count:** 8
+- **First item preview:** `{"category": "other", "name": "Samples in Curtis et al., Nature 2012", "description": "Samples profiled in Curtis et al., Nature 2012", "sampleListId": "brca_metabric_2012", "studyId": "brca_metabric"}`
+
+### `/api/studies/{studyId}/resource-definitions`
+
+- **Status:** ok
+- **Item count:** 0
+
+### `/api/studies/{studyId}/resource-data`
+
+- **Status:** ok
+- **Item count:** 0
+
+### `/api/studies/{studyId}/resource-data-all`
+
+- **Status:** ok
+- **Item count:** 0
+
+### `/api/studies/{studyId}/patients`
+
+- **Status:** ok
+- **Item count:** 2509
+- **First item preview:** `{"uniquePatientKey": "TUItMDAwMDpicmNhX21ldGFicmlj", "patientId": "MB-0000", "studyId": "brca_metabric"}`
+
+### `/api/studies/{studyId}/molecular-profiles`
+
+- **Status:** ok
+- **Item count:** 5
+- **First item preview:** `{"molecularAlterationType": "COPY_NUMBER_ALTERATION", "datatype": "DISCRETE", "name": "Putative copy-number alterations from DNAcopy.", "description": "Copy-number alterations from DNA copy. Calls made after normal contamination correction and CNV removal using thresholds. Values: -2 = homozygous de`
+
+### `/api/studies/{studyId}/clinical-events`
+
+- **Status:** ok
+- **Item count:** 0
+
+### `/api/studies/{studyId}/clinical-data`
+
+- **Status:** ok
+- **Item count:** 27868
+- **First item preview:** `{"uniqueSampleKey": "TUItMDAwMDpicmNhX21ldGFicmlj", "uniquePatientKey": "TUItMDAwMDpicmNhX21ldGFicmlj", "sampleId": "MB-0000", "patientId": "MB-0000", "studyId": "brca_metabric", "clinicalAttributeId": "CANCER_TYPE", "value": "Breast Cancer"}`
+
+### `/api/studies/{studyId}/clinical-attributes`
+
+- **Status:** ok
+- **Item count:** 36
+- **First item preview:** `{"displayName": "Age at Diagnosis", "description": "Age at Diagnosis", "datatype": "NUMBER", "patientAttribute": true, "priority": "1", "clinicalAttributeId": "AGE_AT_DIAGNOSIS", "studyId": "brca_metabric"}`
+
+### `/api/column-store/studies/{studyId}/samples`
+
+- **Status:** ok
+- **Item count:** 2509
+- **First item preview:** `{"sampleId": "MB-0000", "sampleType": "Primary Solid Tumor", "patientId": "MB-0000", "studyId": "brca_metabric", "uniqueSampleKey": "TUItMDAwMDpicmNhX21ldGFicmlj", "uniquePatientKey": "TUItMDAwMDpicmNhX21ldGFicmlj"}`
+
+### `/cache/{studyId}`
+
+- **Status:** error: [2026-03-31T18:28:45.150394+00:00] HTTP error for https://www.cbioportal.org/cache/brca_metabric: 405 Client Error: Method Not Allowed for url: https://www.cbioportal.org/cache/brca_metabric
+- **Item count:** 0
+
+## 9. Recommended Download Strategy
+
+_Decided: 2026-03-31. Based on: this discovery report + literature review (2021–2026) +
+project phasing agreement (genomic processing/modeling is a later phase)._
+
+---
+
+### Guiding Principles
+
+**Download as needed, not all at once.**
+Genomic data (expression, mutations, CNV, methylation, miRNA) is deferred to the
+genomic modeling phase. Only data needed to establish the clinical foundation and
+understand what treatments were given is downloaded now.
+
+**METABRIC is an exception** — the full tarball is ~200 MB and contains everything
+in one package. Downloading it whole now costs nothing and avoids revisiting the
+download step later.
+
+---
+
+### Phase 1 — Download NOW (Clinical Foundation)
+
+These are downloaded immediately because they define the target labels
+(what treatment was given), the patient population, and the outcome variables.
+Without these, no modeling phase can begin.
+
+| # | Dataset | What | Source | Why Now |
+|---|---------|------|--------|---------|
+| 1 | TCGA-BRCA | All clinical sub-tables (patient, drug, radiation, follow_up, new_tumor_event) | GDC | Treatment history is the target variable. Drug table contains chemotherapy agents, endocrine therapy. Follow_up contains recurrence and survival events |
+| 2 | TCGA-BRCA | Biospecimen data | GDC | Tumor purity and sample type — needed to filter out low-quality samples before any downstream use. Small file |
+| 3 | METABRIC | Full tarball (all data types) | cBioPortal — brca_metabric.tar.gz | ~200 MB total. Contains clinical (36 attributes, 27,868 data points), expression, CNA discrete, CNA segments, and mutations. No reason to split it. Clinical fields include chemotherapy, hormone therapy, radiotherapy as binary flags — the most complete treatment records of the two datasets |
+
+**What Phase 1 gives you:**
+- Complete patient demographics and clinical characteristics for both datasets
+- Treatment labels: what treatment each patient received
+- Outcome labels: survival, disease-free survival, recurrence
+- METABRIC genomic data on disk and ready for when the genomic phase starts
+
+---
+
+### Phase 2 — Download When Genomic Modeling Begins
+
+Do not download these now. Download at the start of the genomic modeling phase.
+
+| Data Type | Source | Notes |
+|-----------|--------|-------|
+| TCGA-BRCA: Gene Expression (STAR counts) | GDC | ~2–4 GB. Primary genomic modality for subtype classification and treatment prediction |
+| TCGA-BRCA: Somatic Mutations (masked MAF) | GDC | Open access. TP53, PIK3CA, GATA3 — the three key treatment-relevant mutations |
+| TCGA-BRCA: Copy Number Variation | GDC | HER2 amplification = trastuzumab eligibility. Small relative to expression |
+| TCGA-BRCA: miRNA Expression | GDC | Complementary modality. Small file |
+| TCGA-BRCA: PAM50 molecular subtypes | TCGAbiolinks (R) | Not in standard GDC clinical download. Requires separate R script using TCGAquery_subtype(tumor="brca") |
+
+---
+
+### Phase 3 — Download Only If Explicitly Needed
+
+| Data Type | Source | Notes |
+|-----------|--------|-------|
+| TCGA-BRCA: DNA Methylation HM450 | GDC | 8–15 GB. Only if epigenomic modeling is added to scope |
+
+---
+
+### Do Not Download
+
+| Data Type | Reason |
+|-----------|--------|
+| TCGA-BRCA: Sequencing Reads (BAM) | Controlled access (requires dbGaP). Raw files. All derived data already available above |
+| TCGA-BRCA: Structural Variation | Not used in treatment prediction literature for breast cancer |
+| TCGA-BRCA: Proteome Profiling (RPPA) | Only 919 samples with data. Not in Xena. Not standard in treatment prediction models |
+
+---
+
+### Note on the Two Report Errors (Harmless)
+
+`/api/studies/{studyId}/clinical-data/fetch` → 405: Requires POST with body, not GET.
+Harmless — `/clinical-data` (GET) returned 27,868 items correctly.
+
+`/cache/{studyId}` → 405: Cache invalidation endpoint requiring DELETE.
+Not a data endpoint. Should not have been queried. Harmless.
