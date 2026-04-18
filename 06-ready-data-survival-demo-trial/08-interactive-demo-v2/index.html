@@ -298,6 +298,9 @@
               <div style="height: 360px; position: relative;">
                 <canvas id="survival-chart"></canvas>
               </div>
+              <div id="chart-status" class="hidden mt-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+                Chart preview unavailable. The numeric survival estimates still work.
+              </div>
             </div>
 
             <!-- Interpretation -->
@@ -744,6 +747,7 @@
     };
 
     let demoData = null;
+    let cohortLookup = {};
     let survivalChart = null;
     let currentChartCohort = null; // Track which cohort the chart was built for
 
@@ -753,6 +757,38 @@
     function pct(v) { return `${(v * 100).toFixed(1)}%`; }
     function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
     function el(id) { return document.getElementById(id); }
+    function getAvailableCohorts() { return Object.entries(cohortLookup); }
+
+    function buildCohortLookup() {
+      cohortLookup = {};
+      Object.entries(demoData.cohorts).forEach(([name, payload]) => {
+        const canonicalName = payload.display_name || name;
+        if (!BENCHMARKS[canonicalName] || cohortLookup[canonicalName]) return;
+        cohortLookup[canonicalName] = payload;
+      });
+      const available = Object.keys(cohortLookup);
+      if (!available.length) {
+        throw new Error("No supported cohorts found in demo_predictions.json");
+      }
+      if (!cohortLookup[state.cohort]) {
+        state.cohort = available[0];
+      }
+    }
+
+    function getBenchmarks() {
+      const benchmarks = BENCHMARKS[state.cohort];
+      if (!benchmarks) {
+        throw new Error(`No benchmark time points configured for cohort "${state.cohort}"`);
+      }
+      return benchmarks;
+    }
+
+    function setChartStatus(message = "") {
+      const note = el("chart-status");
+      if (!note) return;
+      note.textContent = message;
+      note.classList.toggle("hidden", !message);
+    }
 
     // ==========================================================
     // TABS
@@ -780,7 +816,11 @@
     // MODEL MATH (identical to v1 — verified correct)
     // ==========================================================
     function getPayload() {
-      return demoData.cohorts[state.cohort];
+      const payload = cohortLookup[state.cohort];
+      if (!payload) {
+        throw new Error(`Unsupported cohort "${state.cohort}" in demo payload`);
+      }
+      return payload;
     }
 
     /**
@@ -880,84 +920,105 @@
       const selData  = sel.map(p => p.y);
       const refData  = ref.map(p => p.y);
       const xLabel   = state.cohort === "TCGA-BRCA" ? "Days from diagnosis" : "Months from diagnosis";
-
-      // If chart exists for the same cohort, update in-place (fast, no flash)
-      if (survivalChart && currentChartCohort === state.cohort) {
-        survivalChart.data.labels              = labels;
-        survivalChart.data.datasets[0].data    = selData;
-        survivalChart.data.datasets[1].data    = refData;
-        survivalChart.update("none"); // skip animation for instant response
+      const canvas = el("survival-chart");
+      if (!canvas || typeof Chart === "undefined") {
+        setChartStatus("Chart preview unavailable in this browser. The numeric survival estimates still work.");
+        return;
+      }
+      const ctx = canvas.getContext("2d");
+      if (!ctx) {
+        setChartStatus("Chart preview unavailable because the canvas could not be initialized.");
         return;
       }
 
-      // Destroy if cohort switched (axes change)
-      if (survivalChart) { survivalChart.destroy(); survivalChart = null; }
+      try {
+        // If chart exists for the same cohort, update in-place (fast, no flash)
+        if (survivalChart && currentChartCohort === state.cohort) {
+          survivalChart.data.labels              = labels;
+          survivalChart.data.datasets[0].data    = selData;
+          survivalChart.data.datasets[1].data    = refData;
+          survivalChart.update("none"); // skip animation for instant response
+          setChartStatus("");
+          return;
+        }
 
-      const ctx = el("survival-chart").getContext("2d");
-      survivalChart = new Chart(ctx, {
-        type: "line",
-        data: {
-          labels,
-          datasets: [
-            {
-              label: "Selected profile",
-              data: selData,
-              borderColor: "#0f766e",
-              borderWidth: 3,
-              pointRadius: 0,
-              tension: 0,
-              fill: false,
-              borderDash: []
+        // Destroy if cohort switched (axes change)
+        if (survivalChart) { survivalChart.destroy(); survivalChart = null; }
+
+        survivalChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels,
+            datasets: [
+              {
+                label: "Selected profile",
+                data: selData,
+                borderColor: "#0f766e",
+                borderWidth: 3,
+                pointRadius: 0,
+                tension: 0,
+                fill: false,
+                borderDash: []
+              },
+              {
+                label: "Typical cohort profile",
+                data: refData,
+                borderColor: "#94a3b8",
+                borderWidth: 2,
+                pointRadius: 0,
+                tension: 0,
+                fill: false,
+                borderDash: [7, 4]
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: { duration: 200 },
+            interaction: { mode: "index", intersect: false },
+            plugins: {
+              legend: { display: false }, // custom legend is in the HTML above the chart
+              tooltip: {
+                backgroundColor: "rgba(15,23,42,0.85)",
+                padding: 10,
+                callbacks: {
+                  title: ctx => {
+                    const t = Math.round(ctx[0].parsed.x);
+                    return state.cohort === "TCGA-BRCA" ? `Day ${t}` : `Month ${t}`;
+                  },
+                  label: ctx => ` ${ctx.dataset.label}: ${(ctx.parsed.y * 100).toFixed(1)}%`
+                }
+              }
             },
-            {
-              label: "Typical cohort profile",
-              data: refData,
-              borderColor: "#94a3b8",
-              borderWidth: 2,
-              pointRadius: 0,
-              tension: 0,
-              fill: false,
-              borderDash: [7, 4]
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          animation: { duration: 200 },
-          interaction: { mode: "index", intersect: false },
-          plugins: {
-            legend: { display: false }, // custom legend is in the HTML above the chart
-            tooltip: {
-              backgroundColor: "rgba(15,23,42,0.85)",
-              padding: 10,
-              callbacks: {
-                title: ctx => {
-                  const t = Math.round(ctx[0].parsed.x);
-                  return state.cohort === "TCGA-BRCA" ? `Day ${t}` : `Month ${t}`;
-                },
-                label: ctx => ` ${ctx.dataset.label}: ${(ctx.parsed.y * 100).toFixed(1)}%`
+            scales: {
+              x: {
+                title: { display: true, text: xLabel, font: { size: 12, family: "Inter" }, color: "#64748b" },
+                ticks: { maxTicksLimit: 7, callback: v => Math.round(v), color: "#94a3b8", font: { size: 11 } },
+                grid:  { color: "#f1f5f9" },
+                border: { color: "#e2e8f0" }
+              },
+              y: {
+                min: 0, max: 1,
+                title: { display: true, text: "Survival probability", font: { size: 12, family: "Inter" }, color: "#64748b" },
+                ticks: { callback: v => `${(v * 100).toFixed(0)}%`, color: "#94a3b8", font: { size: 11 } },
+                grid:  { color: "#f1f5f9" },
+                border: { color: "#e2e8f0" }
               }
             }
-          },
-          scales: {
-            x: {
-              title: { display: true, text: xLabel, font: { size: 12, family: "Inter" }, color: "#64748b" },
-              ticks: { maxTicksLimit: 7, callback: v => Math.round(v), color: "#94a3b8", font: { size: 11 } },
-              grid:  { color: "#f1f5f9" },
-              border: { color: "#e2e8f0" }
-            },
-            y: {
-              min: 0, max: 1,
-              title: { display: true, text: "Survival probability", font: { size: 12, family: "Inter" }, color: "#64748b" },
-              ticks: { callback: v => `${(v * 100).toFixed(0)}%`, color: "#94a3b8", font: { size: 11 } },
-              grid:  { color: "#f1f5f9" },
-              border: { color: "#e2e8f0" }
-            }
           }
+        });
+        currentChartCohort = state.cohort;
+        setChartStatus("");
+      } catch (err) {
+        if (survivalChart) {
+          survivalChart.destroy();
+          survivalChart = null;
         }
-      });
-      currentChartCohort = state.cohort;
+        currentChartCohort = null;
+        setChartStatus("Chart preview unavailable because rendering failed. The numeric survival estimates still work.");
+        console.error("Chart rendering failed", err);
+      }
     }
 
     // ==========================================================
@@ -969,7 +1030,7 @@
       const selected   = computeCurve(payload, profile);
       const reference  = computeCurve(payload, payload.defaults);
       const riskBand   = getRiskBand(payload, selected.logPartialHazard);
-      const benchmarks = BENCHMARKS[state.cohort];
+      const benchmarks = getBenchmarks();
       const s1 = survivalAt(selected.points, benchmarks[0].time);
       const s2 = survivalAt(selected.points, benchmarks[1].time);
 
@@ -1083,7 +1144,7 @@
     function buildCohortToggle() {
       const container = el("cohort-toggle");
       container.innerHTML = "";
-      Object.keys(demoData.cohorts).forEach(name => {
+      getAvailableCohorts().forEach(([name]) => {
         const btn = document.createElement("button");
         btn.textContent    = name;
         btn.dataset.cohort = name;
@@ -1171,6 +1232,7 @@
         const res = await fetch("./demo_predictions.json", { cache: "no-store" });
         if (!res.ok) throw new Error(`HTTP ${res.status} — could not load demo_predictions.json`);
         demoData = await res.json();
+        buildCohortLookup();
 
         fillStaticContent();
         buildCohortToggle();

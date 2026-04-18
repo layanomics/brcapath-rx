@@ -1,12 +1,141 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BRCAPath-Rx demos</title>
+  <meta name="description" content="BRCAPath-Rx public demo landing page.">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7f4;
+      --card: #ffffff;
+      --ink: #183028;
+      --muted: #5c736b;
+      --line: #d8e2dd;
+      --accent: #0f766e;
+      --accent-2: #dd6b20;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.10), transparent 30%),
+        radial-gradient(circle at top right, rgba(221, 107, 32, 0.08), transparent 24%),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 56px 20px 72px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.10);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 16px 0 12px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+    }
+
+    .lead {
+      max-width: 58rem;
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 18px 45px rgba(24, 48, 40, 0.08);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .card a {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 700;
+      color: white;
+      background: var(--accent);
+      padding: 12px 16px;
+      border-radius: 12px;
+    }
+
+    .card.alt a {
+      background: var(--accent-2);
+    }
+
+    .path {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-family: Consolas, "Courier New", monospace;
+    }
+  </style>
 </head>
-<body style="font-family:Arial,sans-serif;max-width:700px;margin:40px auto;line-height:1.6;">
-  <h1>BRCAPath-Rx demos</h1>
-  <p><a href="./stage1-demo/">Open Stage 1 prognostic demo</a></p>
-  <p><a href="./confounding-demo/">Open confounding / IPTW demo</a></p>
+<body>
+  <main>
+    <div class="eyebrow">BRCAPath-Rx</div>
+    <h1>Public demo landing page</h1>
+    <p class="lead">
+      This root URL is intentionally a lightweight entry page. Use the links below to open the
+      two published demos hosted under this GitHub Pages site.
+    </p>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Stage 1 prognostic demo</h2>
+        <p>
+          Static interactive survival demo published from the audited Stage 1 package.
+        </p>
+        <a href="./stage1-demo/">Open Stage 1 demo</a>
+        <div class="path">./stage1-demo/</div>
+      </section>
+
+      <section class="card alt">
+        <h2>IPTW confounding demo</h2>
+        <p>
+          Vite-built confounding walkthrough published as a separate subpath under this site.
+        </p>
+        <a href="./confounding-demo/">Open confounding demo</a>
+        <div class="path">./confounding-demo/</div>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
