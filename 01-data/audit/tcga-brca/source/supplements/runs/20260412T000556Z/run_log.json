@@ -1,0 +1,227 @@
+{
+  "status": "completed",
+  "run_id": "20260412T000556Z",
+  "started_at_utc": "2026-04-12T00:05:56Z",
+  "completed_at_utc": "2026-04-12T00:39:13Z",
+  "repo_root": "D:\\Projects\\brcapath-rx",
+  "trial_name": "tcga_only_source_audited",
+  "project_status": "ready_for_protocol_freeze",
+  "gdc_api": {
+    "base_url": "https://api.gdc.cancer.gov",
+    "status": "OK",
+    "tag": "8.3.1",
+    "version": 1,
+    "data_release": "Data Release 45.0 - December 04, 2025",
+    "data_release_version": {
+      "major": 45,
+      "minor": 0,
+      "release_date": "2025-12-04"
+    }
+  },
+  "gdc_client_provenance": {
+    "configured_path": "C:/tools/gdc-client.exe",
+    "configured_version": "2.3",
+    "configured_project": "TCGA-BRCA"
+  },
+  "download_scope_config": {
+    "trial_name": "tcga_only_source_audited",
+    "download_scope": [
+      "tcga_brca_clinical_supplement",
+      "tcga_brca_biospecimen_supplement"
+    ],
+    "manifest_root": "01-data/raw/tcga-brca/gdc/manifests",
+    "download_root": "01-data/raw/tcga-brca/gdc/downloads",
+    "log_root": "01-data/raw/tcga-brca/gdc/logs"
+  },
+  "configs_used": {
+    "gdc_client_yaml": "07-config/gdc_client.yaml",
+    "project_status_yaml": "07-config/project_status.yaml",
+    "trial_config_yaml": "09-trials/01-tcga-only-source-audited/04-config/trial_config.yaml",
+    "gdc_download_scope_yaml": "09-trials/01-tcga-only-source-audited/04-config/gdc_download_scope.yaml",
+    "clinical_payload_json": "09-trials/01-tcga-only-source-audited/04-config/gdc_clinical_supplement_payload.json",
+    "biospecimen_payload_json": "09-trials/01-tcga-only-source-audited/04-config/gdc_biospecimen_supplement_payload.json"
+  },
+  "outputs": {
+    "audit_run_directory": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z",
+    "metadata_tsv": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/tcga_brca_source_supplements_metadata.tsv",
+    "latest_manifest_json": "01-data/audit/tcga-brca/source/tcga_brca_source_supplements_latest.json",
+    "clinical_manifest_path": "01-data/raw/tcga-brca/gdc/manifests/clinical/20260412T000556Z/clinical_supplement_manifest.tsv",
+    "clinical_download_dir": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z",
+    "clinical_download_log_path": "01-data/raw/tcga-brca/gdc/logs/clinical/20260412T000556Z/gdc_client_download.log",
+    "biospecimen_manifest_path": "01-data/raw/tcga-brca/gdc/manifests/biospecimen/20260412T000556Z/biospecimen_supplement_manifest.tsv",
+    "biospecimen_download_dir": "01-data/raw/tcga-brca/gdc/downloads/biospecimen/20260412T000556Z",
+    "biospecimen_download_log_path": "01-data/raw/tcga-brca/gdc/logs/biospecimen/20260412T000556Z/gdc_client_download.log"
+  },
+  "source_classes": {
+    "clinical": {
+      "source_class": "clinical",
+      "data_type": "Clinical Supplement",
+      "data_category": "Clinical",
+      "count": 1183,
+      "metadata_payload_path": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/clinical_metadata_payload_effective.json",
+      "response_files": [
+        "clinical_response_page_0001.json"
+      ],
+      "manifest_payload_path": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/clinical_manifest_payload_effective.json",
+      "manifest_path": "01-data/raw/tcga-brca/gdc/manifests/clinical/20260412T000556Z/clinical_supplement_manifest.tsv",
+      "manifest_validation": {
+        "row_count": 1183,
+        "columns": [
+          "id",
+          "filename",
+          "md5",
+          "size",
+          "state"
+        ]
+      },
+      "download_requested": true,
+      "download_completed": true,
+      "download_dir": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z",
+      "download_log_path": "01-data/raw/tcga-brca/gdc/logs/clinical/20260412T000556Z/gdc_client_download.log",
+      "download_validation": {
+        "validated_downloaded_file_count": 1183
+      },
+      "gdc_client_result": {
+        "command": [
+          "C:/tools/gdc-client.exe",
+          "download",
+          "--manifest",
+          "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\manifests\\clinical\\20260412T000556Z\\clinical_supplement_manifest.tsv",
+          "--dir",
+          "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\downloads\\clinical\\20260412T000556Z",
+          "--log-file",
+          "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\logs\\clinical\\20260412T000556Z\\gdc_client_download.log"
+        ],
+        "return_code": 0,
+        "stdout_preview": "  0% [                                              ] ETA:  --:--:--   0.0 s/B\n100% [############################################] ETA:  00:00:00  46.5 KiB/s\n100% [############################################] Time:  0:00:01  41.6 KiB/s\n  0% [                                              ] ETA:  --:--:--   0.0 s/B\n100% [############################################] ETA:  00:00:00  10.9 KiB/s\n100% [############################################] Time:  0:00:01   9.8 KiB/s\n  0% [                    ",
+        "stderr_preview": "  0% [                                                                       ]\n100% [#######################################################################]\n100% [#######################################################################]\n  0% [                                                                       ]\n100% [#######################################################################]\n100% [#######################################################################]\n  0% [                    "
+      }
+    },
+    "biospecimen": {
+      "source_class": "biospecimen",
+      "data_type": "Biospecimen Supplement",
+      "data_category": "Biospecimen",
+      "count": 2205,
+      "metadata_payload_path": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/biospecimen_metadata_payload_effective.json",
+      "response_files": [
+        "biospecimen_response_page_0001.json",
+        "biospecimen_response_page_0002.json"
+      ],
+      "manifest_payload_path": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/biospecimen_manifest_payload_effective.json",
+      "manifest_path": "01-data/raw/tcga-brca/gdc/manifests/biospecimen/20260412T000556Z/biospecimen_supplement_manifest.tsv",
+      "manifest_validation": {
+        "row_count": 2205,
+        "columns": [
+          "id",
+          "filename",
+          "md5",
+          "size",
+          "state"
+        ]
+      },
+      "download_requested": true,
+      "download_completed": true,
+      "download_dir": "01-data/raw/tcga-brca/gdc/downloads/biospecimen/20260412T000556Z",
+      "download_log_path": "01-data/raw/tcga-brca/gdc/logs/biospecimen/20260412T000556Z/gdc_client_download.log",
+      "download_validation": {
+        "validated_downloaded_file_count": 2205
+      },
+      "gdc_client_result": {
+        "command": [
+          "C:/tools/gdc-client.exe",
+          "download",
+          "--manifest",
+          "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\manifests\\biospecimen\\20260412T000556Z\\biospecimen_supplement_manifest.tsv",
+          "--dir",
+          "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\downloads\\biospecimen\\20260412T000556Z",
+          "--log-file",
+          "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\logs\\biospecimen\\20260412T000556Z\\gdc_client_download.log"
+        ],
+        "return_code": 0,
+        "stdout_preview": "  0% [                                              ] ETA:  --:--:--   0.0 s/B\n100% [############################################] ETA:  00:00:00  14.3 KiB/s\n100% [############################################] Time:  0:00:01  12.8 KiB/s\n  0% [                                              ] ETA:  --:--:--   0.0 s/B\n100% [############################################] ETA:  00:00:00  69.8 KiB/s\n100% [############################################] Time:  0:00:01  64.3 KiB/s\n  0% [                    ",
+        "stderr_preview": "  0% [                                                                       ]\n100% [#######################################################################]\n100% [#######################################################################]\n  0% [                                                                       ]\n100% [#######################################################################]\n100% [#######################################################################]\n  0% [                    "
+      }
+    }
+  },
+  "validation": {
+    "passed": true,
+    "metadata": {
+      "row_count": 3388,
+      "counts_by_source_class": {
+        "clinical": 1183,
+        "biospecimen": 2205
+      },
+      "required_columns": [
+        "source_class",
+        "file_id",
+        "file_name",
+        "md5sum",
+        "file_size",
+        "access",
+        "state",
+        "data_category",
+        "data_type",
+        "data_format",
+        "case_ids",
+        "case_submitter_ids",
+        "project_ids",
+        "case_count"
+      ]
+    },
+    "manifests": {
+      "clinical": {
+        "row_count": 1183,
+        "columns": [
+          "id",
+          "filename",
+          "md5",
+          "size",
+          "state"
+        ]
+      },
+      "biospecimen": {
+        "row_count": 2205,
+        "columns": [
+          "id",
+          "filename",
+          "md5",
+          "size",
+          "state"
+        ]
+      }
+    },
+    "downloads": {
+      "clinical": {
+        "validated_downloaded_file_count": 1183
+      },
+      "biospecimen": {
+        "validated_downloaded_file_count": 2205
+      }
+    }
+  },
+  "latest_manifest": {
+    "updated_at_utc": "2026-04-12T00:39:13Z",
+    "run_id": "20260412T000556Z",
+    "gdc_data_release": "Data Release 45.0 - December 04, 2025",
+    "gdc_tag": "8.3.1",
+    "audit_run_directory": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z",
+    "metadata_tsv": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/tcga_brca_source_supplements_metadata.tsv",
+    "run_log_json": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/run_log.json",
+    "source_classes": {
+      "clinical": {
+        "manifest_path": "01-data/raw/tcga-brca/gdc/manifests/clinical/20260412T000556Z/clinical_supplement_manifest.tsv",
+        "download_dir": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z",
+        "download_log_path": "01-data/raw/tcga-brca/gdc/logs/clinical/20260412T000556Z/gdc_client_download.log",
+        "download_requested": true,
+        "download_completed": true
+      },
+      "biospecimen": {
+        "manifest_path": "01-data/raw/tcga-brca/gdc/manifests/biospecimen/20260412T000556Z/biospecimen_supplement_manifest.tsv",
+        "download_dir": "01-data/raw/tcga-brca/gdc/downloads/biospecimen/20260412T000556Z",
+        "download_log_path": "01-data/raw/tcga-brca/gdc/logs/biospecimen/20260412T000556Z/gdc_client_download.log",
+        "download_requested": true,
+        "download_completed": true
+      }
+    }
+  }
+}

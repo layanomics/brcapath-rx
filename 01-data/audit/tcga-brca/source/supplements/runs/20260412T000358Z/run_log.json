@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "run_id": "20260412T000358Z",
+  "started_at_utc": "2026-04-12T00:03:58Z",
+  "failed_at_utc": "2026-04-12T00:03:58Z",
+  "repo_root": "D:\\Projects\\brcapath-rx",
+  "error": "Nested YAML is not supported by the fallback parser: D:\\Projects\\brcapath-rx\\09-trials\\01-tcga-only-source-audited\\04-config\\gdc_download_scope.yaml:3"
+}
