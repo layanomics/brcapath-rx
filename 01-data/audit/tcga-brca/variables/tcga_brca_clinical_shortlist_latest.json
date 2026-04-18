@@ -1,0 +1,15 @@
+{
+  "updated_at_utc": "2026-04-12T03:36:02Z",
+  "shortlist_run_id": "20260412T033602Z",
+  "core_audit_run_id": "20260412T023839Z",
+  "parse_run_id": "20260412T010932Z",
+  "source_run_id": "20260412T000556Z",
+  "shortlist_profile": "balanced",
+  "shortlist_run_directory": "01-data/audit/tcga-brca/variables/clinical_shortlist_runs/20260412T033602Z",
+  "clinical_shortlist_tsv": "01-data/audit/tcga-brca/variables/clinical_shortlist_runs/20260412T033602Z/clinical_shortlist.tsv",
+  "clinical_shortlist_summary_tsv": "01-data/audit/tcga-brca/variables/clinical_shortlist_runs/20260412T033602Z/clinical_shortlist_summary.tsv",
+  "clinical_shortlist_by_table_tsv": "01-data/audit/tcga-brca/variables/clinical_shortlist_runs/20260412T033602Z/clinical_shortlist_by_table.tsv",
+  "run_log_json": "01-data/audit/tcga-brca/variables/clinical_shortlist_runs/20260412T033602Z/run_log.json",
+  "core_audit_latest_json": "01-data/audit/tcga-brca/variables/tcga_brca_clinical_core_field_audit_latest.json",
+  "field_count": 171
+}

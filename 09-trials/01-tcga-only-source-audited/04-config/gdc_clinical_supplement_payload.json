@@ -1,0 +1,26 @@
+{
+  "filters": {
+    "op": "and",
+    "content": [
+      {
+        "op": "in",
+        "content": {
+          "field": "cases.project.project_id",
+          "value": [
+            "TCGA-BRCA"
+          ]
+        }
+      },
+      {
+        "op": "in",
+        "content": {
+          "field": "data_type",
+          "value": [
+            "Clinical Supplement"
+          ]
+        }
+      }
+    ]
+  },
+  "fields": "file_id,file_name,md5sum,file_size,access,state,data_category,data_type,data_format,cases.case_id,cases.submitter_id,cases.project.project_id"
+}

@@ -1,0 +1,20 @@
+{
+  "updated_at_utc": "2026-04-12T02:38:39Z",
+  "audit_run_id": "20260412T023839Z",
+  "parse_run_id": "20260412T010932Z",
+  "source_run_id": "20260412T000556Z",
+  "audit_run_directory": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023839Z",
+  "clinical_core_field_audit_tsv": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023839Z/clinical_core_field_audit.tsv",
+  "clinical_core_field_group_summary_tsv": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023839Z/clinical_core_field_group_summary.tsv",
+  "clinical_core_missingness_summary_tsv": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023839Z/clinical_core_missingness_summary.tsv",
+  "run_log_json": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023839Z/run_log.json",
+  "clinical_biotab_latest_json": "01-data/audit/tcga-brca/variables/tcga_brca_clinical_biotabs_latest.json",
+  "field_inventory_tsvs": {
+    "clinical_patient": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023839Z/clinical_patient_field_inventory.tsv",
+    "clinical_drug": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023839Z/clinical_drug_field_inventory.tsv",
+    "clinical_radiation": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023839Z/clinical_radiation_field_inventory.tsv",
+    "clinical_follow_up_v4_0": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023839Z/clinical_follow_up_v4_0_field_inventory.tsv"
+  },
+  "core_table_count": 4,
+  "field_count": 171
+}

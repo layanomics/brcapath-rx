@@ -1,0 +1,28 @@
+parse_run_id	table_name	column_position	raw_column_name	alternate_column_name	cde_id_raw
+20260413T070359Z	biospecimen_sample	1	bcr_patient_uuid		
+20260413T070359Z	biospecimen_sample	2	bcr_sample_barcode		
+20260413T070359Z	biospecimen_sample	3	bcr_sample_uuid		
+20260413T070359Z	biospecimen_sample	4	biospecimen_sequence		
+20260413T070359Z	biospecimen_sample	5	composition		
+20260413T070359Z	biospecimen_sample	6	current_weight		
+20260413T070359Z	biospecimen_sample	7	days_to_collection		
+20260413T070359Z	biospecimen_sample	8	days_to_sample_procurement		CDE_ID:3288495
+20260413T070359Z	biospecimen_sample	9	freezing_method		
+20260413T070359Z	biospecimen_sample	10	initial_weight		
+20260413T070359Z	biospecimen_sample	11	intermediate_dimension		
+20260413T070359Z	biospecimen_sample	12	is_ffpe		CDE_ID:4170557
+20260413T070359Z	biospecimen_sample	13	longest_dimension		
+20260413T070359Z	biospecimen_sample	14	method_of_sample_procurement		CDE_ID:3103514
+20260413T070359Z	biospecimen_sample	15	oct_embedded		
+20260413T070359Z	biospecimen_sample	16	other_method_of_sample_procurement		CDE_ID:2006730
+20260413T070359Z	biospecimen_sample	17	pathology_report_file_name		
+20260413T070359Z	biospecimen_sample	18	pathology_report_uuid		
+20260413T070359Z	biospecimen_sample	19	preservation_method		
+20260413T070359Z	biospecimen_sample	20	sample_type		
+20260413T070359Z	biospecimen_sample	21	sample_type_id		
+20260413T070359Z	biospecimen_sample	22	shortest_dimension		
+20260413T070359Z	biospecimen_sample	23	time_between_clamping_and_freezing		
+20260413T070359Z	biospecimen_sample	24	time_between_excision_and_freezing		
+20260413T070359Z	biospecimen_sample	25	tissue_type		
+20260413T070359Z	biospecimen_sample	26	tumor_descriptor		
+20260413T070359Z	biospecimen_sample	27	vial_number		

@@ -1,0 +1,30 @@
+dry_run_build_id	count_stage	count_metric	count_value	notes
+20260413T185911Z	patient_universe	clinical_patient_row_count	1097	Provisional patient universe from clinical_patient source rows.
+20260413T185911Z	patient_universe	final_cohort_row_count	1097	Final dry-run cohort row count; must equal clinical_patient row count.
+20260413T185911Z	patient_universe	rows_with_both_ids	1097	Rows with both bcr_patient_barcode and bcr_patient_uuid present.
+20260413T185911Z	patient_universe	rows_with_only_uuid	0	Rows with only bcr_patient_uuid present.
+20260413T185911Z	patient_universe	rows_with_only_barcode	0	Rows with only bcr_patient_barcode present.
+20260413T185911Z	patient_universe	rows_with_neither_id	0	Rows with neither patient identifier present.
+20260413T185911Z	followup_join	clinical_follow_up_total_row_count	716	Raw clinical_follow_up_v4_0 source-row count.
+20260413T185911Z	followup_join	clinical_patient_rows_with_followup_match	619	Clinical patient rows with at least one exact (uuid, barcode) follow-up match.
+20260413T185911Z	followup_join	clinical_patient_rows_without_followup_match	478	Clinical patient rows without any exact (uuid, barcode) follow-up match.
+20260413T185911Z	followup_join	matched_followup_row_count	716	Follow-up source rows matched into grouped patient-level evidence.
+20260413T185911Z	followup_join	right_only_followup_row_count	0	Follow-up source rows with no clinical_patient exact-key match.
+20260413T185911Z	followup_join	clinical_patient_rows_with_multiple_followup_rows	91	Clinical patient rows with more than one grouped follow-up row.
+20260413T185911Z	followup_join	max_followup_rows_per_patient	3	Maximum grouped follow-up rows attached to a single clinical patient row.
+20260413T185911Z	biospecimen_sample_join	biospecimen_sample_total_row_count	2302	Raw biospecimen_sample source-row count.
+20260413T185911Z	biospecimen_sample_join	clinical_patient_rows_with_biospecimen_sample_match	1097	Clinical patient rows with at least one biospecimen_sample UUID match.
+20260413T185911Z	biospecimen_sample_join	clinical_patient_rows_without_biospecimen_sample_match	0	Clinical patient rows without any biospecimen_sample UUID match.
+20260413T185911Z	biospecimen_sample_join	matched_biospecimen_sample_row_count	2293	biospecimen_sample rows matched into grouped patient-level evidence.
+20260413T185911Z	biospecimen_sample_join	right_only_biospecimen_sample_row_count	9	biospecimen_sample rows with UUIDs absent from clinical_patient.
+20260413T185911Z	biospecimen_sample_join	right_only_biospecimen_patient_uuid_count	4	Distinct biospecimen patient UUIDs absent from clinical_patient.
+20260413T185911Z	biospecimen_sample_join	clinical_patient_rows_with_multiple_biospecimen_samples	1097	Clinical patient rows with more than one grouped biospecimen_sample row.
+20260413T185911Z	biospecimen_sample_join	max_biospecimen_sample_rows_per_patient	4	Maximum grouped biospecimen_sample rows attached to a single clinical patient row.
+20260413T185911Z	mismatch_signals	clinical_source_case_submitter_coverage	1098	Unique clinical source case coverage from saved source metadata.
+20260413T185911Z	mismatch_signals	biospecimen_patient_uuid_distinct_count	1101	Distinct patient UUID count from biospecimen_sample evidence.
+20260413T185911Z	mismatch_signals	extra_source_case_id_count	1	Case submitter IDs present in source metadata but absent from clinical_patient.
+20260413T185911Z	mismatch_signals	clinical_cases_missing_from_source_count	0	Clinical patient barcodes absent from source metadata coverage.
+20260413T185911Z	ambiguity	carried_ambiguity_note_flag_count	6	Static ambiguity-note flags carried into every dry-run cohort row.
+20260413T185911Z	ambiguity	upstream_blueprint_ambiguity_count	11	Current cohort-blueprint ambiguity count carried forward as context.
+20260413T185911Z	ambiguity	upstream_actions_needed_before_minimal_build_count	5	Count of grouped ambiguity-resolution actions still flagged before a minimal build.
+20260413T185911Z	mismatch_signals	extra_source_case_ids_json	"[""TCGA-BH-A0B2""]"	Source-only case submitter IDs retained as an audit note.

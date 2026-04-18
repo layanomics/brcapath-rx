@@ -1,0 +1,677 @@
+{
+  "status": "completed",
+  "audit_run_id": "20260412T023635Z",
+  "parse_run_id": "20260412T010932Z",
+  "source_run_id": "20260412T000556Z",
+  "started_at_utc": "2026-04-12T02:36:35Z",
+  "completed_at_utc": "2026-04-12T02:36:35Z",
+  "repo_root": "D:\\Projects\\brcapath-rx",
+  "trial_name": "tcga_only_source_audited",
+  "dataset_scope": "tcga_brca_only",
+  "inputs": {
+    "trial_config_yaml": "09-trials/01-tcga-only-source-audited/04-config/trial_config.yaml",
+    "results_root": "09-trials/01-tcga-only-source-audited/05-results",
+    "clinical_biotab_latest_json": "01-data/audit/tcga-brca/variables/tcga_brca_clinical_biotabs_latest.json",
+    "clinical_biotab_manifest_tsv": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/clinical_biotab_table_manifest.tsv",
+    "clinical_biotab_run_log_json": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/run_log.json",
+    "core_table_names": [
+      "clinical_patient",
+      "clinical_drug",
+      "clinical_radiation",
+      "clinical_follow_up_v4_0"
+    ]
+  },
+  "outputs": {
+    "audit_run_directory": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z",
+    "clinical_core_field_audit_tsv": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_core_field_audit.tsv",
+    "clinical_core_field_group_summary_tsv": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_core_field_group_summary.tsv",
+    "clinical_core_missingness_summary_tsv": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_core_missingness_summary.tsv",
+    "run_log_json": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/run_log.json",
+    "latest_pointer_json": "01-data/audit/tcga-brca/variables/tcga_brca_clinical_core_field_audit_latest.json",
+    "field_inventory_tsvs": {
+      "clinical_patient": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_patient_field_inventory.tsv",
+      "clinical_drug": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_drug_field_inventory.tsv",
+      "clinical_radiation": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_radiation_field_inventory.tsv",
+      "clinical_follow_up_v4_0": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_follow_up_v4_0_field_inventory.tsv"
+    }
+  },
+  "validation": {
+    "passed": true,
+    "required_core_table_count": 4,
+    "resolved_core_table_count": 4,
+    "row_count_positive_for_all_tables": true,
+    "schema_row_counts_match_table_column_counts": true,
+    "field_inventory_row_counts_match_table_column_counts": true,
+    "combined_field_count": 171,
+    "expected_combined_field_count": 171,
+    "combined_field_count_matches_expected": true,
+    "no_prior_run_overwrite": true
+  },
+  "rules": {
+    "missing_like_normalization": "value.strip().lower()",
+    "missing_like_token_columns": {
+      "blank": "blank_count",
+      "not_available": "not_available_count",
+      "not_applicable": "not_applicable_count",
+      "unknown": "unknown_count",
+      "not_evaluated": "not_evaluated_count",
+      "discrepancy": "discrepancy_count",
+      "na": "na_count",
+      "n/a": "n_a_count",
+      "null": "null_count",
+      "none": "none_count",
+      "nan": "nan_count"
+    },
+    "field_group_labels": [
+      "demographics",
+      "diagnosis / pathology",
+      "stage",
+      "receptor / biomarker",
+      "treatment / drug",
+      "radiation",
+      "follow-up / outcome-like",
+      "identifier / admin",
+      "other / unclear"
+    ],
+    "identifier_admin_exact_names": [
+      "disease_code",
+      "form_completion_date",
+      "informed_consent_verified",
+      "patient_id",
+      "project_code",
+      "prospective_collection",
+      "retrospective_collection",
+      "tissue_source_site"
+    ],
+    "identifier_admin_prefixes": [
+      "bcr_"
+    ],
+    "group_keyword_rules": [
+      {
+        "probable_field_group": "demographics",
+        "patterns": [
+          "gender",
+          "race",
+          "ethnicity",
+          "menopause",
+          "birth",
+          "age_at_"
+        ]
+      },
+      {
+        "probable_field_group": "stage",
+        "patterns": [
+          "ajcc",
+          "clinical_t",
+          "clinical_n",
+          "clinical_m",
+          "clinical_stage",
+          "pathologic_",
+          "stage_"
+        ]
+      },
+      {
+        "probable_field_group": "receptor / biomarker",
+        "patterns": [
+          "er_",
+          "pr_",
+          "her2",
+          "receptor",
+          "ihc",
+          "fish",
+          "cent17",
+          "cent_17"
+        ]
+      },
+      {
+        "probable_field_group": "radiation",
+        "patterns": [
+          "radiation",
+          "irradiat"
+        ]
+      },
+      {
+        "probable_field_group": "follow-up / outcome-like",
+        "patterns": [
+          "followup",
+          "follow_up",
+          "vital_status",
+          "death",
+          "last_contact",
+          "tumor_status",
+          "progression",
+          "new_tumor_event",
+          "response",
+          "lost_to"
+        ]
+      },
+      {
+        "probable_field_group": "treatment / drug",
+        "patterns": [
+          "drug",
+          "pharm",
+          "therapy",
+          "treatment",
+          "regimen",
+          "dose",
+          "route_of_administration",
+          "stem_cell",
+          "tx_",
+          "tx_on_",
+          "cycles"
+        ]
+      },
+      {
+        "probable_field_group": "diagnosis / pathology",
+        "patterns": [
+          "diagnosis",
+          "histolog",
+          "margin",
+          "lymph",
+          "metastasis_site",
+          "axillary",
+          "surgical",
+          "anatomic",
+          "neoplasm",
+          "tumor_tissue_site",
+          "site_of_primary_tumor",
+          "icd_",
+          "method_initial_path_dx",
+          "metastatic_tumor",
+          "subdivision"
+        ]
+      }
+    ],
+    "default_group_by_table": {
+      "clinical_drug": "treatment / drug",
+      "clinical_radiation": "radiation",
+      "clinical_follow_up_v4_0": "follow-up / outcome-like",
+      "clinical_patient": "other / unclear"
+    },
+    "high_missingness_threshold": 0.75,
+    "example_value_sample_limit": 5
+  },
+  "upstream_snapshots": {
+    "clinical_biotab_latest_pointer": {
+      "updated_at_utc": "2026-04-12T01:09:32Z",
+      "parse_run_id": "20260412T010932Z",
+      "source_run_id": "20260412T000556Z",
+      "processed_run_directory": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z",
+      "audit_run_directory": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z",
+      "table_manifest_tsv": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/clinical_biotab_table_manifest.tsv",
+      "run_log_json": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/run_log.json",
+      "source_supplement_latest_json": "01-data/audit/tcga-brca/source/tcga_brca_source_supplements_latest.json",
+      "source_metadata_tsv": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/tcga_brca_source_supplements_metadata.tsv",
+      "parsed_table_count": 9
+    },
+    "clinical_biotab_run_log": {
+      "status": "completed",
+      "parse_run_id": "20260412T010932Z",
+      "source_run_id": "20260412T000556Z",
+      "started_at_utc": "2026-04-12T01:09:32Z",
+      "completed_at_utc": "2026-04-12T01:09:32Z",
+      "repo_root": "D:\\Projects\\brcapath-rx",
+      "trial_name": "tcga_only_source_audited",
+      "dataset_scope": "tcga_brca_only",
+      "inputs": {
+        "trial_config_yaml": "09-trials/01-tcga-only-source-audited/04-config/trial_config.yaml",
+        "supplement_latest_json": "01-data/audit/tcga-brca/source/tcga_brca_source_supplements_latest.json",
+        "source_metadata_tsv": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/tcga_brca_source_supplements_metadata.tsv",
+        "source_run_log_json": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/run_log.json",
+        "clinical_download_dir": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z"
+      },
+      "outputs": {
+        "processed_run_directory": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z",
+        "audit_run_directory": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z",
+        "table_manifest_tsv": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/clinical_biotab_table_manifest.tsv",
+        "run_log_json": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/run_log.json",
+        "latest_pointer_json": "01-data/audit/tcga-brca/variables/tcga_brca_clinical_biotabs_latest.json"
+      },
+      "validation": {
+        "passed": true,
+        "clinical_download_completed": true,
+        "discovered_file_count": 9,
+        "header_preamble_rows": 3,
+        "data_start_line": 4,
+        "row_count_positive_for_all_tables": true,
+        "unique_output_filenames": true,
+        "schema_file_count": 9
+      },
+      "source_pointer_snapshot": {
+        "updated_at_utc": "2026-04-12T00:39:13Z",
+        "run_id": "20260412T000556Z",
+        "gdc_data_release": "Data Release 45.0 - December 04, 2025",
+        "gdc_tag": "8.3.1",
+        "audit_run_directory": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z",
+        "metadata_tsv": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/tcga_brca_source_supplements_metadata.tsv",
+        "run_log_json": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/run_log.json",
+        "source_classes": {
+          "clinical": {
+            "manifest_path": "01-data/raw/tcga-brca/gdc/manifests/clinical/20260412T000556Z/clinical_supplement_manifest.tsv",
+            "download_dir": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z",
+            "download_log_path": "01-data/raw/tcga-brca/gdc/logs/clinical/20260412T000556Z/gdc_client_download.log",
+            "download_requested": true,
+            "download_completed": true
+          },
+          "biospecimen": {
+            "manifest_path": "01-data/raw/tcga-brca/gdc/manifests/biospecimen/20260412T000556Z/biospecimen_supplement_manifest.tsv",
+            "download_dir": "01-data/raw/tcga-brca/gdc/downloads/biospecimen/20260412T000556Z",
+            "download_log_path": "01-data/raw/tcga-brca/gdc/logs/biospecimen/20260412T000556Z/gdc_client_download.log",
+            "download_requested": true,
+            "download_completed": true
+          }
+        }
+      },
+      "source_run_log_snapshot": {
+        "status": "completed",
+        "run_id": "20260412T000556Z",
+        "started_at_utc": "2026-04-12T00:05:56Z",
+        "completed_at_utc": "2026-04-12T00:39:13Z",
+        "repo_root": "D:\\Projects\\brcapath-rx",
+        "trial_name": "tcga_only_source_audited",
+        "project_status": "ready_for_protocol_freeze",
+        "gdc_api": {
+          "base_url": "https://api.gdc.cancer.gov",
+          "status": "OK",
+          "tag": "8.3.1",
+          "version": 1,
+          "data_release": "Data Release 45.0 - December 04, 2025",
+          "data_release_version": {
+            "major": 45,
+            "minor": 0,
+            "release_date": "2025-12-04"
+          }
+        },
+        "gdc_client_provenance": {
+          "configured_path": "C:/tools/gdc-client.exe",
+          "configured_version": "2.3",
+          "configured_project": "TCGA-BRCA"
+        },
+        "download_scope_config": {
+          "trial_name": "tcga_only_source_audited",
+          "download_scope": [
+            "tcga_brca_clinical_supplement",
+            "tcga_brca_biospecimen_supplement"
+          ],
+          "manifest_root": "01-data/raw/tcga-brca/gdc/manifests",
+          "download_root": "01-data/raw/tcga-brca/gdc/downloads",
+          "log_root": "01-data/raw/tcga-brca/gdc/logs"
+        },
+        "configs_used": {
+          "gdc_client_yaml": "07-config/gdc_client.yaml",
+          "project_status_yaml": "07-config/project_status.yaml",
+          "trial_config_yaml": "09-trials/01-tcga-only-source-audited/04-config/trial_config.yaml",
+          "gdc_download_scope_yaml": "09-trials/01-tcga-only-source-audited/04-config/gdc_download_scope.yaml",
+          "clinical_payload_json": "09-trials/01-tcga-only-source-audited/04-config/gdc_clinical_supplement_payload.json",
+          "biospecimen_payload_json": "09-trials/01-tcga-only-source-audited/04-config/gdc_biospecimen_supplement_payload.json"
+        },
+        "outputs": {
+          "audit_run_directory": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z",
+          "metadata_tsv": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/tcga_brca_source_supplements_metadata.tsv",
+          "latest_manifest_json": "01-data/audit/tcga-brca/source/tcga_brca_source_supplements_latest.json",
+          "clinical_manifest_path": "01-data/raw/tcga-brca/gdc/manifests/clinical/20260412T000556Z/clinical_supplement_manifest.tsv",
+          "clinical_download_dir": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z",
+          "clinical_download_log_path": "01-data/raw/tcga-brca/gdc/logs/clinical/20260412T000556Z/gdc_client_download.log",
+          "biospecimen_manifest_path": "01-data/raw/tcga-brca/gdc/manifests/biospecimen/20260412T000556Z/biospecimen_supplement_manifest.tsv",
+          "biospecimen_download_dir": "01-data/raw/tcga-brca/gdc/downloads/biospecimen/20260412T000556Z",
+          "biospecimen_download_log_path": "01-data/raw/tcga-brca/gdc/logs/biospecimen/20260412T000556Z/gdc_client_download.log"
+        },
+        "source_classes": {
+          "clinical": {
+            "source_class": "clinical",
+            "data_type": "Clinical Supplement",
+            "data_category": "Clinical",
+            "count": 1183,
+            "metadata_payload_path": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/clinical_metadata_payload_effective.json",
+            "response_files": [
+              "clinical_response_page_0001.json"
+            ],
+            "manifest_payload_path": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/clinical_manifest_payload_effective.json",
+            "manifest_path": "01-data/raw/tcga-brca/gdc/manifests/clinical/20260412T000556Z/clinical_supplement_manifest.tsv",
+            "manifest_validation": {
+              "row_count": 1183,
+              "columns": [
+                "id",
+                "filename",
+                "md5",
+                "size",
+                "state"
+              ]
+            },
+            "download_requested": true,
+            "download_completed": true,
+            "download_dir": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z",
+            "download_log_path": "01-data/raw/tcga-brca/gdc/logs/clinical/20260412T000556Z/gdc_client_download.log",
+            "download_validation": {
+              "validated_downloaded_file_count": 1183
+            },
+            "gdc_client_result": {
+              "command": [
+                "C:/tools/gdc-client.exe",
+                "download",
+                "--manifest",
+                "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\manifests\\clinical\\20260412T000556Z\\clinical_supplement_manifest.tsv",
+                "--dir",
+                "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\downloads\\clinical\\20260412T000556Z",
+                "--log-file",
+                "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\logs\\clinical\\20260412T000556Z\\gdc_client_download.log"
+              ],
+              "return_code": 0,
+              "stdout_preview": "  0% [                                              ] ETA:  --:--:--   0.0 s/B\n100% [############################################] ETA:  00:00:00  46.5 KiB/s\n100% [############################################] Time:  0:00:01  41.6 KiB/s\n  0% [                                              ] ETA:  --:--:--   0.0 s/B\n100% [############################################] ETA:  00:00:00  10.9 KiB/s\n100% [############################################] Time:  0:00:01   9.8 KiB/s\n  0% [                    ",
+              "stderr_preview": "  0% [                                                                       ]\n100% [#######################################################################]\n100% [#######################################################################]\n  0% [                                                                       ]\n100% [#######################################################################]\n100% [#######################################################################]\n  0% [                    "
+            }
+          },
+          "biospecimen": {
+            "source_class": "biospecimen",
+            "data_type": "Biospecimen Supplement",
+            "data_category": "Biospecimen",
+            "count": 2205,
+            "metadata_payload_path": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/biospecimen_metadata_payload_effective.json",
+            "response_files": [
+              "biospecimen_response_page_0001.json",
+              "biospecimen_response_page_0002.json"
+            ],
+            "manifest_payload_path": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/biospecimen_manifest_payload_effective.json",
+            "manifest_path": "01-data/raw/tcga-brca/gdc/manifests/biospecimen/20260412T000556Z/biospecimen_supplement_manifest.tsv",
+            "manifest_validation": {
+              "row_count": 2205,
+              "columns": [
+                "id",
+                "filename",
+                "md5",
+                "size",
+                "state"
+              ]
+            },
+            "download_requested": true,
+            "download_completed": true,
+            "download_dir": "01-data/raw/tcga-brca/gdc/downloads/biospecimen/20260412T000556Z",
+            "download_log_path": "01-data/raw/tcga-brca/gdc/logs/biospecimen/20260412T000556Z/gdc_client_download.log",
+            "download_validation": {
+              "validated_downloaded_file_count": 2205
+            },
+            "gdc_client_result": {
+              "command": [
+                "C:/tools/gdc-client.exe",
+                "download",
+                "--manifest",
+                "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\manifests\\biospecimen\\20260412T000556Z\\biospecimen_supplement_manifest.tsv",
+                "--dir",
+                "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\downloads\\biospecimen\\20260412T000556Z",
+                "--log-file",
+                "D:\\Projects\\brcapath-rx\\01-data\\raw\\tcga-brca\\gdc\\logs\\biospecimen\\20260412T000556Z\\gdc_client_download.log"
+              ],
+              "return_code": 0,
+              "stdout_preview": "  0% [                                              ] ETA:  --:--:--   0.0 s/B\n100% [############################################] ETA:  00:00:00  14.3 KiB/s\n100% [############################################] Time:  0:00:01  12.8 KiB/s\n  0% [                                              ] ETA:  --:--:--   0.0 s/B\n100% [############################################] ETA:  00:00:00  69.8 KiB/s\n100% [############################################] Time:  0:00:01  64.3 KiB/s\n  0% [                    ",
+              "stderr_preview": "  0% [                                                                       ]\n100% [#######################################################################]\n100% [#######################################################################]\n  0% [                                                                       ]\n100% [#######################################################################]\n100% [#######################################################################]\n  0% [                    "
+            }
+          }
+        },
+        "validation": {
+          "passed": true,
+          "metadata": {
+            "row_count": 3388,
+            "counts_by_source_class": {
+              "clinical": 1183,
+              "biospecimen": 2205
+            },
+            "required_columns": [
+              "source_class",
+              "file_id",
+              "file_name",
+              "md5sum",
+              "file_size",
+              "access",
+              "state",
+              "data_category",
+              "data_type",
+              "data_format",
+              "case_ids",
+              "case_submitter_ids",
+              "project_ids",
+              "case_count"
+            ]
+          },
+          "manifests": {
+            "clinical": {
+              "row_count": 1183,
+              "columns": [
+                "id",
+                "filename",
+                "md5",
+                "size",
+                "state"
+              ]
+            },
+            "biospecimen": {
+              "row_count": 2205,
+              "columns": [
+                "id",
+                "filename",
+                "md5",
+                "size",
+                "state"
+              ]
+            }
+          },
+          "downloads": {
+            "clinical": {
+              "validated_downloaded_file_count": 1183
+            },
+            "biospecimen": {
+              "validated_downloaded_file_count": 2205
+            }
+          }
+        },
+        "latest_manifest": {
+          "updated_at_utc": "2026-04-12T00:39:13Z",
+          "run_id": "20260412T000556Z",
+          "gdc_data_release": "Data Release 45.0 - December 04, 2025",
+          "gdc_tag": "8.3.1",
+          "audit_run_directory": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z",
+          "metadata_tsv": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/tcga_brca_source_supplements_metadata.tsv",
+          "run_log_json": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/run_log.json",
+          "source_classes": {
+            "clinical": {
+              "manifest_path": "01-data/raw/tcga-brca/gdc/manifests/clinical/20260412T000556Z/clinical_supplement_manifest.tsv",
+              "download_dir": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z",
+              "download_log_path": "01-data/raw/tcga-brca/gdc/logs/clinical/20260412T000556Z/gdc_client_download.log",
+              "download_requested": true,
+              "download_completed": true
+            },
+            "biospecimen": {
+              "manifest_path": "01-data/raw/tcga-brca/gdc/manifests/biospecimen/20260412T000556Z/biospecimen_supplement_manifest.tsv",
+              "download_dir": "01-data/raw/tcga-brca/gdc/downloads/biospecimen/20260412T000556Z",
+              "download_log_path": "01-data/raw/tcga-brca/gdc/logs/biospecimen/20260412T000556Z/gdc_client_download.log",
+              "download_requested": true,
+              "download_completed": true
+            }
+          }
+        }
+      },
+      "tables": [
+        {
+          "table_name": "clinical_drug",
+          "source_file_id": "1e6b79ff-9787-4cbe-b19d-ebabb6b43589",
+          "source_filename": "nationwidechildrens.org_clinical_drug_brca.txt",
+          "source_path": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z/1e6b79ff-9787-4cbe-b19d-ebabb6b43589/nationwidechildrens.org_clinical_drug_brca.txt",
+          "output_filename": "clinical_drug.tsv",
+          "output_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_drug.tsv",
+          "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_drug.tsv",
+          "row_count": 2406,
+          "column_count": 28
+        },
+        {
+          "table_name": "clinical_follow_up_v1_5",
+          "source_file_id": "22f38342-3f1a-47e5-9025-c19719fa21d0",
+          "source_filename": "nationwidechildrens.org_clinical_follow_up_v1.5_brca.txt",
+          "source_path": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z/22f38342-3f1a-47e5-9025-c19719fa21d0/nationwidechildrens.org_clinical_follow_up_v1.5_brca.txt",
+          "output_filename": "clinical_follow_up_v1_5.tsv",
+          "output_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_follow_up_v1_5.tsv",
+          "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_follow_up_v1_5.tsv",
+          "row_count": 114,
+          "column_count": 63
+        },
+        {
+          "table_name": "clinical_follow_up_v2_1",
+          "source_file_id": "403b5cef-8173-47c7-b56a-cc94dcfbb2e3",
+          "source_filename": "nationwidechildrens.org_clinical_follow_up_v2.1_brca.txt",
+          "source_path": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z/403b5cef-8173-47c7-b56a-cc94dcfbb2e3/nationwidechildrens.org_clinical_follow_up_v2.1_brca.txt",
+          "output_filename": "clinical_follow_up_v2_1.tsv",
+          "output_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_follow_up_v2_1.tsv",
+          "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_follow_up_v2_1.tsv",
+          "row_count": 523,
+          "column_count": 45
+        },
+        {
+          "table_name": "clinical_follow_up_v4_0",
+          "source_file_id": "62d4515f-a30b-4b1a-b2dd-c8bf9476e803",
+          "source_filename": "nationwidechildrens.org_clinical_follow_up_v4.0_brca.txt",
+          "source_path": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z/62d4515f-a30b-4b1a-b2dd-c8bf9476e803/nationwidechildrens.org_clinical_follow_up_v4.0_brca.txt",
+          "output_filename": "clinical_follow_up_v4_0.tsv",
+          "output_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_follow_up_v4_0.tsv",
+          "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_follow_up_v4_0.tsv",
+          "row_count": 716,
+          "column_count": 13
+        },
+        {
+          "table_name": "clinical_follow_up_v4_0_nte",
+          "source_file_id": "a9baecf0-5549-4396-8805-a6d1681d11cd",
+          "source_filename": "nationwidechildrens.org_clinical_follow_up_v4.0_nte_brca.txt",
+          "source_path": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z/a9baecf0-5549-4396-8805-a6d1681d11cd/nationwidechildrens.org_clinical_follow_up_v4.0_nte_brca.txt",
+          "output_filename": "clinical_follow_up_v4_0_nte.tsv",
+          "output_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_follow_up_v4_0_nte.tsv",
+          "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_follow_up_v4_0_nte.tsv",
+          "row_count": 82,
+          "column_count": 35
+        },
+        {
+          "table_name": "clinical_nte",
+          "source_file_id": "a88c168e-4bba-4bd2-9c0c-77934444cc1c",
+          "source_filename": "nationwidechildrens.org_clinical_nte_brca.txt",
+          "source_path": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z/a88c168e-4bba-4bd2-9c0c-77934444cc1c/nationwidechildrens.org_clinical_nte_brca.txt",
+          "output_filename": "clinical_nte.tsv",
+          "output_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_nte.tsv",
+          "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_nte.tsv",
+          "row_count": 119,
+          "column_count": 34
+        },
+        {
+          "table_name": "clinical_omf_v4_0",
+          "source_file_id": "f434b393-9e32-4ca2-aa1a-3b0de36b5ffe",
+          "source_filename": "nationwidechildrens.org_clinical_omf_v4.0_brca.txt",
+          "source_path": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z/f434b393-9e32-4ca2-aa1a-3b0de36b5ffe/nationwidechildrens.org_clinical_omf_v4.0_brca.txt",
+          "output_filename": "clinical_omf_v4_0.tsv",
+          "output_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_omf_v4_0.tsv",
+          "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_omf_v4_0.tsv",
+          "row_count": 82,
+          "column_count": 30
+        },
+        {
+          "table_name": "clinical_patient",
+          "source_file_id": "8162d394-8b64-4da2-9f5b-d164c54b9608",
+          "source_filename": "nationwidechildrens.org_clinical_patient_brca.txt",
+          "source_path": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z/8162d394-8b64-4da2-9f5b-d164c54b9608/nationwidechildrens.org_clinical_patient_brca.txt",
+          "output_filename": "clinical_patient.tsv",
+          "output_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_patient.tsv",
+          "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_patient.tsv",
+          "row_count": 1097,
+          "column_count": 112
+        },
+        {
+          "table_name": "clinical_radiation",
+          "source_file_id": "0a40467f-9495-4c5b-b56e-3347a3ee0572",
+          "source_filename": "nationwidechildrens.org_clinical_radiation_brca.txt",
+          "source_path": "01-data/raw/tcga-brca/gdc/downloads/clinical/20260412T000556Z/0a40467f-9495-4c5b-b56e-3347a3ee0572/nationwidechildrens.org_clinical_radiation_brca.txt",
+          "output_filename": "clinical_radiation.tsv",
+          "output_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_radiation.tsv",
+          "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_radiation.tsv",
+          "row_count": 618,
+          "column_count": 18
+        }
+      ],
+      "latest_pointer": {
+        "updated_at_utc": "2026-04-12T01:09:32Z",
+        "parse_run_id": "20260412T010932Z",
+        "source_run_id": "20260412T000556Z",
+        "processed_run_directory": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z",
+        "audit_run_directory": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z",
+        "table_manifest_tsv": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/clinical_biotab_table_manifest.tsv",
+        "run_log_json": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/run_log.json",
+        "source_supplement_latest_json": "01-data/audit/tcga-brca/source/tcga_brca_source_supplements_latest.json",
+        "source_metadata_tsv": "01-data/audit/tcga-brca/source/supplements/runs/20260412T000556Z/tcga_brca_source_supplements_metadata.tsv",
+        "parsed_table_count": 9
+      }
+    }
+  },
+  "tables": [
+    {
+      "table_name": "clinical_patient",
+      "source_filename": "nationwidechildrens.org_clinical_patient_brca.txt",
+      "parsed_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_patient.tsv",
+      "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_patient.tsv",
+      "row_count": 1097,
+      "column_count": 112,
+      "field_inventory_path": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_patient_field_inventory.tsv",
+      "field_inventory_row_count": 112,
+      "non_missing_any_field_count": 112,
+      "high_missingness_field_count": 0
+    },
+    {
+      "table_name": "clinical_drug",
+      "source_filename": "nationwidechildrens.org_clinical_drug_brca.txt",
+      "parsed_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_drug.tsv",
+      "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_drug.tsv",
+      "row_count": 2406,
+      "column_count": 28,
+      "field_inventory_path": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_drug_field_inventory.tsv",
+      "field_inventory_row_count": 28,
+      "non_missing_any_field_count": 28,
+      "high_missingness_field_count": 0
+    },
+    {
+      "table_name": "clinical_radiation",
+      "source_filename": "nationwidechildrens.org_clinical_radiation_brca.txt",
+      "parsed_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_radiation.tsv",
+      "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_radiation.tsv",
+      "row_count": 618,
+      "column_count": 18,
+      "field_inventory_path": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_radiation_field_inventory.tsv",
+      "field_inventory_row_count": 18,
+      "non_missing_any_field_count": 18,
+      "high_missingness_field_count": 0
+    },
+    {
+      "table_name": "clinical_follow_up_v4_0",
+      "source_filename": "nationwidechildrens.org_clinical_follow_up_v4.0_brca.txt",
+      "parsed_path": "01-data/processed/tcga-brca/clinical/biotab_runs/20260412T010932Z/clinical_follow_up_v4_0.tsv",
+      "schema_path": "01-data/audit/tcga-brca/variables/clinical_biotab_runs/20260412T010932Z/schema_clinical_follow_up_v4_0.tsv",
+      "row_count": 716,
+      "column_count": 13,
+      "field_inventory_path": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_follow_up_v4_0_field_inventory.tsv",
+      "field_inventory_row_count": 13,
+      "non_missing_any_field_count": 13,
+      "high_missingness_field_count": 0
+    }
+  ],
+  "latest_pointer": {
+    "updated_at_utc": "2026-04-12T02:36:35Z",
+    "audit_run_id": "20260412T023635Z",
+    "parse_run_id": "20260412T010932Z",
+    "source_run_id": "20260412T000556Z",
+    "audit_run_directory": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z",
+    "clinical_core_field_audit_tsv": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_core_field_audit.tsv",
+    "clinical_core_field_group_summary_tsv": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_core_field_group_summary.tsv",
+    "clinical_core_missingness_summary_tsv": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_core_missingness_summary.tsv",
+    "run_log_json": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/run_log.json",
+    "clinical_biotab_latest_json": "01-data/audit/tcga-brca/variables/tcga_brca_clinical_biotabs_latest.json",
+    "field_inventory_tsvs": {
+      "clinical_patient": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_patient_field_inventory.tsv",
+      "clinical_drug": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_drug_field_inventory.tsv",
+      "clinical_radiation": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_radiation_field_inventory.tsv",
+      "clinical_follow_up_v4_0": "01-data/audit/tcga-brca/variables/clinical_core_field_audit_runs/20260412T023635Z/clinical_follow_up_v4_0_field_inventory.tsv"
+    },
+    "core_table_count": 4,
+    "field_count": 171
+  }
+}

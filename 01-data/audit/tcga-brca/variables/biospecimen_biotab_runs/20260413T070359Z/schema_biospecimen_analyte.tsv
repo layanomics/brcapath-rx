@@ -1,0 +1,18 @@
+parse_run_id	table_name	column_position	raw_column_name	alternate_column_name	cde_id_raw
+20260413T070359Z	biospecimen_analyte	1	bcr_patient_uuid		
+20260413T070359Z	biospecimen_analyte	2	bcr_sample_barcode		
+20260413T070359Z	biospecimen_analyte	3	bcr_analyte_barcode		
+20260413T070359Z	biospecimen_analyte	4	bcr_analyte_uuid		
+20260413T070359Z	biospecimen_analyte	5	a260_a280_ratio		
+20260413T070359Z	biospecimen_analyte	6	analyte_type		
+20260413T070359Z	biospecimen_analyte	7	analyte_type_id		
+20260413T070359Z	biospecimen_analyte	8	concentration		
+20260413T070359Z	biospecimen_analyte	9	gel_image_file		
+20260413T070359Z	biospecimen_analyte	10	is_derived_from_ffpe		CDE_ID:4170571
+20260413T070359Z	biospecimen_analyte	11	normal_tumor_genotype_match		
+20260413T070359Z	biospecimen_analyte	12	pcr_amplification_successful		
+20260413T070359Z	biospecimen_analyte	13	ratio_28s_18s		
+20260413T070359Z	biospecimen_analyte	14	rinvalue		
+20260413T070359Z	biospecimen_analyte	15	spectrophotometer_method		
+20260413T070359Z	biospecimen_analyte	16	subportion_sequence		
+20260413T070359Z	biospecimen_analyte	17	well_number		

@@ -1,0 +1,7 @@
+parse_run_id	table_name	column_position	raw_column_name	alternate_column_name	cde_id_raw
+20260413T070359Z	biospecimen_protocol	1	bcr_patient_uuid		
+20260413T070359Z	biospecimen_protocol	2	bcr_sample_barcode		
+20260413T070359Z	biospecimen_protocol	3	bcr_analyte_barcode		
+20260413T070359Z	biospecimen_protocol	4	experimental_protocol_type		
+20260413T070359Z	biospecimen_protocol	5	protocol_file_name		
+20260413T070359Z	biospecimen_protocol	6	protocol_name		

@@ -1,0 +1,22 @@
+ambiguity_resolution_run_id	summary_section	summary_metric	summary_value	notes
+20260413T085636Z	inputs	blueprint_run_id	20260413T081835Z	Blueprint run used as the direct ambiguity source.
+20260413T085636Z	inputs	blueprint_ambiguity_count	11	Count of ambiguity rows loaded from the current cohort blueprint.
+20260413T085636Z	inventory	ambiguity_resolution_inventory_count	11	Count of ambiguity rows written into the ambiguity-resolution inventory.
+20260413T085636Z	inventory	blocking_now_count	2	Inventory count by minimal-build blocker class.
+20260413T085636Z	inventory	review_before_build_count	7	Inventory count by minimal-build blocker class.
+20260413T085636Z	inventory	non_blocking_for_minimal_build_count	2	Inventory count by minimal-build blocker class.
+20260413T085636Z	inventory	enough_for_provisional_rule_count	8	Inventory count by evidence sufficiency status.
+20260413T085636Z	inventory	partial_needs_manual_review_count	1	Inventory count by evidence sufficiency status.
+20260413T085636Z	inventory	insufficient_needs_new_evidence_count	2	Inventory count by evidence sufficiency status.
+20260413T085636Z	actions	provisional_rule_count	5	Inventory count by recommended action type.
+20260413T085636Z	actions	manual_review_count	1	Inventory count by recommended action type.
+20260413T085636Z	actions	later_xml_validation_count	2	Inventory count by recommended action type.
+20260413T085636Z	actions	defer_from_minimal_build_count	3	Inventory count by recommended action type.
+20260413T085636Z	actions	safe_to_ignore_for_now_count	0	Inventory count by recommended action type.
+20260413T085636Z	actions	action_count	6	Number of grouped ambiguity-resolution actions.
+20260413T085636Z	actions	actions_needed_before_minimal_build_count	5	Number of grouped actions currently flagged as needed before a minimal build.
+20260413T085636Z	readiness	minimal_build_readiness_signal	not_ready_pending_manual_review	At least one action needed before a minimal build still requires manual review.
+20260413T085636Z	readiness	top_priority_action_id	AR01	Highest-priority grouped action after applying the deterministic ranking rules.
+20260413T085636Z	upstream_runs	clinical_shortlist_run_id	20260412T033602Z	Current clinical shortlist run used by this ambiguity-resolution layer.
+20260413T085636Z	upstream_runs	endpoint_crosswalk_run_id	20260412T042036Z	Current endpoint crosswalk run used by this ambiguity-resolution layer.
+20260413T085636Z	upstream_runs	biospecimen_crosswalk_run_id	20260413T073640Z	Current biospecimen crosswalk run used by this ambiguity-resolution layer.

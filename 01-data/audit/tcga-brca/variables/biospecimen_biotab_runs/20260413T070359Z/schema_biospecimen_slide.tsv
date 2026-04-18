@@ -1,0 +1,16 @@
+parse_run_id	table_name	column_position	raw_column_name	alternate_column_name	cde_id_raw
+20260413T070359Z	biospecimen_slide	1	bcr_patient_uuid		
+20260413T070359Z	biospecimen_slide	2	bcr_sample_barcode		
+20260413T070359Z	biospecimen_slide	3	bcr_slide_barcode		
+20260413T070359Z	biospecimen_slide	4	bcr_slide_uuid		
+20260413T070359Z	biospecimen_slide	5	image_file_name		
+20260413T070359Z	biospecimen_slide	6	is_derived_from_ffpe		CDE_ID:4170571
+20260413T070359Z	biospecimen_slide	7	percent_lymphocyte_infiltration		
+20260413T070359Z	biospecimen_slide	8	percent_monocyte_infiltration		
+20260413T070359Z	biospecimen_slide	9	percent_necrosis		CDE_ID:2841237
+20260413T070359Z	biospecimen_slide	10	percent_neutrophil_infiltration		
+20260413T070359Z	biospecimen_slide	11	percent_normal_cells		
+20260413T070359Z	biospecimen_slide	12	percent_stromal_cells		
+20260413T070359Z	biospecimen_slide	13	percent_tumor_cells		
+20260413T070359Z	biospecimen_slide	14	percent_tumor_nuclei		CDE_ID:2841225
+20260413T070359Z	biospecimen_slide	15	section_location		

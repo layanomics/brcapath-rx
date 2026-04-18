@@ -1,0 +1,13 @@
+parse_run_id	table_name	column_position	raw_column_name	alternate_column_name	cde_id_raw
+20260413T070359Z	biospecimen_shipment_portion	1	bcr_patient_uuid		
+20260413T070359Z	biospecimen_shipment_portion	2	bcr_sample_barcode		
+20260413T070359Z	biospecimen_shipment_portion	3	shipment_portion_bcr_aliquot_barcode		
+20260413T070359Z	biospecimen_shipment_portion	4	bcr_shipment_portion_uuid		
+20260413T070359Z	biospecimen_shipment_portion	5	center_id		
+20260413T070359Z	biospecimen_shipment_portion	6	is_ffpe		CDE_ID:4170557
+20260413T070359Z	biospecimen_shipment_portion	7	plate_id		
+20260413T070359Z	biospecimen_shipment_portion	8	portion_number		
+20260413T070359Z	biospecimen_shipment_portion	9	portion_sequence		
+20260413T070359Z	biospecimen_shipment_portion	10	shipment_portion_day_of_shipment		
+20260413T070359Z	biospecimen_shipment_portion	11	shipment_portion_month_of_shipment		
+20260413T070359Z	biospecimen_shipment_portion	12	shipment_portion_year_of_shipment		

@@ -1,0 +1,23 @@
+{
+  "updated_at_utc": "2026-04-13T08:56:36Z",
+  "ambiguity_resolution_run_id": "20260413T085636Z",
+  "blueprint_run_id": "20260413T081835Z",
+  "shortlist_run_id": "20260412T033602Z",
+  "core_audit_run_id": "20260412T023839Z",
+  "clinical_parse_run_id": "20260412T010932Z",
+  "endpoint_crosswalk_run_id": "20260412T042036Z",
+  "biospecimen_crosswalk_run_id": "20260413T073640Z",
+  "biospecimen_parse_run_id": "20260413T070359Z",
+  "clinical_source_run_id": "20260412T000556Z",
+  "biospecimen_source_run_id": "20260412T000556Z",
+  "ambiguity_resolution_run_directory": "01-data/audit/tcga-brca/cohort/ambiguity_resolution_runs/20260413T085636Z",
+  "ambiguity_resolution_inventory_tsv": "01-data/audit/tcga-brca/cohort/ambiguity_resolution_runs/20260413T085636Z/ambiguity_resolution_inventory.tsv",
+  "ambiguity_resolution_priority_tsv": "01-data/audit/tcga-brca/cohort/ambiguity_resolution_runs/20260413T085636Z/ambiguity_resolution_priority.tsv",
+  "ambiguity_resolution_actions_tsv": "01-data/audit/tcga-brca/cohort/ambiguity_resolution_runs/20260413T085636Z/ambiguity_resolution_actions.tsv",
+  "ambiguity_resolution_summary_tsv": "01-data/audit/tcga-brca/cohort/ambiguity_resolution_runs/20260413T085636Z/ambiguity_resolution_summary.tsv",
+  "run_log_json": "01-data/audit/tcga-brca/cohort/ambiguity_resolution_runs/20260413T085636Z/run_log.json",
+  "cohort_blueprint_latest_json": "01-data/audit/tcga-brca/cohort/tcga_brca_cohort_blueprint_latest.json",
+  "clinical_shortlist_latest_json": "01-data/audit/tcga-brca/variables/tcga_brca_clinical_shortlist_latest.json",
+  "endpoint_crosswalk_latest_json": "01-data/audit/tcga-brca/variables/tcga_brca_endpoint_crosswalk_latest.json",
+  "biospecimen_crosswalk_latest_json": "01-data/audit/tcga-brca/variables/tcga_brca_biospecimen_identifier_crosswalk_latest.json"
+}

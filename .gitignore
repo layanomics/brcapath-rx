@@ -37,3 +37,14 @@ __pycache__/
 
 # Codex planning scratch file
 PLAN.md
+
+
+# local planning scratch
+PLAN*.md
+
+# generated notebooks
+*.executed.ipynb
+
+# frontend dependencies/build artifacts
+demos/iptw-confounding-demo/node_modules/
+demos/iptw-confounding-demo/dist/

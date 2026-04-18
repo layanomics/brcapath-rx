@@ -1,0 +1,13 @@
+{
+  "updated_at_utc": "2026-04-13T07:36:40Z",
+  "crosswalk_run_id": "20260413T073640Z",
+  "parse_run_id": "20260413T070359Z",
+  "source_run_id": "20260412T000556Z",
+  "crosswalk_run_directory": "01-data/audit/tcga-brca/variables/biospecimen_identifier_crosswalk_runs/20260413T073640Z",
+  "biospecimen_identifier_inventory_tsv": "01-data/audit/tcga-brca/variables/biospecimen_identifier_crosswalk_runs/20260413T073640Z/biospecimen_identifier_inventory.tsv",
+  "biospecimen_identifier_crosswalk_tsv": "01-data/audit/tcga-brca/variables/biospecimen_identifier_crosswalk_runs/20260413T073640Z/biospecimen_identifier_crosswalk.tsv",
+  "biospecimen_identifier_crosswalk_summary_tsv": "01-data/audit/tcga-brca/variables/biospecimen_identifier_crosswalk_runs/20260413T073640Z/biospecimen_identifier_crosswalk_summary.tsv",
+  "run_log_json": "01-data/audit/tcga-brca/variables/biospecimen_identifier_crosswalk_runs/20260413T073640Z/run_log.json",
+  "biospecimen_biotab_latest_json": "01-data/audit/tcga-brca/variables/tcga_brca_biospecimen_biotabs_latest.json",
+  "field_count": 47
+}

@@ -1,0 +1,37 @@
+blueprint_run_id	summary_section	summary_metric	summary_value	notes
+20260413T081835Z	design	proposed_unit_of_analysis	patient/case	The first baseline blueprint keeps the analysis unit at patient/case level.
+20260413T081835Z	design	proposed_biospecimen_anchor	sample	biospecimen_sample is the required specimen anchor beneath the case unit.
+20260413T081835Z	design	endpoint_policy	candidate_join_preparation_only	Endpoint rows remain preparatory only; the final endpoint is not frozen here.
+20260413T081835Z	design	treatment_policy	proxy_only_optional	Treatment rows remain optional proxy evidence only.
+20260413T081835Z	field_counts	required_field_count	32	Required first-baseline fields across clinical and biospecimen sample anchor layers.
+20260413T081835Z	field_counts	optional_field_count	37	Optional attach-later first-study fields.
+20260413T081835Z	field_counts	deferred_field_count	43	Deferred later-expansion or unresolved fields.
+20260413T081835Z	field_counts	required_for_first_baseline_clinical_count	29	required_for_first_baseline rows carried from the clinical layer.
+20260413T081835Z	field_counts	required_for_first_baseline_endpoint_count	0	required_for_first_baseline rows carried from the endpoint layer.
+20260413T081835Z	field_counts	required_for_first_baseline_biospecimen_count	3	required_for_first_baseline rows carried from the biospecimen layer.
+20260413T081835Z	field_counts	optional_for_first_baseline_clinical_count	23	optional_for_first_baseline rows carried from the clinical layer.
+20260413T081835Z	field_counts	optional_for_first_baseline_endpoint_count	9	optional_for_first_baseline rows carried from the endpoint layer.
+20260413T081835Z	field_counts	optional_for_first_baseline_biospecimen_count	5	optional_for_first_baseline rows carried from the biospecimen layer.
+20260413T081835Z	field_counts	deferred_for_later_expansion_clinical_count	0	deferred_for_later_expansion rows carried from the clinical layer.
+20260413T081835Z	field_counts	deferred_for_later_expansion_endpoint_count	4	deferred_for_later_expansion rows carried from the endpoint layer.
+20260413T081835Z	field_counts	deferred_for_later_expansion_biospecimen_count	39	deferred_for_later_expansion rows carried from the biospecimen layer.
+20260413T081835Z	join_path	join_step_count	13	Total fixed join/path blueprint steps.
+20260413T081835Z	join_path	strong_current_evidence_count	3	Join steps marked as strong_current_evidence.
+20260413T081835Z	join_path	workable_but_needs_review_count	7	Join steps marked as workable_but_needs_review.
+20260413T081835Z	join_path	deferred_count	3	Join steps marked as deferred.
+20260413T081835Z	join_path	link_now_count	2	Join steps marked as link_now.
+20260413T081835Z	join_path	link_later_count	9	Join steps marked as link_later.
+20260413T081835Z	join_path	prepare_only_count	2	Join steps marked as prepare_only.
+20260413T081835Z	ambiguities	ambiguity_count	11	Total unresolved issues recorded by the blueprint.
+20260413T081835Z	ambiguities	blocking_ambiguity_count	8	Ambiguities currently marked as blocking final cohort construction.
+20260413T081835Z	upstream_runs	clinical_shortlist_run_id	20260412T033602Z	Current clinical shortlist run used by the blueprint.
+20260413T081835Z	upstream_runs	clinical_core_audit_run_id	20260412T023839Z	Clinical core audit run referenced by the current shortlist.
+20260413T081835Z	upstream_runs	clinical_parse_run_id	20260412T010932Z	Clinical biotab parse run behind the current shortlist and endpoint layers.
+20260413T081835Z	upstream_runs	endpoint_crosswalk_run_id	20260412T042036Z	Endpoint crosswalk run used by the blueprint.
+20260413T081835Z	upstream_runs	biospecimen_crosswalk_run_id	20260413T073640Z	Biospecimen identifier crosswalk run used by the blueprint.
+20260413T081835Z	upstream_runs	biospecimen_parse_run_id	20260413T070359Z	Biospecimen biotab parse run behind the biospecimen crosswalk.
+20260413T081835Z	upstream_runs	shared_source_run_id_count	1	Count of unique source_run_id values across the clinical and biospecimen upstream layers.
+20260413T081835Z	count_signals	clinical_patient_case_count	1097	clinical_patient row count from the saved clinical biotab parse run log.
+20260413T081835Z	count_signals	clinical_source_case_submitter_coverage	1098	Unique clinical source case coverage computed from 1183 source-metadata rows.
+20260413T081835Z	count_signals	biospecimen_patient_uuid_distinct_count	1101	Distinct patient UUID count from the biospecimen sample anchor row.
+20260413T081835Z	count_signals	biospecimen_sample_anchor_count	2302	Sample-anchor row count from the biospecimen crosswalk.

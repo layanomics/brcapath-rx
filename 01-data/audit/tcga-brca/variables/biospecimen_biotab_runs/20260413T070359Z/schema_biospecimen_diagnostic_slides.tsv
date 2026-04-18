@@ -1,0 +1,5 @@
+parse_run_id	table_name	column_position	raw_column_name	alternate_column_name	cde_id_raw
+20260413T070359Z	biospecimen_diagnostic_slides	1	bcr_patient_uuid		
+20260413T070359Z	biospecimen_diagnostic_slides	2	bcr_patient_barcode		CDE_ID:2673794
+20260413T070359Z	biospecimen_diagnostic_slides	3	bcr_sample_barcode		
+20260413T070359Z	biospecimen_diagnostic_slides	4	ffpe_slide_uuid		

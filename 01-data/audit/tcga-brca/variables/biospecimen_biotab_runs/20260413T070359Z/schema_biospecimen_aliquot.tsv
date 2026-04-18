@@ -1,0 +1,16 @@
+parse_run_id	table_name	column_position	raw_column_name	alternate_column_name	cde_id_raw
+20260413T070359Z	biospecimen_aliquot	1	bcr_patient_uuid		
+20260413T070359Z	biospecimen_aliquot	2	bcr_sample_barcode		
+20260413T070359Z	biospecimen_aliquot	3	bcr_aliquot_barcode		
+20260413T070359Z	biospecimen_aliquot	4	bcr_aliquot_uuid		
+20260413T070359Z	biospecimen_aliquot	5	biospecimen_barcode_bottom		
+20260413T070359Z	biospecimen_aliquot	6	center_id		
+20260413T070359Z	biospecimen_aliquot	7	concentration		
+20260413T070359Z	biospecimen_aliquot	8	date_of_shipment		
+20260413T070359Z	biospecimen_aliquot	9	is_derived_from_ffpe		CDE_ID:4170571
+20260413T070359Z	biospecimen_aliquot	10	plate_column		
+20260413T070359Z	biospecimen_aliquot	11	plate_id		
+20260413T070359Z	biospecimen_aliquot	12	plate_row		
+20260413T070359Z	biospecimen_aliquot	13	quantity		
+20260413T070359Z	biospecimen_aliquot	14	source_center		
+20260413T070359Z	biospecimen_aliquot	15	volume		

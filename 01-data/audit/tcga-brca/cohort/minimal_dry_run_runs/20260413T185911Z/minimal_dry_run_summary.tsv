@@ -1,0 +1,29 @@
+dry_run_build_id	summary_section	summary_metric	summary_value	notes
+20260413T185911Z	design	proposed_unit_of_analysis	patient/case	The minimal dry-run cohort preserves patient/case as the row unit.
+20260413T185911Z	design	provisional_patient_universe	clinical_patient	clinical_patient remains the provisional patient universe for this dry-run build.
+20260413T185911Z	design	biospecimen_policy	sample_anchor_only	biospecimen is represented only through grouped biospecimen_sample anchor evidence.
+20260413T185911Z	design	endpoint_policy	candidate_columns_side_by_side_only	Patient and follow-up endpoint-like fields remain side-by-side provenance-bearing candidates only.
+20260413T185911Z	design	treatment_policy	excluded_from_row_build	One-to-many treatment-detail rows remain excluded from the patient-level dry-run row build.
+20260413T185911Z	inputs	blueprint_run_id	20260413T081835Z	Current cohort blueprint run used as the dry-run field and join source.
+20260413T185911Z	inputs	ambiguity_resolution_run_id	20260413T085636Z	Current ambiguity-resolution run used as the dry-run containment source.
+20260413T185911Z	field_selection	baseline_field_count	27	Baseline fields selected from cohort_blueprint_required_fields where table_name=clinical_patient, excluding duplicated patient IDs.
+20260413T185911Z	field_selection	patient_endpoint_candidate_field_count	4	Patient-table endpoint candidate fields carried as explicit prefixed columns.
+20260413T185911Z	field_selection	followup_endpoint_candidate_field_count	5	Follow-up endpoint candidate fields carried as grouped JSON arrays.
+20260413T185911Z	row_counts	proposed_patient_universe_row_count	1097	clinical_patient source-row count used as the provisional patient universe.
+20260413T185911Z	row_counts	final_dry_run_row_count	1097	Final dry-run cohort row count.
+20260413T185911Z	join_results	matched_followup_candidate_count	619	Clinical patient rows with at least one grouped follow-up evidence row.
+20260413T185911Z	join_results	matched_followup_row_count	716	Follow-up source rows grouped into matched patient-level evidence.
+20260413T185911Z	join_results	matched_biospecimen_sample_anchor_count	1097	Clinical patient rows with at least one grouped biospecimen_sample evidence row.
+20260413T185911Z	join_results	matched_biospecimen_sample_row_count	2293	biospecimen_sample source rows grouped into matched patient-level evidence.
+20260413T185911Z	identifier_signals	rows_with_both_patient_barcode_and_uuid	1097	Clinical patient rows where both patient identifier forms are present.
+20260413T185911Z	identifier_signals	rows_with_only_one_patient_identifier	0	Clinical patient rows with only one patient identifier form present.
+20260413T185911Z	ambiguity	carried_global_ambiguity_note_count	6	Global ambiguity-note flags written into every dry-run cohort row.
+20260413T185911Z	ambiguity	upstream_blueprint_ambiguity_count	11	Current blueprint ambiguity count retained as context for this dry run.
+20260413T185911Z	ambiguity	upstream_ambiguity_readiness_signal	not_ready_pending_manual_review	The upstream ambiguity-resolution layer remains more conservative than this contained dry-run execution.
+20260413T185911Z	mismatch_signals	clinical_patient_vs_source_vs_biospecimen_patient_counts	1097 / 1098 / 1101	This dry run preserves the current count mismatch as an explicit audit note rather than resolving it.
+20260413T185911Z	mismatch_signals	extra_source_case_id_count	1	Case submitter IDs present in source metadata but not in clinical_patient.
+20260413T185911Z	mismatch_signals	extra_biospecimen_patient_uuid_count	4	biospecimen_sample patient UUIDs absent from clinical_patient.
+20260413T185911Z	mismatch_signals	extra_biospecimen_sample_row_count	9	biospecimen_sample rows absent from the clinical_patient provisional patient universe.
+20260413T185911Z	readiness	dry_run_readiness_interpretation	sufficient_for_join_test_not_final_freeze	The saved evidence is sufficient to execute and audit a minimal dry-run join test, but unresolved mismatch and endpoint ambiguities still block any final cohort freeze.
+20260413T185911Z	mismatch_signals	extra_source_case_ids_json	"[""TCGA-BH-A0B2""]"	Source-only case submitter IDs carried forward as explicit audit notes.
+20260413T185911Z	mismatch_signals	extra_biospecimen_patient_uuids_json	"[""826d8224-55fe-48c7-a5fe-ad81ac1ebba3"", ""e4321d99-ed3b-4fc8-b016-2ff47d93a064"", ""51d991f6-d998-420e-9357-48736c9ea0c1"", ""57a1604c-60b7-4b30-a75e-f70939532c5c""]"	biospecimen-only patient UUIDs carried forward as explicit audit notes.

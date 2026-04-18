@@ -1,0 +1,7 @@
+ambiguity_resolution_run_id	priority_rank	action_id	action_title	blocker_class	resolution_priority	recommended_action_type	linked_ambiguity_count	linked_high_severity_count	linked_ambiguity_categories_json	needed_before_minimal_build
+20260413T085636Z	1	AR01	Define provisional patient/case join rule	blocking_now	high	provisional_rule	1	1	"[""clinical_vs_biospecimen_patient_identifiers""]"	True
+20260413T085636Z	2	AR02	Document case-count discrepancy and containment rule	blocking_now	high	manual_review	1	1	"[""case_count_mismatch""]"	True
+20260413T085636Z	3	AR03	Define provisional endpoint source-table coexistence rule	review_before_build	medium	provisional_rule	4	4	"[""endpoint_overlap_patient_vs_followup""]"	True
+20260413T085636Z	4	AR04	Exclude sparse death/progression timing fields from minimal build	review_before_build	medium	defer_from_minimal_build	2	2	"[""all_missing_progression_timing"", ""sparse_endpoint_timing""]"	True
+20260413T085636Z	5	AR05	Exclude one-to-many treatment-detail fields from minimal build	review_before_build	medium	defer_from_minimal_build	1	0	"[""treatment_table_multiplicity""]"	True
+20260413T085636Z	6	AR06	Defer analyte child-layer expansion pending later validation	non_blocking_for_minimal_build	low	later_xml_validation	2	0	"[""missing_direct_child_link""]"	False
