@@ -1239,10 +1239,10 @@
         wireControls();
         populateControls(); // also calls renderInteractive()
 
-        el("loading").hidden = true;
+        el("loading").style.display = "none";
         el("app-shell").classList.remove("hidden");
       } catch (err) {
-        el("loading").hidden = true;
+        el("loading").style.display = "none";
         const errBox = el("load-error");
         errBox.classList.remove("hidden");
         console.error(err); el("error-msg").textContent = err?.stack || err?.message || String(err);
