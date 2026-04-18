@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "baseline_model_input_v1_run_id": "20260414T013050Z",
+  "started_at_utc": "2026-04-14T01:30:50Z",
+  "failed_at_utc": "2026-04-14T01:30:50Z",
+  "error": "Upstream missing_like_fraction did not match observed fraction for ajcc_pathologic_tumor_stage.",
+  "workflow": "tcga_brca_baseline_model_input_v1"
+}

@@ -1,0 +1,33 @@
+baseline_profile_v1_run_id	summary_section	summary_metric	summary_value	notes
+20260414T000119Z	design	baseline_profile_v1_status	descriptive_baseline_profile_v1	This workflow is a descriptive baseline profiling and candidate-field selection layer only.
+20260414T000119Z	design	profiling_source_table	baseline_analysis_v1	The profile starts only from the saved baseline_analysis_v1 TSV on disk.
+20260414T000119Z	design	candidate_selection_profile	balanced	Direct candidate threshold: missing<=0.20, dominant<=0.95, distinct>=2; review threshold extends to missing<=0.50 for varying baseline clinical fields.
+20260414T000119Z	design	proposed_unit_of_analysis	patient/case	The profile preserves one row per patient/case from baseline_analysis_v1.
+20260414T000119Z	design	endpoint_policy	review_only_not_frozen	Endpoint candidates remain review-only and are not collapsed into a final endpoint.
+20260414T000119Z	design	treatment_policy	excluded	Treatment detail remains excluded from this profiling layer.
+20260414T000119Z	inputs	baseline_analysis_v1_run_id	20260413T213900Z	Baseline-analysis-prep run profiled by this workflow.
+20260414T000119Z	inputs	cohort_v1_build_id	20260413T202134Z	Source minimal cohort v1 build carried forward into baseline_analysis_v1.
+20260414T000119Z	inputs	ambiguity_resolution_run_id	20260413T085636Z	Current ambiguity-resolution run aligned to the profile inputs.
+20260414T000119Z	inputs	shortlist_run_id	20260412T033602Z	Current clinical shortlist run aligned to the profile inputs.
+20260414T000119Z	row_counts	input_baseline_analysis_v1_row_count	1097	Row count read directly from baseline_analysis_v1.tsv.
+20260414T000119Z	row_counts	final_row_count	1097	Final row count represented in the baseline profile outputs.
+20260414T000119Z	field_selection	retained_field_count_total	54	Total retained fields profiled from baseline_analysis_v1.
+20260414T000119Z	field_selection	retained_audit_id_field_count	8	Retained audit/id fields carried from baseline_analysis_v1.
+20260414T000119Z	field_selection	retained_baseline_clinical_field_count	27	Retained baseline clinical fields carried from baseline_analysis_v1.
+20260414T000119Z	field_selection	retained_followup_join_evidence_field_count	2	Retained follow-up join-evidence fields carried from baseline_analysis_v1.
+20260414T000119Z	field_selection	retained_endpoint_candidate_field_count	9	Retained endpoint candidate fields carried side by side from baseline_analysis_v1.
+20260414T000119Z	field_selection	retained_biospecimen_sample_anchor_evidence_field_count	3	Retained biospecimen sample-anchor evidence fields carried from baseline_analysis_v1.
+20260414T000119Z	field_selection	retained_derived_prep_flag_count	5	Retained derived prep flags carried from baseline_analysis_v1.
+20260414T000119Z	candidate_selection	candidate_field_count	23	Count of retained fields suggested as direct first-pass baseline candidates.
+20260414T000119Z	candidate_selection	review_needed_field_count	18	Count of retained fields kept for manual review before first-pass baseline prep.
+20260414T000119Z	candidate_selection	excluded_for_now_field_count	13	Count of retained fields excluded for now from first-pass baseline prep.
+20260414T000119Z	candidate_selection	high_missingness_field_count	1	Count of retained fields with missing_like_fraction > 0.50.
+20260414T000119Z	candidate_selection	near_constant_field_count	9	Count of retained fields with dominant_value_fraction > 0.95.
+20260414T000119Z	candidate_selection	value_summary_field_count	27	Count of scalar baseline clinical fields summarized in the value-summary output.
+20260414T000119Z	coverage	followup_evidence_coverage_count	619	Rows where row_has_followup_match == yes.
+20260414T000119Z	coverage	biospecimen_sample_evidence_coverage_count	1097	Rows where row_has_biospecimen_sample_match == yes.
+20260414T000119Z	readiness	readiness_for_descriptive_reporting	ready	The saved field summaries and missingness outputs are suitable for descriptive review.
+20260414T000119Z	readiness	readiness_for_baseline_modeling_prep	ready_for_first_pass_feature_selection_only	The saved outputs are suitable for first-pass baseline feature selection only while endpoint and treatment constraints remain explicit.
+20260414T000119Z	readiness	endpoint_freeze_status	blocked	Endpoint freeze remains blocked; endpoint candidates stay out of first-pass baseline prep.
+20260414T000119Z	readiness	treatment_inclusion_status	excluded	Treatment detail remains excluded from this profiling workflow.
+20260414T000119Z	readiness	overall_readiness_interpretation	suitable_for_descriptive_reporting_and_first_pass_baseline_feature_selection_only	Use this layer for descriptive baseline reporting, missingness review, and candidate-field selection only; do not treat it as model training, final feature freeze, endpoint freeze, or treatment modeling.

@@ -1,0 +1,196 @@
+source_field_name	source_value	output_field_name	output_value	encoding_rule	reversible	manual_review_needed	notes
+age_at_diagnosis	[numeric_passthrough]	age_at_diagnosis	[same_as_source_value]	passthrough_numeric	true	false	Numeric passthrough only; no imputation or rescaling is applied in v1.
+ajcc_metastasis_pathologic_pm	M0	ajcc_metastasis_pathologic_pm__m0	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_metastasis_pathologic_pm	M1	ajcc_metastasis_pathologic_pm__m1	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_metastasis_pathologic_pm	MX	ajcc_metastasis_pathologic_pm__mx	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_metastasis_pathologic_pm	cM0 (i+)	ajcc_metastasis_pathologic_pm__cm0_i	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N0	ajcc_nodes_pathologic_pn__n0	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N0 (i+)	ajcc_nodes_pathologic_pn__n0_i	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N0 (i-)	ajcc_nodes_pathologic_pn__n0_i__dup2	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N0 (mol+)	ajcc_nodes_pathologic_pn__n0_mol	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N1	ajcc_nodes_pathologic_pn__n1	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N1a	ajcc_nodes_pathologic_pn__n1a	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N1b	ajcc_nodes_pathologic_pn__n1b	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N1c	ajcc_nodes_pathologic_pn__n1c	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N1mi	ajcc_nodes_pathologic_pn__n1mi	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N2	ajcc_nodes_pathologic_pn__n2	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N2a	ajcc_nodes_pathologic_pn__n2a	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N3	ajcc_nodes_pathologic_pn__n3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N3a	ajcc_nodes_pathologic_pn__n3a	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N3b	ajcc_nodes_pathologic_pn__n3b	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	N3c	ajcc_nodes_pathologic_pn__n3c	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_nodes_pathologic_pn	NX	ajcc_nodes_pathologic_pn__nx	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage I	ajcc_pathologic_tumor_stage__stage_i	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage IA	ajcc_pathologic_tumor_stage__stage_ia	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage IB	ajcc_pathologic_tumor_stage__stage_ib	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage II	ajcc_pathologic_tumor_stage__stage_ii	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage IIA	ajcc_pathologic_tumor_stage__stage_iia	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage IIB	ajcc_pathologic_tumor_stage__stage_iib	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage III	ajcc_pathologic_tumor_stage__stage_iii	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage IIIA	ajcc_pathologic_tumor_stage__stage_iiia	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage IIIB	ajcc_pathologic_tumor_stage__stage_iiib	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage IIIC	ajcc_pathologic_tumor_stage__stage_iiic	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage IV	ajcc_pathologic_tumor_stage__stage_iv	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	Stage X	ajcc_pathologic_tumor_stage__stage_x	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_pathologic_tumor_stage	[missing_like]	ajcc_pathologic_tumor_stage__missing	1	one_hot_encode	true	true	Missing-like source cells activate the dedicated missingness indicator.
+ajcc_staging_edition	3rd	ajcc_staging_edition__3rd	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_staging_edition	4th	ajcc_staging_edition__4th	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_staging_edition	5th	ajcc_staging_edition__5th	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_staging_edition	6th	ajcc_staging_edition__6th	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_staging_edition	7th	ajcc_staging_edition__7th	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_staging_edition	[missing_like]	ajcc_staging_edition__missing	1	one_hot_encode	true	true	Missing-like source cells activate the dedicated missingness indicator.
+ajcc_tumor_pathologic_pt	T1	ajcc_tumor_pathologic_pt__t1	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T1a	ajcc_tumor_pathologic_pt__t1a	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T1b	ajcc_tumor_pathologic_pt__t1b	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T1c	ajcc_tumor_pathologic_pt__t1c	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T2	ajcc_tumor_pathologic_pt__t2	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T2a	ajcc_tumor_pathologic_pt__t2a	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T2b	ajcc_tumor_pathologic_pt__t2b	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T3	ajcc_tumor_pathologic_pt__t3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T3a	ajcc_tumor_pathologic_pt__t3a	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T4	ajcc_tumor_pathologic_pt__t4	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T4b	ajcc_tumor_pathologic_pt__t4b	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	T4d	ajcc_tumor_pathologic_pt__t4d	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+ajcc_tumor_pathologic_pt	TX	ajcc_tumor_pathologic_pt__tx	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left	anatomic_neoplasm_subdivision__left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Lower Inner Quadrant	anatomic_neoplasm_subdivision__left_lower_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Lower Inner Quadrant|Left	anatomic_neoplasm_subdivision__left_lower_inner_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Lower Inner Quadrant|Left Lower Outer Quadrant	anatomic_neoplasm_subdivision__left_lower_inner_quadrant_left_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Lower Inner Quadrant|Left Lower Outer Quadrant|Left	anatomic_neoplasm_subdivision__left_lower_inner_quadrant_left_lower_outer_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Lower Outer Quadrant	anatomic_neoplasm_subdivision__left_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Lower Outer Quadrant|Left	anatomic_neoplasm_subdivision__left_lower_outer_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant	anatomic_neoplasm_subdivision__left_upper_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant|Left	anatomic_neoplasm_subdivision__left_upper_inner_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant|Left Lower Inner Quadrant	anatomic_neoplasm_subdivision__left_upper_inner_quadrant_left_lower_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant|Left Lower Inner Quadrant|Left	anatomic_neoplasm_subdivision__left_upper_inner_quadrant_left_lower_inner_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant|Left Lower Inner Quadrant|Left Lower Outer Quadrant|Left	anatomic_neoplasm_subdivision__left_upper_inner_quadrant_left_lower_inner_quadrant_left_lower_outer_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant|Left Upper Outer Quadrant	anatomic_neoplasm_subdivision__left_upper_inner_quadrant_left_upper_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant|Left Upper Outer Quadrant|Left	anatomic_neoplasm_subdivision__left_upper_inner_quadrant_left_upper_outer_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant|Left Upper Outer Quadrant|Left Lower Inner Quadrant|Left	anatomic_neoplasm_subdivision__left_upper_inner_quadrant_left_upper_outer_quadrant_left_lower_inner_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant|Left Upper Outer Quadrant|Left Lower Inner Quadrant|Left Lower Outer Quadrant	anatomic_neoplasm_subdivision__left_upper_inner_quadrant_left_upper_outer_quadrant_left_lower_inner_quadrant_left_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant|Left Upper Outer Quadrant|Left Lower Inner Quadrant|Left Lower Outer Quadrant|Left	anatomic_neoplasm_subdivision__left_upper_inner_quadrant_left_upper_outer_quadrant_left_lower_inner_quadrant_left_lower_outer_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Inner Quadrant|Left Upper Outer Quadrant|Left Lower Outer Quadrant|Left	anatomic_neoplasm_subdivision__left_upper_inner_quadrant_left_upper_outer_quadrant_left_lower_outer_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Outer Quadrant	anatomic_neoplasm_subdivision__left_upper_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Outer Quadrant|Left	anatomic_neoplasm_subdivision__left_upper_outer_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Outer Quadrant|Left Lower Inner Quadrant|Left Lower Outer Quadrant	anatomic_neoplasm_subdivision__left_upper_outer_quadrant_left_lower_inner_quadrant_left_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Outer Quadrant|Left Lower Outer Quadrant	anatomic_neoplasm_subdivision__left_upper_outer_quadrant_left_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left Upper Outer Quadrant|Left Lower Outer Quadrant|Left	anatomic_neoplasm_subdivision__left_upper_outer_quadrant_left_lower_outer_quadrant_left	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left|Left Lower Inner Quadrant	anatomic_neoplasm_subdivision__left_left_lower_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left|Left Upper Inner Quadrant	anatomic_neoplasm_subdivision__left_left_upper_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left|Left Upper Inner Quadrant|Left Lower Inner Quadrant	anatomic_neoplasm_subdivision__left_left_upper_inner_quadrant_left_lower_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left|Left Upper Inner Quadrant|Left Upper Outer Quadrant|Left Lower Inner Quadrant|Left Lower Outer Quadrant	anatomic_neoplasm_subdivision__left_left_upper_inner_quadrant_left_upper_outer_quadrant_left_lower_inner_quadrant_left_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left|Left Upper Outer Quadrant	anatomic_neoplasm_subdivision__left_left_upper_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Left|Left Upper Outer Quadrant|Left Lower Outer Quadrant	anatomic_neoplasm_subdivision__left_left_upper_outer_quadrant_left_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right	anatomic_neoplasm_subdivision__right	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Lower Inner Quadrant	anatomic_neoplasm_subdivision__right_lower_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Lower Inner Quadrant|Right	anatomic_neoplasm_subdivision__right_lower_inner_quadrant_right	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Lower Inner Quadrant|Right Lower Outer Quadrant	anatomic_neoplasm_subdivision__right_lower_inner_quadrant_right_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Lower Inner Quadrant|Right Lower Outer Quadrant|Right	anatomic_neoplasm_subdivision__right_lower_inner_quadrant_right_lower_outer_quadrant_right	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Lower Outer Quadrant	anatomic_neoplasm_subdivision__right_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Lower Outer Quadrant|Right	anatomic_neoplasm_subdivision__right_lower_outer_quadrant_right	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Inner Quadrant	anatomic_neoplasm_subdivision__right_upper_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Inner Quadrant|Right	anatomic_neoplasm_subdivision__right_upper_inner_quadrant_right	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Inner Quadrant|Right Lower Inner Quadrant	anatomic_neoplasm_subdivision__right_upper_inner_quadrant_right_lower_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Inner Quadrant|Right Lower Inner Quadrant|Right	anatomic_neoplasm_subdivision__right_upper_inner_quadrant_right_lower_inner_quadrant_right	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Inner Quadrant|Right Upper Outer Quadrant	anatomic_neoplasm_subdivision__right_upper_inner_quadrant_right_upper_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Inner Quadrant|Right Upper Outer Quadrant|Right	anatomic_neoplasm_subdivision__right_upper_inner_quadrant_right_upper_outer_quadrant_right	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Inner Quadrant|Right Upper Outer Quadrant|Right Lower Inner Quadrant|Right Lower Outer Quadrant|Right	anatomic_neoplasm_subdivision__right_upper_inner_quadrant_right_upper_outer_quadrant_right_lower_inner_quadrant_right_lower_outer_quadrant_right	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Outer Quadrant	anatomic_neoplasm_subdivision__right_upper_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Outer Quadrant|Right	anatomic_neoplasm_subdivision__right_upper_outer_quadrant_right	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Outer Quadrant|Right Lower Inner Quadrant|Right Lower Outer Quadrant	anatomic_neoplasm_subdivision__right_upper_outer_quadrant_right_lower_inner_quadrant_right_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Outer Quadrant|Right Lower Outer Quadrant	anatomic_neoplasm_subdivision__right_upper_outer_quadrant_right_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right Upper Outer Quadrant|Right Lower Outer Quadrant|Right	anatomic_neoplasm_subdivision__right_upper_outer_quadrant_right_lower_outer_quadrant_right	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right|Right Lower Inner Quadrant	anatomic_neoplasm_subdivision__right_right_lower_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right|Right Lower Outer Quadrant	anatomic_neoplasm_subdivision__right_right_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right|Right Upper Inner Quadrant	anatomic_neoplasm_subdivision__right_right_upper_inner_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right|Right Upper Inner Quadrant|Right Upper Outer Quadrant|Right Lower Inner Quadrant|Right Lower Outer Quadrant	anatomic_neoplasm_subdivision__right_right_upper_inner_quadrant_right_upper_outer_quadrant_right_lower_inner_quadrant_right_lower_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+anatomic_neoplasm_subdivision	Right|Right Upper Outer Quadrant	anatomic_neoplasm_subdivision__right_right_upper_outer_quadrant	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+axillary_staging_method	Axillary lymph node dissection alone	axillary_staging_method__axillary_lymph_node_dissection_alone	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+axillary_staging_method	No axillary staging	axillary_staging_method__no_axillary_staging	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+axillary_staging_method	Other (specify)	axillary_staging_method__other_specify	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+axillary_staging_method	Sentinel lymph node biopsy plus axillary dissection	axillary_staging_method__sentinel_lymph_node_biopsy_plus_axillary_dissection	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+axillary_staging_method	Sentinel node biopsy alone	axillary_staging_method__sentinel_node_biopsy_alone	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+axillary_staging_method	[missing_like]	axillary_staging_method__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.
+birth_days_to	[numeric_passthrough]	birth_days_to	[same_as_source_value]	passthrough_numeric	true	false	Numeric passthrough only; no imputation or rescaling is applied in v1.
+er_status_by_ihc	Indeterminate	er_status_by_ihc__indeterminate	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+er_status_by_ihc	Negative	er_status_by_ihc__negative	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+er_status_by_ihc	Positive	er_status_by_ihc__positive	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+er_status_by_ihc	[missing_like]	er_status_by_ihc__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.
+ethnicity	HISPANIC OR LATINO	ethnicity__hispanic_or_latino	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+ethnicity	NOT HISPANIC OR LATINO	ethnicity__not_hispanic_or_latino	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+ethnicity	[missing_like]	ethnicity__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.
+gender	FEMALE	gender__female	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+gender	MALE	gender__male	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+her2_status_by_ihc	Equivocal	her2_status_by_ihc__equivocal	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+her2_status_by_ihc	Indeterminate	her2_status_by_ihc__indeterminate	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+her2_status_by_ihc	Negative	her2_status_by_ihc__negative	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+her2_status_by_ihc	Positive	her2_status_by_ihc__positive	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+her2_status_by_ihc	[missing_like]	her2_status_by_ihc__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.
+histological_type	Infiltrating Carcinoma NOS	histological_type__infiltrating_carcinoma_nos	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+histological_type	Infiltrating Ductal Carcinoma	histological_type__infiltrating_ductal_carcinoma	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+histological_type	Infiltrating Lobular Carcinoma	histological_type__infiltrating_lobular_carcinoma	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+histological_type	Medullary Carcinoma	histological_type__medullary_carcinoma	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+histological_type	Metaplastic Carcinoma	histological_type__metaplastic_carcinoma	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+histological_type	Mixed Histology (please specify)	histological_type__mixed_histology_please_specify	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+histological_type	Mucinous Carcinoma	histological_type__mucinous_carcinoma	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+histological_type	Other, specify	histological_type__other_specify	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+histological_type	[missing_like]	histological_type__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.
+history_other_malignancy	No	history_other_malignancy	0	binary_map_required	true	false	Observed exact raw value No maps to 0.
+history_other_malignancy	Yes	history_other_malignancy	1	binary_map_required	true	false	Observed exact raw value Yes maps to 1.
+history_other_malignancy	[missing_like]	history_other_malignancy__missing	1	binary_map_required	true	false	Missing-like source cells activate the dedicated missingness indicator.
+icd_o_3_histology	8010/3	icd_o_3_histology__8010_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8013/3	icd_o_3_histology__8013_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8022/3	icd_o_3_histology__8022_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8050/3	icd_o_3_histology__8050_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8090/3	icd_o_3_histology__8090_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8200/3	icd_o_3_histology__8200_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8201/3	icd_o_3_histology__8201_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8211/3	icd_o_3_histology__8211_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8401/3	icd_o_3_histology__8401_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8480/3	icd_o_3_histology__8480_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8500/3	icd_o_3_histology__8500_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8502/3	icd_o_3_histology__8502_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8503/3	icd_o_3_histology__8503_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8507/3	icd_o_3_histology__8507_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8510/3	icd_o_3_histology__8510_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8520/3	icd_o_3_histology__8520_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8522/3	icd_o_3_histology__8522_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8523/3	icd_o_3_histology__8523_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8524/3	icd_o_3_histology__8524_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8541/3	icd_o_3_histology__8541_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	8575/3	icd_o_3_histology__8575_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+icd_o_3_histology	9020/3	icd_o_3_histology__9020_3	1	one_hot_encode	true	true	Exact raw source category activates this one-hot output column.
+initial_pathologic_dx_year	[numeric_passthrough]	initial_pathologic_dx_year	[same_as_source_value]	passthrough_numeric	true	false	Numeric passthrough only; no imputation or rescaling is applied in v1.
+lymph_nodes_examined_count	[numeric_passthrough]	lymph_nodes_examined_count	[same_as_source_value]	passthrough_numeric	true	false	Numeric passthrough only; no imputation or rescaling is applied in v1.
+lymph_nodes_examined_he_count	[numeric_passthrough]	lymph_nodes_examined_he_count	[same_as_source_value]	passthrough_numeric	true	false	Numeric passthrough only; no imputation or rescaling is applied in v1.
+margin_status	Close	margin_status__close	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+margin_status	Negative	margin_status__negative	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+margin_status	Positive	margin_status__positive	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+margin_status	[missing_like]	margin_status__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.
+menopause_status	Indeterminate (neither Pre or Postmenopausal)	menopause_status__indeterminate_neither_pre_or_postmenopausal	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+menopause_status	Peri (6-12 months since last menstrual period)	menopause_status__peri_6_12_months_since_last_menstrual_period	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+menopause_status	Post (prior bilateral ovariectomy OR >12 mo since LMP with no prior hysterectomy)	menopause_status__post_prior_bilateral_ovariectomy_or_12_mo_since_lmp_with_no_prior_hysterectomy	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+menopause_status	Pre (<6 months since LMP AND no prior bilateral ovariectomy AND not on estrogen replacement)	menopause_status__pre_6_months_since_lmp_and_no_prior_bilateral_ovariectomy_and_not_on_estrogen_replacement	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+menopause_status	[missing_like]	menopause_status__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.
+method_initial_path_dx	Core needle biopsy	method_initial_path_dx__core_needle_biopsy	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+method_initial_path_dx	Cytology (e.g. Peritoneal or pleural fluid)	method_initial_path_dx__cytology_e_g_peritoneal_or_pleural_fluid	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+method_initial_path_dx	Excisional Biopsy	method_initial_path_dx__excisional_biopsy	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+method_initial_path_dx	Fine needle aspiration biopsy	method_initial_path_dx__fine_needle_aspiration_biopsy	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+method_initial_path_dx	Incisional Biopsy	method_initial_path_dx__incisional_biopsy	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+method_initial_path_dx	Other method, specify:	method_initial_path_dx__other_method_specify	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+method_initial_path_dx	Tumor resection	method_initial_path_dx__tumor_resection	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+method_initial_path_dx	[missing_like]	method_initial_path_dx__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.
+pr_status_by_ihc	Indeterminate	pr_status_by_ihc__indeterminate	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+pr_status_by_ihc	Negative	pr_status_by_ihc__negative	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+pr_status_by_ihc	Positive	pr_status_by_ihc__positive	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+pr_status_by_ihc	[missing_like]	pr_status_by_ihc__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.
+race	AMERICAN INDIAN OR ALASKA NATIVE	race__american_indian_or_alaska_native	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+race	ASIAN	race__asian	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+race	BLACK OR AFRICAN AMERICAN	race__black_or_african_american	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+race	WHITE	race__white	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+race	[missing_like]	race__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.
+surgical_procedure_first	Lumpectomy	surgical_procedure_first__lumpectomy	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+surgical_procedure_first	Modified Radical Mastectomy	surgical_procedure_first__modified_radical_mastectomy	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+surgical_procedure_first	Other	surgical_procedure_first__other	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+surgical_procedure_first	Simple Mastectomy	surgical_procedure_first__simple_mastectomy	1	one_hot_encode	true	false	Exact raw source category activates this one-hot output column.
+surgical_procedure_first	[missing_like]	surgical_procedure_first__missing	1	one_hot_encode	true	false	Missing-like source cells activate the dedicated missingness indicator.

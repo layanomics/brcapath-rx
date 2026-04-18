@@ -1,0 +1,32 @@
+baseline_model_input_v1_run_id	summary_section	summary_metric	summary_value	notes
+20260414T013108Z	design	baseline_model_input_v1_status	baseline_model_input_v1_complete	This workflow prepares a first-pass baseline model-input matrix only; it does not perform modeling.
+20260414T013108Z	design	input_source_table	baseline_feature_set_v1	The model-input matrix starts only from the saved 25-feature baseline feature-set v1 table.
+20260414T013108Z	design	matrix_representation_policy	fully_numeric_exact_label_one_hot_with_numeric_passthrough	Numeric fields pass through unchanged; categorical fields use exact-label one-hot columns; no identifier column is added to the matrix.
+20260414T013108Z	design	unit_of_analysis	patient/case	The matrix preserves one row per patient/case from baseline_feature_set_v1.tsv.
+20260414T013108Z	inputs	baseline_feature_set_v1_run_id	20260414T004822Z	Source baseline feature-set run used for model-input preparation.
+20260414T013108Z	inputs	baseline_profile_v1_run_id	20260414T000119Z	Carried forward for provenance only.
+20260414T013108Z	inputs	baseline_analysis_v1_run_id	20260413T213900Z	Carried forward for provenance only.
+20260414T013108Z	row_counts	input_row_count	1097	Row count read directly from baseline_feature_set_v1.tsv.
+20260414T013108Z	row_counts	final_row_count	1097	The model-input matrix preserves baseline_feature_set_v1.tsv row count and row order exactly.
+20260414T013108Z	field_counts	input_feature_count	25	All 25 retained baseline feature-set v1 fields were carried into model-input preparation.
+20260414T013108Z	field_counts	output_feature_count	194	Count of final model-input matrix columns after numeric passthrough, binary mapping, and exact-label one-hot expansion.
+20260414T013108Z	field_selection	input_feature_names_json	"[""age_at_diagnosis"", ""ajcc_metastasis_pathologic_pm"", ""ajcc_nodes_pathologic_pn"", ""ajcc_pathologic_tumor_stage"", ""ajcc_staging_edition"", ""ajcc_tumor_pathologic_pt"", ""anatomic_neoplasm_subdivision"", ""axillary_staging_method"", ""birth_days_to"", ""er_status_by_ihc"", ""ethnicity"", ""gender"", ""her2_status_by_ihc"", ""histological_type"", ""history_other_malignancy"", ""icd_o_3_histology"", ""initial_pathologic_dx_year"", ""lymph_nodes_examined_count"", ""lymph_nodes_examined_he_count"", ""margin_status"", ""menopause_status"", ""method_initial_path_dx"", ""pr_status_by_ihc"", ""race"", ""surgical_procedure_first""]"	Saved source feature names used for baseline model-input preparation, in matrix-generation order.
+20260414T013108Z	field_selection	manual_review_fields_json	"[""ajcc_metastasis_pathologic_pm"", ""ajcc_nodes_pathologic_pn"", ""ajcc_pathologic_tumor_stage"", ""ajcc_staging_edition"", ""ajcc_tumor_pathologic_pt"", ""anatomic_neoplasm_subdivision"", ""icd_o_3_histology""]"	Fields still flagged for manual encoding review even though safe initial v1 encoding was generated.
+20260414T013108Z	missingness	categorical_fields_with_missing_indicator_count	14	Count of source fields that receive a dedicated __missing output column in v1.
+20260414T013108Z	missingness	numeric_fields_left_blank_for_missing_count	4	Count of numeric source fields that retain blank cells for missing-like values in v1.
+20260414T013108Z	readiness	manual_review_required_field_count	7	These fields were encoded safely for v1 but still require manual review before stronger modeling claims.
+20260414T013108Z	readiness	readiness_for_first_pass_baseline_modeling	ready_with_documented_manual_review_flags	The saved matrix is suitable for first-pass baseline-only modeling experiments once the documented manual-review fields are acknowledged.
+20260414T013108Z	readiness	endpoint_freeze_status	blocked	Endpoint freeze remains blocked; this workflow does not add endpoint fields or freeze a final endpoint.
+20260414T013108Z	readiness	treatment_inclusion_status	excluded	Treatment detail remains excluded from model-input preparation in this workflow.
+20260414T013108Z	readiness	overall_readiness_interpretation	suitable_for_first_pass_baseline_modeling_experiments_with_documented_manual_review_flags	Use this matrix for first-pass baseline-only modeling experiments, encoding review, and missingness review only; do not treat it as endpoint freeze, treatment modeling, or final clinical interpretation.
+20260414T013108Z	field_types	feature_type_count__binary	3	Count across the 25 saved source features before one-hot expansion.
+20260414T013108Z	field_types	feature_type_count__ordinal	0	Count across the 25 saved source features before one-hot expansion.
+20260414T013108Z	field_types	feature_type_count__nominal_categorical	17	Count across the 25 saved source features before one-hot expansion.
+20260414T013108Z	field_types	feature_type_count__numeric_continuous	3	Count across the 25 saved source features before one-hot expansion.
+20260414T013108Z	field_types	feature_type_count__numeric_count	2	Count across the 25 saved source features before one-hot expansion.
+20260414T013108Z	field_types	feature_type_count__manual_review_needed	0	Count across the 25 saved source features before one-hot expansion.
+20260414T013108Z	encoding	encoding_rule_count__passthrough_numeric	5	Count across the 25 saved source features before one-hot expansion.
+20260414T013108Z	encoding	encoding_rule_count__binary_map_required	1	Count across the 25 saved source features before one-hot expansion.
+20260414T013108Z	encoding	encoding_rule_count__one_hot_encode	19	Count across the 25 saved source features before one-hot expansion.
+20260414T013108Z	encoding	encoding_rule_count__ordinal_map_required	0	Count across the 25 saved source features before one-hot expansion.
+20260414T013108Z	encoding	encoding_rule_count__manual_encoding_review	0	Count across the 25 saved source features before one-hot expansion.

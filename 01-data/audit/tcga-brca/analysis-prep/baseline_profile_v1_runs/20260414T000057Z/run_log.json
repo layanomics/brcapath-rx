@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "baseline_profile_v1_run_id": "20260414T000057Z",
+  "started_at_utc": "2026-04-14T00:00:57Z",
+  "failed_at_utc": "2026-04-14T00:00:57Z",
+  "error": "dict contains fields not in fieldnames: 'shortlist_bucket', 'ambiguity_carried_forward', 'shortlist_rule', 'shortlist_manual_review_priority'",
+  "workflow": "tcga_brca_baseline_profile_v1"
+}

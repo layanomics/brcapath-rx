@@ -1,0 +1,35 @@
+baseline_analysis_v1_run_id	summary_section	summary_metric	summary_value	notes
+20260413T213900Z	design	baseline_analysis_v1_status	provisional_baseline_analysis_prep_v1	This table is a baseline-analysis-prep layer only and is not a final modeling dataset.
+20260413T213900Z	design	proposed_unit_of_analysis	patient/case	The output preserves one row per patient/case from minimal cohort v1.
+20260413T213900Z	design	baseline_analysis_source_table	minimal_cohort_v1	baseline_analysis_v1 starts only from the saved minimal cohort v1 output on disk.
+20260413T213900Z	design	endpoint_policy	candidate_columns_side_by_side_only	Endpoint candidate columns remain separate, provenance-bearing, and provisional.
+20260413T213900Z	design	treatment_policy	excluded	Treatment detail rows and treatment proxy fields remain excluded from baseline analysis prep v1.
+20260413T213900Z	design	biospecimen_policy	sample_anchor_only	biospecimen evidence remains limited to grouped sample-anchor columns already present in cohort v1.
+20260413T213900Z	inputs	cohort_v1_build_id	20260413T202134Z	Minimal cohort v1 build carried forward into this baseline-analysis-prep run.
+20260413T213900Z	inputs	dry_run_build_id	20260413T185911Z	Original minimal dry-run build referenced by the current minimal cohort v1 pointer.
+20260413T213900Z	inputs	blueprint_run_id	20260413T081835Z	Current cohort blueprint run aligned to the retained minimal cohort v1 pointer.
+20260413T213900Z	inputs	ambiguity_resolution_run_id	20260413T085636Z	Current ambiguity-resolution run aligned to the retained minimal cohort v1 pointer.
+20260413T213900Z	inputs	shortlist_run_id	20260412T033602Z	Current clinical shortlist run aligned to the retained minimal cohort v1 pointer.
+20260413T213900Z	inputs	endpoint_crosswalk_run_id	20260412T042036Z	Current endpoint crosswalk run aligned to the retained minimal cohort v1 pointer.
+20260413T213900Z	row_counts	input_v1_row_count	1097	Row count read directly from minimal_cohort_v1.tsv.
+20260413T213900Z	row_counts	final_row_count	1097	Row count of baseline_analysis_v1.tsv after sorting and appending reversible prep columns.
+20260413T213900Z	field_selection	retained_field_count_total	54	Total retained field count including carried cohort v1 fields plus derived prep flags.
+20260413T213900Z	field_selection	retained_audit_id_field_count	8	Retained audit/id fields carried from minimal cohort v1.
+20260413T213900Z	field_selection	retained_baseline_clinical_field_count	27	Retained baseline clinical fields carried from minimal cohort v1.
+20260413T213900Z	field_selection	retained_followup_join_evidence_field_count	2	Retained follow-up join-evidence fields carried from minimal cohort v1.
+20260413T213900Z	field_selection	retained_endpoint_candidate_field_count	9	Retained endpoint candidate fields carried side by side from minimal cohort v1.
+20260413T213900Z	field_selection	retained_biospecimen_sample_anchor_evidence_field_count	3	Retained biospecimen sample-anchor evidence fields carried from minimal cohort v1.
+20260413T213900Z	field_selection	retained_derived_prep_flag_count	5	New reversible prep columns added by this workflow.
+20260413T213900Z	coverage	rows_with_followup_evidence	619	Rows where followup_match_row_count > 0.
+20260413T213900Z	coverage	rows_with_biospecimen_sample_evidence	1097	Rows where biospecimen_sample_match_row_count > 0.
+20260413T213900Z	coverage	rows_with_both_patient_ids	1097	Rows where both retained patient identifiers are present.
+20260413T213900Z	coverage	rows_with_only_one_patient_id	0	Rows where exactly one retained patient identifier is missing-like.
+20260413T213900Z	coverage	rows_with_no_patient_ids	0	Rows where both retained patient identifiers are missing-like.
+20260413T213900Z	ambiguity	distinct_carried_ambiguity_flag_count	6	Distinct ambiguity flags still carried forward at the row level.
+20260413T213900Z	ambiguity	carried_ambiguity_flags_json	"[""parallel_patient_identifiers_retained"", ""case_count_mismatch_carried_forward_1097_1098_1101"", ""endpoint_overlap_fields_kept_side_by_side"", ""sparse_timing_fields_excluded_from_minimal_build"", ""treatment_detail_rows_excluded_from_minimal_build"", ""biospecimen_child_layer_expansion_deferred""]"	Distinct ambiguity flags retained from minimal cohort v1.
+20260413T213900Z	readiness	readiness_for_descriptive_stats	ready_provisional_baseline_analysis_v1	This table is suitable for descriptive statistics review while remaining provisional.
+20260413T213900Z	readiness	readiness_for_missingness_review	ready	This table is suitable for direct missingness review because values remain source-faithful.
+20260413T213900Z	readiness	readiness_for_baseline_modeling_prep	ready_provisional_only	This table can support baseline modeling preparation only while endpoint and treatment remain unresolved.
+20260413T213900Z	readiness	endpoint_freeze_status	blocked	Final endpoint freeze remains blocked and endpoint candidate columns remain side by side only.
+20260413T213900Z	readiness	treatment_inclusion_status	excluded	Treatment detail remains excluded from this baseline-analysis-prep layer.
+20260413T213900Z	readiness	overall_readiness_interpretation	suitable_for_descriptive_statistics_and_baseline_prep_only_not_for_endpoint_freeze_or_treatment_modeling	Use this table for descriptive statistics, missingness review, and baseline modeling preparation only; do not use it to claim a frozen endpoint, treatment modeling readiness, or stronger clinical-effect interpretation.
