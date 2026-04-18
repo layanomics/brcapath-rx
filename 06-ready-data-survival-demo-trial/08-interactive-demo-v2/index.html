@@ -1183,7 +1183,7 @@
         el("loading").hidden = true;
         const errBox = el("load-error");
         errBox.classList.remove("hidden");
-        el("error-msg").textContent = err.message;
+        console.error(err); el("error-msg").textContent = err?.stack || err?.message || String(err);
       }
     }
 
