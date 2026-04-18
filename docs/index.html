@@ -1,11 +1,1193 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url=./confounding-demo/">
-    <title>Redirecting...</title>
-  </head>
-  <body>
-    <p>Redirecting to <a href="./confounding-demo/">confounding demo</a>...</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BRCAPath-Rx · Stage 1 Prognostic Survival Demo</title>
+
+  <!-- Tailwind CSS (CDN, no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Chart.js 4 (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Lora', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    /* Range input cross-browser */
+    input[type="range"] { -webkit-appearance: none; appearance: none; background: transparent; width: 100%; cursor: pointer; }
+    input[type="range"]::-webkit-slider-runnable-track { height: 5px; background: #cbd5e1; border-radius: 3px; }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%;
+      background: #0f766e; margin-top: -8.5px; border: 3px solid white;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    input[type="range"]:focus { outline: none; }
+    input[type="range"]:focus::-webkit-slider-thumb { box-shadow: 0 0 0 3px rgba(15,118,110,0.25); }
+
+    /* Dynamic risk card states (set via JS) */
+    .risk-state-low  { background:#f0fdf4 !important; border-color:#86efac !important; }
+    .risk-state-mid  { background:#fffbeb !important; border-color:#fde68a !important; }
+    .risk-state-high { background:#fef2f2 !important; border-color:#fca5a5 !important; }
+    .risk-text-low   { color: #15803d; }
+    .risk-text-mid   { color: #92400e; }
+    .risk-text-high  { color: #991b1b; }
+
+    /* Sticky header height for tab nav offset */
+    .sticky-header { top: 65px; }
+
+    /* Chart.js canvas fill fix */
+    #survival-chart { display: block; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen font-sans">
+
+  <!-- ====================================================
+       HEADER
+  ==================================================== -->
+  <header class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between gap-3">
+      <div>
+        <div class="text-lg font-bold text-teal-800" style="font-family: 'Lora', Georgia, serif;">BRCAPath-Rx</div>
+        <div class="text-xs text-slate-400 font-medium tracking-wide uppercase leading-none mt-0.5">Stage 1 · Prognostic Survival Demo</div>
+      </div>
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <span class="hidden sm:inline text-xs bg-teal-50 text-teal-700 border border-teal-200 px-2.5 py-1 rounded-full font-semibold">Prognostic only</span>
+        <span class="text-xs bg-amber-50 text-amber-700 border border-amber-200 px-2.5 py-1 rounded-full font-semibold">Not for clinical use</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====================================================
+       HERO
+  ==================================================== -->
+  <div class="bg-gradient-to-br from-teal-900 via-teal-800 to-slate-800 text-white">
+    <div class="max-w-6xl mx-auto px-5 py-10 md:py-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase text-teal-200 mb-4">
+            BRCAPath-Rx &bull; Stage 1
+          </div>
+          <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-3 text-white" style="font-family:'Lora',Georgia,serif;">
+            Interactive Breast Cancer<br>Prognostic Survival Demo
+          </h1>
+          <p class="text-teal-100 text-base leading-relaxed mb-5 max-w-prose">
+            Explore how age, molecular subtype, and clinical factors relate to survival outcomes in two independent
+            breast cancer cohorts. Powered by a verified Stage&nbsp;1 Cox proportional hazards model built entirely
+            from public non-image data.
+          </p>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="bg-white/15 border border-white/25 px-3 py-1.5 rounded-lg font-medium">Prognostic ranking only</span>
+            <span class="bg-white/15 border border-white/25 px-3 py-1.5 rounded-lg font-medium">No treatment recommendations</span>
+            <span class="bg-white/15 border border-white/25 px-3 py-1.5 rounded-lg font-medium">Live in-browser model</span>
+          </div>
+        </div>
+
+        <!-- Hero metric cards (populated by JS) -->
+        <div class="grid grid-cols-2 gap-3 mt-2 md:mt-0">
+          <div class="bg-white/10 border border-white/20 rounded-xl p-4">
+            <div class="text-teal-200 text-xs font-semibold uppercase tracking-wide mb-1">TCGA-BRCA</div>
+            <div class="text-white text-2xl font-bold" id="hero-tcga-cindex">&hellip;</div>
+            <div class="text-teal-200 text-xs mt-1">C-index &middot; <span id="hero-tcga-n">&hellip;</span> patients</div>
+          </div>
+          <div class="bg-white/10 border border-white/20 rounded-xl p-4">
+            <div class="text-teal-200 text-xs font-semibold uppercase tracking-wide mb-1">METABRIC</div>
+            <div class="text-white text-2xl font-bold" id="hero-met-cindex">&hellip;</div>
+            <div class="text-teal-200 text-xs mt-1">C-index &middot; <span id="hero-met-n">&hellip;</span> patients</div>
+          </div>
+          <div class="bg-white/10 border border-white/20 rounded-xl p-4">
+            <div class="text-teal-200 text-xs font-semibold uppercase tracking-wide mb-1">TCGA subtype source</div>
+            <div class="text-white text-xs font-semibold leading-snug font-mono" id="hero-tcga-subtype">&hellip;</div>
+          </div>
+          <div class="bg-white/10 border border-white/20 rounded-xl p-4">
+            <div class="text-teal-200 text-xs font-semibold uppercase tracking-wide mb-1">METABRIC subtype source</div>
+            <div class="text-white text-xs font-semibold leading-snug font-mono" id="hero-met-subtype">&hellip;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================
+       TAB NAVIGATION
+  ==================================================== -->
+  <div class="bg-white border-b border-slate-200 shadow-sm sticky sticky-header z-20">
+    <div class="max-w-6xl mx-auto px-5">
+      <nav class="flex overflow-x-auto scrollbar-hide" id="tab-nav" aria-label="Demo sections">
+        <button data-tab="demo"
+          class="tab-btn flex-shrink-0 px-5 py-4 text-sm font-medium border-b-2 border-teal-600 text-teal-700 transition-colors whitespace-nowrap">
+          Interactive Demo
+        </button>
+        <button data-tab="cindex"
+          class="tab-btn flex-shrink-0 px-5 py-4 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 transition-colors whitespace-nowrap">
+          What Is C-index?
+        </button>
+        <button data-tab="howit"
+          class="tab-btn flex-shrink-0 px-5 py-4 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 transition-colors whitespace-nowrap">
+          How It Works
+        </button>
+        <button data-tab="limits"
+          class="tab-btn flex-shrink-0 px-5 py-4 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 transition-colors whitespace-nowrap">
+          Data &amp; Limitations
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ====================================================
+       MAIN CONTENT
+  ==================================================== -->
+  <main class="max-w-6xl mx-auto px-5 py-8">
+
+    <!-- Loading state -->
+    <div id="loading" class="flex items-center justify-center py-24 text-slate-500">
+      <div class="text-center">
+        <div class="text-5xl mb-4 animate-pulse">&#9203;</div>
+        <div class="font-semibold text-slate-600 mb-1">Loading model data&hellip;</div>
+        <div class="text-sm text-slate-400">Serve this folder over HTTP so <code class="font-mono bg-slate-100 px-1 rounded">demo_predictions.json</code> can load.</div>
+        <div class="mt-3 text-xs text-slate-400 font-mono bg-slate-100 rounded-lg px-4 py-2 inline-block">python -m http.server 8080</div>
+      </div>
+    </div>
+
+    <!-- Error state -->
+    <div id="load-error" class="hidden bg-red-50 border border-red-200 rounded-2xl p-6">
+      <div class="font-bold text-red-800 mb-1">Could not load demo data</div>
+      <div class="text-red-700 text-sm mb-3" id="error-msg">Unknown error.</div>
+      <div class="text-sm text-red-600">
+        Run: <code class="bg-red-100 px-1.5 py-0.5 rounded font-mono">python -m http.server 8080</code> from this folder,
+        then open <code class="bg-red-100 px-1.5 py-0.5 rounded font-mono">http://localhost:8080</code>
+      </div>
+    </div>
+
+    <!-- App shell (shown after data loads) -->
+    <div id="app-shell" class="hidden">
+
+      <!-- ============================================
+           TAB 1: INTERACTIVE DEMO
+      ============================================ -->
+      <section id="tab-demo" class="tab-panel">
+
+        <!-- Cohort toggle -->
+        <div class="mb-6 flex flex-wrap items-center gap-3">
+          <span class="text-sm font-semibold text-slate-500 uppercase tracking-wide">Cohort:</span>
+          <div class="flex gap-2" id="cohort-toggle">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- Two-column layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6">
+
+          <!-- LEFT: Controls panel -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 self-start">
+            <h2 class="text-base font-bold text-slate-800 mb-1">Patient profile</h2>
+            <p class="text-sm text-slate-500 mb-5" id="controls-helper">
+              Adjust the values to explore how different profiles change the predicted survival curve.
+            </p>
+
+            <!-- Age -->
+            <div class="mb-5">
+              <div class="flex justify-between items-baseline mb-1.5">
+                <label class="text-xs font-bold text-teal-700 uppercase tracking-wide">Age at diagnosis</label>
+                <span class="text-sm font-bold text-teal-800 tabular-nums" id="age-display">58</span>
+              </div>
+              <input type="range" id="age-range" class="w-full">
+              <div class="flex justify-between text-xs text-slate-400 mt-1">
+                <span id="age-min-lbl">26</span><span id="age-max-lbl">91</span>
+              </div>
+            </div>
+
+            <!-- Subtype -->
+            <div class="mb-5">
+              <label class="block text-xs font-bold text-teal-700 uppercase tracking-wide mb-1.5" id="subtype-lbl">PAM50 subtype</label>
+              <select id="subtype-select"
+                class="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm text-slate-800 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500"></select>
+              <div class="mt-1.5 text-xs text-slate-500 italic leading-snug" id="subtype-hint"></div>
+            </div>
+
+            <!-- Stage (TCGA only) -->
+            <div id="stage-field" class="mb-5">
+              <label class="block text-xs font-bold text-teal-700 uppercase tracking-wide mb-1.5">AJCC stage</label>
+              <select id="stage-select"
+                class="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm text-slate-800 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500"></select>
+              <div class="mt-1 text-xs text-slate-400">Simplified stage: I &rarr; IV, X = unspecified</div>
+            </div>
+
+            <!-- NPI (METABRIC only) -->
+            <div id="npi-field" class="hidden mb-5">
+              <div class="flex justify-between items-baseline mb-1.5">
+                <label class="text-xs font-bold text-teal-700 uppercase tracking-wide">Nottingham Prognostic Index</label>
+                <span class="text-sm font-bold text-teal-800 tabular-nums" id="npi-display">4.04</span>
+              </div>
+              <input type="range" id="npi-range" class="w-full">
+              <div class="flex justify-between text-xs text-slate-400 mt-1">
+                <span>1.0 (lower risk)</span><span>6.36 (higher risk)</span>
+              </div>
+              <div class="mt-1.5 text-xs text-slate-500 italic">NPI = grade factor + lymph node score + 0.2 &times; tumour size (cm). Lower values indicate more favourable prognosis.</div>
+            </div>
+
+            <!-- Cohort note -->
+            <div class="bg-teal-50 border border-teal-100 rounded-xl p-3 text-xs text-teal-700 leading-snug mt-2" id="cohort-note"></div>
+          </div>
+
+          <!-- RIGHT: Results -->
+          <div>
+
+            <!-- Stat row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+              <!-- Risk card: dynamic background set by JS -->
+              <div class="rounded-2xl border shadow-sm p-4 transition-colors" id="risk-card">
+                <div class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1">Relative risk</div>
+                <div class="text-2xl font-bold mb-1" id="risk-label">&mdash;</div>
+                <div class="text-xs text-slate-500" id="risk-sub">Within this cohort</div>
+              </div>
+              <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4">
+                <div class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1" id="b1-lbl">3-year survival</div>
+                <div class="text-2xl font-bold text-slate-800 mb-1" id="b1-val">&mdash;</div>
+                <div class="text-xs text-slate-400">Model estimate, this profile</div>
+              </div>
+              <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4">
+                <div class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1" id="b2-lbl">5-year survival</div>
+                <div class="text-2xl font-bold text-slate-800 mb-1" id="b2-val">&mdash;</div>
+                <div class="text-xs text-slate-400">Model estimate, this profile</div>
+              </div>
+              <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4">
+                <div class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1">C-index</div>
+                <div class="text-2xl font-bold text-slate-800 mb-1" id="cindex-display">&mdash;</div>
+                <div class="text-xs text-slate-400">Ranking accuracy in this cohort</div>
+              </div>
+            </div>
+
+            <!-- Survival curve card -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-5">
+              <div class="flex flex-wrap items-center justify-between gap-3 mb-1">
+                <h2 class="text-base font-bold text-slate-800">Predicted survival curve</h2>
+                <div class="flex items-center gap-4 text-xs text-slate-500">
+                  <span class="flex items-center gap-1.5">
+                    <span class="inline-block w-7 h-0.5 bg-teal-700 rounded"></span>
+                    Selected profile
+                  </span>
+                  <span class="flex items-center gap-1.5">
+                    <span class="inline-block" style="width:28px;height:0;border-top:2px dashed #94a3b8;"></span>
+                    Typical cohort profile
+                  </span>
+                </div>
+              </div>
+              <p class="text-xs text-slate-400 mb-4">
+                Dashed line shows the default cohort profile for comparison.
+                Curves are computed live in your browser from the exported Cox model payload.
+              </p>
+              <div style="height: 360px; position: relative;">
+                <canvas id="survival-chart"></canvas>
+              </div>
+            </div>
+
+            <!-- Interpretation -->
+            <div class="bg-teal-50 border border-teal-200 rounded-2xl p-5">
+              <h3 class="text-sm font-bold text-teal-800 mb-2">Plain-language interpretation</h3>
+              <p class="text-sm text-teal-900 leading-relaxed" id="interpretation">Loading&hellip;</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="bg-white border border-teal-200 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full" id="source-pill"></span>
+                <span class="bg-white border border-teal-200 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full">Stage 1 prognostic demo</span>
+                <span class="bg-white border border-teal-200 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full">No treatment recommendation</span>
+              </div>
+            </div>
+
+          </div><!-- /results -->
+        </div><!-- /demo grid -->
+      </section>
+
+      <!-- ============================================
+           TAB 2: WHAT IS C-INDEX?
+      ============================================ -->
+      <section id="tab-cindex" class="tab-panel hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+
+          <!-- What it is -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+            <h2 class="text-xl font-bold text-slate-800 mb-3" style="font-family:'Lora',Georgia,serif;">What is the C-index?</h2>
+            <p class="text-slate-600 leading-relaxed mb-4" id="cindex-plain-text">
+              The C-index tells us how well the model ranks which patients are relatively higher risk versus lower risk
+              within the same cohort. A value of 0.5 is no better than chance; higher values mean better ranking.
+            </p>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-4">
+              <div class="text-sm font-bold text-slate-700 mb-2">The core question</div>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Pick two patients. One survived longer than the other.
+                Did the model assign the longer-survivor a <em>lower</em> risk score than the shorter-survivor?
+                If yes, that pair is <strong class="text-slate-800">concordant</strong>.
+                The C-index is the fraction of all comparable pairs that are concordant.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-center text-sm">
+              <div class="bg-red-50 border border-red-200 rounded-xl p-3">
+                <div class="text-red-700 font-bold text-xl">0.5</div>
+                <div class="text-red-600 text-xs mt-1">Random<br>coin flip</div>
+              </div>
+              <div class="bg-amber-50 border border-amber-200 rounded-xl p-3">
+                <div class="text-amber-700 font-bold text-xl">0.65</div>
+                <div class="text-amber-600 text-xs mt-1">Useful<br>ranking</div>
+              </div>
+              <div class="bg-teal-50 border border-teal-200 rounded-xl p-3">
+                <div class="text-teal-700 font-bold text-xl">1.0</div>
+                <div class="text-teal-600 text-xs mt-1">Perfect<br>ranking</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Current values -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+            <h2 class="text-xl font-bold text-slate-800 mb-4" style="font-family:'Lora',Georgia,serif;">Current model values</h2>
+
+            <div class="border border-teal-200 bg-teal-50 rounded-xl p-4 mb-4">
+              <div class="flex items-center justify-between mb-2">
+                <div class="font-bold text-teal-800">TCGA-BRCA</div>
+                <div class="text-3xl font-bold text-teal-700" id="cindex-tcga-badge">&hellip;</div>
+              </div>
+              <p class="text-sm text-teal-700 leading-relaxed">
+                This model correctly ranks approximately <strong>73 out of every 100</strong> comparable patient pairs
+                by relative survival risk within the TCGA cohort.
+              </p>
+              <div class="mt-2 text-xs text-teal-600 font-mono">Inputs: age + AJCC stage + PAM50 subtype (N=805)</div>
+            </div>
+
+            <div class="border border-slate-200 bg-slate-50 rounded-xl p-4">
+              <div class="flex items-center justify-between mb-2">
+                <div class="font-bold text-slate-700">METABRIC</div>
+                <div class="text-3xl font-bold text-slate-600" id="cindex-met-badge">&hellip;</div>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                This model correctly ranks approximately <strong>64 out of every 100</strong> comparable patient pairs.
+                Note that METABRIC has more events and longer follow-up, making it a harder ranking problem.
+              </p>
+              <div class="mt-2 text-xs text-slate-500 font-mono">Inputs: age + NPI + derived PAM50 (N=1,980)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worked example table -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 mb-4">
+          <h3 class="text-base font-bold text-slate-800 mb-2">A worked example: counting concordant pairs</h3>
+          <p class="text-sm text-slate-500 mb-4">
+            Four hypothetical patients with their actual survival times and the model's predicted risk ranking.
+            A pair is concordant if the model ranked the patient who died first as higher risk.
+          </p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b-2 border-slate-200">
+                  <th class="text-left py-2.5 pr-4 font-bold text-slate-600">Patient</th>
+                  <th class="text-left py-2.5 pr-4 font-bold text-slate-600">Actual survival</th>
+                  <th class="text-left py-2.5 pr-4 font-bold text-slate-600">Model risk rank</th>
+                  <th class="text-left py-2.5 font-bold text-slate-600">Pairs correctly ordered vs&hellip;</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr>
+                  <td class="py-3 pr-4 font-semibold text-slate-800">Alice</td>
+                  <td class="py-3 pr-4 text-slate-600">8 years</td>
+                  <td class="py-3 pr-4"><span class="bg-green-100 text-green-800 border border-green-200 px-2 py-0.5 rounded-lg text-xs font-semibold">1st &mdash; lowest risk</span></td>
+                  <td class="py-3 text-green-600 font-semibold text-xs">&#10003; Bob &nbsp; &#10003; Carol &nbsp; &#10003; Diana</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-4 font-semibold text-slate-800">Bob</td>
+                  <td class="py-3 pr-4 text-slate-600">5 years</td>
+                  <td class="py-3 pr-4"><span class="bg-blue-100 text-blue-800 border border-blue-200 px-2 py-0.5 rounded-lg text-xs font-semibold">2nd</span></td>
+                  <td class="py-3 text-green-600 font-semibold text-xs">&#10003; Carol &nbsp; &#10003; Diana</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-4 font-semibold text-slate-800">Carol</td>
+                  <td class="py-3 pr-4 text-slate-600">2 years</td>
+                  <td class="py-3 pr-4"><span class="bg-amber-100 text-amber-800 border border-amber-200 px-2 py-0.5 rounded-lg text-xs font-semibold">3rd</span></td>
+                  <td class="py-3 text-green-600 font-semibold text-xs">&#10003; Diana</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-4 font-semibold text-slate-800">Diana</td>
+                  <td class="py-3 pr-4 text-slate-600">6 months</td>
+                  <td class="py-3 pr-4"><span class="bg-red-100 text-red-800 border border-red-200 px-2 py-0.5 rounded-lg text-xs font-semibold">4th &mdash; highest risk</span></td>
+                  <td class="py-3 text-slate-400 text-xs">(no remaining comparisons)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-4 bg-teal-50 border border-teal-200 rounded-xl p-4 text-sm text-teal-800">
+            <strong>Result:</strong> 6 concordant pairs out of 6 possible &rarr; C-index = 1.0 (perfect).
+            In real clinical data, some pairs will be mis-ordered.
+            A C-index of <strong>0.729</strong> means roughly 73% of pairs are correctly ordered &mdash;
+            meaningfully better than chance (0.5), without claiming perfection.
+          </div>
+        </div>
+
+        <!-- Important caveat -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
+          <strong class="font-bold">Important caveat:</strong> A higher C-index means the model ranks survival risk better within a cohort.
+          It does not mean the model predicts exact survival times, identifies causally important features, or
+          estimates treatment effects. This is a <em>prognostic ranking</em> tool, not a treatment predictor.
+        </div>
+      </section>
+
+      <!-- ============================================
+           TAB 3: HOW IT WORKS
+      ============================================ -->
+      <section id="tab-howit" class="tab-panel hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+
+          <!-- What kind of model -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+            <h2 class="text-xl font-bold text-slate-800 mb-3" style="font-family:'Lora',Georgia,serif;">What kind of model is this?</h2>
+            <p class="text-slate-600 leading-relaxed mb-3">
+              This demo uses a <strong class="text-slate-800">Cox proportional hazards model</strong> &mdash;
+              a standard, well-understood statistical method for survival analysis used routinely in oncology research.
+            </p>
+            <p class="text-slate-600 leading-relaxed mb-3">
+              The model learns how each input feature (age, subtype, stage or NPI) relates to the
+              relative hazard of dying in the training cohort.
+              It does not require specifying a fixed survival distribution &mdash;
+              the baseline hazard is estimated from the observed data.
+            </p>
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm font-mono text-slate-600">
+              <div class="text-xs font-sans font-semibold text-slate-500 uppercase tracking-wide mb-2">Key formula</div>
+              Hazard ratio = exp(&beta;&middot;age + &beta;&middot;subtype + &hellip;)<br>
+              <br>
+              S(t) = S<sub>0</sub>(t) <sup>HazardRatio</sup>
+              <div class="text-xs font-sans text-slate-400 mt-1.5">where S<sub>0</sub>(t) is the baseline survival estimated from training data.</div>
+            </div>
+          </div>
+
+          <!-- What goes in -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+            <h2 class="text-xl font-bold text-slate-800 mb-3" style="font-family:'Lora',Georgia,serif;">What goes into the model?</h2>
+            <p class="text-slate-500 text-sm mb-4">
+              The two cohorts use <strong class="text-slate-700">different inputs</strong> because available data and population
+              characteristics differ. Both are valid for their respective cohort.
+            </p>
+            <div class="space-y-3">
+              <div class="border border-teal-200 bg-teal-50 rounded-xl p-4">
+                <div class="font-bold text-teal-800 text-sm mb-2">TCGA-BRCA</div>
+                <ul class="text-sm text-teal-700 space-y-1.5">
+                  <li>&bull; Age at diagnosis (years)</li>
+                  <li>&bull; Simplified AJCC stage (I, II, III, IV, X)</li>
+                  <li>&bull; PAM50 subtype &mdash; field: <code class="bg-teal-100 px-1 rounded font-mono text-xs">PAM50Call_RNAseq</code></li>
+                </ul>
+                <div class="text-xs text-teal-600 font-mono mt-2 pt-2 border-t border-teal-200">N=805 complete cases &middot; C-index=0.729</div>
+              </div>
+              <div class="border border-slate-200 bg-slate-50 rounded-xl p-4">
+                <div class="font-bold text-slate-700 text-sm mb-2">METABRIC</div>
+                <ul class="text-sm text-slate-600 space-y-1.5">
+                  <li>&bull; Age at diagnosis (years)</li>
+                  <li>&bull; Nottingham Prognostic Index (NPI)</li>
+                  <li>&bull; Derived PAM50 &mdash; field: <code class="bg-slate-200 px-1 rounded font-mono text-xs">PAM50_DERIVED_GENEFU_PAM50</code></li>
+                </ul>
+                <div class="text-xs text-slate-500 font-mono mt-2 pt-2 border-t border-slate-200">N=1,980 complete cases &middot; C-index=0.643</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How predictions work step-by-step -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 mb-6">
+          <h2 class="text-lg font-bold text-slate-800 mb-5" style="font-family:'Lora',Georgia,serif;">How live predictions work in this demo</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center">
+              <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">&#128100;</div>
+              <div class="font-bold text-slate-800 text-sm mb-1">1. You select a profile</div>
+              <div class="text-xs text-slate-500 leading-relaxed">Age, subtype, stage or NPI from the controls on the left</div>
+            </div>
+            <div class="text-center">
+              <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">&#129518;</div>
+              <div class="font-bold text-slate-800 text-sm mb-1">2. Linear predictor computed</div>
+              <div class="text-xs text-slate-500 leading-relaxed">Browser computes weighted sum of inputs using exported Cox coefficients</div>
+            </div>
+            <div class="text-center">
+              <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">&#128200;</div>
+              <div class="font-bold text-slate-800 text-sm mb-1">3. Survival curve generated</div>
+              <div class="text-xs text-slate-500 leading-relaxed">Baseline curve from the Breslow estimator is raised to the power of the hazard ratio</div>
+            </div>
+            <div class="text-center">
+              <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">&#127919;</div>
+              <div class="font-bold text-slate-800 text-sm mb-1">4. Risk band assigned</div>
+              <div class="text-xs text-slate-500 leading-relaxed">Profile is placed relative to the distribution of log partial hazards in the training cohort</div>
+            </div>
+          </div>
+          <div class="mt-5 bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-800">
+            <strong>No backend required.</strong> All calculations happen in your browser using the exported model payload
+            (<code class="font-mono text-xs">demo_predictions.json</code>). The site is entirely static and compatible with GitHub Pages.
+          </div>
+        </div>
+
+        <!-- Stage 1 scope box -->
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+          <h2 class="text-lg font-bold text-amber-900 mb-4" style="font-family:'Lora',Georgia,serif;">Why this is Stage 1 only</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div>
+              <div class="font-bold text-amber-800 mb-2 uppercase tracking-wide text-xs">What Stage 1 answers</div>
+              <ul class="space-y-2 text-amber-800">
+                <li class="flex items-start gap-2"><span class="text-teal-600 font-bold mt-0.5">&#10003;</span> Can we build a prognostic survival model from this public cohort data?</li>
+                <li class="flex items-start gap-2"><span class="text-teal-600 font-bold mt-0.5">&#10003;</span> Which features (age, subtype, stage, NPI) are associated with relative survival risk?</li>
+                <li class="flex items-start gap-2"><span class="text-teal-600 font-bold mt-0.5">&#10003;</span> What does the derived PAM50 subtype contribute to prognostic ranking?</li>
+                <li class="flex items-start gap-2"><span class="text-teal-600 font-bold mt-0.5">&#10003;</span> Are the model&rsquo;s rankings consistent across two independent cohorts?</li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-bold text-amber-800 mb-2 uppercase tracking-wide text-xs">What Stage 1 does NOT answer</div>
+              <ul class="space-y-2 text-amber-800">
+                <li class="flex items-start gap-2"><span class="text-red-600 font-bold mt-0.5">&#10007;</span> What is the <em>causal effect</em> of any treatment on survival?</li>
+                <li class="flex items-start gap-2"><span class="text-red-600 font-bold mt-0.5">&#10007;</span> Which treatment should a patient receive?</li>
+                <li class="flex items-start gap-2"><span class="text-red-600 font-bold mt-0.5">&#10007;</span> What would survival be under a counterfactual treatment?</li>
+                <li class="flex items-start gap-2"><span class="text-red-600 font-bold mt-0.5">&#10007;</span> Whether any observed treatment association is causal rather than confounded</li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-sm text-amber-700 mt-4 italic border-t border-amber-200 pt-4">
+            Treatment confounding &mdash; the fact that sicker patients tend to receive different treatments &mdash;
+            was identified as a key challenge in this project. Addressing it is a later-stage question,
+            not what this Stage&nbsp;1 demo answers.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- ============================================
+           TAB 4: DATA & LIMITATIONS
+      ============================================ -->
+      <section id="tab-limits" class="tab-panel hidden">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+
+          <!-- TCGA-BRCA -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-lg font-bold text-slate-800" style="font-family:'Lora',Georgia,serif;">TCGA-BRCA</h2>
+              <span class="text-xs bg-teal-50 text-teal-700 border border-teal-200 px-2.5 py-1 rounded-full font-semibold">Public &middot; Non-image</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mb-3">
+              <div class="bg-slate-50 rounded-xl p-3">
+                <div class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-1">Total patients</div>
+                <div class="text-slate-800 text-xl font-bold">1,076</div>
+              </div>
+              <div class="bg-slate-50 rounded-xl p-3">
+                <div class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-1">OS events</div>
+                <div class="text-slate-800 text-xl font-bold">150</div>
+              </div>
+            </div>
+            <dl class="space-y-2 text-sm">
+              <div class="bg-slate-50 rounded-xl p-3">
+                <dt class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-1">Subtype source</dt>
+                <dd class="font-mono text-xs text-teal-700 font-semibold mb-1">PAM50Call_RNAseq</dd>
+                <dd class="text-slate-500 text-xs leading-snug">
+                  From UCSC Xena TCGA hub clinical matrix.
+                  The GDC hub did not provide subtype labels for most patients, so the Xena auxiliary table was required.
+                  Rows restricted to primary tumour samples to avoid tumour-vs-normal conflicts.
+                </dd>
+              </div>
+              <div class="bg-slate-50 rounded-xl p-3">
+                <dt class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-1">Cox model formula</dt>
+                <dd class="font-mono text-xs text-slate-600">age + C(ajcc_stage_simple) + C(subtype_label)</dd>
+              </div>
+              <div class="bg-slate-50 rounded-xl p-3">
+                <dt class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-1">OS follow-up</dt>
+                <dd class="text-slate-600 text-xs">Measured in <strong>days</strong>. 3-year landmark = 1,095 days. 5-year = 1,825 days.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- METABRIC -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-lg font-bold text-slate-800" style="font-family:'Lora',Georgia,serif;">METABRIC</h2>
+              <span class="text-xs bg-teal-50 text-teal-700 border border-teal-200 px-2.5 py-1 rounded-full font-semibold">Public &middot; Non-image</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mb-3">
+              <div class="bg-slate-50 rounded-xl p-3">
+                <div class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-1">Total patients</div>
+                <div class="text-slate-800 text-xl font-bold">2,509</div>
+              </div>
+              <div class="bg-slate-50 rounded-xl p-3">
+                <div class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-1">OS events</div>
+                <div class="text-slate-800 text-xl font-bold">1,144</div>
+              </div>
+            </div>
+            <dl class="space-y-2 text-sm">
+              <div class="bg-slate-50 rounded-xl p-3">
+                <dt class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-1">Subtype source</dt>
+                <dd class="font-mono text-xs text-teal-700 font-semibold mb-1">PAM50_DERIVED_GENEFU_PAM50</dd>
+                <dd class="text-slate-500 text-xs leading-snug">
+                  Derived using the verified genefu R package PAM50 centroids applied to public cBioPortal
+                  Illumina HT-12 v3 microarray expression data.
+                  <strong class="text-slate-700">This replaces the original CLAUDIN_SUBTYPE field</strong>, which did not map to standard PAM50 categories.
+                </dd>
+              </div>
+              <div class="bg-slate-50 rounded-xl p-3">
+                <dt class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-1">Cox model formula</dt>
+                <dd class="font-mono text-xs text-slate-600">age + npi + C(subtype_label)</dd>
+              </div>
+              <div class="bg-slate-50 rounded-xl p-3">
+                <dt class="text-slate-400 text-xs font-bold uppercase tracking-wide mb-1">OS follow-up</dt>
+                <dd class="text-slate-600 text-xs">Measured in <strong>months</strong>. 3-year landmark = 36 months. 5-year = 60 months.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Scientific limitations (from JSON) -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 mb-6">
+          <h2 class="text-lg font-bold text-slate-800 mb-4" style="font-family:'Lora',Georgia,serif;">Scientific limitations</h2>
+          <div class="space-y-3" id="limitations-list">
+            <!-- Populated by JS from JSON -->
+          </div>
+        </div>
+
+        <!-- Treatment confounding box -->
+        <div class="bg-slate-800 text-white rounded-2xl p-6 mb-6">
+          <h2 class="text-lg font-bold text-white mb-3" style="font-family:'Lora',Georgia,serif;">On treatment data and causal inference</h2>
+          <p class="text-slate-300 leading-relaxed mb-3">
+            Treatment fields (chemotherapy, hormone therapy, radiotherapy) are present in both TCGA-BRCA and METABRIC,
+            but they are <strong class="text-white">observational and incomplete</strong>.
+            Patients were not randomly assigned to treatments &mdash;
+            sicker patients typically received different, often more aggressive, treatment.
+          </p>
+          <p class="text-slate-300 leading-relaxed mb-3">
+            This creates <strong class="text-white">treatment confounding</strong>: any naive association between
+            treatment and survival mixes the treatment effect with the underlying prognosis of the patients
+            who received that treatment. You cannot separate the two from observational data without
+            additional causal methods.
+          </p>
+          <p class="text-slate-300 leading-relaxed">
+            Estimating the <em>causal effect</em> of treatment &mdash; rather than its observational association &mdash;
+            is a <strong class="text-white">later-stage question in the BRCAPath-Rx project</strong>.
+            This Stage&nbsp;1 demo does not address it and does not include treatment fields in any model.
+          </p>
+        </div>
+
+        <!-- Meeting-safe statement -->
+        <div class="bg-teal-50 border border-teal-200 rounded-2xl p-6">
+          <h2 class="text-sm font-bold text-teal-800 uppercase tracking-wide mb-3">Meeting-safe description of this demo</h2>
+          <p class="text-teal-900 text-base leading-relaxed italic" style="font-family:'Lora',Georgia,serif;">
+            &ldquo;This is a cohort-specific Stage 1 prognostic demo. It uses a Cox proportional hazards model
+            to rank relative survival risk within two independent breast cancer cohorts using age, clinical,
+            and molecular subtype features. It does not estimate treatment effects, does not adjust for
+            treatment confounding, and does not recommend treatment.&rdquo;
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="bg-white border border-teal-200 text-teal-700 px-3 py-1 rounded-full font-semibold">Prognostic ranking only</span>
+            <span class="bg-white border border-teal-200 text-teal-700 px-3 py-1 rounded-full font-semibold">Observational cohort data</span>
+            <span class="bg-white border border-teal-200 text-teal-700 px-3 py-1 rounded-full font-semibold">No causal claims</span>
+            <span class="bg-white border border-teal-200 text-teal-700 px-3 py-1 rounded-full font-semibold">No treatment recommendations</span>
+          </div>
+        </div>
+
+      </section>
+
+    </div><!-- /app-shell -->
+  </main>
+
+  <!-- ====================================================
+       FOOTER
+  ==================================================== -->
+  <footer class="border-t border-slate-200 bg-white mt-12">
+    <div class="max-w-6xl mx-auto px-5 py-6 text-center text-xs text-slate-400 leading-relaxed">
+      BRCAPath-Rx Stage 1 Prognostic Demo &middot; Public non-image BRCA cohort data only &middot;
+      Static site, GitHub Pages-compatible &middot; No backend required<br>
+      To serve locally: <code class="font-mono bg-slate-100 px-1.5 py-0.5 rounded text-slate-500">python -m http.server 8080</code>
+      &rarr; <code class="font-mono bg-slate-100 px-1.5 py-0.5 rounded text-slate-500">http://localhost:8080</code>
+    </div>
+  </footer>
+
+  <!-- ====================================================
+       JAVASCRIPT
+  ==================================================== -->
+  <script>
+    // ==========================================================
+    // STATE
+    // ==========================================================
+    const state = { activeTab: "demo", cohort: "TCGA-BRCA" };
+
+    // Benchmark time points per cohort (used for 3yr/5yr survival labels)
+    const BENCHMARKS = {
+      "TCGA-BRCA": [
+        { label: "3-year survival", time: 1095 },
+        { label: "5-year survival", time: 1825 }
+      ],
+      "METABRIC": [
+        { label: "3-year survival", time: 36 },
+        { label: "5-year survival", time: 60 }
+      ]
+    };
+
+    // PAM50 plain-language descriptions (for nontechnical supervisor)
+    const SUBTYPE_HINTS = {
+      "Basal":  "Triple-negative-like. Generally highest risk in this model. ER−, PR−, HER2−.",
+      "Her2":   "HER2-enriched. High HER2 expression. Intermediate-to-high risk.",
+      "LumA":   "Luminal A — ER+/HER2−, low proliferation. Generally most favourable prognosis.",
+      "LumB":   "Luminal B — ER+, higher proliferation than Luminal A. Intermediate prognosis.",
+      "Normal": "Normal-like subtype. Resembles normal breast tissue. Rare in these cohorts."
+    };
+
+    let demoData = null;
+    let survivalChart = null;
+    let currentChartCohort = null; // Track which cohort the chart was built for
+
+    // ==========================================================
+    // UTILITIES
+    // ==========================================================
+    function pct(v) { return `${(v * 100).toFixed(1)}%`; }
+    function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
+    function el(id) { return document.getElementById(id); }
+
+    // ==========================================================
+    // TABS
+    // ==========================================================
+    function setupTabs() {
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          state.activeTab = btn.dataset.tab;
+          document.querySelectorAll(".tab-btn").forEach(b => {
+            const active = b === btn;
+            b.classList.toggle("border-teal-600", active);
+            b.classList.toggle("text-teal-700",   active);
+            b.classList.toggle("font-semibold",   active);
+            b.classList.toggle("border-transparent", !active);
+            b.classList.toggle("text-slate-500",  !active);
+          });
+          document.querySelectorAll(".tab-panel").forEach(p => {
+            p.classList.toggle("hidden", p.id !== `tab-${state.activeTab}`);
+          });
+        });
+      });
+    }
+
+    // ==========================================================
+    // MODEL MATH (identical to v1 — verified correct)
+    // ==========================================================
+    function getPayload() {
+      return demoData.cohorts[state.cohort];
+    }
+
+    /**
+     * Build the design row for the Cox linear predictor.
+     * Zero-initialises all terms, then fills in continuous and dummy-coded categorical values.
+     */
+    function buildDesignRow(payload, profile) {
+      const row = {};
+      Object.keys(payload.model.norm_mean).forEach(term => { row[term] = 0; });
+      row["age_at_diagnosis_years"] = Number(profile.age_at_diagnosis_years);
+      if ("npi" in payload.model.norm_mean) {
+        row["npi"] = Number(profile.npi);
+      }
+      // Dummy-code all categorical terms: 1 if this level is selected, 0 otherwise
+      Object.entries(payload.model.categorical_terms).forEach(([fieldName, meta]) => {
+        const selected = profile[fieldName];
+        Object.entries(meta.terms).forEach(([level, term]) => {
+          row[term] = selected === level ? 1 : 0;
+        });
+      });
+      return row;
+    }
+
+    /**
+     * Compute survival curve for a given profile.
+     * Returns {points: [{x, y}], logPartialHazard}.
+     */
+    function computeCurve(payload, profile) {
+      const row = buildDesignRow(payload, profile);
+      const logPH = Object.entries(payload.model.coefficients).reduce((sum, [term, coef]) => {
+        const x    = row[term]                    ?? 0;
+        const mean = payload.model.norm_mean[term] ?? 0;
+        return sum + coef * (x - mean);
+      }, 0);
+      const hr = Math.exp(logPH);
+      const points = payload.model.baseline_survival.map(pt => ({
+        x: pt.time,
+        y: Math.pow(pt.survival, hr)
+      }));
+      return { points, logPartialHazard: logPH };
+    }
+
+    /** Step-function survival lookup: last value at or before targetTime. */
+    function survivalAt(points, t) {
+      let val = points[0]?.y ?? null;
+      for (const pt of points) {
+        if (pt.x > t) break;
+        val = pt.y;
+      }
+      return val;
+    }
+
+    /** Classify risk band from log partial hazard against training percentiles. */
+    function getRiskBand(payload, logPH) {
+      const { low_upper, high_lower } = payload.model.risk_log_partial_hazard_percentiles;
+      if (logPH <= low_upper)  return { label: "Lower",       stateClass: "risk-state-low",  textClass: "risk-text-low",  sub: "Lower relative risk compared to the training cohort." };
+      if (logPH >= high_lower) return { label: "Higher",      stateClass: "risk-state-high", textClass: "risk-text-high", sub: "Higher relative risk compared to the training cohort." };
+      return                          { label: "Typical",     stateClass: "risk-state-mid",  textClass: "risk-text-mid",  sub: "Middle-band relative risk within this cohort." };
+    }
+
+    // ==========================================================
+    // READ PROFILE FROM CONTROLS
+    // ==========================================================
+    function getProfile() {
+      const payload = getPayload();
+      const profile = {
+        age_at_diagnosis_years: Number(el("age-range").value),
+        subtype_label: el("subtype-select").value
+      };
+      if (payload.controls.stage) { profile.ajcc_stage_simple = el("stage-select").value; }
+      if (payload.controls.npi)   { profile.npi = Number(el("npi-range").value); }
+      return profile;
+    }
+
+    function formatProfile(profile) {
+      const age = Number(profile.age_at_diagnosis_years).toFixed(0);
+      if (state.cohort === "TCGA-BRCA") {
+        return `age ${age}, ${profile.subtype_label}, stage ${profile.ajcc_stage_simple}`;
+      }
+      return `age ${age}, ${profile.subtype_label}, NPI ${Number(profile.npi).toFixed(2)}`;
+    }
+
+    // ==========================================================
+    // CHART.JS SURVIVAL CURVE
+    // ==========================================================
+    /** Downsample to at most n points while always keeping the first and last. */
+    function downsample(pts, n = 280) {
+      if (pts.length <= n) return pts;
+      const step = Math.ceil(pts.length / n);
+      return pts.filter((_, i) => i % step === 0 || i === pts.length - 1);
+    }
+
+    function drawChart(selectedPts, referencePts) {
+      const sel = downsample(selectedPts);
+      const ref = downsample(referencePts);
+      const labels   = sel.map(p => p.x);
+      const selData  = sel.map(p => p.y);
+      const refData  = ref.map(p => p.y);
+      const xLabel   = state.cohort === "TCGA-BRCA" ? "Days from diagnosis" : "Months from diagnosis";
+
+      // If chart exists for the same cohort, update in-place (fast, no flash)
+      if (survivalChart && currentChartCohort === state.cohort) {
+        survivalChart.data.labels              = labels;
+        survivalChart.data.datasets[0].data    = selData;
+        survivalChart.data.datasets[1].data    = refData;
+        survivalChart.update("none"); // skip animation for instant response
+        return;
+      }
+
+      // Destroy if cohort switched (axes change)
+      if (survivalChart) { survivalChart.destroy(); survivalChart = null; }
+
+      const ctx = el("survival-chart").getContext("2d");
+      survivalChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels,
+          datasets: [
+            {
+              label: "Selected profile",
+              data: selData,
+              borderColor: "#0f766e",
+              borderWidth: 3,
+              pointRadius: 0,
+              tension: 0,
+              fill: false,
+              borderDash: []
+            },
+            {
+              label: "Typical cohort profile",
+              data: refData,
+              borderColor: "#94a3b8",
+              borderWidth: 2,
+              pointRadius: 0,
+              tension: 0,
+              fill: false,
+              borderDash: [7, 4]
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 200 },
+          interaction: { mode: "index", intersect: false },
+          plugins: {
+            legend: { display: false }, // custom legend is in the HTML above the chart
+            tooltip: {
+              backgroundColor: "rgba(15,23,42,0.85)",
+              padding: 10,
+              callbacks: {
+                title: ctx => {
+                  const t = Math.round(ctx[0].parsed.x);
+                  return state.cohort === "TCGA-BRCA" ? `Day ${t}` : `Month ${t}`;
+                },
+                label: ctx => ` ${ctx.dataset.label}: ${(ctx.parsed.y * 100).toFixed(1)}%`
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: { display: true, text: xLabel, font: { size: 12, family: "Inter" }, color: "#64748b" },
+              ticks: { maxTicksLimit: 7, callback: v => Math.round(v), color: "#94a3b8", font: { size: 11 } },
+              grid:  { color: "#f1f5f9" },
+              border: { color: "#e2e8f0" }
+            },
+            y: {
+              min: 0, max: 1,
+              title: { display: true, text: "Survival probability", font: { size: 12, family: "Inter" }, color: "#64748b" },
+              ticks: { callback: v => `${(v * 100).toFixed(0)}%`, color: "#94a3b8", font: { size: 11 } },
+              grid:  { color: "#f1f5f9" },
+              border: { color: "#e2e8f0" }
+            }
+          }
+        }
+      });
+      currentChartCohort = state.cohort;
+    }
+
+    // ==========================================================
+    // RENDER INTERACTIVE TAB
+    // ==========================================================
+    function renderInteractive() {
+      const payload    = getPayload();
+      const profile    = getProfile();
+      const selected   = computeCurve(payload, profile);
+      const reference  = computeCurve(payload, payload.defaults);
+      const riskBand   = getRiskBand(payload, selected.logPartialHazard);
+      const benchmarks = BENCHMARKS[state.cohort];
+      const s1 = survivalAt(selected.points, benchmarks[0].time);
+      const s2 = survivalAt(selected.points, benchmarks[1].time);
+
+      // Risk card
+      const riskCard = el("risk-card");
+      riskCard.className = `rounded-2xl border shadow-sm p-4 transition-colors ${riskBand.stateClass}`;
+      const riskLbl = el("risk-label");
+      riskLbl.textContent = riskBand.label;
+      riskLbl.className   = `text-2xl font-bold mb-1 ${riskBand.textClass}`;
+      el("risk-sub").textContent = riskBand.sub;
+
+      // Benchmarks
+      el("b1-lbl").textContent = benchmarks[0].label;
+      el("b1-val").textContent = s1 !== null ? pct(s1) : "n/a";
+      el("b2-lbl").textContent = benchmarks[1].label;
+      el("b2-val").textContent = s2 !== null ? pct(s2) : "n/a";
+
+      // C-index
+      el("cindex-display").textContent = payload.c_index.toFixed(3);
+
+      // Source pill
+      el("source-pill").textContent = `Subtype: ${payload.subtype_field_used}`;
+
+      // Subtype hint
+      el("subtype-hint").textContent = SUBTYPE_HINTS[profile.subtype_label] || "";
+
+      // Plain-language interpretation
+      const profStr = formatProfile(profile);
+      const refStr  = formatProfile(payload.defaults);
+      let interp = `Within <strong>${state.cohort}</strong>, the selected profile (${profStr}) falls into the `
+        + `<strong>${riskBand.label.toLowerCase()}</strong> relative-risk band of the current Stage 1 prognostic model.`;
+      if (s2 !== null) {
+        interp += ` Its model-based ${benchmarks[1].label.toLowerCase()} estimate is <strong>${pct(s2)}</strong>.`;
+      }
+      interp += ` The dashed line shows a typical cohort profile (${refStr}).`
+        + ` This is a prognostic ranking estimate only &mdash; not a treatment recommendation.`;
+      el("interpretation").innerHTML = interp;
+
+      // Chart
+      drawChart(selected.points, reference.points);
+    }
+
+    // ==========================================================
+    // POPULATE CONTROLS FOR SELECTED COHORT
+    // ==========================================================
+    function populateControls() {
+      const payload  = getPayload();
+      const controls = payload.controls;
+      const defaults = payload.defaults;
+
+      // Age
+      const ageRange = el("age-range");
+      ageRange.min   = controls.age.min;
+      ageRange.max   = controls.age.max;
+      ageRange.step  = controls.age.step;
+      ageRange.value = defaults.age_at_diagnosis_years;
+      el("age-display").textContent = Math.round(defaults.age_at_diagnosis_years);
+      el("age-min-lbl").textContent = controls.age.min;
+      el("age-max-lbl").textContent = controls.age.max;
+
+      // Subtype
+      const subtypeSel = el("subtype-select");
+      subtypeSel.innerHTML = "";
+      controls.subtype.options.forEach(opt => {
+        const o = document.createElement("option");
+        o.value = opt; o.textContent = opt;
+        subtypeSel.appendChild(o);
+      });
+      subtypeSel.value = defaults.subtype_label;
+
+      // Stage (TCGA only)
+      const stageField = el("stage-field");
+      const stageSel   = el("stage-select");
+      if (controls.stage) {
+        stageField.classList.remove("hidden");
+        stageSel.innerHTML = "";
+        controls.stage.options.forEach(opt => {
+          const o = document.createElement("option");
+          o.value = opt;
+          o.textContent = opt === "X" ? "X / unspecified" : `Stage ${opt}`;
+          stageSel.appendChild(o);
+        });
+        stageSel.value = defaults.ajcc_stage_simple;
+      } else {
+        stageField.classList.add("hidden");
+      }
+
+      // NPI (METABRIC only)
+      const npiField = el("npi-field");
+      const npiRange = el("npi-range");
+      if (controls.npi) {
+        npiField.classList.remove("hidden");
+        npiRange.min   = controls.npi.min;
+        npiRange.max   = controls.npi.max;
+        npiRange.step  = controls.npi.step;
+        npiRange.value = defaults.npi;
+        el("npi-display").textContent = Number(defaults.npi).toFixed(2);
+      } else {
+        npiField.classList.add("hidden");
+      }
+
+      // Cohort note
+      el("cohort-note").textContent = controls.extra_note;
+
+      renderInteractive();
+    }
+
+    // ==========================================================
+    // COHORT TOGGLE BUTTONS
+    // ==========================================================
+    function buildCohortToggle() {
+      const container = el("cohort-toggle");
+      container.innerHTML = "";
+      Object.keys(demoData.cohorts).forEach(name => {
+        const btn = document.createElement("button");
+        btn.textContent    = name;
+        btn.dataset.cohort = name;
+        btn.className = name === state.cohort
+          ? "px-5 py-2 rounded-xl text-sm font-bold bg-teal-700 text-white shadow-sm transition-colors"
+          : "px-5 py-2 rounded-xl text-sm font-semibold bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors";
+        btn.addEventListener("click", () => {
+          state.cohort = name;
+          container.querySelectorAll("button").forEach(b => {
+            const active = b.dataset.cohort === name;
+            b.className = active
+              ? "px-5 py-2 rounded-xl text-sm font-bold bg-teal-700 text-white shadow-sm transition-colors"
+              : "px-5 py-2 rounded-xl text-sm font-semibold bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors";
+          });
+          populateControls();
+        });
+        container.appendChild(btn);
+      });
+    }
+
+    // ==========================================================
+    // WIRE UP ALL CONTROL CHANGE LISTENERS
+    // ==========================================================
+    function wireControls() {
+      // Age slider
+      el("age-range").addEventListener("input", e => {
+        el("age-display").textContent = Math.round(e.target.value);
+        renderInteractive();
+      });
+
+      // NPI slider
+      el("npi-range").addEventListener("input", e => {
+        el("npi-display").textContent = Number(e.target.value).toFixed(2);
+        renderInteractive();
+      });
+
+      // Selects
+      ["subtype-select", "stage-select"].forEach(id => {
+        el(id).addEventListener("change", renderInteractive);
+      });
+    }
+
+    // ==========================================================
+    // FILL STATIC CONTENT FROM JSON
+    // ==========================================================
+    function fillStaticContent() {
+      const tcga = demoData.data_sources.tcga_brca;
+      const met  = demoData.data_sources.metabric;
+      const ci   = demoData.c_index_explainer;
+
+      // Hero
+      el("hero-tcga-cindex").textContent   = ci.tcga_brca.toFixed(3);
+      el("hero-tcga-n").textContent        = tcga.cox_complete_cases.toLocaleString();
+      el("hero-met-cindex").textContent    = ci.metabric.toFixed(3);
+      el("hero-met-n").textContent         = met.cox_complete_cases.toLocaleString();
+      el("hero-tcga-subtype").textContent  = tcga.subtype_field_used;
+      el("hero-met-subtype").textContent   = met.subtype_field_used;
+
+      // C-index tab
+      if (el("cindex-plain-text") && ci.plain_language) {
+        el("cindex-plain-text").textContent = ci.plain_language;
+      }
+      el("cindex-tcga-badge").textContent = ci.tcga_brca.toFixed(3);
+      el("cindex-met-badge").textContent  = ci.metabric.toFixed(3);
+
+      // Limitations tab
+      const limList = el("limitations-list");
+      limList.innerHTML = "";
+      demoData.limitations.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "flex items-start gap-3 bg-slate-50 rounded-xl p-3";
+        div.innerHTML = `<span class="text-amber-500 text-lg mt-0.5 flex-shrink-0">&#9888;</span>`
+          + `<p class="text-sm text-slate-600 leading-relaxed">${item}</p>`;
+        limList.appendChild(div);
+      });
+    }
+
+    // ==========================================================
+    // BOOT
+    // ==========================================================
+    async function boot() {
+      setupTabs();
+
+      try {
+        const res = await fetch("./demo_predictions.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status} — could not load demo_predictions.json`);
+        demoData = await res.json();
+
+        fillStaticContent();
+        buildCohortToggle();
+        wireControls();
+        populateControls(); // also calls renderInteractive()
+
+        el("loading").hidden = true;
+        el("app-shell").classList.remove("hidden");
+      } catch (err) {
+        el("loading").hidden = true;
+        const errBox = el("load-error");
+        errBox.classList.remove("hidden");
+        el("error-msg").textContent = err.message;
+      }
+    }
+
+    boot();
+  </script>
+</body>
 </html>
