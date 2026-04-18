@@ -1,0 +1,8 @@
+{
+  "final_url": "https://api.gdc.cancer.gov/cases?filters=%7B%22op%22%3A+%22in%22%2C+%22content%22%3A+%7B%22field%22%3A+%22project.project_id%22%2C+%22value%22%3A+%5B%22TCGA-BRCA%22%5D%7D%7D&size=0&facets=diagnoses.treatments.treatment_type%2Cdiagnoses.treatments.treatment_intent_type%2Cfollow_ups.timepoint_category",
+  "params": {
+    "filters": "{\"op\": \"in\", \"content\": {\"field\": \"project.project_id\", \"value\": [\"TCGA-BRCA\"]}}",
+    "size": 0,
+    "facets": "diagnoses.treatments.treatment_type,diagnoses.treatments.treatment_intent_type,follow_ups.timepoint_category"
+  }
+}

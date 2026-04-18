@@ -1,0 +1,18 @@
+treatment_source_audit_run_id	summary_section	summary_metric	summary_value	notes
+20260415T233526Z	official_target	gdc_data_release	Data Release 45.0 - December 04, 2025	Live GDC API status target used for reconciliation.
+20260415T233526Z	official_target	tcga_brca_case_count	1098	Live cases API total.
+20260415T233526Z	official_target	clinical_category_discovery	"{""Clinical Supplement"": 1183, ""Pathology Report"": 1105}"	Broader Clinical-category discovery before narrowing to treatment-relevant layers.
+20260415T233526Z	official_target	biospecimen_category_discovery	"{""Biospecimen Supplement"": 2205, ""Slide Image"": 3112}"	Broader Biospecimen-category discovery before narrowing to treatment-relevant layers.
+20260415T233526Z	reconciliation	clinical_supplement_live_count	1183	Should reconcile to local supplement metadata and manifest/download counts.
+20260415T233526Z	reconciliation	biospecimen_supplement_live_count	2205	Should reconcile to local supplement metadata and manifest/download counts.
+20260415T233526Z	reconciliation	clinical_supplement_live_format_counts	"{""bcr biotab"": 9, ""bcr omf xml"": 77, ""bcr xml"": 1097}"	Live official format split.
+20260415T233526Z	reconciliation	biospecimen_supplement_live_format_counts	"{""bcr biotab"": 10, ""bcr ssf xml"": 1097, ""bcr xml"": 1098}"	Live official format split.
+20260415T233526Z	local_findings	clinical_supplement_download_status	downloaded completely	Local source run log validation counts: clinical manifest/download rows = 1183.
+20260415T233526Z	local_findings	biospecimen_supplement_download_status	downloaded completely	Local source run log validation counts: biospecimen manifest/download rows = 2205.
+20260415T233526Z	local_findings	clinical_biotab_parse_status	parsed	Parsed table count = 9.
+20260415T233526Z	local_findings	biospecimen_biotab_parse_status	partially_parsed	Parsed table count = 8; excluded biotab file count = 2.
+20260415T233526Z	local_findings	clinical_xml_treatment_parse_identified	no	Dedicated XML treatment parse filename search returned 0 matches. Current saved XML outputs are endpoint/follow-up focused.
+20260415T233526Z	local_findings	indexed_clinical_export_identified	no	Dedicated indexed clinical export filename search returned 0 matches.
+20260415T233526Z	local_findings	local_pathology_pdf_count	0	PDF count found under local raw GDC tree.
+20260415T233526Z	interpretation	main_limitation	download coverage is strong for supplement files; remaining limitation is source exploitation plus some true source sparsity	Current treatment-prep already uses parsed clinical biotabs, yet 278 patients still have no drug or radiation rows. That burden is not a supplement download failure.
+20260415T233526Z	recommendation	best_next_step	compare parsed clinical treatment biotabs against the indexed GDC clinical treatment surface first	If that still leaves material treatment evidence unexplained, inspect whether downloaded clinical BCR XML or BCR OMF XML add treatment detail beyond the already parsed biotabs and indexed clinical surface.

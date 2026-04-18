@@ -1,0 +1,49 @@
+treatment_groups_descriptive_v1_run_id	treatment_group_v1	field_name	row_count	non_missing_count	missing_like_count	missing_like_fraction	distinct_non_missing_count	notes
+20260414T215230Z	no_drug_record	age_at_diagnosis	317	317	0	0.0000	62	
+20260414T215230Z	no_drug_record	er_status_by_ihc	317	302	15	0.0473	3	
+20260414T215230Z	no_drug_record	pr_status_by_ihc	317	302	15	0.0473	3	
+20260414T215230Z	no_drug_record	her2_status_by_ihc	317	226	91	0.2871	4	Non-missing coverage falls below the descriptive threshold (0.85).
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	317	313	4	0.0126	11	
+20260414T215230Z	no_drug_record	histological_type	317	316	1	0.0032	7	
+20260414T215230Z	single_chemotherapy	age_at_diagnosis	231	231	0	0.0000	50	
+20260414T215230Z	single_chemotherapy	er_status_by_ihc	231	224	7	0.0303	2	
+20260414T215230Z	single_chemotherapy	pr_status_by_ihc	231	223	8	0.0346	3	
+20260414T215230Z	single_chemotherapy	her2_status_by_ihc	231	206	25	0.1082	4	
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	231	229	2	0.0087	11	
+20260414T215230Z	single_chemotherapy	histological_type	231	231	0	0.0000	7	
+20260414T215230Z	single_hormone_therapy	age_at_diagnosis	189	189	0	0.0000	46	
+20260414T215230Z	single_hormone_therapy	er_status_by_ihc	189	179	10	0.0529	2	
+20260414T215230Z	single_hormone_therapy	pr_status_by_ihc	189	179	10	0.0529	2	
+20260414T215230Z	single_hormone_therapy	her2_status_by_ihc	189	167	22	0.1164	4	
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	189	188	1	0.0053	10	
+20260414T215230Z	single_hormone_therapy	histological_type	189	189	0	0.0000	5	
+20260414T215230Z	single_targeted_therapy	age_at_diagnosis	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_targeted_therapy	er_status_by_ihc	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_targeted_therapy	pr_status_by_ihc	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_targeted_therapy	her2_status_by_ihc	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_targeted_therapy	ajcc_pathologic_tumor_stage	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_targeted_therapy	histological_type	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_immunotherapy	age_at_diagnosis	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_immunotherapy	er_status_by_ihc	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_immunotherapy	pr_status_by_ihc	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_immunotherapy	her2_status_by_ihc	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_immunotherapy	ajcc_pathologic_tumor_stage	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_immunotherapy	histological_type	0	0	0	0.0000	0	No patients assigned to this provisional group in the current run.
+20260414T215230Z	single_ancillary_or_other	age_at_diagnosis	3	3	0	0.0000	3	
+20260414T215230Z	single_ancillary_or_other	er_status_by_ihc	3	3	0	0.0000	2	
+20260414T215230Z	single_ancillary_or_other	pr_status_by_ihc	3	3	0	0.0000	2	
+20260414T215230Z	single_ancillary_or_other	her2_status_by_ihc	3	3	0	0.0000	2	
+20260414T215230Z	single_ancillary_or_other	ajcc_pathologic_tumor_stage	3	3	0	0.0000	3	
+20260414T215230Z	single_ancillary_or_other	histological_type	3	3	0	0.0000	2	
+20260414T215230Z	mixed_multi_type	age_at_diagnosis	355	355	0	0.0000	50	
+20260414T215230Z	mixed_multi_type	er_status_by_ihc	355	338	17	0.0479	2	
+20260414T215230Z	mixed_multi_type	pr_status_by_ihc	355	338	17	0.0479	2	
+20260414T215230Z	mixed_multi_type	her2_status_by_ihc	355	315	40	0.1127	4	
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	355	351	4	0.0113	12	
+20260414T215230Z	mixed_multi_type	histological_type	355	355	0	0.0000	6	
+20260414T215230Z	missing_type_only	age_at_diagnosis	2	2	0	0.0000	2	
+20260414T215230Z	missing_type_only	er_status_by_ihc	2	2	0	0.0000	1	
+20260414T215230Z	missing_type_only	pr_status_by_ihc	2	2	0	0.0000	1	
+20260414T215230Z	missing_type_only	her2_status_by_ihc	2	2	0	0.0000	2	
+20260414T215230Z	missing_type_only	ajcc_pathologic_tumor_stage	2	2	0	0.0000	2	
+20260414T215230Z	missing_type_only	histological_type	2	2	0	0.0000	2	

@@ -1,0 +1,84 @@
+drug_name_normalization_v1_run_id	provisional_normalized_drug_name	provisional_drug_class	class_mapping_rule	class_mapping_confidence	manual_review_needed	notes
+20260415T045844Z	5-fluorouracil	antimetabolite	direct_single_agent_class_lookup	confident	no	These names are mapped directly to antimetabolite class in v1.
+20260415T045844Z	Adriamycin, cytoxan, avastin	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	BEVACIZUMAB (AVASTIN)/PLACEBO PROVIDED BY STUDY	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	Bevacizumab or Placebo	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	Chemo, NOS	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	Cytoxan and Taxotere	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	Hormone, NOS	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	Not otherwise specified	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	TC	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	TCH	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	Taxane	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	Taxotere/Cytoxan	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	Vincristine	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	[Not Available]	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	[Unknown]	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	ac	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	adriamycin+cuclophosphamide	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	adriamycin+cyclophosphamid	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	adriamycin+cyclophosphamide	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	adrimicin+cyclophosphamide	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	adrimycin+cyclophosphamide	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	ae-37	immunotherapy	provisional_review_needed_class_lookup	review_needed	yes	These names are provisionally treated as immunotherapy but remain flagged for manual review in v1.
+20260415T045844Z	albumin-bound paclitaxel	taxane	direct_single_agent_class_lookup	confident	no	These names are mapped directly to taxane class in v1.
+20260415T045844Z	anastrozole	endocrine_aromatase_inhibitor	direct_single_agent_class_lookup	confident	no	These names are mapped directly to aromatase-inhibitor class in v1.
+20260415T045844Z	bevacizumab	unknown_or_review_needed	outside_current_class_vocabulary_review_needed	review_needed	yes	These normalized names are preserved, but v1 does not force them into a narrower provisional class.
+20260415T045844Z	capecitabine	antimetabolite	direct_single_agent_class_lookup	confident	no	These names are mapped directly to antimetabolite class in v1.
+20260415T045844Z	carboplatin	platinum	direct_single_agent_class_lookup	confident	no	These names are mapped directly to platinum class in v1.
+20260415T045844Z	cisplatin	platinum	direct_single_agent_class_lookup	confident	no	These names are mapped directly to platinum class in v1.
+20260415T045844Z	clodronate	ancillary_supportive	direct_supportive_agent_class_lookup	confident	no	These names are mapped directly to ancillary/supportive class in v1.
+20260415T045844Z	cyclophosphamide	alkylating_agent	direct_single_agent_class_lookup	confident	no	These names are mapped directly to alkylating-agent class in v1.
+20260415T045844Z	cyclophosphamide+methotrexatum+fluorouracillum	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	denosumab	ancillary_supportive	direct_supportive_agent_class_lookup	confident	no	These names are mapped directly to ancillary/supportive class in v1.
+20260415T045844Z	docetaxel	taxane	direct_single_agent_class_lookup	confident	no	These names are mapped directly to taxane class in v1.
+20260415T045844Z	doxorubicin	anthracycline	direct_single_agent_class_lookup	confident	no	These names are mapped directly to anthracycline class in v1.
+20260415T045844Z	doxorubicin+ cyclophosphamide	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	doxorubicin+cyclophosphamid	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	doxorubicine cyclophosphamide tamoxifen	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	doxorubicine+cyclophosphamide	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	doxorubicine+cyclophosphamide+tamoxifen	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	e-75	immunotherapy	provisional_review_needed_class_lookup	review_needed	yes	These names are provisionally treated as immunotherapy but remain flagged for manual review in v1.
+20260415T045844Z	epirubicin	anthracycline	direct_single_agent_class_lookup	confident	no	These names are mapped directly to anthracycline class in v1.
+20260415T045844Z	etoposide	other_cytotoxic	direct_single_agent_class_lookup	confident	no	These names are mapped directly to other-cytotoxic class in v1.
+20260415T045844Z	everolimus	unknown_or_review_needed	outside_current_class_vocabulary_review_needed	review_needed	yes	These normalized names are preserved, but v1 does not force them into a narrower provisional class.
+20260415T045844Z	exemestane	endocrine_aromatase_inhibitor	direct_single_agent_class_lookup	confident	no	These names are mapped directly to aromatase-inhibitor class in v1.
+20260415T045844Z	fulvestrant	endocrine_other	direct_single_agent_class_lookup	confident	no	These names are mapped directly to endocrine-other class in v1.
+20260415T045844Z	gemcitabine	antimetabolite	direct_single_agent_class_lookup	confident	no	These names are mapped directly to antimetabolite class in v1.
+20260415T045844Z	goserelin	endocrine_other	direct_single_agent_class_lookup	confident	no	These names are mapped directly to endocrine-other class in v1.
+20260415T045844Z	ibandronate	ancillary_supportive	direct_supportive_agent_class_lookup	confident	no	These names are mapped directly to ancillary/supportive class in v1.
+20260415T045844Z	ifosfamide	alkylating_agent	direct_single_agent_class_lookup	confident	no	These names are mapped directly to alkylating-agent class in v1.
+20260415T045844Z	ixabepilone	other_cytotoxic	direct_single_agent_class_lookup	confident	no	These names are mapped directly to other-cytotoxic class in v1.
+20260415T045844Z	lapatinib	her2_targeted	direct_single_agent_class_lookup	confident	no	These names are mapped directly to HER2-targeted class in v1.
+20260415T045844Z	letrozole	endocrine_aromatase_inhibitor	direct_single_agent_class_lookup	confident	no	These names are mapped directly to aromatase-inhibitor class in v1.
+20260415T045844Z	leuprolide	endocrine_other	direct_single_agent_class_lookup	confident	no	These names are mapped directly to endocrine-other class in v1.
+20260415T045844Z	liposomal doxorubicin	anthracycline	direct_single_agent_class_lookup	confident	no	These names are mapped directly to anthracycline class in v1.
+20260415T045844Z	megestrol acetate	endocrine_other	direct_single_agent_class_lookup	confident	no	These names are mapped directly to endocrine-other class in v1.
+20260415T045844Z	mesna	ancillary_supportive	direct_supportive_agent_class_lookup	confident	no	These names are mapped directly to ancillary/supportive class in v1.
+20260415T045844Z	metformin	unknown_or_review_needed	outside_current_class_vocabulary_review_needed	review_needed	yes	These normalized names are preserved, but v1 does not force them into a narrower provisional class.
+20260415T045844Z	methotrexate	antimetabolite	direct_single_agent_class_lookup	confident	no	These names are mapped directly to antimetabolite class in v1.
+20260415T045844Z	methotrexate+5 fluorouracil+cyclophosphamide	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	mitomycin	other_cytotoxic	direct_single_agent_class_lookup	confident	no	These names are mapped directly to other-cytotoxic class in v1.
+20260415T045844Z	mitoxantrone	other_cytotoxic	direct_single_agent_class_lookup	confident	no	These names are mapped directly to other-cytotoxic class in v1.
+20260415T045844Z	paclitaxel	taxane	direct_single_agent_class_lookup	confident	no	These names are mapped directly to taxane class in v1.
+20260415T045844Z	palonosetron	ancillary_supportive	direct_supportive_agent_class_lookup	confident	no	These names are mapped directly to ancillary/supportive class in v1.
+20260415T045844Z	pamidronate	ancillary_supportive	direct_supportive_agent_class_lookup	confident	no	These names are mapped directly to ancillary/supportive class in v1.
+20260415T045844Z	pegfilgrastim	ancillary_supportive	direct_supportive_agent_class_lookup	confident	no	These names are mapped directly to ancillary/supportive class in v1.
+20260415T045844Z	pemetrexed	antimetabolite	direct_single_agent_class_lookup	confident	no	These names are mapped directly to antimetabolite class in v1.
+20260415T045844Z	poly e	immunotherapy	provisional_review_needed_class_lookup	review_needed	yes	These names are provisionally treated as immunotherapy but remain flagged for manual review in v1.
+20260415T045844Z	prednisone	ancillary_supportive	direct_supportive_agent_class_lookup	confident	no	These names are mapped directly to ancillary/supportive class in v1.
+20260415T045844Z	rituximab	immunotherapy	provisional_review_needed_class_lookup	review_needed	yes	These names are provisionally treated as immunotherapy but remain flagged for manual review in v1.
+20260415T045844Z	tamoxifen	endocrine_serm	direct_single_agent_class_lookup	confident	no	These names are mapped directly to endocrine SERM class in v1.
+20260415T045844Z	tamoxiphen+anastrazolum	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	tamoxiphene+anastrozolum	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	tamoxiphene+leuporeline+gosereline	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	taxol+adriamycin+cyclophosphamide+herceptin	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	tc	unknown_or_review_needed	no_supported_v1_class_assignment	review_needed	yes	V1 preserves this normalized name but does not force it into a narrower provisional class.
+20260415T045844Z	tesetaxel	taxane	direct_single_agent_class_lookup	confident	no	These names are mapped directly to taxane class in v1.
+20260415T045844Z	toremifene	endocrine_serm	direct_single_agent_class_lookup	confident	no	These names are mapped directly to endocrine SERM class in v1.
+20260415T045844Z	trabectedin	other_cytotoxic	direct_single_agent_class_lookup	confident	no	These names are mapped directly to other-cytotoxic class in v1.
+20260415T045844Z	trastuzumab	her2_targeted	direct_single_agent_class_lookup	confident	no	These names are mapped directly to HER2-targeted class in v1.
+20260415T045844Z	triptorelin	endocrine_other	direct_single_agent_class_lookup	confident	no	These names are mapped directly to endocrine-other class in v1.
+20260415T045844Z	vinblastine	other_cytotoxic	direct_single_agent_class_lookup	confident	no	These names are mapped directly to other-cytotoxic class in v1.
+20260415T045844Z	vinorelbine	other_cytotoxic	direct_single_agent_class_lookup	confident	no	These names are mapped directly to other-cytotoxic class in v1.
+20260415T045844Z	zoledronic acid	ancillary_supportive	direct_supportive_agent_class_lookup	confident	no	These names are mapped directly to ancillary/supportive class in v1.

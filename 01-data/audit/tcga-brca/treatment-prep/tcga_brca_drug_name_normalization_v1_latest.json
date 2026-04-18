@@ -1,0 +1,23 @@
+{
+  "updated_at_utc": "2026-04-15T05:01:52Z",
+  "drug_name_normalization_v1_run_id": "20260415T050152Z",
+  "patient_treatment_profile_v1_run_id": "20260414T200843Z",
+  "patient_treatment_grouping_v1_run_id": "20260414T210420Z",
+  "treatment_os_overlap_v1_run_id": "20260414T172924Z",
+  "os_endpoint_v1_run_id": "20260414T162349Z",
+  "clinical_biotab_parse_run_id": "20260412T010932Z",
+  "clinical_source_run_id": "20260412T000556Z",
+  "baseline_model_input_v1_run_id": "20260414T013108Z",
+  "cohort_v1_build_id": "20260413T202134Z",
+  "processed_run_directory": "01-data/processed/tcga-brca/treatment-prep/drug_name_normalization_v1_runs/20260415T050152Z",
+  "audit_run_directory": "01-data/audit/tcga-brca/treatment-prep/drug_name_normalization_v1_runs/20260415T050152Z",
+  "patient_drug_class_profile_v1_tsv": "01-data/processed/tcga-brca/treatment-prep/drug_name_normalization_v1_runs/20260415T050152Z/patient_drug_class_profile_v1.tsv",
+  "drug_name_inventory_v1_tsv": "01-data/audit/tcga-brca/treatment-prep/drug_name_normalization_v1_runs/20260415T050152Z/drug_name_inventory_v1.tsv",
+  "drug_name_normalization_map_v1_tsv": "01-data/audit/tcga-brca/treatment-prep/drug_name_normalization_v1_runs/20260415T050152Z/drug_name_normalization_map_v1.tsv",
+  "drug_name_class_map_v1_tsv": "01-data/audit/tcga-brca/treatment-prep/drug_name_normalization_v1_runs/20260415T050152Z/drug_name_class_map_v1.tsv",
+  "drug_name_normalization_v1_summary_tsv": "01-data/audit/tcga-brca/treatment-prep/drug_name_normalization_v1_runs/20260415T050152Z/drug_name_normalization_v1_summary.tsv",
+  "run_log_json": "01-data/audit/tcga-brca/treatment-prep/drug_name_normalization_v1_runs/20260415T050152Z/run_log.json",
+  "patient_treatment_profile_v1_latest_json": "01-data/audit/tcga-brca/treatment-prep/tcga_brca_patient_treatment_profile_v1_latest.json",
+  "patient_treatment_grouping_v1_latest_json": "01-data/audit/tcga-brca/treatment-prep/tcga_brca_patient_treatment_grouping_v1_latest.json",
+  "clinical_biotabs_latest_json": "01-data/audit/tcga-brca/variables/tcga_brca_clinical_biotabs_latest.json"
+}

@@ -1,0 +1,145 @@
+{
+  "data": {
+    "hits": [],
+    "aggregations": {
+      "follow_ups.timepoint_category": {
+        "buckets": [
+          {
+            "doc_count": 1096,
+            "key": "follow-up"
+          },
+          {
+            "doc_count": 1095,
+            "key": "last contact"
+          },
+          {
+            "doc_count": 96,
+            "key": "post initial treatment"
+          },
+          {
+            "key": "_missing",
+            "doc_count": 2
+          }
+        ]
+      },
+      "diagnoses.treatments.treatment_intent_type": {
+        "buckets": [
+          {
+            "doc_count": 824,
+            "key": "adjuvant"
+          },
+          {
+            "doc_count": 1096,
+            "key": "first-line therapy"
+          },
+          {
+            "doc_count": 56,
+            "key": "re-excision"
+          },
+          {
+            "doc_count": 4,
+            "key": "palliative"
+          },
+          {
+            "doc_count": 7,
+            "key": "not reported"
+          },
+          {
+            "doc_count": 2,
+            "key": "neoadjuvant"
+          },
+          {
+            "doc_count": 2,
+            "key": "maintenance therapy"
+          },
+          {
+            "doc_count": 1,
+            "key": "prevention"
+          },
+          {
+            "key": "_missing",
+            "doc_count": 2
+          }
+        ]
+      },
+      "diagnoses.treatments.treatment_type": {
+        "buckets": [
+          {
+            "doc_count": 583,
+            "key": "chemotherapy"
+          },
+          {
+            "doc_count": 1096,
+            "key": "surgery, nos"
+          },
+          {
+            "doc_count": 589,
+            "key": "radiation therapy, nos"
+          },
+          {
+            "doc_count": 521,
+            "key": "hormone therapy"
+          },
+          {
+            "doc_count": 503,
+            "key": "radiation, external beam"
+          },
+          {
+            "doc_count": 367,
+            "key": "pharmaceutical therapy, nos"
+          },
+          {
+            "doc_count": 26,
+            "key": "immunotherapy (including vaccines)"
+          },
+          {
+            "doc_count": 30,
+            "key": "targeted molecular therapy"
+          },
+          {
+            "doc_count": 22,
+            "key": "ancillary treatment"
+          },
+          {
+            "doc_count": 13,
+            "key": "bisphosphonate therapy"
+          },
+          {
+            "doc_count": 1,
+            "key": "radiation, stereotactic/gamma knife/srs"
+          },
+          {
+            "doc_count": 1,
+            "key": "brachytherapy, high dose"
+          },
+          {
+            "doc_count": 1,
+            "key": "brachytherapy, nos"
+          },
+          {
+            "doc_count": 1,
+            "key": "radiation, implants"
+          },
+          {
+            "doc_count": 1,
+            "key": "radiation, radioisotope"
+          },
+          {
+            "key": "_missing",
+            "doc_count": 1
+          }
+        ]
+      }
+    },
+    "pagination": {
+      "count": 0,
+      "total": 1098,
+      "size": 0,
+      "from": 0,
+      "sort": "",
+      "page": 1,
+      "pages": 1098
+    }
+  },
+  "warnings": {}
+}

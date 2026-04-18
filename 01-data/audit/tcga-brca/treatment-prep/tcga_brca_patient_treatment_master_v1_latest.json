@@ -1,0 +1,18 @@
+{
+  "updated_at_utc": "2026-04-16T01:46:27Z",
+  "patient_treatment_master_v1_run_id": "20260416T014627Z",
+  "patient_treatment_profile_v1_run_id": "20260414T200843Z",
+  "indexed_clinical_vs_local_treatment_v1_run_id": "20260416T004139Z",
+  "treatment_source_audit_run_id": "20260415T233526Z",
+  "gdc_data_release": "Data Release 45.0 - December 04, 2025",
+  "gdc_tag": "8.3.1",
+  "processed_run_directory": "01-data/processed/tcga-brca/treatment-prep/patient_treatment_master_v1_runs/20260416T014627Z",
+  "audit_run_directory": "01-data/audit/tcga-brca/treatment-prep/patient_treatment_master_v1_runs/20260416T014627Z",
+  "patient_treatment_master_v1_tsv": "01-data/processed/tcga-brca/treatment-prep/patient_treatment_master_v1_runs/20260416T014627Z/patient_treatment_master_v1.tsv",
+  "patient_treatment_master_v1_source_audit_tsv": "01-data/audit/tcga-brca/treatment-prep/patient_treatment_master_v1_runs/20260416T014627Z/patient_treatment_master_v1_source_audit.tsv",
+  "patient_treatment_master_v1_summary_tsv": "01-data/audit/tcga-brca/treatment-prep/patient_treatment_master_v1_runs/20260416T014627Z/patient_treatment_master_v1_summary.tsv",
+  "patient_treatment_master_v1_missingness_tsv": "01-data/audit/tcga-brca/treatment-prep/patient_treatment_master_v1_runs/20260416T014627Z/patient_treatment_master_v1_missingness.tsv",
+  "run_log_json": "01-data/audit/tcga-brca/treatment-prep/patient_treatment_master_v1_runs/20260416T014627Z/run_log.json",
+  "patient_treatment_profile_latest_json": "01-data/audit/tcga-brca/treatment-prep/tcga_brca_patient_treatment_profile_v1_latest.json",
+  "indexed_clinical_vs_local_treatment_latest_json": "01-data/audit/tcga-brca/source/tcga_brca_indexed_clinical_vs_local_treatment_v1_latest.json"
+}

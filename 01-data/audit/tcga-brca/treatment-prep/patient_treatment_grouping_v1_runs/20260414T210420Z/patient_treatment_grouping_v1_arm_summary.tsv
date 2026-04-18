@@ -1,0 +1,9 @@
+patient_treatment_grouping_v1_run_id	group_order	treatment_group_v1	patient_count	patient_fraction_of_cohort	os_event_count	os_event_fraction_within_group	manual_review_count	manual_review_fraction_within_group	radiation_overlap_count	radiation_overlap_fraction_within_group	regimen_context_count	regimen_context_fraction_within_group	treatment_timing_count	treatment_timing_fraction_within_group	notes
+20260414T210420Z	1	no_drug_record	317	0.2890	93	0.2934	0	0.0000	39	0.1230	11	0.0347	36	0.1136	
+20260414T210420Z	2	single_chemotherapy	231	0.2106	14	0.0606	0	0.0000	132	0.5714	122	0.5281	230	0.9957	
+20260414T210420Z	3	single_hormone_therapy	189	0.1723	12	0.0635	0	0.0000	96	0.5079	105	0.5556	186	0.9841	
+20260414T210420Z	4	single_targeted_therapy	0	0.0000	0	0.0000	0	0.0000	0	0.0000	0	0.0000	0	0.0000	No patients mapped to this provisional treatment group in the reviewed run.
+20260414T210420Z	5	single_immunotherapy	0	0.0000	0	0.0000	0	0.0000	0	0.0000	0	0.0000	0	0.0000	No patients mapped to this provisional treatment group in the reviewed run.
+20260414T210420Z	6	single_ancillary_or_other	3	0.0027	0	0.0000	0	0.0000	2	0.6667	2	0.6667	3	1.0000	
+20260414T210420Z	7	mixed_multi_type	355	0.3236	33	0.0930	355	1.0000	258	0.7268	227	0.6394	352	0.9915	
+20260414T210420Z	8	missing_type_only	2	0.0018	0	0.0000	2	1.0000	1	0.5000	0	0.0000	2	1.0000	

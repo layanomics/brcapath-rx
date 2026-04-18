@@ -1,0 +1,12 @@
+treatment_groups_descriptive_v1_run_id	treatment_group_v1	summary_level	group_patient_count	manual_review_count	manual_review_fraction	conflict_type	conflict_type_count	conflict_type_fraction_within_manual_review	notes
+20260414T215230Z	no_drug_record	group_total	317	0	0.0000				No manual-review-required patients remain in this provisional group.
+20260414T215230Z	single_chemotherapy	group_total	231	0	0.0000				No manual-review-required patients remain in this provisional group.
+20260414T215230Z	single_hormone_therapy	group_total	189	0	0.0000				No manual-review-required patients remain in this provisional group.
+20260414T215230Z	single_targeted_therapy	group_total	0	0	0.0000				No manual-review-required patients remain in this provisional group.
+20260414T215230Z	single_immunotherapy	group_total	0	0	0.0000				No manual-review-required patients remain in this provisional group.
+20260414T215230Z	single_ancillary_or_other	group_total	3	0	0.0000				No manual-review-required patients remain in this provisional group.
+20260414T215230Z	mixed_multi_type	group_total	355	355	1.0000				Manual-review burden spans the full provisional group.
+20260414T215230Z	mixed_multi_type	conflict_type	355	355	1.0000	mixed_multi_type_with_provisional_dominant	306	0.8620	Conflict subtype count carried forward from patient_treatment_grouping_v1_conflict_audit.tsv.
+20260414T215230Z	mixed_multi_type	conflict_type	355	355	1.0000	mixed_multi_type_tied_dominant	49	0.1380	Conflict subtype count carried forward from patient_treatment_grouping_v1_conflict_audit.tsv.
+20260414T215230Z	missing_type_only	group_total	2	2	1.0000				Manual-review burden spans the full provisional group.
+20260414T215230Z	missing_type_only	conflict_type	2	2	1.0000	missing_type_only	2	1.0000	Conflict subtype count carried forward from patient_treatment_grouping_v1_conflict_audit.tsv.

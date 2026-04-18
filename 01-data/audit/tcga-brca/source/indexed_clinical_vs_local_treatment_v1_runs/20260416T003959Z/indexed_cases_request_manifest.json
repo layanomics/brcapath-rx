@@ -1,0 +1,34 @@
+{
+  "endpoint": "https://api.gdc.cancer.gov/cases",
+  "project_id": "TCGA-BRCA",
+  "filters": {
+    "op": "in",
+    "content": {
+      "field": "project.project_id",
+      "value": [
+        "TCGA-BRCA"
+      ]
+    }
+  },
+  "fields": [
+    "submitter_id",
+    "case_id",
+    "diagnoses.submitter_id",
+    "diagnoses.prior_treatment",
+    "diagnoses.treatments.submitter_id",
+    "diagnoses.treatments.treatment_type",
+    "diagnoses.treatments.treatment_or_therapy",
+    "diagnoses.treatments.treatment_intent_type",
+    "diagnoses.treatments.therapeutic_agents",
+    "diagnoses.treatments.regimen_or_line_of_therapy",
+    "diagnoses.treatments.days_to_treatment_start",
+    "diagnoses.treatments.days_to_treatment_end",
+    "diagnoses.treatments.reason_treatment_not_given",
+    "follow_ups.submitter_id",
+    "follow_ups.timepoint_category",
+    "follow_ups.treatment_emergent_adverse_event",
+    "follow_ups.hormone_replacement_therapy_type"
+  ],
+  "sort": "submitter_id:asc",
+  "page_size": 200
+}

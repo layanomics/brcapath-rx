@@ -1,0 +1,49 @@
+{
+  "data": {
+    "hits": [],
+    "aggregations": {
+      "data_type": {
+        "buckets": [
+          {
+            "doc_count": 1183,
+            "key": "Clinical Supplement"
+          },
+          {
+            "doc_count": 1105,
+            "key": "Pathology Report"
+          }
+        ]
+      },
+      "data_format": {
+        "buckets": [
+          {
+            "doc_count": 1105,
+            "key": "pdf"
+          },
+          {
+            "doc_count": 1097,
+            "key": "bcr xml"
+          },
+          {
+            "doc_count": 77,
+            "key": "bcr omf xml"
+          },
+          {
+            "doc_count": 9,
+            "key": "bcr biotab"
+          }
+        ]
+      }
+    },
+    "pagination": {
+      "count": 0,
+      "total": 2288,
+      "size": 0,
+      "from": 0,
+      "sort": "",
+      "page": 1,
+      "pages": 2288
+    }
+  },
+  "warnings": {}
+}

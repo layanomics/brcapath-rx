@@ -1,0 +1,8 @@
+{
+  "final_url": "https://api.gdc.cancer.gov/files?filters=%7B%22op%22%3A+%22and%22%2C+%22content%22%3A+%5B%7B%22op%22%3A+%22in%22%2C+%22content%22%3A+%7B%22field%22%3A+%22cases.project.project_id%22%2C+%22value%22%3A+%5B%22TCGA-BRCA%22%5D%7D%7D%2C+%7B%22op%22%3A+%22in%22%2C+%22content%22%3A+%7B%22field%22%3A+%22data_category%22%2C+%22value%22%3A+%5B%22Clinical%22%5D%7D%7D%5D%7D&size=0&facets=data_type%2Cdata_format",
+  "params": {
+    "filters": "{\"op\": \"and\", \"content\": [{\"op\": \"in\", \"content\": {\"field\": \"cases.project.project_id\", \"value\": [\"TCGA-BRCA\"]}}, {\"op\": \"in\", \"content\": {\"field\": \"data_category\", \"value\": [\"Clinical\"]}}]}",
+    "size": 0,
+    "facets": "data_type,data_format"
+  }
+}

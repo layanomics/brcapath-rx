@@ -1,0 +1,126 @@
+treatment_groups_descriptive_v1_run_id	treatment_group_v1	field_name	value_summary_type	group_patient_count	non_missing_count	missing_like_count	distinct_non_missing_count	value_rank	value_label	value_count	value_fraction	numeric_min	numeric_median	numeric_max	notes
+20260414T215230Z	no_drug_record	age_at_diagnosis	numeric_summary	317	317	0	62					26	61	90	Age summary uses non-missing values only.
+20260414T215230Z	no_drug_record	er_status_by_ihc	categorical_top_value	317	302	15	3	1	Positive	225	0.7098				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	er_status_by_ihc	categorical_top_value	317	302	15	3	2	Negative	75	0.2366				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	er_status_by_ihc	categorical_top_value	317	302	15	3	3	Indeterminate	2	0.0063				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	pr_status_by_ihc	categorical_top_value	317	302	15	3	1	Positive	188	0.5931				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	pr_status_by_ihc	categorical_top_value	317	302	15	3	2	Negative	111	0.3502				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	pr_status_by_ihc	categorical_top_value	317	302	15	3	3	Indeterminate	3	0.0095				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	her2_status_by_ihc	categorical_top_value	317	226	91	4	1	Negative	141	0.4448				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	her2_status_by_ihc	categorical_top_value	317	226	91	4	2	Positive	61	0.1924				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	her2_status_by_ihc	categorical_top_value	317	226	91	4	3	Equivocal	22	0.0694				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	her2_status_by_ihc	categorical_top_value	317	226	91	4	4	Indeterminate	2	0.0063				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	categorical_top_value	317	313	4	11	1	Stage IIA	95	0.2997				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	categorical_top_value	317	313	4	11	2	Stage IIB	69	0.2177				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	categorical_top_value	317	313	4	11	3	Stage IIIA	42	0.1325				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	categorical_top_value	317	313	4	11	4	Stage I	29	0.0915				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	categorical_top_value	317	313	4	11	5	Stage IA	28	0.0883				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	categorical_top_value	317	313	4	11	6	Stage IIIB	16	0.0505				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	categorical_top_value	317	313	4	11	7	Stage IIIC	9	0.0284				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	categorical_top_value	317	313	4	11	8	Stage IV	9	0.0284				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	categorical_top_value	317	313	4	11	9	Stage X	9	0.0284				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	no_drug_record	ajcc_pathologic_tumor_stage	categorical_top_value	317	313	4	11	10	Stage II	4	0.0126				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	no_drug_record	histological_type	categorical_top_value	317	316	1	7	1	Infiltrating Ductal Carcinoma	234	0.7382				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	histological_type	categorical_top_value	317	316	1	7	2	Infiltrating Lobular Carcinoma	42	0.1325				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	histological_type	categorical_top_value	317	316	1	7	3	Other, specify	14	0.0442				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	histological_type	categorical_top_value	317	316	1	7	4	Mucinous Carcinoma	10	0.0315				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	histological_type	categorical_top_value	317	316	1	7	5	Mixed Histology (please specify)	7	0.0221				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	histological_type	categorical_top_value	317	316	1	7	6	Metaplastic Carcinoma	5	0.0158				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	no_drug_record	histological_type	categorical_top_value	317	316	1	7	7	Medullary Carcinoma	4	0.0126				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	age_at_diagnosis	numeric_summary	231	231	0	50					29	53	82	Age summary uses non-missing values only.
+20260414T215230Z	single_chemotherapy	er_status_by_ihc	categorical_top_value	231	224	7	2	1	Negative	130	0.5628				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	er_status_by_ihc	categorical_top_value	231	224	7	2	2	Positive	94	0.4069				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	pr_status_by_ihc	categorical_top_value	231	223	8	3	1	Negative	136	0.5887				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	pr_status_by_ihc	categorical_top_value	231	223	8	3	2	Positive	86	0.3723				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	pr_status_by_ihc	categorical_top_value	231	223	8	3	3	Indeterminate	1	0.0043				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	her2_status_by_ihc	categorical_top_value	231	206	25	4	1	Negative	136	0.5887				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	her2_status_by_ihc	categorical_top_value	231	206	25	4	2	Equivocal	40	0.1732				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	her2_status_by_ihc	categorical_top_value	231	206	25	4	3	Positive	27	0.1169				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	her2_status_by_ihc	categorical_top_value	231	206	25	4	4	Indeterminate	3	0.0130				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	categorical_top_value	231	229	2	11	1	Stage IIA	85	0.3680				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	categorical_top_value	231	229	2	11	2	Stage IIB	48	0.2078				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	categorical_top_value	231	229	2	11	3	Stage IIIA	31	0.1342				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	categorical_top_value	231	229	2	11	4	Stage IA	21	0.0909				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	categorical_top_value	231	229	2	11	5	Stage IIIC	19	0.0823				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	categorical_top_value	231	229	2	11	6	Stage I	17	0.0736				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	categorical_top_value	231	229	2	11	7	Stage IIIB	3	0.0130				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	categorical_top_value	231	229	2	11	8	Stage IV	2	0.0087				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	categorical_top_value	231	229	2	11	9	Stage II	1	0.0043				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	single_chemotherapy	ajcc_pathologic_tumor_stage	categorical_top_value	231	229	2	11	10	Stage III	1	0.0043				Showing the top 10 values out of 11 distinct non-missing values.
+20260414T215230Z	single_chemotherapy	histological_type	categorical_top_value	231	231	0	7	1	Infiltrating Ductal Carcinoma	190	0.8225				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	histological_type	categorical_top_value	231	231	0	7	2	Infiltrating Lobular Carcinoma	23	0.0996				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	histological_type	categorical_top_value	231	231	0	7	3	Other, specify	9	0.0390				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	histological_type	categorical_top_value	231	231	0	7	4	Mixed Histology (please specify)	4	0.0173				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	histological_type	categorical_top_value	231	231	0	7	5	Medullary Carcinoma	2	0.0087				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	histological_type	categorical_top_value	231	231	0	7	6	Metaplastic Carcinoma	2	0.0087				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_chemotherapy	histological_type	categorical_top_value	231	231	0	7	7	Infiltrating Carcinoma NOS	1	0.0043				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	age_at_diagnosis	numeric_summary	189	189	0	46					29	68	90	Age summary uses non-missing values only.
+20260414T215230Z	single_hormone_therapy	er_status_by_ihc	categorical_top_value	189	179	10	2	1	Positive	177	0.9365				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	er_status_by_ihc	categorical_top_value	189	179	10	2	2	Negative	2	0.0106				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	pr_status_by_ihc	categorical_top_value	189	179	10	2	1	Positive	158	0.8360				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	pr_status_by_ihc	categorical_top_value	189	179	10	2	2	Negative	21	0.1111				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	her2_status_by_ihc	categorical_top_value	189	167	22	4	1	Negative	104	0.5503				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	her2_status_by_ihc	categorical_top_value	189	167	22	4	2	Equivocal	46	0.2434				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	her2_status_by_ihc	categorical_top_value	189	167	22	4	3	Positive	15	0.0794				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	her2_status_by_ihc	categorical_top_value	189	167	22	4	4	Indeterminate	2	0.0106				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	categorical_top_value	189	188	1	10	1	Stage IIA	75	0.3968				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	categorical_top_value	189	188	1	10	2	Stage IIB	37	0.1958				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	categorical_top_value	189	188	1	10	3	Stage I	26	0.1376				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	categorical_top_value	189	188	1	10	4	Stage IA	21	0.1111				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	categorical_top_value	189	188	1	10	5	Stage IIIA	13	0.0688				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	categorical_top_value	189	188	1	10	6	Stage IIIB	5	0.0265				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	categorical_top_value	189	188	1	10	7	Stage IIIC	5	0.0265				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	categorical_top_value	189	188	1	10	8	Stage IB	2	0.0106				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	categorical_top_value	189	188	1	10	9	Stage IV	2	0.0106				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	ajcc_pathologic_tumor_stage	categorical_top_value	189	188	1	10	10	Stage X	2	0.0106				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	histological_type	categorical_top_value	189	189	0	5	1	Infiltrating Ductal Carcinoma	112	0.5926				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	histological_type	categorical_top_value	189	189	0	5	2	Infiltrating Lobular Carcinoma	57	0.3016				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	histological_type	categorical_top_value	189	189	0	5	3	Other, specify	12	0.0635				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	histological_type	categorical_top_value	189	189	0	5	4	Mixed Histology (please specify)	4	0.0212				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_hormone_therapy	histological_type	categorical_top_value	189	189	0	5	5	Mucinous Carcinoma	4	0.0212				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	age_at_diagnosis	numeric_summary	3	3	0	3					40	59	80	Age summary uses non-missing values only.
+20260414T215230Z	single_ancillary_or_other	er_status_by_ihc	categorical_top_value	3	3	0	2	1	Positive	2	0.6667				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	er_status_by_ihc	categorical_top_value	3	3	0	2	2	Negative	1	0.3333				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	pr_status_by_ihc	categorical_top_value	3	3	0	2	1	Negative	2	0.6667				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	pr_status_by_ihc	categorical_top_value	3	3	0	2	2	Positive	1	0.3333				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	her2_status_by_ihc	categorical_top_value	3	3	0	2	1	Negative	2	0.6667				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	her2_status_by_ihc	categorical_top_value	3	3	0	2	2	Positive	1	0.3333				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	ajcc_pathologic_tumor_stage	categorical_top_value	3	3	0	3	1	Stage IIA	1	0.3333				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	ajcc_pathologic_tumor_stage	categorical_top_value	3	3	0	3	2	Stage IIB	1	0.3333				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	ajcc_pathologic_tumor_stage	categorical_top_value	3	3	0	3	3	Stage IIIC	1	0.3333				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	histological_type	categorical_top_value	3	3	0	2	1	Infiltrating Ductal Carcinoma	2	0.6667				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	single_ancillary_or_other	histological_type	categorical_top_value	3	3	0	2	2	Other, specify	1	0.3333				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	age_at_diagnosis	numeric_summary	355	355	0	50					26	53	84	Age summary uses non-missing values only.
+20260414T215230Z	mixed_multi_type	er_status_by_ihc	categorical_top_value	355	338	17	2	1	Positive	308	0.8676				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	er_status_by_ihc	categorical_top_value	355	338	17	2	2	Negative	30	0.0845				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	pr_status_by_ihc	categorical_top_value	355	338	17	2	1	Positive	264	0.7437				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	pr_status_by_ihc	categorical_top_value	355	338	17	2	2	Negative	74	0.2085				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	her2_status_by_ihc	categorical_top_value	355	315	40	4	1	Negative	180	0.5070				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	her2_status_by_ihc	categorical_top_value	355	315	40	4	2	Equivocal	71	0.2000				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	her2_status_by_ihc	categorical_top_value	355	315	40	4	3	Positive	59	0.1662				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	her2_status_by_ihc	categorical_top_value	355	315	40	4	4	Indeterminate	5	0.0141				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	categorical_top_value	355	351	4	12	1	Stage IIA	102	0.2873				Showing the top 10 values out of 12 distinct non-missing values.
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	categorical_top_value	355	351	4	12	2	Stage IIB	101	0.2845				Showing the top 10 values out of 12 distinct non-missing values.
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	categorical_top_value	355	351	4	12	3	Stage IIIA	69	0.1944				Showing the top 10 values out of 12 distinct non-missing values.
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	categorical_top_value	355	351	4	12	4	Stage IIIC	31	0.0873				Showing the top 10 values out of 12 distinct non-missing values.
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	categorical_top_value	355	351	4	12	5	Stage I	17	0.0479				Showing the top 10 values out of 12 distinct non-missing values.
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	categorical_top_value	355	351	4	12	6	Stage IA	16	0.0451				Showing the top 10 values out of 12 distinct non-missing values.
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	categorical_top_value	355	351	4	12	7	Stage IV	7	0.0197				Showing the top 10 values out of 12 distinct non-missing values.
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	categorical_top_value	355	351	4	12	8	Stage IIIB	3	0.0085				Showing the top 10 values out of 12 distinct non-missing values.
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	categorical_top_value	355	351	4	12	9	Stage IB	2	0.0056				Showing the top 10 values out of 12 distinct non-missing values.
+20260414T215230Z	mixed_multi_type	ajcc_pathologic_tumor_stage	categorical_top_value	355	351	4	12	10	Stage II	1	0.0028				Showing the top 10 values out of 12 distinct non-missing values.
+20260414T215230Z	mixed_multi_type	histological_type	categorical_top_value	355	355	0	6	1	Infiltrating Ductal Carcinoma	245	0.6901				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	histological_type	categorical_top_value	355	355	0	6	2	Infiltrating Lobular Carcinoma	80	0.2254				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	histological_type	categorical_top_value	355	355	0	6	3	Mixed Histology (please specify)	15	0.0423				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	histological_type	categorical_top_value	355	355	0	6	4	Other, specify	10	0.0282				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	histological_type	categorical_top_value	355	355	0	6	5	Mucinous Carcinoma	3	0.0085				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	mixed_multi_type	histological_type	categorical_top_value	355	355	0	6	6	Metaplastic Carcinoma	2	0.0056				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	missing_type_only	age_at_diagnosis	numeric_summary	2	2	0	2					46	48	50	Age summary uses non-missing values only.
+20260414T215230Z	missing_type_only	er_status_by_ihc	categorical_top_value	2	2	0	1	1	Positive	2	1.0000				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	missing_type_only	pr_status_by_ihc	categorical_top_value	2	2	0	1	1	Positive	2	1.0000				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	missing_type_only	her2_status_by_ihc	categorical_top_value	2	2	0	2	1	Negative	1	0.5000				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	missing_type_only	her2_status_by_ihc	categorical_top_value	2	2	0	2	2	Positive	1	0.5000				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	missing_type_only	ajcc_pathologic_tumor_stage	categorical_top_value	2	2	0	2	1	Stage I	1	0.5000				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	missing_type_only	ajcc_pathologic_tumor_stage	categorical_top_value	2	2	0	2	2	Stage IIB	1	0.5000				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	missing_type_only	histological_type	categorical_top_value	2	2	0	2	1	Infiltrating Ductal Carcinoma	1	0.5000				Showing all distinct non-missing values for this field within the provisional group.
+20260414T215230Z	missing_type_only	histological_type	categorical_top_value	2	2	0	2	2	Infiltrating Lobular Carcinoma	1	0.5000				Showing all distinct non-missing values for this field within the provisional group.

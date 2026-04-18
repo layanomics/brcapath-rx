@@ -1,0 +1,13 @@
+indexed_clinical_vs_local_treatment_v1_run_id	comparison_scope	dimension	local_status	indexed_status	overlap_class	patient_count	patient_fraction_of_local_profile	notes
+20260416T004048Z	local_profile_only	any_treatment	yes	yes	local_yes_indexed_yes	819	0.7466	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	any_treatment	yes	no	local_yes_indexed_no	0	0.0000	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	any_treatment	no	yes	local_no_indexed_yes	278	0.2534	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	any_treatment	no	no	local_no_indexed_no	0	0.0000	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	druglike	yes	yes	local_yes_indexed_yes	780	0.7110	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	druglike	yes	no	local_yes_indexed_no	0	0.0000	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	druglike	no	yes	local_no_indexed_yes	247	0.2252	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	druglike	no	no	local_no_indexed_no	70	0.0638	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	radiation	yes	yes	local_yes_indexed_yes	528	0.4813	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	radiation	yes	no	local_yes_indexed_no	0	0.0000	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	radiation	no	yes	local_no_indexed_yes	495	0.4512	Local profile cohort denominator only.
+20260416T004048Z	local_profile_only	radiation	no	no	local_no_indexed_no	74	0.0675	Local profile cohort denominator only.

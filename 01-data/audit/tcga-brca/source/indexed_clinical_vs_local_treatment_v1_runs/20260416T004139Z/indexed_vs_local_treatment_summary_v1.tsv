@@ -1,0 +1,16 @@
+indexed_clinical_vs_local_treatment_v1_run_id	summary_section	summary_metric	summary_value	notes
+20260416T004139Z	inputs	gdc_data_release	Data Release 45.0 - December 04, 2025	Live GDC API release used for the indexed clinical pull.
+20260416T004139Z	inputs	gdc_tag	8.3.1	Live GDC API tag used for the indexed clinical pull.
+20260416T004139Z	reconciliation	indexed_case_count	1098	Live indexed clinical cases payload total.
+20260416T004139Z	reconciliation	local_profile_patient_count	1097	Current patient_treatment_profile_v1 denominator.
+20260416T004139Z	reconciliation	indexed_only_case_count	1	Indexed cases not represented in the current local treatment profile cohort.
+20260416T004139Z	reconciliation	local_patients_with_no_drug	317	Current local patient_treatment_profile_v1 gap denominator.
+20260416T004139Z	reconciliation	local_patients_with_no_drug_or_radiation	278	Current local patient_treatment_profile_v1 full-treatment gap denominator.
+20260416T004139Z	coverage	indexed_treatment_types_not_seen_in_local_drug_layer_json	"[""Radiation Therapy, NOS"", ""Surgery, NOS"", ""Pharmaceutical Therapy, NOS"", ""Radiation, External Beam"", ""Bisphosphonate Therapy"", ""Immunotherapy (Including Vaccines)"", ""Ancillary Treatment"", ""Brachytherapy, NOS"", ""Brachytherapy, High Dose"", ""Radiation, Radioisotope"", ""Radiation, Stereotactic/Gamma Knife/SRS"", ""Radiation, Implants""]"	Raw indexed treatment-type labels beyond local drug therapy-type labels; includes surgery and broader indexed categories.
+20260416T004139Z	coverage	overlap_any_treatment_indexed_only_count	278	Local-profile patients with no local drug-or-radiation evidence but an indexed treatment row.
+20260416T004139Z	questions	how_many_patients_with_no_local_drug_gain_any_treatment_evidence_from_indexed_clinical	317	247 also gain potentially useful new evidence; 70 are coarse-only.
+20260416T004139Z	questions	how_many_patients_with_no_local_drug_or_radiation_rows_gain_any_treatment_evidence_from_indexed_clinical	278	208 also gain potentially useful new evidence; 70 are coarse-only.
+20260416T004139Z	questions	does_indexed_clinical_add_new_treatment_categories_new_patient_coverage_or_only_coarse_duplicates	new patient coverage plus some new indexed treatment categories, but mostly broad category-level recovery rather than rich regimen detail	Agent detail is 1 in the no-local-drug group and 1 in the no-local-drug-or-radiation group. Timing detail is 6 and 6, respectively.
+20260416T004139Z	questions	does_indexed_clinical_reduce_the_current_practical_blocker_enough_to_matter	yes	Useful recovery ratios: no-local-drug=0.7792, no-local-drug-or-radiation=0.7482.
+20260416T004139Z	decision	forced_conclusion	material_improvement_possible_now	Forced decision from the predefined threshold rule.
+20260416T004139Z	decision	recommended_next_step	integrate indexed patient-level treatment flags and raw indexed treatment-type sets as the next official supplemental treatment layer	Exactly one recommended next step.

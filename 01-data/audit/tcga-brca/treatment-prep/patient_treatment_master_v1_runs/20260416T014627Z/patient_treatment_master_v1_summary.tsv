@@ -1,0 +1,58 @@
+patient_treatment_master_v1_run_id	summary_section	summary_metric	summary_value	notes
+20260416T014627Z	inputs	patient_treatment_profile_v1_run_id	20260414T200843Z	Current local patient-level treatment profile feeding the integration.
+20260416T014627Z	inputs	indexed_clinical_vs_local_treatment_v1_run_id	20260416T004139Z	Saved indexed clinical comparison layer used as the official supplemental indexed input.
+20260416T014627Z	inputs	treatment_source_audit_run_id	20260415T233526Z	Latest source-audit lineage carried forward from the indexed clinical comparison workflow.
+20260416T014627Z	inputs	gdc_data_release	Data Release 45.0 - December 04, 2025	Live GDC release captured by the saved indexed comparison layer.
+20260416T014627Z	inputs	gdc_tag	8.3.1	Live GDC API tag captured by the saved indexed comparison layer.
+20260416T014627Z	inputs	integrated_cohort_patient_count	1097	Anchored to patient_treatment_profile_v1 only; no cohort expansion during this integration step.
+20260416T014627Z	inputs	indexed_only_case_count_not_integrated	1	"Indexed-only out-of-cohort barcodes: [""TCGA-BH-A0B2""]"
+20260416T014627Z	coverage	any_treatment_local_count	819	Count before indexed supplemental integration.
+20260416T014627Z	coverage	any_treatment_master_count	1097	Count after combining local treatment evidence with indexed clinical broad evidence.
+20260416T014627Z	coverage	any_treatment_gain_count	278	Absolute patient-count gain from adding indexed clinical evidence.
+20260416T014627Z	coverage	any_treatment_master_fraction	1.0000	Fraction of the integrated cohort with this broad treatment signal after integration.
+20260416T014627Z	coverage	druglike_local_count	780	Count before indexed supplemental integration.
+20260416T014627Z	coverage	druglike_master_count	1027	Count after combining local treatment evidence with indexed clinical broad evidence.
+20260416T014627Z	coverage	druglike_gain_count	247	Absolute patient-count gain from adding indexed clinical evidence.
+20260416T014627Z	coverage	druglike_master_fraction	0.9362	Fraction of the integrated cohort with this broad treatment signal after integration.
+20260416T014627Z	coverage	radiation_local_count	528	Count before indexed supplemental integration.
+20260416T014627Z	coverage	radiation_master_count	1023	Count after combining local treatment evidence with indexed clinical broad evidence.
+20260416T014627Z	coverage	radiation_gain_count	495	Absolute patient-count gain from adding indexed clinical evidence.
+20260416T014627Z	coverage	radiation_master_fraction	0.9325	Fraction of the integrated cohort with this broad treatment signal after integration.
+20260416T014627Z	coverage	non_surgical_local_count	819	Count before indexed supplemental integration.
+20260416T014627Z	coverage	non_surgical_master_count	1027	Count after combining local treatment evidence with indexed clinical broad evidence.
+20260416T014627Z	coverage	non_surgical_gain_count	208	Absolute patient-count gain from adding indexed clinical evidence.
+20260416T014627Z	coverage	non_surgical_master_fraction	0.9362	Fraction of the integrated cohort with this broad treatment signal after integration.
+20260416T014627Z	coverage	surgery_local_count	0	Count before indexed supplemental integration.
+20260416T014627Z	coverage	surgery_master_count	1096	Count after combining local treatment evidence with indexed clinical broad evidence.
+20260416T014627Z	coverage	surgery_gain_count	1096	Absolute patient-count gain from adding indexed clinical evidence.
+20260416T014627Z	coverage	surgery_master_fraction	0.9991	Fraction of the integrated cohort with this broad treatment signal after integration.
+20260416T014627Z	source_support	any_treatment_local_only_count	0	Patient count for any_treatment supported by local_only.
+20260416T014627Z	source_support	any_treatment_indexed_only_count	278	Patient count for any_treatment supported by indexed_only.
+20260416T014627Z	source_support	any_treatment_both_count	819	Patient count for any_treatment supported by both.
+20260416T014627Z	source_support	any_treatment_neither_count	0	Patient count for any_treatment supported by neither.
+20260416T014627Z	source_support	druglike_local_only_count	0	Patient count for druglike supported by local_only.
+20260416T014627Z	source_support	druglike_indexed_only_count	247	Patient count for druglike supported by indexed_only.
+20260416T014627Z	source_support	druglike_both_count	780	Patient count for druglike supported by both.
+20260416T014627Z	source_support	druglike_neither_count	70	Patient count for druglike supported by neither.
+20260416T014627Z	source_support	radiation_local_only_count	0	Patient count for radiation supported by local_only.
+20260416T014627Z	source_support	radiation_indexed_only_count	495	Patient count for radiation supported by indexed_only.
+20260416T014627Z	source_support	radiation_both_count	528	Patient count for radiation supported by both.
+20260416T014627Z	source_support	radiation_neither_count	74	Patient count for radiation supported by neither.
+20260416T014627Z	source_support	non_surgical_local_only_count	0	Patient count for non_surgical supported by local_only.
+20260416T014627Z	source_support	non_surgical_indexed_only_count	208	Patient count for non_surgical supported by indexed_only.
+20260416T014627Z	source_support	non_surgical_both_count	819	Patient count for non_surgical supported by both.
+20260416T014627Z	source_support	non_surgical_neither_count	70	Patient count for non_surgical supported by neither.
+20260416T014627Z	weaknesses	indexed_surgery_only_recovery_count	70	Patients whose indexed recovery remains surgery-only rather than broad non-surgical treatment support.
+20260416T014627Z	weaknesses	remaining_no_master_druglike_evidence_count	70	Patients still lacking any broad druglike evidence after integration.
+20260416T014627Z	weaknesses	remaining_no_master_radiation_evidence_count	74	Patients still lacking any broad radiation evidence after integration.
+20260416T014627Z	weaknesses	remaining_no_master_non_surgical_treatment_evidence_count	70	Patients still lacking any broad non-surgical treatment evidence after integration.
+20260416T014627Z	weaknesses	patients_with_any_indexed_regimen_line_value	3	Indexed regimen-or-line values remain very sparse in the integrated cohort.
+20260416T014627Z	weaknesses	patients_with_indexed_agent_detail_added_to_locally_missing_patient	1	Incremental indexed agent detail among locally missing patients remains minimal.
+20260416T014627Z	weaknesses	patients_with_indexed_regimen_line_detail_added_to_locally_missing_patient	0	Incremental indexed regimen-line detail among locally missing patients remains absent.
+20260416T014627Z	weaknesses	patients_with_indexed_timing_detail_added_to_locally_missing_patient	6	Incremental indexed timing detail among locally missing patients remains limited.
+20260416T014627Z	readiness	final_readiness	ready_for_next_treatment_organization_step_with_broad_source_audited_flags_only	The integrated layer is suitable for the next treatment-organization step only as a broad, source-audited flag layer.
+20260416T014627Z	readiness	guardrail_note	broad_flags_only_not_regimen_reconstruction	Do not interpret indexed treatment types as full regimen reconstruction or treatment arms.
+20260416T014627Z	answers	how_much_patient_level_treatment_coverage_improved	any_treatment 819->1097 (+278); druglike 780->1027 (+247); radiation 528->1023 (+495); non_surgical 819->1027 (+208)	Coverage gains reflect broad availability and status flags, not detailed regimen reconstruction.
+20260416T014627Z	answers	how_many_patients_are_supported_by_local_only_indexed_only_both	any_treatment: 0 local_only / 278 indexed_only / 819 both; druglike: 0 / 247 / 780; radiation: 0 / 495 / 528; non_surgical: 0 / 208 / 819	Counts are reported on the integrated 1097-patient local profile cohort only.
+20260416T014627Z	answers	what_still_remains_weak	70 patients remain surgery-only recoveries without broad non-surgical support; 70 still lack druglike evidence; 74 still lack radiation evidence; indexed regimen-line detail remains sparse (3 patients overall; 0 locally missing patients gain regimen-line detail).	Indexed clinical materially improves coverage, but its added detail remains mostly broad presence/type information.
+20260416T014627Z	answers	whether_dataset_is_strong_enough_for_next_stage_of_treatment_organization	ready_for_next_treatment_organization_step_with_broad_source_audited_flags_only	Yes for the next broad treatment-organization step, but not for final treatment arms or regimen reconstruction.

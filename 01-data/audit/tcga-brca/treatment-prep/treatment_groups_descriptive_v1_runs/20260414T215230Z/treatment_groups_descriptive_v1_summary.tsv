@@ -1,0 +1,31 @@
+treatment_groups_descriptive_v1_run_id	summary_section	summary_metric	summary_value	notes
+20260414T215230Z	design	review_scope	grouped_descriptive_review_only	This workflow remains descriptive only and does not freeze treatment arms or estimate effects.
+20260414T215230Z	design	input_layer	patient_treatment_grouping_v1_plus_os_endpoint_v1_plus_baseline_analysis_v1_validated_against_feature_set_lineage	The review uses only saved downstream tables on disk and validates the feature-set/model-input lineage.
+20260414T215230Z	design	no_drug_name_normalization_yet	true	Drug-name normalization remains out of scope for this descriptive review layer.
+20260414T215230Z	thresholds	large_group_patient_count_threshold	50	Large-group threshold used for descriptive readiness triage only.
+20260414T215230Z	thresholds	manual_review_fraction_tolerance	0.2000	A provisional group is within tolerance when its manual-review fraction is less than or equal to this value.
+20260414T215230Z	thresholds	adequate_non_missing_coverage_threshold	0.8500	Adequate receptor/stage coverage uses non-missing fraction greater than or equal to this value.
+20260414T215230Z	counts	total_cohort_size	1097	Total OS-linked patient rows reviewed in treatment_groups_descriptive_v1.
+20260414T215230Z	counts	present_treatment_group_count	6	Number of provisional treatment groups with at least one patient in the current grouping run.
+20260414T215230Z	counts	no_drug_record_count	317	Patient count carried forward from patient_treatment_grouping_v1.tsv.
+20260414T215230Z	counts	single_chemotherapy_count	231	Patient count carried forward from patient_treatment_grouping_v1.tsv.
+20260414T215230Z	counts	single_hormone_therapy_count	189	Patient count carried forward from patient_treatment_grouping_v1.tsv.
+20260414T215230Z	counts	single_targeted_therapy_count	0	Patient count carried forward from patient_treatment_grouping_v1.tsv.
+20260414T215230Z	counts	single_immunotherapy_count	0	Patient count carried forward from patient_treatment_grouping_v1.tsv.
+20260414T215230Z	counts	single_ancillary_or_other_count	3	Patient count carried forward from patient_treatment_grouping_v1.tsv.
+20260414T215230Z	counts	mixed_multi_type_count	355	Patient count carried forward from patient_treatment_grouping_v1.tsv.
+20260414T215230Z	counts	missing_type_only_count	2	Patient count carried forward from patient_treatment_grouping_v1.tsv.
+20260414T215230Z	counts	patients_requiring_manual_review	357	Manual-review count carried forward from treatment_group_v1_requires_manual_review.
+20260414T215230Z	counts	patients_requiring_manual_review_fraction	0.3254	Manual-review fraction across the full OS-linked grouping cohort.
+20260414T215230Z	coverage	groups_with_patient_count_ge_50	4	Count of provisional groups with at least 50 patients.
+20260414T215230Z	coverage	groups_with_manual_review_fraction_le_tolerance	4	Count of non-empty provisional groups whose manual-review fraction is within the descriptive tolerance.
+20260414T215230Z	coverage	groups_with_adequate_er_status_by_ihc_coverage	6	Count of non-empty provisional groups meeting the descriptive non-missing coverage threshold.
+20260414T215230Z	coverage	groups_with_adequate_pr_status_by_ihc_coverage	6	Count of non-empty provisional groups meeting the descriptive non-missing coverage threshold.
+20260414T215230Z	coverage	groups_with_adequate_her2_status_by_ihc_coverage	5	Count of non-empty provisional groups meeting the descriptive non-missing coverage threshold.
+20260414T215230Z	coverage	groups_with_adequate_ajcc_pathologic_tumor_stage_coverage	6	Count of non-empty provisional groups meeting the descriptive non-missing coverage threshold.
+20260414T215230Z	coverage	groups_with_adequate_all_required_coverage	5	Count of non-empty provisional groups meeting the descriptive threshold for ER, PR, HER2, and pathologic stage.
+20260414T215230Z	coverage	large_groups_meeting_both_manual_review_and_coverage_tolerances	2	Large provisional groups that meet both descriptive tolerances at the same time.
+20260414T215230Z	readiness	descriptive_readiness_interpretation	ready_for_grouped_descriptive_review_completed	Grouped descriptive review is complete, but treatment-arm freeze review remains blocked by the current upstream state: drug names are still unnormalized and manual review remains concentrated in unresolved provisional groups.
+20260414T215230Z	readiness	treatment_arm_freeze_review_blocked	true	Treatment-arm freeze remains blocked unless the descriptive evidence and upstream blockers are resolved.
+20260414T215230Z	readiness	treatment_recommendation_modeling_status	out_of_scope	Treatment recommendation modeling remains out of scope.
+20260414T215230Z	readiness	largest_manual_review_group	mixed_multi_type	Provisional group with the highest absolute manual-review count.

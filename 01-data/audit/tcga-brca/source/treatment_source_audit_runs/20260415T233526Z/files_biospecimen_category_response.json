@@ -1,0 +1,49 @@
+{
+  "data": {
+    "hits": [],
+    "aggregations": {
+      "data_type": {
+        "buckets": [
+          {
+            "doc_count": 3112,
+            "key": "Slide Image"
+          },
+          {
+            "doc_count": 2205,
+            "key": "Biospecimen Supplement"
+          }
+        ]
+      },
+      "data_format": {
+        "buckets": [
+          {
+            "doc_count": 3112,
+            "key": "svs"
+          },
+          {
+            "doc_count": 1098,
+            "key": "bcr xml"
+          },
+          {
+            "doc_count": 1097,
+            "key": "bcr ssf xml"
+          },
+          {
+            "doc_count": 10,
+            "key": "bcr biotab"
+          }
+        ]
+      }
+    },
+    "pagination": {
+      "count": 0,
+      "total": 5317,
+      "size": 0,
+      "from": 0,
+      "sort": "",
+      "page": 1,
+      "pages": 5317
+    }
+  },
+  "warnings": {}
+}

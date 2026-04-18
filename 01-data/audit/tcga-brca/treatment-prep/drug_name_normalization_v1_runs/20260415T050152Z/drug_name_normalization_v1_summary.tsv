@@ -1,0 +1,29 @@
+drug_name_normalization_v1_run_id	summary_section	summary_metric	summary_value	notes
+20260415T050152Z	inputs	patient_treatment_profile_v1_run_id	20260414T200843Z	
+20260415T050152Z	inputs	patient_treatment_grouping_v1_run_id	20260414T210420Z	
+20260415T050152Z	inputs	clinical_biotab_parse_run_id	20260412T010932Z	
+20260415T050152Z	inputs	clinical_source_run_id	20260412T000556Z	
+20260415T050152Z	coverage	total_clinical_drug_row_count	2406	Total drug-detail rows reviewed from saved clinical_drug.tsv.
+20260415T050152Z	coverage	total_treated_patient_count	780	Patients with has_any_drug_row == yes carried forward from patient_treatment_profile_v1.tsv.
+20260415T050152Z	coverage	total_distinct_raw_drug_names	205	One row per exact raw pharmaceutical_therapy_drug_name value.
+20260415T050152Z	coverage	total_mapped_confidently	146	Distinct raw names with confident v1 normalization.
+20260415T050152Z	coverage	total_mapped_but_review	57	Distinct raw names preserved or normalized provisionally but still requiring review.
+20260415T050152Z	coverage	total_unmapped	2	Distinct raw names left unmapped in v1.
+20260415T050152Z	coverage	drug_rows_mapped_confidently	2289	Clinical drug rows covered by confident v1 normalization.
+20260415T050152Z	coverage	drug_rows_mapped_but_review	101	Clinical drug rows tied to review-needed normalization decisions.
+20260415T050152Z	coverage	drug_rows_unmapped	16	Clinical drug rows tied to unmapped raw-name decisions.
+20260415T050152Z	coverage	total_distinct_normalized_drug_names	83	Distinct provisional normalized names after v1 collapsing and preserved-review labels.
+20260415T050152Z	coverage	total_distinct_provisional_drug_classes	13	Distinct provisional drug-class values observed in the v1 class map.
+20260415T050152Z	patients	total_patients_with_any_normalized_name	775	Patients with at least one non-missing raw drug label available for name normalization.
+20260415T050152Z	patients	total_patients_with_any_unknown_or_review_needed_mapping	126	Patients carrying any review-needed name or class mapping burden.
+20260415T050152Z	patients	total_patients_with_any_unmapped_raw_name	16	Patients carrying at least one raw name left unmapped in v1.
+20260415T050152Z	patients	total_patients_with_any_review_needed_name_normalization	91	Patients carrying review-needed provisional name normalization decisions.
+20260415T050152Z	patients	total_patients_with_name_normalization_manual_review	107	Patients requiring name-level manual review in v1.
+20260415T050152Z	patients	total_patients_with_class_mapping_manual_review	77	Patients requiring class-level manual review in v1.
+20260415T050152Z	patients	total_patients_with_single_drug_class	197	Patient count based on known classes only.
+20260415T050152Z	patients	total_patients_with_multiple_drug_classes	553	Patient count based on more than one known provisional class.
+20260415T050152Z	patients	total_patients_with_unknown_only_drug_class	30	Patients with no known provisional class after v1 mapping.
+20260415T050152Z	patients	total_patients_with_missing_like_only_raw_drug_names	5	Treated patients whose raw drug-name values are missing-like only.
+20260415T050152Z	readiness	provisional_readiness_interpretation	ready_for_drug_class_review	Treatment-arm freeze remains provisional until the remaining manual-review burden is acceptable.
+20260415T050152Z	readiness	treatment_arm_freeze_review_status	blocked	Drug-name normalization v1 supports review only; it does not itself freeze treatment arms.
+20260415T050152Z	readiness	treatment_recommendation_modeling_status	out_of_scope	Treatment recommendation modeling remains out of scope.

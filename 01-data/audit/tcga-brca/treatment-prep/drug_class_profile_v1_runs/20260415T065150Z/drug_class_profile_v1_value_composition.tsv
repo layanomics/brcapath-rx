@@ -1,0 +1,361 @@
+drug_class_profile_v1_run_id	review_group_type	field_name	value_summary_type	group_patient_count	non_missing_count	missing_like_count	distinct_non_missing_count	value_rank	value_label	value_count	value_fraction	numeric_min	numeric_median	numeric_max	notes
+20260415T065150Z	all_treated	age_at_diagnosis	numeric_summary	780	780	0	62					26	57	90	
+20260415T065150Z	all_treated	er_status_by_ihc	categorical_top_value	780	746	34	2	1	Positive	583	0.7815				
+20260415T065150Z	all_treated	er_status_by_ihc	categorical_top_value	780	746	34	2	2	Negative	163	0.2185				
+20260415T065150Z	all_treated	pr_status_by_ihc	categorical_top_value	780	745	35	3	1	Positive	511	0.6859				
+20260415T065150Z	all_treated	pr_status_by_ihc	categorical_top_value	780	745	35	3	2	Negative	233	0.3128				
+20260415T065150Z	all_treated	pr_status_by_ihc	categorical_top_value	780	745	35	3	3	Indeterminate	1	0.0013				
+20260415T065150Z	all_treated	her2_status_by_ihc	categorical_top_value	780	693	87	4	1	Negative	423	0.6104				
+20260415T065150Z	all_treated	her2_status_by_ihc	categorical_top_value	780	693	87	4	2	Equivocal	157	0.2266				
+20260415T065150Z	all_treated	her2_status_by_ihc	categorical_top_value	780	693	87	4	3	Positive	103	0.1486				
+20260415T065150Z	all_treated	her2_status_by_ihc	categorical_top_value	780	693	87	4	4	Indeterminate	10	0.0144				
+20260415T065150Z	all_treated	ajcc_pathologic_tumor_stage	categorical_top_value	780	773	7	12	1	Stage IIA	263	0.3402				
+20260415T065150Z	all_treated	ajcc_pathologic_tumor_stage	categorical_top_value	780	773	7	12	2	Stage IIB	188	0.2432				
+20260415T065150Z	all_treated	ajcc_pathologic_tumor_stage	categorical_top_value	780	773	7	12	3	Stage IIIA	113	0.1462				
+20260415T065150Z	all_treated	ajcc_pathologic_tumor_stage	categorical_top_value	780	773	7	12	4	Stage I	61	0.0789				
+20260415T065150Z	all_treated	ajcc_pathologic_tumor_stage	categorical_top_value	780	773	7	12	5	Stage IA	58	0.0750				
+20260415T065150Z	all_treated	ajcc_pathologic_tumor_stage	categorical_top_value	780	773	7	12	6	Stage IIIC	56	0.0724				
+20260415T065150Z	all_treated	ajcc_pathologic_tumor_stage	categorical_top_value	780	773	7	12	7	Stage IV	11	0.0142				
+20260415T065150Z	all_treated	ajcc_pathologic_tumor_stage	categorical_top_value	780	773	7	12	8	Stage IIIB	11	0.0142				
+20260415T065150Z	all_treated	ajcc_pathologic_tumor_stage	categorical_top_value	780	773	7	12	9	Stage X	4	0.0052				
+20260415T065150Z	all_treated	ajcc_pathologic_tumor_stage	categorical_top_value	780	773	7	12	10	Stage IB	4	0.0052				
+20260415T065150Z	all_treated	histological_type	categorical_top_value	780	780	0	8	1	Infiltrating Ductal Carcinoma	550	0.7051				
+20260415T065150Z	all_treated	histological_type	categorical_top_value	780	780	0	8	2	Infiltrating Lobular Carcinoma	161	0.2064				
+20260415T065150Z	all_treated	histological_type	categorical_top_value	780	780	0	8	3	Other, specify	32	0.0410				
+20260415T065150Z	all_treated	histological_type	categorical_top_value	780	780	0	8	4	Mixed Histology (please specify)	23	0.0295				
+20260415T065150Z	all_treated	histological_type	categorical_top_value	780	780	0	8	5	Mucinous Carcinoma	7	0.0090				
+20260415T065150Z	all_treated	histological_type	categorical_top_value	780	780	0	8	6	Metaplastic Carcinoma	4	0.0051				
+20260415T065150Z	all_treated	histological_type	categorical_top_value	780	780	0	8	7	Medullary Carcinoma	2	0.0026				
+20260415T065150Z	all_treated	histological_type	categorical_top_value	780	780	0	8	8	Infiltrating Carcinoma NOS	1	0.0013				
+20260415T065150Z	single_known_class_clean	age_at_diagnosis	numeric_summary	179	179	0	46					29	68	90	
+20260415T065150Z	single_known_class_clean	er_status_by_ihc	categorical_top_value	179	168	11	2	1	Positive	164	0.9762				
+20260415T065150Z	single_known_class_clean	er_status_by_ihc	categorical_top_value	179	168	11	2	2	Negative	4	0.0238				
+20260415T065150Z	single_known_class_clean	pr_status_by_ihc	categorical_top_value	179	168	11	2	1	Positive	147	0.8750				
+20260415T065150Z	single_known_class_clean	pr_status_by_ihc	categorical_top_value	179	168	11	2	2	Negative	21	0.1250				
+20260415T065150Z	single_known_class_clean	her2_status_by_ihc	categorical_top_value	179	157	22	4	1	Negative	95	0.6051				
+20260415T065150Z	single_known_class_clean	her2_status_by_ihc	categorical_top_value	179	157	22	4	2	Equivocal	43	0.2739				
+20260415T065150Z	single_known_class_clean	her2_status_by_ihc	categorical_top_value	179	157	22	4	3	Positive	18	0.1146				
+20260415T065150Z	single_known_class_clean	her2_status_by_ihc	categorical_top_value	179	157	22	4	4	Indeterminate	1	0.0064				
+20260415T065150Z	single_known_class_clean	ajcc_pathologic_tumor_stage	categorical_top_value	179	178	1	10	1	Stage IIA	71	0.3989				
+20260415T065150Z	single_known_class_clean	ajcc_pathologic_tumor_stage	categorical_top_value	179	178	1	10	2	Stage IIB	34	0.1910				
+20260415T065150Z	single_known_class_clean	ajcc_pathologic_tumor_stage	categorical_top_value	179	178	1	10	3	Stage I	25	0.1404				
+20260415T065150Z	single_known_class_clean	ajcc_pathologic_tumor_stage	categorical_top_value	179	178	1	10	4	Stage IA	19	0.1067				
+20260415T065150Z	single_known_class_clean	ajcc_pathologic_tumor_stage	categorical_top_value	179	178	1	10	5	Stage IIIA	12	0.0674				
+20260415T065150Z	single_known_class_clean	ajcc_pathologic_tumor_stage	categorical_top_value	179	178	1	10	6	Stage IIIB	6	0.0337				
+20260415T065150Z	single_known_class_clean	ajcc_pathologic_tumor_stage	categorical_top_value	179	178	1	10	7	Stage IIIC	6	0.0337				
+20260415T065150Z	single_known_class_clean	ajcc_pathologic_tumor_stage	categorical_top_value	179	178	1	10	8	Stage X	3	0.0169				
+20260415T065150Z	single_known_class_clean	ajcc_pathologic_tumor_stage	categorical_top_value	179	178	1	10	9	Stage IV	1	0.0056				
+20260415T065150Z	single_known_class_clean	ajcc_pathologic_tumor_stage	categorical_top_value	179	178	1	10	10	Stage IB	1	0.0056				
+20260415T065150Z	single_known_class_clean	histological_type	categorical_top_value	179	179	0	5	1	Infiltrating Ductal Carcinoma	113	0.6313				
+20260415T065150Z	single_known_class_clean	histological_type	categorical_top_value	179	179	0	5	2	Infiltrating Lobular Carcinoma	47	0.2626				
+20260415T065150Z	single_known_class_clean	histological_type	categorical_top_value	179	179	0	5	3	Other, specify	12	0.0670				
+20260415T065150Z	single_known_class_clean	histological_type	categorical_top_value	179	179	0	5	4	Mixed Histology (please specify)	4	0.0223				
+20260415T065150Z	single_known_class_clean	histological_type	categorical_top_value	179	179	0	5	5	Mucinous Carcinoma	3	0.0168				
+20260415T065150Z	single_known_class_plus_unknown	age_at_diagnosis	numeric_summary	18	18	0	15					47	61.5	84	
+20260415T065150Z	single_known_class_plus_unknown	er_status_by_ihc	categorical_top_value	18	18	0	2	1	Positive	17	0.9444				
+20260415T065150Z	single_known_class_plus_unknown	er_status_by_ihc	categorical_top_value	18	18	0	2	2	Negative	1	0.0556				
+20260415T065150Z	single_known_class_plus_unknown	pr_status_by_ihc	categorical_top_value	18	18	0	2	1	Positive	15	0.8333				
+20260415T065150Z	single_known_class_plus_unknown	pr_status_by_ihc	categorical_top_value	18	18	0	2	2	Negative	3	0.1667				
+20260415T065150Z	single_known_class_plus_unknown	her2_status_by_ihc	categorical_top_value	18	18	0	4	1	Negative	12	0.6667				
+20260415T065150Z	single_known_class_plus_unknown	her2_status_by_ihc	categorical_top_value	18	18	0	4	2	Positive	2	0.1111				
+20260415T065150Z	single_known_class_plus_unknown	her2_status_by_ihc	categorical_top_value	18	18	0	4	3	Equivocal	2	0.1111				
+20260415T065150Z	single_known_class_plus_unknown	her2_status_by_ihc	categorical_top_value	18	18	0	4	4	Indeterminate	2	0.1111				
+20260415T065150Z	single_known_class_plus_unknown	ajcc_pathologic_tumor_stage	categorical_top_value	18	18	0	6	1	Stage IIB	5	0.2778				
+20260415T065150Z	single_known_class_plus_unknown	ajcc_pathologic_tumor_stage	categorical_top_value	18	18	0	6	2	Stage IIA	4	0.2222				
+20260415T065150Z	single_known_class_plus_unknown	ajcc_pathologic_tumor_stage	categorical_top_value	18	18	0	6	3	Stage IIIA	4	0.2222				
+20260415T065150Z	single_known_class_plus_unknown	ajcc_pathologic_tumor_stage	categorical_top_value	18	18	0	6	4	Stage IV	2	0.1111				
+20260415T065150Z	single_known_class_plus_unknown	ajcc_pathologic_tumor_stage	categorical_top_value	18	18	0	6	5	Stage IIIC	2	0.1111				
+20260415T065150Z	single_known_class_plus_unknown	ajcc_pathologic_tumor_stage	categorical_top_value	18	18	0	6	6	Stage IIIB	1	0.0556				
+20260415T065150Z	single_known_class_plus_unknown	histological_type	categorical_top_value	18	18	0	3	1	Infiltrating Ductal Carcinoma	10	0.5556				
+20260415T065150Z	single_known_class_plus_unknown	histological_type	categorical_top_value	18	18	0	3	2	Infiltrating Lobular Carcinoma	6	0.3333				
+20260415T065150Z	single_known_class_plus_unknown	histological_type	categorical_top_value	18	18	0	3	3	Mucinous Carcinoma	2	0.1111				
+20260415T065150Z	multi_known_class	age_at_diagnosis	numeric_summary	553	553	0	55					26	53	90	
+20260415T065150Z	multi_known_class	er_status_by_ihc	categorical_top_value	553	530	23	2	1	Positive	383	0.7226				
+20260415T065150Z	multi_known_class	er_status_by_ihc	categorical_top_value	553	530	23	2	2	Negative	147	0.2774				
+20260415T065150Z	multi_known_class	pr_status_by_ihc	categorical_top_value	553	529	24	2	1	Positive	332	0.6276				
+20260415T065150Z	multi_known_class	pr_status_by_ihc	categorical_top_value	553	529	24	2	2	Negative	197	0.3724				
+20260415T065150Z	multi_known_class	her2_status_by_ihc	categorical_top_value	553	489	64	4	1	Negative	297	0.6074				
+20260415T065150Z	multi_known_class	her2_status_by_ihc	categorical_top_value	553	489	64	4	2	Equivocal	108	0.2209				
+20260415T065150Z	multi_known_class	her2_status_by_ihc	categorical_top_value	553	489	64	4	3	Positive	78	0.1595				
+20260415T065150Z	multi_known_class	her2_status_by_ihc	categorical_top_value	553	489	64	4	4	Indeterminate	6	0.0123				
+20260415T065150Z	multi_known_class	ajcc_pathologic_tumor_stage	categorical_top_value	553	547	6	12	1	Stage IIA	179	0.3272				
+20260415T065150Z	multi_known_class	ajcc_pathologic_tumor_stage	categorical_top_value	553	547	6	12	2	Stage IIB	138	0.2523				
+20260415T065150Z	multi_known_class	ajcc_pathologic_tumor_stage	categorical_top_value	553	547	6	12	3	Stage IIIA	92	0.1682				
+20260415T065150Z	multi_known_class	ajcc_pathologic_tumor_stage	categorical_top_value	553	547	6	12	4	Stage IIIC	46	0.0841				
+20260415T065150Z	multi_known_class	ajcc_pathologic_tumor_stage	categorical_top_value	553	547	6	12	5	Stage IA	37	0.0676				
+20260415T065150Z	multi_known_class	ajcc_pathologic_tumor_stage	categorical_top_value	553	547	6	12	6	Stage I	35	0.0640				
+20260415T065150Z	multi_known_class	ajcc_pathologic_tumor_stage	categorical_top_value	553	547	6	12	7	Stage IV	8	0.0146				
+20260415T065150Z	multi_known_class	ajcc_pathologic_tumor_stage	categorical_top_value	553	547	6	12	8	Stage IIIB	4	0.0073				
+20260415T065150Z	multi_known_class	ajcc_pathologic_tumor_stage	categorical_top_value	553	547	6	12	9	Stage IB	3	0.0055				
+20260415T065150Z	multi_known_class	ajcc_pathologic_tumor_stage	categorical_top_value	553	547	6	12	10	Stage III	2	0.0037				
+20260415T065150Z	multi_known_class	histological_type	categorical_top_value	553	553	0	8	1	Infiltrating Ductal Carcinoma	404	0.7306				
+20260415T065150Z	multi_known_class	histological_type	categorical_top_value	553	553	0	8	2	Infiltrating Lobular Carcinoma	105	0.1899				
+20260415T065150Z	multi_known_class	histological_type	categorical_top_value	553	553	0	8	3	Mixed Histology (please specify)	19	0.0344				
+20260415T065150Z	multi_known_class	histological_type	categorical_top_value	553	553	0	8	4	Other, specify	16	0.0289				
+20260415T065150Z	multi_known_class	histological_type	categorical_top_value	553	553	0	8	5	Metaplastic Carcinoma	4	0.0072				
+20260415T065150Z	multi_known_class	histological_type	categorical_top_value	553	553	0	8	6	Mucinous Carcinoma	2	0.0036				
+20260415T065150Z	multi_known_class	histological_type	categorical_top_value	553	553	0	8	7	Medullary Carcinoma	2	0.0036				
+20260415T065150Z	multi_known_class	histological_type	categorical_top_value	553	553	0	8	8	Infiltrating Carcinoma NOS	1	0.0018				
+20260415T065150Z	unknown_only	age_at_diagnosis	numeric_summary	25	25	0	20					32	56	81	
+20260415T065150Z	unknown_only	er_status_by_ihc	categorical_top_value	25	25	0	2	1	Positive	18	0.7200				
+20260415T065150Z	unknown_only	er_status_by_ihc	categorical_top_value	25	25	0	2	2	Negative	7	0.2800				
+20260415T065150Z	unknown_only	pr_status_by_ihc	categorical_top_value	25	25	0	3	1	Positive	16	0.6400				
+20260415T065150Z	unknown_only	pr_status_by_ihc	categorical_top_value	25	25	0	3	2	Negative	8	0.3200				
+20260415T065150Z	unknown_only	pr_status_by_ihc	categorical_top_value	25	25	0	3	3	Indeterminate	1	0.0400				
+20260415T065150Z	unknown_only	her2_status_by_ihc	categorical_top_value	25	24	1	4	1	Negative	15	0.6250				
+20260415T065150Z	unknown_only	her2_status_by_ihc	categorical_top_value	25	24	1	4	2	Positive	5	0.2083				
+20260415T065150Z	unknown_only	her2_status_by_ihc	categorical_top_value	25	24	1	4	3	Equivocal	3	0.1250				
+20260415T065150Z	unknown_only	her2_status_by_ihc	categorical_top_value	25	24	1	4	4	Indeterminate	1	0.0417				
+20260415T065150Z	unknown_only	ajcc_pathologic_tumor_stage	categorical_top_value	25	25	0	6	1	Stage IIB	8	0.3200				
+20260415T065150Z	unknown_only	ajcc_pathologic_tumor_stage	categorical_top_value	25	25	0	6	2	Stage IIA	7	0.2800				
+20260415T065150Z	unknown_only	ajcc_pathologic_tumor_stage	categorical_top_value	25	25	0	6	3	Stage IIIA	5	0.2000				
+20260415T065150Z	unknown_only	ajcc_pathologic_tumor_stage	categorical_top_value	25	25	0	6	4	Stage IIIC	2	0.0800				
+20260415T065150Z	unknown_only	ajcc_pathologic_tumor_stage	categorical_top_value	25	25	0	6	5	Stage IA	2	0.0800				
+20260415T065150Z	unknown_only	ajcc_pathologic_tumor_stage	categorical_top_value	25	25	0	6	6	Stage I	1	0.0400				
+20260415T065150Z	unknown_only	histological_type	categorical_top_value	25	25	0	3	1	Infiltrating Ductal Carcinoma	19	0.7600				
+20260415T065150Z	unknown_only	histological_type	categorical_top_value	25	25	0	3	2	Infiltrating Lobular Carcinoma	3	0.1200				
+20260415T065150Z	unknown_only	histological_type	categorical_top_value	25	25	0	3	3	Other, specify	3	0.1200				
+20260415T065150Z	missing_like_only	age_at_diagnosis	numeric_summary	5	5	0	5					40	58	67	
+20260415T065150Z	missing_like_only	er_status_by_ihc	categorical_top_value	5	5	0	2	1	Negative	4	0.8000				
+20260415T065150Z	missing_like_only	er_status_by_ihc	categorical_top_value	5	5	0	2	2	Positive	1	0.2000				
+20260415T065150Z	missing_like_only	pr_status_by_ihc	categorical_top_value	5	5	0	2	1	Negative	4	0.8000				
+20260415T065150Z	missing_like_only	pr_status_by_ihc	categorical_top_value	5	5	0	2	2	Positive	1	0.2000				
+20260415T065150Z	missing_like_only	her2_status_by_ihc	categorical_top_value	5	5	0	2	1	Negative	4	0.8000				
+20260415T065150Z	missing_like_only	her2_status_by_ihc	categorical_top_value	5	5	0	2	2	Equivocal	1	0.2000				
+20260415T065150Z	missing_like_only	ajcc_pathologic_tumor_stage	categorical_top_value	5	5	0	2	1	Stage IIB	3	0.6000				
+20260415T065150Z	missing_like_only	ajcc_pathologic_tumor_stage	categorical_top_value	5	5	0	2	2	Stage IIA	2	0.4000				
+20260415T065150Z	missing_like_only	histological_type	categorical_top_value	5	5	0	2	1	Infiltrating Ductal Carcinoma	4	0.8000				
+20260415T065150Z	missing_like_only	histological_type	categorical_top_value	5	5	0	2	2	Other, specify	1	0.2000				
+20260415T065150Z	any_class_alkylating_agent	age_at_diagnosis	numeric_summary	486	486	0	52					26	52	82	
+20260415T065150Z	any_class_alkylating_agent	er_status_by_ihc	categorical_top_value	486	464	22	2	1	Positive	327	0.7047				
+20260415T065150Z	any_class_alkylating_agent	er_status_by_ihc	categorical_top_value	486	464	22	2	2	Negative	137	0.2953				
+20260415T065150Z	any_class_alkylating_agent	pr_status_by_ihc	categorical_top_value	486	463	23	2	1	Positive	285	0.6156				
+20260415T065150Z	any_class_alkylating_agent	pr_status_by_ihc	categorical_top_value	486	463	23	2	2	Negative	178	0.3844				
+20260415T065150Z	any_class_alkylating_agent	her2_status_by_ihc	categorical_top_value	486	428	58	4	1	Negative	277	0.6472				
+20260415T065150Z	any_class_alkylating_agent	her2_status_by_ihc	categorical_top_value	486	428	58	4	2	Equivocal	91	0.2126				
+20260415T065150Z	any_class_alkylating_agent	her2_status_by_ihc	categorical_top_value	486	428	58	4	3	Positive	56	0.1308				
+20260415T065150Z	any_class_alkylating_agent	her2_status_by_ihc	categorical_top_value	486	428	58	4	4	Indeterminate	4	0.0093				
+20260415T065150Z	any_class_alkylating_agent	ajcc_pathologic_tumor_stage	categorical_top_value	486	480	6	12	1	Stage IIA	158	0.3292				
+20260415T065150Z	any_class_alkylating_agent	ajcc_pathologic_tumor_stage	categorical_top_value	486	480	6	12	2	Stage IIB	124	0.2583				
+20260415T065150Z	any_class_alkylating_agent	ajcc_pathologic_tumor_stage	categorical_top_value	486	480	6	12	3	Stage IIIA	87	0.1812				
+20260415T065150Z	any_class_alkylating_agent	ajcc_pathologic_tumor_stage	categorical_top_value	486	480	6	12	4	Stage IIIC	39	0.0813				
+20260415T065150Z	any_class_alkylating_agent	ajcc_pathologic_tumor_stage	categorical_top_value	486	480	6	12	5	Stage IA	31	0.0646				
+20260415T065150Z	any_class_alkylating_agent	ajcc_pathologic_tumor_stage	categorical_top_value	486	480	6	12	6	Stage I	29	0.0604				
+20260415T065150Z	any_class_alkylating_agent	ajcc_pathologic_tumor_stage	categorical_top_value	486	480	6	12	7	Stage IIIB	4	0.0083				
+20260415T065150Z	any_class_alkylating_agent	ajcc_pathologic_tumor_stage	categorical_top_value	486	480	6	12	8	Stage IB	2	0.0042				
+20260415T065150Z	any_class_alkylating_agent	ajcc_pathologic_tumor_stage	categorical_top_value	486	480	6	12	9	Stage III	2	0.0042				
+20260415T065150Z	any_class_alkylating_agent	ajcc_pathologic_tumor_stage	categorical_top_value	486	480	6	12	10	Stage IV	2	0.0042				
+20260415T065150Z	any_class_alkylating_agent	histological_type	categorical_top_value	486	486	0	8	1	Infiltrating Ductal Carcinoma	353	0.7263				
+20260415T065150Z	any_class_alkylating_agent	histological_type	categorical_top_value	486	486	0	8	2	Infiltrating Lobular Carcinoma	93	0.1914				
+20260415T065150Z	any_class_alkylating_agent	histological_type	categorical_top_value	486	486	0	8	3	Mixed Histology (please specify)	17	0.0350				
+20260415T065150Z	any_class_alkylating_agent	histological_type	categorical_top_value	486	486	0	8	4	Other, specify	14	0.0288				
+20260415T065150Z	any_class_alkylating_agent	histological_type	categorical_top_value	486	486	0	8	5	Metaplastic Carcinoma	4	0.0082				
+20260415T065150Z	any_class_alkylating_agent	histological_type	categorical_top_value	486	486	0	8	6	Mucinous Carcinoma	2	0.0041				
+20260415T065150Z	any_class_alkylating_agent	histological_type	categorical_top_value	486	486	0	8	7	Medullary Carcinoma	2	0.0041				
+20260415T065150Z	any_class_alkylating_agent	histological_type	categorical_top_value	486	486	0	8	8	Infiltrating Carcinoma NOS	1	0.0021				
+20260415T065150Z	any_class_anthracycline	age_at_diagnosis	numeric_summary	383	383	0	48					26	52	82	
+20260415T065150Z	any_class_anthracycline	er_status_by_ihc	categorical_top_value	383	369	14	2	1	Positive	255	0.6911				
+20260415T065150Z	any_class_anthracycline	er_status_by_ihc	categorical_top_value	383	369	14	2	2	Negative	114	0.3089				
+20260415T065150Z	any_class_anthracycline	pr_status_by_ihc	categorical_top_value	383	368	15	2	1	Positive	220	0.5978				
+20260415T065150Z	any_class_anthracycline	pr_status_by_ihc	categorical_top_value	383	368	15	2	2	Negative	148	0.4022				
+20260415T065150Z	any_class_anthracycline	her2_status_by_ihc	categorical_top_value	383	344	39	4	1	Negative	221	0.6424				
+20260415T065150Z	any_class_anthracycline	her2_status_by_ihc	categorical_top_value	383	344	39	4	2	Equivocal	72	0.2093				
+20260415T065150Z	any_class_anthracycline	her2_status_by_ihc	categorical_top_value	383	344	39	4	3	Positive	48	0.1395				
+20260415T065150Z	any_class_anthracycline	her2_status_by_ihc	categorical_top_value	383	344	39	4	4	Indeterminate	3	0.0087				
+20260415T065150Z	any_class_anthracycline	ajcc_pathologic_tumor_stage	categorical_top_value	383	378	5	11	1	Stage IIB	116	0.3069				
+20260415T065150Z	any_class_anthracycline	ajcc_pathologic_tumor_stage	categorical_top_value	383	378	5	11	2	Stage IIA	110	0.2910				
+20260415T065150Z	any_class_anthracycline	ajcc_pathologic_tumor_stage	categorical_top_value	383	378	5	11	3	Stage IIIA	73	0.1931				
+20260415T065150Z	any_class_anthracycline	ajcc_pathologic_tumor_stage	categorical_top_value	383	378	5	11	4	Stage IIIC	33	0.0873				
+20260415T065150Z	any_class_anthracycline	ajcc_pathologic_tumor_stage	categorical_top_value	383	378	5	11	5	Stage I	19	0.0503				
+20260415T065150Z	any_class_anthracycline	ajcc_pathologic_tumor_stage	categorical_top_value	383	378	5	11	6	Stage IA	16	0.0423				
+20260415T065150Z	any_class_anthracycline	ajcc_pathologic_tumor_stage	categorical_top_value	383	378	5	11	7	Stage IIIB	4	0.0106				
+20260415T065150Z	any_class_anthracycline	ajcc_pathologic_tumor_stage	categorical_top_value	383	378	5	11	8	Stage IB	2	0.0053				
+20260415T065150Z	any_class_anthracycline	ajcc_pathologic_tumor_stage	categorical_top_value	383	378	5	11	9	Stage III	2	0.0053				
+20260415T065150Z	any_class_anthracycline	ajcc_pathologic_tumor_stage	categorical_top_value	383	378	5	11	10	Stage IV	2	0.0053				
+20260415T065150Z	any_class_anthracycline	histological_type	categorical_top_value	383	383	0	7	1	Infiltrating Ductal Carcinoma	288	0.7520				
+20260415T065150Z	any_class_anthracycline	histological_type	categorical_top_value	383	383	0	7	2	Infiltrating Lobular Carcinoma	63	0.1645				
+20260415T065150Z	any_class_anthracycline	histological_type	categorical_top_value	383	383	0	7	3	Mixed Histology (please specify)	17	0.0444				
+20260415T065150Z	any_class_anthracycline	histological_type	categorical_top_value	383	383	0	7	4	Other, specify	9	0.0235				
+20260415T065150Z	any_class_anthracycline	histological_type	categorical_top_value	383	383	0	7	5	Metaplastic Carcinoma	4	0.0104				
+20260415T065150Z	any_class_anthracycline	histological_type	categorical_top_value	383	383	0	7	6	Infiltrating Carcinoma NOS	1	0.0026				
+20260415T065150Z	any_class_anthracycline	histological_type	categorical_top_value	383	383	0	7	7	Medullary Carcinoma	1	0.0026				
+20260415T065150Z	any_class_taxane	age_at_diagnosis	numeric_summary	402	402	0	50					26	52	84	
+20260415T065150Z	any_class_taxane	er_status_by_ihc	categorical_top_value	402	401	1	2	1	Positive	286	0.7132				
+20260415T065150Z	any_class_taxane	er_status_by_ihc	categorical_top_value	402	401	1	2	2	Negative	115	0.2868				
+20260415T065150Z	any_class_taxane	pr_status_by_ihc	categorical_top_value	402	401	1	2	1	Positive	246	0.6135				
+20260415T065150Z	any_class_taxane	pr_status_by_ihc	categorical_top_value	402	401	1	2	2	Negative	155	0.3865				
+20260415T065150Z	any_class_taxane	her2_status_by_ihc	categorical_top_value	402	367	35	4	1	Negative	226	0.6158				
+20260415T065150Z	any_class_taxane	her2_status_by_ihc	categorical_top_value	402	367	35	4	2	Equivocal	84	0.2289				
+20260415T065150Z	any_class_taxane	her2_status_by_ihc	categorical_top_value	402	367	35	4	3	Positive	54	0.1471				
+20260415T065150Z	any_class_taxane	her2_status_by_ihc	categorical_top_value	402	367	35	4	4	Indeterminate	3	0.0082				
+20260415T065150Z	any_class_taxane	ajcc_pathologic_tumor_stage	categorical_top_value	402	399	3	12	1	Stage IIA	122	0.3058				
+20260415T065150Z	any_class_taxane	ajcc_pathologic_tumor_stage	categorical_top_value	402	399	3	12	2	Stage IIB	108	0.2707				
+20260415T065150Z	any_class_taxane	ajcc_pathologic_tumor_stage	categorical_top_value	402	399	3	12	3	Stage IIIA	74	0.1855				
+20260415T065150Z	any_class_taxane	ajcc_pathologic_tumor_stage	categorical_top_value	402	399	3	12	4	Stage IIIC	37	0.0927				
+20260415T065150Z	any_class_taxane	ajcc_pathologic_tumor_stage	categorical_top_value	402	399	3	12	5	Stage IA	22	0.0551				
+20260415T065150Z	any_class_taxane	ajcc_pathologic_tumor_stage	categorical_top_value	402	399	3	12	6	Stage I	21	0.0526				
+20260415T065150Z	any_class_taxane	ajcc_pathologic_tumor_stage	categorical_top_value	402	399	3	12	7	Stage IV	4	0.0100				
+20260415T065150Z	any_class_taxane	ajcc_pathologic_tumor_stage	categorical_top_value	402	399	3	12	8	Stage IIIB	4	0.0100				
+20260415T065150Z	any_class_taxane	ajcc_pathologic_tumor_stage	categorical_top_value	402	399	3	12	9	Stage IB	2	0.0050				
+20260415T065150Z	any_class_taxane	ajcc_pathologic_tumor_stage	categorical_top_value	402	399	3	12	10	Stage III	2	0.0050				
+20260415T065150Z	any_class_taxane	histological_type	categorical_top_value	402	402	0	8	1	Infiltrating Ductal Carcinoma	300	0.7463				
+20260415T065150Z	any_class_taxane	histological_type	categorical_top_value	402	402	0	8	2	Infiltrating Lobular Carcinoma	76	0.1891				
+20260415T065150Z	any_class_taxane	histological_type	categorical_top_value	402	402	0	8	3	Other, specify	14	0.0348				
+20260415T065150Z	any_class_taxane	histological_type	categorical_top_value	402	402	0	8	4	Mixed Histology (please specify)	6	0.0149				
+20260415T065150Z	any_class_taxane	histological_type	categorical_top_value	402	402	0	8	5	Mucinous Carcinoma	2	0.0050				
+20260415T065150Z	any_class_taxane	histological_type	categorical_top_value	402	402	0	8	6	Medullary Carcinoma	2	0.0050				
+20260415T065150Z	any_class_taxane	histological_type	categorical_top_value	402	402	0	8	7	Infiltrating Carcinoma NOS	1	0.0025				
+20260415T065150Z	any_class_taxane	histological_type	categorical_top_value	402	402	0	8	8	Metaplastic Carcinoma	1	0.0025				
+20260415T065150Z	any_class_platinum	age_at_diagnosis	numeric_summary	31	31	0	21					35	56	76	
+20260415T065150Z	any_class_platinum	er_status_by_ihc	categorical_top_value	31	31	0	2	1	Positive	20	0.6452				
+20260415T065150Z	any_class_platinum	er_status_by_ihc	categorical_top_value	31	31	0	2	2	Negative	11	0.3548				
+20260415T065150Z	any_class_platinum	pr_status_by_ihc	categorical_top_value	31	31	0	2	1	Negative	16	0.5161				
+20260415T065150Z	any_class_platinum	pr_status_by_ihc	categorical_top_value	31	31	0	2	2	Positive	15	0.4839				
+20260415T065150Z	any_class_platinum	her2_status_by_ihc	categorical_top_value	31	30	1	4	1	Positive	14	0.4667				
+20260415T065150Z	any_class_platinum	her2_status_by_ihc	categorical_top_value	31	30	1	4	2	Equivocal	8	0.2667				
+20260415T065150Z	any_class_platinum	her2_status_by_ihc	categorical_top_value	31	30	1	4	3	Negative	7	0.2333				
+20260415T065150Z	any_class_platinum	her2_status_by_ihc	categorical_top_value	31	30	1	4	4	Indeterminate	1	0.0333				
+20260415T065150Z	any_class_platinum	ajcc_pathologic_tumor_stage	categorical_top_value	31	31	0	8	1	Stage IIA	11	0.3548				
+20260415T065150Z	any_class_platinum	ajcc_pathologic_tumor_stage	categorical_top_value	31	31	0	8	2	Stage IIB	5	0.1613				
+20260415T065150Z	any_class_platinum	ajcc_pathologic_tumor_stage	categorical_top_value	31	31	0	8	3	Stage IA	4	0.1290				
+20260415T065150Z	any_class_platinum	ajcc_pathologic_tumor_stage	categorical_top_value	31	31	0	8	4	Stage IIIA	4	0.1290				
+20260415T065150Z	any_class_platinum	ajcc_pathologic_tumor_stage	categorical_top_value	31	31	0	8	5	Stage I	3	0.0968				
+20260415T065150Z	any_class_platinum	ajcc_pathologic_tumor_stage	categorical_top_value	31	31	0	8	6	Stage IIIC	2	0.0645				
+20260415T065150Z	any_class_platinum	ajcc_pathologic_tumor_stage	categorical_top_value	31	31	0	8	7	Stage IIIB	1	0.0323				
+20260415T065150Z	any_class_platinum	ajcc_pathologic_tumor_stage	categorical_top_value	31	31	0	8	8	Stage II	1	0.0323				
+20260415T065150Z	any_class_platinum	histological_type	categorical_top_value	31	31	0	5	1	Infiltrating Ductal Carcinoma	27	0.8710				
+20260415T065150Z	any_class_platinum	histological_type	categorical_top_value	31	31	0	5	2	Metaplastic Carcinoma	1	0.0323				
+20260415T065150Z	any_class_platinum	histological_type	categorical_top_value	31	31	0	5	3	Other, specify	1	0.0323				
+20260415T065150Z	any_class_platinum	histological_type	categorical_top_value	31	31	0	5	4	Mixed Histology (please specify)	1	0.0323				
+20260415T065150Z	any_class_platinum	histological_type	categorical_top_value	31	31	0	5	5	Infiltrating Lobular Carcinoma	1	0.0323				
+20260415T065150Z	any_class_antimetabolite	age_at_diagnosis	numeric_summary	122	122	0	44					28	57	82	
+20260415T065150Z	any_class_antimetabolite	er_status_by_ihc	categorical_top_value	122	105	17	2	1	Positive	70	0.6667				
+20260415T065150Z	any_class_antimetabolite	er_status_by_ihc	categorical_top_value	122	105	17	2	2	Negative	35	0.3333				
+20260415T065150Z	any_class_antimetabolite	pr_status_by_ihc	categorical_top_value	122	104	18	2	1	Positive	66	0.6346				
+20260415T065150Z	any_class_antimetabolite	pr_status_by_ihc	categorical_top_value	122	104	18	2	2	Negative	38	0.3654				
+20260415T065150Z	any_class_antimetabolite	her2_status_by_ihc	categorical_top_value	122	97	25	4	1	Negative	61	0.6289				
+20260415T065150Z	any_class_antimetabolite	her2_status_by_ihc	categorical_top_value	122	97	25	4	2	Positive	21	0.2165				
+20260415T065150Z	any_class_antimetabolite	her2_status_by_ihc	categorical_top_value	122	97	25	4	3	Equivocal	14	0.1443				
+20260415T065150Z	any_class_antimetabolite	her2_status_by_ihc	categorical_top_value	122	97	25	4	4	Indeterminate	1	0.0103				
+20260415T065150Z	any_class_antimetabolite	ajcc_pathologic_tumor_stage	categorical_top_value	122	122	0	9	1	Stage IIA	39	0.3197				
+20260415T065150Z	any_class_antimetabolite	ajcc_pathologic_tumor_stage	categorical_top_value	122	122	0	9	2	Stage IIB	30	0.2459				
+20260415T065150Z	any_class_antimetabolite	ajcc_pathologic_tumor_stage	categorical_top_value	122	122	0	9	3	Stage IIIA	21	0.1721				
+20260415T065150Z	any_class_antimetabolite	ajcc_pathologic_tumor_stage	categorical_top_value	122	122	0	9	4	Stage IIIC	13	0.1066				
+20260415T065150Z	any_class_antimetabolite	ajcc_pathologic_tumor_stage	categorical_top_value	122	122	0	9	5	Stage I	8	0.0656				
+20260415T065150Z	any_class_antimetabolite	ajcc_pathologic_tumor_stage	categorical_top_value	122	122	0	9	6	Stage IA	4	0.0328				
+20260415T065150Z	any_class_antimetabolite	ajcc_pathologic_tumor_stage	categorical_top_value	122	122	0	9	7	Stage IV	3	0.0246				
+20260415T065150Z	any_class_antimetabolite	ajcc_pathologic_tumor_stage	categorical_top_value	122	122	0	9	8	Stage IIIB	3	0.0246				
+20260415T065150Z	any_class_antimetabolite	ajcc_pathologic_tumor_stage	categorical_top_value	122	122	0	9	9	Stage X	1	0.0082				
+20260415T065150Z	any_class_antimetabolite	histological_type	categorical_top_value	122	122	0	5	1	Infiltrating Ductal Carcinoma	89	0.7295				
+20260415T065150Z	any_class_antimetabolite	histological_type	categorical_top_value	122	122	0	5	2	Infiltrating Lobular Carcinoma	18	0.1475				
+20260415T065150Z	any_class_antimetabolite	histological_type	categorical_top_value	122	122	0	5	3	Mixed Histology (please specify)	9	0.0738				
+20260415T065150Z	any_class_antimetabolite	histological_type	categorical_top_value	122	122	0	5	4	Other, specify	4	0.0328				
+20260415T065150Z	any_class_antimetabolite	histological_type	categorical_top_value	122	122	0	5	5	Metaplastic Carcinoma	2	0.0164				
+20260415T065150Z	any_class_endocrine_serm	age_at_diagnosis	numeric_summary	252	252	0	57					26	51	90	
+20260415T065150Z	any_class_endocrine_serm	er_status_by_ihc	categorical_top_value	252	227	25	2	1	Positive	218	0.9604				
+20260415T065150Z	any_class_endocrine_serm	er_status_by_ihc	categorical_top_value	252	227	25	2	2	Negative	9	0.0396				
+20260415T065150Z	any_class_endocrine_serm	pr_status_by_ihc	categorical_top_value	252	227	25	2	1	Positive	192	0.8458				
+20260415T065150Z	any_class_endocrine_serm	pr_status_by_ihc	categorical_top_value	252	227	25	2	2	Negative	35	0.1542				
+20260415T065150Z	any_class_endocrine_serm	her2_status_by_ihc	categorical_top_value	252	214	38	4	1	Negative	137	0.6402				
+20260415T065150Z	any_class_endocrine_serm	her2_status_by_ihc	categorical_top_value	252	214	38	4	2	Equivocal	42	0.1963				
+20260415T065150Z	any_class_endocrine_serm	her2_status_by_ihc	categorical_top_value	252	214	38	4	3	Positive	32	0.1495				
+20260415T065150Z	any_class_endocrine_serm	her2_status_by_ihc	categorical_top_value	252	214	38	4	4	Indeterminate	3	0.0140				
+20260415T065150Z	any_class_endocrine_serm	ajcc_pathologic_tumor_stage	categorical_top_value	252	249	3	11	1	Stage IIA	78	0.3133				
+20260415T065150Z	any_class_endocrine_serm	ajcc_pathologic_tumor_stage	categorical_top_value	252	249	3	11	2	Stage IIB	74	0.2972				
+20260415T065150Z	any_class_endocrine_serm	ajcc_pathologic_tumor_stage	categorical_top_value	252	249	3	11	3	Stage IIIA	39	0.1566				
+20260415T065150Z	any_class_endocrine_serm	ajcc_pathologic_tumor_stage	categorical_top_value	252	249	3	11	4	Stage IIIC	20	0.0803				
+20260415T065150Z	any_class_endocrine_serm	ajcc_pathologic_tumor_stage	categorical_top_value	252	249	3	11	5	Stage IA	18	0.0723				
+20260415T065150Z	any_class_endocrine_serm	ajcc_pathologic_tumor_stage	categorical_top_value	252	249	3	11	6	Stage I	12	0.0482				
+20260415T065150Z	any_class_endocrine_serm	ajcc_pathologic_tumor_stage	categorical_top_value	252	249	3	11	7	Stage IV	2	0.0080				
+20260415T065150Z	any_class_endocrine_serm	ajcc_pathologic_tumor_stage	categorical_top_value	252	249	3	11	8	Stage IB	2	0.0080				
+20260415T065150Z	any_class_endocrine_serm	ajcc_pathologic_tumor_stage	categorical_top_value	252	249	3	11	9	Stage IIIB	2	0.0080				
+20260415T065150Z	any_class_endocrine_serm	ajcc_pathologic_tumor_stage	categorical_top_value	252	249	3	11	10	Stage X	1	0.0040				
+20260415T065150Z	any_class_endocrine_serm	histological_type	categorical_top_value	252	252	0	5	1	Infiltrating Ductal Carcinoma	167	0.6627				
+20260415T065150Z	any_class_endocrine_serm	histological_type	categorical_top_value	252	252	0	5	2	Infiltrating Lobular Carcinoma	58	0.2302				
+20260415T065150Z	any_class_endocrine_serm	histological_type	categorical_top_value	252	252	0	5	3	Mixed Histology (please specify)	16	0.0635				
+20260415T065150Z	any_class_endocrine_serm	histological_type	categorical_top_value	252	252	0	5	4	Other, specify	7	0.0278				
+20260415T065150Z	any_class_endocrine_serm	histological_type	categorical_top_value	252	252	0	5	5	Mucinous Carcinoma	4	0.0159				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	age_at_diagnosis	numeric_summary	328	328	0	56					27	62	90	
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	er_status_by_ihc	categorical_top_value	328	327	1	2	1	Positive	319	0.9755				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	er_status_by_ihc	categorical_top_value	328	327	1	2	2	Negative	8	0.0245				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	pr_status_by_ihc	categorical_top_value	328	327	1	2	1	Positive	272	0.8318				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	pr_status_by_ihc	categorical_top_value	328	327	1	2	2	Negative	55	0.1682				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	her2_status_by_ihc	categorical_top_value	328	301	27	4	1	Negative	175	0.5814				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	her2_status_by_ihc	categorical_top_value	328	301	27	4	2	Equivocal	87	0.2890				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	her2_status_by_ihc	categorical_top_value	328	301	27	4	3	Positive	35	0.1163				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	her2_status_by_ihc	categorical_top_value	328	301	27	4	4	Indeterminate	4	0.0133				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	ajcc_pathologic_tumor_stage	categorical_top_value	328	326	2	11	1	Stage IIA	112	0.3436				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	ajcc_pathologic_tumor_stage	categorical_top_value	328	326	2	11	2	Stage IIB	77	0.2362				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	ajcc_pathologic_tumor_stage	categorical_top_value	328	326	2	11	3	Stage IIIA	47	0.1442				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	ajcc_pathologic_tumor_stage	categorical_top_value	328	326	2	11	4	Stage I	32	0.0982				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	ajcc_pathologic_tumor_stage	categorical_top_value	328	326	2	11	5	Stage IA	22	0.0675				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	ajcc_pathologic_tumor_stage	categorical_top_value	328	326	2	11	6	Stage IIIC	19	0.0583				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	ajcc_pathologic_tumor_stage	categorical_top_value	328	326	2	11	7	Stage IV	7	0.0215				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	ajcc_pathologic_tumor_stage	categorical_top_value	328	326	2	11	8	Stage IIIB	5	0.0153				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	ajcc_pathologic_tumor_stage	categorical_top_value	328	326	2	11	9	Stage IB	2	0.0061				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	ajcc_pathologic_tumor_stage	categorical_top_value	328	326	2	11	10	Stage X	2	0.0061				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	histological_type	categorical_top_value	328	328	0	5	1	Infiltrating Ductal Carcinoma	213	0.6494				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	histological_type	categorical_top_value	328	328	0	5	2	Infiltrating Lobular Carcinoma	93	0.2835				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	histological_type	categorical_top_value	328	328	0	5	3	Other, specify	14	0.0427				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	histological_type	categorical_top_value	328	328	0	5	4	Mixed Histology (please specify)	5	0.0152				
+20260415T065150Z	any_class_endocrine_aromatase_inhibitor	histological_type	categorical_top_value	328	328	0	5	5	Mucinous Carcinoma	3	0.0091				
+20260415T065150Z	any_class_endocrine_other	age_at_diagnosis	numeric_summary	30	30	0	21					27	45.5	72	
+20260415T065150Z	any_class_endocrine_other	er_status_by_ihc	categorical_top_value	30	27	3	2	1	Positive	26	0.9630				
+20260415T065150Z	any_class_endocrine_other	er_status_by_ihc	categorical_top_value	30	27	3	2	2	Negative	1	0.0370				
+20260415T065150Z	any_class_endocrine_other	pr_status_by_ihc	categorical_top_value	30	27	3	2	1	Positive	22	0.8148				
+20260415T065150Z	any_class_endocrine_other	pr_status_by_ihc	categorical_top_value	30	27	3	2	2	Negative	5	0.1852				
+20260415T065150Z	any_class_endocrine_other	her2_status_by_ihc	categorical_top_value	30	27	3	3	1	Negative	15	0.5556				
+20260415T065150Z	any_class_endocrine_other	her2_status_by_ihc	categorical_top_value	30	27	3	3	2	Equivocal	9	0.3333				
+20260415T065150Z	any_class_endocrine_other	her2_status_by_ihc	categorical_top_value	30	27	3	3	3	Positive	3	0.1111				
+20260415T065150Z	any_class_endocrine_other	ajcc_pathologic_tumor_stage	categorical_top_value	30	30	0	8	1	Stage IIB	11	0.3667				
+20260415T065150Z	any_class_endocrine_other	ajcc_pathologic_tumor_stage	categorical_top_value	30	30	0	8	2	Stage IIA	5	0.1667				
+20260415T065150Z	any_class_endocrine_other	ajcc_pathologic_tumor_stage	categorical_top_value	30	30	0	8	3	Stage IIIA	5	0.1667				
+20260415T065150Z	any_class_endocrine_other	ajcc_pathologic_tumor_stage	categorical_top_value	30	30	0	8	4	Stage IIIC	3	0.1000				
+20260415T065150Z	any_class_endocrine_other	ajcc_pathologic_tumor_stage	categorical_top_value	30	30	0	8	5	Stage IV	3	0.1000				
+20260415T065150Z	any_class_endocrine_other	ajcc_pathologic_tumor_stage	categorical_top_value	30	30	0	8	6	Stage X	1	0.0333				
+20260415T065150Z	any_class_endocrine_other	ajcc_pathologic_tumor_stage	categorical_top_value	30	30	0	8	7	Stage IIIB	1	0.0333				
+20260415T065150Z	any_class_endocrine_other	ajcc_pathologic_tumor_stage	categorical_top_value	30	30	0	8	8	Stage IB	1	0.0333				
+20260415T065150Z	any_class_endocrine_other	histological_type	categorical_top_value	30	30	0	6	1	Infiltrating Ductal Carcinoma	19	0.6333				
+20260415T065150Z	any_class_endocrine_other	histological_type	categorical_top_value	30	30	0	6	2	Infiltrating Lobular Carcinoma	6	0.2000				
+20260415T065150Z	any_class_endocrine_other	histological_type	categorical_top_value	30	30	0	6	3	Other, specify	2	0.0667				
+20260415T065150Z	any_class_endocrine_other	histological_type	categorical_top_value	30	30	0	6	4	Metaplastic Carcinoma	1	0.0333				
+20260415T065150Z	any_class_endocrine_other	histological_type	categorical_top_value	30	30	0	6	5	Mixed Histology (please specify)	1	0.0333				
+20260415T065150Z	any_class_endocrine_other	histological_type	categorical_top_value	30	30	0	6	6	Mucinous Carcinoma	1	0.0333				
+20260415T065150Z	any_class_her2_targeted	age_at_diagnosis	numeric_summary	73	73	0	36					27	54	84	
+20260415T065150Z	any_class_her2_targeted	er_status_by_ihc	categorical_top_value	73	73	0	2	1	Positive	56	0.7671				
+20260415T065150Z	any_class_her2_targeted	er_status_by_ihc	categorical_top_value	73	73	0	2	2	Negative	17	0.2329				
+20260415T065150Z	any_class_her2_targeted	pr_status_by_ihc	categorical_top_value	73	73	0	2	1	Positive	41	0.5616				
+20260415T065150Z	any_class_her2_targeted	pr_status_by_ihc	categorical_top_value	73	73	0	2	2	Negative	32	0.4384				
+20260415T065150Z	any_class_her2_targeted	her2_status_by_ihc	categorical_top_value	73	67	6	4	1	Positive	45	0.6716				
+20260415T065150Z	any_class_her2_targeted	her2_status_by_ihc	categorical_top_value	73	67	6	4	2	Equivocal	13	0.1940				
+20260415T065150Z	any_class_her2_targeted	her2_status_by_ihc	categorical_top_value	73	67	6	4	3	Negative	6	0.0896				
+20260415T065150Z	any_class_her2_targeted	her2_status_by_ihc	categorical_top_value	73	67	6	4	4	Indeterminate	3	0.0448				
+20260415T065150Z	any_class_her2_targeted	ajcc_pathologic_tumor_stage	categorical_top_value	73	73	0	6	1	Stage IIA	25	0.3425				
+20260415T065150Z	any_class_her2_targeted	ajcc_pathologic_tumor_stage	categorical_top_value	73	73	0	6	2	Stage IIB	17	0.2329				
+20260415T065150Z	any_class_her2_targeted	ajcc_pathologic_tumor_stage	categorical_top_value	73	73	0	6	3	Stage IIIA	14	0.1918				
+20260415T065150Z	any_class_her2_targeted	ajcc_pathologic_tumor_stage	categorical_top_value	73	73	0	6	4	Stage IIIC	7	0.0959				
+20260415T065150Z	any_class_her2_targeted	ajcc_pathologic_tumor_stage	categorical_top_value	73	73	0	6	5	Stage I	6	0.0822				
+20260415T065150Z	any_class_her2_targeted	ajcc_pathologic_tumor_stage	categorical_top_value	73	73	0	6	6	Stage IA	4	0.0548				
+20260415T065150Z	any_class_her2_targeted	histological_type	categorical_top_value	73	73	0	3	1	Infiltrating Ductal Carcinoma	62	0.8493				
+20260415T065150Z	any_class_her2_targeted	histological_type	categorical_top_value	73	73	0	3	2	Infiltrating Lobular Carcinoma	10	0.1370				
+20260415T065150Z	any_class_her2_targeted	histological_type	categorical_top_value	73	73	0	3	3	Other, specify	1	0.0137				
+20260415T065150Z	any_class_ancillary_supportive	age_at_diagnosis	numeric_summary	42	42	0	28					29	52	80	
+20260415T065150Z	any_class_ancillary_supportive	er_status_by_ihc	categorical_top_value	42	39	3	2	1	Positive	28	0.7179				
+20260415T065150Z	any_class_ancillary_supportive	er_status_by_ihc	categorical_top_value	42	39	3	2	2	Negative	11	0.2821				
+20260415T065150Z	any_class_ancillary_supportive	pr_status_by_ihc	categorical_top_value	42	39	3	2	1	Positive	26	0.6667				
+20260415T065150Z	any_class_ancillary_supportive	pr_status_by_ihc	categorical_top_value	42	39	3	2	2	Negative	13	0.3333				
+20260415T065150Z	any_class_ancillary_supportive	her2_status_by_ihc	categorical_top_value	42	36	6	3	1	Negative	21	0.5833				
+20260415T065150Z	any_class_ancillary_supportive	her2_status_by_ihc	categorical_top_value	42	36	6	3	2	Equivocal	10	0.2778				
+20260415T065150Z	any_class_ancillary_supportive	her2_status_by_ihc	categorical_top_value	42	36	6	3	3	Positive	5	0.1389				
+20260415T065150Z	any_class_ancillary_supportive	ajcc_pathologic_tumor_stage	categorical_top_value	42	42	0	7	1	Stage IIB	13	0.3095				
+20260415T065150Z	any_class_ancillary_supportive	ajcc_pathologic_tumor_stage	categorical_top_value	42	42	0	7	2	Stage IIA	9	0.2143				
+20260415T065150Z	any_class_ancillary_supportive	ajcc_pathologic_tumor_stage	categorical_top_value	42	42	0	7	3	Stage IIIC	7	0.1667				
+20260415T065150Z	any_class_ancillary_supportive	ajcc_pathologic_tumor_stage	categorical_top_value	42	42	0	7	4	Stage IIIA	6	0.1429				
+20260415T065150Z	any_class_ancillary_supportive	ajcc_pathologic_tumor_stage	categorical_top_value	42	42	0	7	5	Stage IV	5	0.1190				
+20260415T065150Z	any_class_ancillary_supportive	ajcc_pathologic_tumor_stage	categorical_top_value	42	42	0	7	6	Stage IA	1	0.0238				
+20260415T065150Z	any_class_ancillary_supportive	ajcc_pathologic_tumor_stage	categorical_top_value	42	42	0	7	7	Stage I	1	0.0238				
+20260415T065150Z	any_class_ancillary_supportive	histological_type	categorical_top_value	42	42	0	5	1	Infiltrating Ductal Carcinoma	31	0.7381				
+20260415T065150Z	any_class_ancillary_supportive	histological_type	categorical_top_value	42	42	0	5	2	Infiltrating Lobular Carcinoma	6	0.1429				
+20260415T065150Z	any_class_ancillary_supportive	histological_type	categorical_top_value	42	42	0	5	3	Other, specify	3	0.0714				
+20260415T065150Z	any_class_ancillary_supportive	histological_type	categorical_top_value	42	42	0	5	4	Metaplastic Carcinoma	1	0.0238				
+20260415T065150Z	any_class_ancillary_supportive	histological_type	categorical_top_value	42	42	0	5	5	Mixed Histology (please specify)	1	0.0238				

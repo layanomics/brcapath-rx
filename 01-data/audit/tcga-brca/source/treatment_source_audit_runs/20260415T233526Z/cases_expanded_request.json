@@ -1,0 +1,9 @@
+{
+  "final_url": "https://api.gdc.cancer.gov/cases?filters=%7B%22op%22%3A+%22in%22%2C+%22content%22%3A+%7B%22field%22%3A+%22project.project_id%22%2C+%22value%22%3A+%5B%22TCGA-BRCA%22%5D%7D%7D&size=1&sort=submitter_id%3Aasc&expand=diagnoses%2Cdiagnoses.treatments%2Cfollow_ups%2Cexposures%2Cdemographic",
+  "params": {
+    "filters": "{\"op\": \"in\", \"content\": {\"field\": \"project.project_id\", \"value\": [\"TCGA-BRCA\"]}}",
+    "size": 1,
+    "sort": "submitter_id:asc",
+    "expand": "diagnoses,diagnoses.treatments,follow_ups,exposures,demographic"
+  }
+}

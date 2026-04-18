@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "drug_name_normalization_v1_run_id": "20260415T045741Z",
+  "started_at_utc": "2026-04-15T04:57:41Z",
+  "failed_at_utc": "2026-04-15T04:57:41Z",
+  "error_type": "DrugNameNormalizationV1Error",
+  "error_message": "drug_name_values_json continuity mismatch between patient_treatment_profile_v1.tsv and clinical_drug.tsv for barcode TCGA-A2-A0CY.",
+  "workflow": "tcga_brca_drug_name_normalization_v1"
+}

@@ -1,0 +1,38 @@
+patient_treatment_grouping_v1_run_id	summary_section	summary_metric	summary_value	notes
+20260414T210420Z	inputs	patient_treatment_profile_v1_run_id	20260414T200843Z	
+20260414T210420Z	inputs	treatment_os_overlap_v1_run_id	20260414T172924Z	
+20260414T210420Z	inputs	os_endpoint_v1_run_id	20260414T162349Z	
+20260414T210420Z	inputs	baseline_model_input_v1_run_id	20260414T013108Z	
+20260414T210420Z	inputs	cohort_v1_build_id	20260413T202134Z	
+20260414T210420Z	coverage	total_os_cohort_size	1097	
+20260414T210420Z	coverage	patients_requiring_manual_review	357	
+20260414T210420Z	coverage	patients_requiring_manual_review_fraction	0.3254	Manual-review scope mirrors patient_treatment_profile_v1 exactly in grouping v1.
+20260414T210420Z	coverage	patients_with_any_radiation	528	
+20260414T210420Z	coverage	patients_with_any_radiation_fraction	0.4813	
+20260414T210420Z	coverage	patients_with_any_regimen_context	467	
+20260414T210420Z	coverage	patients_with_any_regimen_context_fraction	0.4257	
+20260414T210420Z	coverage	patients_with_any_treatment_timing	809	
+20260414T210420Z	coverage	patients_with_any_treatment_timing_fraction	0.7375	
+20260414T210420Z	coverage	patients_with_compound_raw_therapy_type_present	2	Compound raw therapy-type labels remain preserved exactly and are not split in grouping v1.
+20260414T210420Z	coverage	patients_with_compound_raw_therapy_type_present_fraction	0.0018	
+20260414T210420Z	treatment_group	no_drug_record_count	317	
+20260414T210420Z	treatment_group	no_drug_record_fraction	0.2890	
+20260414T210420Z	treatment_group	single_chemotherapy_count	231	
+20260414T210420Z	treatment_group	single_chemotherapy_fraction	0.2106	
+20260414T210420Z	treatment_group	single_hormone_therapy_count	189	
+20260414T210420Z	treatment_group	single_hormone_therapy_fraction	0.1723	
+20260414T210420Z	treatment_group	single_targeted_therapy_count	0	
+20260414T210420Z	treatment_group	single_targeted_therapy_fraction	0.0000	
+20260414T210420Z	treatment_group	single_immunotherapy_count	0	
+20260414T210420Z	treatment_group	single_immunotherapy_fraction	0.0000	
+20260414T210420Z	treatment_group	single_ancillary_or_other_count	3	
+20260414T210420Z	treatment_group	single_ancillary_or_other_fraction	0.0027	
+20260414T210420Z	treatment_group	mixed_multi_type_count	355	
+20260414T210420Z	treatment_group	mixed_multi_type_fraction	0.3236	
+20260414T210420Z	treatment_group	missing_type_only_count	2	
+20260414T210420Z	treatment_group	missing_type_only_fraction	0.0018	
+20260414T210420Z	readiness	provisional_readiness_interpretation	ready_for_grouped_descriptive_review	The saved patient-level grouping table is cohort-complete and suitable for grouped descriptive review only.
+20260414T210420Z	readiness	treatment_arm_freeze_review_status	blocked	Final treatment-arm freeze remains blocked because drug names remain unnormalized and manual review remains unresolved.
+20260414T210420Z	readiness	remaining_blocker	drug_name_not_normalized_and_manual_review_remaining	This workflow remains provisional grouping/prep only.
+20260414T210420Z	readiness	treatment_recommendation_modeling_status	out_of_scope	Treatment recommendation modeling remains out of scope for this phase.
+20260414T210420Z	readiness	grouping_scope	grouping_prep_only	This workflow does not normalize drug names, freeze treatment arms, or perform modeling.

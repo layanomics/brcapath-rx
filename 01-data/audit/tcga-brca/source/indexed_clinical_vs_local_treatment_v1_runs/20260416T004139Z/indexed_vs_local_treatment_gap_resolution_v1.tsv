@@ -1,0 +1,21 @@
+indexed_clinical_vs_local_treatment_v1_run_id	gap_group	denominator_patient_count	gap_metric	patient_count	patient_fraction_of_gap_group	notes
+20260416T004139Z	no_local_drug	317	gain_any_indexed_treatment	317	1.0000	Any indexed diagnoses.treatments row.
+20260416T004139Z	no_local_drug	317	gain_indexed_druglike	247	0.7792	Indexed broad druglike treatment coverage.
+20260416T004139Z	no_local_drug	317	gain_indexed_radiation	247	0.7792	Indexed broad radiation treatment coverage.
+20260416T004139Z	no_local_drug	317	gain_surgery_only	70	0.2208	Indexed recovery limited to surgery-only rows.
+20260416T004139Z	no_local_drug	317	gain_context_only	0	0.0000	Indexed recovery limited to prior-treatment or follow-up context.
+20260416T004139Z	no_local_drug	317	gain_coarse_only	70	0.2208	Indexed evidence present but not judged potentially useful beyond coarse recovery.
+20260416T004139Z	no_local_drug	317	gain_useful_new_evidence	247	0.7792	Indexed druglike and/or radiation coverage missing locally, or locally missing patients with extra detail.
+20260416T004139Z	no_local_drug	317	gain_agent_detail	1	0.0032	Indexed therapeutic-agent detail among locally missing patients.
+20260416T004139Z	no_local_drug	317	gain_regimen_line_detail	0	0.0000	Indexed regimen-or-line detail among locally missing patients.
+20260416T004139Z	no_local_drug	317	gain_timing_detail	6	0.0189	Indexed treatment timing detail among locally missing patients.
+20260416T004139Z	no_local_drug_or_radiation	278	gain_any_indexed_treatment	278	1.0000	Any indexed diagnoses.treatments row.
+20260416T004139Z	no_local_drug_or_radiation	278	gain_indexed_druglike	208	0.7482	Indexed broad druglike treatment coverage.
+20260416T004139Z	no_local_drug_or_radiation	278	gain_indexed_radiation	208	0.7482	Indexed broad radiation treatment coverage.
+20260416T004139Z	no_local_drug_or_radiation	278	gain_surgery_only	70	0.2518	Indexed recovery limited to surgery-only rows.
+20260416T004139Z	no_local_drug_or_radiation	278	gain_context_only	0	0.0000	Indexed recovery limited to prior-treatment or follow-up context.
+20260416T004139Z	no_local_drug_or_radiation	278	gain_coarse_only	70	0.2518	Indexed evidence present but not judged potentially useful beyond coarse recovery.
+20260416T004139Z	no_local_drug_or_radiation	278	gain_useful_new_evidence	208	0.7482	Indexed druglike and/or radiation coverage missing locally, or locally missing patients with extra detail.
+20260416T004139Z	no_local_drug_or_radiation	278	gain_agent_detail	1	0.0036	Indexed therapeutic-agent detail among locally missing patients.
+20260416T004139Z	no_local_drug_or_radiation	278	gain_regimen_line_detail	0	0.0000	Indexed regimen-or-line detail among locally missing patients.
+20260416T004139Z	no_local_drug_or_radiation	278	gain_timing_detail	6	0.0216	Indexed treatment timing detail among locally missing patients.

@@ -1,0 +1,80 @@
+field_name	field_group	row_count	non_missing_count	missing_like_count	missing_like_fraction	distinct_non_missing_count	notes
+patient_treatment_master_v1_run_id	lineage	1097	1097	0	0.000000	1	lineage
+patient_treatment_profile_v1_run_id	lineage	1097	1097	0	0.000000	1	lineage
+treatment_os_overlap_v1_run_id	lineage	1097	1097	0	0.000000	1	lineage
+os_endpoint_v1_run_id	lineage	1097	1097	0	0.000000	1	lineage
+clinical_biotab_parse_run_id	lineage	1097	1097	0	0.000000	1	lineage
+baseline_model_input_v1_run_id	lineage	1097	1097	0	0.000000	1	lineage
+cohort_v1_build_id	lineage	1097	1097	0	0.000000	1	lineage
+bcr_patient_barcode	identifier	1097	1097	0	0.000000	1097	identifier
+bcr_patient_uuid	identifier	1097	1097	0	0.000000	1097	identifier
+provisional_patient_row_id	identifier	1097	1097	0	0.000000	1097	identifier
+baseline_analysis_v1_row_id	identifier	1097	1097	0	0.000000	1097	identifier
+feature_set_v1_row_index	identifier	1097	1097	0	0.000000	1097	identifier
+has_any_drug_row	local_profile	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+drug_row_count	local_profile	1097	1097	0	0.000000	14	local_profile
+has_any_radiation_row	local_profile	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+radiation_row_count	local_profile	1097	1097	0	0.000000	6	local_profile
+drug_therapy_type_values_json	local_profile	1097	780	317	0.288970	143	json_or_text_set_field; [] counted as missing-like
+drug_therapy_type_distinct_count	local_profile	1097	1097	0	0.000000	5	local_profile
+drug_therapy_type_single_or_mixed	local_profile	1097	1097	0	0.000000	4	local_profile
+dominant_therapy_type_if_any	local_profile	1097	729	368	0.335460	5	local_profile
+dominant_therapy_type_rule	local_profile	1097	1097	0	0.000000	5	local_profile
+therapy_type_counts_json	local_profile	1097	778	319	0.290793	111	json_or_text_set_field; [] counted as missing-like
+has_any_regimen_context	local_profile	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+regimen_context_values_json	local_profile	1097	467	630	0.574294	14	json_or_text_set_field; [] counted as missing-like
+regimen_context_distinct_count	local_profile	1097	1097	0	0.000000	4	local_profile
+regimen_context_single_or_mixed	local_profile	1097	1097	0	0.000000	3	local_profile
+drug_name_values_json	local_profile	1097	780	317	0.288970	526	json_or_text_set_field; [] counted as missing-like
+distinct_drug_name_count	local_profile	1097	1097	0	0.000000	14	local_profile
+earliest_drug_start_days	local_profile	1097	759	338	0.308113	206	local_profile
+latest_drug_end_days	local_profile	1097	598	499	0.454877	360	local_profile
+earliest_radiation_start_days	local_profile	1097	506	591	0.538742	248	local_profile
+latest_radiation_end_days	local_profile	1097	507	590	0.537830	263	local_profile
+has_any_treatment_timing	local_profile	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+treatment_profile_requires_manual_review	local_profile	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+treatment_profile_status	local_profile	1097	1097	0	0.000000	4	local_profile
+treatment_profile_flags_json	local_profile	1097	1097	0	0.000000	27	local_profile
+indexed_clinical_vs_local_treatment_v1_run_id	lineage	1097	1097	0	0.000000	1	lineage
+treatment_source_audit_run_id	lineage	1097	1097	0	0.000000	1	lineage
+indexed_case_id	identifier	1097	1097	0	0.000000	1097	identifier
+indexed_diagnosis_count	indexed_raw	1097	1097	0	0.000000	7	indexed_raw
+indexed_treatment_row_count	indexed_raw	1097	1097	0	0.000000	23	indexed_raw
+indexed_follow_up_row_count	indexed_raw	1097	1097	0	0.000000	8	indexed_raw
+indexed_treatment_type_values_json	indexed_raw	1097	1097	0	0.000000	247	json_or_text_set_field; [] counted as missing-like
+indexed_treatment_type_distinct_count	indexed_raw	1097	1097	0	0.000000	8	indexed_raw
+indexed_treatment_intent_type_values_json	indexed_raw	1097	1096	1	0.000912	18	json_or_text_set_field; [] counted as missing-like
+indexed_therapeutic_agents_values_json	indexed_raw	1097	774	323	0.294439	421	json_or_text_set_field; [] counted as missing-like
+indexed_regimen_line_values_json	indexed_raw	1097	3	1094	0.997265	2	json_or_text_set_field; [] counted as missing-like
+indexed_followup_timepoint_category_values_json	indexed_raw	1097	1096	1	0.000912	9	json_or_text_set_field; [] counted as missing-like
+indexed_has_any_treatment_row	indexed_flag	1097	1097	0	0.000000	1	controlled_yes_no_flag; should be fully populated after integration
+indexed_has_any_druglike_treatment	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_has_any_radiation_treatment	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_has_any_surgery_treatment	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_has_any_non_surgical_treatment	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_has_any_therapeutic_agent_value	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_has_any_regimen_line_value	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_has_any_treatment_timing	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_has_prior_treatment_flag	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_has_followup_post_initial_treatment	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_has_followup_explicit_treatment_field	indexed_flag	1097	1097	0	0.000000	1	controlled_yes_no_flag; should be fully populated after integration
+master_has_any_treatment_evidence	master_flag	1097	1097	0	0.000000	1	controlled_yes_no_flag; should be fully populated after integration
+master_has_any_druglike_evidence	master_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+master_has_any_radiation_evidence	master_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+master_has_any_surgery_evidence	master_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+master_has_any_non_surgical_treatment_evidence	master_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+master_has_any_treatment_timing	master_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+master_any_treatment_source_support	provenance_class	1097	1097	0	0.000000	2	controlled source-support class
+master_druglike_source_support	provenance_class	1097	1097	0	0.000000	3	controlled source-support class
+master_radiation_source_support	provenance_class	1097	1097	0	0.000000	3	controlled source-support class
+master_surgery_source_support	provenance_class	1097	1097	0	0.000000	2	controlled source-support class
+master_non_surgical_source_support	provenance_class	1097	1097	0	0.000000	3	controlled source-support class
+master_treatment_timing_source_support	provenance_class	1097	1097	0	0.000000	4	controlled source-support class
+indexed_adds_missing_druglike_coverage	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_adds_missing_radiation_coverage	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_adds_agent_detail_to_locally_missing_patient	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_adds_regimen_line_detail_to_locally_missing_patient	indexed_flag	1097	1097	0	0.000000	1	controlled_yes_no_flag; should be fully populated after integration
+indexed_adds_timing_detail_to_locally_missing_patient	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_surgery_only_flag	indexed_flag	1097	1097	0	0.000000	2	controlled_yes_no_flag; should be fully populated after integration
+indexed_context_only_flag	indexed_flag	1097	1097	0	0.000000	1	controlled_yes_no_flag; should be fully populated after integration
+indexed_incremental_value_class	audit_class	1097	1097	0	0.000000	2	classification field carried from indexed comparison logic

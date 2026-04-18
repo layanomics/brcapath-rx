@@ -1,0 +1,206 @@
+drug_name_normalization_v1_run_id	raw_drug_name	normalized_raw_drug_name_for_matching	provisional_normalized_drug_name	normalization_rule	normalization_confidence	manual_review_needed	notes
+20260415T045844Z	Cytoxan	cytoxan	cyclophosphamide	brand_generic_equivalence_or_case_normalization	confident	no	Cyclophosphamide and Cytoxan collapse to cyclophosphamide.
+20260415T045844Z	Tamoxifen	tamoxifen	tamoxifen	brand_generic_equivalence_or_case_normalization	confident	no	Tamoxifen brand/salt variants collapse to tamoxifen.
+20260415T045844Z	Cyclophosphamide	cyclophosphamide	cyclophosphamide	brand_generic_equivalence_or_case_normalization	confident	no	Cyclophosphamide and Cytoxan collapse to cyclophosphamide.
+20260415T045844Z	Doxorubicin	doxorubicin	doxorubicin	brand_generic_equivalence_or_case_normalization	confident	no	Doxorubicin and Adriamycin collapse to doxorubicin.
+20260415T045844Z	Arimidex	arimidex	anastrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Anastrozole and Arimidex labels collapse to anastrozole.
+20260415T045844Z	Adriamycin	adriamycin	doxorubicin	brand_generic_equivalence_or_case_normalization	confident	no	Doxorubicin and Adriamycin collapse to doxorubicin.
+20260415T045844Z	Paclitaxel	paclitaxel	paclitaxel	brand_generic_equivalence_or_case_normalization	confident	no	Paclitaxel and Taxol collapse to paclitaxel.
+20260415T045844Z	Taxotere	taxotere	docetaxel	brand_generic_equivalence_or_case_normalization	confident	no	Docetaxel and Taxotere collapse to docetaxel.
+20260415T045844Z	Docetaxel	docetaxel	docetaxel	brand_generic_equivalence_or_case_normalization	confident	no	Docetaxel and Taxotere collapse to docetaxel.
+20260415T045844Z	Taxol	taxol	paclitaxel	brand_generic_equivalence_or_case_normalization	confident	no	Paclitaxel and Taxol collapse to paclitaxel.
+20260415T045844Z	Anastrozole	anastrozole	anastrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Anastrozole and Arimidex labels collapse to anastrozole.
+20260415T045844Z	5-Fluorouracil	5 fluorouracil	5-fluorouracil	generic_synonym_and_case_normalization	confident	no	5-FU and fluorouracil labels collapse to 5-fluorouracil.
+20260415T045844Z	Epirubicin	epirubicin	epirubicin	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Trastuzumab	trastuzumab	trastuzumab	brand_generic_equivalence_or_case_normalization	confident	no	Trastuzumab and Herceptin collapse to trastuzumab.
+20260415T045844Z	Fluorouracil	fluorouracil	5-fluorouracil	generic_synonym_and_case_normalization	confident	no	5-FU and fluorouracil labels collapse to 5-fluorouracil.
+20260415T045844Z	Letrozole	letrozole	letrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Letrozole and Femara labels collapse to letrozole.
+20260415T045844Z	CYCLOPHOSPHAMIDE	cyclophosphamide	cyclophosphamide	brand_generic_equivalence_or_case_normalization	confident	no	Cyclophosphamide and Cytoxan collapse to cyclophosphamide.
+20260415T045844Z	Herceptin	herceptin	trastuzumab	brand_generic_equivalence_or_case_normalization	confident	no	Trastuzumab and Herceptin collapse to trastuzumab.
+20260415T045844Z	Carboplatin	carboplatin	carboplatin	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Femara	femara	letrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Letrozole and Femara labels collapse to letrozole.
+20260415T045844Z	Methotrexate	methotrexate	methotrexate	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	DOXORUBICIN	doxorubicin	doxorubicin	brand_generic_equivalence_or_case_normalization	confident	no	Doxorubicin and Adriamycin collapse to doxorubicin.
+20260415T045844Z	Exemestane	exemestane	exemestane	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Exemestane and Aromasin labels collapse to exemestane.
+20260415T045844Z	cyclophosphamide	cyclophosphamide	cyclophosphamide	brand_generic_equivalence_or_case_normalization	confident	no	Cyclophosphamide and Cytoxan collapse to cyclophosphamide.
+20260415T045844Z	PACLITAXEL	paclitaxel	paclitaxel	brand_generic_equivalence_or_case_normalization	confident	no	Paclitaxel and Taxol collapse to paclitaxel.
+20260415T045844Z	ARIMIDEX	arimidex	anastrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Anastrozole and Arimidex labels collapse to anastrozole.
+20260415T045844Z	Aromasin	aromasin	exemestane	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Exemestane and Aromasin labels collapse to exemestane.
+20260415T045844Z	CYTOXAN	cytoxan	cyclophosphamide	brand_generic_equivalence_or_case_normalization	confident	no	Cyclophosphamide and Cytoxan collapse to cyclophosphamide.
+20260415T045844Z	[Not Available]	not available	[Not Available]	missing_like_value_preserved	unmapped	yes	Missing-like raw values are preserved exactly and left unmapped in v1.
+20260415T045844Z	TAMOXIFEN	tamoxifen	tamoxifen	brand_generic_equivalence_or_case_normalization	confident	no	Tamoxifen brand/salt variants collapse to tamoxifen.
+20260415T045844Z	Xeloda	xeloda	capecitabine	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Capecitabine and Xeloda collapse to capecitabine.
+20260415T045844Z	tamoxifen	tamoxifen	tamoxifen	brand_generic_equivalence_or_case_normalization	confident	no	Tamoxifen brand/salt variants collapse to tamoxifen.
+20260415T045844Z	ADRIAMYCIN	adriamycin	doxorubicin	brand_generic_equivalence_or_case_normalization	confident	no	Doxorubicin and Adriamycin collapse to doxorubicin.
+20260415T045844Z	Cyclophosphane	cyclophosphane	cyclophosphamide	obvious_spelling_variant_review_needed	review_needed	yes	Cyclophosphamide spelling variants collapse provisionally to cyclophosphamide and remain flagged for manual review.
+20260415T045844Z	TAXOL	taxol	paclitaxel	brand_generic_equivalence_or_case_normalization	confident	no	Paclitaxel and Taxol collapse to paclitaxel.
+20260415T045844Z	TAXOTERE	taxotere	docetaxel	brand_generic_equivalence_or_case_normalization	confident	no	Docetaxel and Taxotere collapse to docetaxel.
+20260415T045844Z	Zoladex	zoladex	goserelin	brand_generic_equivalence_or_case_normalization	confident	no	Case-normalized exact values and obvious brand/generic equivalents collapse to goserelin.
+20260415T045844Z	doxorubicin	doxorubicin	doxorubicin	brand_generic_equivalence_or_case_normalization	confident	no	Doxorubicin and Adriamycin collapse to doxorubicin.
+20260415T045844Z	paclitaxel	paclitaxel	paclitaxel	brand_generic_equivalence_or_case_normalization	confident	no	Paclitaxel and Taxol collapse to paclitaxel.
+20260415T045844Z	5-Flourouracil	5 flourouracil	5-fluorouracil	obvious_spelling_variant_review_needed	review_needed	yes	Fluorouracil spelling variants collapse provisionally to 5-fluorouracil and remain flagged for manual review.
+20260415T045844Z	Abraxane	abraxane	albumin-bound paclitaxel	formulation_or_brand_generic_equivalence	confident	no	Protein-bound paclitaxel and Abraxane collapse to albumin-bound paclitaxel.
+20260415T045844Z	arimidex	arimidex	anastrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Anastrozole and Arimidex labels collapse to anastrozole.
+20260415T045844Z	Zometa	zometa	zoledronic acid	brand_generic_equivalence_or_case_normalization	confident	no	Zoledronic acid and Zometa collapse to zoledronic acid.
+20260415T045844Z	adriamycin+cyclophosphamide	adriamycin cyclophosphamide	adriamycin+cyclophosphamide	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	Bevacizumab	bevacizumab	bevacizumab	brand_generic_equivalence_or_case_normalization	confident	no	Bevacizumab and Avastin collapse to bevacizumab.
+20260415T045844Z	taxol	taxol	paclitaxel	brand_generic_equivalence_or_case_normalization	confident	no	Paclitaxel and Taxol collapse to paclitaxel.
+20260415T045844Z	ANASTROZOLE	anastrozole	anastrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Anastrozole and Arimidex labels collapse to anastrozole.
+20260415T045844Z	ANASTROZOLE (ARIMIDEX)	anastrozole arimidex	anastrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Anastrozole and Arimidex labels collapse to anastrozole.
+20260415T045844Z	adriamycin	adriamycin	doxorubicin	brand_generic_equivalence_or_case_normalization	confident	no	Doxorubicin and Adriamycin collapse to doxorubicin.
+20260415T045844Z	cytoxan	cytoxan	cyclophosphamide	brand_generic_equivalence_or_case_normalization	confident	no	Cyclophosphamide and Cytoxan collapse to cyclophosphamide.
+20260415T045844Z	herceptin	herceptin	trastuzumab	brand_generic_equivalence_or_case_normalization	confident	no	Trastuzumab and Herceptin collapse to trastuzumab.
+20260415T045844Z	Gemcitabine	gemcitabine	gemcitabine	brand_generic_equivalence_or_case_normalization	confident	no	Gemcitabine and Gemzar collapse to gemcitabine.
+20260415T045844Z	HERCEPTIN	herceptin	trastuzumab	brand_generic_equivalence_or_case_normalization	confident	no	Trastuzumab and Herceptin collapse to trastuzumab.
+20260415T045844Z	LETROZOLE (FEMARA)	letrozole femara	letrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Letrozole and Femara labels collapse to letrozole.
+20260415T045844Z	NEULASTA	neulasta	pegfilgrastim	brand_generic_equivalence	confident	no	Neulasta collapses to pegfilgrastim.
+20260415T045844Z	Zoledronic Acid	zoledronic acid	zoledronic acid	brand_generic_equivalence_or_case_normalization	confident	no	Zoledronic acid and Zometa collapse to zoledronic acid.
+20260415T045844Z	doxorubicine	doxorubicine	doxorubicin	brand_or_generic_spelling_variant_review_needed	review_needed	yes	Doxorubicin/Adriamycin spelling variants collapse provisionally to doxorubicin and remain flagged for manual review.
+20260415T045844Z	Anastrazole	anastrazole	anastrozole	obvious_spelling_variant_review_needed	review_needed	yes	Anastrozole spelling variants collapse provisionally to anastrozole and remain flagged for manual review.
+20260415T045844Z	Avastin	avastin	bevacizumab	brand_generic_equivalence_or_case_normalization	confident	no	Bevacizumab and Avastin collapse to bevacizumab.
+20260415T045844Z	DOCETAXEL	docetaxel	docetaxel	brand_generic_equivalence_or_case_normalization	confident	no	Docetaxel and Taxotere collapse to docetaxel.
+20260415T045844Z	Paclitaxel (Protein-Bound)	paclitaxel protein bound	albumin-bound paclitaxel	formulation_or_brand_generic_equivalence	confident	no	Protein-bound paclitaxel and Abraxane collapse to albumin-bound paclitaxel.
+20260415T045844Z	TRASTUZUMAB	trastuzumab	trastuzumab	brand_generic_equivalence_or_case_normalization	confident	no	Trastuzumab and Herceptin collapse to trastuzumab.
+20260415T045844Z	Vinorelbine	vinorelbine	vinorelbine	brand_generic_equivalence_or_case_normalization	confident	no	Vinorelbine and Navelbine collapse to vinorelbine.
+20260415T045844Z	Zoledronic acid	zoledronic acid	zoledronic acid	brand_generic_equivalence_or_case_normalization	confident	no	Zoledronic acid and Zometa collapse to zoledronic acid.
+20260415T045844Z	doxorubicine+cyclophosphamide	doxorubicine cyclophosphamide	doxorubicine+cyclophosphamide	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	5-FU	5 fu	5-fluorouracil	generic_synonym_and_case_normalization	confident	no	5-FU and fluorouracil labels collapse to 5-fluorouracil.
+20260415T045844Z	Arimidex (Anastrozole)	arimidex anastrozole	anastrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Anastrozole and Arimidex labels collapse to anastrozole.
+20260415T045844Z	Chemo, NOS	chemo nos	Chemo, NOS	regimen_or_placeholder_label_preserved	review_needed	yes	Regimen-like or placeholder labels are preserved exactly and are not forced into a single normalized drug name in v1.
+20260415T045844Z	Clodronate	clodronate	clodronate	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Denosumab	denosumab	denosumab	brand_generic_equivalence_or_case_normalization	confident	no	Denosumab and Xgeva collapse to denosumab.
+20260415T045844Z	E-75	e 75	e-75	case_punctuation_normalization_only	confident	no	Exact trial-agent label retained with punctuation normalization only.
+20260415T045844Z	Fulvestrant	fulvestrant	fulvestrant	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Fulvestrant and Faslodex collapse to fulvestrant.
+20260415T045844Z	Goserelin	goserelin	goserelin	brand_generic_equivalence_or_case_normalization	confident	no	Case-normalized exact values and obvious brand/generic equivalents collapse to goserelin.
+20260415T045844Z	LETROZOLE	letrozole	letrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Letrozole and Femara labels collapse to letrozole.
+20260415T045844Z	METHOTREXATE	methotrexate	methotrexate	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Pamidronate	pamidronate	pamidronate	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Trustuzumab	trustuzumab	trastuzumab	obvious_spelling_variant_review_needed	review_needed	yes	Trastuzumab spelling variants collapse provisionally to trastuzumab and remain flagged for manual review.
+20260415T045844Z	docetaxel	docetaxel	docetaxel	brand_generic_equivalence_or_case_normalization	confident	no	Docetaxel and Taxotere collapse to docetaxel.
+20260415T045844Z	AE-37	ae 37	ae-37	case_punctuation_normalization_only	confident	no	Exact trial-agent label retained with punctuation normalization only.
+20260415T045844Z	CARBOPLATIN	carboplatin	carboplatin	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Cisplatin	cisplatin	cisplatin	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	EXEMESTANE	exemestane	exemestane	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Exemestane and Aromasin labels collapse to exemestane.
+20260415T045844Z	Fareston	fareston	toremifene	brand_generic_equivalence	confident	no	Fareston collapses to toremifene.
+20260415T045844Z	Faslodex	faslodex	fulvestrant	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Fulvestrant and Faslodex collapse to fulvestrant.
+20260415T045844Z	Gemzar	gemzar	gemcitabine	brand_generic_equivalence_or_case_normalization	confident	no	Gemcitabine and Gemzar collapse to gemcitabine.
+20260415T045844Z	Lapatinib	lapatinib	lapatinib	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Lupron	lupron	leuprolide	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Lupron and explicit leuprolide labels collapse to leuprolide.
+20260415T045844Z	Mitomycin	mitomycin	mitomycin	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Mitoxantrone	mitoxantrone	mitoxantrone	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Navelbine	navelbine	vinorelbine	brand_generic_equivalence_or_case_normalization	confident	no	Vinorelbine and Navelbine collapse to vinorelbine.
+20260415T045844Z	Neulasta	neulasta	pegfilgrastim	brand_generic_equivalence	confident	no	Neulasta collapses to pegfilgrastim.
+20260415T045844Z	Triptorelin	triptorelin	triptorelin	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Vincristine	vincristine	Vincristine	unrecognized_single_agent_label_preserved	unmapped	yes	Raw value is preserved exactly because v1 does not assign a stronger normalized name without explicit audited support.
+20260415T045844Z	XELODA	xeloda	capecitabine	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Capecitabine and Xeloda collapse to capecitabine.
+20260415T045844Z	ZOLEDRONIC ACID	zoledronic acid	zoledronic acid	brand_generic_equivalence_or_case_normalization	confident	no	Zoledronic acid and Zometa collapse to zoledronic acid.
+20260415T045844Z	ac	ac	ac	regimen_or_placeholder_label_preserved	review_needed	yes	Regimen-like or placeholder labels are preserved exactly and are not forced into a single normalized drug name in v1.
+20260415T045844Z	aromasin	aromasin	exemestane	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Exemestane and Aromasin labels collapse to exemestane.
+20260415T045844Z	cyclophosphamid	cyclophosphamid	cyclophosphamide	obvious_spelling_variant_review_needed	review_needed	yes	Cyclophosphamide spelling variants collapse provisionally to cyclophosphamide and remain flagged for manual review.
+20260415T045844Z	doxorubicine+cyclophosphamide+tamoxifen	doxorubicine cyclophosphamide tamoxifen	doxorubicine+cyclophosphamide+tamoxifen	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	fluorouracil	fluorouracil	5-fluorouracil	generic_synonym_and_case_normalization	confident	no	5-FU and fluorouracil labels collapse to 5-fluorouracil.
+20260415T045844Z	letrozole	letrozole	letrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Letrozole and Femara labels collapse to letrozole.
+20260415T045844Z	nolvadex	nolvadex	tamoxifen	brand_generic_equivalence_or_case_normalization	confident	no	Tamoxifen brand/salt variants collapse to tamoxifen.
+20260415T045844Z	tamoxiphene	tamoxiphene	tamoxifen	obvious_spelling_variant_review_needed	review_needed	yes	Tamoxifen spelling variants collapse provisionally to tamoxifen and remain flagged for manual review.
+20260415T045844Z	taxotere	taxotere	docetaxel	brand_generic_equivalence_or_case_normalization	confident	no	Docetaxel and Taxotere collapse to docetaxel.
+20260415T045844Z	5 fluorouracil	5 fluorouracil	5-fluorouracil	generic_synonym_and_case_normalization	confident	no	5-FU and fluorouracil labels collapse to 5-fluorouracil.
+20260415T045844Z	ARIMIDEX (ANASTROZOLE)	arimidex anastrozole	anastrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Anastrozole and Arimidex labels collapse to anastrozole.
+20260415T045844Z	AROMASIN (EXEMESTANE)	aromasin exemestane	exemestane	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Exemestane and Aromasin labels collapse to exemestane.
+20260415T045844Z	Adriamycin, cytoxan, avastin	adriamycin cytoxan avastin	Adriamycin, cytoxan, avastin	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	Adriamyicin	adriamyicin	doxorubicin	brand_or_generic_spelling_variant_review_needed	review_needed	yes	Doxorubicin/Adriamycin spelling variants collapse provisionally to doxorubicin and remain flagged for manual review.
+20260415T045844Z	Adrimycin	adrimycin	doxorubicin	brand_or_generic_spelling_variant_review_needed	review_needed	yes	Doxorubicin/Adriamycin spelling variants collapse provisionally to doxorubicin and remain flagged for manual review.
+20260415T045844Z	Albumin-Bound Paclitaxel	albumin bound paclitaxel	albumin-bound paclitaxel	formulation_or_brand_generic_equivalence	confident	no	Protein-bound paclitaxel and Abraxane collapse to albumin-bound paclitaxel.
+20260415T045844Z	Aloxi	aloxi	palonosetron	brand_generic_equivalence_or_case_normalization	confident	no	Aloxi and palonosetron collapse to palonosetron.
+20260415T045844Z	Aromasin (Exemestane)	aromasin exemestane	exemestane	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Exemestane and Aromasin labels collapse to exemestane.
+20260415T045844Z	BEVACIZUMAB	bevacizumab	bevacizumab	brand_generic_equivalence_or_case_normalization	confident	no	Bevacizumab and Avastin collapse to bevacizumab.
+20260415T045844Z	BEVACIZUMAB (AVASTIN)/PLACEBO PROVIDED BY STUDY	bevacizumab avastin placebo provided by study	BEVACIZUMAB (AVASTIN)/PLACEBO PROVIDED BY STUDY	trial_or_placebo_language_preserved	review_needed	yes	Trial/placebo language is preserved exactly and remains for manual review in v1.
+20260415T045844Z	Bevacizumab or Placebo	bevacizumab or placebo	Bevacizumab or Placebo	trial_or_placebo_language_preserved	review_needed	yes	Trial/placebo language is preserved exactly and remains for manual review in v1.
+20260415T045844Z	CAPECITABINE	capecitabine	capecitabine	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Capecitabine and Xeloda collapse to capecitabine.
+20260415T045844Z	Capecetabine	capecetabine	capecitabine	obvious_spelling_variant_review_needed	review_needed	yes	Capecitabine spelling variants collapse provisionally to capecitabine and remain flagged for manual review.
+20260415T045844Z	Cyclophasphamide	cyclophasphamide	cyclophosphamide	obvious_spelling_variant_review_needed	review_needed	yes	Cyclophosphamide spelling variants collapse provisionally to cyclophosphamide and remain flagged for manual review.
+20260415T045844Z	Cyclophospamide	cyclophospamide	cyclophosphamide	obvious_spelling_variant_review_needed	review_needed	yes	Cyclophosphamide spelling variants collapse provisionally to cyclophosphamide and remain flagged for manual review.
+20260415T045844Z	Cyotxan	cyotxan	cyclophosphamide	obvious_spelling_variant_review_needed	review_needed	yes	Cyclophosphamide spelling variants collapse provisionally to cyclophosphamide and remain flagged for manual review.
+20260415T045844Z	Cytoxan and Taxotere	cytoxan and taxotere	Cytoxan and Taxotere	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	Cytoxen	cytoxen	cyclophosphamide	obvious_spelling_variant_review_needed	review_needed	yes	Cyclophosphamide spelling variants collapse provisionally to cyclophosphamide and remain flagged for manual review.
+20260415T045844Z	Doxetaxel	doxetaxel	docetaxel	obvious_spelling_variant_review_needed	review_needed	yes	Docetaxel spelling variants collapse provisionally to docetaxel and remain flagged for manual review.
+20260415T045844Z	Doxil	doxil	liposomal doxorubicin	formulation_specific_or_brand_generic_equivalence	confident	no	Liposomal doxorubicin labels collapse to liposomal doxorubicin.
+20260415T045844Z	Doxorubicin Liposome	doxorubicin liposome	liposomal doxorubicin	formulation_specific_or_brand_generic_equivalence	confident	no	Liposomal doxorubicin labels collapse to liposomal doxorubicin.
+20260415T045844Z	Doxorubicinum	doxorubicinum	doxorubicin	brand_or_generic_spelling_variant_review_needed	review_needed	yes	Doxorubicin/Adriamycin spelling variants collapse provisionally to doxorubicin and remain flagged for manual review.
+20260415T045844Z	EXEMESTANE (AROMASIN)	exemestane aromasin	exemestane	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Exemestane and Aromasin labels collapse to exemestane.
+20260415T045844Z	Epirubicoin	epirubicoin	epirubicin	obvious_spelling_variant_review_needed	review_needed	yes	Epirubicin spelling variants collapse provisionally to epirubicin and remain flagged for manual review.
+20260415T045844Z	Everolimus	everolimus	everolimus	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	FEMARA	femara	letrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Letrozole and Femara labels collapse to letrozole.
+20260415T045844Z	FLOUROURACIL	flourouracil	5-fluorouracil	obvious_spelling_variant_review_needed	review_needed	yes	Fluorouracil spelling variants collapse provisionally to 5-fluorouracil and remain flagged for manual review.
+20260415T045844Z	FLUOROURACIL	fluorouracil	5-fluorouracil	generic_synonym_and_case_normalization	confident	no	5-FU and fluorouracil labels collapse to 5-fluorouracil.
+20260415T045844Z	FULVESTRANT	fulvestrant	fulvestrant	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Fulvestrant and Faslodex collapse to fulvestrant.
+20260415T045844Z	Femara (Letrozole)	femara letrozole	letrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Letrozole and Femara labels collapse to letrozole.
+20260415T045844Z	Fulvestrant (Faslodex)	fulvestrant faslodex	fulvestrant	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Fulvestrant and Faslodex collapse to fulvestrant.
+20260415T045844Z	GEMZAR	gemzar	gemcitabine	brand_generic_equivalence_or_case_normalization	confident	no	Gemcitabine and Gemzar collapse to gemcitabine.
+20260415T045844Z	Hormone, NOS	hormone nos	Hormone, NOS	regimen_or_placeholder_label_preserved	review_needed	yes	Regimen-like or placeholder labels are preserved exactly and are not forced into a single normalized drug name in v1.
+20260415T045844Z	Ibandronate	ibandronate	ibandronate	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Ifosfamide	ifosfamide	ifosfamide	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Ixabepilone	ixabepilone	ixabepilone	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	LEUPROLIDE ACETATE (LUPRON)	leuprolide acetate lupron	leuprolide	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Lupron and explicit leuprolide labels collapse to leuprolide.
+20260415T045844Z	LUPRON	lupron	leuprolide	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Lupron and explicit leuprolide labels collapse to leuprolide.
+20260415T045844Z	Letrozol	letrozol	letrozole	obvious_spelling_variant_review_needed	review_needed	yes	Letrozole spelling variants collapse provisionally to letrozole and remain flagged for manual review.
+20260415T045844Z	Letrozole (Femara)	letrozole femara	letrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Letrozole and Femara labels collapse to letrozole.
+20260415T045844Z	Leuprolide	leuprolide	leuprolide	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Lupron and explicit leuprolide labels collapse to leuprolide.
+20260415T045844Z	Leuprorelin	leuprorelin	leuprolide	regional_name_equivalence	confident	no	Leuprorelin is normalized to leuprolide.
+20260415T045844Z	MESNA-1	mesna 1	mesna	numbered_supportive_drug_label_normalization	confident	no	Number-suffixed Mesna labels collapse to mesna.
+20260415T045844Z	MESNA-2	mesna 2	mesna	numbered_supportive_drug_label_normalization	confident	no	Number-suffixed Mesna labels collapse to mesna.
+20260415T045844Z	Megace	megace	megestrol acetate	brand_generic_equivalence	confident	no	Megace collapses to megestrol acetate.
+20260415T045844Z	Metformin	metformin	metformin	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	NAVELBINE	navelbine	vinorelbine	brand_generic_equivalence_or_case_normalization	confident	no	Vinorelbine and Navelbine collapse to vinorelbine.
+20260415T045844Z	Nolvadex	nolvadex	tamoxifen	brand_generic_equivalence_or_case_normalization	confident	no	Tamoxifen brand/salt variants collapse to tamoxifen.
+20260415T045844Z	Not otherwise specified	not otherwise specified	Not otherwise specified	regimen_or_placeholder_label_preserved	review_needed	yes	Regimen-like or placeholder labels are preserved exactly and are not forced into a single normalized drug name in v1.
+20260415T045844Z	Pamidronic acid	pamidronic acid	pamidronate	acid_salt_form_equivalence	confident	no	Pamidronic acid is normalized to pamidronate.
+20260415T045844Z	Pemetrexed	pemetrexed	pemetrexed	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Poly E	poly e	poly e	case_punctuation_normalization_only	confident	no	Exact trial-agent label retained with case/punctuation normalization only.
+20260415T045844Z	Prednisone	prednisone	prednisone	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Rituximab	rituximab	rituximab	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	TAMOXIFEN (NOVADEX)	tamoxifen novadex	tamoxifen	brand_generic_equivalence_or_case_normalization	confident	no	Tamoxifen brand/salt variants collapse to tamoxifen.
+20260415T045844Z	TC	tc	TC	regimen_or_placeholder_label_preserved	review_needed	yes	Regimen-like or placeholder labels are preserved exactly and are not forced into a single normalized drug name in v1.
+20260415T045844Z	TCH	tch	TCH	regimen_or_placeholder_label_preserved	review_needed	yes	Regimen-like or placeholder labels are preserved exactly and are not forced into a single normalized drug name in v1.
+20260415T045844Z	Taxane	taxane	Taxane	regimen_or_placeholder_label_preserved	review_needed	yes	Regimen-like or placeholder labels are preserved exactly and are not forced into a single normalized drug name in v1.
+20260415T045844Z	Taxotere/Cytoxan	taxotere cytoxan	Taxotere/Cytoxan	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	Tesetaxel	tesetaxel	tesetaxel	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	VP-16	vp 16	etoposide	alias_equivalence	confident	no	VP-16 collapses to etoposide.
+20260415T045844Z	Vinblastine	vinblastine	vinblastine	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	Xeloda (Capecitabine)	xeloda capecitabine	capecitabine	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Capecitabine and Xeloda collapse to capecitabine.
+20260415T045844Z	Xgeva	xgeva	denosumab	brand_generic_equivalence_or_case_normalization	confident	no	Denosumab and Xgeva collapse to denosumab.
+20260415T045844Z	Yondelis	yondelis	trabectedin	brand_generic_equivalence	confident	no	Yondelis collapses to trabectedin.
+20260415T045844Z	[Unknown]	unknown	[Unknown]	missing_like_value_preserved	unmapped	yes	Missing-like raw values are preserved exactly and left unmapped in v1.
+20260415T045844Z	abraxane	abraxane	albumin-bound paclitaxel	formulation_or_brand_generic_equivalence	confident	no	Protein-bound paclitaxel and Abraxane collapse to albumin-bound paclitaxel.
+20260415T045844Z	adriamicin	adriamicin	doxorubicin	brand_or_generic_spelling_variant_review_needed	review_needed	yes	Doxorubicin/Adriamycin spelling variants collapse provisionally to doxorubicin and remain flagged for manual review.
+20260415T045844Z	adriamycin+cuclophosphamide	adriamycin cuclophosphamide	adriamycin+cuclophosphamide	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	adriamycin+cyclophosphamid	adriamycin cyclophosphamid	adriamycin+cyclophosphamid	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	adrimicin+cyclophosphamide	adrimicin cyclophosphamide	adrimicin+cyclophosphamide	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	adrimycin+cyclophosphamide	adrimycin cyclophosphamide	adrimycin+cyclophosphamide	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	anastrozolum	anastrozolum	anastrozole	obvious_spelling_variant_review_needed	review_needed	yes	Anastrozole spelling variants collapse provisionally to anastrozole and remain flagged for manual review.
+20260415T045844Z	aromatase exemestane	aromatase exemestane	exemestane	qualified_name_review_needed	review_needed	yes	Qualified exemestane labels collapse provisionally to exemestane and remain flagged for manual review.
+20260415T045844Z	avastin	avastin	bevacizumab	brand_generic_equivalence_or_case_normalization	confident	no	Bevacizumab and Avastin collapse to bevacizumab.
+20260415T045844Z	clodronate	clodronate	clodronate	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	clodronic acid	clodronic acid	clodronate	acid_salt_or_spelling_variant_review_needed	review_needed	yes	Clodronate spelling/acid-form variants collapse provisionally to clodronate and remain flagged for manual review.
+20260415T045844Z	cyclophosphamide+methotrexatum+fluorouracillum	cyclophosphamide methotrexatum fluorouracillum	cyclophosphamide+methotrexatum+fluorouracillum	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	cyclophosphamidum	cyclophosphamidum	cyclophosphamide	obvious_spelling_variant_review_needed	review_needed	yes	Cyclophosphamide spelling variants collapse provisionally to cyclophosphamide and remain flagged for manual review.
+20260415T045844Z	doxorubicin HCL	doxorubicin hcl	doxorubicin	salt_form_review_needed	review_needed	yes	Doxorubicin salt-form labels collapse provisionally to doxorubicin and remain flagged for manual review.
+20260415T045844Z	doxorubicin+ cyclophosphamide	doxorubicin cyclophosphamide	doxorubicin+ cyclophosphamide	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	doxorubicin+cyclophosphamid	doxorubicin cyclophosphamid	doxorubicin+cyclophosphamid	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	doxorubicine cyclophosphamide tamoxifen	doxorubicine cyclophosphamide tamoxifen	doxorubicine cyclophosphamide tamoxifen	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	faslodex	faslodex	fulvestrant	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Fulvestrant and Faslodex collapse to fulvestrant.
+20260415T045844Z	femara	femara	letrozole	brand_generic_equivalence_or_parenthetical_equivalence	confident	no	Letrozole and Femara labels collapse to letrozole.
+20260415T045844Z	gemcitabine	gemcitabine	gemcitabine	brand_generic_equivalence_or_case_normalization	confident	no	Gemcitabine and Gemzar collapse to gemcitabine.
+20260415T045844Z	lapatinib	lapatinib	lapatinib	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	letrozolum	letrozolum	letrozole	obvious_spelling_variant_review_needed	review_needed	yes	Letrozole spelling variants collapse provisionally to letrozole and remain flagged for manual review.
+20260415T045844Z	methotrexate+5 fluorouracil+cyclophosphamide	methotrexate 5 fluorouracil cyclophosphamide	methotrexate+5 fluorouracil+cyclophosphamide	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	metotreksat	metotreksat	methotrexate	obvious_spelling_variant_review_needed	review_needed	yes	Methotrexate spelling variants collapse provisionally to methotrexate and remain flagged for manual review.
+20260415T045844Z	paclitaxelum	paclitaxelum	paclitaxel	obvious_spelling_variant_review_needed	review_needed	yes	Paclitaxel spelling variants collapse provisionally to paclitaxel and remain flagged for manual review.
+20260415T045844Z	tamoxifen citrate	tamoxifen citrate	tamoxifen	brand_generic_equivalence_or_case_normalization	confident	no	Tamoxifen brand/salt variants collapse to tamoxifen.
+20260415T045844Z	tamoxiphen+anastrazolum	tamoxiphen anastrazolum	tamoxiphen+anastrazolum	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	tamoxiphene+anastrozolum	tamoxiphene anastrozolum	tamoxiphene+anastrozolum	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	tamoxiphene+leuporeline+gosereline	tamoxiphene leuporeline gosereline	tamoxiphene+leuporeline+gosereline	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	taxol+adriamycin+cyclophosphamide+herceptin	taxol adriamycin cyclophosphamide herceptin	taxol+adriamycin+cyclophosphamide+herceptin	compound_raw_name_preserved_without_split	review_needed	yes	Compound or regimen-like raw drug strings are preserved exactly and not split into component agents in v1.
+20260415T045844Z	tc	tc	tc	regimen_or_placeholder_label_preserved	review_needed	yes	Regimen-like or placeholder labels are preserved exactly and are not forced into a single normalized drug name in v1.
+20260415T045844Z	trastuzumab	trastuzumab	trastuzumab	brand_generic_equivalence_or_case_normalization	confident	no	Trastuzumab and Herceptin collapse to trastuzumab.
+20260415T045844Z	triptorelin	triptorelin	triptorelin	case_punctuation_normalization_only	confident	no	Single-agent name retained with case normalization only.
+20260415T045844Z	zoledronic acid	zoledronic acid	zoledronic acid	brand_generic_equivalence_or_case_normalization	confident	no	Zoledronic acid and Zometa collapse to zoledronic acid.

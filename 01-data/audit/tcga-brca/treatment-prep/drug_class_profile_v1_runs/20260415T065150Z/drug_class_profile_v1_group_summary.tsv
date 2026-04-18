@@ -1,0 +1,6 @@
+drug_class_profile_v1_run_id	bucket_order	drug_class_profile_bucket	patient_count	patient_fraction	os_event_count	os_event_fraction	manual_review_count	manual_review_fraction	radiation_overlap_count	radiation_overlap_fraction	regimen_context_count	regimen_context_fraction	timing_coverage_count	timing_coverage_fraction	notes
+20260415T065150Z	1	single_known_class_clean	179	0.2295	10	0.0559	0	0.0000	88	0.4916	97	0.5419	176	0.9832	
+20260415T065150Z	2	single_known_class_plus_unknown	18	0.0231	0	0.0000	18	1.0000	12	0.6667	10	0.5556	17	0.9444	
+20260415T065150Z	3	multi_known_class	553	0.7090	49	0.0886	78	0.1410	374	0.6763	323	0.5841	550	0.9946	
+20260415T065150Z	4	unknown_only	25	0.0321	0	0.0000	25	1.0000	11	0.4400	22	0.8800	25	1.0000	
+20260415T065150Z	5	missing_like_only	5	0.0064	0	0.0000	5	1.0000	4	0.8000	4	0.8000	5	1.0000	

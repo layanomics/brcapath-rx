@@ -1,0 +1,272 @@
+{
+  "data": {
+    "hits": [
+      {
+        "id": "6e7d5ec6-a469-467c-b748-237353c23416",
+        "lost_to_followup": "No",
+        "submitter_slide_ids": [
+          "TCGA-3C-AAAU-01A-01-TS1"
+        ],
+        "submitter_analyte_ids": [
+          "TCGA-3C-AAAU-01A-11R",
+          "TCGA-3C-AAAU-01A-11D",
+          "TCGA-3C-AAAU-10A-01D"
+        ],
+        "created_datetime": null,
+        "diagnosis_ids": [
+          "8cfb8afb-b915-5255-865b-a5923f47b351",
+          "6e43f538-6f17-4eb9-82ea-d6028880660b"
+        ],
+        "updated_datetime": "2025-01-05T22:50:58.814164-06:00",
+        "case_id": "6e7d5ec6-a469-467c-b748-237353c23416",
+        "follow_ups": [
+          {
+            "timepoint_category": "Follow-up",
+            "follow_up_id": "94e45d43-69c2-4258-8206-b8a5c2fb9e8f",
+            "updated_datetime": "2025-01-08T12:58:05.350809-06:00",
+            "submitter_id": "TCGA-3C-AAAU_follow_up3",
+            "disease_response": "WT-With Tumor",
+            "state": "released",
+            "days_to_follow_up": 3928,
+            "created_datetime": "2025-01-05T22:50:58.814164-06:00"
+          },
+          {
+            "timepoint_category": "Follow-up",
+            "follow_up_id": "a6ef8198-c579-455a-b8cf-a02844aecde8",
+            "updated_datetime": "2025-01-08T12:58:05.350809-06:00",
+            "submitter_id": "TCGA-3C-AAAU_follow_up4",
+            "disease_response": "WT-With Tumor",
+            "state": "released",
+            "days_to_follow_up": 4047,
+            "created_datetime": "2025-01-05T22:50:58.814164-06:00"
+          },
+          {
+            "timepoint_category": "Last Contact",
+            "follow_up_id": "c2fc0026-d13b-491c-bd9a-1be41b9f4476",
+            "updated_datetime": "2025-01-08T12:58:05.350809-06:00",
+            "submitter_id": "TCGA-3C-AAAU_follow_up",
+            "disease_response": "WT-With Tumor",
+            "state": "released",
+            "days_to_follow_up": 4047,
+            "created_datetime": "2025-01-05T22:50:58.814164-06:00"
+          },
+          {
+            "timepoint_category": "Follow-up",
+            "follow_up_id": "d39a77b9-9bca-4030-8d77-447a3ea0919c",
+            "updated_datetime": "2025-01-08T12:58:05.350809-06:00",
+            "submitter_id": "TCGA-3C-AAAU_follow_up2",
+            "disease_response": "WT-With Tumor",
+            "state": "released",
+            "days_to_follow_up": 3767,
+            "created_datetime": "2025-01-05T22:50:58.814164-06:00"
+          },
+          {
+            "days_to_progression": 1808,
+            "timepoint_category": "Post Initial Treatment",
+            "follow_up_id": "e61cfbe5-a1f0-4a6b-8490-5e0558f44c86",
+            "updated_datetime": "2025-01-08T12:58:05.350809-06:00",
+            "progression_or_recurrence_anatomic_site": "Lung, NOS",
+            "progression_or_recurrence_type": "Distant",
+            "submitter_id": "TCGA-3C-AAAU_follow_up5",
+            "state": "released",
+            "days_to_follow_up": 1808,
+            "created_datetime": "2025-01-05T22:50:58.814164-06:00",
+            "progression_or_recurrence": "Yes"
+          },
+          {
+            "follow_up_id": "aad1f08e-bf2e-566a-aa03-0598c824a1ee"
+          },
+          {
+            "follow_up_id": "4849a2d9-9bb6-5b7a-abc8-c1ac469e23c0"
+          },
+          {
+            "follow_up_id": "42b00f5a-4c5b-52d0-8117-7041b9ae6606"
+          },
+          {
+            "follow_up_id": "6f0329a7-5622-5a6d-9360-13b74f111c0f"
+          }
+        ],
+        "state": "released",
+        "portion_ids": [
+          "0eed7e4e-54e8-48de-ad39-aeb9b88e0138",
+          "4d933452-4563-4dbd-b0a3-8f0a5a93b51c"
+        ],
+        "submitter_portion_ids": [
+          "TCGA-3C-AAAU-01A-11",
+          "TCGA-3C-AAAU-10A-01"
+        ],
+        "slide_ids": [
+          "2f52dd63-7476-4e85-b7c6-e06092db6cc1"
+        ],
+        "disease_type": "Ductal and Lobular Neoplasms",
+        "analyte_ids": [
+          "3ba438fd-f910-4492-bc1b-8fff9843563f",
+          "39fe50b9-eed0-4bdc-8cbc-005bca007d61",
+          "8280c85b-c346-4882-a0af-53916a3b8117"
+        ],
+        "submitter_id": "TCGA-3C-AAAU",
+        "days_to_consent": 3548,
+        "aliquot_ids": [
+          "6ef883fc-81f3-4089-95e0-86904ffc0d38",
+          "43299d24-a01b-476a-b94d-468f913e8b7f",
+          "7ee1a187-6295-448e-9002-a3c0b3ca24bc",
+          "33c15d4a-1a5c-4c7f-9197-fe46c72bf5a0",
+          "6c3b8e04-6582-42e9-b3cf-9220b8c1f136",
+          "46bc4341-59e9-4b7d-aabe-5ba91cde2f14",
+          "180b06bb-30e0-432a-b824-06e45b102438",
+          "d247c6c5-a429-41ae-83d9-bf8307ab76e5",
+          "785ca1cb-0440-4e95-84a3-7b02a56c5464"
+        ],
+        "submitter_aliquot_ids": [
+          "TCGA-3C-AAAU-01A-11D-A41F-09",
+          "TCGA-3C-AAAU-01A-11R-A41G-13",
+          "TCGA-3C-AAAU-01A-11D-A89F-36",
+          "TCGA-3C-AAAU-01A-11R-A41B-07",
+          "TCGA-3C-AAAU-10A-01D-A89F-36",
+          "TCGA-3C-AAAU-01A-11D-A41Q-05",
+          "TCGA-3C-AAAU-01A-11D-A41E-01",
+          "TCGA-3C-AAAU-10A-01D-A41E-01",
+          "TCGA-3C-AAAU-10A-01D-A41F-09"
+        ],
+        "diagnoses": [
+          {
+            "morphology": "8520/3",
+            "submitter_id": "TCGA-3C-AAAU_diagnosis2",
+            "days_to_diagnosis": 1808,
+            "created_datetime": "2025-01-05T22:50:58.814164-06:00",
+            "tissue_or_organ_of_origin": "Lung, NOS",
+            "age_at_diagnosis": 22019,
+            "primary_diagnosis": "Lobular carcinoma, NOS",
+            "classification_of_tumor": "metastasis",
+            "tumor_of_origin": "TCGA-3C-AAAU_diagnosis",
+            "updated_datetime": "2025-01-08T12:58:05.350809-06:00",
+            "diagnosis_id": "6e43f538-6f17-4eb9-82ea-d6028880660b",
+            "site_of_resection_or_biopsy": "Not Reported",
+            "state": "released",
+            "prior_treatment": "Yes",
+            "diagnosis_is_primary_disease": false
+          },
+          {
+            "synchronous_malignancy": "No",
+            "ajcc_pathologic_stage": "Stage X",
+            "days_to_diagnosis": 0,
+            "laterality": "Left",
+            "created_datetime": null,
+            "treatments": [
+              {
+                "treatment_intent_type": "Adjuvant",
+                "updated_datetime": "2025-01-08T12:58:05.350809-06:00",
+                "treatment_id": "0321de4c-4a58-4403-b0a1-fc4e351fd540",
+                "submitter_id": "TCGA-3C-AAAU_treatment2",
+                "treatment_type": "Radiation Therapy, NOS",
+                "state": "released",
+                "treatment_or_therapy": "no",
+                "created_datetime": "2025-01-05T22:50:58.814164-06:00"
+              },
+              {
+                "clinical_trial_indicator": "Yes",
+                "treatment_intent_type": null,
+                "days_to_treatment_start": 1828,
+                "updated_datetime": "2025-01-08T12:58:05.350809-06:00",
+                "treatment_id": "2d88df62-dc75-5c01-b249-3b914cd7380a",
+                "submitter_id": "TCGA-3C-AAAU_treatment",
+                "treatment_type": "Chemotherapy",
+                "treatment_outcome": "Treatment Ongoing",
+                "state": "released",
+                "therapeutic_agents": "Goserelin Acetate",
+                "treatment_or_therapy": "yes",
+                "created_datetime": null
+              },
+              {
+                "treatment_anatomic_sites": [
+                  "Breast"
+                ],
+                "treatment_intent_type": "First-Line Therapy",
+                "updated_datetime": "2025-01-08T12:58:05.350809-06:00",
+                "treatment_id": "6e36004e-8868-4d94-9504-ad62b53d059e",
+                "submitter_id": "TCGA-3C-AAAU_treatment3",
+                "treatment_type": "Surgery, NOS",
+                "state": "released",
+                "treatment_or_therapy": "yes",
+                "margin_status": "Uninvolved",
+                "created_datetime": "2025-01-05T22:50:58.814164-06:00",
+                "initial_disease_status": "Initial Diagnosis"
+              }
+            ],
+            "last_known_disease_status": null,
+            "tissue_or_organ_of_origin": "Breast, NOS",
+            "days_to_last_follow_up": 4047.0,
+            "age_at_diagnosis": 20211,
+            "primary_diagnosis": "Lobular carcinoma, NOS",
+            "updated_datetime": "2025-10-24T10:03:04.457495-05:00",
+            "prior_malignancy": "no",
+            "year_of_diagnosis": 2004,
+            "state": "released",
+            "prior_treatment": "No",
+            "diagnosis_is_primary_disease": true,
+            "days_to_last_known_disease_status": null,
+            "ajcc_staging_system_edition": "6th",
+            "ajcc_pathologic_t": "TX",
+            "days_to_recurrence": null,
+            "morphology": "8520/3",
+            "ajcc_pathologic_n": "NX",
+            "ajcc_pathologic_m": "MX",
+            "submitter_id": "TCGA-3C-AAAU_diagnosis",
+            "classification_of_tumor": "primary",
+            "diagnosis_id": "8cfb8afb-b915-5255-865b-a5923f47b351",
+            "icd_10_code": "C50.9",
+            "site_of_resection_or_biopsy": "Breast, NOS",
+            "tumor_grade": null,
+            "sites_of_involvement": [
+              "Breast, Left Lower Outer"
+            ],
+            "progression_or_recurrence": null
+          }
+        ],
+        "sample_ids": [
+          "197b76a1-a09a-4659-83aa-2c14fd1023a9",
+          "e58510e0-c8b9-4d75-b706-a223e37d4b66"
+        ],
+        "consent_type": "Informed Consent",
+        "demographic": {
+          "race": "white",
+          "gender": "female",
+          "ethnicity": "not hispanic or latino",
+          "vital_status": "Alive",
+          "age_at_index": 55,
+          "submitter_id": "TCGA-3C-AAAU_demographic",
+          "days_to_birth": -20211,
+          "created_datetime": null,
+          "year_of_birth": null,
+          "demographic_id": "cee0a94c-1d9e-5650-a500-a6b021fe138d",
+          "updated_datetime": "2025-10-16T15:37:57.727947-05:00",
+          "age_is_obfuscated": false,
+          "state": "released",
+          "sex_at_birth": "female",
+          "year_of_death": null,
+          "country_of_residence_at_enrollment": "United States"
+        },
+        "submitter_sample_ids": [
+          "TCGA-3C-AAAU-10A",
+          "TCGA-3C-AAAU-01A"
+        ],
+        "primary_site": "Breast",
+        "submitter_diagnosis_ids": [
+          "TCGA-3C-AAAU_diagnosis2",
+          "TCGA-3C-AAAU_diagnosis"
+        ],
+        "index_date": "Diagnosis"
+      }
+    ],
+    "pagination": {
+      "count": 1,
+      "total": 1098,
+      "size": 1,
+      "from": 0,
+      "sort": "None",
+      "page": 1,
+      "pages": 1098
+    }
+  },
+  "warnings": {}
+}

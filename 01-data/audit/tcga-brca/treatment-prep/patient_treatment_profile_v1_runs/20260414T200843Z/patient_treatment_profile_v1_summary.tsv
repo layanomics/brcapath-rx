@@ -1,0 +1,28 @@
+patient_treatment_profile_v1_run_id	summary_section	summary_metric	summary_value	notes
+20260414T200843Z	inputs	treatment_os_overlap_v1_run_id	20260414T172924Z	
+20260414T200843Z	inputs	os_endpoint_v1_run_id	20260414T162349Z	
+20260414T200843Z	inputs	clinical_biotab_parse_run_id	20260412T010932Z	
+20260414T200843Z	inputs	baseline_model_input_v1_run_id	20260414T013108Z	
+20260414T200843Z	inputs	cohort_v1_build_id	20260413T202134Z	
+20260414T200843Z	coverage	total_os_cohort_size	1097	
+20260414T200843Z	coverage	patients_with_any_drug_row	780	
+20260414T200843Z	coverage	patients_with_no_drug_row	317	No-drug-record remains explicit and is not interpreted as untreated.
+20260414T200843Z	coverage	patients_with_any_radiation_row	528	
+20260414T200843Z	coverage	patients_with_no_radiation_row	569	
+20260414T200843Z	coverage	patients_with_no_drug_or_radiation_rows	278	
+20260414T200843Z	coverage	patients_with_radiation_without_drug_row	39	
+20260414T200843Z	therapy_type	patients_with_single_therapy_type	423	
+20260414T200843Z	therapy_type	patients_with_mixed_therapy_types	355	
+20260414T200843Z	therapy_type	patients_with_missing_therapy_type_only	2	
+20260414T200843Z	therapy_type	patients_with_dominant_therapy_type_identifiable	729	Dominant therapy type remains provisional and is not a frozen final arm.
+20260414T200843Z	therapy_type	patients_with_compound_raw_therapy_type_present	2	Compound raw labels are preserved exactly and not split in v1.
+20260414T200843Z	regimen_context	patients_with_any_regimen_context	467	
+20260414T200843Z	timing	patients_with_any_treatment_timing	809	
+20260414T200843Z	timing	patients_with_drug_timing_window_aggregated_inverted	3	These are flagged structurally for review but are not part of the narrow-core manual-review trigger in v1.
+20260414T200843Z	manual_review	patients_requiring_manual_review	357	
+20260414T200843Z	manual_review	manual_review_scope	narrow_core	Manual review includes mixed therapy types, dominant-type ties, and drug rows with unusable therapy type.
+20260414T200843Z	readiness	provisional_readiness_interpretation	ready_for_coarse_exploratory_grouping_next	Patient-level treatment structure is cohort-complete, preserves no-drug and mixed cases explicitly, and remains compatible with later arm-freeze review.
+20260414T200843Z	readiness	treatment_arm_freeze_review_status	blocked	Drug names remain unnormalized and manual-review cases remain unresolved.
+20260414T200843Z	readiness	remaining_blocker	drug_name_not_normalized_and_manual_review_remaining	This workflow is intentionally patient-level treatment profiling only.
+20260414T200843Z	readiness	treatment_recommendation_modeling_status	out_of_scope	Treatment recommendation modeling remains out of scope for this phase.
+20260414T200843Z	readiness	treatment_profile_scope	construction_only	This workflow does not freeze treatment arms, normalize drug names, or perform causal analysis.

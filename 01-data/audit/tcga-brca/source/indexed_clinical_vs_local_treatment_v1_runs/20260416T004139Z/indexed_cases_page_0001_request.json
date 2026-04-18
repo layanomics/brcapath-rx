@@ -1,0 +1,10 @@
+{
+  "final_url": "https://api.gdc.cancer.gov/cases?filters=%7B%22op%22%3A+%22in%22%2C+%22content%22%3A+%7B%22field%22%3A+%22project.project_id%22%2C+%22value%22%3A+%5B%22TCGA-BRCA%22%5D%7D%7D&fields=submitter_id%2Ccase_id%2Cdiagnoses.submitter_id%2Cdiagnoses.prior_treatment%2Cdiagnoses.treatments.submitter_id%2Cdiagnoses.treatments.treatment_type%2Cdiagnoses.treatments.treatment_or_therapy%2Cdiagnoses.treatments.treatment_intent_type%2Cdiagnoses.treatments.therapeutic_agents%2Cdiagnoses.treatments.regimen_or_line_of_therapy%2Cdiagnoses.treatments.days_to_treatment_start%2Cdiagnoses.treatments.days_to_treatment_end%2Cdiagnoses.treatments.reason_treatment_not_given%2Cfollow_ups.submitter_id%2Cfollow_ups.timepoint_category%2Cfollow_ups.treatment_emergent_adverse_event%2Cfollow_ups.hormone_replacement_therapy_type&sort=submitter_id%3Aasc&size=200&from=0",
+  "params": {
+    "filters": "{\"op\": \"in\", \"content\": {\"field\": \"project.project_id\", \"value\": [\"TCGA-BRCA\"]}}",
+    "fields": "submitter_id,case_id,diagnoses.submitter_id,diagnoses.prior_treatment,diagnoses.treatments.submitter_id,diagnoses.treatments.treatment_type,diagnoses.treatments.treatment_or_therapy,diagnoses.treatments.treatment_intent_type,diagnoses.treatments.therapeutic_agents,diagnoses.treatments.regimen_or_line_of_therapy,diagnoses.treatments.days_to_treatment_start,diagnoses.treatments.days_to_treatment_end,diagnoses.treatments.reason_treatment_not_given,follow_ups.submitter_id,follow_ups.timepoint_category,follow_ups.treatment_emergent_adverse_event,follow_ups.hormone_replacement_therapy_type",
+    "sort": "submitter_id:asc",
+    "size": 200,
+    "from": 0
+  }
+}

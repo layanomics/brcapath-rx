@@ -1,0 +1,23 @@
+treatment_os_overlap_v1_run_id	metric	value	notes
+20260414T172924Z	total_os_cohort_size	1097	
+20260414T172924Z	os_event_1_count	152	
+20260414T172924Z	os_event_0_count	945	
+20260414T172924Z	patients_with_any_drug_row	780	
+20260414T172924Z	patients_with_no_drug_rows	317	
+20260414T172924Z	pct_patients_with_drug_row	71.1%	
+20260414T172924Z	patients_with_any_radiation_row	528	
+20260414T172924Z	patients_with_no_radiation_rows	569	
+20260414T172924Z	drug_row_count_total	2406	
+20260414T172924Z	drug_row_count_median_all_patients	2.0	
+20260414T172924Z	drug_row_count_median_patients_with_drug	3.0	
+20260414T172924Z	drug_row_count_max	23	
+20260414T172924Z	radiation_row_count_total	618	
+20260414T172924Z	radiation_row_count_max	5	
+20260414T172924Z	patients_with_single_therapy_type	423	
+20260414T172924Z	patients_with_mixed_therapy_type	355	
+20260414T172924Z	patients_with_missing_therapy_type_despite_drug_rows	2	
+20260414T172924Z	patients_with_dominant_therapy_type_identifiable	729	
+20260414T172924Z	pct_patients_with_identifiable_dominant_therapy_type	66.5%	
+20260414T172924Z	feasibility_interpretation	ready_for_coarse_exploratory_grouping	71% of OS cohort have drug rows. Coarse grouping feasible with a 'treatment_unknown' bucket for patients without drug records.
+20260414T172924Z	coarse_grouping_next_step	patient_level_treatment_aggregation	Aggregate drug rows per patient, normalize therapy_type, resolve mixed cases before freezing treatment arms.
+20260414T172924Z	remaining_blocker	drug_name_not_normalized	pharmaceutical_therapy_drug_name not yet audited or normalized; needed before arm-level grouping.

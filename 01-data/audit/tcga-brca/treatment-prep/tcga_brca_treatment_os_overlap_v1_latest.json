@@ -1,0 +1,18 @@
+{
+  "updated_at_utc": "2026-04-14T17:29:24Z",
+  "treatment_os_overlap_v1_run_id": "20260414T172924Z",
+  "os_endpoint_v1_run_id": "20260414T162349Z",
+  "clinical_biotab_parse_run_id": "20260412T010932Z",
+  "baseline_model_input_v1_run_id": "20260414T013108Z",
+  "cohort_v1_build_id": "20260413T202134Z",
+  "audit_run_directory": "01-data/audit/tcga-brca/treatment-prep/treatment_os_overlap_v1_runs/20260414T172924Z",
+  "treatment_os_overlap_summary_tsv": "01-data/audit/tcga-brca/treatment-prep/treatment_os_overlap_v1_runs/20260414T172924Z/treatment_os_overlap_summary.tsv",
+  "treatment_os_overlap_counts_tsv": "01-data/audit/tcga-brca/treatment-prep/treatment_os_overlap_v1_runs/20260414T172924Z/treatment_os_overlap_counts.tsv",
+  "drug_therapy_type_distribution_tsv": "01-data/audit/tcga-brca/treatment-prep/treatment_os_overlap_v1_runs/20260414T172924Z/drug_therapy_type_distribution.tsv",
+  "drug_therapy_type_patient_summary_tsv": "01-data/audit/tcga-brca/treatment-prep/treatment_os_overlap_v1_runs/20260414T172924Z/drug_therapy_type_patient_summary.tsv",
+  "treatment_os_overlap_audit_summary_tsv": "01-data/audit/tcga-brca/treatment-prep/treatment_os_overlap_v1_runs/20260414T172924Z/treatment_os_overlap_audit_summary.tsv",
+  "run_log_json": "01-data/audit/tcga-brca/treatment-prep/treatment_os_overlap_v1_runs/20260414T172924Z/run_log.json",
+  "os_endpoint_v1_latest_json": "01-data/audit/tcga-brca/endpoint-prep/tcga_brca_os_endpoint_v1_latest.json",
+  "clinical_biotabs_latest_json": "01-data/audit/tcga-brca/variables/tcga_brca_clinical_biotabs_latest.json",
+  "baseline_model_input_v1_latest_json": "01-data/audit/tcga-brca/model-input/tcga_brca_baseline_model_input_v1_latest.json"
+}

@@ -1,0 +1,9 @@
+treatment_os_overlap_v1_run_id	group	patient_count	notes
+20260414T172924Z	dominant_therapy_type__ancillary	1	Ancillary
+20260414T172924Z	dominant_therapy_type__chemotherapy	526	Chemotherapy
+20260414T172924Z	dominant_therapy_type__chemotherapy|hormone_therapy	2	Chemotherapy|Hormone Therapy
+20260414T172924Z	dominant_therapy_type__hormone_therapy	199	Hormone Therapy
+20260414T172924Z	dominant_therapy_type__immunotherapy	1	Immunotherapy
+20260414T172924Z	mixed_no_dominant_therapy_type	49	has drug rows; mixed therapy_type values; no single dominant
+20260414T172924Z	missing_therapy_type_despite_drug_rows	2	has drug rows but all pharmaceutical_therapy_type values are missing-like
+20260414T172924Z	no_drug_rows	317	no rows in clinical_drug.tsv for this patient

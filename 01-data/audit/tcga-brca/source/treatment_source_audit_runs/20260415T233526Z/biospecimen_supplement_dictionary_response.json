@@ -1,0 +1,439 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "category": "data_file",
+  "description": "Data file containing biospecimen metadata information.",
+  "downloadable": true,
+  "id": "biospecimen_supplement",
+  "links": [
+    {
+      "backref": "biospecimen_supplements",
+      "label": "derived_from",
+      "multiplicity": "many_to_many",
+      "name": "cases",
+      "required": true,
+      "target_type": "case"
+    },
+    {
+      "backref": "biospecimen_supplements",
+      "label": "member_of",
+      "multiplicity": "many_to_one",
+      "name": "archives",
+      "required": false,
+      "target_type": "archive"
+    }
+  ],
+  "namespace": "https://gdc.cancer.gov",
+  "previous_version_downloadable": true,
+  "program": "*",
+  "project": "*",
+  "properties": {
+    "archives": {
+      "anyOf": [
+        {
+          "items": {
+            "additionalProperties": true,
+            "maxItems": 1,
+            "minItems": 1,
+            "properties": {
+              "id": {
+                "common": {
+                  "description": "A 128-bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to be different from all other UUIDs/GUIDs generated until 3400 AD or extremely likely to be different. Its relatively small size lends itself well to sorting, ordering, and hashing of all sorts, storing in databases, simple allocation, and ease of programming in general.",
+                  "termDef": {
+                    "cde_id": "C54100",
+                    "cde_version": null,
+                    "source": "NCIt",
+                    "term": "Universally Unique Identifier",
+                    "term_url": "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.02d&ns=NCI_Thesaurus&code=C54100"
+                  }
+                },
+                "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+                "systemAlias": "node_id",
+                "type": "string"
+              },
+              "submitter_id": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        {
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "common": {
+                "description": "A 128-bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to be different from all other UUIDs/GUIDs generated until 3400 AD or extremely likely to be different. Its relatively small size lends itself well to sorting, ordering, and hashing of all sorts, storing in databases, simple allocation, and ease of programming in general.",
+                "termDef": {
+                  "cde_id": "C54100",
+                  "cde_version": null,
+                  "source": "NCIt",
+                  "term": "Universally Unique Identifier",
+                  "term_url": "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.02d&ns=NCI_Thesaurus&code=C54100"
+                }
+              },
+              "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+              "systemAlias": "node_id",
+              "type": "string"
+            },
+            "submitter_id": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "batch_id": {
+      "description": "GDC submission batch indicator. It is unique within the context of a project.",
+      "type": "integer"
+    },
+    "cases": {
+      "anyOf": [
+        {
+          "items": {
+            "additionalProperties": true,
+            "minItems": 1,
+            "properties": {
+              "id": {
+                "common": {
+                  "description": "A 128-bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to be different from all other UUIDs/GUIDs generated until 3400 AD or extremely likely to be different. Its relatively small size lends itself well to sorting, ordering, and hashing of all sorts, storing in databases, simple allocation, and ease of programming in general.",
+                  "termDef": {
+                    "cde_id": "C54100",
+                    "cde_version": null,
+                    "source": "NCIt",
+                    "term": "Universally Unique Identifier",
+                    "term_url": "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.02d&ns=NCI_Thesaurus&code=C54100"
+                  }
+                },
+                "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+                "systemAlias": "node_id",
+                "type": "string"
+              },
+              "submitter_id": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        {
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "common": {
+                "description": "A 128-bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to be different from all other UUIDs/GUIDs generated until 3400 AD or extremely likely to be different. Its relatively small size lends itself well to sorting, ordering, and hashing of all sorts, storing in databases, simple allocation, and ease of programming in general.",
+                "termDef": {
+                  "cde_id": "C54100",
+                  "cde_version": null,
+                  "source": "NCIt",
+                  "term": "Universally Unique Identifier",
+                  "term_url": "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.02d&ns=NCI_Thesaurus&code=C54100"
+                }
+              },
+              "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+              "systemAlias": "node_id",
+              "type": "string"
+            },
+            "submitter_id": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "created_datetime": {
+      "common": {
+        "description": "A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]",
+        "termDef": {
+          "cde_id": null,
+          "cde_version": null,
+          "source": null,
+          "term": null,
+          "term_url": null
+        }
+      },
+      "oneOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "data_category": {
+      "description": "Broad categorization of the contents of the data file.",
+      "enum": [
+        "Biospecimen"
+      ],
+      "termDef": {
+        "cde_id": 14824731,
+        "cde_version": 2.0,
+        "source": "caDSR",
+        "term": null,
+        "term_url": "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=14824731%20and%20ver_nr=2.0"
+      }
+    },
+    "data_format": {
+      "description": "Format of the data files.",
+      "enum": [
+        "BCR Auxiliary XML",
+        "BCR Biotab",
+        "BCR SSF XML",
+        "BCR PPS XML",
+        "BCR XML",
+        "CDC JSON",
+        "FoundationOne XML",
+        "TSV",
+        "XLSX"
+      ],
+      "termDef": {
+        "cde_id": 11416926,
+        "cde_version": 2.0,
+        "source": "caDSR",
+        "term": null,
+        "term_url": "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=11416926%20and%20ver_nr=2.0"
+      }
+    },
+    "data_type": {
+      "description": "Specific content type of the data file.",
+      "enum": [
+        "Biospecimen Supplement"
+      ],
+      "termDef": {
+        "cde_id": null,
+        "cde_version": null,
+        "source": null,
+        "term": null,
+        "term_url": null
+      }
+    },
+    "error_type": {
+      "common": {
+        "description": "Type of error for the data file object.",
+        "termDef": {
+          "cde_id": null,
+          "cde_version": null,
+          "source": null,
+          "term": null,
+          "term_url": null
+        }
+      },
+      "enum": [
+        "file_size",
+        "file_format",
+        "md5sum"
+      ]
+    },
+    "file_name": {
+      "description": "The name (or part of a name) of a file (of any type).",
+      "termDef": {
+        "cde_id": "C171191",
+        "cde_version": "23.11d",
+        "source": "NCIt",
+        "term": "Electronic File Name",
+        "term_id": "C171191",
+        "term_url": "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171191",
+        "term_version": "23.11d"
+      },
+      "type": "string"
+    },
+    "file_size": {
+      "description": "The size of the data file (object) in bytes.",
+      "termDef": {
+        "cde_id": "C171192",
+        "cde_version": "23.11d",
+        "source": "NCIt",
+        "term": "Electronic File Size",
+        "term_id": "C171192",
+        "term_url": "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171192",
+        "term_version": "23.11d"
+      },
+      "type": "integer"
+    },
+    "file_state": {
+      "common": {
+        "description": "The current state of the data file object.",
+        "termDef": {
+          "cde_id": null,
+          "cde_version": null,
+          "source": null,
+          "term": null,
+          "term_url": null
+        }
+      },
+      "default": "registered",
+      "enum": [
+        "registered",
+        "uploading",
+        "uploaded",
+        "validating",
+        "validated",
+        "submitted",
+        "processing",
+        "processed",
+        "released",
+        "error",
+        "deleted"
+      ]
+    },
+    "id": {
+      "common": {
+        "description": "A 128-bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to be different from all other UUIDs/GUIDs generated until 3400 AD or extremely likely to be different. Its relatively small size lends itself well to sorting, ordering, and hashing of all sorts, storing in databases, simple allocation, and ease of programming in general.",
+        "termDef": {
+          "cde_id": "C54100",
+          "cde_version": null,
+          "source": "NCIt",
+          "term": "Universally Unique Identifier",
+          "term_url": "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.02d&ns=NCI_Thesaurus&code=C54100"
+        }
+      },
+      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+      "systemAlias": "node_id",
+      "type": "string"
+    },
+    "md5sum": {
+      "description": "The 128-bit hash value expressed as a 32 digit hexadecimal number (in lower case) used as a file's digital fingerprint.",
+      "pattern": "^[a-f0-9]{32}$",
+      "termDef": {
+        "cde_id": "C171276",
+        "cde_version": "23.11d",
+        "source": "NCIt",
+        "term": "MD5 Checksum",
+        "term_id": "C171276",
+        "term_url": "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171276",
+        "term_version": "23.11d"
+      },
+      "type": "string"
+    },
+    "project_id": {
+      "common": {
+        "description": "Unique ID for any specific defined piece of work that is undertaken or attempted to meet a single requirement.",
+        "termDef": {
+          "cde_id": null,
+          "cde_version": null,
+          "source": null,
+          "term": null,
+          "term_url": null
+        }
+      },
+      "type": "string"
+    },
+    "state": {
+      "common": {
+        "description": "The current state of the object.",
+        "termDef": {
+          "cde_id": null,
+          "cde_version": null,
+          "source": null,
+          "term": null,
+          "term_url": null
+        }
+      },
+      "default": "validated",
+      "downloadable": [
+        "uploaded",
+        "md5summed",
+        "validating",
+        "validated",
+        "error",
+        "invalid",
+        "released"
+      ],
+      "oneOf": [
+        {
+          "enum": [
+            "uploading",
+            "uploaded",
+            "md5summing",
+            "md5summed",
+            "validating",
+            "error",
+            "invalid",
+            "suppressed",
+            "redacted",
+            "live"
+          ]
+        },
+        {
+          "enum": [
+            "validated",
+            "submitted",
+            "released"
+          ]
+        }
+      ],
+      "public": [
+        "live"
+      ]
+    },
+    "state_comment": {
+      "description": "Optional comment about why the file is in the current state, mainly for invalid state.",
+      "type": "string"
+    },
+    "submitter_id": {
+      "description": "A project-specific identifier for a node. This property is the calling card/nickname/alias for a unit of submission. It can be used in place of the uuid for identifying or recalling a node.",
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "updated_datetime": {
+      "common": {
+        "description": "A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]",
+        "termDef": {
+          "cde_id": null,
+          "cde_version": null,
+          "source": null,
+          "term": null,
+          "term_url": null
+        }
+      },
+      "oneOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "submitter_id",
+    "file_name",
+    "file_size",
+    "md5sum",
+    "data_category",
+    "data_format",
+    "data_type"
+  ],
+  "submittable": true,
+  "systemProperties": [
+    "id",
+    "project_id",
+    "created_datetime",
+    "updated_datetime",
+    "file_state",
+    "state",
+    "error_type"
+  ],
+  "title": "Biospecimen Supplement",
+  "type": "object",
+  "uniqueKeys": [
+    [
+      "id"
+    ],
+    [
+      "project_id",
+      "submitter_id"
+    ]
+  ],
+  "validators": null
+}
