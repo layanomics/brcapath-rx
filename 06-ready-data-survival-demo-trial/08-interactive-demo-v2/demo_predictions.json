@@ -71,7 +71,11 @@
       "defaults": {
         "age_at_diagnosis_years": 58.8,
         "subtype_label": "LumA",
-        "ajcc_stage_simple": "II"
+        "ajcc_stage_simple": "II",
+        "age": 58.8,
+        "subtype": "LumA",
+        "stage": "II",
+        "extra_note": ""
       },
       "model": {
         "coefficients": {
@@ -2831,7 +2835,10 @@
       "defaults": {
         "age_at_diagnosis_years": 61.8,
         "subtype_label": "LumA",
-        "npi": 4.04
+        "npi": 4.04,
+        "age": 61.8,
+        "subtype": "LumA",
+        "extra_note": ""
       },
       "model": {
         "coefficients": {
@@ -9888,7 +9895,11 @@
       "defaults": {
         "age_at_diagnosis_years": 58.8,
         "subtype_label": "LumA",
-        "ajcc_stage_simple": "II"
+        "ajcc_stage_simple": "II",
+        "age": 58.8,
+        "subtype": "LumA",
+        "stage": "II",
+        "extra_note": ""
       },
       "model": {
         "coefficients": {
@@ -12648,7 +12659,10 @@
       "defaults": {
         "age_at_diagnosis_years": 61.8,
         "subtype_label": "LumA",
-        "npi": 4.04
+        "npi": 4.04,
+        "age": 61.8,
+        "subtype": "LumA",
+        "extra_note": ""
       },
       "model": {
         "coefficients": {
