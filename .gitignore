@@ -48,3 +48,4 @@ PLAN*.md
 # frontend dependencies/build artifacts
 demos/iptw-confounding-demo/node_modules/
 demos/iptw-confounding-demo/dist/
+git_status_snapshot.txt
